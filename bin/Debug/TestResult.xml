@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\bbdnet0518\Desktop\Fluent\ConsoleApplicationTestFluent\TestProj\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-20" time="11:37:22">
+  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8009" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYVDL" user="bbdnet0518" user-domain="BBDNET" />
+  <culture-info current-culture="en-ZA" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Desktop\Fluent\ConsoleApplicationTestFluent\TestProj\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="30.262" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="30.241" asserts="0">
+        <results>
+          <test-suite type="TestFixture" name="MainTest" description="Main test" executed="True" result="Failure" success="False" time="30.238" asserts="0">
+            <categories>
+              <category name="functional test" />
+            </categories>
+            <results>
+              <test-case name="TestProj.MainTest.TestMethod1" description="Function 1" executed="True" result="Error" success="False" time="13.079" asserts="0">
+                <properties>
+                  <property name="Repeat" value="2" />
+                </properties>
+                <failure>
+                  <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected URL to match [https://timemachine.bbd.co.za/ontimeweb/Timesheet.aspx] but it was actually [https://timemachine.bbd.co.za/ontimeweb/LogOn.aspx].]]></message>
+                  <stack-trace><![CDATA[at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.BaseCommandProvider.WaitUntil(Expression`1 conditionAction, TimeSpan timeout)
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.CommandProvider.FluentAutomation.Interfaces.ICommandProvider.Act(CommandType , Action )
+at FluentAutomation.AssertProvider.Url(Uri expectedUrl)
+at FluentAutomation.AssertSyntaxProvider.Url(Uri expectedUri)
+at FluentAutomation.AssertSyntaxProvider.Url(String expectedUrl)
+at TestProj.Classes.LoginTest.TestLogin(IActionSyntaxProvider automater) in c:\Users\bbdnet0518\Desktop\Fluent\ConsoleApplicationTestFluent\TestProj\Classes\LoginTest.cs:line 14
+at TestProj.MainTest.TestMethod1() in c:\Users\bbdnet0518\Desktop\Fluent\ConsoleApplicationTestFluent\TestProj\MainTest.cs:line 30
+--FluentAssertFailedException
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass53.<Url>b__52()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                </failure>
+              </test-case>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
