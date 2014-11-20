@@ -27,6 +27,7 @@ namespace TestProj
             automater.Navigate(new Uri(Properties.Settings.Default.URL));
             Classes.LoginTest login = new Classes.LoginTest();
             //login.TestFailedLogin(automater.Instance);
+            login.TestLogoff(automater.Instance);
             login.TestLogin(automater.Instance);
 
             login.TestLogoff(automater.Instance);
