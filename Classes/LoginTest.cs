@@ -9,6 +9,7 @@ namespace TestProj.Classes
         {
             automater.Assert.Url(Properties.Settings.Default.LogonURL);
 
+
             automater.Enter(Properties.Settings.Default.Username).In("#txtUserID");
             //automater.Enter(Properties.Settings.Default.Username).In("input[name='txtUserID']");
             automater.Enter(Properties.Settings.Default.Password).In("input[name='txtPassword']");

@@ -45,6 +45,7 @@ namespace TestProj.Classes
         public void Navigate(Uri path)
         {
             browser.Open(path.AbsoluteUri);
+
         }
     }
 }
