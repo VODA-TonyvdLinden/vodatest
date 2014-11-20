@@ -4,26 +4,11 @@ using System.Threading;
 
 namespace TestProj
 {
-    [TestFixture, Description("Main test"), Category("functional test")]
-    public class MainTest
+    //[TestFixture, Description("Main test"), Category("functional test")]
+    public class MainTest : Interfaces.ITestUnit
     {
-        Classes.Browser automater;
-
-        [TestFixtureSetUp]
-        public void Initialise()
-        {
-            automater = new Classes.Browser(Classes.Browser.eBrowser.Chrome);
-            automater.Instance.Wait(5);
-        }
-
-        [TestFixtureTearDown]
-        public void TearDown()
-        {
-            automater.Instance.Dispose();
-        }
-
-        [Test,Description("Function 1"),Repeat(2)]
-        public void TestMethod1()
+        //[Test,Description("Function 1"),Repeat(2)]
+        public void TestMethod(Classes.Browser automater)
         {
 
             automater.Navigate(new Uri(Properties.Settings.Default.LogonURL));

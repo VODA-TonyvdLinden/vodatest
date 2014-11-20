@@ -61,5 +61,14 @@ namespace TestProj.Properties {
                 this["LogonURL"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool TakeScreenShots {
+            get {
+                return ((bool)(this["TakeScreenShots"]));
+            }
+        }
     }
 }

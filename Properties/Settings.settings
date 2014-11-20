@@ -14,5 +14,8 @@
     <Setting Name="LogonURL" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://timemachine.bbd.co.za/ontimeweb/LogOn.aspx</Value>
     </Setting>
+    <Setting Name="TakeScreenShots" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
