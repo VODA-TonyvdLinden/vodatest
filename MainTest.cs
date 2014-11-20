@@ -12,7 +12,7 @@ namespace TestProj
         [TestFixtureSetUp]
         public void Initialise()
         {
-            automater = new Classes.Browser(Classes.Browser.eBrowser.IE);
+            automater = new Classes.Browser(Classes.Browser.eBrowser.Chrome);
         }
 
         [TestFixtureTearDown]
