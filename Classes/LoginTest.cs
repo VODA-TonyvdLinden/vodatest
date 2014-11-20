@@ -7,7 +7,13 @@ namespace TestProj.Classes
     {
         public void TestLogin(FluentAutomation.Interfaces.IActionSyntaxProvider automater)
         {
-            automater.Assert.Url(Properties.Settings.Default.LogonURL);
+            //automater.Assert.Url(Properties.Settings.Default.LogonURL);
+
+            //automater.Assert.Url(Properties.Settings.Default.LogonURL);
+            automater.TakeScreenshot("c:\\LogonScreen.jpg");
+
+            automater.Assert.Exists("#txtPassword");
+            automater.Assert.Exists("#txtUserID");
 
             automater.Enter(Properties.Settings.Default.Username).In("#txtUserID");
             //automater.Enter(Properties.Settings.Default.Username).In("input[name='txtUserID']");
@@ -22,7 +28,7 @@ namespace TestProj.Classes
         public void TestFailedLogin(FluentAutomation.Interfaces.IActionSyntaxProvider automater)
         {
             //automater.Assert.Url(Properties.Settings.Default.LogonURL);
-            automater.TakeScreenshot("Kakka.jpg");
+            automater.TakeScreenshot("c:\\LogonScreen.jpg");
 
             automater.Assert.Exists("#txtPassword");
             automater.Assert.Exists("#txtUserID");
@@ -37,7 +43,11 @@ namespace TestProj.Classes
         }
         public void TestLogoff(FluentAutomation.Interfaces.IActionSyntaxProvider automater)
         {
-            automater.Click("#ctl00_RightContent_hplLogOff");
+            automater.TakeScreenshot("c:\\LogoffScreen.jpg");
+
+            var logoffButton = automater.Find("#ctl00_RightContent_hplLogOff");
+            if (logoffButton != null)
+                automater.Click("#ctl00_RightContent_hplLogOff");
             //automater.Assert.Exists("li.n29d-nav-create-profile > a");
             //automater.Assert.Url(Properties.Settings.Default.LogonURL);
         }
