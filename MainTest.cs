@@ -26,7 +26,7 @@ namespace TestProj
         public void TestMethod1()
         {
 
-            automater.Navigate(new Uri(Properties.Settings.Default.URL));
+            automater.Navigate(new Uri(Properties.Settings.Default.LogonURL));
             automater.Instance.Wait(5);
             automater.Instance.TakeScreenshot("c:\\StartTestMethod1.jpg");
 
