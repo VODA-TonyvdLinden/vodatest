@@ -13,6 +13,7 @@ namespace TestProj
         public void Initialise()
         {
             automater = new Classes.Browser(Classes.Browser.eBrowser.Chrome);
+            automater.Instance.Wait(5);
         }
 
         [TestFixtureTearDown]
