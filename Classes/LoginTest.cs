@@ -21,7 +21,7 @@ namespace TestProj.Classes
 
         public void TestFailedLogin(FluentAutomation.Interfaces.IActionSyntaxProvider automater)
         {
-            automater.Assert.Url(Properties.Settings.Default.LogonURL);
+            //automater.Assert.Url(Properties.Settings.Default.LogonURL);
 
             automater.Enter(Properties.Settings.Default.Username).In("#txtUserID");
             //automater.Enter(Properties.Settings.Default.Username).In("input[name='txtUserID']");
