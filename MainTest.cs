@@ -13,7 +13,6 @@ namespace TestProj
         public void Initialise()
         {
             automater = new Classes.Browser(Classes.Browser.eBrowser.IE);
-		int i = 0;
         }
 
         [TestFixtureTearDown]

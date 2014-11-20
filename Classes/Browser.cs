@@ -44,12 +44,8 @@ namespace TestProj.Classes
         }
         public void Navigate(Uri path)
         {
-            Console.WriteLine(path.AbsoluteUri);
-            Debug.WriteLine(path.AbsoluteUri);
-
             browser.Open(path.AbsoluteUri);
+            browser.Assert.Url(path.AbsoluteUri);
         }
-
-
     }
 }
