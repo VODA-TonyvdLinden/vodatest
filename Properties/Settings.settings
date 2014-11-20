@@ -12,7 +12,7 @@
       <Value Profile="(Default)">tonyvdl</Value>
     </Setting>
     <Setting Name="LogonURL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://timemachine.bbd.co.za/ontimeweb/</Value>
+      <Value Profile="(Default)">https://timemachine.bbd.co.za/ontimeweb/LogOn.aspx</Value>
     </Setting>
   </Settings>
 </SettingsFile>

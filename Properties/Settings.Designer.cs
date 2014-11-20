@@ -52,7 +52,7 @@ namespace TestProj.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://timemachine.bbd.co.za/ontimeweb/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://timemachine.bbd.co.za/ontimeweb/LogOn.aspx")]
         public string LogonURL {
             get {
                 return ((string)(this["LogonURL"]));
