@@ -7,6 +7,8 @@ namespace TestProj.Classes
     {
         public void TestLogin(FluentAutomation.Interfaces.IActionSyntaxProvider automater)
         {
+            automater.Assert.Url(Properties.Settings.Default.URL);
+
             automater.Enter(Properties.Settings.Default.Username).In("input[name='txtUserID']");
             automater.Enter(Properties.Settings.Default.Password).In("input[name='txtPassword']");
             automater.Click("input[name='btnSubmit'");
