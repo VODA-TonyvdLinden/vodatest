@@ -49,7 +49,7 @@ namespace TestProj.Classes
 
             var logoffButton = automater.Find("#ctl00_RightContent_hplLogOff");
 
-            automater.Upload(logoffButton, "c:\\logoffbutton.txt");
+            //automater.Upload(logoffButton, "c:\\logoffbutton.txt");
 
             if (logoffButton != null)
                 automater.Click("#ctl00_RightContent_hplLogOff");

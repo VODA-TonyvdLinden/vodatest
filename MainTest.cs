@@ -25,15 +25,20 @@ namespace TestProj
         [Test,Description("Function 1"),Repeat(2)]
         public void TestMethod1()
         {
-            automater.Instance.TakeScreenshot("c:\\StartTestMethod1.jpg");
 
             automater.Navigate(new Uri(Properties.Settings.Default.URL));
+            automater.Instance.TakeScreenshot("c:\\StartTestMethod1.jpg");
+            automater.Instance.Wait(5);
+
             Classes.LoginTest login = new Classes.LoginTest();
             //login.TestFailedLogin(automater.Instance);
-            login.TestLogoff(automater.Instance);
+            //login.TestLogoff(automater.Instance);
             login.TestLogin(automater.Instance);
+            automater.Instance.Wait(5);
 
             login.TestLogoff(automater.Instance);
+            automater.Instance.Wait(5);
+
             automater.Instance.TakeScreenshot("c:\\EndTestMethod1.jpg");
 
         }
