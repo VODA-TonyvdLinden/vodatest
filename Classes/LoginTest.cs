@@ -8,6 +8,7 @@ namespace TestProj.Classes
         public void TestLogin(FluentAutomation.Interfaces.IActionSyntaxProvider automater)
         {
             automater.Assert.Url(Properties.Settings.Default.LogonURL);
+            automater.Assert.Url(Properties.Settings.Default.LogonURL);
 
 
             automater.Enter(Properties.Settings.Default.Username).In("#txtUserID");
