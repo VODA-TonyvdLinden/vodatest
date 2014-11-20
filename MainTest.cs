@@ -35,6 +35,7 @@ namespace TestProj
 
             login.TestLogoff(automater.Instance);
             automater.Instance.TakeScreenshot("c:\\EndTestMethod1.jpg");
+
         }
     }
 }

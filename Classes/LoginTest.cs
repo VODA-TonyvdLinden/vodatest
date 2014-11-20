@@ -41,11 +41,16 @@ namespace TestProj.Classes
             //automater.Assert.Url(Properties.Settings.Default.LogonURL);
             //automater.Assert.Text("Invalid credentials - Please try again").In("#lblWarn");
         }
+
+        int logoffImageCounter = 0;
         public void TestLogoff(FluentAutomation.Interfaces.IActionSyntaxProvider automater)
         {
-            automater.TakeScreenshot("c:\\LogoffScreen.jpg");
+            automater.TakeScreenshot(string.Format("c:\\LogoffScreen{0}.jpg",logoffImageCounter++));
 
             var logoffButton = automater.Find("#ctl00_RightContent_hplLogOff");
+
+            automater.Upload(logoffButton, "c:\\logoffbutton.txt");
+
             if (logoffButton != null)
                 automater.Click("#ctl00_RightContent_hplLogOff");
             //automater.Assert.Exists("li.n29d-nav-create-profile > a");
