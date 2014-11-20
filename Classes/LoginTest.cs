@@ -22,6 +22,8 @@ namespace TestProj.Classes
         public void TestFailedLogin(FluentAutomation.Interfaces.IActionSyntaxProvider automater)
         {
             //automater.Assert.Url(Properties.Settings.Default.LogonURL);
+            automater.TakeScreenshot("Kakka.jpg");
+
             automater.Assert.Exists("#txtPassword");
             automater.Assert.Exists("#txtUserID");
 
