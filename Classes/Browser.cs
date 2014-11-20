@@ -45,7 +45,7 @@ namespace TestProj.Classes
         public void Navigate(Uri path)
         {
             browser.Open(path.AbsoluteUri);
-            browser.Assert.Url(path.AbsoluteUri);
+            browser.Assert.Url(Properties.Settings.Default.LogonURL);
         }
     }
 }
