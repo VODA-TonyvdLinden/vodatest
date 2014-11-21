@@ -96,6 +96,7 @@
     <Compile Include="Classes\Browsers\Chrome.cs" />
     <Compile Include="Classes\LoginTest.cs" />
     <Compile Include="Classes\Timer.cs" />
+    <Compile Include="Interfaces\ITestSecurity.cs" />
     <Compile Include="Interfaces\ITestUnit.cs" />
     <Compile Include="MainTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
