@@ -31,7 +31,6 @@ namespace TestProj.Classes
             sw.Reset();
             takeStartScreenshot(sender, automator);
             sw.Start();
-            Console.Error.WriteLine("I am in MainTest aspect");
             msg = getNext()(input, getNext);
 
             sw.Stop();
