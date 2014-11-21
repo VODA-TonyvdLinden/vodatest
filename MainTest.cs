@@ -12,19 +12,19 @@ namespace TestProj
         {
 
             automater.Navigate(new Uri(Properties.Settings.Default.LogonURL));
-            automater.Instance.Wait(5);
-            automater.Instance.TakeScreenshot("c:\\StartTestMethod1.jpg");
+            //automater.Instance.Wait(5);
+            //automater.Instance.TakeScreenshot("c:\\StartTestMethod1.jpg");
 
             Classes.LoginTest login = new Classes.LoginTest();
             //login.TestFailedLogin(automater.Instance);
             //login.TestLogoff(automater.Instance);
             login.TestLogin(automater.Instance);
-            automater.Instance.Wait(5);
+            //automater.Instance.Wait(5);
 
             login.TestLogoff(automater.Instance);
-            automater.Instance.Wait(5);
+           // automater.Instance.Wait(5);
 
-            automater.Instance.TakeScreenshot("c:\\EndTestMethod1.jpg");
+            //automater.Instance.TakeScreenshot("c:\\EndTestMethod1.jpg");
 
         }
     }

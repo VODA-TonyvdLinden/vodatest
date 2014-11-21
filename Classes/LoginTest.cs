@@ -10,7 +10,7 @@ namespace TestProj.Classes
             //automater.Assert.Url(Properties.Settings.Default.LogonURL);
 
             //automater.Assert.Url(Properties.Settings.Default.LogonURL);
-            automater.TakeScreenshot("c:\\LogonScreen.jpg");
+            //automater.TakeScreenshot("c:\\LogonScreen.jpg");
 
             automater.Assert.Exists("#txtPassword");
             automater.Assert.Exists("#txtUserID");
@@ -28,7 +28,7 @@ namespace TestProj.Classes
         public void TestFailedLogin(FluentAutomation.Interfaces.IActionSyntaxProvider automater)
         {
             //automater.Assert.Url(Properties.Settings.Default.LogonURL);
-            automater.TakeScreenshot("c:\\LogonScreen.jpg");
+            //automater.TakeScreenshot("c:\\LogonScreen.jpg");
 
             automater.Assert.Exists("#txtPassword");
             automater.Assert.Exists("#txtUserID");
@@ -45,7 +45,7 @@ namespace TestProj.Classes
         int logoffImageCounter = 0;
         public void TestLogoff(FluentAutomation.Interfaces.IActionSyntaxProvider automater)
         {
-            automater.TakeScreenshot(string.Format("c:\\LogoffScreen{0}.jpg",logoffImageCounter++));
+            //automater.TakeScreenshot(string.Format("c:\\LogoffScreen{0}.jpg",logoffImageCounter++));
 
             var logoffButton = automater.Find("#ctl00_RightContent_hplLogOff");
 

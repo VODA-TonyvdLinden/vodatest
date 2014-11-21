@@ -32,12 +32,26 @@ namespace TestProj
         [Test, Description("Start"), Repeat(2)]
         public void Go()
         {
-            IUnityContainer container = new UnityContainer();
 
-            UnityConfigurationSection section = (UnityConfigurationSection)ConfigurationManager.GetSection("unity");
-            section.Configure(container, "ConfigureInterceptorForType");
+            IUnityContainer container = new UnityContainer();
+            container.AddNewExtension<Interception>();
+            //LoggingInterceptionBehavior
+
+            container.AddNewExtension<Interception>();
+            container.RegisterType<Interfaces.ITestUnit, MainTest>(
+              new Interceptor<InterfaceInterceptor>(),
+              new InterceptionBehavior<Classes.Timer>());
+
             Interfaces.ITestUnit test1 = container.Resolve<Interfaces.ITestUnit>();
-            test1.TestMethod(automater);
+            test1.TestMethod(automater); 
+
+
+            //IUnityContainer container = new UnityContainer();
+
+            //UnityConfigurationSection section = (UnityConfigurationSection)ConfigurationManager.GetSection("unity");
+            //section.Configure(container, "ConfigureInterceptorForType");
+            //Interfaces.ITestUnit test1 = container.Resolve<Interfaces.ITestUnit>();
+            //test1.TestMethod(automater);
 
             //container = Microsoft.Practices.Unity.Configuration.UnityContainerExtensions.LoadConfiguration(container);
             //Interfaces.ITestUnit test1 = Microsoft.Practices.Unity.UnityContainerExtensions.Resolve<Interfaces.ITestUnit>(container);
