@@ -14,11 +14,14 @@
     <Setting Name="LogonURL" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://timemachine.bbd.co.za/ontimeweb/LogOn.aspx</Value>
     </Setting>
-    <Setting Name="TakeScreenShots" Type="System.Boolean" Scope="Application">
+    <Setting Name="TakeMethodStartScreenShots" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="ScreenshotPath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">c:\FluentLogs\Screenshots</Value>
+    </Setting>
+    <Setting Name="TakeMethodEndScreenshot" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

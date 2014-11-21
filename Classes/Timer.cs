@@ -12,10 +12,14 @@ namespace TestProj.Classes
 {
     public class Timer : IInterceptionBehavior
     {
+
+
         public IEnumerable<Type> GetRequiredInterfaces()
         {
             return Type.EmptyTypes;
         }
+
+
 
         public IMethodReturn Invoke(IMethodInvocation input, GetNextInterceptionBehaviorDelegate getNext)
         {
@@ -25,23 +29,39 @@ namespace TestProj.Classes
             IMethodReturn msg;
             Stopwatch sw = new Stopwatch();
             sw.Reset();
-            automator.Instance.TakeScreenshot(string.Format("{0}_Enter.png", sender));
+            takeStartScreenshot(sender, automator);
             sw.Start();
 
             msg = getNext()(input, getNext);
 
             sw.Stop();
-            automator.Instance.TakeScreenshot(string.Format("{0}_Exit.png", sender));
+            takeEndScreenshot(sender, automator);
 
             long timeElapsed = sw.ElapsedMilliseconds;
             long seconds = timeElapsed / 1000;
-            Console.Error.WriteLine(string.Format("{0} : {1} seconds", sender, seconds));
+
+            LogWriter.Instance.Log(string.Format("{0} executed in {1} seconds", sender, seconds), LogWriter.eLogType.Info);
+
             return msg;
         }
 
+        private static void takeStartScreenshot(string sender, Classes.Browser automator)
+        {
+            if (Properties.Settings.Default.TakeMethodStartScreenShots)
+                automator.Instance.TakeScreenshot(string.Format("{0}_Enter.png", sender));
+        }
+        private static void takeEndScreenshot(string sender, Classes.Browser automator)
+        {
+            if (Properties.Settings.Default.TakeMethodEndScreenshot)
+                automator.Instance.TakeScreenshot(string.Format("{0}_Exit.png", sender));
+        }
+
+
+
+
         public bool WillExecute
         {
-            get { return Properties.Settings.Default.TakeScreenShots; }
+            get { return Properties.Settings.Default.TakeMethodStartScreenShots; }
         }
 
         private Classes.Browser getAutomator(IMethodInvocation input)
