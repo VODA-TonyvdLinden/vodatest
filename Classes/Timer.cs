@@ -12,29 +12,22 @@ namespace TestProj.Classes
 {
     public class Timer : IInterceptionBehavior
     {
-
-
         public IEnumerable<Type> GetRequiredInterfaces()
         {
             return Type.EmptyTypes;
         }
 
-
-
         public IMethodReturn Invoke(IMethodInvocation input, GetNextInterceptionBehaviorDelegate getNext)
         {
             string sender = string.Format("{0}_{1}", input.MethodBase.ReflectedType.Name, input.MethodBase.Name);
 
-            Classes.Browser automator = getAutomator(input);
             IMethodReturn msg;
             Stopwatch sw = new Stopwatch();
             sw.Reset();
-            takeStartScreenshot(sender, automator);
             sw.Start();
             msg = getNext()(input, getNext);
 
             sw.Stop();
-            takeEndScreenshot(sender, automator);
 
             long timeElapsed = sw.ElapsedMilliseconds;
             long seconds = timeElapsed / 1000;
@@ -43,46 +36,9 @@ namespace TestProj.Classes
 
             return msg;
         }
-
-        private static void takeStartScreenshot(string sender, Classes.Browser automator)
-        {
-            if (Properties.Settings.Default.TakeMethodStartScreenShots)
-                automator.Instance.TakeScreenshot(string.Format("{0}_Enter.png", sender));
-        }
-        private static void takeEndScreenshot(string sender, Classes.Browser automator)
-        {
-            if (Properties.Settings.Default.TakeMethodEndScreenshot)
-                automator.Instance.TakeScreenshot(string.Format("{0}_Exit.png", sender));
-        }
-
-
-
-
         public bool WillExecute
         {
             get { return true; }
         }
-
-        private Classes.Browser getAutomator(IMethodInvocation input)
-        {
-            for (int i = 0; i < input.Arguments.Count; i++)
-            {
-                if (input.Arguments[i].GetType() == typeof(Classes.Browser))
-                {
-                    return (Classes.Browser)input.Arguments[i];
-                }
-            }
-            return null;
-        }
-
-        //private string getParameterInfo(IMethodInvocation input)
-        //{
-        //    string ret = "";
-        //    for (int i = 0;i < input.Arguments.Count;i++)
-        //    {
-        //        ret += input.Arguments.GetParameterInfo(i).Name + " - " + input.Arguments[i] + " | ";
-        //    }
-        //    return ret;
-        //}
     }
 }

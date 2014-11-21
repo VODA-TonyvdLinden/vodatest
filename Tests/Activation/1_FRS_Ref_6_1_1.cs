@@ -8,32 +8,37 @@ using System.Threading.Tasks;
 
 namespace TestProj.Tests.Activation
 {
-    public class _1_FRS_Ref_6_1_1 : Interfaces.I_1_FRS_Ref_6_1_1 
+    public class _1_FRS_Ref_6_1_1 : Interfaces.I_1_FRS_Ref_6_1_1
     {
-        public void TestActivationPage(Classes.Browser browserInstance)
+
+        IUnityContainer container;
+
+        public _1_FRS_Ref_6_1_1()
         {
-            IUnityContainer container = new UnityContainer();
+            container = new UnityContainer();
             container.AddNewExtension<Interception>();
-            container.RegisterType<Interfaces.IActivationPage, Tests.Activation.ActivationPage>(
+            container.RegisterType<Interfaces.IActivation, Tests.Activation.Activation>(
               new Interceptor<InterfaceInterceptor>(),
-              new InterceptionBehavior<Classes.Timer>());
-
-            //browserInstance.Navigate(new Uri(Properties.Settings.Default.LogonURL));
-
-            Interfaces.IActivationPage activationPage = container.Resolve<Interfaces.IActivationPage>();
-
-            activationPage.VerifyActivationLandingPage(browserInstance);
-            activationPage.FieldValidation(browserInstance);
-            activationPage.IncorrectUserDetails(browserInstance);
-            activationPage.CorrectUserDetails(browserInstance);
-            activationPage.VerifyActivationOneTimePinLandingPage(browserInstance);
-            activationPage.ActivationOneTimePinFieldValidation(browserInstance);
+              new InterceptionBehavior<Classes.Timer>(),
+              new InterceptionBehavior<Classes.ScreenCapture>()
+              );
         }
 
-
-        public void TestOther(Classes.Browser browserInstance)
+        public void _1_ActivationPage(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement)
         {
+            //browserInstance.Navigate(new Uri(Properties.Settings.Default.LogonURL));
 
+            Interfaces.IActivation activation = container.Resolve<Interfaces.IActivation>();
+            activation.VerifyActivationLandingPage(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
+        }
+
+        public void _2_ActivationForm(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement)
+        {
+            Interfaces.IActivation activation = container.Resolve<Interfaces.IActivation>();
+
+            activation.ActivationFormFieldValidation(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
+            activation.ActivationFormIncorrectUserDetails(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
+            activation.ActivationFormCorrectUserDetails(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
 
         }
     }

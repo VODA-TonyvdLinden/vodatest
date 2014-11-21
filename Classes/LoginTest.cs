@@ -5,7 +5,7 @@ namespace TestProj.Classes
 {
     public class LoginTest : Interfaces.ITestSecurity
     {
-        public void TestLogin(Classes.Browser browserInstance)
+        public void TestLogin(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement)
         {
             //automater.Assert.Url(Properties.Settings.Default.LogonURL);
 
@@ -25,7 +25,7 @@ namespace TestProj.Classes
             browserInstance.Instance.Assert.Text("Tony Van der Linden (tonyv@bbd.co.za)").In("#ctl00_lblPerson");
         }
 
-        public void TestFailedLogin(Classes.Browser browserInstance)
+        public void TestFailedLogin(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement)
         {
             //automater.Assert.Url(Properties.Settings.Default.LogonURL);
             //automater.TakeScreenshot("c:\\LogonScreen.jpg");
@@ -43,7 +43,7 @@ namespace TestProj.Classes
         }
 
         //int logoffImageCounter = 0;
-        public void TestLogoff(Classes.Browser browserInstance)
+        public void TestLogoff(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement)
         {
             //automater.TakeScreenshot(string.Format("c:\\LogoffScreen{0}.jpg",logoffImageCounter++));
 
