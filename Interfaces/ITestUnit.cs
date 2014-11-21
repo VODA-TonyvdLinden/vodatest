@@ -8,7 +8,6 @@ namespace TestProj.Interfaces
 {
     public interface ITestUnit
     {
-
         void TestMethod(Classes.Browser browserInstance);
     }
 }

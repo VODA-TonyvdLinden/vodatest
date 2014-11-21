@@ -31,7 +31,7 @@ namespace TestProj.Classes
             sw.Reset();
             takeStartScreenshot(sender, automator);
             sw.Start();
-
+            Console.Error.WriteLine("I am in MainTest aspect");
             msg = getNext()(input, getNext);
 
             sw.Stop();
@@ -61,7 +61,7 @@ namespace TestProj.Classes
 
         public bool WillExecute
         {
-            get { return Properties.Settings.Default.TakeMethodStartScreenShots; }
+            get { return true; }
         }
 
         private Classes.Browser getAutomator(IMethodInvocation input)

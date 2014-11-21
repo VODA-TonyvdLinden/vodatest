@@ -14,36 +14,46 @@ namespace TestProj
     [TestFixture, Description("Test runner"), Category("Contains all test classes")]
     public class TestRunner
     {
-        Classes.Browser automater;
+        Classes.Browser browserInstance;
+        IUnityContainer container;
 
         [TestFixtureSetUp]
         public void Initialise()
         {
-            automater = new Classes.Browser(Classes.Browser.eBrowser.Chrome);
-            automater.Config.ScreenshotPath(Properties.Settings.Default.ScreenshotPath);
-            automater.Instance.Wait(5);
+            browserInstance = new Classes.Browser(Classes.Browser.eBrowser.Chrome);
+            browserInstance.Config.ScreenshotPath(Properties.Settings.Default.ScreenshotPath);
+            browserInstance.Instance.Wait(5);
+
+            container = new UnityContainer();
+            container.AddNewExtension<Interception>();
+
+            container.RegisterType<Interfaces.ITestUnit, MainTest>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>());
+            container.RegisterType<Interfaces.I_1_FRS_Ref_6_1_1, Tests.Activation._1_FRS_Ref_6_1_1>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>());
         }
 
         [TestFixtureTearDown]
         public void TearDown()
         {
-            automater.Instance.Dispose();
+            browserInstance.Instance.Dispose();
+            container.RemoveAllExtensions();
+            container.Dispose();
         }
 
-        [Test, Description("Start"), Repeat(2)]
+        [Test, Description("Start"), Repeat(1)]
         public void Go()
         {
-            IUnityContainer container = new UnityContainer();
-            container.AddNewExtension<Interception>();
-            container.RegisterType<Interfaces.ITestUnit, MainTest>(
-              new Interceptor<InterfaceInterceptor>(),
-              new InterceptionBehavior<Classes.Timer>());
-
             Interfaces.ITestUnit test1 = container.Resolve<Interfaces.ITestUnit>();
-            test1.TestMethod(automater);
+            
+            test1.TestMethod(browserInstance);
+        }
 
+        [Test, Description("ActivationTests"), Repeat(1)]
+        public void ActivationTests()
+        {
+            Interfaces.I_1_FRS_Ref_6_1_1 _1_FRS_Ref_6_1_1 = container.Resolve<Interfaces.I_1_FRS_Ref_6_1_1>();
 
-
+            _1_FRS_Ref_6_1_1.TestActivationPage(browserInstance);
+            _1_FRS_Ref_6_1_1.TestOther(browserInstance);
         }
     }
 }

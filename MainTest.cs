@@ -10,9 +10,8 @@ namespace TestProj
     public class MainTest : Interfaces.ITestUnit
     {
         //[Test,Description("Function 1"),Repeat(2)]
-        public void TestMethod(Classes.Browser automator)
+        public void TestMethod(Classes.Browser browserInstance)
         {
-
             IUnityContainer container = new UnityContainer();
             container.AddNewExtension<Interception>();
             container.RegisterType<Interfaces.ITestSecurity, Classes.LoginTest>(
@@ -20,13 +19,13 @@ namespace TestProj
               new InterceptionBehavior<Classes.Timer>());
 
 
-            automator.Navigate(new Uri(Properties.Settings.Default.LogonURL));
+            browserInstance.Navigate(new Uri(Properties.Settings.Default.LogonURL));
             //automater.Instance.Wait(5);
             //automater.Instance.TakeScreenshot("StartTestMethod1");
 
             Interfaces.ITestSecurity login = container.Resolve<Interfaces.ITestSecurity>();
-            login.TestLogin(automator);
-            login.TestLogoff(automator);
+            login.TestLogin(browserInstance);
+            login.TestLogoff(browserInstance);
 
             //Classes.LoginTest login = new Classes.LoginTest();
             //login.TestFailedLogin(automater.Instance);

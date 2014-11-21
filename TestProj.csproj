@@ -110,6 +110,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="TestRunner.cs" />
+    <Compile Include="Tests\Activation\1_FRS_Ref_6_1_1.cs" />
+    <Compile Include="Tests\Activation\ActivationPage.cs" />
+    <Compile Include="Interfaces\IActivationPage.cs" />
+    <Compile Include="Interfaces\I_1_FRS_Ref_6_1_1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">

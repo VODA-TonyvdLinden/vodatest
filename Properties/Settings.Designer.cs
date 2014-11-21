@@ -64,7 +64,7 @@ namespace TestProj.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool TakeMethodStartScreenShots {
             get {
                 return ((bool)(this["TakeMethodStartScreenShots"]));
@@ -82,7 +82,7 @@ namespace TestProj.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool TakeMethodEndScreenshot {
             get {
                 return ((bool)(this["TakeMethodEndScreenshot"]));
