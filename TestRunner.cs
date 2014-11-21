@@ -1,10 +1,13 @@
-﻿using Microsoft.Practices.Unity;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
+using Microsoft.Practices.Unity;
+using Microsoft.Practices.Unity.Configuration;
+using Microsoft.Practices.Unity.InterceptionExtension;
 
 namespace TestProj
 {
@@ -30,9 +33,15 @@ namespace TestProj
         public void Go()
         {
             IUnityContainer container = new UnityContainer();
-            container = Microsoft.Practices.Unity.Configuration.UnityContainerExtensions.LoadConfiguration(container);
-            Interfaces.ITestUnit test1 = Microsoft.Practices.Unity.UnityContainerExtensions.Resolve<Interfaces.ITestUnit>(container);
+
+            UnityConfigurationSection section = (UnityConfigurationSection)ConfigurationManager.GetSection("unity");
+            section.Configure(container, "ConfigureInterceptorForType");
+            Interfaces.ITestUnit test1 = container.Resolve<Interfaces.ITestUnit>();
             test1.TestMethod(automater);
+
+            //container = Microsoft.Practices.Unity.Configuration.UnityContainerExtensions.LoadConfiguration(container);
+            //Interfaces.ITestUnit test1 = Microsoft.Practices.Unity.UnityContainerExtensions.Resolve<Interfaces.ITestUnit>(container);
+            //test1.TestMethod(automater);
 
         }
     }
