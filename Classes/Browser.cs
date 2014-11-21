@@ -26,6 +26,7 @@ namespace TestProj.Classes
                 return browser;
             }
         }
+
         public Browser(eBrowser browserType)
         {
             switch (browserType)
@@ -45,7 +46,6 @@ namespace TestProj.Classes
         public void Navigate(Uri path)
         {
             browser.Open(path.AbsoluteUri);
-
         }
     }
 }

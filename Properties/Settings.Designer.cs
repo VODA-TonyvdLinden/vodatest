@@ -70,5 +70,14 @@ namespace TestProj.Properties {
                 return ((bool)(this["TakeScreenShots"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("c:\\FluentLogs\\Screenshots")]
+        public string ScreenshotPath {
+            get {
+                return ((string)(this["ScreenshotPath"]));
+            }
+        }
     }
 }
