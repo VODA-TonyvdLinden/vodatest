@@ -44,6 +44,30 @@ namespace TestProj.Tests.Activation
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
 
             // 1. Verify that all text fields are mandatory on the form
+            var msisdn = browserInstance.Instance.Find("#msisdn");
+            browserInstance.Instance.Assert.Attribute("required").On(msisdn);
+            var username = browserInstance.Instance.Find("#username");
+            browserInstance.Instance.Assert.Attribute("required").On(username);
+            var activationNumber = browserInstance.Instance.Find("#activationNumber");
+            browserInstance.Instance.Assert.Attribute("required").On(activationNumber);
+            var userAlias = browserInstance.Instance.Find("#userAlias");
+            browserInstance.Instance.Assert.Attribute("required").On(userAlias);
+            //FIELD CANNOT BE REQUIRED -> IT IS A DROP DOWN
+            //var challengeQuestion = browserInstance.Instance.Find("challengeQuestion");
+            var challengeAnswer = browserInstance.Instance.Find("#challengeAnswer");
+            browserInstance.Instance.Assert.Attribute("required").On(challengeAnswer);
+            //Test must be Error Message is displayed: “E1-1-7 – Please complete all fields”. all fields must either be highlited in red or displayed on the screen            
+            browserInstance.Instance.Click("input[name='btnSubmit'");
+
+            browserInstance.Instance.Assert.Exists("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
+            var errorMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
+
+            asdasdasdsa
+
+            ////body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding
+
+
+
             // 1.1.1 Please don’t enter anything on all the fields and click next
             // 2. Select msisdn field                                                                                                                                     
             // 3. Verify that the msisdn field validation will be limited to Numeric format                                        
