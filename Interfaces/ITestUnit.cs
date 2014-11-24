@@ -8,6 +8,6 @@ namespace TestProj.Interfaces
 {
     public interface ITestUnit
     {
-        void TestMethod(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement);
+        void TestMethod(Classes.Browser browserInstance);
     }
 }

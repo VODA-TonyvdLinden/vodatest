@@ -11,6 +11,15 @@ namespace TestProj.Classes
 {
     public class Browser : FluentTest
     {
+
+        string currentURL = "";
+        public string CurrentURL
+        {
+            get
+            {
+                return currentURL;
+            }
+        }
         public enum eBrowser
         {
             IE = 1,
@@ -43,9 +52,15 @@ namespace TestProj.Classes
             }
 
         }
+
+
         public void Navigate(Uri path)
         {
-            browser.Open(path.AbsoluteUri);
+            if (currentURL != path.AbsoluteUri)
+            {
+                currentURL = path.AbsoluteUri;
+                browser.Open(currentURL);
+            }
         }
     }
 }

@@ -24,21 +24,21 @@ namespace TestProj.Tests.Activation
               );
         }
 
-        public void _1_ActivationPage(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement)
+        public void _1_ActivationPage(Classes.Browser browserInstance)
         {
             //browserInstance.Navigate(new Uri(Properties.Settings.Default.LogonURL));
 
             Interfaces.IActivation activation = container.Resolve<Interfaces.IActivation>();
-            activation.VerifyActivationLandingPage(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
+            activation.VerifyActivationLandingPage(browserInstance);
         }
 
-        public void _2_ActivationForm(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement)
+        public void _2_ActivationForm(Classes.Browser browserInstance)
         {
             Interfaces.IActivation activation = container.Resolve<Interfaces.IActivation>();
 
-            activation.ActivationFormFieldValidation(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
-            activation.ActivationFormIncorrectUserDetails(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
-            activation.ActivationFormCorrectUserDetails(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
+            activation.ActivationFormFieldValidation(browserInstance);
+            activation.ActivationFormIncorrectUserDetails(browserInstance);
+            activation.ActivationFormCorrectUserDetails(browserInstance);
 
         }
     }

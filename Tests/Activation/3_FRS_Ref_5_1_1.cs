@@ -23,16 +23,16 @@ namespace TestProj.Tests.Activation
               );
         }
 
-        public void _1_Setup_Catalogue(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement)
+        public void _1_Setup_Catalogue(Classes.Browser browserInstance)
         {
             Interfaces.IActivation activation = container.Resolve<Interfaces.IActivation>();
-            activation.SetupCatalogueLandingPage(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
-            activation.SetupCatalogueValidations(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
-            activation.SetupCatalogueOnDeviceGEOLocationService(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
-            activation.SetupCatalogueSearchFieldReturningNoResults(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
-            activation.SetupCatalogueSearchFieldAutoComplete(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
-            activation.SetupCatalogueLandingPageInterruptions(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
-            activation.SetupCatalogueSearchFieldReturningOneOrMultipleResults(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
+            activation.SetupCatalogueLandingPage(browserInstance);
+            activation.SetupCatalogueValidations(browserInstance);
+            activation.SetupCatalogueOnDeviceGEOLocationService(browserInstance);
+            activation.SetupCatalogueSearchFieldReturningNoResults(browserInstance);
+            activation.SetupCatalogueSearchFieldAutoComplete(browserInstance);
+            activation.SetupCatalogueLandingPageInterruptions(browserInstance);
+            activation.SetupCatalogueSearchFieldReturningOneOrMultipleResults(browserInstance);
         }
     }
 }

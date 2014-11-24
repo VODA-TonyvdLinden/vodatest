@@ -23,15 +23,15 @@ namespace TestProj.Tests.Activation
               );
         }
 
-        public void _1_Verify_User_OTP(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement)
+        public void _1_Verify_User_OTP(Classes.Browser browserInstance)
         {
             Interfaces.IActivation activation = container.Resolve<Interfaces.IActivation>();
-            activation.VerifyActivationOneTimePinLandingPage(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
-            activation.ActivationOneTimePinFieldValidation(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
-            activation.CorrectOneTimePinAndApplicationOffline(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
-            activation.IncorrectOneTimePin(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
-            activation.ResendOneTimePin(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
-            activation.CorrectOneTimePin(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
+            activation.VerifyActivationOneTimePinLandingPage(browserInstance);
+            activation.ActivationOneTimePinFieldValidation(browserInstance);
+            activation.CorrectOneTimePinAndApplicationOffline(browserInstance);
+            activation.IncorrectOneTimePin(browserInstance);
+            activation.ResendOneTimePin(browserInstance);
+            activation.CorrectOneTimePin(browserInstance);
         }
     }
 }

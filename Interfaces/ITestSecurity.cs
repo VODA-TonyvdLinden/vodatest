@@ -8,8 +8,8 @@ namespace TestProj.Interfaces
 {
     public interface ITestSecurity
     {
-        void TestLogin(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement);
-        void TestFailedLogin(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement);
-        void TestLogoff(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement);
+        void TestLogin(Classes.Browser browserInstance);
+        void TestFailedLogin(Classes.Browser browserInstance);
+        void TestLogoff(Classes.Browser browserInstance);
     }
 }

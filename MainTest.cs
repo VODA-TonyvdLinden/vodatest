@@ -10,7 +10,7 @@ namespace TestProj
     public class MainTest : Interfaces.ITestUnit
     {
         //[Test,Description("Function 1"),Repeat(2)]
-        public void TestMethod(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement)
+        public void TestMethod(Classes.Browser browserInstance)
         {
             IUnityContainer container = new UnityContainer();
             container.AddNewExtension<Interception>();
@@ -26,11 +26,11 @@ namespace TestProj
 
             Interfaces.ITestSecurity login = container.Resolve<Interfaces.ITestSecurity>();
 
-            login.TestFailedLogin(browserInstance, new Classes.ScreenshotRequirement() { EventName = "TestFailedLogin", EntryRequired = true, ExitRequired = true });
+            login.TestFailedLogin(browserInstance);
 
 
-            login.TestLogin(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = true, ExitRequired = true });
-            login.TestLogoff(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = true, ExitRequired = true });
+            login.TestLogin(browserInstance);
+            login.TestLogoff(browserInstance);
 
             //Classes.LoginTest login = new Classes.LoginTest();
             //login.TestFailedLogin(automater.Instance);

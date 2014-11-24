@@ -48,13 +48,13 @@ namespace TestProj
             container.Dispose();
         }
 
-        [Test, Description("Start"), Repeat(1)]
-        public void Go()
-        {
-            Interfaces.ITestUnit test1 = container.Resolve<Interfaces.ITestUnit>();
+        //[Test, Description("Start"), Repeat(1)]
+        //public void Go()
+        //{
+        //    Interfaces.ITestUnit test1 = container.Resolve<Interfaces.ITestUnit>();
 
-            test1.TestMethod(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = true, ExitRequired = true });
-        }
+        //    test1.TestMethod(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = true, ExitRequired = true });
+        //}
 
         [Test, Description("ActivationTests"), Repeat(1)]
         public void ActivationTests()
@@ -63,11 +63,11 @@ namespace TestProj
             Interfaces.I_2_FRS_Ref_5_1_1 _2_FRS_Ref_5_1_1 = container.Resolve<Interfaces.I_2_FRS_Ref_5_1_1>();
             Interfaces.I_3_FRS_Ref_5_1_1 _3_FRS_Ref_5_1_1 = container.Resolve<Interfaces.I_3_FRS_Ref_5_1_1>();
 
-            _1_FRS_Ref_6_1_1._1_ActivationPage(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
-            _1_FRS_Ref_6_1_1._2_ActivationForm(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
+            _1_FRS_Ref_6_1_1._1_ActivationPage(browserInstance);
+            _1_FRS_Ref_6_1_1._2_ActivationForm(browserInstance);
 
-            _2_FRS_Ref_5_1_1._1_Verify_User_OTP(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
-            _3_FRS_Ref_5_1_1._1_Setup_Catalogue(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false });
+            _2_FRS_Ref_5_1_1._1_Verify_User_OTP(browserInstance);
+            _3_FRS_Ref_5_1_1._1_Setup_Catalogue(browserInstance);
         }
     }
 }

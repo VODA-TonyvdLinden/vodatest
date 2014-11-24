@@ -5,7 +5,7 @@ namespace TestProj.Classes
 {
     public class LoginTest : Interfaces.ITestSecurity
     {
-        public void TestLogin(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement)
+        public void TestLogin(Classes.Browser browserInstance)
         {
             //automater.Assert.Url(Properties.Settings.Default.LogonURL);
 
@@ -23,9 +23,13 @@ namespace TestProj.Classes
             browserInstance.Instance.Assert.Url(Properties.Settings.Default.URL);
             //automater.Assert.Exists("li.n29d-nav-create-profile > a");
             browserInstance.Instance.Assert.Text("Tony Van der Linden (tonyv@bbd.co.za)").In("#ctl00_lblPerson");
+
+            browserInstance.Instance.Enter("8.50").In("ctl00_MainContent_gvwMain.tbody.tr[3].input");
+
+
         }
 
-        public void TestFailedLogin(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement)
+        public void TestFailedLogin(Classes.Browser browserInstance)
         {
             //automater.Assert.Url(Properties.Settings.Default.LogonURL);
             //automater.TakeScreenshot("c:\\LogonScreen.jpg");
@@ -43,7 +47,7 @@ namespace TestProj.Classes
         }
 
         //int logoffImageCounter = 0;
-        public void TestLogoff(Classes.Browser browserInstance, Classes.ScreenshotRequirement screenshotRequirement)
+        public void TestLogoff(Classes.Browser browserInstance)
         {
             //automater.TakeScreenshot(string.Format("c:\\LogoffScreen{0}.jpg",logoffImageCounter++));
 
