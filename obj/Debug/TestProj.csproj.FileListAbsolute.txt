@@ -34,3 +34,4 @@ C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\Microsoft.Practices.Unit
 C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
 C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\log4net.dll
 C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\log4net.xml
+C:\Users\bbdnet0518\Documents\GitHub\vodatest\obj\Debug\TestProj.csprojResolveAssemblyReference.cache

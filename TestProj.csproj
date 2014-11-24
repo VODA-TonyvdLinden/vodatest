@@ -75,6 +75,8 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Serialization" />
     <Reference Include="WebDriver, Version=2.41.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Selenium.WebDriver.2.41.0\lib\net40\WebDriver.dll</HintPath>
@@ -97,11 +99,14 @@
     <Compile Include="Classes\Browsers\IE.cs" />
     <Compile Include="Classes\Browsers\Firefox.cs" />
     <Compile Include="Classes\Browsers\Chrome.cs" />
+    <Compile Include="Classes\CaptureRequirement.cs" />
     <Compile Include="Classes\LoginTest.cs" />
     <Compile Include="Classes\LogWriter.cs" />
     <Compile Include="Classes\ScreenCapture.cs" />
     <Compile Include="Classes\ScreenshotRequirement.cs" />
+    <Compile Include="Classes\ScreenshotRequirements.cs" />
     <Compile Include="Classes\Timer.cs" />
+    <Compile Include="Classes\XMLSeriallizer.cs" />
     <Compile Include="Interfaces\ITestSecurity.cs" />
     <Compile Include="Interfaces\ITestUnit.cs" />
     <Compile Include="Interfaces\I_3_FRS_Ref_5_1_1.cs" />
@@ -114,9 +119,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="TestRunner.cs" />
+    <Compile Include="Tests\AccessingApplication\Class1.cs" />
     <Compile Include="Tests\Activation\3_FRS_Ref_5_1_1.cs" />
     <Compile Include="Tests\Activation\2_FRS_Ref_5_1_1.cs" />
     <Compile Include="Tests\Activation\1_FRS_Ref_6_1_1.cs" />
+    <Compile Include="Tests\AccessingApplication\AccessingApplication.cs" />
     <Compile Include="Tests\Activation\Activation.cs" />
     <Compile Include="Interfaces\IActivation.cs" />
     <Compile Include="Interfaces\I_1_FRS_Ref_6_1_1.cs" />

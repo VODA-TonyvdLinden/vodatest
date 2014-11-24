@@ -50,15 +50,12 @@ namespace TestProj.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("https://timemachine.bbd.co.za/ontimeweb/LogOn.aspx")]
         public string LogonURL {
             get {
                 return ((string)(this["LogonURL"]));
-            }
-            set {
-                this["LogonURL"] = value;
             }
         }
         
@@ -86,6 +83,16 @@ namespace TestProj.Properties {
         public bool TakeMethodEndScreenshot {
             get {
                 return ((bool)(this["TakeMethodEndScreenshot"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\bbdnet0518\\Documents\\GitHub\\vodatest\\bin\\Debug\\ScreenshotRequirements.xm" +
+            "l")]
+        public string ScreenshotRequirementsPath {
+            get {
+                return ((string)(this["ScreenshotRequirementsPath"]));
             }
         }
     }

@@ -25,6 +25,10 @@ namespace TestProj
             //automater.Instance.TakeScreenshot("StartTestMethod1");
 
             Interfaces.ITestSecurity login = container.Resolve<Interfaces.ITestSecurity>();
+
+            login.TestFailedLogin(browserInstance, new Classes.ScreenshotRequirement() { EventName = "TestFailedLogin", EntryRequired = true, ExitRequired = true });
+
+
             login.TestLogin(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = true, ExitRequired = true });
             login.TestLogoff(browserInstance, new Classes.ScreenshotRequirement() { EntryRequired = true, ExitRequired = true });
 

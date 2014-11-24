@@ -20,6 +20,13 @@ namespace TestProj
         [TestFixtureSetUp]
         public void Initialise()
         {
+            //Classes.ScreenshotRequirements req = new Classes.ScreenshotRequirements();
+            //req.RequirementList.Add(new Classes.ScreenshotRequirement() { EventName = "Event 1", EntryRequired = true, ExitRequired = true });
+            //req.RequirementList.Add(new Classes.ScreenshotRequirement() { EventName = "Event 2", EntryRequired = true, ExitRequired = true });
+            //req.RequirementList.Add(new Classes.ScreenshotRequirement() { EventName = "Event 3", EntryRequired = true, ExitRequired = true });
+
+            //Classes.XMLSeriallizer.Serialize(req, Properties.Settings.Default.ScreenshotRequirementsPath);
+
             browserInstance = new Classes.Browser(Classes.Browser.eBrowser.Chrome);
             browserInstance.Config.ScreenshotPath(Properties.Settings.Default.ScreenshotPath);
             browserInstance.Instance.Wait(5);
