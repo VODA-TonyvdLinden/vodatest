@@ -62,7 +62,6 @@ namespace TestProj.Tests.Activation
             browserInstance.Instance.Assert.Exists("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
             var errorMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
 
-            asdasdasdsa
 
             ////body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding
 
