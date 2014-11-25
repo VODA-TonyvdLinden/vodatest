@@ -8,6 +8,8 @@ using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.InterceptionExtension;
 using System.Diagnostics;
 
+//hello
+
 namespace TestProj.Classes
 {
     public class Timer : IInterceptionBehavior
