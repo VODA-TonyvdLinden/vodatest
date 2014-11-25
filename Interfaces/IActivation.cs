@@ -22,5 +22,6 @@ namespace TestProj.Interfaces
         void SetupCatalogueSearchFieldAutoComplete();
         void SetupCatalogueLandingPageInterruptions();
         void SetupCatalogueSearchFieldReturningOneOrMultipleResults();
+
     }
 }

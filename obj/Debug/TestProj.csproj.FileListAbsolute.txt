@@ -34,3 +34,4 @@ C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\Microsoft.Practices.Unit
 C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\nunit.framework.xml
 C:\Users\bbdnet0518\Documents\GitHub\vodatest\obj\Debug\TestProj.dll
 C:\Users\bbdnet0518\Documents\GitHub\vodatest\obj\Debug\TestProj.pdb
+C:\Users\bbdnet0518\Documents\GitHub\vodatest\obj\Debug\TestProj.csprojResolveAssemblyReference.cache

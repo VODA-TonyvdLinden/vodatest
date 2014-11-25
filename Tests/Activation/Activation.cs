@@ -14,6 +14,13 @@ namespace TestProj.Tests.Activation
     {
         Classes.Browser browserInstance;
         IUnityContainer container = new UnityContainer();
+        FluentAutomation.ElementProxy msisdn;
+        FluentAutomation.ElementProxy username;
+        FluentAutomation.ElementProxy activationNumber;
+        FluentAutomation.ElementProxy userAlias;
+        FluentAutomation.ElementProxy challengeAnswer;
+        FluentAutomation.ElementProxy nextButton;
+        FluentAutomation.ElementProxy errorMessage;
 
         [TestFixtureSetUp]
         public void Initialise()
@@ -34,6 +41,8 @@ namespace TestProj.Tests.Activation
             container.AddNewExtension<Interception>();
 
             container.RegisterType<Interfaces.IActivationActions, Tests.Activation.ActivationActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
+            getActivationControls(browserInstance, out msisdn, out username, out activationNumber, out userAlias, out challengeAnswer, out nextButton, out errorMessage);
+
         }
 
         [TestFixtureTearDown]
@@ -43,7 +52,7 @@ namespace TestProj.Tests.Activation
             container.RemoveAllExtensions();
             container.Dispose();
         }
-        private static void getActivationControls(Classes.Browser browserInstance, out FluentAutomation.ElementProxy msisdn, out FluentAutomation.ElementProxy username, out FluentAutomation.ElementProxy activationNumber, out FluentAutomation.ElementProxy userAlias, out FluentAutomation.ElementProxy challengeAnswer, out FluentAutomation.ElementProxy nextButton, out FluentAutomation.ElementProxy errorMessage)
+        private void getActivationControls(Classes.Browser browserInstance, out FluentAutomation.ElementProxy msisdn, out FluentAutomation.ElementProxy username, out FluentAutomation.ElementProxy activationNumber, out FluentAutomation.ElementProxy userAlias, out FluentAutomation.ElementProxy challengeAnswer, out FluentAutomation.ElementProxy nextButton, out FluentAutomation.ElementProxy errorMessage)
         {
             msisdn = browserInstance.Instance.Find("#msisdn");
             username = browserInstance.Instance.Find("#username");
@@ -56,17 +65,72 @@ namespace TestProj.Tests.Activation
             errorMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
 
         }
+
+        /// <summary>
+        /// TEST STEPS:
+        /// 1. Verify that all text fields are mandatory on the form
+        ///   1.1.1 Please don’t enter anything on the fields and click next
+        /// 2. Select OTP field
+        /// 3.  Verify that the msisdn field validation will be limited to Numeric format
+        ///   3.1.1 Please enter space before entering input on the field
+        ///   3.1.2 Please enter decimal numbers <0.00444>
+        ///   3.1.3 Please enter negative value <-1>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+        /// TEST OUTPUT:
+        ///   1.1.1 Error Message is displayed: “E1-1-7 – Please complete all fields”. and the field is highlited in red
+        /// 2.Focus is on the OTP field
+        /// 3.Invalid data should not be allowed to be entered in the OTP field
+        ///   3.1.1 a space before any input  is not allowed
+        ///   3.1.2  decimal or float numbers are not allowed
+        ///   3.1.3  A negative number is not allowed
+        /// </summary>
         [Test, Description("ActivationOneTimePinFieldValidation"), Repeat(1)]
         public void ActivationOneTimePinFieldValidation()
         {
         }
 
+        /// <summary>
+        /// TEST STEPS:
+        /// 1.Valid User Details - Verify that Username and Activation Key Matches with BOP Manager
+        ///   1.1.1 Enter valid msisdn
+        ///   1.1.2 Enter valid  username
+        ///   1.1.3  Enter valid activation key, any number/string that is accepted by the field
+        ///   1.1.4  Enter any user defined preferred alias
+        ///   1.1.5 Press the next button
+        /// TEST OUTPUT:
+        /// 1. This is a positive testfor verify the Bop details match the ones on BOP
+        ///   1.1.1 The msisdn is displayed
+        ///   1.1.2 The username is displayed
+        ///   1.1.3  The Valid Key is displayed
+        ///   1.1.4  The preferred alias is displayed
+        ///   1.1.5   The OTP screen is displayed, with a message " The One time pin message is displayed as " A One Time 
+        /// Pin has been sent to 0*****1234. Please enter the One time Pin here to continue                                                                  
+        /// </summary>
         [Test, Description("ActivationFormCorrectUserDetails"), Repeat(1)]
         public void ActivationFormCorrectUserDetails()
         {
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
+            Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
+
+            //   1.1.1 Enter valid msisdn
+            activationAction.MSISDNInput(browserInstance, msisdn, "0826190037");
+
+            //   1.1.2 Enter valid  username
+            activationAction.UsernameInput(browserInstance, username, "Test User");
+
+            //   1.1.3  Enter valid activation key, any number/string that is accepted by the field
+            activationAction.ActivationKeyInput(browserInstance, activationNumber, "0000000000");
+
+            //   1.1.4  Enter any user defined preferred alias
+            activationAction.AliasInput(browserInstance, userAlias, "Test User");
+            //   1.1.5 Press the next button
+            Classes.LogWriter.Instance.Log("TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST", Classes.LogWriter.eLogType.Error);
+            browserInstance.Instance.Enter("NOT REQUIRED").In(challengeAnswer);
+
+            activationAction.ClickNext(browserInstance, nextButton);
+
+            activationAction.ValidateOTPStart(browserInstance, msisdn);
         }
 
-        #region ActivationFormFieldValidation
         /// <summary>
         /// ActivationFormFieldValidation
         /// TEST STEPS::
@@ -111,28 +175,16 @@ namespace TestProj.Tests.Activation
         public void ActivationFormFieldValidation()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
-            FluentAutomation.ElementProxy msisdn;
-            FluentAutomation.ElementProxy username;
-            FluentAutomation.ElementProxy activationNumber;
-            FluentAutomation.ElementProxy userAlias;
-            FluentAutomation.ElementProxy challengeAnswer;
-            FluentAutomation.ElementProxy nextButton;
-            FluentAutomation.ElementProxy errorMessage;
-            getActivationControls(browserInstance, out msisdn, out username, out activationNumber, out userAlias, out challengeAnswer, out nextButton, out errorMessage);
 
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
 
             activationAction.TestMandatoryFields(browserInstance, msisdn, username, activationNumber, userAlias, challengeAnswer, errorMessage);
-            activationAction.TestMSISDNInoutValidation(browserInstance, msisdn);
+            activationAction.TestMSISDNInputValidation(browserInstance, msisdn);
             activationAction.TestUsernameInputValidation(browserInstance, username);
             activationAction.TestActivationKeyInputValidation(browserInstance, activationNumber);
             activationAction.TestAliasInputValidation(browserInstance, userAlias);
         }
 
-
-        #endregion
-
-        #region ActivationFormIncorrectUserDetails
         /// <summary>
         /// ActivationFormIncorrectUserDetails
         /// Test steps:
@@ -190,30 +242,15 @@ namespace TestProj.Tests.Activation
         public void ActivationFormIncorrectUserDetails()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
-            FluentAutomation.ElementProxy msisdn;
-            FluentAutomation.ElementProxy username;
-            FluentAutomation.ElementProxy activationNumber;
-            FluentAutomation.ElementProxy userAlias;
-            FluentAutomation.ElementProxy challengeAnswer;
-            FluentAutomation.ElementProxy nextButton;
-            FluentAutomation.ElementProxy errorMessage;
-            getActivationControls(browserInstance, out msisdn, out username, out activationNumber, out userAlias, out challengeAnswer, out nextButton, out errorMessage);
 
-            //container.AddNewExtension<Interception>();
-
-            //container.RegisterType<Interfaces.IActivationActions, Tests.Activation.ActivationActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
 
             activationAction.TestInvalidActivationKey(browserInstance, msisdn, username, activationNumber, userAlias, nextButton, errorMessage);
-            activationAction.TestInvalidUsername(browserInstance, username, activationNumber, nextButton, errorMessage);
+            activationAction.TestInvalidUsername(browserInstance, msisdn, username, activationNumber, userAlias, nextButton, errorMessage);
             activationAction.TestMSISDNLengthLimitGreater(browserInstance, msisdn, username, activationNumber, userAlias, nextButton, errorMessage);
-            activationAction.TestMSISDNLengthLimitSmaller(browserInstance, msisdn, username, activationNumber, userAlias, errorMessage);                                 
+            activationAction.TestMSISDNLengthLimitSmaller(browserInstance, msisdn, username, activationNumber, userAlias, errorMessage);
         }
 
-
-        #endregion
-
-        #region VerifyActivationLandingPage
         /// <summary>
         /// VerifyActivationLandingPage
         /// TEST STEPS:
@@ -245,62 +282,89 @@ namespace TestProj.Tests.Activation
             //http://aspnet.dev.afrigis.co.za/bopapp/#/activation
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
 
-            //1. Verify that the vodacom logo and the red banner are displayed on the activation screen
-            browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.headerLogo.left > img");
-            var logo = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.headerLogo.left > img");
-            browserInstance.Instance.Assert.Attribute("src", "http://aspnet.dev.afrigis.co.za/bopapp/images/logo-rotated.e90367bc.png").On(logo);
-            browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed");
-            var redBanner = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed");
-            browserInstance.Instance.Assert.Class("vodaBackgroundRed").On(redBanner);
-
-            // 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
-            browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div > div");
-            var onlineOfflineIndicator = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div > div");
-            browserInstance.Instance.Assert.Class("statusDisplay").On(onlineOfflineIndicator);
-            browserInstance.Instance.Assert.Class("online").On(onlineOfflineIndicator);
-
-            // 3. Verify that contact us and help me hyperlinks are displayed
-            browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.contactUs");
-            var contactUs = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.contactUs");
-            //browserInstance.Instance.Assert.Attribute("text","Contact us").On(contactUs);
-            browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.helpMe");
-            var helpMe = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.helpMe");
-            //browserInstance.Instance.Assert.Attribute("text", "Help me").On(helpMe);
-
+            Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
+            activationAction.VerifyLogoAndBanner(browserInstance);
+            activationAction.VerifyOnlineIndicator(browserInstance);
+            activationAction.VerifyPageLinks(browserInstance);
             // 4. See spelling, Grammar and alignment 
             //CONNOT DO THAT
-            // 5. Verify that the next button is displayed and enabled
-            browserInstance.Instance.Assert.Exists("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(8) > div > input");
-            var nextButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(8) > div > input");
-            Classes.LogWriter.Instance.Log("TESTCASE:VerifyActivationLandingPage -> What css class is used to disable the next button?", Classes.LogWriter.eLogType.Error);
-            // 6. Verify that the colour of the next button is purple
-            browserInstance.Instance.Assert.Class("purpleButton").On(nextButton);
-            Classes.LogWriter.Instance.Log("TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the next button, just the css class", Classes.LogWriter.eLogType.Error);
-            // 7. Verify that text label on the next button is white
-            Classes.LogWriter.Instance.Log("TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the next button, just the css class", Classes.LogWriter.eLogType.Error);
-            // 8. Verfy that activation form contains msisdn,username,activation code and preferred alias fields      
-            browserInstance.Instance.Assert.Exists("#msisdn");
-            browserInstance.Instance.Assert.Exists("#username");
-            browserInstance.Instance.Assert.Exists("#activationNumber");
-            browserInstance.Instance.Assert.Exists("#userAlias");
-            browserInstance.Instance.Assert.Exists("#challengeQuestion");
-            browserInstance.Instance.Assert.Exists("#challengeAnswer");
-            Classes.LogWriter.Instance.Log("TESTCASE:VerifyActivationLandingPage -> Two extra fields found on the screen, challengeQuestion and challengeAnswer.", Classes.LogWriter.eLogType.Error);
-            // 9. Verify that the Application buttons are displayed at the bottom of the screen
-            Classes.LogWriter.Instance.Log("TESTCASE:VerifyActivationLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!", Classes.LogWriter.eLogType.Error);
+            activationAction.VerifyActivationPageNextButton(browserInstance);
+            activationAction.VerifyFieldExist(browserInstance);
         }
-        #endregion
 
+        /// <summary>
+        /// TEST STEPS:
+        /// 1. Verify that the vodacom logo and the red banner are displayed on the activation screen
+        /// 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
+        /// 3. Verify that contact us and help me hyperlinks are displayed
+        /// 4. See spelling, Grammar and alignment 
+        /// 5. Verify that the next button is displayed and enabled
+        /// 6. Verify that the colour of the next button is purple, with white text
+        /// 7. Verify that the resend button is displayed and enabled
+        /// 8. Verify that the colour of the resend button is purple, with white text
+        /// 9. Verify that one time pin field label is displayed
+        /// 10. Verify that the one time pin field is displayed
+        /// 11. Verify that the Application buttons are displayed at the bottom of the screen
+        /// 12. Verify that the  One time pin message is displayed on page load,with 5 digits of the cellphone number hidden
+        /// TEST OUTPUT:
+        /// 1. The vodacom banner logo and banner are displayed 
+        /// 2. The online/offline indicator is displayed on the top left hand corner of the screen
+        /// 3. The contact us and help me hyerlinks are displayed
+        /// 4. Spelling, Grammar and alignment correct (Screen should resize on all devices also able to rotate from Portrait to landscape)
+        /// 5. The next button is displayed and enabled
+        /// 6. The button colour is purple, with white text
+        /// 7. The resend button is displayed and enabled
+        /// 8. The button colour is purple, with white text
+        /// 9. The one time pin filed label is displayed on the screen
+        /// 10. The one time pin field is displayed
+        /// 11. The Application button are displayed at the bottom screen
+        /// 12. The One time pin is sent on the msisdn and  a message is displayed as 
+        /// " A One Time Pin has been sent to 0*****1234. Please enter the One time Pin here to continue"
+        /// </summary>
         [Test, Description("VerifyActivationOneTimePinLandingPage"), Repeat(1)]
         public void VerifyActivationOneTimePinLandingPage()
         {
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
+            Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
+
+            // 1. Verify that the vodacom logo and the red banner are displayed on the activation screen
+            activationAction.VerifyLogoAndBanner(browserInstance);
+            // 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
+            activationAction.VerifyOnlineIndicator(browserInstance);
+            // 3. Verify that contact us and help me hyperlinks are displayed
+            activationAction.VerifyPageLinks(browserInstance);
+            // 4. See spelling, Grammar and alignment 
+            Classes.LogWriter.Instance.Log("Cannot check spelling and grammer automatically", Classes.LogWriter.eLogType.Error);
+            // 5. Verify that the next button is displayed and enabled
+            // 6. Verify that the colour of the next button is purple, with white text
+            activationAction.VerifyOTPNextButton(browserInstance);
+            // 7. Verify that the resend button is displayed and enabled
+            // 8. Verify that the colour of the resend button is purple, with white text
+            activationAction.VerifyResendButton(browserInstance);
+            activationAction.VerifyOntTimeLable(browserInstance);
+            activationAction.VerifyOTPErrorMessage(browserInstance, msisdn);
         }
 
+
+
+        /// <summary>
+        /// TEST STEPS:
+        /// 1. Please enter <OTP number>  that has been sent to your msisdn
+        /// 2. Press the <next>  button
+        /// 3. Verify that the when the application is online again it returns to the activation page
+        /// TEST OUTPUT:
+        /// 1. The one time pin entered is displayed  the one time pin filed
+        /// 2. An error message is displayed[ error: “O1-2-6 – You are not online. Please check your connectivity and try again”
+        /// 3. When the application is online again, it must return to the activation page
+        /// /// </summary>
         [Test, Description("CorrectOneTimePinAndApplicationOffline"), Repeat(1)]
         public void CorrectOneTimePinAndApplicationOffline()
         {
         }
 
+        /// <summary>
+        /// 1. Enter Invalid OTP                                                                                                                                                                                                        1.1 Please enter <Invalid OTP>                                                                                                                 1.2 Press the <next> button                                                                                                                   2. Expired OTP                                                                                                                                        2.1 Plese enter <Expired OTP>                                                                                                                2.2 Press the <next> button                                                                                                                                                                                                                                   
+        /// </summary>
         [Test, Description("IncorrectOneTimePin"), Repeat(1)]
         public void IncorrectOneTimePin()
         {
