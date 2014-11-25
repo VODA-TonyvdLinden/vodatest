@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace TestProj.Classes.Browsers
 {
+    //http://stackoverflow.com/questions/tagged/fluentautomation
     public class Chrome : FluentTest
     {
         public FluentAutomation.Interfaces.IActionSyntaxProvider Create()

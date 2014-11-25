@@ -56,33 +56,53 @@ namespace TestProj.Tests.Activation
             //var challengeQuestion = browserInstance.Instance.Find("challengeQuestion");
             var challengeAnswer = browserInstance.Instance.Find("#challengeAnswer");
             browserInstance.Instance.Assert.Attribute("required").On(challengeAnswer);
-            //Test must be Error Message is displayed: “E1-1-7 – Please complete all fields”. all fields must either be highlited in red or displayed on the screen            
-            browserInstance.Instance.Click("input[name='btnSubmit'");
+
+            // 1.1.1 Please don’t enter anything on all the fields and click next
+            //Test must be Error Message is displayed: “E1-1-7 – Please complete all fields”. 
+            //  all fields must either be highlited in red or displayed on the screen            
+            browserInstance.Instance.Click("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(8) > div > input");
 
             browserInstance.Instance.Assert.Exists("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
             var errorMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
+            //browserInstance.Instance.Assert.True(() => "E1-1-7 – Please complete all fields" == errorMessage.Element.Text);
+            Classes.LogWriter.Instance.Log("TESTCASE:ActivationFormFieldValidation -> all fields must either be highlited in red or displayed on the screen. Which one?", Classes.LogWriter.eLogType.Error);
 
 
-            ////body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding
-
-
-
-            // 1.1.1 Please don’t enter anything on all the fields and click next
-            // 2. Select msisdn field                                                                                                                                     
+            // 2. Select msisdn field     
+            browserInstance.Instance.Focus(msisdn);                                                                                                                    
             // 3. Verify that the msisdn field validation will be limited to Numeric format                                        
             //     3.1.1 Please enter alphanumeric  < 07@ >
+            browserInstance.Instance.Enter("07@").In(msisdn);
+//            browserInstance.Instance.Assert.False(() => "07@" == msisdn.Element.Text);
             //     3.1.2 Please enter space before entering input on the field
+            browserInstance.Instance.Enter(" 082").In(msisdn);
+//            browserInstance.Instance.Assert.False(() => " 082" == msisdn.Element.Text);
             //     3.1.3 Please enter special characters  <@@, &&> 
+            browserInstance.Instance.Enter("@@, &&").In(msisdn);
+//            browserInstance.Instance.Assert.False(() => "@@, &&" == msisdn.Element.Text);
             //     3.1.4 Please enter decimal numbers <0.00444> 
+            browserInstance.Instance.Enter("0.00444").In(msisdn);
+//            browserInstance.Instance.Assert.False(() => "0.00444" == msisdn.Element.Text);
             //     3.1.5 Please enter negative value <-1>                                                                                                  
+            browserInstance.Instance.Enter("-1").In(msisdn);
+//            browserInstance.Instance.Assert.False(() => "-1" == msisdn.Element.Text);
             // 4. Select username field                                                   
+            browserInstance.Instance.Focus(username);
             // 5. Validate the username field
             // 5.1.1 Please enter space before entering input on username field                                                                                              
+            browserInstance.Instance.Enter(" TEST").In(username);
+//            browserInstance.Instance.Assert.False(() => " TEST" == username.Element.Text);            
             // 6. select activation key field
+            browserInstance.Instance.Focus(activationNumber);
             // 7. Validate the activation key field
-            // 7.1.1 Please enter space before entering input on the field                                                                    
+            // 7.1.1 Please enter space before entering input on the field 
+            browserInstance.Instance.Enter(" TEST").In(activationNumber);
+//            browserInstance.Instance.Assert.False(() => " TEST" == activationNumber.Element.Text);                                                        
             // 8. Validate Preferred Alias field
+            browserInstance.Instance.Focus(userAlias);
             // 8.1.1 Please enter space before entering input on the field   
+            browserInstance.Instance.Enter(" TEST").In(userAlias);
+//            browserInstance.Instance.Assert.False(() => " TEST" == userAlias.Element.Text);                                                        
         }
 
         /// <summary>
@@ -165,12 +185,12 @@ namespace TestProj.Tests.Activation
             // 5. Verify that the next button is displayed and enabled
             browserInstance.Instance.Assert.Exists("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(8) > div > input");
             var nextButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(8) > div > input");
-            Classes.LogWriter.Instance.Log("WHAT CSS-CLASS IS USED TO DISABLE THE NEXT BUTTON ON THE ACTIVATION SCREEN", Classes.LogWriter.eLogType.Error);
+            Classes.LogWriter.Instance.Log("TESTCASE:VerifyActivationLandingPage -> What css class is used to disable the next button?", Classes.LogWriter.eLogType.Error);
             // 6. Verify that the colour of the next button is purple
             browserInstance.Instance.Assert.Class("purpleButton").On(nextButton);
-            Classes.LogWriter.Instance.Log("CANNOT EVALUATE THE COLOR OF THE NEXT BUTTON, JUST THE CSS CLASS", Classes.LogWriter.eLogType.Error);
+            Classes.LogWriter.Instance.Log("TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the next button, just the css class", Classes.LogWriter.eLogType.Error);
             // 7. Verify that text label on the next button is white
-            Classes.LogWriter.Instance.Log("CANNOT EVALUATE THE COLOR ON THE NEXT BUTTON", Classes.LogWriter.eLogType.Error);
+            Classes.LogWriter.Instance.Log("TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the next button, just the css class", Classes.LogWriter.eLogType.Error);
             // 8. Verfy that activation form contains msisdn,username,activation code and preferred alias fields      
             browserInstance.Instance.Assert.Exists("#msisdn");
             browserInstance.Instance.Assert.Exists("#username");
@@ -178,9 +198,9 @@ namespace TestProj.Tests.Activation
             browserInstance.Instance.Assert.Exists("#userAlias");
             browserInstance.Instance.Assert.Exists("#challengeQuestion");
             browserInstance.Instance.Assert.Exists("#challengeAnswer");
-            Classes.LogWriter.Instance.Log("Two extra fields found on the screen, challengeQuestion and challengeAnswer. Test case must be updated", Classes.LogWriter.eLogType.Error);
+            Classes.LogWriter.Instance.Log("TESTCASE:VerifyActivationLandingPage -> Two extra fields found on the screen, challengeQuestion and challengeAnswer.", Classes.LogWriter.eLogType.Error);
             // 9. Verify that the Application buttons are displayed at the bottom of the screen
-            Classes.LogWriter.Instance.Log("NO APPLICATION BUTTONS EXIST AT THE BOTTOM OF THE SCREEN", Classes.LogWriter.eLogType.Error);
+            Classes.LogWriter.Instance.Log("TESTCASE:VerifyActivationLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!", Classes.LogWriter.eLogType.Error);
         }
 
         public void VerifyActivationOneTimePinLandingPage(Classes.Browser browserInstance)
