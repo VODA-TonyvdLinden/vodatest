@@ -52,6 +52,7 @@ namespace TestProj.Tests.Activation
             container.RemoveAllExtensions();
             container.Dispose();
         }
+
         private void getActivationControls(Classes.Browser browserInstance, out FluentAutomation.ElementProxy msisdn, out FluentAutomation.ElementProxy username, out FluentAutomation.ElementProxy activationNumber, out FluentAutomation.ElementProxy userAlias, out FluentAutomation.ElementProxy challengeAnswer, out FluentAutomation.ElementProxy nextButton, out FluentAutomation.ElementProxy errorMessage)
         {
             msisdn = browserInstance.Instance.Find("#msisdn");
