@@ -237,3 +237,13 @@
 2014-11-26 12:46:06,690 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_VerifyOTPErrorMessage executed in 0 seconds
 2014-11-26 12:47:23,237 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method EnterAndVerifyOTPValue not found
 2014-11-26 12:47:23,291 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-26 13:04:40,067 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method EnterAndVerifyOTPValue not found
+2014-11-26 13:04:42,004 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_EnterAndVerifyOTPValue executed in 7 seconds
+2014-11-26 13:04:42,021 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method ClickNext not found
+2014-11-26 13:04:47,099 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_ClickNext executed in 5 seconds
+2014-11-26 13:18:16,359 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method EnterAndVerifyOTPValue not found
+2014-11-26 13:18:17,026 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_EnterAndVerifyOTPValue executed in 2 seconds
+2014-11-26 13:18:17,026 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method ClickNext not found
+2014-11-26 13:18:17,129 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_ClickNext executed in 0 seconds
+2014-11-26 13:18:17,130 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - This error is not displayed due to browser always online --> O1-2-6 – You are not online. Please check your connectivity and try again
+2014-11-26 13:18:17,144 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:CorrectOneTimePinAndApplicationOffline -> Cannot simulate the off-line status as the browser will allways be online

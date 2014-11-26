@@ -20,8 +20,11 @@ namespace TestProj.Tests.Activation
         FluentAutomation.ElementProxy activationNumber;
         FluentAutomation.ElementProxy userAlias;
         FluentAutomation.ElementProxy challengeAnswer;
-        FluentAutomation.ElementProxy nextButton;
-        FluentAutomation.ElementProxy errorMessage;
+        FluentAutomation.ElementProxy activationNextButton;
+        FluentAutomation.ElementProxy activationErrorMessage;
+        FluentAutomation.ElementProxy otpNextButton;
+        FluentAutomation.ElementProxy otpBox;
+        FluentAutomation.ElementProxy otpErrorMessage;
 
         [TestFixtureSetUp]
         public void Initialise()
@@ -42,7 +45,8 @@ namespace TestProj.Tests.Activation
             container.AddNewExtension<Interception>();
 
             container.RegisterType<Interfaces.IActivationActions, Tests.Activation.ActivationActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
-            getActivationControls(browserInstance, out msisdn, out username, out activationNumber, out userAlias, out challengeAnswer, out nextButton, out errorMessage);
+            getActivationControls(browserInstance, out msisdn, out username, out activationNumber, out userAlias, out challengeAnswer, out otpNextButton, out activationNextButton, out activationErrorMessage);
+            getOTPControls(browserInstance, out otpBox, out activationNextButton, out otpErrorMessage);
 
         }
 
@@ -54,7 +58,7 @@ namespace TestProj.Tests.Activation
             container.Dispose();
         }
 
-        private void getActivationControls(Classes.Browser browserInstance, out FluentAutomation.ElementProxy msisdn, out FluentAutomation.ElementProxy username, out FluentAutomation.ElementProxy activationNumber, out FluentAutomation.ElementProxy userAlias, out FluentAutomation.ElementProxy challengeAnswer, out FluentAutomation.ElementProxy nextButton, out FluentAutomation.ElementProxy errorMessage)
+        private void getActivationControls(Classes.Browser browserInstance, out FluentAutomation.ElementProxy msisdn, out FluentAutomation.ElementProxy username, out FluentAutomation.ElementProxy activationNumber, out FluentAutomation.ElementProxy userAlias, out FluentAutomation.ElementProxy challengeAnswer, out FluentAutomation.ElementProxy otpNextButton, out FluentAutomation.ElementProxy activationNextButton, out FluentAutomation.ElementProxy errorMessage)
         {
             msisdn = browserInstance.Instance.Find("#msisdn");
             username = browserInstance.Instance.Find("#username");
@@ -63,9 +67,16 @@ namespace TestProj.Tests.Activation
             //FIELD CANNOT BE REQUIRED -> IT IS A DROP DOWN
             //var challengeQuestion = browserInstance.Instance.Find("challengeQuestion");
             challengeAnswer = browserInstance.Instance.Find("#challengeAnswer");
-            nextButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(8) > div > input");
+            otpNextButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(4) > div > div > input.btn.btn-large.nextBtn.pull-right.purpleButton.ng-scope.ng-binding");
+            activationNextButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(8) > div > input");
             errorMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
 
+        }
+        private void getOTPControls(Classes.Browser browserInstance, out FluentAutomation.ElementProxy otpBox, out FluentAutomation.ElementProxy otpNextButton, out FluentAutomation.ElementProxy otpErrorMessage)
+        {
+            otpBox = browserInstance.Instance.Find("#otp");
+            otpNextButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(4) > div > div > input.btn.btn-large.nextBtn.pull-right.purpleButton.ng-scope.ng-binding");
+            otpErrorMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
         }
 
         /// <summary>
@@ -128,7 +139,7 @@ namespace TestProj.Tests.Activation
             Classes.LogWriter.Instance.Log("TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST", Classes.LogWriter.eLogType.Error);
             browserInstance.Instance.Enter("NOT REQUIRED").In(challengeAnswer);
 
-            activationAction.ClickNext(browserInstance, nextButton);
+            activationAction.ClickNext(browserInstance, activationNextButton);
 
             activationAction.ValidateOTPStart(browserInstance, msisdn);
         }
@@ -180,7 +191,7 @@ namespace TestProj.Tests.Activation
 
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
 
-            activationAction.TestMandatoryFields(browserInstance, msisdn, username, activationNumber, userAlias, challengeAnswer, errorMessage);
+            activationAction.TestMandatoryFields(browserInstance, msisdn, username, activationNumber, userAlias, challengeAnswer, activationErrorMessage);
             activationAction.TestMSISDNInputValidation(browserInstance, msisdn);
             activationAction.TestUsernameInputValidation(browserInstance, username);
             activationAction.TestActivationKeyInputValidation(browserInstance, activationNumber);
@@ -247,10 +258,10 @@ namespace TestProj.Tests.Activation
 
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
 
-            activationAction.TestInvalidActivationKey(browserInstance, msisdn, username, activationNumber, userAlias, nextButton, errorMessage);
-            activationAction.TestInvalidUsername(browserInstance, msisdn, username, activationNumber, userAlias, nextButton, errorMessage);
-            activationAction.TestMSISDNLengthLimitGreater(browserInstance, msisdn, username, activationNumber, userAlias, nextButton, errorMessage);
-            activationAction.TestMSISDNLengthLimitSmaller(browserInstance, msisdn, username, activationNumber, userAlias, errorMessage);
+            activationAction.TestInvalidActivationKey(browserInstance, msisdn, username, activationNumber, userAlias, activationNextButton, activationErrorMessage);
+            activationAction.TestInvalidUsername(browserInstance, msisdn, username, activationNumber, userAlias, activationNextButton, activationErrorMessage);
+            activationAction.TestMSISDNLengthLimitGreater(browserInstance, msisdn, username, activationNumber, userAlias, activationNextButton, activationErrorMessage);
+            activationAction.TestMSISDNLengthLimitSmaller(browserInstance, msisdn, username, activationNumber, userAlias, activationErrorMessage);
         }
 
         /// <summary>
@@ -367,7 +378,7 @@ namespace TestProj.Tests.Activation
             activationAction.EnterAndVerifyOTPValue(browserInstance);
 
             // 2. Press the <next>  button
-            activationAction.ClickNext(browserInstance, nextButton);
+            activationAction.ClickNext(browserInstance, otpNextButton);
             
             // 2. An error message is displayed[ error: “O1-2-6 – You are not online. Please check your connectivity and try again”
             Classes.LogWriter.Instance.Log("This error is not displayed due to browser always online --> O1-2-6 – You are not online. Please check your connectivity and try again", Classes.LogWriter.eLogType.Error);

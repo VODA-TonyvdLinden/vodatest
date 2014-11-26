@@ -1,31 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-26" time="12:47:27">
-  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.6421" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="V000032056" user="kennedch" user-domain="VF-ROOT" />
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-26" time="13:18:24">
+  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8009" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYVDL" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="25.944" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="40.496" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="25.943" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="40.475" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="25.943" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="40.474" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Activation" executed="True" result="Failure" success="False" time="25.943" asserts="0">
+              <test-suite type="Namespace" name="Activation" executed="True" result="Success" success="True" time="40.474" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Failure" success="False" time="25.942" asserts="0">
+                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Success" success="True" time="40.470" asserts="0">
                     <categories>
                       <category name="Activation" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Activation.Activation.CorrectOneTimePinAndApplicationOffline" description="CorrectOneTimePinAndApplicationOffline" executed="True" result="Error" success="False" time="13.462" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.CorrectOneTimePinAndApplicationOffline" description="CorrectOneTimePinAndApplicationOffline" executed="True" result="Success" success="True" time="16.478" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
-                        <failure>
-                          <message><![CDATA[FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#otp]]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_e7edac42581041ef9f207c0b735419b7.EnterAndVerifyOTPValue(Browser browserInstance)
-at TestProj.Tests.Activation.Activation.CorrectOneTimePinAndApplicationOffline() in c:\Users\kennedch\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 367
-]]></stack-trace>
-                        </failure>
                       </test-case>
                     </results>
                   </test-suite>
