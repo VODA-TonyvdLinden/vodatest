@@ -1,35 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-26" time="12:02:12">
+<test-results name="C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-26" time="12:47:27">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.6421" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="V000032056" user="kennedch" user-domain="VF-ROOT" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="26.736" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="25.944" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="26.720" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="25.943" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="26.720" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="25.943" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Activation" executed="True" result="Failure" success="False" time="26.719" asserts="0">
+              <test-suite type="Namespace" name="Activation" executed="True" result="Failure" success="False" time="25.943" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Failure" success="False" time="26.717" asserts="0">
+                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Failure" success="False" time="25.942" asserts="0">
                     <categories>
-                      <category name="Contains all Activation test classes" />
+                      <category name="Activation" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Activation.Activation.CorrectOneTimePinAndApplicationOffline" description="CorrectOneTimePinAndApplicationOffline" executed="True" result="Error" success="False" time="15.523" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.CorrectOneTimePinAndApplicationOffline" description="CorrectOneTimePinAndApplicationOffline" executed="True" result="Error" success="False" time="13.462" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                         <failure>
-                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
-  ----> FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(8) > div > input]]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_b491799698f94cd6ac95100a3c66e980.ClickNext(Browser browserInstance, ElementProxy nextButton)
-at TestProj.Tests.Activation.Activation.CorrectOneTimePinAndApplicationOffline() in c:\Users\kennedch\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 371
---FluentElementNotFoundException
-at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
-at FluentAutomation.ElementProxy.get_Element()
-at FluentAutomation.CommandProvider.<>c__DisplayClass18.<Click>b__17()
-at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#otp]]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_e7edac42581041ef9f207c0b735419b7.EnterAndVerifyOTPValue(Browser browserInstance)
+at TestProj.Tests.Activation.Activation.CorrectOneTimePinAndApplicationOffline() in c:\Users\kennedch\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 367
 ]]></stack-trace>
                         </failure>
                       </test-case>
