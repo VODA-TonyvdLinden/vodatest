@@ -37,8 +37,13 @@ namespace TestProj.Tests.GeneralApplicationNavigation
             container.Dispose();
         }
 
-
         /// <summary>
+        /// TEST: SEARCH FIELD  VALIDATIONS
+        /// Test Case ID: 5_FRS_Ref_5.1.9
+        /// Category: Search
+        /// Feature: Search
+        /// Pre-Condition: None
+        /// Environment: Application landing page
         /// TEST STEPS:
         /// 1. Verify that the vodacom logo and the red banner are displayed on the activation screen
         /// 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
@@ -72,8 +77,8 @@ namespace TestProj.Tests.GeneralApplicationNavigation
         /// 13. The text that is displayed within the field i am looking for
         /// 14. The search text field is editable
         /// </summary>
-        [Test, Description("SearchFieldValidations"), Repeat(1)]
-        public void SearchFieldValidations()
+        [Test, Description("_01_SearchFieldValidations"), Category("Search"), Repeat(1)]
+        public void _01_SearchFieldValidations()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IGeneralApplicationNavigationActions generalApplicationNavigationActions = container.Resolve<Interfaces.IGeneralApplicationNavigationActions>();
@@ -81,6 +86,12 @@ namespace TestProj.Tests.GeneralApplicationNavigation
         }
 
         /// <summary>
+        /// TEST:  GRID VIEW SEARCH OFFLINE/ONLINE
+        /// Test Case ID: 5_FRS_Ref_5.1.9
+        /// Category: Search
+        /// Feature: Search
+        /// Pre-Condition: None
+        /// Environment: Application landing page
         /// TEST STEPS:
         /// 1. Alerts (search only within user’s catalogues)
         ///   1.1 Please enter <product name)  and press <enter>
@@ -145,8 +156,8 @@ namespace TestProj.Tests.GeneralApplicationNavigation
         ///   7.2 A list of wholesalers are displayedas icons
         ///   7.3  Results are displayed and grouped per catalogue, with an indicator of the amount of products contained within
         /// </summary>
-        [Test, Description("GridviewSearchOfflineOnline"), Repeat(1)]
-        public void GridviewSearchOfflineOnline()
+        [Test, Description("_02_GridviewSearchOfflineOnline"), Category("Search"), Repeat(1)]
+        public void _02_GridviewSearchOfflineOnline()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IGeneralApplicationNavigationActions generalApplicationNavigationActions = container.Resolve<Interfaces.IGeneralApplicationNavigationActions>();
@@ -154,6 +165,12 @@ namespace TestProj.Tests.GeneralApplicationNavigation
         }
 
         /// <summary>
+        /// TEST: LIST VIEW SEARCH OFFLINE/ONLINE
+        /// Test Case ID: 5_FRS_Ref_5.1.9
+        /// Category: Search
+        /// Feature: Search
+        /// Pre-Condition: None
+        /// Environment: Application landing page
         /// TEST STEPS:
         /// 1. Alerts (search only within user’s catalogues)
         ///   1.1 Please enter <product name)  and press <enter>
@@ -218,8 +235,8 @@ namespace TestProj.Tests.GeneralApplicationNavigation
         ///   7.2 Results of Wholesalers products are displayed as a  List view
         ///   7.3  Results are displayed and grouped per catalogue, with an indicator of the amount of products contained within
         /// </summary>
-        [Test, Description("ListViewSearchOfflineOnline"), Repeat(1)]
-        public void ListViewSearchOfflineOnline()
+        [Test, Description("_03_ListViewSearchOfflineOnline"), Category("Search"), Repeat(1)]
+        public void _03_ListViewSearchOfflineOnline()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IGeneralApplicationNavigationActions generalApplicationNavigationActions = container.Resolve<Interfaces.IGeneralApplicationNavigationActions>();

@@ -38,6 +38,12 @@ namespace TestProj.Tests.AccessingApplication
         }
 
         /// <summary>
+        /// TEST: APPLICATION  LANDING PAGE
+        /// Test Case ID: 4_FRS_Ref_5.1.7
+        /// Category: Accessing app
+        /// Feature: Accessing app
+        /// Pre-Condition: None
+        /// Environment: Application Landiing page
         /// TEST STEPS:
         /// 1. Verify that the vodacom logo and the red banner are displayed on the activation screen
         /// 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
@@ -76,8 +82,8 @@ namespace TestProj.Tests.AccessingApplication
         /// 15. The text that is displayed within the field i am looking for
         /// 16. The search text field is editable
         /// </summary>
-        [Test, Description("ActivationLandingPage"), Repeat(1)]
-        public void ActivationLandingPage()
+        [Test, Description("_01_ActivationLandingPage"), Category("Accessing app"), Repeat(1)]
+        public void _01_ActivationLandingPage()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAccessingApplicationActions accessingApplicationAction = container.Resolve<Interfaces.IAccessingApplicationActions>();
@@ -85,6 +91,12 @@ namespace TestProj.Tests.AccessingApplication
         }
 
         /// <summary>
+        /// TEST: APPLICATION FIELD VALIDATIONS
+        /// Test Case ID: 4_FRS_Ref_5.1.7
+        /// Category: Accessing app
+        /// Feature: Accessing app
+        /// Pre-Condition: None
+        /// Environment: Application Landiing page
         /// TEST STEPS:
         /// 1.Select the alerts search field
         /// 2. Verify that the alerts search field validations
@@ -116,8 +128,8 @@ namespace TestProj.Tests.AccessingApplication
         ///   3.1.4 decimal numbers or float should are not allowed
         ///   3.1.5 Negative numbers should are not allowed
         /// </summary>
-        [Test, Description("ApplicationFieldValidation"), Repeat(1)]
-        public void ApplicationFieldValidation()
+        [Test, Description("_02_ApplicationFieldValidation"), Category("Accessing app"), Repeat(1)]
+        public void _02_ApplicationFieldValidation()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAccessingApplicationActions accessingApplicationAction = container.Resolve<Interfaces.IAccessingApplicationActions>();
@@ -125,6 +137,12 @@ namespace TestProj.Tests.AccessingApplication
         }
 
         /// <summary>
+        /// TEST: APPLICATION LANDING CONTENTS FUNCTIONALITY
+        /// Test Case ID: 4_FRS_Ref_5.1.7
+        /// Category: Accessing app
+        /// Feature: Accessing app
+        /// Pre-Condition: None
+        /// Environment: Application Landiing page
         /// TEST STEPS:
         /// 1. Verify specials, contents if accessible
         ///   1.1 Select any specail within the catalogue to see if is selectable by a single click
@@ -144,8 +162,8 @@ namespace TestProj.Tests.AccessingApplication
         /// 3.
         ///   3.1 The sub applications place holders are not accessable
         /// </summary>
-        [Test, Description("ApplicationLandingContentsFunctionality"), Repeat(1)]
-        public void ApplicationLandingContentsFunctionality()
+        [Test, Description("_03_ApplicationLandingContentsFunctionality"),Category("Accessing app"), Repeat(1)]
+        public void _03_ApplicationLandingContentsFunctionality()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAccessingApplicationActions accessingApplicationAction = container.Resolve<Interfaces.IAccessingApplicationActions>();
@@ -153,6 +171,12 @@ namespace TestProj.Tests.AccessingApplication
         }
 
         /// <summary>
+        /// TEST: APPLICATION WITH MULTIPLE  SPAZA'S
+        /// Test Case ID: 4_FRS_Ref_5.1.7
+        /// Category: Accessing app
+        /// Feature: Accessing app
+        /// Pre-Condition: None
+        /// Environment: Application Landiing page
         /// TEST STEPS:
         /// 1. Logon with a user that has multiple spaza's on his profile
         /// 2.Verify that the preferred alias name is displayed on top right hand corner of the app with 
@@ -172,8 +196,8 @@ namespace TestProj.Tests.AccessingApplication
         /// 5. The active spaza list is populated for users with multiple spaza's
         /// 6.  The default selected spaza at startup is the last selected spaza from the previous session. 
         /// </summary>
-        [Test, Description("ApplicationWithMultipleSpazas"), Repeat(1)]
-        public void ApplicationWithMultipleSpazas()
+        [Test, Description("_04_ApplicationWithMultipleSpazas"),Category("Accessing app"), Repeat(1)]
+        public void _04_ApplicationWithMultipleSpazas()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAccessingApplicationActions accessingApplicationAction = container.Resolve<Interfaces.IAccessingApplicationActions>();
@@ -181,6 +205,12 @@ namespace TestProj.Tests.AccessingApplication
         }
 
         /// <summary>
+        /// TEST: ACCESS APPLICATION WITH SINGLE  SPAZA
+        /// Test Case ID: 4_FRS_Ref_5.1.7
+        /// Category: Accessing app
+        /// Feature: Accessing app
+        /// Pre-Condition: None
+        /// Environment: Application Landiing page
         /// TEST STEPS:
         /// 1. Logon with a user that has single spaza's on his profile
         /// 2.Verify that the preferred alias name is displayed on top right hand corner of the app with the spaza 
@@ -193,8 +223,8 @@ namespace TestProj.Tests.AccessingApplication
         ///   alias name and the spaza name
         /// 3. No list should be presented                                                                                                                                                                    4.The multiple spaza function is deactivated on every screen.                                                                                                                                                                   
         /// </summary>
-        [Test, Description("AccessApplicationWithSingleSpaza"), Repeat(1)]
-        public void AccessApplicationWithSingleSpaza()
+        [Test, Description("_05_AccessApplicationWithSingleSpaza"),Category("Accessing app"), Repeat(1)]
+        public void _05_AccessApplicationWithSingleSpaza()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAccessingApplicationActions accessingApplicationAction = container.Resolve<Interfaces.IAccessingApplicationActions>();

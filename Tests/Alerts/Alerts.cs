@@ -37,6 +37,12 @@ namespace TestProj.Tests.Alerts
         }
 
         /// <summary>
+        /// TEST: ALERTS  LANDING PAGE VERIFICATION
+        /// Test Case ID: 8_FRS_Ref_5.1.5
+        /// Category: Alerts
+        /// Feature: Alerts
+        /// Pre-Condition: None
+        /// Environment:Alerts Page
         /// TEST STEPS:
         /// 1. Verify that the vodacom logo and the red banner are displayed on the activation screen
         /// 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
@@ -67,8 +73,8 @@ namespace TestProj.Tests.Alerts
         /// TEST OUTPUT:
         /// 
         /// </summary>
-        [Test, Description("AlertsLandingPageVerfication"), Repeat(1)]
-        public void AlertsLandingPageVerfication()
+        [Test, Description("_01_AlertsLandingPageVerfication"), Category("Alerts"), Repeat(1)]
+        public void _01_AlertsLandingPageVerfication()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
@@ -76,6 +82,12 @@ namespace TestProj.Tests.Alerts
         }
 
         /// <summary>
+        /// TEST: ALERTS  POLLING SERVICE
+        /// Test Case ID: 8_FRS_Ref_5.1.5
+        /// Category: Alerts
+        /// Feature: Alerts
+        /// Pre-Condition: None
+        /// Environment:Alerts Page
         /// TEST STEPS:
         /// 1. verify that the application places urgent actions  on the alerts page
         /// NB. In order to achieve this you need to follow the order process and then don't confirm order
@@ -91,8 +103,8 @@ namespace TestProj.Tests.Alerts
         ///   1.3 Then the confirmed order is no longer displayed on the alerts action
         ///   1.4 The polling service functioning as expected
         /// </summary>
-        [Test, Description("AlertsPollingService"), Repeat(1)]
-        public void AlertsPollingService()
+        [Test, Description("_02_AlertsPollingService"), Category("Alerts"), Repeat(1)]
+        public void _02_AlertsPollingService()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
@@ -100,6 +112,12 @@ namespace TestProj.Tests.Alerts
         }
 
         /// <summary>
+        /// TEST: ALERTS VIEW INVOICES
+        /// Test Case ID: 9_FRS_Ref_5.1.5
+        /// Category: Alerts
+        /// Feature: Alerts
+        /// Pre-Condition: None
+        /// Environment:Alerts Page
         /// TEST STEPS:
         /// 1.Verify that the active alert's text  is highlighted red "You have recieved new invoices"
         /// 2. Click on the <view invoices> button
@@ -119,8 +137,8 @@ namespace TestProj.Tests.Alerts
         ///   4.3 The total value column is displayed
         /// 5. The user is returned to the alerts notification page
         /// </summary>
-        [Test, Description("AlertsViewInvoices"), Repeat(1)]
-        public void AlertsViewInvoices()
+        [Test, Description("_03_AlertsViewInvoices"), Category("Alerts"), Repeat(1)]
+        public void _03_AlertsViewInvoices()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
@@ -128,6 +146,12 @@ namespace TestProj.Tests.Alerts
         }
 
         /// <summary>
+        /// TEST: ALERTS  CONFIRM NOW 
+        /// Test Case ID: 10_FRS_Ref_5.1.5
+        /// Category: Alerts
+        /// Feature: Alerts
+        /// Pre-Condition: None
+        /// Environment:Alerts Page
         /// TEST STEPS:
         /// 1.Verify that the active alert's text  is highlighted red "You have an unconfirmed order "
         /// 2. Click on the <confirm now> button
@@ -149,8 +173,8 @@ namespace TestProj.Tests.Alerts
         /// 6. The orders page is displayed  and there are no changes to the basket
         /// 7. The user is returned to the alerts notification page
         /// </summary>
-        [Test, Description("AlertsConfirmNow"), Repeat(1)]
-        public void AlertsConfirmNow()
+        [Test, Description("_04_AlertsConfirmNow"), Category("Alerts"), Repeat(1)]
+        public void _04_AlertsConfirmNow()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
@@ -158,6 +182,12 @@ namespace TestProj.Tests.Alerts
         }
 
         /// <summary>
+        /// TEST: ALERTS  SYNC NOW
+        /// Test Case ID: 11_FRS_Ref_5.1.5
+        /// Category: Alerts
+        /// Feature: Alerts
+        /// Pre-Condition: None
+        /// Environment:Alerts Page
         /// TEST STEPS:
         /// 1.Verify that the active alert's text  is highlighted red "You catalogue is out of sync"
         /// 2. Verify if the applicaction is online, in order to update the catalogue
@@ -168,8 +198,8 @@ namespace TestProj.Tests.Alerts
         /// 3. The progress bar is  displayed  to show that an update to the catalogue is in progress
         ///   and the application becomes in-active
         /// </summary>
-        [Test, Description("AlertsSyncNow"), Repeat(1)]
-        public void AlertsSyncNow()
+        [Test, Description("_05_AlertsSyncNow"), Category("Alerts"), Repeat(1)]
+        public void _05_AlertsSyncNow()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
@@ -177,6 +207,12 @@ namespace TestProj.Tests.Alerts
         }
 
         /// <summary>
+        /// TEST: ALERTS MANAGE CATALOGUE
+        /// Test Case ID: 12_FRS_Ref_5.1.5
+        /// Category: Setup_Catalogue
+        /// Feature: Alerts
+        /// Pre-Condition: None
+        /// Environment:Alerts Page
         /// TEST STEPS:
         /// 1.Verify that the active alert's text  is highlighted red "Manage your Catalogue "
         /// 2. Click on the <manage> button
@@ -211,8 +247,8 @@ namespace TestProj.Tests.Alerts
         ///   5.4  Select 50 - 75km  and select one wholesaler under that range by checbox
         ///   5.5   The Application Landing Page is Displayed
         /// </summary>
-        [Test, Description("Method"), Repeat(1)]
-        public void AlertsManageCatalogue()
+        [Test, Description("_06_AlertsManageCatalogue"), Category("Setup_Catalogue"), Repeat(1)]
+        public void _06_AlertsManageCatalogue()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
@@ -220,6 +256,12 @@ namespace TestProj.Tests.Alerts
         }
 
         /// <summary>
+        /// TEST: ALERTS  DIAGNOSE
+        /// Test Case ID: 13_FRS_Ref_5.1.5
+        /// Category: Alerts
+        /// Feature: Alerts
+        /// Pre-Condition: None
+        /// Environment:Alerts Page
         /// TEST STEPS:
         /// 1.Verify that the active alert's text  is highlighted red "You have connection issues "
         /// 2. Click on the <diagnose> button
@@ -247,8 +289,8 @@ namespace TestProj.Tests.Alerts
         ///   4.1 An indicator is displayed, that determines whether the connection was good or bad
         ///   4.2 Displayed results are determined by the application whether the connection speed is poor or not
         /// </summary>
-        [Test, Description("AlertsDiagnose"), Repeat(1)]
-        public void AlertsDiagnose()
+        [Test, Description("_07_AlertsDiagnose"), Category("Alerts"), Repeat(1)]
+        public void _07_AlertsDiagnose()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
@@ -256,6 +298,12 @@ namespace TestProj.Tests.Alerts
         }
 
         /// <summary>
+        /// TEST: ALERTS  CHANGE SPAZA
+        /// Test Case ID: 14_FRS_Ref_5.1.5
+        /// Category: Alerts
+        /// Feature: Alerts
+        /// Pre-Condition: None
+        /// Environment:Alerts Page
         /// TEST STEPS:
         /// 1.Verify that the active alert's text  is highlighted red "Change active Spaza "
         /// 2. Click on the <change now> button
@@ -273,8 +321,8 @@ namespace TestProj.Tests.Alerts
         ///   4.2 The Orders are switched to the specific outlet
         ///   4.3 catalogues, favourtes and messages remain the same
         /// </summary>
-        [Test, Description("AlersChangeSpaza"), Repeat(1)]
-        public void AlersChangeSpaza()
+        [Test, Description("_08_AlersChangeSpaza"), Category("Alerts"), Repeat(1)]
+        public void _08_AlersChangeSpaza()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
@@ -282,6 +330,12 @@ namespace TestProj.Tests.Alerts
         }
 
         /// <summary>
+        /// TEST: ALERTS  MESSAGING
+        /// Test Case ID: 15_FRS_Ref_5.1.5
+        /// Category: Alerts
+        /// Feature: Alerts
+        /// Pre-Condition: None
+        /// Environment:Alerts Page
         /// TEST STEPS:
         /// 1.Verify Received Message Format  from MAS
         ///   1.1 Verify that the recieved message has an experiry time
@@ -293,8 +347,8 @@ namespace TestProj.Tests.Alerts
         ///   1.2 The displayed message is plain text
         ///   1.3 The Message is cleared
         /// </summary>
-        [Test, Description("AlertsMessaging"), Repeat(1)]
-        public void AlertsMessaging()
+        [Test, Description("_09_AlertsMessaging"), Category("Alerts"), Repeat(1)]
+        public void _09_AlertsMessaging()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();

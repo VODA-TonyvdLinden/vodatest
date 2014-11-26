@@ -37,6 +37,12 @@ namespace TestProj.Tests.Favourites
         }
 
         /// <summary>
+        /// TEST: FAVOURITES IN GRID VIEW
+        /// Test Case ID: 29_FRS_Ref_5.3.2
+        /// Category: Favourites
+        /// Feature: Favourites
+        /// Pre-Condition: None
+        /// Environment: Application landing page
         /// TEST STEPS:
         /// 1.Click on the favourites block on the bottom of the screen
         /// 2.Verify that delete orders from a specific supplier functions asexpected
@@ -56,8 +62,8 @@ namespace TestProj.Tests.Favourites
         ///   3.2 This clear all selected catalogue basket
         /// 4. The list view button is displayed
         /// </summary>
-        [Test, Description("FavouritesInGrid"), Repeat(1)]
-        public void FavouritesInGrid()
+        [Test, Description("_01_FavouritesInGridView"), Category("Favourites"), Repeat(1)]
+        public void _01_FavouritesInGridView()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
@@ -65,6 +71,12 @@ namespace TestProj.Tests.Favourites
         }
 
         /// <summary>
+        /// TEST: FAVOURITES IN LIST VIEW
+        /// Test Case ID: 30_FRS_Ref_5.3.2
+        /// Category: Favourites
+        /// Feature: Favourites
+        /// Pre-Condition: None
+        /// Environment: Favourites landing page
         /// TEST STEPS:
         /// 1 Click on the list view button on the screen
         /// 2. Click on the subcategory product
@@ -86,8 +98,8 @@ namespace TestProj.Tests.Favourites
         ///   4.2 This clear all selected catalogue basket
         /// 5. The list view button is displayed
         /// </summary>
-        [Test, Description("FavouritesInListView"), Repeat(1)]
-        public void FavouritesInListView()
+        [Test, Description("_02_FavouritesInListView"), Category("Favourites"), Repeat(1)]
+        public void _02_FavouritesInListView()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
@@ -95,6 +107,12 @@ namespace TestProj.Tests.Favourites
         }
 
         /// <summary>
+        /// TEST: FAVOURITES DETAIL GRID VIEW
+        /// Test Case ID: 31_FRS_Ref_5.3.2
+        /// Category: Favourites
+        /// Feature: Favourites
+        /// Pre-Condition: None
+        /// Environment: Favourites landing page
         /// TEST STEPS:
         /// 1. Click on the <grid view> button
         /// 2. Verify that on the list view the is a grid view button that will alllow to switch back
@@ -126,8 +144,8 @@ namespace TestProj.Tests.Favourites
         ///   6.1 Multiple records on the list view table are selected
         ///   6.2 This clear all selected catalogue basket
         /// </summary>
-        [Test, Description("FavouritesInGridView"), Repeat(1)]
-        public void FavouritesDetailGridView()
+        [Test, Description("_03_FavouritesDetailGridView"), Category("Favourites"), Repeat(1)]
+        public void _03_FavouritesDetailGridView()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
@@ -135,6 +153,12 @@ namespace TestProj.Tests.Favourites
         }
 
         /// <summary>
+        /// TEST: FAVOURITES DETAIL LIST VIEW 
+        /// Test Case ID: 32_FRS_Ref_5.3.2
+        /// Category: Favourites
+        /// Feature: Favourites
+        /// Pre-Condition: None
+        /// Environment: Favourites landing page
         /// TEST STEPS:
         /// 1. Click on the <list view> button
         /// 2. Verify that on the list view the is a grid view button that will alllow to switch back
@@ -166,8 +190,8 @@ namespace TestProj.Tests.Favourites
         ///   6.1 Multiple records on the list view table are selected
         ///   6.2 This clear all selected catalogue basket
         /// </summary>
-        [Test, Description("FavouritesDetailListView"), Repeat(1)]
-        public void FavouritesDetailListView()
+        [Test, Description("_04_FavouritesDetailListView"), Category("Favourites"), Repeat(1)]
+        public void _04_FavouritesDetailListView()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
@@ -175,6 +199,12 @@ namespace TestProj.Tests.Favourites
         }
 
         /// <summary>
+        /// TEST: FAVOURITES VIEW ITEM DETAIL
+        /// Test Case ID: 33_FRS_Ref_5.3.2
+        /// Category: Favourites
+        /// Feature: Favourites
+        /// Pre-Condition: None
+        /// Environment: Favourites landing page
         /// TEST STEPS:
         /// 1. Click on the product
         /// 2. Verify that the product view screen
@@ -196,8 +226,8 @@ namespace TestProj.Tests.Favourites
         ///   2.6  A star with a plus sign is displayed
         ///   2.7 The save button is displayed
         /// </summary>
-        [Test, Description("FavouritesViewItemDetail"), Repeat(1)]
-        public void FavouritesViewItemDetail()
+        [Test, Description("_05_FavouritesViewItemDetail"), Category("Favourites"), Repeat(1)]
+        public void _05_FavouritesViewItemDetail()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
@@ -205,6 +235,12 @@ namespace TestProj.Tests.Favourites
         }
 
         /// <summary>
+        /// TEST: FAVOURITES ADD ITEM TO FAVOURITES
+        /// Test Case ID: 33_FRS_Ref_5.3.2
+        /// Category: Basket
+        /// Feature: Basket
+        /// Pre-Condition: None
+        /// Environment: Basket landing page
         /// TEST STEPS:
         /// 1. Click on the product
         /// 2. On the product view screen click on the favourites icon which is represented by a star and save
@@ -214,8 +250,8 @@ namespace TestProj.Tests.Favourites
         /// 2. The product is saved to favourites
         /// 3.The recently adde product is displayed in the favourites m
         /// </summary>
-        [Test, Description("FavouritesAddItemToFavourites"), Repeat(1)]
-        public void FavouritesAddItemToFavourites()
+        [Test, Description("_06_FavouritesAddItemToFavourites"), Category("Basket"), Repeat(1)]
+        public void _06_FavouritesAddItemToFavourites()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
@@ -223,6 +259,12 @@ namespace TestProj.Tests.Favourites
         }
 
         /// <summary>
+        /// TEST: FAVOURITES  ADDING AND REMOVING PRODUCT QUANTITY
+        /// Test Case ID: 33_FRS_Ref_5.3.2
+        /// Category: Basket
+        /// Feature: Basket
+        /// Pre-Condition: None
+        /// Environment: Basket landing page
         /// TEST STEPS:
         /// 1. Click on the product
         /// 2. On the product view screen  click on the - sign for removing and + adding quantity and save
@@ -234,8 +276,8 @@ namespace TestProj.Tests.Favourites
         /// 3.
         ///   3.1 The total is correct
         /// </summary>
-        [Test, Description("FavouritesAddingAndRemovingProductQuantity"), Repeat(1)]
-        public void FavouritesAddingAndRemovingProductQuantity()
+        [Test, Description("_07_FavouritesAddingAndRemovingProductQuantity"), Category("Basket"), Repeat(1)]
+        public void _07_FavouritesAddingAndRemovingProductQuantity()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();

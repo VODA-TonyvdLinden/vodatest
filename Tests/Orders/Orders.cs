@@ -37,6 +37,12 @@ namespace TestProj.Tests.Orders
         }
 
         /// <summary>
+        /// TEST: PENDING ORDER CONFIRMATION
+        /// Test Case ID: 34_FRS_Ref_5.3.3
+        /// Category: Orders
+        /// Feature: Orders
+        /// Pre-Condition: None
+        /// Environment: Basket  landing page
         /// TEST STEPS:
         /// 1. Click on the basket block at the bottom of the screen
         /// 2. Select an order that is pending confirmation
@@ -58,8 +64,8 @@ namespace TestProj.Tests.Orders
         /// 5. The confirmation pop-up is displayed
         /// 6. The basket is cleared , the order was successfully placed
         /// </summary>
-        [Test, Description("PendingOrdersConfirmation"), Repeat(1)]
-        public void PendingOrdersConfirmation()
+        [Test, Description("_01_PendingOrdersConfirmation"), Category("Orders"), Repeat(1)]
+        public void _01_PendingOrdersConfirmation()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
@@ -67,6 +73,12 @@ namespace TestProj.Tests.Orders
         }
 
         /// <summary>
+        /// TEST: VIEW CONFIRMED  ORDER
+        /// Test Case ID: 35_FRS_Ref_5.3.3
+        /// Category: Orders
+        /// Feature: Orders
+        /// Pre-Condition: None
+        /// Environment: Basket  landing page
         /// TEST STEPS:
         /// 1. Select an order that has been placed
         /// 2. Verify that the confirm order pop -up has the following
@@ -82,8 +94,8 @@ namespace TestProj.Tests.Orders
         ///   2.3 The view my order button is displayed
         /// 3. The orders that have been confirmed are displayed
         /// </summary>
-        [Test, Description("ViewConfirmedOrder"), Repeat(1)]
-        public void ViewConfirmedOrder()
+        [Test, Description("_02_ViewConfirmedOrder"), Category("Orders"), Repeat(1)]
+        public void _02_ViewConfirmedOrder()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
@@ -91,6 +103,12 @@ namespace TestProj.Tests.Orders
         }
 
         /// <summary>
+        /// TEST: ORDER HISTORY COLLAPSED VIEW
+        /// Test Case ID: 36_FRS_Ref_5.4
+        /// Category: Orders
+        /// Feature: Orders
+        /// Pre-Condition: None
+        /// Environment: Orders landing page
         /// TEST STEPS:
         /// 1. Click on the <orders> block  at the bottom of the screen
         /// 2. Verify the following on the order history that is displayed
@@ -112,8 +130,8 @@ namespace TestProj.Tests.Orders
         ///   2.6 The value column is displayed with a value
         ///   2.7 The total value is displayed and also correct
         /// </summary>
-        [Test, Description("OrderHistoryCollapsedView"), Repeat(1)]
-        public void OrderHistoryCollapsedView()
+        [Test, Description("_03_OrderHistoryCollapsedView"), Category("Orders"), Repeat(1)]
+        public void _03_OrderHistoryCollapsedView()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
@@ -121,6 +139,12 @@ namespace TestProj.Tests.Orders
         }
 
         /// <summary>
+        /// TEST: ORDER HISTORY EXPANDED
+        /// Test Case ID: 37_FRS_Ref_5.4
+        /// Category: Orders
+        /// Feature: Orders
+        /// Pre-Condition: None
+        /// Environment: Orders landing page
         /// TEST STEPS:
         /// 1. Click on the <orders> block  at the bottom of the screen
         /// 2. Verify the following on the order history that is displayed
@@ -144,8 +168,8 @@ namespace TestProj.Tests.Orders
         ///   2.7 The total value is displayed and also correct
         /// 3. The + sign in the select column changes to - sign and a number of invoices under order number are diplayed
         /// </summary>
-        [Test, Description("OrderHistoryExpanded"), Repeat(1)]
-        public void OrderHistoryExpanded()
+        [Test, Description("_04_OrderHistoryExpanded"), Category("Orders"), Repeat(1)]
+        public void _04_OrderHistoryExpanded()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
@@ -153,6 +177,12 @@ namespace TestProj.Tests.Orders
         }
 
         /// <summary>
+        /// TEST: VIEW INVOICE DETAIL
+        /// Test Case ID: 38_FRS_Ref_5.4.1
+        /// Category: Orders
+        /// Feature: Orders
+        /// Pre-Condition: None
+        /// Environment: Orders landing page
         /// TEST STEPS:
         /// 1. Click on the <orders> block  at the bottom of the screen
         /// 2. Verify the following on the order history that is displayed
@@ -196,8 +226,8 @@ namespace TestProj.Tests.Orders
         /// 8. The log discrepiancy button is displayed
         /// 9. Total number of items is correct
         /// </summary>
-        [Test, Description("ViewInvoiceDetail"), Repeat(1)]
-        public void ViewInvoiceDetail()
+        [Test, Description("_05_ViewInvoiceDetail"), Category("Orders"), Repeat(1)]
+        public void _05_ViewInvoiceDetail()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
@@ -205,6 +235,12 @@ namespace TestProj.Tests.Orders
         }
 
         /// <summary>
+        /// TEST: VIEW ORDER DETAILS
+        /// Test Case ID: 39_FRS_Ref_5.4.1
+        /// Category: Orders
+        /// Feature: Orders
+        /// Pre-Condition: None
+        /// Environment: Orders landing page
         /// TEST STEPS:
         /// 1. Click on the order number
         /// 2. Verify that the following in the order detail screen
@@ -228,8 +264,8 @@ namespace TestProj.Tests.Orders
         ///   2.6 The back to orders button is displayed
         ///   2.7 The invoice button is displayed
         /// </summary>
-        [Test, Description("ViewOrderDetails"), Repeat(1)]
-        public void ViewOrderDetails()
+        [Test, Description("_06_ViewOrderDetails"), Category("Orders"), Repeat(1)]
+        public void _06_ViewOrderDetails()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
@@ -237,6 +273,12 @@ namespace TestProj.Tests.Orders
         }
 
         /// <summary>
+        /// TEST: RE- ORDER
+        /// Test Case ID: 39_FRS_Ref_5.4.1
+        /// Category: Orders
+        /// Feature: Orders
+        /// Pre-Condition: None
+        /// Environment: Orders landing page
         /// TEST STEPS:
         /// 1. Click on the order re-order button on the view order details screen, but please note that invonking this process 
         ///   the following events happen
@@ -249,8 +291,8 @@ namespace TestProj.Tests.Orders
         /// TEST OUTPUT:
         /// 1. The result will be based on the outcome of the process
         /// </summary>
-        [Test, Description("ReOrder"), Repeat(1)]
-        public void ReOrder()
+        [Test, Description("_07_ReOrder"), Category("Orders"), Repeat(1)]
+        public void _07_eOrder()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
@@ -258,6 +300,12 @@ namespace TestProj.Tests.Orders
         }
 
         /// <summary>
+        /// TEST: UNCONFIRMED ORDERS
+        /// Test Case ID: 39_FRS_Ref_5.4.1
+        /// Category: Orders
+        /// Feature: Orders
+        /// Pre-Condition: None
+        /// Environment: Orders landing page
         /// TEST STEPS:
         /// 1. Click on the unconfirmed orders button
         /// 2. Follow the order process
@@ -267,8 +315,8 @@ namespace TestProj.Tests.Orders
         /// 2. The order is confirmed
         /// 3. The Unconfirmed order button should be inactive if there are no more orders to confirm
         /// </summary>
-        [Test, Description("UnconfirmedOrders"), Repeat(1)]
-        public void UnconfirmedOrders()
+        [Test, Description("_08_UnconfirmedOrders"), Category("Orders"), Repeat(1)]
+        public void _08_UnconfirmedOrders()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
@@ -276,6 +324,12 @@ namespace TestProj.Tests.Orders
         }
 
         /// <summary>
+        /// TEST: VIEW INVOICES
+        /// Test Case ID: 40_FRS_Ref_5.4.1
+        /// Category: Orders
+        /// Feature: Orders
+        /// Pre-Condition: None
+        /// Environment: Orders landing page
         /// TEST STEPS:
         /// 1. Click on view invoices button on the view orders details screen
         /// 2. Verify the caption of the order invoice  page is displayed as invoices
@@ -293,8 +347,8 @@ namespace TestProj.Tests.Orders
         /// 6. The back to orders button is displayed
         /// 7. The Orders screen is displayed
         /// </summary>
-        [Test, Description("ViewInvoices"), Repeat(1)]
-        public void ViewInvoices()
+        [Test, Description("_09_ViewInvoices"), Category("Orders"), Repeat(1)]
+        public void _09_ViewInvoices()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
@@ -302,6 +356,12 @@ namespace TestProj.Tests.Orders
         }
 
         /// <summary>
+        /// TEST: LOGGING DISCREPANCIES
+        /// Test Case ID: 41_FRS_Ref_5.4.4
+        /// Category: Orders
+        /// Feature: Orders
+        /// Pre-Condition: None
+        /// Environment: Orders landing page
         /// TEST STEPS:
         /// 1. Go to view invoice detail scren
         /// 2. Click on the <log descrepancy> button
@@ -327,8 +387,8 @@ namespace TestProj.Tests.Orders
         /// 6. The discrepancy reason is displayed
         /// 7. The discrepancy is successfully logged
         /// </summary>
-        [Test, Description("LoggingDiscrepancies"), Repeat(1)]
-        public void LoggingDiscrepancies()
+        [Test, Description("_10_LoggingDiscrepancies"), Category("Orders"), Repeat(1)]
+        public void _10_LoggingDiscrepancies()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();

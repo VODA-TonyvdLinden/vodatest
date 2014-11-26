@@ -37,6 +37,12 @@ namespace TestProj.Tests.Catalogues
         }
 
         /// <summary>
+        /// TEST: SPLASH/INTERSTIAL ADVERT
+        /// Test Case ID: 18_FRS_Ref_5.2.1
+        /// Category: Catalogues
+        /// Feature: Interstial Advert
+        /// Pre-Condition: None
+        /// Environment: Any Landing Page
         /// TEST STEPS:
         /// 1.Verify that  the advert is displayed on a full page and also fo 5 seconds
         /// 2.Verify that the advert  is clickable
@@ -46,8 +52,8 @@ namespace TestProj.Tests.Catalogues
         /// 2.The Advert is clickable
         /// 3. The splash ad redirects the user to the relevant product after clicking it
         /// </summary>
-        [Test, Description("SplashInterstialAdvert"), Repeat(1)]
-        public void SplashInterstialAdvert()
+        [Test, Description("_01_SplashInterstialAdvert"), Category("Catalogues"), Repeat(1)]
+        public void _01_SplashInterstialAdvert()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
@@ -55,6 +61,12 @@ namespace TestProj.Tests.Catalogues
         }
 
         /// <summary>
+        /// TEST: CATALOGUES LANDING PAGE
+        /// Test Case ID: 19_FRS_Ref_5.2.1
+        /// Category: Catalogues
+        /// Feature: Catalogues
+        /// Pre-Condition: None
+        /// Environment: Application landing page
         /// TEST STEPS:
         /// 1.Click on the catalogues block at the bottom
         /// 2. Verify that the catalogues landing page is displayed with the following
@@ -104,8 +116,8 @@ namespace TestProj.Tests.Catalogues
         /// 7.The brands are displayed and you can scroll from left to right
         /// 8. The specails are displayed on the left hand side of the landing page and user can scrollfrom left to right                                                                                                             
         /// </summary>
-        [Test, Description("CatalogueLandingPage"), Repeat(1)]
-        public void CatalogueLandingPage()
+        [Test, Description("_02_CatalogueLandingPage"), Category("Catalogues"), Repeat(1)]
+        public void _02_CatalogueLandingPage()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
@@ -113,6 +125,12 @@ namespace TestProj.Tests.Catalogues
         }
 
         /// <summary>
+        /// TEST: CATALOGUES VIEW SUB MENU
+        /// Test Case ID: 20_FRS_Ref_5.2.1
+        /// Category: Catalogues
+        /// Feature: Catalogues
+        /// Pre-Condition: None
+        /// Environment: Catalogues
         /// TEST STEPS:
         /// 1.Verify that sub catergories is scrollable up and down
         ///   1.1 Select on any of the fixed categories
@@ -126,8 +144,8 @@ namespace TestProj.Tests.Catalogues
         ///   1.3  The selected subcatergory is displayed in red
         ///   1.4  The  subcatergories list is collapsed
         /// </summary>
-        [Test, Description("CatalogueViewSubMenu"), Repeat(1)]
-        public void CatalogueViewSubMenu()
+        [Test, Description("_03_CatalogueViewSubMenu"), Category("Catalogues"), Repeat(1)]
+        public void _03_CatalogueViewSubMenu()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
@@ -135,6 +153,12 @@ namespace TestProj.Tests.Catalogues
         }
 
         /// <summary>
+        /// TEST: CATALOGUES VIEW PRODUCTS
+        /// Test Case ID: 21_FRS_Ref_5.2.1
+        /// Category: Catalogues
+        /// Feature: Catalogues
+        /// Pre-Condition: None
+        /// Environment: Application landing page
         /// TEST STEPS:
         /// 1. Select on any of the fixed categories
         /// 2. Make sure that you can scroll up and down on that list
@@ -156,8 +180,8 @@ namespace TestProj.Tests.Catalogues
         ///   5.3 The buy now button is displayed
         ///   5.4 The product description is displayed                                                                                                                                                
         /// </summary>
-        [Test, Description("CatalogueViewProducts"), Repeat(1)]
-        public void CatalogueViewProducts()
+        [Test, Description("_04_CatalogueViewProducts"), Category("Catalogues"), Repeat(1)]
+        public void _04_CatalogueViewProducts()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
@@ -165,6 +189,12 @@ namespace TestProj.Tests.Catalogues
         }
 
         /// <summary>
+        /// TEST: CATALOGUES VIEW PRODUCT DETAIL
+        /// Test Case ID: 22_FRS_Ref_5.1.3
+        /// Category: Catalogues
+        /// Feature: Catalogues
+        /// Pre-Condition: None
+        /// Environment: Application landing page
         /// TEST STEPS:
         /// 1. Select on any of the fixed categories
         /// 2. Make sure that you can scroll up and down on that list
@@ -204,8 +234,8 @@ namespace TestProj.Tests.Catalogues
         ///   7.6  A star with a plus sign is displayed
         ///   7.7 The save button is displayed
         /// </summary>
-        [Test, Description("CatalogueViewProductDetail"), Repeat(1)]
-        public void CatalogueViewProductDetail()
+        [Test, Description("_05_CatalogueViewProductDetail"), Category("Catalogues"), Repeat(1)]
+        public void _05_CatalogueViewProductDetail()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
@@ -213,6 +243,12 @@ namespace TestProj.Tests.Catalogues
         }
 
         /// <summary>
+        /// TEST: CATALOGUES VIEW ADD PRODUCT TO FAVOURITES
+        /// Test Case ID: 22_FRS_Ref_5.1.3
+        /// Category: Catalogues
+        /// Feature: Catalogues
+        /// Pre-Condition: None
+        /// Environment: Application landing page
         /// TEST STEPS:
         /// 1.Select on any of the fixed categories
         /// 2. Make sure that you can scroll up and down on that list
@@ -230,8 +266,8 @@ namespace TestProj.Tests.Catalogues
         /// 6.  The product is saved to favourites
         /// 7.The recently adde product is displayed in the favourites menu
         /// </summary>
-        [Test, Description("CatalogueViewAddProductToFavourites"), Repeat(1)]
-        public void CatalogueViewAddProductToFavourites()
+        [Test, Description("_06_CatalogueViewAddProductToFavourites"), Category("Catalogues"), Repeat(1)]
+        public void _06_CatalogueViewAddProductToFavourites()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
@@ -239,6 +275,12 @@ namespace TestProj.Tests.Catalogues
         }
 
         /// <summary>
+        /// TEST: CATALOGUES VIEW ADDING AND REMOVING PRODUCT QUANTITY
+        /// Test Case ID: 22_FRS_Ref_5.1.3
+        /// Category: Catalogues
+        /// Feature: Catalogues
+        /// Pre-Condition: None
+        /// Environment: Application landing page
         /// TEST STEPS:
         /// 1.Select on any of the fixed categories
         /// 2. Make sure that you can scroll up and down on that list
@@ -258,8 +300,8 @@ namespace TestProj.Tests.Catalogues
         /// 8.
         ///   8.1 The total is correct
         /// </summary>
-        [Test, Description("CatalogueViewAddingAndRemovingProductQuantity"), Repeat(1)]
-        public void CatalogueViewAddingAndRemovingProductQuantity()
+        [Test, Description("_07_CatalogueViewAddingAndRemovingProductQuantity"), Category("Catalogues"), Repeat(1)]
+        public void _07_CatalogueViewAddingAndRemovingProductQuantity()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();

@@ -29,14 +29,6 @@ namespace TestProj.Tests.Activation
         [TestFixtureSetUp]
         public void Initialise()
         {
-            //Classes.ScreenshotRequirements req = new Classes.ScreenshotRequirements();
-            //req.RequirementList.Add(new Classes.ScreenshotRequirement() { EventName = "Event 1", EntryRequired = true, ExitRequired = true });
-            //req.RequirementList.Add(new Classes.ScreenshotRequirement() { EventName = "Event 2", EntryRequired = true, ExitRequired = true });
-            //req.RequirementList.Add(new Classes.ScreenshotRequirement() { EventName = "Event 3", EntryRequired = true, ExitRequired = true });
-
-            //Classes.XMLSeriallizer.Serialize(req, Properties.Settings.Default.ScreenshotRequirementsPath);
-            //this = container.Resolve<Interfaces.IActivation>();
-
             browserInstance = new Classes.Browser(Classes.Browser.eBrowser.Chrome);
             browserInstance.Config.ScreenshotPath(Properties.Settings.Default.ScreenshotPath);
             browserInstance.Instance.Wait(5);
@@ -80,74 +72,58 @@ namespace TestProj.Tests.Activation
         }
 
         /// <summary>
+        /// TEST: VERIFY ACTIVATION LANDING PAGE
+        /// Test Case ID: 1_FRS_Ref_6.1.1
+        /// Category: Activation Page
+        /// Feature: Activation
+        /// Pre-Condition: NONE
+        /// Environment: Activativation Page
         /// TEST STEPS:
-        /// 1. Verify that all text fields are mandatory on the form
-        ///   1.1.1 Please don’t enter anything on the fields and click next
-        /// 2. Select OTP field
-        /// 3.  Verify that the msisdn field validation will be limited to Numeric format
-        ///   3.1.1 Please enter space before entering input on the field
-        ///   3.1.2 Please enter decimal numbers <0.00444>
-        ///   3.1.3 Please enter negative value <-1>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+        /// 1. Verify that the vodacom logo and the red banner are displayed on the activation screen
+        /// 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
+        /// 3. Verify that contact us and help me hyperlinks are displayed
+        /// 4. See spelling, Grammar and alignment 
+        /// 5. Verify that the next button is displayed and enabled
+        /// 6. Verify that the colour of the next button is purple
+        /// 7. Verify that text label on the next button is white
+        /// 8. Verfy that activation form contains msisdn,username,activation code and preferred alias fields      
+        /// 9. Verify that the Application buttons are displayed at the bottom of the screen
         /// TEST OUTPUT:
-        ///   1.1.1 Error Message is displayed: “E1-1-7 – Please complete all fields”. and the field is highlited in red
-        /// 2.Focus is on the OTP field
-        /// 3.Invalid data should not be allowed to be entered in the OTP field
-        ///   3.1.1 a space before any input  is not allowed
-        ///   3.1.2  decimal or float numbers are not allowed
-        ///   3.1.3  A negative number is not allowed
+        /// 1. The vodacom banner logo and banner are displayed 
+        /// 2. The online/offline indicator is displayed on the top left hand corner of the screen
+        /// 3. The contact us and help me hyerlinks are displayed
+        /// 4. Spelling, Grammar and alignment correct (Screen should resize on all devices also able to rotate from Portrait to landscape)
+        /// 5. The next button is displayed and enabled
+        /// 6. The button colour is purple
+        /// 7. The text label on the next button is white
+        /// 8.The msisdn, username, activation code and preffered alias fields are
+        /// 9. The Application button are displayed at the bottom screen
         /// </summary>
-        [Test, Description("_06_ActivationOneTimePinFieldValidation"), Repeat(1)]
-        public void _06_ActivationOneTimePinFieldValidation()
+        /// <param name="browserInstance"></param>
+        /// <param name="screenshotRequirement"></param>
+        [Test, Description("_01_VerifyActivationLandingPage"), Category("Activation Page"), Repeat(1)]
+        public void _01_VerifyActivationLandingPage()
         {
-        }
-
-        /// <summary>
-        /// TEST STEPS:
-        /// 1.Valid User Details - Verify that Username and Activation Key Matches with BOP Manager
-        ///   1.1.1 Enter valid msisdn
-        ///   1.1.2 Enter valid  username
-        ///   1.1.3  Enter valid activation key, any number/string that is accepted by the field
-        ///   1.1.4  Enter any user defined preferred alias
-        ///   1.1.5 Press the next button
-        /// TEST OUTPUT:
-        /// 1. This is a positive testfor verify the Bop details match the ones on BOP
-        ///   1.1.1 The msisdn is displayed
-        ///   1.1.2 The username is displayed
-        ///   1.1.3  The Valid Key is displayed
-        ///   1.1.4  The preferred alias is displayed
-        ///   1.1.5   The OTP screen is displayed, with a message " The One time pin message is displayed as " A One Time 
-        /// Pin has been sent to 0*****1234. Please enter the One time Pin here to continue                                                                  
-        /// </summary>
-        [Test, Description("_04_ActivationFormCorrectUserDetails"), Repeat(1)]
-        public void _04_ActivationFormCorrectUserDetails()
-        {
-
-
+            //http://aspnet.dev.afrigis.co.za/bopapp/#/activation
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
+
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
-
-            //   1.1.1 Enter valid msisdn
-            activationAction.MSISDNInput(browserInstance, msisdn, TestData.Instance.DefaultData.ActivationData.MSISDN);
-
-            //   1.1.2 Enter valid  username
-            activationAction.UsernameInput(browserInstance, username, TestData.Instance.DefaultData.ActivationData.Username);
-
-            //   1.1.3  Enter valid activation key, any number/string that is accepted by the field
-            activationAction.ActivationKeyInput(browserInstance, activationNumber, TestData.Instance.DefaultData.ActivationData.ActivationKey);
-
-            //   1.1.4  Enter any user defined preferred alias
-            activationAction.AliasInput(browserInstance, userAlias, TestData.Instance.DefaultData.ActivationData.Alias);
-            //   1.1.5 Press the next button
-            Classes.LogWriter.Instance.Log("TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST", Classes.LogWriter.eLogType.Error);
-            browserInstance.Instance.Enter("NOT REQUIRED").In(challengeAnswer);
-
-            activationAction.ClickNext(browserInstance, activationNextButton);
-
-            activationAction.ValidateOTPStart(browserInstance, msisdn.Element.Text);
+            activationAction.VerifyLogoAndBanner(browserInstance);
+            activationAction.VerifyOnlineIndicator(browserInstance);
+            activationAction.VerifyPageLinks(browserInstance);
+            // 4. See spelling, Grammar and alignment 
+            //CONNOT DO THAT
+            activationAction.VerifyActivationPageNextButton(browserInstance);
+            activationAction.VerifyFieldExist(browserInstance);
         }
 
         /// <summary>
-        /// ActivationFormFieldValidation
+        /// TEST: ACTIVATION FORM  FIELD VALIDATIONS
+        /// Test Case ID: 1_FRS_Ref_6.1.1
+        /// Category: Activation form
+        /// Feature: Activation
+        /// Pre-Condition: NONE
+        /// Environment: Activativation Page
         /// TEST STEPS::
         /// 1. Verify that all text fields are mandatory on the form
         /// 1.1.1 Please don’t enter anything on all the fields and click next
@@ -186,7 +162,7 @@ namespace TestProj.Tests.Activation
         /// </summary>
         /// <param name="browserInstance"></param>
         /// <param name="screenshotRequirement"></param>
-        [Test, Description("_02_ActivationFormFieldValidation"), Repeat(1)]
+        [Test, Description("_02_ActivationFormFieldValidation"), Category("Activation Page"), Repeat(1)]
         public void _02_ActivationFormFieldValidation()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
@@ -202,7 +178,12 @@ namespace TestProj.Tests.Activation
         }
 
         /// <summary>
-        /// ActivationFormIncorrectUserDetails
+        /// TEST: ACTIVATION FORM INCORRECT USER DETAILS
+        /// Test Case ID: 1_FRS_Ref_6.1.1
+        /// Category: Activation form
+        /// Feature: Activation
+        /// Pre-Condition: NONE
+        /// Environment: Activativation Page
         /// Test steps:
         /// 1. Invalid Activation Key – does not match one saved in BOP Manager                                             
         ///   1.1.1 Enter valid msisdn                                                                                                                              
@@ -254,7 +235,7 @@ namespace TestProj.Tests.Activation
         /// </summary>
         /// <param name="browserInstance"></param>
         /// <param name="screenshotRequirement"></param>
-        [Test, Description("_03_ActivationFormIncorrectUserDetails"), Repeat(1)]
+        [Test, Description("_03_ActivationFormIncorrectUserDetails"), Category("Activation form"), Repeat(1)]
         public void _03_ActivationFormIncorrectUserDetails()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
@@ -268,47 +249,63 @@ namespace TestProj.Tests.Activation
         }
 
         /// <summary>
-        /// VerifyActivationLandingPage
+        /// TEST: ACTIVATION FORM CORRECT USER DETAILS
+        /// Test Case ID: 1_FRS_Ref_6.1.1
+        /// Category: Activation form
+        /// Feature: Activation
+        /// Pre-Condition: NONE
+        /// Environment: Activativation Page
         /// TEST STEPS:
-        /// 1. Verify that the vodacom logo and the red banner are displayed on the activation screen
-        /// 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
-        /// 3. Verify that contact us and help me hyperlinks are displayed
-        /// 4. See spelling, Grammar and alignment 
-        /// 5. Verify that the next button is displayed and enabled
-        /// 6. Verify that the colour of the next button is purple
-        /// 7. Verify that text label on the next button is white
-        /// 8. Verfy that activation form contains msisdn,username,activation code and preferred alias fields      
-        /// 9. Verify that the Application buttons are displayed at the bottom of the screen
+        /// 1.Valid User Details - Verify that Username and Activation Key Matches with BOP Manager
+        ///   1.1.1 Enter valid msisdn
+        ///   1.1.2 Enter valid  username
+        ///   1.1.3  Enter valid activation key, any number/string that is accepted by the field
+        ///   1.1.4  Enter any user defined preferred alias
+        ///   1.1.5 Press the next button
         /// TEST OUTPUT:
-        /// 1. The vodacom banner logo and banner are displayed 
-        /// 2. The online/offline indicator is displayed on the top left hand corner of the screen
-        /// 3. The contact us and help me hyerlinks are displayed
-        /// 4. Spelling, Grammar and alignment correct (Screen should resize on all devices also able to rotate from Portrait to landscape)
-        /// 5. The next button is displayed and enabled
-        /// 6. The button colour is purple
-        /// 7. The text label on the next button is white
-        /// 8.The msisdn, username, activation code and preffered alias fields are
-        /// 9. The Application button are displayed at the bottom screen
+        /// 1. This is a positive testfor verify the Bop details match the ones on BOP
+        ///   1.1.1 The msisdn is displayed
+        ///   1.1.2 The username is displayed
+        ///   1.1.3  The Valid Key is displayed
+        ///   1.1.4  The preferred alias is displayed
+        ///   1.1.5   The OTP screen is displayed, with a message " The One time pin message is displayed as " A One Time 
+        /// Pin has been sent to 0*****1234. Please enter the One time Pin here to continue                                                                  
         /// </summary>
-        /// <param name="browserInstance"></param>
-        /// <param name="screenshotRequirement"></param>
-        [Test, Description("_01_VerifyActivationLandingPage"), Repeat(1)]
-        public void _01_VerifyActivationLandingPage()
+        [Test, Description("_04_ActivationFormCorrectUserDetails"), Category("Activation form"), Repeat(1)]
+        public void _04_ActivationFormCorrectUserDetails()
         {
-            //http://aspnet.dev.afrigis.co.za/bopapp/#/activation
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
 
+
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
-            activationAction.VerifyLogoAndBanner(browserInstance);
-            activationAction.VerifyOnlineIndicator(browserInstance);
-            activationAction.VerifyPageLinks(browserInstance);
-            // 4. See spelling, Grammar and alignment 
-            //CONNOT DO THAT
-            activationAction.VerifyActivationPageNextButton(browserInstance);
-            activationAction.VerifyFieldExist(browserInstance);
+
+            //   1.1.1 Enter valid msisdn
+            activationAction.MSISDNInput(browserInstance, msisdn, TestData.Instance.DefaultData.ActivationData.MSISDN);
+
+            //   1.1.2 Enter valid  username
+            activationAction.UsernameInput(browserInstance, username, TestData.Instance.DefaultData.ActivationData.Username);
+
+            //   1.1.3  Enter valid activation key, any number/string that is accepted by the field
+            activationAction.ActivationKeyInput(browserInstance, activationNumber, TestData.Instance.DefaultData.ActivationData.ActivationKey);
+
+            //   1.1.4  Enter any user defined preferred alias
+            activationAction.AliasInput(browserInstance, userAlias, TestData.Instance.DefaultData.ActivationData.Alias);
+            //   1.1.5 Press the next button
+            Classes.LogWriter.Instance.Log("TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST", Classes.LogWriter.eLogType.Error);
+            browserInstance.Instance.Enter("NOT REQUIRED").In(challengeAnswer);
+
+            activationAction.ClickNext(browserInstance, activationNextButton);
+
+            activationAction.ValidateOTPStart(browserInstance, msisdn.Element.Text);
         }
 
         /// <summary>
+        /// TEST: ACTIVATION FORM CORRECT USER DETAILS
+        /// Test Case ID: 1_FRS_Ref_6.1.1
+        /// Category: Activation_form
+        /// Feature: Activation
+        /// Pre-Condition: NONE
+        /// Environment: Activation Page
         /// TEST STEPS:
         /// 1. Verify that the vodacom logo and the red banner are displayed on the activation screen
         /// 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
@@ -337,7 +334,7 @@ namespace TestProj.Tests.Activation
         /// 12. The One time pin is sent on the msisdn and  a message is displayed as 
         /// " A One Time Pin has been sent to 0*****1234. Please enter the One time Pin here to continue"
         /// </summary>
-        [Test, Description("_05_VerifyActivationOneTimePinLandingPage"), Repeat(1)]
+        [Test, Description("_05_VerifyActivationOneTimePinLandingPage"), Category("Activation_form"), Repeat(1)]
         public void _05_VerifyActivationOneTimePinLandingPage()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
@@ -362,6 +359,42 @@ namespace TestProj.Tests.Activation
         }
 
         /// <summary>
+        /// TEST: VERIFY ACTIVATION ONE TIME PIN LANDING PAGE
+        /// Test Case ID: 2_FRS_Ref_5.1.1
+        /// Category: Verify_user(OTP)
+        /// Feature: Activation
+        /// Pre-Condition: NONE
+        /// Environment: Activation Page
+        /// TEST STEPS:
+        /// 1. Verify that all text fields are mandatory on the form
+        ///   1.1.1 Please don’t enter anything on the fields and click next
+        /// 2. Select OTP field
+        /// 3.  Verify that the msisdn field validation will be limited to Numeric format
+        ///   3.1.1 Please enter space before entering input on the field
+        ///   3.1.2 Please enter decimal numbers <0.00444>
+        ///   3.1.3 Please enter negative value <-1>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+        /// TEST OUTPUT:
+        ///   1.1.1 Error Message is displayed: “E1-1-7 – Please complete all fields”. and the field is highlited in red
+        /// 2.Focus is on the OTP field
+        /// 3.Invalid data should not be allowed to be entered in the OTP field
+        ///   3.1.1 a space before any input  is not allowed
+        ///   3.1.2  decimal or float numbers are not allowed
+        ///   3.1.3  A negative number is not allowed
+        /// </summary>
+        [Test, Description("_06_ActivationOneTimePinFieldValidation"), Category("Verify_user(OTP)"), Repeat(1)]
+        public void _06_ActivationOneTimePinFieldValidation()
+        {
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
+            Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
+        }
+
+        /// <summary>
+        /// TEST: CORRECT ONE TIME PIN AND APPLICATION OFFLINE
+        /// Test Case ID: 2_FRS_Ref_5.1.1
+        /// Category: Verify_user(OTP)
+        /// Feature: Activation
+        /// Pre-Condition: Application Offline
+        /// Environment: 
         /// TEST STEPS:
         /// 1. Please enter <OTP number>  that has been sent to your msisdn
         /// 2. Press the <next>  button
@@ -371,7 +404,7 @@ namespace TestProj.Tests.Activation
         /// 2. An error message is displayed[ error: “O1-2-6 – You are not online. Please check your connectivity and try again”
         /// 3. When the application is online again, it must return to the activation page
         /// </summary>
-        [Test, Description("_07_CorrectOneTimePinAndApplicationOffline"), Repeat(1)]
+        [Test, Description("_07_CorrectOneTimePinAndApplicationOffline"), Category("Verify_user(OTP)"), Repeat(1)]
         public void _07_CorrectOneTimePinAndApplicationOffline()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
@@ -382,7 +415,7 @@ namespace TestProj.Tests.Activation
 
             // 2. Press the <next>  button
             activationAction.ClickNext(browserInstance, otpNextButton);
-            
+
             // 2. An error message is displayed[ error: “O1-2-6 – You are not online. Please check your connectivity and try again”
             Classes.LogWriter.Instance.Log("This error is not displayed due to browser always online --> O1-2-6 – You are not online. Please check your connectivity and try again", Classes.LogWriter.eLogType.Error);
             Classes.LogWriter.Instance.Log("TESTCASE:CorrectOneTimePinAndApplicationOffline -> Cannot simulate the off-line status as the browser will allways be online", Classes.LogWriter.eLogType.Error);
@@ -390,6 +423,12 @@ namespace TestProj.Tests.Activation
         }
 
         /// <summary>
+        /// TEST: INCORRECT ONE TIME PIN
+        /// Test Case ID: 2_FRS_Ref_5.1.1
+        /// Category: Verify_user(OTP)
+        /// Feature: Activation
+        /// Pre-Condition: NONE
+        /// Environment: Activation Page
         /// TEST STEPS:
         /// 1. Enter Invalid OTP
         ///   1.1 Please enter <Invalid OTP>
@@ -405,12 +444,12 @@ namespace TestProj.Tests.Activation
         ///   2.1 The one time pin entered is displayed  the one time pin filed
         ///   2.2 An error message is displayed[ error: “O1-2-8 – Passwords do not match. Please try again”
         /// </summary>
-        [Test, Description("_08_IncorrectOneTimePin"), Repeat(1)]
+        [Test, Description("_08_IncorrectOneTimePin"),Category("Verify_user(OTP)"), Repeat(1)]
         public void _08_IncorrectOneTimePin()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
-            
+
             /// 1. Enter Invalid OTP
             ///   1.1 Please enter <Invalid OTP>
             /// 1. Please enter <OTP number>  that has been sent to your msisdn
@@ -432,12 +471,18 @@ namespace TestProj.Tests.Activation
             browserInstance.Instance.Assert.True(() => otpErrorMessage.Element.Text == "O1-2-8 – Passwords do not match. Please try again");
             Classes.LogWriter.Instance.Log("TESTCASE: _08_IncorrectOneTimePin -> Require an Expired OTP number for testing", Classes.LogWriter.eLogType.Error);
             Classes.LogWriter.Instance.Log("TESTCASE: _08_IncorrectOneTimePin -> Cannot test an Expired OTP number. Waiting for the new release of the browser app", Classes.LogWriter.eLogType.Error);
-            
+
             ///   2.2 Press the <next> button
             activationAction.ClickNext(browserInstance, otpNextButton);
         }
 
         /// <summary>
+        /// TEST: RESEND ONE TIME PIN
+        /// Test Case ID: 2_FRS_Ref_5.1.1
+        /// Category: Verify_user(OTP)
+        /// Feature: Activation
+        /// Pre-Condition: NONE
+        /// Environment: Activation Page 
         /// TEST STEPS:
         /// 1. OTP not received
         ///   1.1 Press the <Resent OTP> button
@@ -450,14 +495,20 @@ namespace TestProj.Tests.Activation
         ///   2.1  The One time pin is sent on the msisdn and  a message is displayed as 
         ///   " A One Time Pin has been sent to 0*****1234. Please enter the One time Pin here to continue"                                                                                                                                                                                                         
         /// </summary>
-        [Test, Description("_09_ResendOneTimePin"), Repeat(1)]
+        [Test, Description("_09_ResendOneTimePin"), Category("Verify_user(OTP)"), Repeat(1)]
         public void _09_ResendOneTimePin()
         {
-
-
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
+            Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
         }
 
         /// <summary>
+        /// TEST: CORRECT ONE TIME PIN
+        /// Test Case ID: 2_FRS_Ref_5.1.1
+        /// Category: Verify_user(OTP)
+        /// Feature: Activation
+        /// Pre-Condition: NONE
+        /// Environment: Activtion Page
         /// TEST STEPS:
         /// 1. Please enter the  <OTP number>  that has been sent to your msisdn
         /// 2. Press the <next>  button
@@ -465,12 +516,20 @@ namespace TestProj.Tests.Activation
         /// 1. The one time pin entered is displayed  the one time pin filed
         /// 2. The application setup catalogue screen is displayed
         /// </summary>
-        [Test, Description("_10_CorrectOneTimePin"), Repeat(1)]
+        [Test, Description("_10_CorrectOneTimePin"), Category("Verify_user(OTP)"), Repeat(1)]
         public void _10_CorrectOneTimePin()
         {
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
+            Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
         }
 
         /// <summary>
+        /// TEST: SETUP CATALOGUE LANDING PAGE
+        /// Test Case ID: 3_FRS_Ref_5.1.1
+        /// Category: Setup_Catalogue
+        /// Feature: Activation
+        /// Pre-Condition: Verify_user(OTP)
+        /// Environment: 
         /// TEST STEPS:
         /// 1. Verify that the vodacom logo and the red banner are displayed on the activation screen
         /// 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
@@ -494,12 +553,20 @@ namespace TestProj.Tests.Activation
         /// 9. The please select a wholesaler from list below, or use the search functionality label is displayed
         /// 10. The search field is displayed with the icon
         /// </summary>
-        [Test, Description("_11_SetupCatalogueLandingPage"), Repeat(1)]
+        [Test, Description("_11_SetupCatalogueLandingPage"), Category("Setup_Catalogue"), Repeat(1)]
         public void _11_SetupCatalogueLandingPage()
         {
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
+            Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
         }
 
         /// <summary>
+        /// TEST: SETUP CATALOGUE VALIDATIONS
+        /// Test Case ID: 3_FRS_Ref_5.1.1
+        /// Category: Setup_Catalogue
+        /// Feature: Activation
+        /// Pre-Condition: Verify_user(OTP)
+        /// Environment: 
         /// TEST STEPS:
         /// 1. Search Field Validation
         ///     1.1 Without entering anything click on search button.
@@ -522,12 +589,20 @@ namespace TestProj.Tests.Activation
         ///     1.8 An error message is displayed"
         ///     1.9 An error message is displayed"
         /// </summary>
-        [Test, Description("_12_SetupCatalogueValidations"), Repeat(1)]
+        [Test, Description("_12_SetupCatalogueValidations"),Category("Setup_Catalogue"), Repeat(1)]
         public void _12_SetupCatalogueValidations()
         {
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
+            Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
         }
 
         /// <summary>
+        /// TEST: SETUP CATALOGUE ON DEVICE GEO LACATION SERVICE
+        /// Test Case ID: 3_FRS_Ref_5.1.1
+        /// Category: Setup_Catalogue
+        /// Feature: Activation
+        /// Pre-Condition: Verify_user(OTP)
+        /// Environment: 
         /// TEST STEPS:
         /// 1. On device geo loaction setup
         /// 1.1  Please make sure that the gps /device geo location service is on, before testing search 
@@ -537,24 +612,40 @@ namespace TestProj.Tests.Activation
         /// 1.1 The geo location service is on and the user device can be located.This location is sent to 
         /// MAS to determine the list of wholesalers that the user has close proximity to.
         /// </summary>
-        [Test, Description("_13_SetupCatalogueOnDeviceGEOLocationService"), Repeat(1)]
+        [Test, Description("_13_SetupCatalogueOnDeviceGEOLocationService"),Category("Setup_Catalogue"), Repeat(1)]
         public void _13_SetupCatalogueOnDeviceGEOLocationService()
         {
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
+            Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
         }
 
         /// <summary>
+        /// TEST: SETUP CATALOGUE SEARCH FIELD  RETURNING NO RESULTS
+        /// Test Case ID: 3_FRS_Ref_5.1.1
+        /// Category: Setup_Catalogue
+        /// Feature: Activation
+        /// Pre-Condition: Verify_user(OTP)
+        /// Environment: 
         /// TEST STEPS:
         /// 1. Search returning no result
         /// 1.1 Enter the wholesaler value in search field which is not an allowable wolesaler  and verify the user interface.
         /// TEST OUTPUT:
         /// 1.1 An Error message should be displayed in the search field " results not found"
         /// </summary>
-        [Test, Description("_14_SetupCatalogueSearchFieldReturningNoResults"), Repeat(1)]
+        [Test, Description("_14_SetupCatalogueSearchFieldReturningNoResults"),Category("Setup_Catalogue"), Repeat(1)]
         public void _14_SetupCatalogueSearchFieldReturningNoResults()
         {
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
+            Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
         }
 
         /// <summary>
+        /// TEST: SETUP CATALOGUE SEARCH FIELD  AUTO COMPLETE 
+        /// Test Case ID: 3_FRS_Ref_5.1.1
+        /// Category: Setup_Catalogue
+        /// Feature: Activation
+        /// Pre-Condition: Verify_user(OTP)
+        /// Environment: 
         /// TEST STEPS:
         /// 1. Search AutoComplete
         /// 1.1 Enter first / middle/ last  word of any wholesaler e.g Makro  and verify the search results
@@ -565,12 +656,20 @@ namespace TestProj.Tests.Activation
         /// 1.2 The record you have selected is displayed with records that are related to that search, with 
         /// their respective distance ranges
         /// </summary>
-        [Test, Description("_15_SetupCatalogueSearchFieldAutoComplete"), Repeat(1)]
+        [Test, Description("_15_SetupCatalogueSearchFieldAutoComplete"), Category("Setup_Catalogue"), Repeat(1)]
         public void _15_SetupCatalogueSearchFieldAutoComplete()
         {
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
+            Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
         }
 
         /// <summary>
+        /// TEST: SETUP CATALOGUE LANDING PAGE INTERRUPTIONS
+        /// Test Case ID: 3_FRS_Ref_5.1.1
+        /// Category: Setup_Catalogue
+        /// Feature: Activation
+        /// Pre-Condition: Verify_user(OTP)
+        /// Environment: 
         /// TEST STEPS:
         /// 1. Activation process interruption
         ///   1.1 Please enter the wholesaler value e.g <makro> and set it offline
@@ -587,12 +686,20 @@ namespace TestProj.Tests.Activation
         ///   1.1 An error message is displayed E1-3-1 – No response from server, please try again”.
         ///   1.2 When the server is back up again, it must return to the activation pag 
         /// </summary>
-        [Test, Description("_16_SetupCatalogueLandingPageInterruptions"), Repeat(1)]
+        [Test, Description("_16_SetupCatalogueLandingPageInterruptions"),Category("Setup_Catalogue"), Repeat(1)]
         public void _16_SetupCatalogueLandingPageInterruptions()
         {
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
+            Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
         }
 
         /// <summary>
+        /// TEST: SETUP CATALOGUE SEARCH FIELD  RETURNING ONE OR MULTIPLE RESULTS
+        /// Test Case ID: 3_FRS_Ref_5.1.1
+        /// Category: Setup_Catalogue
+        /// Feature: Activation
+        /// Pre-Condition: Verify_user(OTP)
+        /// Environment: 
         /// TEST STEPS:
         /// 1. Search returning one or multiple results
         ///   1.1 Enter the allowable wholesaler <Makro>  in search field which  give any results and verify the user interface
@@ -623,9 +730,11 @@ namespace TestProj.Tests.Activation
         ///   3.4  Select 50 - 75km  and select one wholesaler under that range by checbox
         ///   3.5   The Application Landing Page is Displayed
         /// </summary>
-        [Test, Description("_17_SetupCatalogueSearchFieldReturningOneOrMultipleResults"), Repeat(1)]
+        [Test, Description("_17_SetupCatalogueSearchFieldReturningOneOrMultipleResults"),Category("Setup_Catalogue"), Repeat(1)]
         public void _17_SetupCatalogueSearchFieldReturningOneOrMultipleResults()
         {
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
+            Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
         }
     }
 }

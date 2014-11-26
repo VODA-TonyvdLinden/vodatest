@@ -37,6 +37,12 @@ namespace TestProj.Tests.ContactUs
         }
 
         /// <summary>
+        /// TEST: CONTACT US 
+        /// Test Case ID: 16_FRS_Ref_5.1.7
+        /// Category: Contact Us
+        /// Feature: Contact Us
+        /// Pre-Condition: None
+        /// Environment: Any Landing Page
         /// TEST STEPS:
         /// 1. Click on the contact us hyperlink
         /// 2. Verify the following on the contact us page                                                                                                   
@@ -56,8 +62,8 @@ namespace TestProj.Tests.ContactUs
         ///   2.5 The sub menus are displayed on the screen
         ///   2.6 The frequently asked label and icon are displayed
         /// </summary>
-        [Test, Description("ContactUs"), Repeat(1)]
-        public void ContactUsTest()
+        [Test, Description("_01_ContactUs"), Category("Contact Us"), Repeat(1)]
+        public void _01_ContactUsTest()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IContactUs contactUsActions = container.Resolve<Interfaces.IContactUs>();
@@ -65,6 +71,12 @@ namespace TestProj.Tests.ContactUs
         }
 
         /// <summary>
+        /// TEST: HELP
+        /// Test Case ID: 17_FRS_Ref_5.1.7
+        /// Category: Alerts
+        /// Feature: Help Me
+        /// Pre-Condition: None
+        /// Environment: Any Landing Page
         /// TEST STEPS:
         /// 1. Click on the help me hyperlink  depending on the landing page that you are on
         /// 2.  Verify that the relevant landing page  correct help wizard
@@ -94,8 +106,8 @@ namespace TestProj.Tests.ContactUs
         ///   4.1 The relevant help wizard is displayed
         ///   4.2 The reference number is displayed
         /// </summary>
-        [Test, Description("Help"), Repeat(1)]
-        public void Help()
+        [Test, Description("_02_Help"),Category("Alerts"), Repeat(1)]
+        public void _02_Help()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IContactUs contactUsActions = container.Resolve<Interfaces.IContactUs>();

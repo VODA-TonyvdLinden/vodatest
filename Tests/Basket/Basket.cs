@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace TestProj.Tests.Basket
 {
-    [TestFixture, Description("Catalogues"), Category("Catalogues")]
+    [TestFixture, Description("Basket"), Category("Basket")]
     public class Basket
     {
         Classes.Browser browserInstance;
@@ -37,6 +37,12 @@ namespace TestProj.Tests.Basket
         }
 
         /// <summary>
+        /// TEST: BASKET  GRID VIEW
+        /// Test Case ID: 23_FRS_Ref_5.3.1
+        /// Category: Basket
+        /// Feature: Basket
+        /// Pre-Condition: None
+        /// Environment: Application landing page
         /// TEST STEPS:
         /// 1.Click on the basket block at the bottom of the screen
         /// 2. Verify that order from a specific supplier functions as expected
@@ -68,8 +74,8 @@ namespace TestProj.Tests.Basket
         ///   5.2 This clear all selected catalogue basket
         /// 6. The list view button is displayed
         /// </summary>
-        [Test, Description("BasketGridView"), Repeat(1)]
-        public void BasketGridView()
+        [Test, Description("_01_BasketGridView"), Category("Basket"), Repeat(1)]
+        public void _01_BasketGridView()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
@@ -77,6 +83,12 @@ namespace TestProj.Tests.Basket
         }
 
         /// <summary>
+        /// TEST: BASKET CONFIRM ORDER
+        /// Test Case ID: 24_FRS_Ref_5.3.1
+        /// Category: Basket
+        /// Feature: Basket
+        /// Pre-Condition: None
+        /// Environment: Basket landing page
         /// TEST STEPS:
         /// 1 Select a specific supplier by clicking  on the checbox
         /// 2. Click on the order now
@@ -92,8 +104,8 @@ namespace TestProj.Tests.Basket
         ///   3.2 The message asking the user about confirm the order is displayed with a yes and no buttons
         ///   3.3  The total number of items and total price of items are displayed on the pop-up
         /// </summary>
-        [Test, Description("BasketConfirmOrder"), Repeat(1)]
-        public void BasketConfirmOrder()
+        [Test, Description("_02_BasketConfirmOrder"), Category("Basket"), Repeat(1)]
+        public void _02_BasketConfirmOrder()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
@@ -101,6 +113,12 @@ namespace TestProj.Tests.Basket
         }
 
         /// <summary>
+        /// TEST: BASKET  LIST VIEW
+        /// Test Case ID: 25_FRS_Ref_5.3.1
+        /// Category: Basket
+        /// Feature: Basket
+        /// Pre-Condition: None
+        /// Environment: Basket landing page
         /// TEST STEPS:
         /// 1. Click on the <list view> button on the basket tab
         /// 2. Verify that on the list view the is a grid view button that will alllow to switch back
@@ -132,8 +150,8 @@ namespace TestProj.Tests.Basket
         ///   6.1 Multiple records on the list view table are selected
         ///   6.2 This clear all selected catalogue basket
         /// </summary>
-        [Test, Description("BasketListView"), Repeat(1)]
-        public void BasketListView()
+        [Test, Description("_03_BasketListView"), Category("Basket"), Repeat(1)]
+        public void _03_BasketListView()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
@@ -141,6 +159,12 @@ namespace TestProj.Tests.Basket
         }
 
         /// <summary>
+        /// TEST: BASKET DETAIL GRID VIEW 
+        /// Test Case ID: 26_FRS_Ref_5.3.1
+        /// Category: Basket
+        /// Feature: Basket
+        /// Pre-Condition: None
+        /// Environment: Basket landing page
         /// TEST STEPS:
         /// 1. Click on the <grid> view button
         /// 2. Click on the selected subcategory you wish to view products for
@@ -164,8 +188,8 @@ namespace TestProj.Tests.Basket
         /// 4. The order all button is displayed
         /// 5. The Clear all button is displayed
         /// </summary>
-        [Test, Description("BasketDetailGridView"), Repeat(1)]
-        public void BasketDetailGridView()
+        [Test, Description("_04_BasketDetailGridView"), Category("Basket"), Repeat(1)]
+        public void _04_BasketDetailGridView()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
@@ -173,6 +197,12 @@ namespace TestProj.Tests.Basket
         }
 
         /// <summary>
+        /// TEST: BASKET DETAIL LIST VIEW 
+        /// Test Case ID: 27_FRS_Ref_5.3.1
+        /// Category: Basket
+        /// Feature: Basket
+        /// Pre-Condition: None
+        /// Environment: Basket landing page
         /// TEST STEPS:
         /// 1. Click on the selected subcategory you wish to view products for
         /// 2. Verify the following on the product view
@@ -194,8 +224,8 @@ namespace TestProj.Tests.Basket
         /// 4. The order all button is displayed
         /// 5. The Clear all button is displayed
         /// </summary>
-        [Test, Description("BasketDetailListView"), Repeat(1)]
-        public void BasketDetailListView()
+        [Test, Description("_05_BasketDetailListView"), Category("Basket"), Repeat(1)]
+        public void _05_BasketDetailListView()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
@@ -203,6 +233,12 @@ namespace TestProj.Tests.Basket
         }
 
         /// <summary>
+        /// TEST: BASKET VIEW ITEM DETAIL
+        /// Test Case ID: 28_FRS_Ref_5.3.1
+        /// Category: Basket
+        /// Feature: Basket
+        /// Pre-Condition: None
+        /// Environment: Basket landing page
         /// TEST STEPS:
         /// 1. Click on the product
         /// 2. Verify that the product view screen
@@ -224,8 +260,8 @@ namespace TestProj.Tests.Basket
         ///   2.6  A star with a plus sign is displayed
         ///   2.7 The save button is displayed
         /// </summary>
-        [Test, Description("BasketViewItemDetail"), Repeat(1)]
-        public void BasketViewItemDetail()
+        [Test, Description("_06_BasketViewItemDetail"), Category("Basket"), Repeat(1)]
+        public void _06_BasketViewItemDetail()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
@@ -233,6 +269,12 @@ namespace TestProj.Tests.Basket
         }
 
         /// <summary>
+        /// TEST: BASKET ADD ITEM TO FAVOURITES
+        /// Test Case ID: 28_FRS_Ref_5.3.1
+        /// Category: Basket
+        /// Feature: Basket
+        /// Pre-Condition: None
+        /// Environment: Basket landing page
         /// TEST STEPS:
         /// 1. Click on the product
         /// 2. On the product view screen click on the favourites icon which is represented by a star and save
@@ -242,8 +284,8 @@ namespace TestProj.Tests.Basket
         /// 2. The product is saved to favourites
         /// 3.The recently adde product is displayed in the favourites m
         /// </summary>
-        [Test, Description("BasketAddItemToFavourites"), Repeat(1)]
-        public void BasketAddItemToFavourites()
+        [Test, Description("_07_BasketAddItemToFavourites"), Category("Basket"), Repeat(1)]
+        public void _07_BasketAddItemToFavourites()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
@@ -251,6 +293,12 @@ namespace TestProj.Tests.Basket
         }
 
         /// <summary>
+        /// TEST: BASKET  ADDING AND REMOVING PRODUCT QUANTITY
+        /// Test Case ID: 28_FRS_Ref_5.3.1
+        /// Category: Basket
+        /// Feature: Basket
+        /// Pre-Condition: None
+        /// Environment: Basket landing page
         /// TEST STEPS:
         /// 1. Click on the product
         /// 2. On the product view screen  click on the - sign for removing and + adding quantity and save
@@ -262,8 +310,8 @@ namespace TestProj.Tests.Basket
         /// 3.
         ///   3.1 The total is correct
         /// </summary>
-        [Test, Description("BasketAddingAndRemovingProductQuantity"), Repeat(1)]
-        public void BasketAddingAndRemovingProductQuantity()
+        [Test, Description("_08_BasketAddingAndRemovingProductQuantity"), Category("Basket"), Repeat(1)]
+        public void _08_BasketAddingAndRemovingProductQuantity()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
