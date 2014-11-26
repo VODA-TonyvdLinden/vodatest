@@ -951,3 +951,4 @@
 2014-11-26 17:22:37,958 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
 2014-11-26 17:22:37,959 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Expired OTP test: error: “O1-2-8 – Passwords do not match. Please try again --> Cannot test an invalid OTP number. Waiting for the new release of the browser app
 2014-11-26 17:22:38,000 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-26 17:30:47,086 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 1 seconds
