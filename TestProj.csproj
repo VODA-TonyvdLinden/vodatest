@@ -108,6 +108,7 @@
     <Compile Include="Classes\TestDataClasses\Defaults.cs" />
     <Compile Include="Classes\Timer.cs" />
     <Compile Include="Classes\XMLSeriallizer.cs" />
+    <Compile Include="Interfaces\IAlertsActions.cs" />
     <Compile Include="Interfaces\IGeneralApplicationNavigationActions.cs" />
     <Compile Include="Interfaces\IAccessingApplicationActions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,6 +122,8 @@
     <Compile Include="Tests\Activation\Activation.cs" />
     <Compile Include="Tests\Activation\ActivationActions.cs" />
     <Compile Include="Interfaces\IActivationActions.cs" />
+    <Compile Include="Tests\Alerts\Alerts.cs" />
+    <Compile Include="Tests\Alerts\AlertsActions.cs" />
     <Compile Include="Tests\GeneralApplicationNavigation\GeneralApplicationNavigation.cs" />
     <Compile Include="Tests\GeneralApplicationNavigation\GeneralApplicationNavigationActions.cs" />
   </ItemGroup>
