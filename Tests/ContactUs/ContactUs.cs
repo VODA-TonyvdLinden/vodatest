@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace TestProj.Tests.ContactUs
 {
-    [TestFixture, Description("Alerts"), Category("Alerts")]
+    [TestFixture, Description("ContactUs"), Category("ContactUs")]
     public class ContactUs
     {
         Classes.Browser browserInstance;
