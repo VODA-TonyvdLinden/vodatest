@@ -48,7 +48,7 @@ namespace TestProj.Tests.Activation
             // 7. Validate the activation key field
             // 7.1.1 Please enter space before entering input on the field 
             ActivationKeyInput(browserInstance, activationNumber, " TEST");
-            browserInstance.Instance.Assert.False(() => " TEST" == activationNumber.Element.Text);                                                        
+            browserInstance.Instance.Assert.False(() => " TEST" == activationNumber.Element.Text);
         }
 
         public void TestUsernameInputValidation(Classes.Browser browserInstance, FluentAutomation.ElementProxy username)
@@ -56,8 +56,8 @@ namespace TestProj.Tests.Activation
             // 4. Select username field                                                   
             // 5. Validate the username field
             // 5.1.1 Please enter space before entering input on username field    
-            UsernameInput(browserInstance, username, " TEST");                                                                              
-            browserInstance.Instance.Assert.False(() => " TEST" == username.Element.Text);            
+            UsernameInput(browserInstance, username, " TEST");
+            browserInstance.Instance.Assert.False(() => " TEST" == username.Element.Text);
 
         }
         public void TestMSISDNInputValidation(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn)
@@ -83,6 +83,8 @@ namespace TestProj.Tests.Activation
 
         public void TestMandatoryFields(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy challengeAnswer, FluentAutomation.ElementProxy errorMessage)
         {
+            //browserInstance.Instance.Assert.Exists(msisdn);
+            //LogWriter.Instance.Log(msisdn.Element.Text, LogWriter.eLogType.Fatal);
             // 1. Verify that all text fields are mandatory on the form
             browserInstance.Instance.Assert.Attribute("required").On(msisdn);
             browserInstance.Instance.Assert.Attribute("required").On(username);
@@ -161,7 +163,7 @@ namespace TestProj.Tests.Activation
             browserInstance.Instance.Assert.Class("ng-invalid").On(username);
         }
 
-        
+
 
         public void TestInvalidActivationKey(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy nextButton, FluentAutomation.ElementProxy errorMessage)
         {
@@ -266,11 +268,6 @@ namespace TestProj.Tests.Activation
             //"A One Time Pin has been sent to 0*****1234. Please enter the One time Pin here to continue"
             browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser");
 
-            //var otpMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(1) > div");
-            //browserInstance.Instance.Assert.Exists("#otp");
-            //string numberFirst = msisdn.Element.Text[0].ToString();
-            //string numberSecond = msisdn.Element.Text.Substring(msisdn.Element.Text.Length - 4, 4);
-            //browserInstance.Instance.Assert.True(() => string.Format("A One Time Pin has been sent to {0}*****{1}. Please enter the One time Pin here to continue", numberFirst, numberSecond) == otpMessage.Element.Text);
             VerifyOntTimeLable(browserInstance);
             VerifyOTPErrorMessage(browserInstance, msisdnNo);
         }
@@ -281,10 +278,14 @@ namespace TestProj.Tests.Activation
 
             var otpMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(1) > div");
 
-            string numberFirst = msisdnNo.Substring(0,1);
+            string numberFirst = msisdnNo.Substring(0, 1);
             string numberSecond = msisdnNo.Substring(msisdnNo.Length - 4, 4);
-            browserInstance.Instance.Assert.True(() => string.Format("A One Time Pin has been sent to {0}*****{1}. Please enter the One time Pin here to continue", numberFirst, numberSecond) == otpMessage.Element.Text);
+ 
+            string message = string.Format("A One Time Pin has been sent to {0}*****{1}. Please enter the One time Pin here to continue", numberFirst, numberSecond);
+            browserInstance.Instance.Assert.True(() => message == otpMessage.Element.Text);
         }
+
+        
 
         public void VerifyOntTimeLable(Classes.Browser browserInstance)
         {

@@ -96,8 +96,8 @@ namespace TestProj.Tests.Activation
         ///   3.1.2  decimal or float numbers are not allowed
         ///   3.1.3  A negative number is not allowed
         /// </summary>
-        [Test, Description("ActivationOneTimePinFieldValidation"), Repeat(1)]
-        public void ActivationOneTimePinFieldValidation()
+        [Test, Description("_06_ActivationOneTimePinFieldValidation"), Repeat(1)]
+        public void _06_ActivationOneTimePinFieldValidation()
         {
         }
 
@@ -118,8 +118,8 @@ namespace TestProj.Tests.Activation
         ///   1.1.5   The OTP screen is displayed, with a message " The One time pin message is displayed as " A One Time 
         /// Pin has been sent to 0*****1234. Please enter the One time Pin here to continue                                                                  
         /// </summary>
-        [Test, Description("ActivationFormCorrectUserDetails"), Repeat(1)]
-        public void ActivationFormCorrectUserDetails()
+        [Test, Description("_04_ActivationFormCorrectUserDetails"), Repeat(1)]
+        public void _04_ActivationFormCorrectUserDetails()
         {
 
 
@@ -186,12 +186,13 @@ namespace TestProj.Tests.Activation
         /// </summary>
         /// <param name="browserInstance"></param>
         /// <param name="screenshotRequirement"></param>
-        [Test, Description("ActivationFormFieldValidation"), Repeat(1)]
-        public void ActivationFormFieldValidation()
+        [Test, Description("_02_ActivationFormFieldValidation"), Repeat(1)]
+        public void _02_ActivationFormFieldValidation()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
 
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
+            getActivationControls(browserInstance, out msisdn, out username, out activationNumber, out userAlias, out challengeAnswer, out activationNextButton, out activationErrorMessage);
 
             activationAction.TestMandatoryFields(browserInstance, msisdn, username, activationNumber, userAlias, challengeAnswer, activationErrorMessage);
             activationAction.TestMSISDNInputValidation(browserInstance, msisdn);
@@ -253,8 +254,8 @@ namespace TestProj.Tests.Activation
         /// </summary>
         /// <param name="browserInstance"></param>
         /// <param name="screenshotRequirement"></param>
-        [Test, Description("ActivationFormIncorrectUserDetails"), Repeat(1)]
-        public void ActivationFormIncorrectUserDetails()
+        [Test, Description("_03_ActivationFormIncorrectUserDetails"), Repeat(1)]
+        public void _03_ActivationFormIncorrectUserDetails()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
 
@@ -291,8 +292,8 @@ namespace TestProj.Tests.Activation
         /// </summary>
         /// <param name="browserInstance"></param>
         /// <param name="screenshotRequirement"></param>
-        [Test, Description("VerifyActivationLandingPage"), Repeat(1)]
-        public void VerifyActivationLandingPage()
+        [Test, Description("_01_VerifyActivationLandingPage"), Repeat(1)]
+        public void _01_VerifyActivationLandingPage()
         {
             //http://aspnet.dev.afrigis.co.za/bopapp/#/activation
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
@@ -336,8 +337,8 @@ namespace TestProj.Tests.Activation
         /// 12. The One time pin is sent on the msisdn and  a message is displayed as 
         /// " A One Time Pin has been sent to 0*****1234. Please enter the One time Pin here to continue"
         /// </summary>
-        [Test, Description("VerifyActivationOneTimePinLandingPage"), Repeat(1)]
-        public void VerifyActivationOneTimePinLandingPage()
+        [Test, Description("_05_VerifyActivationOneTimePinLandingPage"), Repeat(1)]
+        public void _05_VerifyActivationOneTimePinLandingPage()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
@@ -370,8 +371,8 @@ namespace TestProj.Tests.Activation
         /// 2. An error message is displayed[ error: “O1-2-6 – You are not online. Please check your connectivity and try again”
         /// 3. When the application is online again, it must return to the activation page
         /// </summary>
-        [Test, Description("CorrectOneTimePinAndApplicationOffline"), Repeat(1)]
-        public void CorrectOneTimePinAndApplicationOffline()
+        [Test, Description("_07_CorrectOneTimePinAndApplicationOffline"), Repeat(1)]
+        public void _07_CorrectOneTimePinAndApplicationOffline()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
@@ -404,8 +405,8 @@ namespace TestProj.Tests.Activation
         ///   2.1 The one time pin entered is displayed  the one time pin filed
         ///   2.2 An error message is displayed[ error: “O1-2-8 – Passwords do not match. Please try again”
         /// </summary>
-        [Test, Description("IncorrectOneTimePin"), Repeat(1)]
-        public void IncorrectOneTimePin()
+        [Test, Description("_08_IncorrectOneTimePin"), Repeat(1)]
+        public void _08_IncorrectOneTimePin()
         {
         }
 
@@ -422,8 +423,8 @@ namespace TestProj.Tests.Activation
         ///   2.1  The One time pin is sent on the msisdn and  a message is displayed as 
         ///   " A One Time Pin has been sent to 0*****1234. Please enter the One time Pin here to continue"                                                                                                                                                                                                         
         /// </summary>
-        [Test, Description("ResendOneTimePin"), Repeat(1)]
-        public void ResendOneTimePin()
+        [Test, Description("_09_ResendOneTimePin"), Repeat(1)]
+        public void _09_ResendOneTimePin()
         {
         }
 
@@ -435,8 +436,8 @@ namespace TestProj.Tests.Activation
         /// 1. The one time pin entered is displayed  the one time pin filed
         /// 2. The application setup catalogue screen is displayed
         /// </summary>
-        [Test, Description("CorrectOneTimePin"), Repeat(1)]
-        public void CorrectOneTimePin()
+        [Test, Description("_10_CorrectOneTimePin"), Repeat(1)]
+        public void _10_CorrectOneTimePin()
         {
         }
 
@@ -464,8 +465,8 @@ namespace TestProj.Tests.Activation
         /// 9. The please select a wholesaler from list below, or use the search functionality label is displayed
         /// 10. The search field is displayed with the icon
         /// </summary>
-        [Test, Description("SetupCatalogueLandingPage"), Repeat(1)]
-        public void SetupCatalogueLandingPage()
+        [Test, Description("_11_SetupCatalogueLandingPage"), Repeat(1)]
+        public void _11_SetupCatalogueLandingPage()
         {
         }
 
@@ -492,8 +493,8 @@ namespace TestProj.Tests.Activation
         ///     1.8 An error message is displayed"
         ///     1.9 An error message is displayed"
         /// </summary>
-        [Test, Description("SetupCatalogueValidations"), Repeat(1)]
-        public void SetupCatalogueValidations()
+        [Test, Description("_12_SetupCatalogueValidations"), Repeat(1)]
+        public void _12_SetupCatalogueValidations()
         {
         }
 
@@ -507,8 +508,8 @@ namespace TestProj.Tests.Activation
         /// 1.1 The geo location service is on and the user device can be located.This location is sent to 
         /// MAS to determine the list of wholesalers that the user has close proximity to.
         /// </summary>
-        [Test, Description("SetupCatalogueOnDeviceGEOLocationService"), Repeat(1)]
-        public void SetupCatalogueOnDeviceGEOLocationService()
+        [Test, Description("_13_SetupCatalogueOnDeviceGEOLocationService"), Repeat(1)]
+        public void _13_SetupCatalogueOnDeviceGEOLocationService()
         {
         }
 
@@ -519,8 +520,8 @@ namespace TestProj.Tests.Activation
         /// TEST OUTPUT:
         /// 1.1 An Error message should be displayed in the search field " results not found"
         /// </summary>
-        [Test, Description("SetupCatalogueSearchFieldReturningNoResults"), Repeat(1)]
-        public void SetupCatalogueSearchFieldReturningNoResults()
+        [Test, Description("_14_SetupCatalogueSearchFieldReturningNoResults"), Repeat(1)]
+        public void _14_SetupCatalogueSearchFieldReturningNoResults()
         {
         }
 
@@ -535,8 +536,8 @@ namespace TestProj.Tests.Activation
         /// 1.2 The record you have selected is displayed with records that are related to that search, with 
         /// their respective distance ranges
         /// </summary>
-        [Test, Description("SetupCatalogueSearchFieldAutoComplete"), Repeat(1)]
-        public void SetupCatalogueSearchFieldAutoComplete()
+        [Test, Description("_15_SetupCatalogueSearchFieldAutoComplete"), Repeat(1)]
+        public void _15_SetupCatalogueSearchFieldAutoComplete()
         {
         }
 
@@ -557,8 +558,8 @@ namespace TestProj.Tests.Activation
         ///   1.1 An error message is displayed E1-3-1 – No response from server, please try again”.
         ///   1.2 When the server is back up again, it must return to the activation pag 
         /// </summary>
-        [Test, Description("SetupCatalogueLandingPageInterruptions"), Repeat(1)]
-        public void SetupCatalogueLandingPageInterruptions()
+        [Test, Description("_16_SetupCatalogueLandingPageInterruptions"), Repeat(1)]
+        public void _16_SetupCatalogueLandingPageInterruptions()
         {
         }
 
@@ -593,8 +594,8 @@ namespace TestProj.Tests.Activation
         ///   3.4  Select 50 - 75km  and select one wholesaler under that range by checbox
         ///   3.5   The Application Landing Page is Displayed
         /// </summary>
-        [Test, Description("SetupCatalogueSearchFieldReturningOneOrMultipleResults"), Repeat(1)]
-        public void SetupCatalogueSearchFieldReturningOneOrMultipleResults()
+        [Test, Description("_17_SetupCatalogueSearchFieldReturningOneOrMultipleResults"), Repeat(1)]
+        public void _17_SetupCatalogueSearchFieldReturningOneOrMultipleResults()
         {
         }
     }
