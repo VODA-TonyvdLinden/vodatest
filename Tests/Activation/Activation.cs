@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestProj.Classes;
 
 namespace TestProj.Tests.Activation
 {
@@ -113,16 +114,16 @@ namespace TestProj.Tests.Activation
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
 
             //   1.1.1 Enter valid msisdn
-            activationAction.MSISDNInput(browserInstance, msisdn, "0826190037");
+            activationAction.MSISDNInput(browserInstance, msisdn, TestData.Instance.DefaultData.ActivationData.MSISDN);
 
             //   1.1.2 Enter valid  username
-            activationAction.UsernameInput(browserInstance, username, "Test User");
+            activationAction.UsernameInput(browserInstance, username, TestData.Instance.DefaultData.ActivationData.Username);
 
             //   1.1.3  Enter valid activation key, any number/string that is accepted by the field
-            activationAction.ActivationKeyInput(browserInstance, activationNumber, "0000000000");
+            activationAction.ActivationKeyInput(browserInstance, activationNumber, TestData.Instance.DefaultData.ActivationData.ActivationKey);
 
             //   1.1.4  Enter any user defined preferred alias
-            activationAction.AliasInput(browserInstance, userAlias, "Test User");
+            activationAction.AliasInput(browserInstance, userAlias, TestData.Instance.DefaultData.ActivationData.Alias);
             //   1.1.5 Press the next button
             Classes.LogWriter.Instance.Log("TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST", Classes.LogWriter.eLogType.Error);
             browserInstance.Instance.Enter("NOT REQUIRED").In(challengeAnswer);

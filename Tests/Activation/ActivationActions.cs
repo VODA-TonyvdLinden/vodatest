@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestProj.Classes;
 
 namespace TestProj.Tests.Activation
 {
@@ -105,13 +106,13 @@ namespace TestProj.Tests.Activation
             // 3.2.1 Enter msisdn number less than 10 , meaning 11 digit on msisdn field            
             MSISDNInput(browserInstance, msisdn, "08212345678");
             // 3.2.1.1 Enter valid  username    
-            UsernameInput(browserInstance, username, "Test User");
+            UsernameInput(browserInstance, username, TestData.Instance.DefaultData.ActivationData.Username);
             Classes.LogWriter.Instance.Log("TESTCASE:ActivationFormIncorrectUserDetails -> Valid UNSERNAME required", Classes.LogWriter.eLogType.Error);
             // 3.2.1.2  Enter valid activation key, any number/string that is accepted by the field 
-            ActivationKeyInput(browserInstance, activationNumber, "0000000000");
+            ActivationKeyInput(browserInstance, activationNumber, TestData.Instance.DefaultData.ActivationData.ActivationKey);
             Classes.LogWriter.Instance.Log("TESTCASE:ActivationFormIncorrectUserDetails -> Valid ACTIVATION No required", Classes.LogWriter.eLogType.Error);
             // 3.2.1.3 Enter any user defined preferred alias     
-            AliasInput(browserInstance, userAlias, "Test User");
+            AliasInput(browserInstance, userAlias, TestData.Instance.DefaultData.ActivationData.Alias);
             // 3.2.1.4 click on the next button   
             // TEST:  3.2.1.4  An Error Message is displayed  "E1-1 -3 invalid input". Field must be highlited in red
             browserInstance.Instance.Assert.True(() => "E1-1 -3 invalid input" == errorMessage.Element.Text);
@@ -126,12 +127,12 @@ namespace TestProj.Tests.Activation
             // 3.1.1 Enter msisdn number > 10 , meaning 9 digit on msisdn field                     
             MSISDNInput(browserInstance, msisdn, "082123456");
             // 3.1.2 Enter valid  username     
-            UsernameInput(browserInstance, username, "Test User");
+            UsernameInput(browserInstance, username, TestData.Instance.DefaultData.ActivationData.Username);
             Classes.LogWriter.Instance.Log("TESTCASE:ActivationFormIncorrectUserDetails -> Valid UNSERNAME required", Classes.LogWriter.eLogType.Error);
             // 3.1.3  Enter Invalid activation key, any number/string that is accepted by the field 
-            ActivationKeyInput(browserInstance, activationNumber, "0123456789");
+            ActivationKeyInput(browserInstance, activationNumber, "4444444419");
             // 3.1.4  Enter any user defined preferred alias                                        
-            AliasInput(browserInstance, userAlias, "Test User");
+            AliasInput(browserInstance, userAlias, TestData.Instance.DefaultData.ActivationData.Alias);
             // 3.1.5 click on the next button                                                       
             ClickNext(browserInstance, nextButton);
             // TEST: 3.1.5 An Error Message is displayed  "E1-1 -3 invalid input". Field must be highlited in red
@@ -144,14 +145,14 @@ namespace TestProj.Tests.Activation
         {
             // 2. Invalid username  – username does not match one saved in BOP Manager              
             // 2.1.1 Enter valid msisdn                                                             
-            MSISDNInput(browserInstance, msisdn, "082123456");
+            MSISDNInput(browserInstance, msisdn, TestData.Instance.DefaultData.ActivationData.MSISDN);
             // 2.1.2 Enter invalid  username          
             UsernameInput(browserInstance, username, "InvalidTest User");
             // 2.1.3  Enter valid activation key, any number/string that is accepted by the field   
-            ActivationKeyInput(browserInstance, activationNumber, "0000000000");
+            ActivationKeyInput(browserInstance, activationNumber, TestData.Instance.DefaultData.ActivationData.ActivationKey);
             Classes.LogWriter.Instance.Log("TESTCASE:ActivationFormIncorrectUserDetails -> Valid ACTIVATION No required", Classes.LogWriter.eLogType.Error);
             // 2.1.4  Enter any user defined preferred alias                                        
-            AliasInput(browserInstance, userAlias, "Test User");
+            AliasInput(browserInstance, userAlias, TestData.Instance.DefaultData.ActivationData.Alias);
             // 2.1.5 click on the next button                               
             ClickNext(browserInstance, nextButton);
             // TEST: 2.1.5 An Error Message is displayed  "E1-1 -3 invalid input". Field must be highlited in red
@@ -166,15 +167,15 @@ namespace TestProj.Tests.Activation
         {
             // 1. Invalid Activation Key – does not match one saved in BOP Manager                  
             // 1.1.1 Enter valid msisdn                                   
-            MSISDNInput(browserInstance, msisdn, "0821234567");
+            MSISDNInput(browserInstance, msisdn, TestData.Instance.DefaultData.ActivationData.MSISDN);
             Classes.LogWriter.Instance.Log("TESTCASEActivationFormIncorrectUserDetails -> Valid MSISDN no required", Classes.LogWriter.eLogType.Error);
             // 1.1.2 Enter valid  username                                                          
-            UsernameInput(browserInstance, username, "Test User");
+            UsernameInput(browserInstance, username, TestData.Instance.DefaultData.ActivationData.Username);
             Classes.LogWriter.Instance.Log("TESTCASE:ActivationFormIncorrectUserDetails -> Valid UNSERNAME required", Classes.LogWriter.eLogType.Error);
             // 1.1.3  Enter Invalid activation key, any number/string that is accepted by the field 
-            ActivationKeyInput(browserInstance, activationNumber, "0123456789");
+            ActivationKeyInput(browserInstance, activationNumber, "44444109");
             // 1.1.4  Enter any user defined preferred alias                                        
-            AliasInput(browserInstance, userAlias, "Test User");
+            AliasInput(browserInstance, userAlias, TestData.Instance.DefaultData.ActivationData.Alias);
             // 1.1.5 click on the next button   
             ClickNext(browserInstance, nextButton);
             // TEST: 1.1.5 An Error Message is displayed  "E1-1 -3 invalid input". Field must be highlited in red

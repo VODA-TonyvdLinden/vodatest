@@ -26,5 +26,8 @@
     <Setting Name="ScreenshotRequirementsPath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ScreenshotRequirements.xml</Value>
     </Setting>
+    <Setting Name="TestDataPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TestData.xml</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

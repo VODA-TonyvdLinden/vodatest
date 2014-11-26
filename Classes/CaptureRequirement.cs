@@ -23,8 +23,7 @@ namespace TestProj.Classes
         CaptureRequirement()
         {
             string path = string.Format("{0}{1}",AppDomain.CurrentDomain.BaseDirectory,Properties.Settings.Default.ScreenshotRequirementsPath);
-            LogWriter.Instance.Log(path,LogWriter.eLogType.Fatal);
-            Requirements = XMLSeriallizer.Deserialize<ScreenshotRequirements>(Properties.Settings.Default.ScreenshotRequirementsPath);
+            Requirements = XMLSeriallizer.Deserialize<ScreenshotRequirements>(path);
         }
 
         public ScreenshotRequirements Requirements { get; set; }

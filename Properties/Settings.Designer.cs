@@ -94,5 +94,14 @@ namespace TestProj.Properties {
                 return ((string)(this["ScreenshotRequirementsPath"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("TestData.xml")]
+        public string TestDataPath {
+            get {
+                return ((string)(this["TestDataPath"]));
+            }
+        }
     }
 }

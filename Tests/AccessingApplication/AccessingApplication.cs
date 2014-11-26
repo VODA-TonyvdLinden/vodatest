@@ -79,7 +79,7 @@ namespace TestProj.Tests.AccessingApplication
         [Test, Description("ActivationLandingPage"), Repeat(1)]
         public void ActivationLandingPage()
         {
-            browserInstance.Navigate(new Uri("TODO"));
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAccessingApplicationActions accessingApplicationAction = container.Resolve<Interfaces.IAccessingApplicationActions>();
             //TODO
         }
@@ -119,7 +119,7 @@ namespace TestProj.Tests.AccessingApplication
         [Test, Description("ApplicationFieldValidation"), Repeat(1)]
         public void ApplicationFieldValidation()
         {
-            browserInstance.Navigate(new Uri("TODO"));
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAccessingApplicationActions accessingApplicationAction = container.Resolve<Interfaces.IAccessingApplicationActions>();
             //TODO
         }
@@ -147,7 +147,7 @@ namespace TestProj.Tests.AccessingApplication
         [Test, Description("ApplicationLandingContentsFunctionality"), Repeat(1)]
         public void ApplicationLandingContentsFunctionality()
         {
-            browserInstance.Navigate(new Uri("TODO"));
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAccessingApplicationActions accessingApplicationAction = container.Resolve<Interfaces.IAccessingApplicationActions>();
             //TODO
         }
@@ -175,7 +175,7 @@ namespace TestProj.Tests.AccessingApplication
         [Test, Description("ApplicationWithMultipleSpazas"), Repeat(1)]
         public void ApplicationWithMultipleSpazas()
         {
-            browserInstance.Navigate(new Uri("TODO"));
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAccessingApplicationActions accessingApplicationAction = container.Resolve<Interfaces.IAccessingApplicationActions>();
             //TODO
         }
@@ -196,7 +196,7 @@ namespace TestProj.Tests.AccessingApplication
         [Test, Description("AccessApplicationWithSingleSpaza"), Repeat(1)]
         public void AccessApplicationWithSingleSpaza()
         {
-            browserInstance.Navigate(new Uri("TODO"));
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAccessingApplicationActions accessingApplicationAction = container.Resolve<Interfaces.IAccessingApplicationActions>();
             //TODO
         }

@@ -1104,3 +1104,59 @@
 2014-11-26 08:02:14,405 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_VerifyOntTimeLable executed in 0 seconds
 2014-11-26 08:02:14,405 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method VerifyOTPErrorMessage not found
 2014-11-26 08:02:14,421 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_VerifyOTPErrorMessage executed in 0 seconds
+2014-11-26 11:05:03,948 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method MSISDNInput not found
+2014-11-26 11:05:05,950 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_MSISDNInput executed in 2 seconds
+2014-11-26 11:05:05,955 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method UsernameInput not found
+2014-11-26 11:05:06,383 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_UsernameInput executed in 0 seconds
+2014-11-26 11:05:06,387 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method ActivationKeyInput not found
+2014-11-26 11:05:06,620 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-26 11:05:06,622 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method AliasInput not found
+2014-11-26 11:05:07,427 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_AliasInput executed in 0 seconds
+2014-11-26 11:05:07,428 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST
+2014-11-26 11:05:07,793 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method ClickNext not found
+2014-11-26 11:05:07,842 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_ClickNext executed in 0 seconds
+2014-11-26 11:05:07,844 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method ValidateOTPStart not found
+2014-11-26 11:05:12,988 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_ValidateOTPStart executed in 5 seconds
+2014-11-26 11:05:17,218 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method TestMandatoryFields not found
+2014-11-26 11:05:22,816 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_TestMandatoryFields executed in 5 seconds
+2014-11-26 11:05:22,970 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method TestInvalidActivationKey not found
+2014-11-26 11:05:23,183 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASEActivationFormIncorrectUserDetails -> Valid MSISDN no required
+2014-11-26 11:05:23,300 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:ActivationFormIncorrectUserDetails -> Valid UNSERNAME required
+2014-11-26 11:05:29,220 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_TestInvalidActivationKey executed in 6 seconds
+2014-11-26 11:05:29,419 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method VerifyLogoAndBanner not found
+2014-11-26 11:05:29,632 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-26 11:05:29,637 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method VerifyOnlineIndicator not found
+2014-11-26 11:05:29,783 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-26 11:05:29,788 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method VerifyPageLinks not found
+2014-11-26 11:05:30,093 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_VerifyPageLinks executed in 0 seconds
+2014-11-26 11:05:30,098 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method VerifyActivationPageNextButton not found
+2014-11-26 11:05:30,122 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> What css class is used to disable the next button?
+2014-11-26 11:05:30,159 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the next button, just the css class
+2014-11-26 11:05:30,159 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the next button, just the css class
+2014-11-26 11:05:30,160 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_VerifyActivationPageNextButton executed in 0 seconds
+2014-11-26 11:05:30,163 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method VerifyFieldExist not found
+2014-11-26 11:05:30,258 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Two extra fields found on the screen, challengeQuestion and challengeAnswer.
+2014-11-26 11:05:30,259 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
+2014-11-26 11:05:30,259 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_VerifyFieldExist executed in 0 seconds
+2014-11-26 11:05:30,334 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method VerifyLogoAndBanner not found
+2014-11-26 11:05:30,508 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-26 11:05:30,508 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method VerifyOnlineIndicator not found
+2014-11-26 11:05:30,542 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-26 11:05:30,543 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method VerifyPageLinks not found
+2014-11-26 11:05:30,597 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_VerifyPageLinks executed in 0 seconds
+2014-11-26 11:05:30,597 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Cannot check spelling and grammer automatically
+2014-11-26 11:05:30,599 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method VerifyOTPNextButton not found
+2014-11-26 11:05:30,610 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> What css class is used to disable the next button?
+2014-11-26 11:05:30,629 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the next button, just the css class
+2014-11-26 11:05:30,630 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the next button, just the css class
+2014-11-26 11:05:30,630 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_VerifyOTPNextButton executed in 0 seconds
+2014-11-26 11:05:30,632 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method VerifyResendButton not found
+2014-11-26 11:05:30,643 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyResendButton -> What css class is used to disable the next button?
+2014-11-26 11:05:30,663 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the resend button, just the css class
+2014-11-26 11:05:30,663 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the resend button, just the css class
+2014-11-26 11:05:30,663 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_VerifyResendButton executed in 0 seconds
+2014-11-26 11:05:30,665 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method VerifyOntTimeLable not found
+2014-11-26 11:05:30,685 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
+2014-11-26 11:05:30,686 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_VerifyOntTimeLable executed in 0 seconds
+2014-11-26 11:05:30,687 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Screenshot requirement for method VerifyOTPErrorMessage not found
+2014-11-26 11:05:30,705 [TestRunnerThread] INFO TestProj.Classes.LogWriter - IActivationActions_VerifyOTPErrorMessage executed in 0 seconds
