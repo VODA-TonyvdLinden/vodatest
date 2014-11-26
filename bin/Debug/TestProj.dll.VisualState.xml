@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
-  <TopNode>[0-1028]C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll</TopNode>
-  <SelectedNode>[0-1013]TestProj.Tests.Activation.Activation.CorrectOneTimePinAndApplicationOffline</SelectedNode>
+  <TopNode>[0-1031]C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll</TopNode>
+  <SelectedNode>[0-1014]TestProj.Tests.Activation.Activation._08_IncorrectOneTimePin</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1028]C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" Expanded="true" />
-    <Node UniqueName="[0-1029]TestProj" Expanded="true" />
-    <Node UniqueName="[0-1030]TestProj.Tests" Expanded="true" />
-    <Node UniqueName="[0-1031]TestProj.Tests.AccessingApplication" Expanded="true" />
+    <Node UniqueName="[0-1031]C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" Expanded="true" />
+    <Node UniqueName="[0-1032]TestProj" Expanded="true" />
+    <Node UniqueName="[0-1033]TestProj.Tests" Expanded="true" />
+    <Node UniqueName="[0-1034]TestProj.Tests.AccessingApplication" Expanded="true" />
     <Node UniqueName="[0-1000]TestProj.Tests.AccessingApplication.AccessingApplication" Expanded="true" />
-    <Node UniqueName="[0-1032]TestProj.Tests.Activation" Expanded="true" />
+    <Node UniqueName="[0-1035]TestProj.Tests.Activation" Expanded="true" />
     <Node UniqueName="[0-1006]TestProj.Tests.Activation.Activation" Expanded="true" />
-    <Node UniqueName="[0-1033]TestProj.Tests.GeneralApplicationNavigation" Expanded="true" />
-    <Node UniqueName="[0-1024]TestProj.Tests.GeneralApplicationNavigation.GeneralApplicationNavigation" Expanded="true" />
+    <Node UniqueName="[0-1036]TestProj.Tests.Alerts" Expanded="true" />
+    <Node UniqueName="[0-1024]TestProj.Tests.Alerts.Alerts" Expanded="true" />
+    <Node UniqueName="[0-1037]TestProj.Tests.GeneralApplicationNavigation" Expanded="true" />
+    <Node UniqueName="[0-1027]TestProj.Tests.GeneralApplicationNavigation.GeneralApplicationNavigation" Expanded="true" />
   </Nodes>
 </VisualState>

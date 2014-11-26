@@ -720,3 +720,23 @@
 2014-11-26 14:32:07,781 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyResendButton executed in 0 seconds
 2014-11-26 14:32:07,802 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
 2014-11-26 14:32:07,802 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOntTimeLable executed in 0 seconds
+2014-11-26 15:14:17,493 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 4 seconds
+2014-11-26 15:14:18,264 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Invalid OTP test: error: “O1-2-8 – Passwords do not match. Please try again --> Cannot test an invalid OTP number. Waiting for the new release of the browser app
+2014-11-26 15:14:18,402 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-26 15:14:18,714 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-26 15:14:18,714 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Expired OTP test: error: “O1-2-8 – Passwords do not match. Please try again --> Cannot test an invalid OTP number. Waiting for the new release of the browser app
+2014-11-26 15:14:18,744 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-26 15:31:01,988 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 1 seconds
+2014-11-26 15:31:02,030 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Invalid OTP test: error: “O1-2-8 – Passwords do not match. Please try again --> Cannot test an invalid OTP number. Waiting for the new release of the browser app
+2014-11-26 15:31:02,115 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-26 15:31:07,305 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 5 seconds
+2014-11-26 15:32:55,970 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 1 seconds
+2014-11-26 15:32:56,012 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Invalid OTP test: error: “O1-2-8 – Passwords do not match. Please try again --> Cannot test an invalid OTP number. Waiting for the new release of the browser app
+2014-11-26 15:32:56,068 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-26 15:33:01,301 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 5 seconds
+2014-11-26 15:36:56,767 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 1 seconds
+2014-11-26 15:36:56,810 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Invalid OTP test: error: “O1-2-8 – Passwords do not match. Please try again --> Cannot test an invalid OTP number. Waiting for the new release of the browser app
+2014-11-26 15:36:56,872 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-26 15:36:56,955 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-26 15:36:56,955 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Expired OTP test: error: “O1-2-8 – Passwords do not match. Please try again --> Cannot test an invalid OTP number. Waiting for the new release of the browser app
+2014-11-26 15:36:56,982 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
