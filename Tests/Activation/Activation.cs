@@ -363,13 +363,15 @@ namespace TestProj.Tests.Activation
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
 
-            /// 1. Please enter <OTP number>  that has been sent to your msisdn
-            browserInstance.Instance.Enter("195451").In("#otp");
+            // 1. Please enter <OTP number>  that has been sent to your msisdn
+            activationAction.EnterAndVerifyOTPValue(browserInstance);
 
+            // 2. Press the <next>  button
+            activationAction.ClickNext(browserInstance, nextButton);
+            
+            // 2. An error message is displayed[ error: “O1-2-6 – You are not online. Please check your connectivity and try again”
+            Classes.LogWriter.Instance.Log("This error is not displayed due to browser always online --> O1-2-6 – You are not online. Please check your connectivity and try again", Classes.LogWriter.eLogType.Error);
             Classes.LogWriter.Instance.Log("TESTCASE:CorrectOneTimePinAndApplicationOffline -> Cannot simulate the off-line status as the browser will allways be online", Classes.LogWriter.eLogType.Error);
-
-            /// 2. Press the <next>  button
-            activationAction.ClickNext(browserInstance, nextButton); 
 
         }
 
