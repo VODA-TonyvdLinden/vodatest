@@ -417,7 +417,8 @@ namespace TestProj.Tests.Activation
             activationAction.EnterAndVerifyOTPValue(browserInstance, Classes.TestData.Instance.DefaultData.ActivationData.InvalidOTP);
 
             ///   1.2 An error message is displayed[ error: “O1-2-8 – Passwords do not match. Please try again”
-            Classes.LogWriter.Instance.Log("Invalid OTP test: error: “O1-2-8 – Passwords do not match. Please try again --> Cannot test an invalid OTP number. Waiting for the new release of the browser app", Classes.LogWriter.eLogType.Error);
+            browserInstance.Instance.Assert.True(() => otpErrorMessage.Element.Text == "O1-2-8 – Passwords do not match. Please try again");
+            Classes.LogWriter.Instance.Log("TESTCASE: _08_IncorrectOneTimePin -> Cannot test an invalid OTP number. Waiting for the new release of the browser app", Classes.LogWriter.eLogType.Error);
 
             //    1.2. Press the <next>  button
             activationAction.ClickNext(browserInstance, otpNextButton);
@@ -427,7 +428,8 @@ namespace TestProj.Tests.Activation
             activationAction.EnterAndVerifyOTPValue(browserInstance, Classes.TestData.Instance.DefaultData.ActivationData.ExpiredOPT);
 
             ///   2.2 An error message is displayed[ error: “O1-2-8 – Passwords do not match. Please try again”
-            Classes.LogWriter.Instance.Log("Expired OTP test: error: “O1-2-8 – Passwords do not match. Please try again --> Cannot test an invalid OTP number. Waiting for the new release of the browser app", Classes.LogWriter.eLogType.Error);
+            browserInstance.Instance.Assert.True(() => otpErrorMessage.Element.Text == "O1-2-8 – Passwords do not match. Please try again");
+            Classes.LogWriter.Instance.Log("TESTCASE: _08_IncorrectOneTimePin -> Cannot test an invalid OTP number. Waiting for the new release of the browser app", Classes.LogWriter.eLogType.Error);
             
             ///   2.2 Press the <next> button
             activationAction.ClickNext(browserInstance, otpNextButton);

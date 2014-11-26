@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-26" time="16:19:13">
-  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.6421" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="V000032056" user="kennedch" user-domain="VF-ROOT" />
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-26" time="17:22:43">
+  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8009" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYVDL" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="40.658" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="53.116" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="40.642" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="53.094" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="40.641" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="53.094" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Activation" executed="True" result="Success" success="True" time="40.641" asserts="0">
+              <test-suite type="Namespace" name="Activation" executed="True" result="Success" success="True" time="53.093" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Success" success="True" time="40.638" asserts="0">
+                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Success" success="True" time="53.090" asserts="0">
                     <categories>
                       <category name="Activation" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Activation.Activation._08_IncorrectOneTimePin" description="_08_IncorrectOneTimePin" executed="True" result="Success" success="True" time="28.813" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation._08_IncorrectOneTimePin" description="_08_IncorrectOneTimePin" executed="True" result="Success" success="True" time="25.874" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>

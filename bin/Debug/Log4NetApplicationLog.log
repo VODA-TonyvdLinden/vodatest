@@ -945,3 +945,9 @@
 2014-11-26 15:35:40,129 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
 2014-11-26 15:35:40,130 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - This error is not displayed due to browser always online --> O1-2-6 – You are not online. Please check your connectivity and try again
 2014-11-26 15:35:40,130 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:CorrectOneTimePinAndApplicationOffline -> Cannot simulate the off-line status as the browser will allways be online
+2014-11-26 17:22:37,622 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 2 seconds
+2014-11-26 17:22:37,714 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Invalid OTP test: error: “O1-2-8 – Passwords do not match. Please try again --> Cannot test an invalid OTP number. Waiting for the new release of the browser app
+2014-11-26 17:22:37,776 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-26 17:22:37,958 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-26 17:22:37,959 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Expired OTP test: error: “O1-2-8 – Passwords do not match. Please try again --> Cannot test an invalid OTP number. Waiting for the new release of the browser app
+2014-11-26 17:22:38,000 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
