@@ -1,41 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="17" errors="5" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-26" time="08:02:19">
-  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8009" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYVDL" user="bbdnet0518" user-domain="BBDNET" />
+<test-results name="C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="17" errors="5" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-26" time="09:20:04">
+  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.6421" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="V000032056" user="kennedch" user-domain="VF-ROOT" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="65.507" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="52.176" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="65.487" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="52.160" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="65.487" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="52.160" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Activation" executed="True" result="Failure" success="False" time="65.487" asserts="0">
+              <test-suite type="Namespace" name="Activation" executed="True" result="Failure" success="False" time="52.159" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Failure" success="False" time="65.483" asserts="0">
+                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Failure" success="False" time="52.157" asserts="0">
                     <categories>
                       <category name="Contains all Activation test classes" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Activation.Activation.ActivationFormCorrectUserDetails" description="ActivationFormCorrectUserDetails" executed="True" result="Error" success="False" time="26.777" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.ActivationFormCorrectUserDetails" description="ActivationFormCorrectUserDetails" executed="True" result="Error" success="False" time="20.728" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                         <failure>
                           <message><![CDATA[FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#msisdn]]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_f229c6f4454d4b7db3e3553b226d8a95.ValidateOTPStart(Browser browserInstance, ElementProxy msisdn)
-at TestProj.Tests.Activation.Activation.ActivationFormCorrectUserDetails() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 132
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_7ca816968474473c9dea7ee8100e6d54.ValidateOTPStart(Browser browserInstance, ElementProxy msisdn)
+at TestProj.Tests.Activation.Activation.ActivationFormCorrectUserDetails() in c:\Users\kennedch\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 132
 ]]></stack-trace>
                         </failure>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation.ActivationFormFieldValidation" description="ActivationFormFieldValidation" executed="True" result="Error" success="False" time="5.214" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.ActivationFormFieldValidation" description="ActivationFormFieldValidation" executed="True" result="Error" success="False" time="5.266" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                         <failure>
                           <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
   ----> FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#msisdn]]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_f229c6f4454d4b7db3e3553b226d8a95.TestMandatoryFields(Browser browserInstance, ElementProxy msisdn, ElementProxy username, ElementProxy activationNumber, ElementProxy userAlias, ElementProxy challengeAnswer, ElementProxy errorMessage)
-at TestProj.Tests.Activation.Activation.ActivationFormFieldValidation() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 182
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_7ca816968474473c9dea7ee8100e6d54.TestMandatoryFields(Browser browserInstance, ElementProxy msisdn, ElementProxy username, ElementProxy activationNumber, ElementProxy userAlias, ElementProxy challengeAnswer, ElementProxy errorMessage)
+at TestProj.Tests.Activation.Activation.ActivationFormFieldValidation() in c:\Users\kennedch\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 182
 --FluentElementNotFoundException
 at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
 at FluentAutomation.ElementProxy.get_Element()
@@ -44,15 +44,15 @@ at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
 ]]></stack-trace>
                         </failure>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation.ActivationFormIncorrectUserDetails" description="ActivationFormIncorrectUserDetails" executed="True" result="Error" success="False" time="5.098" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.ActivationFormIncorrectUserDetails" description="ActivationFormIncorrectUserDetails" executed="True" result="Error" success="False" time="5.097" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                         <failure>
                           <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
   ----> FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#msisdn]]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_f229c6f4454d4b7db3e3553b226d8a95.TestInvalidActivationKey(Browser browserInstance, ElementProxy msisdn, ElementProxy username, ElementProxy activationNumber, ElementProxy userAlias, ElementProxy nextButton, ElementProxy errorMessage)
-at TestProj.Tests.Activation.Activation.ActivationFormIncorrectUserDetails() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 249
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_7ca816968474473c9dea7ee8100e6d54.TestInvalidActivationKey(Browser browserInstance, ElementProxy msisdn, ElementProxy username, ElementProxy activationNumber, ElementProxy userAlias, ElementProxy nextButton, ElementProxy errorMessage)
+at TestProj.Tests.Activation.Activation.ActivationFormIncorrectUserDetails() in c:\Users\kennedch\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 249
 --FluentElementNotFoundException
 at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
 at FluentAutomation.ElementProxy.get_Element()
@@ -76,60 +76,60 @@ at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation.IncorrectOneTimePin" description="IncorrectOneTimePin" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.IncorrectOneTimePin" description="IncorrectOneTimePin" executed="True" result="Success" success="True" time="0.000" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation.ResendOneTimePin" description="ResendOneTimePin" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.ResendOneTimePin" description="ResendOneTimePin" executed="True" result="Success" success="True" time="0.000" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueLandingPage" description="SetupCatalogueLandingPage" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueLandingPage" description="SetupCatalogueLandingPage" executed="True" result="Success" success="True" time="0.000" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueLandingPageInterruptions" description="SetupCatalogueLandingPageInterruptions" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueLandingPageInterruptions" description="SetupCatalogueLandingPageInterruptions" executed="True" result="Success" success="True" time="0.000" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueOnDeviceGEOLocationService" description="SetupCatalogueOnDeviceGEOLocationService" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueOnDeviceGEOLocationService" description="SetupCatalogueOnDeviceGEOLocationService" executed="True" result="Success" success="True" time="0.000" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueSearchFieldAutoComplete" description="SetupCatalogueSearchFieldAutoComplete" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueSearchFieldAutoComplete" description="SetupCatalogueSearchFieldAutoComplete" executed="True" result="Success" success="True" time="0.000" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueSearchFieldReturningNoResults" description="SetupCatalogueSearchFieldReturningNoResults" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueSearchFieldReturningNoResults" description="SetupCatalogueSearchFieldReturningNoResults" executed="True" result="Success" success="True" time="0.000" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueSearchFieldReturningOneOrMultipleResults" description="SetupCatalogueSearchFieldReturningOneOrMultipleResults" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueSearchFieldReturningOneOrMultipleResults" description="SetupCatalogueSearchFieldReturningOneOrMultipleResults" executed="True" result="Success" success="True" time="0.000" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueValidations" description="SetupCatalogueValidations" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueValidations" description="SetupCatalogueValidations" executed="True" result="Success" success="True" time="0.000" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation.VerifyActivationLandingPage" description="VerifyActivationLandingPage" executed="True" result="Error" success="False" time="5.511" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.VerifyActivationLandingPage" description="VerifyActivationLandingPage" executed="True" result="Error" success="False" time="5.217" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                         <failure>
                           <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
   ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected element matching selector [body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(8) > div > input] to exist.]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_f229c6f4454d4b7db3e3553b226d8a95.VerifyActivationPageNextButton(Browser browserInstance)
-at TestProj.Tests.Activation.Activation.VerifyActivationLandingPage() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 292
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_7ca816968474473c9dea7ee8100e6d54.VerifyActivationPageNextButton(Browser browserInstance)
+at TestProj.Tests.Activation.Activation.VerifyActivationLandingPage() in c:\Users\kennedch\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 292
 --FluentAssertFailedException
 at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
 at FluentAutomation.AssertProvider.<>c__DisplayClass6b.<Exists>b__6a()
@@ -137,14 +137,14 @@ at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
 ]]></stack-trace>
                         </failure>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation.VerifyActivationOneTimePinLandingPage" description="VerifyActivationOneTimePinLandingPage" executed="True" result="Error" success="False" time="0.792" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.VerifyActivationOneTimePinLandingPage" description="VerifyActivationOneTimePinLandingPage" executed="True" result="Error" success="False" time="1.139" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                         <failure>
                           <message><![CDATA[FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#msisdn]]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_f229c6f4454d4b7db3e3553b226d8a95.VerifyOTPErrorMessage(Browser browserInstance, ElementProxy msisdn)
-at TestProj.Tests.Activation.Activation.VerifyActivationOneTimePinLandingPage() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 346
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_7ca816968474473c9dea7ee8100e6d54.VerifyOTPErrorMessage(Browser browserInstance, ElementProxy msisdn)
+at TestProj.Tests.Activation.Activation.VerifyActivationOneTimePinLandingPage() in c:\Users\kennedch\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 346
 ]]></stack-trace>
                         </failure>
                       </test-case>
