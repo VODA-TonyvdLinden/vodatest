@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace TestProj.Tests.Activation
 {
-    [TestFixture, Description("Activation"), Category("Contains all Activation test classes")]
-    public class Activation : Interfaces.IActivation
+    [TestFixture, Description("Activation"), Category("Activation")]
+    public class Activation
     {
         Classes.Browser browserInstance;
         IUnityContainer container = new UnityContainer();

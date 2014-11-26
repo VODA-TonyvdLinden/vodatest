@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestProj.Tests.AccessingApplication
 {
-    class Class1
+    public class AccessingApplicationActions : Interfaces.IAccessingApplicationActions
     {
     }
 }
