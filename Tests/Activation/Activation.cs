@@ -346,8 +346,6 @@ namespace TestProj.Tests.Activation
             activationAction.VerifyOTPErrorMessage(browserInstance, msisdn);
         }
 
-
-
         /// <summary>
         /// TEST STEPS:
         /// 1. Please enter <OTP number>  that has been sent to your msisdn
@@ -357,60 +355,171 @@ namespace TestProj.Tests.Activation
         /// 1. The one time pin entered is displayed  the one time pin filed
         /// 2. An error message is displayed[ error: “O1-2-6 – You are not online. Please check your connectivity and try again”
         /// 3. When the application is online again, it must return to the activation page
-        /// /// </summary>
+        /// </summary>
         [Test, Description("CorrectOneTimePinAndApplicationOffline"), Repeat(1)]
         public void CorrectOneTimePinAndApplicationOffline()
         {
         }
 
         /// <summary>
-        /// 1. Enter Invalid OTP                                                                                                                                                                                                        1.1 Please enter <Invalid OTP>                                                                                                                 1.2 Press the <next> button                                                                                                                   2. Expired OTP                                                                                                                                        2.1 Plese enter <Expired OTP>                                                                                                                2.2 Press the <next> button                                                                                                                                                                                                                                   
+        /// TEST STEPS:
+        /// 1. Enter Invalid OTP
+        ///   1.1 Please enter <Invalid OTP>
+        ///   1.2 Press the <next> button
+        /// 2. Expired OTP
+        ///   2.1 Plese enter <Expired OTP>
+        ///   2.2 Press the <next> button
+        /// TEST OUTPUT:
+        /// 1.
+        ///   1.1 The one time pin entered is displayed  the one time pin filed
+        ///   1.2 An error message is displayed[ error: “O1-2-8 – Passwords do not match. Please try again”
+        /// 2.
+        ///   2.1 The one time pin entered is displayed  the one time pin filed
+        ///   2.2 An error message is displayed[ error: “O1-2-8 – Passwords do not match. Please try again”
         /// </summary>
         [Test, Description("IncorrectOneTimePin"), Repeat(1)]
         public void IncorrectOneTimePin()
         {
         }
 
+        /// <summary>
+        /// TEST STEPS:
+        /// 1. OTP not received
+        ///   1.1 Press the <Resent OTP> button
+        /// 2. OTP deleted or lost
+        ///   2.1 Press the <Resent OTP> button
+        /// TEST OUTPUT:
+        ///   1.1 The One time pin is sent on the msisdn and  a message is displayed as 
+        ///   " A One Time Pin has been sent to 0*****1234. Please enter the One time Pin here to continue"
+        /// 2.
+        ///   2.1  The One time pin is sent on the msisdn and  a message is displayed as 
+        ///   " A One Time Pin has been sent to 0*****1234. Please enter the One time Pin here to continue"                                                                                                                                                                                                         
+        /// </summary>
         [Test, Description("ResendOneTimePin"), Repeat(1)]
         public void ResendOneTimePin()
         {
         }
 
+        /// <summary>
+        /// TEST STEPS:
+        /// 1. Please enter the  <OTP number>  that has been sent to your msisdn
+        /// 2. Press the <next>  button
+        /// TEST OUTPUT:
+        /// 1. The one time pin entered is displayed  the one time pin filed
+        /// 2. The application setup catalogue screen is displayed
+        /// </summary>
         [Test, Description("CorrectOneTimePin"), Repeat(1)]
         public void CorrectOneTimePin()
         {
         }
 
+        /// <summary>
+        /// TEST STEPS:
+        /// 1. Verify that the vodacom logo and the red banner are displayed on the activation screen
+        /// 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
+        /// 3. Verify that contact us and help me hyperlinks are displayed
+        /// 4. See spelling, Grammar and alignment 
+        /// 5. Verify that the update button is displayed and enabled
+        /// 6. Verify that the colour of the update button is purple
+        /// 7. Verify that text label on the update  button is white
+        /// 8. Verify that Manage Catalogue Label is displayed
+        /// 9. Verify that the select wholesaler a label is is displayed
+        /// 10. Search functionality field is displayed with a search icon/button
+        /// TEST OUTPUT:
+        /// 1. The vodacom banner logo and banner are displayed 
+        /// 2. The online/offline indicator is displayed on the top left hand corner of the screen
+        /// 3. The contact us and help me hyerlinks are displayed
+        /// 4. spelling, grammar and alignment correct (screen should resize on all devices also able to rotate from Portrait to landscape)
+        /// 5. The update button is displayed and enabled
+        /// 6. The button colour is purple
+        /// 7. The text label on the update button is white
+        /// 8. The manage catalogue label is displayed
+        /// 9. The please select a wholesaler from list below, or use the search functionality label is displayed
+        /// 10. The search field is displayed with the icon
+        /// </summary>
         [Test, Description("SetupCatalogueLandingPage"), Repeat(1)]
         public void SetupCatalogueLandingPage()
         {
         }
 
+        /// <summary>
+        /// TEST STEPS:
+        /// 1. Search Field Validation
+        ///     1.1 Without entering anything click on search button.
+        ///     1.2 Click in the search field and press Enter key.
+        ///     1.3 Enter any  one character and click on search button/press Enter key .
+        ///     1.4 Enter only special characters and click on Search button.
+        ///     1.5 Enter  only numbers and click on search button
+        ///     1.6 Enter alphanumeric characters and click on search button
+        ///     1.7 Enter  alphanumeric characters and special characters and click on search button.
+        ///     1.8 Enter string more than the max char limit of the field.
+        ///     1.9 Enter string with spaces(before string , after string  and in between) and verify the results.                                                                                                                                                                                                                                                                                                                                         
+        /// TEST OUTPUT:
+        ///     1.1 An error message is displayed: “E1-1-7 – Please complete all fields”. all fields must either be highlited in red or displayed on the screen
+        ///     1.2 An error message is displayed"
+        ///     1.3 An error message is displayed"
+        ///     1.4 An error message is displayed"
+        ///     1.5 An error message is displayed"
+        ///     1.6 An error message is displayed"
+        ///     1.7 An error message is displayed"
+        ///     1.8 An error message is displayed"
+        ///     1.9 An error message is displayed"
+        /// </summary>
         [Test, Description("SetupCatalogueValidations"), Repeat(1)]
         public void SetupCatalogueValidations()
         {
         }
 
+        /// <summary>
+        /// TEST STEPS:
+        /// 
+        /// TEST OUTPUT:
+        /// 
+        /// </summary>
         [Test, Description("SetupCatalogueOnDeviceGEOLocationService"), Repeat(1)]
         public void SetupCatalogueOnDeviceGEOLocationService()
         {
         }
 
+        /// <summary>
+        /// TEST STEPS:
+        /// 
+        /// TEST OUTPUT:
+        /// 
+        /// </summary>
         [Test, Description("SetupCatalogueSearchFieldReturningNoResults"), Repeat(1)]
         public void SetupCatalogueSearchFieldReturningNoResults()
         {
         }
 
+        /// <summary>
+        /// TEST STEPS:
+        /// 
+        /// TEST OUTPUT:
+        /// 
+        /// </summary>
         [Test, Description("SetupCatalogueSearchFieldAutoComplete"), Repeat(1)]
         public void SetupCatalogueSearchFieldAutoComplete()
         {
         }
 
+        /// <summary>
+        /// TEST STEPS:
+        /// 
+        /// TEST OUTPUT:
+        /// 
+        /// </summary>
         [Test, Description("SetupCatalogueLandingPageInterruptions"), Repeat(1)]
         public void SetupCatalogueLandingPageInterruptions()
         {
         }
 
+        /// <summary>
+        /// TEST STEPS:
+        /// 
+        /// TEST OUTPUT:
+        /// 
+        /// </summary>
         [Test, Description("SetupCatalogueSearchFieldReturningOneOrMultipleResults"), Repeat(1)]
         public void SetupCatalogueSearchFieldReturningOneOrMultipleResults()
         {
