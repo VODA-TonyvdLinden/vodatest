@@ -22,7 +22,8 @@ namespace TestProj.Classes
         }
         CaptureRequirement()
         {
-            string path = string.Format("{0}{1}",AppDomain.CurrentDomain.BaseDirectory,Properties.Settings.Default.ScreenshotRequirementsPath);
+            string path = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, Properties.Settings.Default.ScreenshotRequirementsPath);
+            //string path = string.Format("{0}\\{1}",AppDomain.CurrentDomain.BaseDirectory,Properties.Settings.Default.ScreenshotRequirementsPath);
             Requirements = XMLSeriallizer.Deserialize<ScreenshotRequirements.ScreenshotRequirements>(path);
         }
 

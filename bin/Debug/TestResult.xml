@@ -1,42 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="36" errors="5" failures="2" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-26" time="19:50:22">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="68" errors="5" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-26" time="22:23:15">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8009" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYVDL" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="308.057" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="208.464" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="308.035" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="208.463" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="308.035" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="208.462" asserts="0">
             <results>
-              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Success" success="True" time="51.284" asserts="0">
+              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Success" success="True" time="25.282" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="AccessingApplication" description="AccessingApplication" executed="True" result="Success" success="True" time="51.280" asserts="0">
+                  <test-suite type="TestFixture" name="AccessingApplication" description="AccessingApplication" executed="True" result="Success" success="True" time="25.280" asserts="0">
                     <categories>
                       <category name="AccessingApplication" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication.AccessApplicationWithSingleSpaza" description="AccessApplicationWithSingleSpaza" executed="True" result="Success" success="True" time="28.551" asserts="0">
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication._01_ActivationLandingPage" description="_01_ActivationLandingPage" executed="True" result="Success" success="True" time="10.615" asserts="0">
+                        <categories>
+                          <category name="Accessing app" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication.ActivationLandingPage" description="ActivationLandingPage" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication._02_ApplicationFieldValidation" description="_02_ApplicationFieldValidation" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Accessing app" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication.ApplicationFieldValidation" description="ApplicationFieldValidation" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication._03_ApplicationLandingContentsFunctionality" description="_03_ApplicationLandingContentsFunctionality" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Accessing app" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication.ApplicationLandingContentsFunctionality" description="ApplicationLandingContentsFunctionality" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication._04_ApplicationWithMultipleSpazas" description="_04_ApplicationWithMultipleSpazas" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Accessing app" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication.ApplicationWithMultipleSpazas" description="ApplicationWithMultipleSpazas" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication._05_AccessApplicationWithSingleSpaza" description="_05_AccessApplicationWithSingleSpaza" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Accessing app" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
@@ -45,27 +60,33 @@
                   </test-suite>
                 </results>
               </test-suite>
-              <test-suite type="Namespace" name="Activation" executed="True" result="Failure" success="False" time="81.052" asserts="0">
+              <test-suite type="Namespace" name="Activation" executed="True" result="Failure" success="False" time="47.997" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Failure" success="False" time="81.052" asserts="0">
+                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Failure" success="False" time="47.996" asserts="0">
                     <categories>
                       <category name="Activation" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Activation.Activation._01_VerifyActivationLandingPage" description="_01_VerifyActivationLandingPage" executed="True" result="Success" success="True" time="23.858" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation._01_VerifyActivationLandingPage" description="_01_VerifyActivationLandingPage" executed="True" result="Success" success="True" time="7.507" asserts="0">
+                        <categories>
+                          <category name="Activation Page" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._02_ActivationFormFieldValidation" description="_02_ActivationFormFieldValidation" executed="True" result="Error" success="False" time="6.305" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation._02_ActivationFormFieldValidation" description="_02_ActivationFormFieldValidation" executed="True" result="Error" success="False" time="5.505" asserts="0">
+                        <categories>
+                          <category name="Activation Page" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                         <failure>
                           <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
   ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected expression [ => ("E1-1-7 – Please complete all fields" == value(TestProj.Tests.Activation.ActivationActions+<>c__DisplayClass8).errorMessage.Element.Text)] to return true.]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_188b77196bda4dc3aeca5b32a91ea23e.TestMandatoryFields(Browser browserInstance, ElementProxy msisdn, ElementProxy username, ElementProxy activationNumber, ElementProxy userAlias, ElementProxy challengeAnswer, ElementProxy errorMessage)
-at TestProj.Tests.Activation.Activation._02_ActivationFormFieldValidation() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 197
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_f26d5b68d4d54c7b80c3e3f482198f68.TestMandatoryFields(Browser browserInstance, ElementProxy msisdn, ElementProxy username, ElementProxy activationNumber, ElementProxy userAlias, ElementProxy challengeAnswer, ElementProxy errorMessage)
+at TestProj.Tests.Activation.Activation._02_ActivationFormFieldValidation() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 173
 --FluentAssertFailedException
 at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
 at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
@@ -73,15 +94,18 @@ at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
 ]]></stack-trace>
                         </failure>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._03_ActivationFormIncorrectUserDetails" description="_03_ActivationFormIncorrectUserDetails" executed="True" result="Error" success="False" time="7.952" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation._03_ActivationFormIncorrectUserDetails" description="_03_ActivationFormIncorrectUserDetails" executed="True" result="Error" success="False" time="5.762" asserts="0">
+                        <categories>
+                          <category name="Activation form" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                         <failure>
                           <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
   ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected expression [ => ("E1-1 -3 invalid input" == value(TestProj.Tests.Activation.ActivationActions+<>c__DisplayClass10).errorMessage.Element.Text)] to return true.]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_188b77196bda4dc3aeca5b32a91ea23e.TestInvalidActivationKey(Browser browserInstance, ElementProxy msisdn, ElementProxy username, ElementProxy activationNumber, ElementProxy userAlias, ElementProxy nextButton, ElementProxy errorMessage)
-at TestProj.Tests.Activation.Activation._03_ActivationFormIncorrectUserDetails() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 264
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_f26d5b68d4d54c7b80c3e3f482198f68.TestInvalidActivationKey(Browser browserInstance, ElementProxy msisdn, ElementProxy username, ElementProxy activationNumber, ElementProxy userAlias, ElementProxy nextButton, ElementProxy errorMessage)
+at TestProj.Tests.Activation.Activation._03_ActivationFormIncorrectUserDetails() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 245
 --FluentAssertFailedException
 at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
 at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
@@ -89,15 +113,18 @@ at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
 ]]></stack-trace>
                         </failure>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._04_ActivationFormCorrectUserDetails" description="_04_ActivationFormCorrectUserDetails" executed="True" result="Error" success="False" time="7.258" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation._04_ActivationFormCorrectUserDetails" description="_04_ActivationFormCorrectUserDetails" executed="True" result="Error" success="False" time="7.008" asserts="0">
+                        <categories>
+                          <category name="Activation form" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                         <failure>
                           <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
   ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected expression [ => (value(TestProj.Tests.Activation.ActivationActions+<>c__DisplayClass14).message == value(TestProj.Tests.Activation.ActivationActions+<>c__DisplayClass14).otpMessage.Element.Text)] to return true.]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_188b77196bda4dc3aeca5b32a91ea23e.ValidateOTPStart(Browser browserInstance, String msisdnNo)
-at TestProj.Tests.Activation.Activation._04_ActivationFormCorrectUserDetails() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 146
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_f26d5b68d4d54c7b80c3e3f482198f68.ValidateOTPStart(Browser browserInstance, String msisdnNo)
+at TestProj.Tests.Activation.Activation._04_ActivationFormCorrectUserDetails() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 299
 --FluentAssertFailedException
 at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
 at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
@@ -105,15 +132,18 @@ at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
 ]]></stack-trace>
                         </failure>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._05_VerifyActivationOneTimePinLandingPage" description="_05_VerifyActivationOneTimePinLandingPage" executed="True" result="Error" success="False" time="6.632" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation._05_VerifyActivationOneTimePinLandingPage" description="_05_VerifyActivationOneTimePinLandingPage" executed="True" result="Error" success="False" time="6.191" asserts="0">
+                        <categories>
+                          <category name="Activation_form" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                         <failure>
                           <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
   ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected expression [ => (value(TestProj.Tests.Activation.ActivationActions+<>c__DisplayClass14).message == value(TestProj.Tests.Activation.ActivationActions+<>c__DisplayClass14).otpMessage.Element.Text)] to return true.]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_188b77196bda4dc3aeca5b32a91ea23e.VerifyOTPErrorMessage(Browser browserInstance, String msisdnNo)
-at TestProj.Tests.Activation.Activation._05_VerifyActivationOneTimePinLandingPage() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 361
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_f26d5b68d4d54c7b80c3e3f482198f68.VerifyOTPErrorMessage(Browser browserInstance, String msisdnNo)
+at TestProj.Tests.Activation.Activation._05_VerifyActivationOneTimePinLandingPage() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 358
 --FluentAssertFailedException
 at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
 at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
@@ -121,75 +151,112 @@ at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
 ]]></stack-trace>
                         </failure>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._06_ActivationOneTimePinFieldValidation" description="_06_ActivationOneTimePinFieldValidation" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation._06_ActivationOneTimePinFieldValidation" description="_06_ActivationOneTimePinFieldValidation" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Verify_user(OTP)" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._07_CorrectOneTimePinAndApplicationOffline" description="_07_CorrectOneTimePinAndApplicationOffline" executed="True" result="Success" success="True" time="0.242" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation._07_CorrectOneTimePinAndApplicationOffline" description="_07_CorrectOneTimePinAndApplicationOffline" executed="True" result="Success" success="True" time="0.564" asserts="0">
+                        <categories>
+                          <category name="Verify_user(OTP)" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._08_IncorrectOneTimePin" description="_08_IncorrectOneTimePin" executed="True" result="Error" success="False" time="6.059" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation._08_IncorrectOneTimePin" description="_08_IncorrectOneTimePin" executed="True" result="Error" success="False" time="0.360" asserts="0">
+                        <categories>
+                          <category name="Verify_user(OTP)" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                         <failure>
-                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
-  ----> FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#otp]]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_188b77196bda4dc3aeca5b32a91ea23e.EnterAndVerifyOTPValue(Browser browserInstance, String otpVal)
-at TestProj.Tests.Activation.Activation._08_IncorrectOneTimePin() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 417
---FluentElementNotFoundException
-at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
-at FluentAutomation.ElementProxy.get_Element()
-at lambda_method(Closure )
-at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : An unexpected exception was thrown inside WaitUntil(Action). See InnerException for details.
+  ----> OpenQA.Selenium.StaleElementReferenceException : stale element reference: element is not attached to the page document
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.3 x86_64)]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_f26d5b68d4d54c7b80c3e3f482198f68.EnterAndVerifyOTPValue(Browser browserInstance, String otpVal)
+at TestProj.Tests.Activation.Activation._08_IncorrectOneTimePin() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 456
+--StaleElementReferenceException
+at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+at FluentAutomation.CommandProvider.<>c__DisplayClass42.<EnterText>b__41()
 at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
 ]]></stack-trace>
                         </failure>
                       </test-case>
                       <test-case name="TestProj.Tests.Activation.Activation._09_ResendOneTimePin" description="_09_ResendOneTimePin" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Verify_user(OTP)" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
                       <test-case name="TestProj.Tests.Activation.Activation._10_CorrectOneTimePin" description="_10_CorrectOneTimePin" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Verify_user(OTP)" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
                       <test-case name="TestProj.Tests.Activation.Activation._11_SetupCatalogueLandingPage" description="_11_SetupCatalogueLandingPage" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Setup_Catalogue" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
                       <test-case name="TestProj.Tests.Activation.Activation._12_SetupCatalogueValidations" description="_12_SetupCatalogueValidations" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Setup_Catalogue" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._13_SetupCatalogueOnDeviceGEOLocationService" description="_13_SetupCatalogueOnDeviceGEOLocationService" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation._13_SetupCatalogueOnDeviceGEOLocationService" description="_13_SetupCatalogueOnDeviceGEOLocationService" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Setup_Catalogue" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
                       <test-case name="TestProj.Tests.Activation.Activation._14_SetupCatalogueSearchFieldReturningNoResults" description="_14_SetupCatalogueSearchFieldReturningNoResults" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Setup_Catalogue" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
                       <test-case name="TestProj.Tests.Activation.Activation._15_SetupCatalogueSearchFieldAutoComplete" description="_15_SetupCatalogueSearchFieldAutoComplete" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Setup_Catalogue" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
                       <test-case name="TestProj.Tests.Activation.Activation._16_SetupCatalogueLandingPageInterruptions" description="_16_SetupCatalogueLandingPageInterruptions" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Setup_Catalogue" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
                       <test-case name="TestProj.Tests.Activation.Activation._17_SetupCatalogueSearchFieldReturningOneOrMultipleResults" description="_17_SetupCatalogueSearchFieldReturningOneOrMultipleResults" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Setup_Catalogue" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
@@ -198,54 +265,81 @@ at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
                   </test-suite>
                 </results>
               </test-suite>
-              <test-suite type="Namespace" name="Alerts" executed="True" result="Success" success="True" time="20.945" asserts="0">
+              <test-suite type="Namespace" name="Alerts" executed="True" result="Success" success="True" time="21.030" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Alerts" description="Alerts" executed="True" result="Success" success="True" time="20.944" asserts="0">
+                  <test-suite type="TestFixture" name="Alerts" description="Alerts" executed="True" result="Success" success="True" time="21.029" asserts="0">
                     <categories>
                       <category name="Alerts" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Alerts.Alerts.AlersChangeSpaza" description="AlersChangeSpaza" executed="True" result="Success" success="True" time="3.661" asserts="0">
+                      <test-case name="TestProj.Tests.Alerts.Alerts._01_AlertsLandingPageVerfication" description="_01_AlertsLandingPageVerfication" executed="True" result="Success" success="True" time="6.103" asserts="0">
+                        <categories>
+                          <category name="Alerts" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Alerts.Alerts.AlertsConfirmNow" description="AlertsConfirmNow" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Alerts.Alerts._02_AlertsPollingService" description="_02_AlertsPollingService" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Alerts" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Alerts.Alerts.AlertsDiagnose" description="AlertsDiagnose" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Alerts.Alerts._03_AlertsViewInvoices" description="_03_AlertsViewInvoices" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Alerts" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Alerts.Alerts.AlertsLandingPageVerfication" description="AlertsLandingPageVerfication" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Alerts.Alerts._04_AlertsConfirmNow" description="_04_AlertsConfirmNow" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Alerts" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Alerts.Alerts.AlertsManageCatalogue" description="Method" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Alerts.Alerts._05_AlertsSyncNow" description="_05_AlertsSyncNow" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Alerts" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Alerts.Alerts.AlertsMessaging" description="AlertsMessaging" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Alerts.Alerts._06_AlertsManageCatalogue" description="_06_AlertsManageCatalogue" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Setup_Catalogue" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Alerts.Alerts.AlertsPollingService" description="AlertsPollingService" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Alerts.Alerts._07_AlertsDiagnose" description="_07_AlertsDiagnose" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Alerts" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Alerts.Alerts.AlertsSyncNow" description="AlertsSyncNow" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Alerts.Alerts._08_AlersChangeSpaza" description="_08_AlersChangeSpaza" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Alerts" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.Alerts.Alerts.AlertsViewInvoices" description="AlertsViewInvoices" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                      <test-case name="TestProj.Tests.Alerts.Alerts._09_AlertsMessaging" description="_09_AlertsMessaging" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Alerts" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
@@ -254,88 +348,360 @@ at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
                   </test-suite>
                 </results>
               </test-suite>
-              <test-suite type="Namespace" name="ContactUs" executed="True" result="Failure" success="False" time="24.163" asserts="0">
+              <test-suite type="Namespace" name="Basket" executed="True" result="Success" success="True" time="17.843" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="ContactUs" description="Alerts" executed="True" result="Error" success="False" time="24.162" asserts="0">
+                  <test-suite type="TestFixture" name="Basket" description="Basket" executed="True" result="Success" success="True" time="17.842" asserts="0">
                     <categories>
-                      <category name="Alerts" />
+                      <category name="Basket" />
                     </categories>
-                    <failure>
-                      <message><![CDATA[SetUp : TinyIoC.TinyIoCResolutionException : Unable to resolve type: OpenQA.Selenium.IWebDriver
-  ----> OpenQA.Selenium.WebDriverException : Unexpected error. System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::1]:44193
-   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
-   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
-   --- End of inner exception stack trace ---
-   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
-   at System.Net.HttpWebRequest.GetRequestStream()
-   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)]]></message>
-                      <stack-trace><![CDATA[at TinyIoC.TinyIoCContainer.DelegateFactory.GetObject(Type requestedType, TinyIoCContainer container, NamedParameterOverloads parameters, ResolveOptions options)
-at TinyIoC.TinyIoCContainer.ResolveInternal(TypeRegistration registration, NamedParameterOverloads parameters, ResolveOptions options)
-at TinyIoC.TinyIoCContainer.Resolve(Type resolveType)
-at TinyIoC.TinyIoCContainer.Resolve[ResolveType]()
-at FluentAutomation.CommandProvider.<>c__DisplayClass2.<.ctor>b__0()
-at System.Lazy`1.CreateValue()
-at System.Lazy`1.LazyInitValue()
-at FluentAutomation.CommandProvider.get_webDriver()
-at FluentAutomation.CommandProvider.WithConfig(FluentSettings settings)
-at FluentAutomation.ActionSyntaxProvider.WithConfig(FluentSettings settings)
-at FluentAutomation.FluentTest.get_I()
-at TestProj.Classes.Browsers.Chrome.Create() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Classes\Browsers\Chrome.cs:line 18
-at TestProj.Classes.Browser..ctor(eBrowser browserType) in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Classes\Browser.cs:line 44
-at TestProj.Tests.ContactUs.ContactUs.Initialise() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\ContactUs\ContactUs.cs:line 21
---WebDriverException
-at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
-at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
-at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
-at FluentAutomation.SeleniumWebDriver.<>c__DisplayClass22.<GenerateBrowserSpecificDriver>b__1b()
-at FluentAutomation.SeleniumWebDriver.<>c__DisplayClass2.<>c__DisplayClass4.<Bootstrap>b__1(TinyIoCContainer c, NamedParameterOverloads o)
-at TinyIoC.TinyIoCContainer.<>c__DisplayClass5`1.<Register>b__4(TinyIoCContainer c, NamedParameterOverloads o)
-at TinyIoC.TinyIoCContainer.DelegateFactory.GetObject(Type requestedType, TinyIoCContainer container, NamedParameterOverloads parameters, ResolveOptions options)
-]]></stack-trace>
-                    </failure>
                     <results>
-                      <test-case name="TestProj.Tests.ContactUs.ContactUs.ContactUsTest" description="ContactUs" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                      <test-case name="TestProj.Tests.Basket.Basket._01_BasketGridView" description="_01_BasketGridView" executed="True" result="Success" success="True" time="2.459" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
-                        <failure>
-                          <message><![CDATA[TestFixtureSetUp failed in ContactUs]]></message>
-                          <stack-trace />
-                        </failure>
                       </test-case>
-                      <test-case name="TestProj.Tests.ContactUs.ContactUs.Help" description="Help" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                      <test-case name="TestProj.Tests.Basket.Basket._02_BasketConfirmOrder" description="_02_BasketConfirmOrder" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
-                        <failure>
-                          <message><![CDATA[TestFixtureSetUp failed in ContactUs]]></message>
-                          <stack-trace />
-                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._03_BasketListView" description="_03_BasketListView" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._04_BasketDetailGridView" description="_04_BasketDetailGridView" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._05_BasketDetailListView" description="_05_BasketDetailListView" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._06_BasketViewItemDetail" description="_06_BasketViewItemDetail" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._07_BasketAddItemToFavourites" description="_07_BasketAddItemToFavourites" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._08_BasketAddingAndRemovingProductQuantity" description="_08_BasketAddingAndRemovingProductQuantity" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
                       </test-case>
                     </results>
                   </test-suite>
                 </results>
               </test-suite>
-              <test-suite type="Namespace" name="GeneralApplicationNavigation" executed="True" result="Success" success="True" time="130.452" asserts="0">
+              <test-suite type="Namespace" name="Catalogues" executed="True" result="Success" success="True" time="20.015" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="GeneralApplicationNavigation" description="GeneralApplicationNavigation" executed="True" result="Success" success="True" time="130.452" asserts="0">
+                  <test-suite type="TestFixture" name="Catalogues" description="Catalogues" executed="True" result="Success" success="True" time="20.013" asserts="0">
+                    <categories>
+                      <category name="Catalogues" />
+                    </categories>
+                    <results>
+                      <test-case name="TestProj.Tests.Catalogues.Catalogues._01_SplashInterstialAdvert" description="_01_SplashInterstialAdvert" executed="True" result="Success" success="True" time="5.108" asserts="0">
+                        <categories>
+                          <category name="Catalogues" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Catalogues.Catalogues._02_CatalogueLandingPage" description="_02_CatalogueLandingPage" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Catalogues" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Catalogues.Catalogues._03_CatalogueViewSubMenu" description="_03_CatalogueViewSubMenu" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Catalogues" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Catalogues.Catalogues._04_CatalogueViewProducts" description="_04_CatalogueViewProducts" executed="True" result="Success" success="True" time="0.003" asserts="0">
+                        <categories>
+                          <category name="Catalogues" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Catalogues.Catalogues._05_CatalogueViewProductDetail" description="_05_CatalogueViewProductDetail" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Catalogues" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Catalogues.Catalogues._06_CatalogueViewAddProductToFavourites" description="_06_CatalogueViewAddProductToFavourites" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Catalogues" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Catalogues.Catalogues._07_CatalogueViewAddingAndRemovingProductQuantity" description="_07_CatalogueViewAddingAndRemovingProductQuantity" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Catalogues" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="ContactUs" executed="True" result="Success" success="True" time="18.427" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="ContactUs" description="ContactUs" executed="True" result="Success" success="True" time="18.426" asserts="0">
+                    <categories>
+                      <category name="ContactUs" />
+                    </categories>
+                    <results>
+                      <test-case name="TestProj.Tests.ContactUs.ContactUs._01_ContactUsTest" description="_01_ContactUs" executed="True" result="Success" success="True" time="3.720" asserts="0">
+                        <categories>
+                          <category name="Contact Us" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.ContactUs.ContactUs._02_Help" description="_02_Help" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Alerts" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="Favourites" executed="True" result="Success" success="True" time="19.831" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="Favourites" description="Favourites" executed="True" result="Success" success="True" time="19.830" asserts="0">
+                    <categories>
+                      <category name="Favourites" />
+                    </categories>
+                    <results>
+                      <test-case name="TestProj.Tests.Favourites.Favourites._01_FavouritesInGridView" description="_01_FavouritesInGridView" executed="True" result="Success" success="True" time="4.579" asserts="0">
+                        <categories>
+                          <category name="Favourites" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Favourites.Favourites._02_FavouritesInListView" description="_02_FavouritesInListView" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Favourites" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Favourites.Favourites._03_FavouritesDetailGridView" description="_03_FavouritesDetailGridView" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Favourites" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Favourites.Favourites._04_FavouritesDetailListView" description="_04_FavouritesDetailListView" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Favourites" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Favourites.Favourites._05_FavouritesViewItemDetail" description="_05_FavouritesViewItemDetail" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Favourites" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Favourites.Favourites._06_FavouritesAddItemToFavourites" description="_06_FavouritesAddItemToFavourites" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Favourites.Favourites._07_FavouritesAddingAndRemovingProductQuantity" description="_07_FavouritesAddingAndRemovingProductQuantity" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="GeneralApplicationNavigation" executed="True" result="Success" success="True" time="18.502" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="GeneralApplicationNavigation" description="GeneralApplicationNavigation" executed="True" result="Success" success="True" time="18.500" asserts="0">
                     <categories>
                       <category name="GeneralApplicationNavigation" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.GeneralApplicationNavigation.GeneralApplicationNavigation.GridviewSearchOfflineOnline" description="GridviewSearchOfflineOnline" executed="True" result="Success" success="True" time="60.096" asserts="0">
+                      <test-case name="TestProj.Tests.GeneralApplicationNavigation.GeneralApplicationNavigation._01_SearchFieldValidations" description="_01_SearchFieldValidations" executed="True" result="Success" success="True" time="3.116" asserts="0">
+                        <categories>
+                          <category name="Search" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.GeneralApplicationNavigation.GeneralApplicationNavigation.ListViewSearchOfflineOnline" description="ListViewSearchOfflineOnline" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                      <test-case name="TestProj.Tests.GeneralApplicationNavigation.GeneralApplicationNavigation._02_GridviewSearchOfflineOnline" description="_02_GridviewSearchOfflineOnline" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Search" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                       </test-case>
-                      <test-case name="TestProj.Tests.GeneralApplicationNavigation.GeneralApplicationNavigation.SearchFieldValidations" description="SearchFieldValidations" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                      <test-case name="TestProj.Tests.GeneralApplicationNavigation.GeneralApplicationNavigation._03_ListViewSearchOfflineOnline" description="_03_ListViewSearchOfflineOnline" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Search" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="Orders" executed="True" result="Success" success="True" time="19.421" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="Orders" description="Orders" executed="True" result="Success" success="True" time="19.420" asserts="0">
+                    <categories>
+                      <category name="Orders" />
+                    </categories>
+                    <results>
+                      <test-case name="TestProj.Tests.Orders.Orders._01_PendingOrdersConfirmation" description="_01_PendingOrdersConfirmation" executed="True" result="Success" success="True" time="3.742" asserts="0">
+                        <categories>
+                          <category name="Orders" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Orders.Orders._02_ViewConfirmedOrder" description="_02_ViewConfirmedOrder" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Orders" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Orders.Orders._03_OrderHistoryCollapsedView" description="_03_OrderHistoryCollapsedView" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Orders" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Orders.Orders._04_OrderHistoryExpanded" description="_04_OrderHistoryExpanded" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Orders" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Orders.Orders._05_ViewInvoiceDetail" description="_05_ViewInvoiceDetail" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Orders" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Orders.Orders._06_ViewOrderDetails" description="_06_ViewOrderDetails" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Orders" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Orders.Orders._07_eOrder" description="_07_ReOrder" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Orders" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Orders.Orders._08_UnconfirmedOrders" description="_08_UnconfirmedOrders" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Orders" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Orders.Orders._09_ViewInvoices" description="_09_ViewInvoices" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Orders" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Orders.Orders._10_LoggingDiscrepancies" description="_10_LoggingDiscrepancies" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Orders" />
+                        </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
