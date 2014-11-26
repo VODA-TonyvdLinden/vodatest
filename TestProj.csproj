@@ -111,6 +111,7 @@
     <Compile Include="Classes\XMLSeriallizer.cs" />
     <Compile Include="Interfaces\IAlertsActions.cs" />
     <Compile Include="Interfaces\ICataloguesActions.cs" />
+    <Compile Include="Interfaces\IBasketActions.cs" />
     <Compile Include="Interfaces\IContactUs.cs" />
     <Compile Include="Interfaces\IGeneralApplicationNavigationActions.cs" />
     <Compile Include="Interfaces\IAccessingApplicationActions.cs" />
@@ -127,6 +128,8 @@
     <Compile Include="Interfaces\IActivationActions.cs" />
     <Compile Include="Tests\Alerts\Alerts.cs" />
     <Compile Include="Tests\Alerts\AlertsActions.cs" />
+    <Compile Include="Tests\Basket\Basket.cs" />
+    <Compile Include="Tests\Basket\BasketActions.cs" />
     <Compile Include="Tests\Catalogues\Catalogues.cs" />
     <Compile Include="Tests\Catalogues\CataloguesActions.cs" />
     <Compile Include="Tests\ContactUs\ContactUs.cs" />
