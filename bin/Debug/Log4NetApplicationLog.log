@@ -47,3 +47,124 @@
 2014-11-26 09:19:59,544 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_VerifyOntTimeLable executed in 0 seconds
 2014-11-26 09:19:59,545 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method VerifyOTPErrorMessage not found
 2014-11-26 09:19:59,551 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_VerifyOTPErrorMessage executed in 0 seconds
+2014-11-26 10:23:05,691 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\ScreenshotRequirements.xml
+2014-11-26 10:23:06,391 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method MSISDNInput not found
+2014-11-26 10:23:06,782 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_MSISDNInput executed in 1 seconds
+2014-11-26 10:23:06,784 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method UsernameInput not found
+2014-11-26 10:23:06,930 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_UsernameInput executed in 0 seconds
+2014-11-26 10:23:06,932 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method ActivationKeyInput not found
+2014-11-26 10:23:07,058 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-26 10:23:07,060 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method AliasInput not found
+2014-11-26 10:23:07,168 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_AliasInput executed in 0 seconds
+2014-11-26 10:23:07,169 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST
+2014-11-26 10:23:07,297 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method ClickNext not found
+2014-11-26 10:23:07,343 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_ClickNext executed in 0 seconds
+2014-11-26 10:23:07,344 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method ValidateOTPStart not found
+2014-11-26 10:23:07,501 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
+2014-11-26 10:23:07,510 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_ValidateOTPStart executed in 0 seconds
+2014-11-26 10:23:07,631 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method TestMandatoryFields not found
+2014-11-26 10:23:12,758 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_TestMandatoryFields executed in 5 seconds
+2014-11-26 10:23:12,787 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method TestInvalidActivationKey not found
+2014-11-26 10:23:17,792 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_TestInvalidActivationKey executed in 5 seconds
+2014-11-26 10:23:17,830 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method VerifyLogoAndBanner not found
+2014-11-26 10:23:17,887 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-26 10:23:17,888 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method VerifyOnlineIndicator not found
+2014-11-26 10:23:17,928 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-26 10:23:17,930 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method VerifyPageLinks not found
+2014-11-26 10:23:18,002 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_VerifyPageLinks executed in 0 seconds
+2014-11-26 10:23:18,003 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method VerifyActivationPageNextButton not found
+2014-11-26 10:23:23,054 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_VerifyActivationPageNextButton executed in 5 seconds
+2014-11-26 10:23:30,190 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method VerifyLogoAndBanner not found
+2014-11-26 10:23:30,272 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-26 10:23:30,273 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method VerifyOnlineIndicator not found
+2014-11-26 10:23:30,309 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-26 10:23:30,310 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method VerifyPageLinks not found
+2014-11-26 10:23:30,373 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_VerifyPageLinks executed in 0 seconds
+2014-11-26 10:23:30,374 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Cannot check spelling and grammer automatically
+2014-11-26 10:23:30,375 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method VerifyOTPNextButton not found
+2014-11-26 10:23:30,384 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> What css class is used to disable the next button?
+2014-11-26 10:23:30,400 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the next button, just the css class
+2014-11-26 10:23:30,400 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the next button, just the css class
+2014-11-26 10:23:30,401 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_VerifyOTPNextButton executed in 0 seconds
+2014-11-26 10:23:30,402 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method VerifyResendButton not found
+2014-11-26 10:23:30,417 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyResendButton -> What css class is used to disable the next button?
+2014-11-26 10:23:30,432 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the resend button, just the css class
+2014-11-26 10:23:30,433 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the resend button, just the css class
+2014-11-26 10:23:30,433 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_VerifyResendButton executed in 0 seconds
+2014-11-26 10:23:30,434 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method VerifyOntTimeLable not found
+2014-11-26 10:23:30,450 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
+2014-11-26 10:23:30,450 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_VerifyOntTimeLable executed in 0 seconds
+2014-11-26 10:23:30,452 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method VerifyOTPErrorMessage not found
+2014-11-26 10:23:30,458 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_VerifyOTPErrorMessage executed in 0 seconds
+2014-11-26 10:38:43,296 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\ScreenshotRequirements.xml
+2014-11-26 10:38:43,958 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method MSISDNInput not found
+2014-11-26 10:38:44,280 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_MSISDNInput executed in 1 seconds
+2014-11-26 10:38:44,282 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method UsernameInput not found
+2014-11-26 10:38:44,396 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_UsernameInput executed in 0 seconds
+2014-11-26 10:38:44,397 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method ActivationKeyInput not found
+2014-11-26 10:38:44,503 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-26 10:38:44,505 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method AliasInput not found
+2014-11-26 10:38:44,611 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_AliasInput executed in 0 seconds
+2014-11-26 10:38:44,611 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST
+2014-11-26 10:38:44,720 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method ClickNext not found
+2014-11-26 10:38:44,765 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_ClickNext executed in 0 seconds
+2014-11-26 10:38:44,766 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method ValidateOTPStart not found
+2014-11-26 10:38:45,455 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
+2014-11-26 10:38:45,464 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_ValidateOTPStart executed in 0 seconds
+2014-11-26 10:41:30,404 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\ScreenshotRequirements.xml
+2014-11-26 10:41:31,108 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method MSISDNInput not found
+2014-11-26 10:41:31,474 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_MSISDNInput executed in 1 seconds
+2014-11-26 10:41:31,476 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method UsernameInput not found
+2014-11-26 10:41:31,593 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_UsernameInput executed in 0 seconds
+2014-11-26 10:41:31,594 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method ActivationKeyInput not found
+2014-11-26 10:41:31,701 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-26 10:41:31,702 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method AliasInput not found
+2014-11-26 10:41:31,808 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_AliasInput executed in 0 seconds
+2014-11-26 10:41:31,808 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST
+2014-11-26 10:41:31,935 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method ClickNext not found
+2014-11-26 10:41:31,979 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_ClickNext executed in 0 seconds
+2014-11-26 10:41:31,980 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method ValidateOTPStart not found
+2014-11-26 10:41:32,649 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
+2014-11-26 10:41:32,656 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_ValidateOTPStart executed in 0 seconds
+2014-11-26 10:54:04,968 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - execute CorrectOneTimePinAndApplicationOffline
+2014-11-26 10:54:20,111 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\ScreenshotRequirements.xml
+2014-11-26 10:54:20,739 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method MSISDNInput not found
+2014-11-26 10:54:22,182 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_MSISDNInput executed in 2 seconds
+2014-11-26 10:54:22,184 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method UsernameInput not found
+2014-11-26 10:54:22,296 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_UsernameInput executed in 0 seconds
+2014-11-26 10:54:22,297 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method ActivationKeyInput not found
+2014-11-26 10:54:22,408 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-26 10:54:22,409 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method AliasInput not found
+2014-11-26 10:54:22,517 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_AliasInput executed in 0 seconds
+2014-11-26 10:54:22,517 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST
+2014-11-26 10:54:22,646 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method ClickNext not found
+2014-11-26 10:54:22,691 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_ClickNext executed in 0 seconds
+2014-11-26 10:54:22,692 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method ValidateOTPStart not found
+2014-11-26 10:54:23,722 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
+2014-11-26 10:54:23,733 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_ValidateOTPStart executed in 1 seconds
+2014-11-26 10:55:22,464 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - execute CorrectOneTimePinAndApplicationOffline
+2014-11-26 10:56:25,521 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - execute CorrectOneTimePinAndApplicationOffline
+2014-11-26 10:57:53,373 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - execute CorrectOneTimePinAndApplicationOffline
+2014-11-26 11:00:49,404 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - execute CorrectOneTimePinAndApplicationOffline
+2014-11-26 11:00:57,083 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - About to enter OTP
+2014-11-26 11:02:44,165 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - execute CorrectOneTimePinAndApplicationOffline
+2014-11-26 11:02:56,337 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - About to enter OTP
+2014-11-26 11:03:51,755 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - execute CorrectOneTimePinAndApplicationOffline
+2014-11-26 11:04:12,759 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - About to enter OTP
+2014-11-26 11:04:12,759 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - OTP entered
+2014-11-26 11:05:02,037 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - execute CorrectOneTimePinAndApplicationOffline
+2014-11-26 11:05:09,864 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - About to enter OTP
+2014-11-26 11:07:25,674 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - execute CorrectOneTimePinAndApplicationOffline
+2014-11-26 11:07:30,457 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - About to enter OTP
+2014-11-26 11:33:42,225 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - execute CorrectOneTimePinAndApplicationOffline
+2014-11-26 11:33:51,728 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - About to enter OTP
+2014-11-26 11:33:52,577 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - OTP entered
+2014-11-26 11:35:26,044 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - execute CorrectOneTimePinAndApplicationOffline
+2014-11-26 11:35:34,355 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - About to enter OTP
+2014-11-26 11:35:54,747 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\ScreenshotRequirements.xml
+2014-11-26 11:35:55,384 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method ClickNext not found
+2014-11-26 11:36:00,479 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_ClickNext executed in 5 seconds
+2014-11-26 12:02:02,557 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:CorrectOneTimePinAndApplicationOffline -> Cannot simulate the off-line status as the browser will allways be online
+2014-11-26 12:02:02,607 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\ScreenshotRequirements.xml
+2014-11-26 12:02:03,250 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Screenshot requirement for method ClickNext not found
+2014-11-26 12:02:08,334 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - IActivationActions_ClickNext executed in 5 seconds

@@ -359,6 +359,17 @@ namespace TestProj.Tests.Activation
         [Test, Description("CorrectOneTimePinAndApplicationOffline"), Repeat(1)]
         public void CorrectOneTimePinAndApplicationOffline()
         {
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
+            Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
+
+            /// 1. Please enter <OTP number>  that has been sent to your msisdn
+            browserInstance.Instance.Enter("195451").In("#otp");
+
+            Classes.LogWriter.Instance.Log("TESTCASE:CorrectOneTimePinAndApplicationOffline -> Cannot simulate the off-line status as the browser will allways be online", Classes.LogWriter.eLogType.Error);
+
+            /// 2. Press the <next>  button
+            activationAction.ClickNext(browserInstance, nextButton); 
+
         }
 
         /// <summary>
