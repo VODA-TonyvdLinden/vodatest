@@ -358,7 +358,7 @@ namespace TestProj.Tests.Activation
             // 8. Verify that the colour of the resend button is purple, with white text
             activationAction.VerifyResendButton(browserInstance);
             activationAction.VerifyOntTimeLable(browserInstance);
-            activationAction.VerifyOTPErrorMessage(browserInstance, msisdn.Element.Text);
+            activationAction.VerifyOTPErrorMessage(browserInstance, Classes.TestData.Instance.DefaultData.ActivationData.MSISDN);
         }
 
         /// <summary>
