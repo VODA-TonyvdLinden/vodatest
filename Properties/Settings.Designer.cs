@@ -88,8 +88,7 @@ namespace TestProj.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\bbdnet0518\\Documents\\GitHub\\vodatest\\bin\\Debug\\ScreenshotRequirements.xm" +
-            "l")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ScreenshotRequirements.xml")]
         public string ScreenshotRequirementsPath {
             get {
                 return ((string)(this["ScreenshotRequirementsPath"]));

@@ -24,7 +24,7 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="ScreenshotRequirementsPath" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\ScreenshotRequirements.xml</Value>
+      <Value Profile="(Default)">ScreenshotRequirements.xml</Value>
     </Setting>
   </Settings>
 </SettingsFile>
