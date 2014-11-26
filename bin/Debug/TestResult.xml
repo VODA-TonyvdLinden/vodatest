@@ -1,22 +1,242 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-26" time="13:18:24">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="27" errors="5" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-26" time="14:02:36">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8009" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYVDL" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="40.496" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="111.337" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="40.475" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="111.314" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="40.474" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="111.314" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Activation" executed="True" result="Success" success="True" time="40.474" asserts="0">
+              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Success" success="True" time="29.931" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Success" success="True" time="40.470" asserts="0">
+                  <test-suite type="TestFixture" name="AccessingApplication" description="AccessingApplication" executed="True" result="Success" success="True" time="29.926" asserts="0">
+                    <categories>
+                      <category name="AccessingApplication" />
+                    </categories>
+                    <results>
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication.AccessApplicationWithSingleSpaza" description="AccessApplicationWithSingleSpaza" executed="True" result="Success" success="True" time="7.049" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication.ActivationLandingPage" description="ActivationLandingPage" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication.ApplicationFieldValidation" description="ApplicationFieldValidation" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication.ApplicationLandingContentsFunctionality" description="ApplicationLandingContentsFunctionality" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication.ApplicationWithMultipleSpazas" description="ApplicationWithMultipleSpazas" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="Activation" executed="True" result="Failure" success="False" time="41.673" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Failure" success="False" time="41.671" asserts="0">
                     <categories>
                       <category name="Activation" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Activation.Activation.CorrectOneTimePinAndApplicationOffline" description="CorrectOneTimePinAndApplicationOffline" executed="True" result="Success" success="True" time="16.478" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation.ActivationFormCorrectUserDetails" description="ActivationFormCorrectUserDetails" executed="True" result="Error" success="False" time="8.101" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : An unexpected exception was thrown inside WaitUntil(Action). See InnerException for details.
+  ----> System.FormatException : Index (zero based) must be greater than or equal to zero and less than the size of the argument list.]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_0912e11fee86423199bed0bf24c222f9.ValidateOTPStart(Browser browserInstance, String msisdnNo)
+at TestProj.Tests.Activation.Activation.ActivationFormCorrectUserDetails() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 146
+--FormatException
+at System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+at System.String.Format(IFormatProvider provider, String format, Object[] args)
+at FluentAutomation.Exceptions.FluentException..ctor(String message, Object[] formatParams)
+at FluentAutomation.Exceptions.FluentAssertFailedException..ctor(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation.ActivationFormFieldValidation" description="ActivationFormFieldValidation" executed="True" result="Error" success="False" time="5.153" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#msisdn]]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_0912e11fee86423199bed0bf24c222f9.TestMandatoryFields(Browser browserInstance, ElementProxy msisdn, ElementProxy username, ElementProxy activationNumber, ElementProxy userAlias, ElementProxy challengeAnswer, ElementProxy errorMessage)
+at TestProj.Tests.Activation.Activation.ActivationFormFieldValidation() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 196
+--FluentElementNotFoundException
+at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
+at FluentAutomation.ElementProxy.get_Element()
+at FluentAutomation.AssertProvider.<>c__DisplayClass21.<Attribute>b__20()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation.ActivationFormIncorrectUserDetails" description="ActivationFormIncorrectUserDetails" executed="True" result="Error" success="False" time="5.089" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#msisdn]]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_0912e11fee86423199bed0bf24c222f9.TestInvalidActivationKey(Browser browserInstance, ElementProxy msisdn, ElementProxy username, ElementProxy activationNumber, ElementProxy userAlias, ElementProxy nextButton, ElementProxy errorMessage)
+at TestProj.Tests.Activation.Activation.ActivationFormIncorrectUserDetails() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 263
+--FluentElementNotFoundException
+at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
+at FluentAutomation.ElementProxy.get_Element()
+at FluentAutomation.CommandProvider.<>c__DisplayClass36.<Focus>b__35()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation.ActivationOneTimePinFieldValidation" description="ActivationOneTimePinFieldValidation" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation.CorrectOneTimePin" description="CorrectOneTimePin" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation.CorrectOneTimePinAndApplicationOffline" description="CorrectOneTimePinAndApplicationOffline" executed="True" result="Success" success="True" time="0.769" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation.IncorrectOneTimePin" description="IncorrectOneTimePin" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation.ResendOneTimePin" description="ResendOneTimePin" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueLandingPage" description="SetupCatalogueLandingPage" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueLandingPageInterruptions" description="SetupCatalogueLandingPageInterruptions" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueOnDeviceGEOLocationService" description="SetupCatalogueOnDeviceGEOLocationService" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueSearchFieldAutoComplete" description="SetupCatalogueSearchFieldAutoComplete" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueSearchFieldReturningNoResults" description="SetupCatalogueSearchFieldReturningNoResults" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueSearchFieldReturningOneOrMultipleResults" description="SetupCatalogueSearchFieldReturningOneOrMultipleResults" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation.SetupCatalogueValidations" description="SetupCatalogueValidations" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation.VerifyActivationLandingPage" description="VerifyActivationLandingPage" executed="True" result="Error" success="False" time="5.856" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected element matching selector [body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(8) > div > input] to exist.]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_0912e11fee86423199bed0bf24c222f9.VerifyActivationPageNextButton(Browser browserInstance)
+at TestProj.Tests.Activation.Activation.VerifyActivationLandingPage() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 306
+--FluentAssertFailedException
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass6b.<Exists>b__6a()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation.VerifyActivationOneTimePinLandingPage" description="VerifyActivationOneTimePinLandingPage" executed="True" result="Error" success="False" time="0.447" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#msisdn]]]></message>
+                          <stack-trace><![CDATA[at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
+at FluentAutomation.ElementProxy.get_Element()
+at TestProj.Tests.Activation.Activation.VerifyActivationOneTimePinLandingPage() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 360
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="Alerts" executed="True" result="Success" success="True" time="20.240" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="Alerts" description="Alerts" executed="True" result="Success" success="True" time="20.238" asserts="0">
+                    <categories>
+                      <category name="Alerts" />
+                    </categories>
+                    <results>
+                      <test-case name="TestProj.Tests.Alerts.Alerts.AlertsLandingPageVerfication" description="AlertsLandingPageVerfication" executed="True" result="Success" success="True" time="3.356" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Alerts.Alerts.Method" description="Method" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="GeneralApplicationNavigation" executed="True" result="Success" success="True" time="19.418" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="GeneralApplicationNavigation" description="GeneralApplicationNavigation" executed="True" result="Success" success="True" time="19.416" asserts="0">
+                    <categories>
+                      <category name="GeneralApplicationNavigation" />
+                    </categories>
+                    <results>
+                      <test-case name="TestProj.Tests.GeneralApplicationNavigation.GeneralApplicationNavigation.GridviewSearchOfflineOnline" description="GridviewSearchOfflineOnline" executed="True" result="Success" success="True" time="3.090" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.GeneralApplicationNavigation.GeneralApplicationNavigation.ListViewSearchOfflineOnline" description="ListViewSearchOfflineOnline" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.GeneralApplicationNavigation.GeneralApplicationNavigation.SearchFieldValidations" description="SearchFieldValidations" executed="True" result="Success" success="True" time="0.001" asserts="0">
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>

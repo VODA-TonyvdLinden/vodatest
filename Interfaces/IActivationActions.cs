@@ -25,8 +25,8 @@ namespace TestProj.Interfaces
         void VerifyNextButton(Classes.Browser browserInstance, string cssPath);
         void VerifyResendButton(Classes.Browser browserInstance);
         void VerifyFieldExist(Classes.Browser browserInstance);
-        void ValidateOTPStart(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn);
-        void VerifyOTPErrorMessage(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn);
+        void ValidateOTPStart(Classes.Browser browserInstance, string msisdnNo);
+        void VerifyOTPErrorMessage(Classes.Browser browserInstance, string msisdnNo);
         void VerifyOntTimeLable(Classes.Browser browserInstance);
         void EnterAndVerifyOTPValue(Classes.Browser browserInstance);
 

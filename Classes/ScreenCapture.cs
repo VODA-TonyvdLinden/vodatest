@@ -12,7 +12,7 @@ namespace TestProj.Classes
 {
     public class ScreenCapture : IInterceptionBehavior
     {
-        ScreenshotRequirement screenshotRequirement = new Classes.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false };
+        ScreenshotRequirements.ScreenshotRequirement screenshotRequirement = new Classes.ScreenshotRequirements.ScreenshotRequirement() { EntryRequired = false, ExitRequired = false };
 
         public IEnumerable<Type> GetRequiredInterfaces()
         {
@@ -24,7 +24,7 @@ namespace TestProj.Classes
             //LogWriter.Instance.Log(string.Format("Reflector {0}", sender), LogWriter.eLogType.Info);
 
             Classes.Browser automator = getAutomator(input);
-            Classes.ScreenshotRequirement req = getRequirement(input.MethodBase.Name);
+            Classes.ScreenshotRequirements.ScreenshotRequirement req = getRequirement(input.MethodBase.Name);
             IMethodReturn msg;
             takeStartScreenshot(sender, req, automator);
             msg = getNext()(input, getNext);
@@ -32,25 +32,31 @@ namespace TestProj.Classes
             return msg;
         }
 
-        private ScreenshotRequirement getRequirement(string methodName)
+        private ScreenshotRequirements.ScreenshotRequirement getRequirement(string methodName)
         {
             //LogWriter.Instance.Log(string.Format("looking for {0}", methodName), LogWriter.eLogType.Info);
 
-            Classes.ScreenshotRequirement req = null;
+            Classes.ScreenshotRequirements.ScreenshotRequirement req = null;
             if (CaptureRequirement.Instance.Requirements.RequirementList.Any(r => r.EventName == methodName))
-                req = CaptureRequirement.Instance.Requirements.RequirementList.Single<Classes.ScreenshotRequirement>(s => s.EventName == methodName);
+                req = CaptureRequirement.Instance.Requirements.RequirementList.Single<Classes.ScreenshotRequirements.ScreenshotRequirement>(s => s.EventName == methodName);
 
             if (req == null)
-                LogWriter.Instance.Log(string.Format("Screenshot requirement for method {0} not found", methodName), LogWriter.eLogType.Error);
+                if (Properties.Settings.Default.AutoCrreateScreenshotRequirements)
+                {
+                    Classes.ScreenshotRequirements.BuildScreenshotRequirements reqs = new ScreenshotRequirements.BuildScreenshotRequirements();
+                    reqs.AddMissing(methodName);
+                }
+                else
+                    LogWriter.Instance.Log(string.Format("Screenshot requirement for method {0} not found", methodName), LogWriter.eLogType.Error);
             return req;
         }
 
-        private void takeStartScreenshot(string sender, Classes.ScreenshotRequirement req, Classes.Browser automator)
+        private void takeStartScreenshot(string sender, Classes.ScreenshotRequirements.ScreenshotRequirement req, Classes.Browser automator)
         {
             if (req != null && Properties.Settings.Default.TakeMethodStartScreenShots && req.EntryRequired)
                 automator.Instance.TakeScreenshot(string.Format("{0}_Enter.png", sender));
         }
-        private void takeEndScreenshot(string sender, Classes.ScreenshotRequirement req, Classes.Browser automator)
+        private void takeEndScreenshot(string sender, Classes.ScreenshotRequirements.ScreenshotRequirement req, Classes.Browser automator)
         {
             if (req != null && Properties.Settings.Default.TakeMethodStartScreenShots && req.ExitRequired)
                 automator.Instance.TakeScreenshot(string.Format("{0}_Exit.png", sender));
@@ -66,8 +72,8 @@ namespace TestProj.Classes
             Classes.Browser ret = null;
             for (int i = 0; i < input.Arguments.Count; i++)
             {
-                if (input.Arguments[i].GetType() == typeof(Classes.ScreenshotRequirement))
-                    screenshotRequirement = (Classes.ScreenshotRequirement)input.Arguments[i];
+                if (input.Arguments[i].GetType() == typeof(Classes.ScreenshotRequirements.ScreenshotRequirement))
+                    screenshotRequirement = (Classes.ScreenshotRequirements.ScreenshotRequirement)input.Arguments[i];
                 else
                     if (input.Arguments[i].GetType() == typeof(Classes.Browser))
                         ret = (Classes.Browser)input.Arguments[i];

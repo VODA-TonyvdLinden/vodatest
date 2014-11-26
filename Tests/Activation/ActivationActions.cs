@@ -260,7 +260,7 @@ namespace TestProj.Tests.Activation
             Classes.LogWriter.Instance.Log("TESTCASE:VerifyActivationLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!", Classes.LogWriter.eLogType.Error);
         }
 
-        public void ValidateOTPStart(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn)
+        public void ValidateOTPStart(Classes.Browser browserInstance, string msisdnNo)
         {
             //The OTP screen is displayed, with a message " The One time pin message is displayed as 
             //"A One Time Pin has been sent to 0*****1234. Please enter the One time Pin here to continue"
@@ -272,16 +272,17 @@ namespace TestProj.Tests.Activation
             //string numberSecond = msisdn.Element.Text.Substring(msisdn.Element.Text.Length - 4, 4);
             //browserInstance.Instance.Assert.True(() => string.Format("A One Time Pin has been sent to {0}*****{1}. Please enter the One time Pin here to continue", numberFirst, numberSecond) == otpMessage.Element.Text);
             VerifyOntTimeLable(browserInstance);
-            VerifyOTPErrorMessage(browserInstance,msisdn);
+            VerifyOTPErrorMessage(browserInstance, msisdnNo);
         }
 
-        public void VerifyOTPErrorMessage(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn)
+        public void VerifyOTPErrorMessage(Classes.Browser browserInstance, string msisdnNo)
         {
             // 12. Verify that the  One time pin message is displayed on page load,with 5 digits of the cellphone number hidden
 
             var otpMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(1) > div");
-            string numberFirst = msisdn.Element.Text[0].ToString();
-            string numberSecond = msisdn.Element.Text.Substring(msisdn.Element.Text.Length - 4, 4);
+
+            string numberFirst = msisdnNo.Substring(0,1);
+            string numberSecond = msisdnNo.Substring(msisdnNo.Length - 4, 4);
             browserInstance.Instance.Assert.True(() => string.Format("A One Time Pin has been sent to {0}*****{1}. Please enter the One time Pin here to continue", numberFirst, numberSecond) == otpMessage.Element.Text);
         }
 

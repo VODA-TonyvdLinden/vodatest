@@ -34,7 +34,7 @@ namespace TestProj.Classes
             long timeElapsed = sw.ElapsedMilliseconds;
             long seconds = timeElapsed / 1000;
 
-            LogWriter.Instance.Log(string.Format("{0} executed in {1} seconds", sender, seconds), LogWriter.eLogType.Info);
+            LogWriter.Instance.Log(string.Format("TIMER: {0} executed in {1} seconds", sender, seconds), LogWriter.eLogType.Info);
 
             return msg;
         }

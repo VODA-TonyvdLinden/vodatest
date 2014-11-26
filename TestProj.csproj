@@ -97,12 +97,13 @@
     <Compile Include="Classes\Browsers\IE.cs" />
     <Compile Include="Classes\Browsers\Firefox.cs" />
     <Compile Include="Classes\Browsers\Chrome.cs" />
+    <Compile Include="Classes\ScreenshotRequirements\BuildScreenshotRequirements.cs" />
     <Compile Include="Classes\TestData.cs" />
     <Compile Include="Classes\CaptureRequirement.cs" />
     <Compile Include="Classes\LogWriter.cs" />
     <Compile Include="Classes\ScreenCapture.cs" />
-    <Compile Include="Classes\ScreenshotRequirement.cs" />
-    <Compile Include="Classes\ScreenshotRequirements.cs" />
+    <Compile Include="Classes\ScreenshotRequirements\ScreenshotRequirement.cs" />
+    <Compile Include="Classes\ScreenshotRequirements\ScreenshotRequirements.cs" />
     <Compile Include="Classes\TestDataClasses\Activation.cs" />
     <Compile Include="Classes\TestDataClasses\BuildDefaultData.cs" />
     <Compile Include="Classes\TestDataClasses\Defaults.cs" />
