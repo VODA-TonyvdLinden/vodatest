@@ -112,6 +112,7 @@
     <Compile Include="Interfaces\IAlertsActions.cs" />
     <Compile Include="Interfaces\ICataloguesActions.cs" />
     <Compile Include="Interfaces\IBasketActions.cs" />
+    <Compile Include="Interfaces\IOrdersActions.cs" />
     <Compile Include="Interfaces\IFavouritesActions.cs" />
     <Compile Include="Interfaces\IContactUs.cs" />
     <Compile Include="Interfaces\IGeneralApplicationNavigationActions.cs" />
@@ -139,6 +140,8 @@
     <Compile Include="Tests\Favourites\FavouritesActions.cs" />
     <Compile Include="Tests\GeneralApplicationNavigation\GeneralApplicationNavigation.cs" />
     <Compile Include="Tests\GeneralApplicationNavigation\GeneralApplicationNavigationActions.cs" />
+    <Compile Include="Tests\Orders\Orders.cs" />
+    <Compile Include="Tests\Orders\OrdersActions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
