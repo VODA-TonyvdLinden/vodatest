@@ -69,3 +69,4 @@ C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\WebDriver.Support.dll
 C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\Newtonsoft.Json.xml
 C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\WebDriver.xml
 C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\WebDriver.Support.xml
+C:\Users\bbdnet0518\Documents\GitHub\vodatest\obj\Debug\TestProj.csprojResolveAssemblyReference.cache
