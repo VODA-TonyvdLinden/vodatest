@@ -69,3 +69,4 @@ C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\WebDriver.Support.xml
 C:\Users\bbdnet0518\Documents\GitHub\vodatest\obj\Debug\TestProj.dll
 C:\Users\bbdnet0518\Documents\GitHub\vodatest\obj\Debug\TestProj.pdb
 C:\Users\kennedch\Documents\GitHub\vodatest\obj\Debug\TestProj.csprojResolveAssemblyReference.cache
+C:\Users\bbdnet0518\Documents\GitHub\vodatest\obj\Debug\TestProj.csprojResolveAssemblyReference.cache

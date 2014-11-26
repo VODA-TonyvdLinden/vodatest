@@ -19,5 +19,9 @@ namespace TestProj.Classes.TestDataClasses
         public string Alias { get; set; }
         [XmlElement]
         public string OTP { get; set; }
+        [XmlElement]
+        public string InvalidOTP { get; set; }
+        [XmlElement]
+        public string ExpiredOPT { get; set; }
     }
 }
