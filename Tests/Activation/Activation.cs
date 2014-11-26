@@ -472,9 +472,13 @@ namespace TestProj.Tests.Activation
 
         /// <summary>
         /// TEST STEPS:
-        /// 
+        /// 1. On device geo loaction setup
+        /// 1.1  Please make sure that the gps /device geo location service is on, before testing search 
+        /// functionality because the application uses that to determine the location of the user
         /// TEST OUTPUT:
-        /// 
+        /// 1.
+        /// 1.1 The geo location service is on and the user device can be located.This location is sent to 
+        /// MAS to determine the list of wholesalers that the user has close proximity to.
         /// </summary>
         [Test, Description("SetupCatalogueOnDeviceGEOLocationService"), Repeat(1)]
         public void SetupCatalogueOnDeviceGEOLocationService()
@@ -483,9 +487,10 @@ namespace TestProj.Tests.Activation
 
         /// <summary>
         /// TEST STEPS:
-        /// 
+        /// 1. Search returning no result
+        /// 1.1 Enter the wholesaler value in search field which is not an allowable wolesaler  and verify the user interface.
         /// TEST OUTPUT:
-        /// 
+        /// 1.1 An Error message should be displayed in the search field " results not found"
         /// </summary>
         [Test, Description("SetupCatalogueSearchFieldReturningNoResults"), Repeat(1)]
         public void SetupCatalogueSearchFieldReturningNoResults()
@@ -494,9 +499,14 @@ namespace TestProj.Tests.Activation
 
         /// <summary>
         /// TEST STEPS:
-        /// 
+        /// 1. Search AutoComplete
+        /// 1.1 Enter first / middle/ last  word of any wholesaler e.g Makro  and verify the search results
+        /// 1.2 Select the one from the pre-populated list
         /// TEST OUTPUT:
-        /// 
+        /// 1.
+        /// 1.1 All the names starting with the first name will be pre-populated with a list
+        /// 1.2 The record you have selected is displayed with records that are related to that search, with 
+        /// their respective distance ranges
         /// </summary>
         [Test, Description("SetupCatalogueSearchFieldAutoComplete"), Repeat(1)]
         public void SetupCatalogueSearchFieldAutoComplete()
@@ -505,9 +515,20 @@ namespace TestProj.Tests.Activation
 
         /// <summary>
         /// TEST STEPS:
-        /// 
+        /// 1. Activation process interruption
+        ///   1.1 Please enter the wholesaler value e.g <makro> and set it offline
+        ///   1.2 Verify that the when the application is online again it returns to the Verify User(OTP) Page
+        /// 2. No Server response
+        ///   1.1 If the appliaction is online and the allowable is selected and no action or record is returned
+        ///   1.2 Verify that the when the server is back-up
+        ///   1.2 Verify that the when the server is back-up
         /// TEST OUTPUT:
-        /// 
+        /// 1.
+        ///   1.1 An error message is displayed[ error: “O1-2-6 – You are not online. Please check your connectivity and try again”
+        ///   1.2  When the application is online again, it must return to the activation page
+        /// 2.
+        ///   1.1 An error message is displayed E1-3-1 – No response from server, please try again”.
+        ///   1.2 When the server is back up again, it must return to the activation pag 
         /// </summary>
         [Test, Description("SetupCatalogueLandingPageInterruptions"), Repeat(1)]
         public void SetupCatalogueLandingPageInterruptions()
@@ -516,9 +537,34 @@ namespace TestProj.Tests.Activation
 
         /// <summary>
         /// TEST STEPS:
-        /// 
+        /// 1. Search returning one or multiple results
+        ///   1.1 Enter the allowable wholesaler <Makro>  in search field which  give any results and verify the user interface
+        /// 2. Verify groupings arrows are expandable
+        ///   2.1 Select 0 - 25km arrow  and expand it
+        ///   2.2 Select 25 - 50km arrow and expand it
+        ///   2.3 Select  50 - 75km arrow and expand it
+        ///   2.4 Select  75 - 100km arrow and expand it
+        /// 3.  Select one store from each range
+        ///   3.1 Select 0 - 25km  and select one wholesaler under that range by checbox
+        ///   3.2 Select 25 - 50km  and select one wholesaler under that range by checbox
+        ///   3.3 Select 50 - 75km  and select one wholesaler under that range by checbox
+        ///   3.4  Select 75 - 100km  and select one wholesaler under that range by checbox
+        ///   3.5 Press the <update> button
         /// TEST OUTPUT:
-        /// 
+        /// 1.
+        ///   1.1 The wholesaler records which are found are displayed as catalogue – outlet name  on the screen, 
+        ///   with a location list sorted by group and grouped into groups on increments 25km
+        /// 2.
+        ///   2.1 The 0 - 25km is expanded and also displaying stores within that distance proximity
+        ///   2.2 The 25 - 50km is expanded and also displaying stores within that distance proximity
+        ///   2.3 The 50 - 75km is expanded and also displaying stores within that distance proximity
+        ///   2.4 The 75 - 100km is expanded and also displaying stores within that distance proximity
+        /// 3.
+        ///   3.1 The selected wholesaler is displayed with a checkbox next to it
+        ///   3.2  Select 25 - 50km  and select one wholesaler under that range by checbox
+        ///   3.3  Select 50 - 75km  and select one wholesaler under that range by checbox
+        ///   3.4  Select 50 - 75km  and select one wholesaler under that range by checbox
+        ///   3.5   The Application Landing Page is Displayed
         /// </summary>
         [Test, Description("SetupCatalogueSearchFieldReturningOneOrMultipleResults"), Repeat(1)]
         public void SetupCatalogueSearchFieldReturningOneOrMultipleResults()

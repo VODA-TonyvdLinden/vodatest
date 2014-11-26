@@ -62,3 +62,11 @@ C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\WebDriver.Support.xml
 C:\Users\kennedch\Documents\GitHub\vodatest\obj\Debug\TestProj.csprojResolveAssemblyReference.cache
 C:\Users\kennedch\Documents\GitHub\vodatest\obj\Debug\TestProj.dll
 C:\Users\kennedch\Documents\GitHub\vodatest\obj\Debug\TestProj.pdb
+C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\FluentAutomation.Core.dll
+C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\FluentAutomation.SeleniumWebDriver.dll
+C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\WebDriver.dll
+C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\WebDriver.Support.dll
+C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\WebDriver.xml
+C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\WebDriver.Support.xml
+C:\Users\bbdnet0518\Documents\GitHub\vodatest\obj\Debug\TestProj.csprojResolveAssemblyReference.cache
