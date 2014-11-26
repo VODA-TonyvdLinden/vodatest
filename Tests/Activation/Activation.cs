@@ -23,7 +23,7 @@ namespace TestProj.Tests.Activation
         FluentAutomation.ElementProxy activationNextButton;
         FluentAutomation.ElementProxy activationErrorMessage;
         FluentAutomation.ElementProxy otpNextButton;
-        FluentAutomation.ElementProxy otpBox;
+        FluentAutomation.ElementProxy otp;
         FluentAutomation.ElementProxy otpErrorMessage;
 
         [TestFixtureSetUp]
@@ -38,7 +38,7 @@ namespace TestProj.Tests.Activation
 
             container.RegisterType<Interfaces.IActivationActions, Tests.Activation.ActivationActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
             getActivationControls(browserInstance, out msisdn, out username, out activationNumber, out userAlias, out challengeAnswer, out activationNextButton, out activationErrorMessage);
-            getOTPControls(browserInstance, out otpBox, out otpNextButton, out otpErrorMessage);
+            getOTPControls(browserInstance, out otp, out otpNextButton, out otpErrorMessage);
 
         }
 
@@ -64,9 +64,9 @@ namespace TestProj.Tests.Activation
             errorMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
 
         }
-        private void getOTPControls(Classes.Browser browserInstance, out FluentAutomation.ElementProxy otpBox, out FluentAutomation.ElementProxy otpNextButton, out FluentAutomation.ElementProxy otpErrorMessage)
+        private void getOTPControls(Classes.Browser browserInstance, out FluentAutomation.ElementProxy otp, out FluentAutomation.ElementProxy otpNextButton, out FluentAutomation.ElementProxy otpErrorMessage)
         {
-            otpBox = browserInstance.Instance.Find("#otp");
+            otp = browserInstance.Instance.Find("#otp");
             otpNextButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(4) > div > div > input.btn.btn-large.nextBtn.pull-right.purpleButton.ng-scope.ng-binding");
             otpErrorMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
         }
@@ -410,8 +410,13 @@ namespace TestProj.Tests.Activation
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
 
+            Classes.LogWriter.Instance.Log("TESTCASE:CorrectOneTimePinAndApplicationOffline -> Incomplete test case -> Must check if application is offline", Classes.LogWriter.eLogType.Error);
+            //Check if application is offline
+            var onlineOfflineIndicator = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div > div");
+            browserInstance.Instance.Assert.Class("offline").On(onlineOfflineIndicator);
+
             // 1. Please enter <OTP number>  that has been sent to your msisdn
-            activationAction.EnterAndVerifyOTPValue(browserInstance, Classes.TestData.Instance.DefaultData.ActivationData.OTP);
+            activationAction.EnterAndVerifyOTPValue(browserInstance, otp, Classes.TestData.Instance.DefaultData.ActivationData.OTP);
 
             // 2. Press the <next>  button
             activationAction.ClickNext(browserInstance, otpNextButton);
@@ -444,7 +449,7 @@ namespace TestProj.Tests.Activation
         ///   2.1 The one time pin entered is displayed  the one time pin filed
         ///   2.2 An error message is displayed[ error: “O1-2-8 – Passwords do not match. Please try again”
         /// </summary>
-        [Test, Description("_08_IncorrectOneTimePin"),Category("Verify_user(OTP)"), Repeat(1)]
+        [Test, Description("_08_IncorrectOneTimePin"), Category("Verify_user(OTP)"), Repeat(1)]
         public void _08_IncorrectOneTimePin()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
@@ -453,7 +458,7 @@ namespace TestProj.Tests.Activation
             /// 1. Enter Invalid OTP
             ///   1.1 Please enter <Invalid OTP>
             /// 1. Please enter <OTP number>  that has been sent to your msisdn
-            activationAction.EnterAndVerifyOTPValue(browserInstance, Classes.TestData.Instance.DefaultData.ActivationData.InvalidOTP);
+            activationAction.EnterAndVerifyOTPValue(browserInstance, otp, Classes.TestData.Instance.DefaultData.ActivationData.InvalidOTP);
 
             ///   1.2 An error message is displayed[ error: “O1-2-8 – Passwords do not match. Please try again”
             browserInstance.Instance.Assert.True(() => otpErrorMessage.Element.Text == "O1-2-8 – Passwords do not match. Please try again");
@@ -465,7 +470,7 @@ namespace TestProj.Tests.Activation
 
             /// 2. Expired OTP
             ///   2.1 Plese enter <Expired OTP>
-            activationAction.EnterAndVerifyOTPValue(browserInstance, Classes.TestData.Instance.DefaultData.ActivationData.ExpiredOPT);
+            activationAction.EnterAndVerifyOTPValue(browserInstance, otp, Classes.TestData.Instance.DefaultData.ActivationData.ExpiredOPT);
 
             ///   2.2 An error message is displayed[ error: “O1-2-8 – Passwords do not match. Please try again”
             browserInstance.Instance.Assert.True(() => otpErrorMessage.Element.Text == "O1-2-8 – Passwords do not match. Please try again");
@@ -589,7 +594,7 @@ namespace TestProj.Tests.Activation
         ///     1.8 An error message is displayed"
         ///     1.9 An error message is displayed"
         /// </summary>
-        [Test, Description("_12_SetupCatalogueValidations"),Category("Setup_Catalogue"), Repeat(1)]
+        [Test, Description("_12_SetupCatalogueValidations"), Category("Setup_Catalogue"), Repeat(1)]
         public void _12_SetupCatalogueValidations()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
@@ -612,7 +617,7 @@ namespace TestProj.Tests.Activation
         /// 1.1 The geo location service is on and the user device can be located.This location is sent to 
         /// MAS to determine the list of wholesalers that the user has close proximity to.
         /// </summary>
-        [Test, Description("_13_SetupCatalogueOnDeviceGEOLocationService"),Category("Setup_Catalogue"), Repeat(1)]
+        [Test, Description("_13_SetupCatalogueOnDeviceGEOLocationService"), Category("Setup_Catalogue"), Repeat(1)]
         public void _13_SetupCatalogueOnDeviceGEOLocationService()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
@@ -632,7 +637,7 @@ namespace TestProj.Tests.Activation
         /// TEST OUTPUT:
         /// 1.1 An Error message should be displayed in the search field " results not found"
         /// </summary>
-        [Test, Description("_14_SetupCatalogueSearchFieldReturningNoResults"),Category("Setup_Catalogue"), Repeat(1)]
+        [Test, Description("_14_SetupCatalogueSearchFieldReturningNoResults"), Category("Setup_Catalogue"), Repeat(1)]
         public void _14_SetupCatalogueSearchFieldReturningNoResults()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
@@ -686,7 +691,7 @@ namespace TestProj.Tests.Activation
         ///   1.1 An error message is displayed E1-3-1 – No response from server, please try again”.
         ///   1.2 When the server is back up again, it must return to the activation pag 
         /// </summary>
-        [Test, Description("_16_SetupCatalogueLandingPageInterruptions"),Category("Setup_Catalogue"), Repeat(1)]
+        [Test, Description("_16_SetupCatalogueLandingPageInterruptions"), Category("Setup_Catalogue"), Repeat(1)]
         public void _16_SetupCatalogueLandingPageInterruptions()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
@@ -730,7 +735,7 @@ namespace TestProj.Tests.Activation
         ///   3.4  Select 50 - 75km  and select one wholesaler under that range by checbox
         ///   3.5   The Application Landing Page is Displayed
         /// </summary>
-        [Test, Description("_17_SetupCatalogueSearchFieldReturningOneOrMultipleResults"),Category("Setup_Catalogue"), Repeat(1)]
+        [Test, Description("_17_SetupCatalogueSearchFieldReturningOneOrMultipleResults"), Category("Setup_Catalogue"), Repeat(1)]
         public void _17_SetupCatalogueSearchFieldReturningOneOrMultipleResults()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));

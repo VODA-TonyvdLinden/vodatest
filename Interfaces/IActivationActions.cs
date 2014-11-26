@@ -28,7 +28,7 @@ namespace TestProj.Interfaces
         void ValidateOTPStart(Classes.Browser browserInstance, string msisdnNo);
         void VerifyOTPErrorMessage(Classes.Browser browserInstance, string msisdnNo);
         void VerifyOntTimeLable(Classes.Browser browserInstance);
-        void EnterAndVerifyOTPValue(Classes.Browser browserInstance, string otpVal);
+        void EnterAndVerifyOTPValue(Classes.Browser browserInstance, FluentAutomation.ElementProxy otp, string otpVal);
 
     }
 

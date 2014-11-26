@@ -297,10 +297,10 @@ namespace TestProj.Tests.Activation
             Classes.LogWriter.Instance.Log("TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!", Classes.LogWriter.eLogType.Error);
         }
 
-        public void EnterAndVerifyOTPValue(Classes.Browser browserInstance, string otpVal)
+        public void EnterAndVerifyOTPValue(Classes.Browser browserInstance, FluentAutomation.ElementProxy otp, string otpVal)
         {
             // 1. Please enter <OTP number>  that has been sent to your msisdn
-            var otp = browserInstance.Instance.Find("#otp");
+            //var otp = browserInstance.Instance.Find("#otp");
 
             browserInstance.Instance.Enter(otpVal).In(otp);
            
