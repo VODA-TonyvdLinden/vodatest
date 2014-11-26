@@ -378,7 +378,7 @@ namespace TestProj.Tests.Activation
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
 
             // 1. Please enter <OTP number>  that has been sent to your msisdn
-            activationAction.EnterAndVerifyOTPValue(browserInstance,false);
+            activationAction.EnterAndVerifyOTPValue(browserInstance, Classes.TestData.Instance.DefaultData.ActivationData.OTP);
 
             // 2. Press the <next>  button
             activationAction.ClickNext(browserInstance, otpNextButton);
@@ -414,7 +414,8 @@ namespace TestProj.Tests.Activation
             /// 1. Enter Invalid OTP
             ///   1.1 Please enter <Invalid OTP>
             /// 1. Please enter <OTP number>  that has been sent to your msisdn
-            activationAction.EnterAndVerifyOTPValue(browserInstance,true);
+            //activationAction.EnterAndVerifyOTPValue(browserInstance, Classes.TestData.Instance.DefaultData.ActivationData.OTP);
+            activationAction.EnterAndVerifyOTPValue(browserInstance, "Inv1234");
 
             ///   1.2 An error message is displayed[ error: “O1-2-8 – Passwords do not match. Please try again”
             Classes.LogWriter.Instance.Log("Invalid OTP test: error: “O1-2-8 – Passwords do not match. Please try again --> Cannot test an invalid OTP number. Waiting for the new release of the browser app", Classes.LogWriter.eLogType.Error);
@@ -424,7 +425,8 @@ namespace TestProj.Tests.Activation
 
             /// 2. Expired OTP
             ///   2.1 Plese enter <Expired OTP>
-            activationAction.EnterAndVerifyOTPValue(browserInstance,false);
+            //activationAction.EnterAndVerifyOTPValue(browserInstance, Classes.TestData.Instance.DefaultData.ActivationData.OTP);
+            activationAction.EnterAndVerifyOTPValue(browserInstance, "Exp1234");
 
             ///   2.2 An error message is displayed[ error: “O1-2-8 – Passwords do not match. Please try again”
             Classes.LogWriter.Instance.Log("Expired OTP test: error: “O1-2-8 – Passwords do not match. Please try again --> Cannot test an invalid OTP number. Waiting for the new release of the browser app", Classes.LogWriter.eLogType.Error);
