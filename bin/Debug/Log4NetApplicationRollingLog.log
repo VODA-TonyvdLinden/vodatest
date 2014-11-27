@@ -1179,3 +1179,4 @@
 2014-11-27 15:28:47,499 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _12_SetupCatalogueValidations -> 1.8 (MAX LIMIT) -> Cannot test max limit as there ae no max limit set on the element 
 2014-11-27 15:28:47,658 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _12_SetupCatalogueValidations -> 1.9 (SPACES BEFORE AND AFTER) -> No error message found on page 
 2014-11-27 15:28:47,660 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestCatalogueSeachValidation executed in 3 seconds
+2014-11-27 15:32:41,309 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestCatalogueSeachValidation executed in 6 seconds

@@ -32,7 +32,7 @@ namespace TestProj.Interfaces
         void VerifyCatalogueLandingPage(Classes.Browser browserInstance);
         void SearchInput(Classes.Browser browserInstance, FluentAutomation.ElementProxy search, string input);
         void ClickSearchButton(Classes.Browser browserInstance, FluentAutomation.ElementProxy mcatSearchButton);
-        void TestCatalogueSeachValidation(Classes.Browser browserInstance, FluentAutomation.ElementProxy searchValue, FluentAutomation.ElementProxy mcatSearchButton);
+        void TestCatalogueSeachValidation(Classes.Browser browserInstance, FluentAutomation.ElementProxy searchValue, FluentAutomation.ElementProxy mcatSearchButton, FluentAutomation.ElementProxy mcatErrorMessage);
     }
 
 }

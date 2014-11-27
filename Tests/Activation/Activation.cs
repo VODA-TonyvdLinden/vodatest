@@ -668,7 +668,7 @@ namespace TestProj.Tests.Activation
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
 
             /// 1. Search Field Validation
-            activationAction.TestCatalogueSeachValidation(browserInstance,mcatSearch,mcatSearchButton);
+            activationAction.TestCatalogueSeachValidation(browserInstance, mcatSearch, mcatSearchButton, mcatErrorMessage);
 
 
         }

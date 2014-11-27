@@ -338,13 +338,13 @@ namespace TestProj.Tests.Activation
             browserInstance.Instance.Click(mcatSearchButton);
         }
 
-        public void TestCatalogueSeachValidation(Classes.Browser browserInstance, FluentAutomation.ElementProxy searchValue, FluentAutomation.ElementProxy mcatSearchButton)
+        public void TestCatalogueSeachValidation(Classes.Browser browserInstance, FluentAutomation.ElementProxy searchValue, FluentAutomation.ElementProxy mcatSearchButton, FluentAutomation.ElementProxy mcatErrorMessage)
         {
             ///  1. Search Field Validation
             ///     1.1 Without entering anything click on search button.
             ClickSearchButton(browserInstance, mcatSearchButton);
             ///     1.1 An error message is displayed: “E1-1-7 – Please complete all fields”. all fields must either be highlited in red or displayed on the screen
-            //browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "E1-1-7 – Please complete all fields. all fields must either be highlited in red or displayed on the screen");
+            browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "E1-1-7 – Please complete all fields. all fields must either be highlited in red or displayed on the screen");
             Classes.LogWriter.Instance.Log("TESTCASE: _12_SetupCatalogueValidations -> 1.1 (NO VALUE) -> Cannot test the error message -> E1-1-7 – Please complete all fields", Classes.LogWriter.eLogType.Error);
 
             ///     1.2 Click in the search field and press Enter key.
@@ -352,26 +352,31 @@ namespace TestProj.Tests.Activation
             ///     1.3 Enter any  one character and click on search button/press Enter key .
             SearchInput(browserInstance, searchValue, "x");
             ClickSearchButton(browserInstance, mcatSearchButton);
+            //browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "??");
             Classes.LogWriter.Instance.Log("TESTCASE: _12_SetupCatalogueValidations -> 1.3 (ONE CHAR) -> No error message found on page ", Classes.LogWriter.eLogType.Error);
             
             ///     1.4 Enter only special characters and click on Search button.
             SearchInput(browserInstance, searchValue, "%$#@");
             ClickSearchButton(browserInstance, mcatSearchButton);
+            //browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "??");
             Classes.LogWriter.Instance.Log("TESTCASE: _12_SetupCatalogueValidations -> 1.4 (SPECIAL CHARS) -> No error message found on page ", Classes.LogWriter.eLogType.Error);
             
             ///     1.5 Enter  only numbers and click on search button
             SearchInput(browserInstance, searchValue, "1234567");
             ClickSearchButton(browserInstance, mcatSearchButton);
+            //browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "??");
             Classes.LogWriter.Instance.Log("TESTCASE: _12_SetupCatalogueValidations -> 1.5 (ONLY NUMBERS) -> No error message found on page ", Classes.LogWriter.eLogType.Error);
             
             ///     1.6 Enter alphanumeric characters and click on search button
             SearchInput(browserInstance, searchValue, "1Te2st");
             ClickSearchButton(browserInstance, mcatSearchButton);
+            //browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "??");
             Classes.LogWriter.Instance.Log("TESTCASE: _12_SetupCatalogueValidations -> 1.6 (APLHA CHARS) -> No error message found on page ", Classes.LogWriter.eLogType.Error);
             
             ///     1.7 Enter  alphanumeric characters and special characters and click on search button.
             SearchInput(browserInstance, searchValue, "1Te2st!@#");
             ClickSearchButton(browserInstance, mcatSearchButton);
+            //browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "??");
             Classes.LogWriter.Instance.Log("TESTCASE: _12_SetupCatalogueValidations -> 1.7 (APLHA + SPECIAL CHARS) -> No error message found on page ", Classes.LogWriter.eLogType.Error);
             
             ///     1.8 Enter string more than the max char limit of the field.
@@ -382,6 +387,7 @@ namespace TestProj.Tests.Activation
             ///     1.9 Enter string with spaces(before string , after string  and in between) and verify the results.
             SearchInput(browserInstance, searchValue, " TEST WITH SPACES BEFORE AND AFTER ");
             ClickSearchButton(browserInstance, mcatSearchButton);
+            //browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "??");
             Classes.LogWriter.Instance.Log("TESTCASE: _12_SetupCatalogueValidations -> 1.9 (SPACES BEFORE AND AFTER) -> No error message found on page ", Classes.LogWriter.eLogType.Error);
         }
    }
