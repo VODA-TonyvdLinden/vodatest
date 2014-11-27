@@ -297,16 +297,16 @@ namespace TestProj.Tests.Activation
             Classes.LogWriter.Instance.Log("TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!", Classes.LogWriter.eLogType.Error);
         }
 
-        public void EnterAndVerifyOTPValue(Classes.Browser browserInstance, FluentAutomation.ElementProxy otp, string otpVal)
+        public void EnterAndVerifyOTPValue(Browser browserInstance, FluentAutomation.ElementProxy otp, string otpVal)
         {
             // 1. Please enter <OTP number>  that has been sent to your msisdn
-            //var otp = browserInstance.Instance.Find("#otp");
+            var varOtp = browserInstance.Instance.Find("#otp");
 
-            browserInstance.Instance.Enter(otpVal).In(otp);
-           
+            browserInstance.Instance.Enter(otpVal).In(varOtp);
+
             //The one time pin entered is displayed  the one time pin filed
             browserInstance.Instance.Assert.True(() => otp.Element.Text == otpVal);
-                        
+            
         }
     }
 }

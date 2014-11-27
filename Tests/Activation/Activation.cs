@@ -547,6 +547,18 @@ namespace TestProj.Tests.Activation
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
+
+            /// 1. Please enter the  <OTP number>  that has been sent to your msisdn
+            /// 1. The one time pin entered is displayed  the one time pin filed
+            activationAction.EnterAndVerifyOTPValue(browserInstance, otp, Classes.TestData.Instance.DefaultData.ActivationData.OTP);
+
+            /// 2. Press the <next>  button
+            activationAction.ClickNext(browserInstance, otpNextButton);
+            
+            /// 2. The application setup catalogue screen is displayed
+            browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-managecatalogue");
+
+            Classes.LogWriter.Instance.Log("TESTCASE: _10_CorrectOneTimePin -> Test case passed", Classes.LogWriter.eLogType.Info);
         }
 
         /// <summary>
