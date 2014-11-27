@@ -30,6 +30,9 @@ namespace TestProj.Interfaces
         void VerifyOntTimeLable(Classes.Browser browserInstance);
         void EnterAndVerifyOTPValue(Classes.Browser browserInstance, FluentAutomation.ElementProxy otp, string otpVal);
         void VerifyCatalogueLandingPage(Classes.Browser browserInstance);
+        void SearchInput(Classes.Browser browserInstance, FluentAutomation.ElementProxy search, string input);
+        void ClickSearchButton(Classes.Browser browserInstance, FluentAutomation.ElementProxy mcatSearchButton);
+        void TestCatalogueSeachValidation(Classes.Browser browserInstance, FluentAutomation.ElementProxy searchValue, FluentAutomation.ElementProxy mcatSearchButton);
     }
 
 }

@@ -26,6 +26,12 @@ namespace TestProj.Tests.Activation
         FluentAutomation.ElementProxy otp;
         FluentAutomation.ElementProxy optResendButton;
         FluentAutomation.ElementProxy otpErrorMessage;
+        FluentAutomation.ElementProxy mcatSearch;
+        FluentAutomation.ElementProxy mcatSearchButton;
+        FluentAutomation.ElementProxy mcatBackButton;
+        FluentAutomation.ElementProxy mcatNextButton;
+        FluentAutomation.ElementProxy mcatUpdateButton;
+        FluentAutomation.ElementProxy mcatErrorMessage;
 
         [TestFixtureSetUp]
         public void Initialise()
@@ -40,7 +46,7 @@ namespace TestProj.Tests.Activation
             container.RegisterType<Interfaces.IActivationActions, Tests.Activation.ActivationActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
             getActivationControls(browserInstance, out msisdn, out username, out activationNumber, out userAlias, out challengeAnswer, out activationNextButton, out activationErrorMessage);
             getOTPControls(browserInstance, out otp, out otpNextButton, out optResendButton, out otpErrorMessage);
-
+            getManageCatalogueControls(browserInstance, out mcatSearch, out mcatSearchButton, out mcatBackButton, out mcatNextButton, out mcatUpdateButton, out mcatErrorMessage);
         }
 
         [TestFixtureTearDown]
@@ -71,6 +77,16 @@ namespace TestProj.Tests.Activation
             otpNextButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(4) > div > div > input.btn.btn-large.nextBtn.pull-right.purpleButton.ng-scope.ng-binding");
             optResendButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(4) > div > div > input:nth-child(2)");
             otpErrorMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
+        }
+
+        private void getManageCatalogueControls(Classes.Browser browserInstance, out FluentAutomation.ElementProxy mcatSearch, out FluentAutomation.ElementProxy mcatSearchButton, out FluentAutomation.ElementProxy mcatBackButton, out FluentAutomation.ElementProxy mcatNextButton, out FluentAutomation.ElementProxy mcatUpdateButton, out FluentAutomation.ElementProxy mcatErrorMessage)
+        {
+            mcatSearch = browserInstance.Instance.Find("#msisdn");
+            mcatSearchButton = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > form:nth-child(2) > div > div.formRow.catalogsearch > button");
+            mcatBackButton = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > div > div.backBtnSection > button");
+            mcatNextButton = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > div > div.nextBtnSection > button");
+            mcatUpdateButton = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > form:nth-child(3) > div.formRow > button");
+            mcatErrorMessage = browserInstance.Instance.Find(""); ; // No error message outputting at the moment - still to be identified where on the page this is displayed
         }
 
         /// <summary>
@@ -648,8 +664,13 @@ namespace TestProj.Tests.Activation
         [Test, Description("_12_SetupCatalogueValidations"), Category("Setup_Catalogue"), Repeat(1)]
         public void _12_SetupCatalogueValidations()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-managecatalogue"));
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
+
+            /// 1. Search Field Validation
+            activationAction.TestCatalogueSeachValidation(browserInstance,mcatSearch,mcatSearchButton);
+
+
         }
 
         /// <summary>

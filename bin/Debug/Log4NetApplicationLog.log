@@ -1165,3 +1165,17 @@
 2014-11-27 12:46:19,306 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: _11_SetupCatalogueLandingPage -> The update button is displaying but by default disabled
 2014-11-27 12:46:19,307 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _11_SetupCatalogueLandingPage -> Cannot verify the button background colour and label text on the button
 2014-11-27 12:46:19,342 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyCatalogueLandingPage executed in 0 seconds
+2014-11-27 14:36:13,595 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickSearchButton executed in 1 seconds
+2014-11-27 14:37:27,511 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickSearchButton executed in 1 seconds
+2014-11-27 14:37:27,552 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: _12_SetupCatalogueValidations -> Cannot test the error message -> E1-1-7 – Please complete all fields
+2014-11-27 15:27:55,020 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestCatalogueSeachValidation executed in 6 seconds
+2014-11-27 15:28:46,885 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: _12_SetupCatalogueValidations -> 1.1 (NO VALUE) -> Cannot test the error message -> E1-1-7 – Please complete all fields
+2014-11-27 15:28:46,886 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: _12_SetupCatalogueValidations -> 1.2 -> Cannot simulate press enter key 
+2014-11-27 15:28:47,098 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: _12_SetupCatalogueValidations -> 1.3 (ONE CHAR) -> No error message found on page 
+2014-11-27 15:28:47,206 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: _12_SetupCatalogueValidations -> 1.4 (SPECIAL CHARS) -> No error message found on page 
+2014-11-27 15:28:47,301 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: _12_SetupCatalogueValidations -> 1.5 (ONLY NUMBERS) -> No error message found on page 
+2014-11-27 15:28:47,397 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: _12_SetupCatalogueValidations -> 1.6 (APLHA CHARS) -> No error message found on page 
+2014-11-27 15:28:47,499 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: _12_SetupCatalogueValidations -> 1.7 (APLHA + SPECIAL CHARS) -> No error message found on page 
+2014-11-27 15:28:47,499 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: _12_SetupCatalogueValidations -> 1.8 (MAX LIMIT) -> Cannot test max limit as there ae no max limit set on the element 
+2014-11-27 15:28:47,658 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: _12_SetupCatalogueValidations -> 1.9 (SPACES BEFORE AND AFTER) -> No error message found on page 
+2014-11-27 15:28:47,660 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestCatalogueSeachValidation executed in 3 seconds
