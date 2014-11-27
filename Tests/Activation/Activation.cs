@@ -694,6 +694,8 @@ namespace TestProj.Tests.Activation
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
+
+            Classes.LogWriter.Instance.Log("TESTCASE: _13_SetupCatalogueOnDeviceGEOLocationService -> Not able to test gps / device geo location service on browser app", Classes.LogWriter.eLogType.Info);
         }
 
         /// <summary>
