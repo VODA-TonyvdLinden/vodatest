@@ -1146,3 +1146,22 @@
 2014-11-27 10:36:39,779 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
 2014-11-27 10:36:39,866 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
 2014-11-27 10:36:39,987 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TESTCASE: _10_CorrectOneTimePin -> Test case passed
+2014-11-27 12:36:16,925 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyLogoAndBanner executed in 1 seconds
+2014-11-27 12:36:17,079 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 12:36:17,199 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 12:36:17,200 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TESTCASE: _11_SetupCatalogueLandingPage -> Cannot check spelling and grammer
+2014-11-27 12:36:17,225 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _11_SetupCatalogueLandingPage -> The update button is by default disabled
+2014-11-27 12:36:17,225 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TESTCASE: _11_SetupCatalogueLandingPage -> Cannot verify the button background colour and label text on the button
+2014-11-27 12:38:27,792 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 12:38:27,872 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 12:38:27,945 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 12:38:27,945 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TESTCASE: _11_SetupCatalogueLandingPage -> Cannot check spelling and grammer
+2014-11-27 12:38:29,584 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _11_SetupCatalogueLandingPage -> The update button is by default disabled
+2014-11-27 12:38:29,584 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TESTCASE: _11_SetupCatalogueLandingPage -> Cannot verify the button background colour and label text on the button
+2014-11-27 12:46:19,033 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 12:46:19,116 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 12:46:19,194 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 12:46:19,195 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TESTCASE: _11_SetupCatalogueLandingPage -> Cannot check spelling and grammer
+2014-11-27 12:46:19,306 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _11_SetupCatalogueLandingPage -> The update button is displaying but by default disabled
+2014-11-27 12:46:19,307 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TESTCASE: _11_SetupCatalogueLandingPage -> Cannot verify the button background colour and label text on the button
+2014-11-27 12:46:19,342 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyCatalogueLandingPage executed in 0 seconds
