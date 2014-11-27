@@ -1128,3 +1128,12 @@
 2014-11-26 22:47:35,152 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOTPErrorMessage executed in 5 seconds
 2014-11-26 22:47:35,234 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:CorrectOneTimePinAndApplicationOffline -> Incomplete test case -> Must check if application is offline
 2014-11-26 22:47:40,842 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 09:27:26,287 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 09:27:26,330 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: _09_ResendOneTimePin -> OTP NOT RECEIVED -> One Time Pin message cannot be tested as it is not displayed after the Resend Button is clicked
+2014-11-27 09:27:26,362 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 09:27:26,363 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: _09_ResendOneTimePin -> OTP NOT DELETE/LOST -> One Time Pin message cannot be tested as it is not displayed after the Resend Button is clicked
+2014-11-27 09:34:04,071 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 120 seconds
+2014-11-27 09:37:15,988 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 09:37:21,158 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOTPErrorMessage executed in 5 seconds
+2014-11-27 09:43:16,458 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 09:43:21,656 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOTPErrorMessage executed in 5 seconds

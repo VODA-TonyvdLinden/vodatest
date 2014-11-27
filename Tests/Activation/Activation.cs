@@ -24,6 +24,7 @@ namespace TestProj.Tests.Activation
         FluentAutomation.ElementProxy activationErrorMessage;
         FluentAutomation.ElementProxy otpNextButton;
         FluentAutomation.ElementProxy otp;
+        FluentAutomation.ElementProxy optResendButton;
         FluentAutomation.ElementProxy otpErrorMessage;
 
         [TestFixtureSetUp]
@@ -38,7 +39,7 @@ namespace TestProj.Tests.Activation
 
             container.RegisterType<Interfaces.IActivationActions, Tests.Activation.ActivationActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
             getActivationControls(browserInstance, out msisdn, out username, out activationNumber, out userAlias, out challengeAnswer, out activationNextButton, out activationErrorMessage);
-            getOTPControls(browserInstance, out otp, out otpNextButton, out otpErrorMessage);
+            getOTPControls(browserInstance, out otp, out otpNextButton, out optResendButton, out otpErrorMessage);
 
         }
 
@@ -64,10 +65,11 @@ namespace TestProj.Tests.Activation
             errorMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
 
         }
-        private void getOTPControls(Classes.Browser browserInstance, out FluentAutomation.ElementProxy otp, out FluentAutomation.ElementProxy otpNextButton, out FluentAutomation.ElementProxy otpErrorMessage)
+        private void getOTPControls(Classes.Browser browserInstance, out FluentAutomation.ElementProxy otp, out FluentAutomation.ElementProxy otpNextButton, out FluentAutomation.ElementProxy optResendButton, out FluentAutomation.ElementProxy otpErrorMessage)
         {
             otp = browserInstance.Instance.Find("#otp");
             otpNextButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(4) > div > div > input.btn.btn-large.nextBtn.pull-right.purpleButton.ng-scope.ng-binding");
+            optResendButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(4) > div > div > input:nth-child(2)");
             otpErrorMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
         }
 
@@ -505,6 +507,25 @@ namespace TestProj.Tests.Activation
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
+
+            /// 1. OTP not received
+            ///   1.1 Press the <Resent OTP> button
+            activationAction.ClickNext(browserInstance, optResendButton);
+
+            ///   1.1 The One time pin is sent on the msisdn and  a message is displayed as 
+            ///   " A One Time Pin has been sent to 0*****1234. Please enter the One time Pin here to continue"
+            activationAction.VerifyOTPErrorMessage(browserInstance, Classes.TestData.Instance.DefaultData.ActivationData.MSISDN);
+            Classes.LogWriter.Instance.Log("TESTCASE: _09_ResendOneTimePin -> OTP NOT RECEIVED -> One Time Pin message cannot be tested as it is not displayed after the Resend Button is clicked", Classes.LogWriter.eLogType.Error);
+            
+
+            /// 2. OTP deleted or lost
+            ///   2.1 Press the <Resent OTP> button
+            activationAction.ClickNext(browserInstance, optResendButton);
+
+            ///   2.1  The One time pin is sent on the msisdn and  a message is displayed as 
+            ///   " A One Time Pin has been sent to 0*****1234. Please enter the One time Pin here to continue" 
+            activationAction.VerifyOTPErrorMessage(browserInstance, Classes.TestData.Instance.DefaultData.ActivationData.MSISDN);
+            Classes.LogWriter.Instance.Log("TESTCASE: _09_ResendOneTimePin -> OTP NOT DELETE/LOST -> One Time Pin message cannot be tested as it is not displayed after the Resend Button is clicked", Classes.LogWriter.eLogType.Error);
         }
 
         /// <summary>
