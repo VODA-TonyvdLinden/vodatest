@@ -1137,3 +1137,75 @@
 2014-11-27 09:37:21,158 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOTPErrorMessage executed in 5 seconds
 2014-11-27 09:43:16,458 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
 2014-11-27 09:43:21,656 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOTPErrorMessage executed in 5 seconds
+2014-11-27 11:25:44,215 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 5 seconds
+2014-11-27 11:26:26,273 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 5 seconds
+2014-11-27 11:27:11,582 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 5 seconds
+2014-11-27 12:21:26,741 [TestRunnerThread] FATAL TestProj.Classes.LogWriter - System.Func`1[FluentAutomation.ElementProxy]
+2014-11-27 12:21:26,788 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 1 seconds
+2014-11-27 12:22:27,329 [TestRunnerThread] FATAL TestProj.Classes.LogWriter - System.Func`1[FluentAutomation.ElementProxy]
+2014-11-27 12:22:27,374 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 12:43:59,088 [TestRunnerThread] FATAL TestProj.Classes.LogWriter - (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2014-11-27 12:43:59,133 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 1 seconds
+2014-11-27 12:44:41,367 [TestRunnerThread] FATAL TestProj.Classes.LogWriter - System.Tuple`2[FluentAutomation.Interfaces.ICommandProvider,System.Func`1[FluentAutomation.Interfaces.IElement]]
+2014-11-27 12:44:41,415 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 1 seconds
+2014-11-27 12:46:43,756 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 1 seconds
+2014-11-27 12:48:51,946 [TestRunnerThread] FATAL TestProj.Classes.LogWriter - try
+2014-11-27 12:48:52,201 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 1 seconds
+2014-11-27 12:51:01,474 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 12:51:01,624 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 12:51:01,724 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 12:51:01,839 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 12:51:01,840 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST
+2014-11-27 12:51:02,020 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 12:51:02,343 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
+2014-11-27 12:51:07,476 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ValidateOTPStart executed in 5 seconds
+2014-11-27 12:53:28,799 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 12:53:28,953 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 12:53:29,055 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 12:53:29,170 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 12:53:29,171 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST
+2014-11-27 12:53:29,349 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 12:53:29,489 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ValidateOTPStart executed in 0 seconds
+2014-11-27 12:53:36,534 [TestRunnerThread] FATAL TestProj.Classes.LogWriter - try
+2014-11-27 12:53:36,598 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 12:54:55,223 [TestRunnerThread] FATAL TestProj.Classes.LogWriter - try
+2014-11-27 12:54:55,484 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 1 seconds
+2014-11-27 13:02:18,035 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:02:18,189 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:02:18,290 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:02:18,420 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:02:18,572 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:02:18,586 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:03:09,784 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:03:09,939 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:03:10,038 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:03:10,153 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:03:10,334 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:03:10,347 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:04:08,939 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:04:09,101 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:04:09,206 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:04:09,325 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:04:09,506 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:04:09,539 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:05:13,992 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:05:14,144 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:05:14,242 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:05:14,356 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:05:14,535 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:05:14,570 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:06:05,823 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:06:05,976 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:06:06,076 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:06:06,191 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:06:06,378 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:06:08,823 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:06:52,554 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:06:52,708 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:06:52,806 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:06:52,937 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:06:53,088 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:06:55,292 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:06:55,325 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:06:55,353 [TestRunnerThread] FATAL TestProj.Classes.LogWriter - try
+2014-11-27 13:06:55,378 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds

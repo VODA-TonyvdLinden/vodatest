@@ -104,6 +104,7 @@
     <Compile Include="Classes\ScreenCapture.cs" />
     <Compile Include="Classes\ScreenshotRequirements\ScreenshotRequirement.cs" />
     <Compile Include="Classes\ScreenshotRequirements\ScreenshotRequirements.cs" />
+    <Compile Include="Classes\TestDataClasses\Spaza.cs" />
     <Compile Include="Classes\TestDataClasses\Activation.cs" />
     <Compile Include="Classes\TestDataClasses\BuildDefaultData.cs" />
     <Compile Include="Classes\TestDataClasses\Defaults.cs" />

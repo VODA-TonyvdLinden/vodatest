@@ -5,7 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using TestProj.Classes;
 
 namespace TestProj.Tests.AccessingApplication
 {
@@ -14,6 +16,18 @@ namespace TestProj.Tests.AccessingApplication
     {
         Classes.Browser browserInstance;
         IUnityContainer container = new UnityContainer();
+
+        FluentAutomation.ElementProxy msisdn;
+        FluentAutomation.ElementProxy username;
+        FluentAutomation.ElementProxy activationNumber;
+        FluentAutomation.ElementProxy userAlias;
+        FluentAutomation.ElementProxy challengeAnswer;
+        FluentAutomation.ElementProxy activationNextButton;
+        FluentAutomation.ElementProxy activationErrorMessage;
+        FluentAutomation.ElementProxy otpNextButton;
+        FluentAutomation.ElementProxy otp;
+        FluentAutomation.ElementProxy optResendButton;
+        FluentAutomation.ElementProxy otpErrorMessage;
 
         [TestFixtureSetUp]
         public void Initialise()
@@ -26,6 +40,7 @@ namespace TestProj.Tests.AccessingApplication
             container.AddNewExtension<Interception>();
 
             container.RegisterType<Interfaces.IAccessingApplicationActions, Tests.AccessingApplication.AccessingApplicationActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
+            container.RegisterType<Interfaces.IActivationActions, Tests.Activation.ActivationActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
 
         }
 
@@ -35,6 +50,57 @@ namespace TestProj.Tests.AccessingApplication
             browserInstance.Instance.Dispose();
             container.RemoveAllExtensions();
             container.Dispose();
+        }
+
+        void activate(Classes.Browser browserInstance)
+        {
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
+            Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
+
+            getActivationControls(browserInstance, out msisdn, out username, out activationNumber, out userAlias, out challengeAnswer, out activationNextButton, out activationErrorMessage);
+
+
+            activationAction.MSISDNInput(browserInstance, msisdn, TestData.Instance.DefaultData.ActivationData.MSISDN);
+            activationAction.UsernameInput(browserInstance, username, TestData.Instance.DefaultData.ActivationData.Username);
+            activationAction.ActivationKeyInput(browserInstance, activationNumber, TestData.Instance.DefaultData.ActivationData.ActivationKey);
+            activationAction.AliasInput(browserInstance, userAlias, TestData.Instance.DefaultData.ActivationData.Alias);
+            browserInstance.Instance.Enter("NOT REQUIRED").In(challengeAnswer);
+            activationAction.ClickNext(browserInstance, activationNextButton);
+
+
+            Thread.Sleep(2000);
+            //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
+
+            //otp = browserInstance.Instance.Find("#otp");
+
+            getOTPControls(browserInstance, out otp, out otpNextButton, out optResendButton, out otpErrorMessage);
+
+            activationAction.EnterAndVerifyOTPValue(browserInstance, otp, Classes.TestData.Instance.DefaultData.ActivationData.OTP);
+            activationAction.ClickNext(browserInstance, otpNextButton);
+
+
+        }
+
+        private void getActivationControls(Classes.Browser browserInstance, out FluentAutomation.ElementProxy msisdn, out FluentAutomation.ElementProxy username, out FluentAutomation.ElementProxy activationNumber, out FluentAutomation.ElementProxy userAlias, out FluentAutomation.ElementProxy challengeAnswer, out FluentAutomation.ElementProxy activationNextButton, out FluentAutomation.ElementProxy errorMessage)
+        {
+            msisdn = browserInstance.Instance.Find("#msisdn");
+            username = browserInstance.Instance.Find("#username");
+            activationNumber = browserInstance.Instance.Find("#activationNumber");
+            userAlias = browserInstance.Instance.Find("#userAlias");
+            //FIELD CANNOT BE REQUIRED -> IT IS A DROP DOWN
+            //var challengeQuestion = browserInstance.Instance.Find("challengeQuestion");
+            challengeAnswer = browserInstance.Instance.Find("#challengeAnswer");
+
+            activationNextButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(8) > div > input");
+            errorMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
+
+        }
+        private void getOTPControls(Classes.Browser browserInstance, out FluentAutomation.ElementProxy otp, out FluentAutomation.ElementProxy otpNextButton, out FluentAutomation.ElementProxy optResendButton, out FluentAutomation.ElementProxy otpErrorMessage)
+        {
+            otp = browserInstance.Instance.Find("#otp");
+            otpNextButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(4) > div > div > input.btn.btn-large.nextBtn.pull-right.purpleButton.ng-scope.ng-binding");
+            optResendButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(4) > div > div > input:nth-child(2)");
+            otpErrorMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
         }
 
         /// <summary>
@@ -85,9 +151,39 @@ namespace TestProj.Tests.AccessingApplication
         [Test, Description("_01_ActivationLandingPage"), Category("Accessing app"), Repeat(1)]
         public void _01_ActivationLandingPage()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
+            //may have to do the whole registration portion here, including clearing the cache
+
+            activate(browserInstance);
+
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
             Interfaces.IAccessingApplicationActions accessingApplicationAction = container.Resolve<Interfaces.IAccessingApplicationActions>();
-            //TODO
+
+            // 1. Verify that the vodacom logo and the red banner are displayed on the activation screen
+//            accessingApplicationAction.VerifyLogoAndBanner(browserInstance);
+            // 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
+//            accessingApplicationAction.VerifyOnlineIndicator(browserInstance);
+            // 3. Verify that contact us and help me hyperlinks are displayed
+//            accessingApplicationAction.VerifyPageLinks(browserInstance);
+            // 4. See spelling, grammar and alignment
+//            LogWriter.Instance.Log("TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer", LogWriter.eLogType.Info);
+            // 5. Verify that the preferred alias name is displayed on top right hand corner of the app with 
+//            accessingApplicationAction.VerifyPreferedAlias(browserInstance);
+            // the spaza owner's alias name and spaza name
+//            accessingApplicationAction.VerifySpazaName(browserInstance);
+            // 6. Verify that the user is served with specials on special block
+            accessingApplicationAction.VerifySpecialsExists(browserInstance);
+            // 7. Verify that the marbil add is displayed
+//            accessingApplicationAction.VerifyMarbilExists(browserInstance);
+            // 8. Verify that the sub application are displayed and also greyed out
+
+            // 9. Verify that the catalogue , basket, orders and favourites blocks are displayed
+            // 10. Verify that the Alert Notification and label are displayed
+            // 11. Verify that the basket total value field is displayed
+            // 12. Verify that the basket label is displayed
+            // 13. Verify that the basket total amount of items field is displayed
+            // 14. Verify that the search field is displayed on the top right hand corner of the screen
+            // 15. Verify the text in the search field, it states that i am looking for
+            // 16. Verify that the search text field is editable
         }
 
         /// <summary>
