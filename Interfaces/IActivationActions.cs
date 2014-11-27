@@ -29,7 +29,7 @@ namespace TestProj.Interfaces
         void VerifyOTPErrorMessage(Classes.Browser browserInstance, string msisdnNo);
         void VerifyOntTimeLable(Classes.Browser browserInstance);
         void EnterAndVerifyOTPValue(Classes.Browser browserInstance, FluentAutomation.ElementProxy otp, string otpVal);
-
+        void VerifyCatalogueLandingPage(Classes.Browser browserInstance);
     }
 
 }

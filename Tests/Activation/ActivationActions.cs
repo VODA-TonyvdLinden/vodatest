@@ -297,16 +297,36 @@ namespace TestProj.Tests.Activation
             Classes.LogWriter.Instance.Log("TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!", Classes.LogWriter.eLogType.Error);
         }
 
-        public void EnterAndVerifyOTPValue(Classes.Browser browserInstance, FluentAutomation.ElementProxy otp, string otpVal)
+        public void EnterAndVerifyOTPValue(Browser browserInstance, FluentAutomation.ElementProxy otp, string otpVal)
         {
             // 1. Please enter <OTP number>  that has been sent to your msisdn
-            //var otp = browserInstance.Instance.Find("#otp");
+            var varOtp = browserInstance.Instance.Find("#otp");
 
-            browserInstance.Instance.Enter(otpVal).In(otp);
-           
+            browserInstance.Instance.Enter(otpVal).In(varOtp);
+
             //The one time pin entered is displayed  the one time pin filed
             browserInstance.Instance.Assert.True(() => otp.Element.Text == otpVal);
-                        
+            
         }
-    }
+
+        public void VerifyCatalogueLandingPage(Classes.Browser browserInstance)
+        {
+            /// 5. Verify that the update button is displayed and enabled
+            var updateButton = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > form:nth-child(3) > div.formRow > button");
+            browserInstance.Instance.Assert.True(() => updateButton.Element.Attributes.Get("disabled") != "disabled");
+            Classes.LogWriter.Instance.Log("TESTCASE: _11_SetupCatalogueLandingPage -> The update button is displaying but by default disabled", Classes.LogWriter.eLogType.Error);
+            /// 6. Verify that the colour of the update button is purple
+            /// 7. Verify that text label on the update  button is white
+            Classes.LogWriter.Instance.Log("TESTCASE: _11_SetupCatalogueLandingPage -> Cannot verify the button background colour and label text on the button", Classes.LogWriter.eLogType.Info);
+            /// 8. Verify that Manage Catalogue Label is displayed
+            browserInstance.Instance.Assert.Exists("#alertsView > div.subtitle > ul.alerts > li");
+            /// 9. Verify that the select wholesaler a label is is displayed
+            browserInstance.Instance.Assert.Exists("#alertsView > div.leftBlock.managecatalogue.width862px > form:nth-child(2) > div > div:nth-child(1)");
+            /// 10. Search functionality field is displayed with a search icon/button
+            browserInstance.Instance.Assert.Exists("#msisdn"); // This is correct. I think they did not rename the text field approprietly
+            browserInstance.Instance.Assert.Exists("#alertsView > div.leftBlock.managecatalogue.width862px > form:nth-child(2) > div > div.formRow.catalogsearch > button");
+        }
+
+
+   }
 }

@@ -547,6 +547,18 @@ namespace TestProj.Tests.Activation
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
+
+            /// 1. Please enter the  <OTP number>  that has been sent to your msisdn
+            /// 1. The one time pin entered is displayed  the one time pin filed
+            activationAction.EnterAndVerifyOTPValue(browserInstance, otp, Classes.TestData.Instance.DefaultData.ActivationData.OTP);
+
+            /// 2. Press the <next>  button
+            activationAction.ClickNext(browserInstance, otpNextButton);
+            
+            /// 2. The application setup catalogue screen is displayed
+            browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-managecatalogue");
+
+            Classes.LogWriter.Instance.Log("TESTCASE: _10_CorrectOneTimePin -> Test case passed", Classes.LogWriter.eLogType.Info);
         }
 
         /// <summary>
@@ -582,8 +594,26 @@ namespace TestProj.Tests.Activation
         [Test, Description("_11_SetupCatalogueLandingPage"), Category("Setup_Catalogue"), Repeat(1)]
         public void _11_SetupCatalogueLandingPage()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-managecatalogue"));
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
+
+            /// 1. Verify that the vodacom logo and the red banner are displayed on the activation screen
+            activationAction.VerifyLogoAndBanner(browserInstance);
+            /// 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
+            activationAction.VerifyOnlineIndicator(browserInstance);
+            /// 3. Verify that contact us and help me hyperlinks are displayed
+            activationAction.VerifyPageLinks(browserInstance);
+            /// 4. See spelling, Grammar and alignment 
+            //CONNOT DO THAT
+            Classes.LogWriter.Instance.Log("TESTCASE: _11_SetupCatalogueLandingPage -> Cannot check spelling and grammer", Classes.LogWriter.eLogType.Info);
+
+            /// 5. The update button is displayed and enabled
+            /// 6. The button colour is purple
+            /// 7. The text label on the update button is white
+            /// 8. The manage catalogue label is displayed
+            /// 9. The please select a wholesaler from list below, or use the search functionality label is displayed
+            /// 10. The search field is displayed with the icon
+            activationAction.VerifyCatalogueLandingPage(browserInstance);
         }
 
         /// <summary>

@@ -10,5 +10,15 @@ namespace TestProj.Interfaces
         void VerifySpazaName(Classes.Browser browserInstance);
         void VerifySpecialsExists(Classes.Browser browserInstance);
         void VerifyMarbilExists(Classes.Browser browserInstance);
+        void VerifySubApplicationsExists(Classes.Browser browserInstance);
+        void VerifyBottomNavExists(Classes.Browser browserInstance);
+        void VerifyAlertNotificationExists(Classes.Browser browserInstance);
+        void VerifyBasketTotalFieldExists(Classes.Browser browserInstance);
+        void VerifyBasketLabelExists(Classes.Browser browserInstance);
+        void VerifyBasketTotalAmountExists(Classes.Browser browserInstance);
+        void VerifySearchFieldExists(Classes.Browser browserInstance);
+        void VerifySearchFieldTextExists(Classes.Browser browserInstance);
+        void VerifySearchFieldTextEditableExists(Classes.Browser browserInstance);
+
     }
 }

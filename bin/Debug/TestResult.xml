@@ -1,34 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-27" time="13:06:59">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-27" time="17:10:30">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="18.886" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="49.203" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="18.869" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="49.186" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="18.868" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="49.185" asserts="0">
             <results>
-              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Failure" success="False" time="18.868" asserts="0">
+              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Success" success="True" time="49.185" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="AccessingApplication" description="AccessingApplication" executed="True" result="Failure" success="False" time="18.866" asserts="0">
+                  <test-suite type="TestFixture" name="AccessingApplication" description="AccessingApplication" executed="True" result="Success" success="True" time="49.182" asserts="0">
                     <categories>
                       <category name="AccessingApplication" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication._01_ActivationLandingPage" description="_01_ActivationLandingPage" executed="True" result="Error" success="False" time="8.515" asserts="0">
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication._01_ActivationLandingPage" description="_01_ActivationLandingPage" executed="True" result="Success" success="True" time="0.630" asserts="0">
                         <categories>
                           <category name="Accessing app" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
-                        <failure>
-                          <message><![CDATA[FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#landingPage > div > div.leftBlock > div > div > div]]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IAccessingApplicationActions_58985eb45ad74c5db0cd0ad99fd3e7c9.VerifySpecialsExists(Browser browserInstance)
-at TestProj.Tests.AccessingApplication.AccessingApplication._01_ActivationLandingPage() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\AccessingApplication\AccessingApplication.cs:line 174
-]]></stack-trace>
-                        </failure>
                       </test-case>
                     </results>
                   </test-suite>

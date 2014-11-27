@@ -12,7 +12,7 @@ using TestProj.Classes;
 namespace TestProj.Tests.AccessingApplication
 {
     [TestFixture, Description("AccessingApplication"), Category("AccessingApplication")]
-    public class AccessingApplication 
+    public class AccessingApplication
     {
         Classes.Browser browserInstance;
         IUnityContainer container = new UnityContainer();
@@ -42,6 +42,13 @@ namespace TestProj.Tests.AccessingApplication
             container.RegisterType<Interfaces.IAccessingApplicationActions, Tests.AccessingApplication.AccessingApplicationActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
             container.RegisterType<Interfaces.IActivationActions, Tests.Activation.ActivationActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
 
+
+            activate(browserInstance);
+
+            
+
+            
+
         }
 
         [TestFixtureTearDown]
@@ -52,7 +59,7 @@ namespace TestProj.Tests.AccessingApplication
             container.Dispose();
         }
 
-        void activate(Classes.Browser browserInstance)
+        private void activate(Classes.Browser browserInstance)
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
@@ -69,15 +76,31 @@ namespace TestProj.Tests.AccessingApplication
 
 
             Thread.Sleep(2000);
-            //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
-
-            //otp = browserInstance.Instance.Find("#otp");
+            browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser");
 
             getOTPControls(browserInstance, out otp, out otpNextButton, out optResendButton, out otpErrorMessage);
-
             activationAction.EnterAndVerifyOTPValue(browserInstance, otp, Classes.TestData.Instance.DefaultData.ActivationData.OTP);
             activationAction.ClickNext(browserInstance, otpNextButton);
 
+            Thread.Sleep(2000);
+            browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-managecatalogue");
+
+            var catPageNext = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > div > div.nextBtnSection > button");
+            var catPageUpdate = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > form:nth-child(3) > div.formRow > button");
+            activationAction.ClickNext(browserInstance, catPageNext);
+            activationAction.ClickNext(browserInstance, catPageUpdate);
+
+            var waiting = browserInstance.Instance.Find("#loading-wating-messages");
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Class("hide").On("#loading-wating-messages"), TimeSpan.FromMinutes(30));
+            browserInstance.Instance.Assert.Class("hide").On("#loading-wating-messages");
+            Thread.Sleep(100);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main"), TimeSpan.FromMinutes(30));
+            browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main");
+
+            Thread.Sleep(3000);
+
+            //browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.headerLogo.left > a > img");
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.headerLogo.left > a > img"), TimeSpan.FromMinutes(30));
 
         }
 
@@ -152,38 +175,44 @@ namespace TestProj.Tests.AccessingApplication
         public void _01_ActivationLandingPage()
         {
             //may have to do the whole registration portion here, including clearing the cache
-
-            activate(browserInstance);
-
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
+            //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
             Interfaces.IAccessingApplicationActions accessingApplicationAction = container.Resolve<Interfaces.IAccessingApplicationActions>();
 
-            // 1. Verify that the vodacom logo and the red banner are displayed on the activation screen
-//            accessingApplicationAction.VerifyLogoAndBanner(browserInstance);
-            // 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
-//            accessingApplicationAction.VerifyOnlineIndicator(browserInstance);
-            // 3. Verify that contact us and help me hyperlinks are displayed
-//            accessingApplicationAction.VerifyPageLinks(browserInstance);
-            // 4. See spelling, grammar and alignment
-//            LogWriter.Instance.Log("TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer", LogWriter.eLogType.Info);
-            // 5. Verify that the preferred alias name is displayed on top right hand corner of the app with 
-//            accessingApplicationAction.VerifyPreferedAlias(browserInstance);
-            // the spaza owner's alias name and spaza name
-//            accessingApplicationAction.VerifySpazaName(browserInstance);
-            // 6. Verify that the user is served with specials on special block
+            //1. Verify that the vodacom logo and the red banner are displayed on the activation screen
+            accessingApplicationAction.VerifyLogoAndBanner(browserInstance);
+            //2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
+            accessingApplicationAction.VerifyOnlineIndicator(browserInstance);
+            //3. Verify that contact us and help me hyperlinks are displayed
+            accessingApplicationAction.VerifyPageLinks(browserInstance);
+            //4. See spelling, grammar and alignment
+            LogWriter.Instance.Log("TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer", LogWriter.eLogType.Info);
+            //5. Verify that the preferred alias name is displayed on top right hand corner of the app with 
+            accessingApplicationAction.VerifyPreferedAlias(browserInstance);
+            //the spaza owner's alias name and spaza name
+            accessingApplicationAction.VerifySpazaName(browserInstance);
+            //6. Verify that the user is served with specials on special block
             accessingApplicationAction.VerifySpecialsExists(browserInstance);
             // 7. Verify that the marbil add is displayed
-//            accessingApplicationAction.VerifyMarbilExists(browserInstance);
+            accessingApplicationAction.VerifyMarbilExists(browserInstance);
             // 8. Verify that the sub application are displayed and also greyed out
-
+            LogWriter.Instance.Log("TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out", LogWriter.eLogType.Error);
+            accessingApplicationAction.VerifySubApplicationsExists(browserInstance);
             // 9. Verify that the catalogue , basket, orders and favourites blocks are displayed
+            accessingApplicationAction.VerifyBottomNavExists(browserInstance);
             // 10. Verify that the Alert Notification and label are displayed
+            accessingApplicationAction.VerifyAlertNotificationExists(browserInstance);
             // 11. Verify that the basket total value field is displayed
+            accessingApplicationAction.VerifyBasketTotalFieldExists(browserInstance);
             // 12. Verify that the basket label is displayed
+            accessingApplicationAction.VerifyBasketLabelExists(browserInstance);
             // 13. Verify that the basket total amount of items field is displayed
+             accessingApplicationAction.VerifyBasketTotalAmountExists(browserInstance);
             // 14. Verify that the search field is displayed on the top right hand corner of the screen
+             accessingApplicationAction.VerifySearchFieldExists(browserInstance);
             // 15. Verify the text in the search field, it states that i am looking for
+            accessingApplicationAction.VerifySearchFieldTextExists(browserInstance);
             // 16. Verify that the search text field is editable
+            accessingApplicationAction.VerifySearchFieldTextEditableExists(browserInstance);
         }
 
         /// <summary>
@@ -258,7 +287,7 @@ namespace TestProj.Tests.AccessingApplication
         /// 3.
         ///   3.1 The sub applications place holders are not accessable
         /// </summary>
-        [Test, Description("_03_ApplicationLandingContentsFunctionality"),Category("Accessing app"), Repeat(1)]
+        [Test, Description("_03_ApplicationLandingContentsFunctionality"), Category("Accessing app"), Repeat(1)]
         public void _03_ApplicationLandingContentsFunctionality()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
@@ -292,7 +321,7 @@ namespace TestProj.Tests.AccessingApplication
         /// 5. The active spaza list is populated for users with multiple spaza's
         /// 6.  The default selected spaza at startup is the last selected spaza from the previous session. 
         /// </summary>
-        [Test, Description("_04_ApplicationWithMultipleSpazas"),Category("Accessing app"), Repeat(1)]
+        [Test, Description("_04_ApplicationWithMultipleSpazas"), Category("Accessing app"), Repeat(1)]
         public void _04_ApplicationWithMultipleSpazas()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
@@ -319,7 +348,7 @@ namespace TestProj.Tests.AccessingApplication
         ///   alias name and the spaza name
         /// 3. No list should be presented                                                                                                                                                                    4.The multiple spaza function is deactivated on every screen.                                                                                                                                                                   
         /// </summary>
-        [Test, Description("_05_AccessApplicationWithSingleSpaza"),Category("Accessing app"), Repeat(1)]
+        [Test, Description("_05_AccessApplicationWithSingleSpaza"), Category("Accessing app"), Repeat(1)]
         public void _05_AccessApplicationWithSingleSpaza()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));

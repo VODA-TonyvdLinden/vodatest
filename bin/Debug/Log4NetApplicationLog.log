@@ -1209,3 +1209,1069 @@
 2014-11-27 13:06:55,325 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
 2014-11-27 13:06:55,353 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
 2014-11-27 13:06:55,378 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 13:14:03,180 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:14:03,341 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:14:03,443 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:14:03,558 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:14:03,739 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:14:05,995 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:14:06,029 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:14:08,169 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:14:08,234 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:14:08,280 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 13:14:08,358 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 13:14:50,166 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:14:50,341 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:14:50,446 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:14:50,566 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:14:50,746 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:14:52,961 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:14:52,994 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:14:55,142 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:14:55,186 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:14:57,289 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 13:14:57,321 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 13:26:23,335 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:26:23,491 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:26:23,591 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:26:23,706 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:26:23,886 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:26:26,112 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:26:26,145 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:26:28,259 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:26:28,298 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:26:30,501 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 13:26:30,526 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 13:27:51,138 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:27:51,298 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:27:51,401 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:27:51,518 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:27:51,699 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:27:53,910 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:27:53,943 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:27:56,088 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:27:56,160 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:28:03,372 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 13:28:03,382 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 13:29:08,639 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:29:08,797 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:29:08,897 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:29:09,014 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:29:09,193 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:29:11,481 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:29:11,514 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:29:13,662 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:29:13,704 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:29:20,897 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 13:29:20,906 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 13:31:10,647 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:31:10,804 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:31:10,904 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:31:11,020 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:31:11,201 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:31:13,413 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:31:13,446 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:31:15,559 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:31:15,600 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:31:22,802 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 13:31:22,839 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 13:34:12,889 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:34:13,047 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:34:13,150 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:34:13,269 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:34:13,450 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:34:15,661 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:34:15,692 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:34:17,768 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:34:17,810 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:34:24,891 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 13:34:24,916 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 13:34:56,215 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:34:56,373 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:34:56,473 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:34:56,592 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:34:56,773 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:34:59,032 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:34:59,066 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:35:01,215 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:35:01,292 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:35:08,395 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 13:35:08,420 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 13:42:30,367 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:42:30,524 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:42:30,627 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:42:30,763 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:42:30,917 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:42:33,066 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:42:33,099 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:42:35,212 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:42:35,260 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:42:42,371 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 13:42:42,378 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 13:44:09,372 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:44:09,530 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:44:09,634 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:44:09,771 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:44:09,926 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:44:12,120 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:44:12,154 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:44:14,270 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:44:14,336 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:44:21,424 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 13:44:21,440 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 13:55:01,330 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:55:01,511 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:55:01,611 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:55:01,731 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:55:01,896 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:57:21,835 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:57:21,996 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:57:22,100 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:57:22,233 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:57:22,391 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:57:24,584 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:57:24,618 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:57:26,736 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:57:26,802 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:57:28,811 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 5
+2014-11-27 13:57:33,865 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 13:57:33,873 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 13:58:17,200 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:58:17,363 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:58:17,469 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:58:17,596 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:58:17,790 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:58:19,985 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:58:20,018 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:58:22,080 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:58:22,117 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:58:24,124 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 5
+2014-11-27 13:58:24,124 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 0
+2014-11-27 13:58:29,176 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 13:58:29,183 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 13:59:41,919 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 13:59:42,077 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 13:59:42,179 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 13:59:42,299 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 13:59:42,482 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:59:44,690 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 13:59:44,724 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:59:46,843 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:59:46,889 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 13:59:48,908 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 5
+2014-11-27 13:59:48,909 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 0
+2014-11-27 13:59:53,968 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 13:59:53,975 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 14:00:37,381 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:00:37,538 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:00:37,639 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:00:37,758 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:00:37,936 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:00:40,153 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:00:40,186 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:00:42,309 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:00:42,358 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:00:44,364 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 5
+2014-11-27 14:00:44,364 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 0
+2014-11-27 14:00:49,414 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 14:00:49,426 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 14:01:39,342 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:01:39,504 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:01:39,614 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:01:39,753 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:01:39,935 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:01:42,133 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:01:42,166 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:01:44,312 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:01:44,366 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:01:51,466 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 14:01:51,477 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 14:02:39,344 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:02:39,514 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:02:39,615 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:02:39,751 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:02:39,905 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:02:42,091 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:02:42,124 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:02:44,234 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:02:44,274 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:02:51,394 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 14:02:51,416 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 14:03:48,691 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:03:48,873 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:03:48,974 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:03:49,089 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:03:49,270 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:03:51,471 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:03:51,505 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:03:53,625 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:03:53,664 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:03:55,780 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 14:03:55,786 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 14:04:49,420 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:04:49,574 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:04:49,698 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:04:49,814 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:04:49,995 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:04:52,246 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:04:52,279 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:04:54,376 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:04:54,417 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:04:56,430 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Start waiting
+2014-11-27 14:04:56,513 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Done waiting
+2014-11-27 14:04:56,517 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 14:04:56,526 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 14:08:49,309 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:08:49,469 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:08:49,604 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:08:49,720 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:08:49,899 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:08:52,109 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:08:52,142 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:08:54,291 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:08:54,348 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:08:56,371 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Start waiting
+2014-11-27 14:11:11,959 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:11:12,164 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:11:12,268 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:11:12,384 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:11:12,562 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:11:14,783 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:11:14,837 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:11:16,986 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:11:17,067 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:11:17,074 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Start waiting
+2014-11-27 14:11:17,935 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Done waiting
+2014-11-27 14:11:17,938 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 14:11:17,948 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 14:11:57,766 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:11:57,925 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:11:58,029 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:11:58,161 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:11:58,315 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:12:00,522 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:12:00,555 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:12:02,658 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:12:02,706 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:12:02,717 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Start waiting
+2014-11-27 14:12:03,800 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Done waiting
+2014-11-27 14:12:03,802 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 14:12:03,810 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 14:14:26,729 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:14:26,890 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:14:26,991 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:14:27,108 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:14:27,288 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:14:29,496 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:14:29,530 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:14:31,570 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:14:31,603 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:14:31,610 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Start waiting
+2014-11-27 14:14:32,487 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Done waiting
+2014-11-27 14:14:32,489 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 14:14:32,498 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 14:16:16,765 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:16:16,921 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:16:17,019 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:16:17,134 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:16:17,315 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:16:19,557 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:16:19,591 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:16:22,389 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:16:22,421 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:16:22,428 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Start waiting
+2014-11-27 14:16:48,993 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Done waiting
+2014-11-27 14:16:48,996 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 14:16:49,003 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 14:27:29,145 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:27:29,304 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:27:29,404 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:27:29,520 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:27:29,703 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:27:31,964 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:27:32,033 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:27:34,149 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:27:34,201 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:27:34,212 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Start waiting
+2014-11-27 14:28:19,715 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Done waiting
+2014-11-27 14:28:19,718 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 14:28:19,727 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 14:42:43,047 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:42:43,229 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:42:43,329 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:42:43,461 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:42:43,616 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:42:45,789 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:42:45,821 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:42:47,967 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:42:48,051 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:42:48,060 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Start waiting
+2014-11-27 14:43:07,595 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Done waiting
+2014-11-27 14:43:07,598 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 14:43:07,607 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 14:43:44,657 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:43:44,817 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:43:44,919 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:43:45,036 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:43:45,215 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:43:47,407 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:43:47,453 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:43:49,607 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:43:49,656 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:43:49,666 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Start waiting
+2014-11-27 14:44:18,317 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - Done waiting
+2014-11-27 14:44:18,320 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 14:44:18,375 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - BREAD FLOUR PAPER SNOWFLAKE 1KG PACK
+R156.66
+BAKING POWDER REF POUCH SNOWFLAKE 200G P
+R141.11
+CAKE FLOUR SNOWFLAKE 10KG BAG
+R80.86
+2014-11-27 14:44:18,375 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 14:46:57,637 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:46:57,800 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:46:57,902 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:46:58,024 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:46:58,209 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:47:00,393 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:47:00,426 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:47:02,488 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:47:02,527 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:47:07,660 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 5 seconds
+2014-11-27 14:50:42,158 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:50:42,316 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:50:42,417 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:50:42,551 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:50:42,704 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:50:44,886 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:50:44,920 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:50:47,035 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:50:47,106 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:51:34,214 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:51:34,374 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:51:34,474 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:51:34,594 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:51:34,778 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:51:37,027 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:51:37,060 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:51:39,165 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:51:39,199 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:52:52,192 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:52:52,351 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:52:52,452 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:52:52,568 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:52:52,747 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:52:54,997 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:52:55,030 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:52:57,131 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:52:57,177 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:54:42,989 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:54:43,148 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:54:43,249 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:54:43,383 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:54:43,539 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:54:45,767 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:54:45,798 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:54:47,937 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:54:47,979 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:58:23,282 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:58:23,391 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:58:23,487 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:58:23,600 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:58:23,779 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:58:26,001 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:58:26,035 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:58:28,085 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:58:28,120 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:59:27,171 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 14:59:27,343 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 14:59:27,444 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 14:59:27,561 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 14:59:27,742 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:59:29,943 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 14:59:29,976 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:59:32,094 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 14:59:32,163 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:00:30,977 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 15:00:31,150 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 15:00:31,253 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 15:00:31,368 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 15:00:31,551 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:00:33,801 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 15:00:33,836 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:00:35,985 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:00:36,061 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:01:02,986 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 15:01:03,033 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 15:01:03,104 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 15:01:03,104 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 15:01:03,185 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 15:01:08,280 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 5 seconds
+2014-11-27 15:03:17,688 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 15:03:17,847 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 15:03:17,949 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 15:03:18,065 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 15:03:18,245 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:03:20,466 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 15:03:20,500 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:03:22,642 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:03:22,692 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:03:44,492 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 15:03:44,517 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 15:03:44,592 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 15:03:44,592 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 15:03:44,626 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 15:03:44,672 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: VerifySpazaName -> Special Spaza Shop And Carry is not configured as a spaza shop for 5212055461087
+2014-11-27 15:03:49,736 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 5 seconds
+2014-11-27 15:04:51,547 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 15:04:51,655 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 15:04:51,752 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 15:04:51,864 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 15:04:52,038 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:04:54,258 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 15:04:54,291 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:04:56,413 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:04:56,448 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:05:29,273 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 15:05:29,305 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 15:05:29,368 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 15:05:29,368 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 15:05:29,400 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 15:05:29,444 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: VerifySpazaName -> Special Spaza Shop And Carry is not configured as a spaza shop for 5212055461087
+2014-11-27 15:05:34,542 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 5 seconds
+2014-11-27 15:07:38,067 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 15:07:38,240 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 15:07:38,345 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 15:07:38,463 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 15:07:38,650 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:07:40,889 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 15:07:40,924 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:07:43,069 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:07:43,113 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:08:11,416 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 15:08:11,448 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 15:08:11,514 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 15:08:11,514 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 15:08:11,549 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 15:08:11,603 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Special Spaza Shop And Carry
+2014-11-27 15:08:11,639 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 15:08:11,642 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 15:08:11,695 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - BREAD FLOUR PAPER SNOWFLAKE 1KG PACK
+R157.66
+BAKING POWDER REF POUCH SNOWFLAKE 200G P
+R142.11
+CAKE FLOUR SNOWFLAKE 10KG BAG
+R81.86
+2014-11-27 15:08:11,695 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 15:10:56,413 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 15:10:56,571 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 15:10:56,672 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 15:10:56,791 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 15:10:56,976 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:10:59,168 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 15:10:59,202 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:11:01,321 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:11:01,361 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:11:24,105 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 15:11:24,131 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 15:11:24,196 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 15:11:24,196 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 15:11:24,231 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 15:11:24,284 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 15:11:24,287 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 15:11:24,337 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - BREAD FLOUR PAPER SNOWFLAKE 1KG PACK
+R156.66
+BAKING POWDER REF POUCH SNOWFLAKE 200G P
+R141.11
+CAKE FLOUR SNOWFLAKE 10KG BAG
+R80.86
+2014-11-27 15:11:24,337 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 15:14:01,167 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 15:14:01,354 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 15:14:01,454 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 15:14:01,569 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 15:14:01,744 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:14:03,960 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 15:14:03,992 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:14:06,112 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:14:06,153 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:14:36,190 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 15:14:36,225 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 15:14:36,292 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 15:14:36,293 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 15:14:36,329 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 15:14:36,379 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 15:14:36,381 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 15:14:36,383 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 15:18:10,633 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 15:18:10,790 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 15:18:10,890 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 15:18:11,022 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 15:18:11,179 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:18:13,390 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 15:18:13,423 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:18:15,550 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:18:15,586 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:18:46,748 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 15:18:46,773 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 15:18:46,838 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 15:18:46,838 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 15:18:46,873 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 15:18:46,921 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 15:18:46,925 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 15:18:46,960 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - BREAD FLOUR PAPER SNOWFLAKE 1KG PACK
+R157.66
+2014-11-27 15:18:47,010 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - BREAD FLOUR PAPER SNOWFLAKE 1KG PACK
+R157.66
+BAKING POWDER REF POUCH SNOWFLAKE 200G P
+R142.11
+CAKE FLOUR SNOWFLAKE 10KG BAG
+R81.86
+2014-11-27 15:18:47,011 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 15:19:59,530 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 15:19:59,688 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 15:19:59,792 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 15:19:59,926 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 15:20:00,081 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:20:02,249 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 15:20:02,282 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:20:04,425 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:20:04,503 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:28:53,858 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 15:28:53,885 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 15:28:53,950 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 15:28:53,951 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 15:28:53,986 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 15:28:54,037 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 15:28:54,040 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 15:28:54,042 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 15:28:54,097 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - BREAD FLOUR PAPER SNOWFLAKE 1KG PACK
+R157.66
+BAKING POWDER REF POUCH SNOWFLAKE 200G P
+R142.11
+CAKE FLOUR SNOWFLAKE 10KG BAG
+R81.86
+2014-11-27 15:28:54,097 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 15:41:57,228 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 15:41:57,393 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 15:41:57,501 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 15:41:57,628 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 15:41:57,819 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:42:00,068 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 15:42:00,101 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:42:02,219 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:42:02,266 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:42:26,383 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 15:42:26,410 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 15:42:26,477 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 15:42:26,477 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 15:42:26,520 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 15:42:26,569 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 15:42:26,572 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 15:42:26,574 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 15:42:26,629 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - BREAD FLOUR PAPER SNOWFLAKE 1KG PACK
+R157.66
+BAKING POWDER REF POUCH SNOWFLAKE 200G P
+R142.11
+CAKE FLOUR SNOWFLAKE 10KG BAG
+R81.86
+2014-11-27 15:42:26,630 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 15:44:04,118 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 15:44:04,281 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 15:44:04,381 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 15:44:04,513 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 15:44:04,667 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:44:06,829 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 15:44:06,862 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:44:08,974 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:44:09,008 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:44:35,173 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 15:44:35,210 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 15:44:35,277 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 15:44:35,277 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 15:44:35,312 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 15:44:35,362 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 15:44:35,365 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 15:44:35,374 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 3
+2014-11-27 15:44:35,426 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - BREAD FLOUR PAPER SNOWFLAKE 1KG PACK
+R157.66
+BAKING POWDER REF POUCH SNOWFLAKE 200G P
+R142.11
+CAKE FLOUR SNOWFLAKE 10KG BAG
+R81.86
+2014-11-27 15:44:35,427 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 15:46:02,968 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 15:46:03,128 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 15:46:03,230 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 15:46:03,350 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 15:46:03,532 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:46:05,690 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 15:46:05,724 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:46:07,842 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:46:07,890 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:46:30,624 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 15:46:30,651 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 15:46:30,717 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 15:46:30,717 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 15:46:30,753 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 15:46:30,802 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 15:46:30,805 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - try
+2014-11-27 15:46:30,825 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 15:52:16,675 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 15:52:16,832 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 15:52:16,930 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 15:52:17,047 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 15:52:17,229 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:52:19,477 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 15:52:19,510 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:52:21,625 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:52:21,718 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:52:44,370 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 15:52:44,397 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 15:52:44,464 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 15:52:44,464 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 15:52:44,499 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 15:52:44,549 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 15:52:44,571 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 15:52:44,632 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 15:52:44,632 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 15:53:37,258 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 15:53:37,415 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 15:53:37,519 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 15:53:37,637 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 15:53:37,822 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:53:40,016 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 15:53:40,050 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:53:42,132 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:53:42,165 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:54:05,341 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 15:54:05,389 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 15:54:05,460 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 15:54:05,460 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 15:54:05,494 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 15:54:05,542 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 15:54:05,564 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 15:54:05,575 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 15:54:05,576 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 15:54:05,634 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2014-11-27 15:54:05,635 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2014-11-27 15:54:05,635 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2014-11-27 15:54:05,635 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 0 seconds
+2014-11-27 15:56:50,376 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 15:56:50,549 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 15:56:50,654 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 15:56:50,774 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 15:56:50,956 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:56:53,169 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 15:56:53,204 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:56:55,321 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:56:55,402 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:58:02,867 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 15:58:03,022 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 15:58:03,124 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 15:58:03,241 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 15:58:03,422 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:58:05,633 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 15:58:05,665 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:58:07,818 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:58:07,893 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 15:58:28,385 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 15:58:28,411 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 15:58:28,481 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 15:58:28,481 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 15:58:28,516 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 15:58:28,564 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 15:58:28,588 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 15:58:28,598 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 15:58:28,598 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 15:58:28,608 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - FluentAutomation.CommandProvider
+2014-11-27 15:58:28,608 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - FluentAutomation.CommandProvider
+2014-11-27 15:58:28,608 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - FluentAutomation.CommandProvider
+2014-11-27 15:58:28,609 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 0 seconds
+2014-11-27 16:02:55,167 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 16:02:55,322 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 16:02:55,424 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 16:02:55,538 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 16:02:55,719 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:02:57,976 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 16:02:58,008 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:03:00,154 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:03:00,232 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:03:23,282 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 16:03:23,308 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 16:03:23,374 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 16:03:23,374 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 16:03:23,409 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 16:03:23,457 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 16:03:23,479 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 16:03:23,490 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 16:03:23,491 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 16:03:23,504 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:03:23,521 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:03:23,534 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:03:23,537 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:03:23,553 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:03:23,566 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:03:23,569 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:03:23,586 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:03:23,597 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:03:23,597 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - FluentAutomation.CommandProvider
+2014-11-27 16:03:23,597 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - FluentAutomation.CommandProvider
+2014-11-27 16:03:23,597 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - FluentAutomation.CommandProvider
+2014-11-27 16:03:23,597 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 0 seconds
+2014-11-27 16:08:00,313 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 16:08:00,485 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 16:08:00,586 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 16:08:00,703 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 16:08:00,884 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:08:03,077 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 16:08:03,110 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:08:05,254 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:08:05,302 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:08:31,308 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 16:08:31,334 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 16:08:31,422 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 16:08:31,423 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 16:08:31,457 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 16:08:31,506 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 16:08:31,529 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 16:08:31,540 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 16:08:31,540 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 16:08:31,553 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:08:31,573 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:08:31,585 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:08:31,588 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:08:31,608 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:08:31,618 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:08:31,621 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:08:31,637 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:08:31,649 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:08:31,653 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:08:31,669 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:08:31,680 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:08:31,683 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:08:31,700 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:08:31,710 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:08:31,713 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:08:31,730 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:08:31,741 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-11-27 16:08:31,741 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 0 seconds
+2014-11-27 16:11:12,347 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 16:11:12,535 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 16:11:12,638 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 16:11:12,757 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 16:11:12,938 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:11:15,187 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 16:11:15,219 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:11:17,319 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:11:17,386 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:12:08,970 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 16:12:09,128 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 16:12:09,231 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 16:12:09,367 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 16:12:09,522 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:12:11,697 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 16:12:11,730 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:12:13,851 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:12:13,903 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:12:41,150 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 16:12:41,176 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 16:12:41,243 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 16:12:41,243 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 16:12:41,277 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 16:12:41,326 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 16:12:41,350 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 16:12:41,360 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 16:12:41,360 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 16:12:41,373 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:12:41,375 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 0 seconds
+2014-11-27 16:17:22,808 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 16:17:22,992 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 16:17:23,095 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 16:17:23,212 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 16:17:23,391 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:17:25,596 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 16:17:25,630 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:17:27,748 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:17:27,814 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:18:06,440 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 16:18:06,598 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 16:18:06,703 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 16:18:06,821 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 16:18:07,006 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:18:09,207 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 16:18:09,241 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:18:11,360 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:18:11,399 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:18:36,817 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 16:18:36,843 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 16:18:36,909 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 16:18:36,909 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 16:18:36,945 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 16:18:36,993 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 16:18:37,015 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 16:18:37,027 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 16:18:37,027 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 16:18:37,037 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:18:37,038 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:18:37,038 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:18:37,038 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:18:37,038 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:18:37,038 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:18:37,038 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 0 seconds
+2014-11-27 16:21:47,789 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 16:21:47,946 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 16:21:48,052 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 16:21:48,168 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 16:21:48,349 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:21:50,546 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 16:21:50,579 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:21:52,665 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:21:52,699 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:22:19,788 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 16:22:19,814 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 16:22:19,880 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 16:22:19,880 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 16:22:19,915 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 16:22:19,976 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 16:22:19,999 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 16:22:20,010 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 16:22:20,011 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 16:22:20,025 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:22:25,054 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 5 seconds
+2014-11-27 16:24:30,292 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 16:24:30,453 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 16:24:30,552 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 16:24:30,681 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 16:24:30,834 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:24:33,021 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 16:24:33,052 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:24:35,196 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:24:35,242 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:25:09,004 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 16:25:09,029 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 16:25:09,095 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 16:25:09,095 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 16:25:09,130 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 16:25:09,179 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 16:25:09,202 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 16:25:09,213 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 16:25:09,213 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 16:25:14,234 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 5 seconds
+2014-11-27 16:26:19,765 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 16:26:19,920 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 16:26:20,023 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 16:26:20,141 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 16:26:20,320 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:26:22,525 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 16:26:22,561 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:26:24,711 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:26:24,793 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:26:50,650 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 16:26:50,676 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 16:26:50,742 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 16:26:50,742 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 16:26:50,777 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 16:26:50,828 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 16:26:50,851 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 16:26:50,861 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 16:26:50,861 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 16:26:50,875 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:26:55,934 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 5 seconds
+2014-11-27 16:29:42,223 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 16:29:42,381 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 16:29:42,489 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 16:29:42,609 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 16:29:42,793 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:29:44,990 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 16:29:45,023 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:29:47,108 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:29:47,140 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:30:10,492 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 16:30:10,526 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 16:30:10,596 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 16:30:10,596 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 16:30:10,631 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 16:30:10,681 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 16:30:10,704 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 16:30:10,715 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 16:30:10,716 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 16:30:10,730 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:30:15,799 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 5 seconds
+2014-11-27 16:32:12,561 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 16:32:12,721 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 16:32:12,826 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 16:32:12,945 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 16:32:13,126 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:32:15,376 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 16:32:15,411 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:32:17,533 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:32:17,570 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:32:45,883 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 16:32:45,928 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 16:32:45,995 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 16:32:45,996 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 16:32:46,028 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 16:32:46,078 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 16:32:46,100 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 16:32:46,111 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 16:32:46,111 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 16:32:46,122 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 0 seconds
+2014-11-27 16:34:41,616 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 16:34:41,773 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 16:34:41,875 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 16:34:41,991 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 16:34:42,167 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:34:44,344 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 16:34:44,377 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:34:46,500 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:34:46,548 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:35:10,818 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 16:35:10,844 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 16:35:10,910 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 16:35:10,910 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 16:35:10,945 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 16:35:10,995 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 16:35:11,016 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 16:35:11,027 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 16:35:11,027 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 16:35:11,110 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 0 seconds
+2014-11-27 16:39:50,890 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 16:39:51,045 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 16:39:51,144 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 16:39:51,261 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 16:39:51,440 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:39:53,683 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 16:39:53,715 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:39:55,772 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:39:55,807 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:40:25,627 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 16:40:25,655 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 16:40:25,745 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 16:40:25,745 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 16:40:25,781 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 16:40:25,830 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 16:40:25,852 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 16:40:25,864 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 16:40:25,864 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 16:40:25,889 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 0 seconds
+2014-11-27 16:42:51,684 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 16:42:51,842 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 16:42:51,940 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 16:42:52,057 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 16:42:52,238 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:42:54,456 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 16:42:54,489 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:42:56,633 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:42:56,679 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:43:20,690 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 16:43:20,715 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 16:43:20,784 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 16:43:20,785 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 16:43:20,857 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 16:43:20,910 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 16:43:20,936 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 16:43:20,947 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 16:43:20,947 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 16:43:20,970 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:43:20,973 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:43:20,978 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:43:20,991 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:43:20,993 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:43:20,998 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:43:21,011 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:43:21,013 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:43:21,018 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:43:21,030 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:43:21,033 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:43:21,038 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:43:21,051 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:43:21,053 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:43:21,058 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:43:21,071 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:43:21,073 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:43:21,078 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:43:21,078 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 0 seconds
+2014-11-27 16:45:20,487 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 16:45:20,645 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 16:45:20,747 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 16:45:20,866 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 16:45:21,055 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:45:23,261 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 16:45:23,294 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:45:25,414 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:45:25,454 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 16:45:59,682 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 16:45:59,708 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 16:45:59,775 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 16:45:59,776 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 16:45:59,810 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 16:45:59,860 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 16:45:59,883 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 16:45:59,894 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 16:45:59,894 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 16:45:59,917 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:45:59,920 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:45:59,925 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:45:59,925 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:45:59,927 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:45:59,932 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:45:59,948 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:45:59,951 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:45:59,955 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:45:59,956 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:45:59,958 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:45:59,963 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:45:59,976 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:45:59,979 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:45:59,983 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:45:59,983 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:45:59,986 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:45:59,990 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:46:00,003 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:46:00,006 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:46:00,011 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:46:00,011 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:46:00,014 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:46:00,018 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:46:00,031 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:46:00,033 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:46:00,038 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:46:00,038 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:46:00,041 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:46:00,047 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:46:00,060 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:46:00,062 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:46:00,067 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:46:00,067 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 1
+2014-11-27 16:46:00,070 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - div
+2014-11-27 16:46:00,074 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - app
+2014-11-27 16:46:00,074 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 0 seconds
+2014-11-27 17:09:53,936 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_MSISDNInput executed in 0 seconds
+2014-11-27 17:09:54,118 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_UsernameInput executed in 0 seconds
+2014-11-27 17:09:54,222 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ActivationKeyInput executed in 0 seconds
+2014-11-27 17:09:54,339 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_AliasInput executed in 0 seconds
+2014-11-27 17:09:54,522 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 17:09:56,770 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-27 17:09:56,803 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 17:09:58,954 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 17:09:59,034 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-27 17:10:25,298 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-27 17:10:25,324 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-27 17:10:25,391 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-11-27 17:10:25,391 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-11-27 17:10:25,426 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-11-27 17:10:25,475 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-11-27 17:10:25,497 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-11-27 17:10:25,509 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-11-27 17:10:25,509 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-11-27 17:10:25,521 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TETCASE: VerifySubApplicationsExists -> I can see 6 app DIVs, but cannot check if they are enabled or not. PLEASE ADD ENABLE/DISABLE CLASS
+2014-11-27 17:10:25,521 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 0 seconds
+2014-11-27 17:10:25,603 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBottomNavExists executed in 0 seconds
+2014-11-27 17:10:25,625 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyAlertNotificationExists executed in 0 seconds
+2014-11-27 17:10:25,638 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBasketTotalFieldExists executed in 0 seconds
+2014-11-27 17:10:25,652 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBasketLabelExists executed in 0 seconds
+2014-11-27 17:10:25,665 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBasketTotalAmountExists executed in 0 seconds
+2014-11-27 17:10:25,679 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldExists executed in 0 seconds
+2014-11-27 17:10:25,700 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldTextExists executed in 0 seconds
+2014-11-27 17:10:25,830 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldTextEditableExists executed in 0 seconds
