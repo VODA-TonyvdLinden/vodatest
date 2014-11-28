@@ -104,6 +104,7 @@
     <Compile Include="Classes\ScreenCapture.cs" />
     <Compile Include="Classes\ScreenshotRequirements\ScreenshotRequirement.cs" />
     <Compile Include="Classes\ScreenshotRequirements\ScreenshotRequirements.cs" />
+    <Compile Include="Classes\TestDataClasses\Spaza.cs" />
     <Compile Include="Classes\TestDataClasses\Activation.cs" />
     <Compile Include="Classes\TestDataClasses\BuildDefaultData.cs" />
     <Compile Include="Classes\TestDataClasses\Defaults.cs" />
@@ -134,6 +135,7 @@
     <Compile Include="Tests\Basket\BasketActions.cs" />
     <Compile Include="Tests\Catalogues\Catalogues.cs" />
     <Compile Include="Tests\Catalogues\CataloguesActions.cs" />
+    <Compile Include="Tests\Common\Helpers.cs" />
     <Compile Include="Tests\ContactUs\ContactUs.cs" />
     <Compile Include="Tests\ContactUs\ContactUsActions.cs" />
     <Compile Include="Tests\Favourites\Favourites.cs" />

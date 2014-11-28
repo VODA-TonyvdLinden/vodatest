@@ -19,6 +19,7 @@ namespace TestProj.Tests.Activation
         FluentAutomation.ElementProxy username;
         FluentAutomation.ElementProxy activationNumber;
         FluentAutomation.ElementProxy userAlias;
+        FluentAutomation.ElementProxy challengeQuestion;
         FluentAutomation.ElementProxy challengeAnswer;
         FluentAutomation.ElementProxy activationNextButton;
         FluentAutomation.ElementProxy activationErrorMessage;
@@ -65,6 +66,7 @@ namespace TestProj.Tests.Activation
             userAlias = browserInstance.Instance.Find("#userAlias");
             //FIELD CANNOT BE REQUIRED -> IT IS A DROP DOWN
             //var challengeQuestion = browserInstance.Instance.Find("challengeQuestion");
+            challengeQuestion = browserInstance.Instance.Find("#challengeQuestion");
             challengeAnswer = browserInstance.Instance.Find("#challengeAnswer");
 
             activationNextButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(8) > div > input");
@@ -188,7 +190,7 @@ namespace TestProj.Tests.Activation
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
             getActivationControls(browserInstance, out msisdn, out username, out activationNumber, out userAlias, out challengeAnswer, out activationNextButton, out activationErrorMessage);
 
-            activationAction.TestMandatoryFields(browserInstance, msisdn, username, activationNumber, userAlias, challengeAnswer, activationErrorMessage);
+            activationAction.TestMandatoryFields(browserInstance, msisdn, username, activationNumber, userAlias, challengeQuestion, challengeAnswer, activationErrorMessage);
             activationAction.TestMSISDNInputValidation(browserInstance, msisdn);
             activationAction.TestUsernameInputValidation(browserInstance, username);
             activationAction.TestActivationKeyInputValidation(browserInstance, activationNumber);
@@ -298,21 +300,11 @@ namespace TestProj.Tests.Activation
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
 
             //   1.1.1 Enter valid msisdn
-            activationAction.MSISDNInput(browserInstance, msisdn, TestData.Instance.DefaultData.ActivationData.MSISDN);
-
             //   1.1.2 Enter valid  username
-            activationAction.UsernameInput(browserInstance, username, TestData.Instance.DefaultData.ActivationData.Username);
-
             //   1.1.3  Enter valid activation key, any number/string that is accepted by the field
-            activationAction.ActivationKeyInput(browserInstance, activationNumber, TestData.Instance.DefaultData.ActivationData.ActivationKey);
-
             //   1.1.4  Enter any user defined preferred alias
-            activationAction.AliasInput(browserInstance, userAlias, TestData.Instance.DefaultData.ActivationData.Alias);
-            //   1.1.5 Press the next button
             Classes.LogWriter.Instance.Log("TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST", Classes.LogWriter.eLogType.Error);
-            browserInstance.Instance.Enter("NOT REQUIRED").In(challengeAnswer);
-
-            activationAction.ClickNext(browserInstance, activationNextButton);
+            activationAction.TestValidUserDetails(browserInstance, msisdn, username, activationNumber, userAlias, challengeQuestion, challengeAnswer, activationNextButton);
 
             activationAction.ValidateOTPStart(browserInstance, msisdn.Element.Text);
         }
@@ -532,7 +524,7 @@ namespace TestProj.Tests.Activation
             ///   " A One Time Pin has been sent to 0*****1234. Please enter the One time Pin here to continue"
             activationAction.VerifyOTPErrorMessage(browserInstance, Classes.TestData.Instance.DefaultData.ActivationData.MSISDN);
             Classes.LogWriter.Instance.Log("TESTCASE: _09_ResendOneTimePin -> OTP NOT RECEIVED -> One Time Pin message cannot be tested as it is not displayed after the Resend Button is clicked", Classes.LogWriter.eLogType.Error);
-            
+
 
             /// 2. OTP deleted or lost
             ///   2.1 Press the <Resent OTP> button
@@ -570,7 +562,7 @@ namespace TestProj.Tests.Activation
 
             /// 2. Press the <next>  button
             activationAction.ClickNext(browserInstance, otpNextButton);
-            
+
             /// 2. The application setup catalogue screen is displayed
             browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-managecatalogue");
 
