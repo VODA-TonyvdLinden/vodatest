@@ -2357,3 +2357,45 @@ R81.86
 2014-11-28 09:48:12,688 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestValidUserDetails executed in 1 seconds
 2014-11-28 10:21:05,459 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestValidUserDetails executed in 2 seconds
 2014-11-28 10:21:07,694 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-28 13:22:44,143 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-28 13:22:44,183 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-28 13:22:44,296 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyPageLinks executed in 0 seconds
+2014-11-28 13:22:44,322 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> What css class is used to disable the next button?
+2014-11-28 13:22:44,323 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the next button, just the css class
+2014-11-28 13:22:44,323 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the next button, just the css class
+2014-11-28 13:22:44,323 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyActivationPageNextButton executed in 0 seconds
+2014-11-28 13:22:44,373 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Two extra fields found on the screen, challengeQuestion and challengeAnswer.
+2014-11-28 13:22:44,374 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
+2014-11-28 13:22:44,374 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyFieldExist executed in 0 seconds
+2014-11-28 13:22:49,707 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestMandatoryFields executed in 5 seconds
+2014-11-28 13:22:49,961 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASEActivationFormIncorrectUserDetails -> Valid MSISDN no required
+2014-11-28 13:22:50,074 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:ActivationFormIncorrectUserDetails -> Valid UNSERNAME required
+2014-11-28 13:22:55,481 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestInvalidActivationKey executed in 5 seconds
+2014-11-28 13:22:55,517 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST
+2014-11-28 13:22:56,339 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestValidUserDetails executed in 0 seconds
+2014-11-28 13:22:57,082 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
+2014-11-28 13:23:02,216 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ValidateOTPStart executed in 5 seconds
+2014-11-28 13:23:02,784 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-28 13:23:02,819 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-28 13:23:02,885 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyPageLinks executed in 0 seconds
+2014-11-28 13:23:02,885 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Cannot check spelling and grammer automatically
+2014-11-28 13:23:02,912 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> What css class is used to disable the next button?
+2014-11-28 13:23:02,912 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the next button, just the css class
+2014-11-28 13:23:02,912 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the next button, just the css class
+2014-11-28 13:23:02,912 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOTPNextButton executed in 0 seconds
+2014-11-28 13:23:02,938 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyResendButton -> What css class is used to disable the next button?
+2014-11-28 13:23:02,938 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the resend button, just the css class
+2014-11-28 13:23:02,938 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the resend button, just the css class
+2014-11-28 13:23:02,939 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyResendButton executed in 0 seconds
+2014-11-28 13:23:02,956 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
+2014-11-28 13:23:02,956 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOntTimeLable executed in 0 seconds
+2014-11-28 13:23:08,110 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOTPErrorMessage executed in 5 seconds
+2014-11-28 13:23:08,152 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:CorrectOneTimePinAndApplicationOffline -> Incomplete test case -> Must check if application is offline
+2014-11-28 13:23:13,482 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-28 13:23:18,601 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-28 13:23:23,701 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOTPErrorMessage executed in 5 seconds
+2014-11-28 13:23:23,891 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-28 13:23:24,051 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-11-28 13:23:24,117 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-11-28 13:23:24,122 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyPageLinks executed in 0 seconds
+2014-11-28 13:23:29,297 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestCatalogueSeachValidation executed in 5 seconds

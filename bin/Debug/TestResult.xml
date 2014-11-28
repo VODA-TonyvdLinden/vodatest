@@ -1,71 +1,320 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-28" time="10:51:12">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="17" errors="11" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-28" time="13:23:29">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="1821.931" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="55.865" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="1821.913" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="55.865" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="1821.912" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="55.864" asserts="0">
             <results>
-              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Failure" success="False" time="1821.912" asserts="0">
+              <test-suite type="Namespace" name="Activation" executed="True" result="Failure" success="False" time="55.864" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="AccessingApplication" description="AccessingApplication" executed="True" result="Error" success="False" time="1821.907" asserts="0">
+                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Failure" success="False" time="55.863" asserts="0">
                     <categories>
-                      <category name="AccessingApplication" />
+                      <category name="Activation" />
                     </categories>
-                    <failure>
-                      <message><![CDATA[SetUp : FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [1800000ms] for expression [ => value(TestProj.Tests.AccessingApplication.AccessingApplication+<>c__DisplayClass0).browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main")]. See InnerException for details of the last FluentException thrown.
-  ----> FluentAutomation.Exceptions.FluentException : An unexpected exception was thrown inside WaitUntil(Action). See InnerException for details.
-  ----> OpenQA.Selenium.WebDriverException : A exception with a null response was thrown sending an HTTP request to the remote WebDriver server for URL http://localhost:58314/session/a172130674437cb079897aa2191e5ccb/url. The status of the exception was ConnectFailure, and the message was: Unable to connect to the remote server
-  ----> System.Net.WebException : Unable to connect to the remote server
-  ----> System.Net.Sockets.SocketException : No connection could be made because the target machine actively refused it [::1]:58314]]></message>
-                      <stack-trace><![CDATA[at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
-at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
-at FluentAutomation.BaseCommandProvider.WaitUntil(Expression`1 conditionAction, TimeSpan timeout)
-at FluentAutomation.CommandProvider.FluentAutomation.Interfaces.ICommandProvider.WaitUntil(Expression`1 , TimeSpan )
-at FluentAutomation.ActionSyntaxProvider.WaitUntil(Expression`1 conditionAction, TimeSpan timeout)
-at TestProj.Tests.AccessingApplication.AccessingApplication.activate(Browser browserInstance) in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\AccessingApplication\AccessingApplication.cs:line 87
-at TestProj.Tests.AccessingApplication.AccessingApplication.Initialise() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\AccessingApplication\AccessingApplication.cs:line 48
---FluentException
-at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
-at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
-at FluentAutomation.BaseCommandProvider.WaitUntil(Expression`1 conditionAction, TimeSpan timeout)
-at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
-at FluentAutomation.CommandProvider.FluentAutomation.Interfaces.ICommandProvider.Act(CommandType , Action )
-at FluentAutomation.AssertProvider.Url(Uri expectedUrl)
-at FluentAutomation.AssertSyntaxProvider.Url(Uri expectedUri)
-at FluentAutomation.AssertSyntaxProvider.Url(String expectedUrl)
-at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
---WebDriverException
-at OpenQA.Selenium.Remote.HttpCommandExecutor.CreateResponse(WebRequest request)
-at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
-at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
-at OpenQA.Selenium.Remote.RemoteWebDriver.get_Url()
-at FluentAutomation.CommandProvider.get_Url()
-at FluentAutomation.AssertProvider.<>c__DisplayClass53.<Url>b__52()
-at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
---WebException
-at System.Net.HttpWebRequest.GetResponse()
-at OpenQA.Selenium.Remote.HttpCommandExecutor.CreateResponse(WebRequest request)
---SocketException
-at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
-at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
-]]></stack-trace>
-                    </failure>
                     <results>
-                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication._01_ActivationLandingPage" description="_01_ActivationLandingPage" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation._01_VerifyActivationLandingPage" description="_01_VerifyActivationLandingPage" executed="True" result="Success" success="True" time="4.110" asserts="0">
                         <categories>
-                          <category name="Accessing app" />
+                          <category name="Activation Page" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation._02_ActivationFormFieldValidation" description="_02_ActivationFormFieldValidation" executed="True" result="Error" success="False" time="5.334" asserts="0">
+                        <categories>
+                          <category name="Activation Page" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                         <failure>
-                          <message><![CDATA[TestFixtureSetUp failed in AccessingApplication]]></message>
-                          <stack-trace />
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected expression [ => ("E1-1-7 – Please complete all fields" == value(TestProj.Tests.Activation.ActivationActions+<>c__DisplayClass6).errorMessage.Element.Text)] to return true.]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_495d7eed981c49978d15d3278652fab0.TestMandatoryFields(Browser browserInstance, ElementProxy msisdn, ElementProxy username, ElementProxy activationNumber, ElementProxy userAlias, ElementProxy challengeQuestion, ElementProxy challengeAnswer, ElementProxy errorMessage)
+at TestProj.Tests.Activation.Activation._02_ActivationFormFieldValidation() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 193
+--FluentAssertFailedException
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
                         </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation._03_ActivationFormIncorrectUserDetails" description="_03_ActivationFormIncorrectUserDetails" executed="True" result="Error" success="False" time="5.656" asserts="0">
+                        <categories>
+                          <category name="Activation form" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected expression [ => ("E1-1 -3 invalid input" == value(TestProj.Tests.Activation.ActivationActions+<>c__DisplayClasse).errorMessage.Element.Text)] to return true.]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_495d7eed981c49978d15d3278652fab0.TestInvalidActivationKey(Browser browserInstance, ElementProxy msisdn, ElementProxy username, ElementProxy activationNumber, ElementProxy userAlias, ElementProxy nextButton, ElementProxy errorMessage)
+at TestProj.Tests.Activation.Activation._03_ActivationFormIncorrectUserDetails() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 265
+--FluentAssertFailedException
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation._04_ActivationFormCorrectUserDetails" description="_04_ActivationFormCorrectUserDetails" executed="True" result="Error" success="False" time="6.704" asserts="0">
+                        <categories>
+                          <category name="Activation form" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected expression [ => (value(TestProj.Tests.Activation.ActivationActions+<>c__DisplayClass10).message == value(TestProj.Tests.Activation.ActivationActions+<>c__DisplayClass10).otpMessage.Element.Text)] to return true.]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_495d7eed981c49978d15d3278652fab0.ValidateOTPStart(Browser browserInstance, String msisdnNo)
+at TestProj.Tests.Activation.Activation._04_ActivationFormCorrectUserDetails() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 309
+--FluentAssertFailedException
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation._05_VerifyActivationOneTimePinLandingPage" description="_05_VerifyActivationOneTimePinLandingPage" executed="True" result="Error" success="False" time="5.865" asserts="0">
+                        <categories>
+                          <category name="Activation_form" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected expression [ => (value(TestProj.Tests.Activation.ActivationActions+<>c__DisplayClass10).message == value(TestProj.Tests.Activation.ActivationActions+<>c__DisplayClass10).otpMessage.Element.Text)] to return true.]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_495d7eed981c49978d15d3278652fab0.VerifyOTPErrorMessage(Browser browserInstance, String msisdnNo)
+at TestProj.Tests.Activation.Activation._05_VerifyActivationOneTimePinLandingPage() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 368
+--FluentAssertFailedException
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation._06_ActivationOneTimePinFieldValidation" description="_06_ActivationOneTimePinFieldValidation" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <categories>
+                          <category name="Verify_user(OTP)" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation._07_CorrectOneTimePinAndApplicationOffline" description="_07_CorrectOneTimePinAndApplicationOffline" executed="True" result="Error" success="False" time="5.137" asserts="0">
+                        <categories>
+                          <category name="Verify_user(OTP)" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected element [body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div > div] to include CSS class [offline] but current class attribute is [statusDisplay online ng-binding].]]></message>
+                          <stack-trace><![CDATA[at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.BaseCommandProvider.WaitUntil(Expression`1 conditionAction, TimeSpan timeout)
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.CommandProvider.FluentAutomation.Interfaces.ICommandProvider.Act(CommandType , Action )
+at FluentAutomation.AssertProvider.CssClass(ElementProxy element, String className)
+at FluentAutomation.AssertSyntaxProvider.AssertClassSyntaxProvider.On(ElementProxy element)
+at TestProj.Tests.Activation.Activation._07_CorrectOneTimePinAndApplicationOffline() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 426
+--FluentAssertFailedException
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass15.<CssClass>b__14()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation._08_IncorrectOneTimePin" description="_08_IncorrectOneTimePin" executed="True" result="Error" success="False" time="5.202" asserts="0">
+                        <categories>
+                          <category name="Verify_user(OTP)" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected expression [ => (value(TestProj.Tests.Activation.Activation).otpErrorMessage.Element.Text == "O1-2-8 – Passwords do not match. Please try again")] to return true.]]></message>
+                          <stack-trace><![CDATA[at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.BaseCommandProvider.WaitUntil(Expression`1 conditionAction, TimeSpan timeout)
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.CommandProvider.FluentAutomation.Interfaces.ICommandProvider.Act(CommandType , Action )
+at FluentAutomation.AssertProvider.True(Expression`1 matchFunc)
+at FluentAutomation.AssertSyntaxProvider.True(Expression`1 matchFunc)
+at TestProj.Tests.Activation.Activation._08_IncorrectOneTimePin() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 474
+--FluentAssertFailedException
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation._09_ResendOneTimePin" description="_09_ResendOneTimePin" executed="True" result="Error" success="False" time="5.167" asserts="0">
+                        <categories>
+                          <category name="Verify_user(OTP)" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected expression [ => (value(TestProj.Tests.Activation.ActivationActions+<>c__DisplayClass10).message == value(TestProj.Tests.Activation.ActivationActions+<>c__DisplayClass10).otpMessage.Element.Text)] to return true.]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_495d7eed981c49978d15d3278652fab0.VerifyOTPErrorMessage(Browser browserInstance, String msisdnNo)
+at TestProj.Tests.Activation.Activation._09_ResendOneTimePin() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 525
+--FluentAssertFailedException
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation._10_CorrectOneTimePin" description="_10_CorrectOneTimePin" executed="True" result="Error" success="False" time="0.160" asserts="0">
+                        <categories>
+                          <category name="Verify_user(OTP)" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : An unexpected exception was thrown inside WaitUntil(Action). See InnerException for details.
+  ----> System.InvalidOperationException : unknown error: cannot focus element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.3 x86_64)]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_495d7eed981c49978d15d3278652fab0.EnterAndVerifyOTPValue(Browser browserInstance, ElementProxy otp, String otpVal)
+at TestProj.Tests.Activation.Activation._10_CorrectOneTimePin() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 561
+--InvalidOperationException
+at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+at FluentAutomation.CommandProvider.<>c__DisplayClass42.<EnterText>b__41()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation._11_SetupCatalogueLandingPage" description="_11_SetupCatalogueLandingPage" executed="True" result="Error" success="False" time="0.222" asserts="0">
+                        <categories>
+                          <category name="Setup_Catalogue" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : An unexpected exception was thrown inside WaitUntil(Action). See InnerException for details.
+  ----> OpenQA.Selenium.UnhandledAlertException : unexpected alert open
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.3 x86_64)]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_495d7eed981c49978d15d3278652fab0.VerifyPageLinks(Browser browserInstance)
+at TestProj.Tests.Activation.Activation._11_SetupCatalogueLandingPage() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 613
+--UnhandledAlertException
+at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+at OpenQA.Selenium.Remote.RemoteWebDriver.get_PageSource()
+at FluentAutomation.CommandProvider.get_Source()
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass6b.<Exists>b__6a()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation._12_SetupCatalogueValidations" description="_12_SetupCatalogueValidations" executed="True" result="Error" success="False" time="5.169" asserts="0">
+                        <categories>
+                          <category name="Setup_Catalogue" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentException : An error ocurred while locating an element via jQuery/Sizzle. InnerException may have more details.
+  ----> OpenQA.Selenium.UnhandledAlertException : unexpected alert open
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.3 x86_64)]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_495d7eed981c49978d15d3278652fab0.TestCatalogueSeachValidation(Browser browserInstance, ElementProxy searchValue, ElementProxy mcatSearchButton, ElementProxy mcatErrorMessage)
+at TestProj.Tests.Activation.Activation._12_SetupCatalogueValidations() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 663
+--FluentException
+at FluentAutomation.Sizzle.BySizzle.FindElements(ISearchContext context)
+at FluentAutomation.Sizzle.BySizzle.FindElement(ISearchContext context)
+at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
+at FluentAutomation.ElementProxy.get_Element()
+at FluentAutomation.CommandProvider.<>c__DisplayClass18.<Click>b__17()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+--UnhandledAlertException
+at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+at OpenQA.Selenium.Remote.RemoteWebDriver.ExecuteScriptCommand(String script, String commandName, Object[] args)
+at FluentAutomation.Sizzle.BySizzle.FindElements(ISearchContext context)
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation._13_SetupCatalogueOnDeviceGEOLocationService" description="_13_SetupCatalogueOnDeviceGEOLocationService" executed="True" result="Error" success="False" time="0.006" asserts="0">
+                        <categories>
+                          <category name="Setup_Catalogue" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : An unexpected exception was thrown inside WaitUntil(Action). See InnerException for details.
+  ----> OpenQA.Selenium.UnhandledAlertException : unexpected alert open
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.3 x86_64)]]></message>
+                          <stack-trace><![CDATA[at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.BaseCommandProvider.WaitUntil(Expression`1 conditionAction, TimeSpan timeout)
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.CommandProvider.Navigate(Uri url)
+at FluentAutomation.ActionSyntaxProvider.Open(Uri url)
+at FluentAutomation.ActionSyntaxProvider.Open(String url)
+at TestProj.Classes.Browser.Navigate(Uri path) in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Classes\Browser.cs:line 62
+at TestProj.Tests.Activation.Activation._13_SetupCatalogueOnDeviceGEOLocationService() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 687
+--UnhandledAlertException
+at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+at OpenQA.Selenium.Remote.RemoteWebDriver.get_Url()
+at FluentAutomation.CommandProvider.<>c__DisplayClass5.<Navigate>b__4()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation._14_SetupCatalogueSearchFieldReturningNoResults" description="_14_SetupCatalogueSearchFieldReturningNoResults" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Setup_Catalogue" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation._15_SetupCatalogueSearchFieldAutoComplete" description="_15_SetupCatalogueSearchFieldAutoComplete" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                        <categories>
+                          <category name="Setup_Catalogue" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation._16_SetupCatalogueLandingPageInterruptions" description="_16_SetupCatalogueLandingPageInterruptions" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                        <categories>
+                          <category name="Setup_Catalogue" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Activation.Activation._17_SetupCatalogueSearchFieldReturningOneOrMultipleResults" description="_17_SetupCatalogueSearchFieldReturningOneOrMultipleResults" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                        <categories>
+                          <category name="Setup_Catalogue" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
                       </test-case>
                     </results>
                   </test-suite>
