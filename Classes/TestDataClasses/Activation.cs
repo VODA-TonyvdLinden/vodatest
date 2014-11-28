@@ -27,6 +27,10 @@ namespace TestProj.Classes.TestDataClasses
         public string InvalidOTP { get; set; }
         [XmlElement]
         public string ExpiredOPT { get; set; }
+        [XmlElement]
+        public int ChallengeQuestion { get; set; }
+        [XmlElement]
+        public string ChallengeAnswer { get; set; }
         [XmlArray]
         public List<Spaza> Spazas { get; set; }
 

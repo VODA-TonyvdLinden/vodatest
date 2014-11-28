@@ -1,28 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-27" time="17:10:30">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-28" time="10:51:12">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="49.203" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="1821.931" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="49.186" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="1821.913" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="49.185" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="1821.912" asserts="0">
             <results>
-              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Success" success="True" time="49.185" asserts="0">
+              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Failure" success="False" time="1821.912" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="AccessingApplication" description="AccessingApplication" executed="True" result="Success" success="True" time="49.182" asserts="0">
+                  <test-suite type="TestFixture" name="AccessingApplication" description="AccessingApplication" executed="True" result="Error" success="False" time="1821.907" asserts="0">
                     <categories>
                       <category name="AccessingApplication" />
                     </categories>
+                    <failure>
+                      <message><![CDATA[SetUp : FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [1800000ms] for expression [ => value(TestProj.Tests.AccessingApplication.AccessingApplication+<>c__DisplayClass0).browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main")]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentException : An unexpected exception was thrown inside WaitUntil(Action). See InnerException for details.
+  ----> OpenQA.Selenium.WebDriverException : A exception with a null response was thrown sending an HTTP request to the remote WebDriver server for URL http://localhost:58314/session/a172130674437cb079897aa2191e5ccb/url. The status of the exception was ConnectFailure, and the message was: Unable to connect to the remote server
+  ----> System.Net.WebException : Unable to connect to the remote server
+  ----> System.Net.Sockets.SocketException : No connection could be made because the target machine actively refused it [::1]:58314]]></message>
+                      <stack-trace><![CDATA[at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.BaseCommandProvider.WaitUntil(Expression`1 conditionAction, TimeSpan timeout)
+at FluentAutomation.CommandProvider.FluentAutomation.Interfaces.ICommandProvider.WaitUntil(Expression`1 , TimeSpan )
+at FluentAutomation.ActionSyntaxProvider.WaitUntil(Expression`1 conditionAction, TimeSpan timeout)
+at TestProj.Tests.AccessingApplication.AccessingApplication.activate(Browser browserInstance) in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\AccessingApplication\AccessingApplication.cs:line 87
+at TestProj.Tests.AccessingApplication.AccessingApplication.Initialise() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\AccessingApplication\AccessingApplication.cs:line 48
+--FluentException
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.BaseCommandProvider.WaitUntil(Expression`1 conditionAction, TimeSpan timeout)
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.CommandProvider.FluentAutomation.Interfaces.ICommandProvider.Act(CommandType , Action )
+at FluentAutomation.AssertProvider.Url(Uri expectedUrl)
+at FluentAutomation.AssertSyntaxProvider.Url(Uri expectedUri)
+at FluentAutomation.AssertSyntaxProvider.Url(String expectedUrl)
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+--WebDriverException
+at OpenQA.Selenium.Remote.HttpCommandExecutor.CreateResponse(WebRequest request)
+at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+at OpenQA.Selenium.Remote.RemoteWebDriver.get_Url()
+at FluentAutomation.CommandProvider.get_Url()
+at FluentAutomation.AssertProvider.<>c__DisplayClass53.<Url>b__52()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+--WebException
+at System.Net.HttpWebRequest.GetResponse()
+at OpenQA.Selenium.Remote.HttpCommandExecutor.CreateResponse(WebRequest request)
+--SocketException
+at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+]]></stack-trace>
+                    </failure>
                     <results>
-                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication._01_ActivationLandingPage" description="_01_ActivationLandingPage" executed="True" result="Success" success="True" time="0.630" asserts="0">
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication._01_ActivationLandingPage" description="_01_ActivationLandingPage" executed="True" result="Failure" success="False" time="0.000" asserts="0">
                         <categories>
                           <category name="Accessing app" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
+                        <failure>
+                          <message><![CDATA[TestFixtureSetUp failed in AccessingApplication]]></message>
+                          <stack-trace />
+                        </failure>
                       </test-case>
                     </results>
                   </test-suite>

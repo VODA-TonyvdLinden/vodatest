@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using TestProj.Classes;
+using TestProj.Tests.Common;
 
 namespace TestProj.Tests.AccessingApplication
 {
@@ -21,6 +22,7 @@ namespace TestProj.Tests.AccessingApplication
         FluentAutomation.ElementProxy username;
         FluentAutomation.ElementProxy activationNumber;
         FluentAutomation.ElementProxy userAlias;
+        FluentAutomation.ElementProxy challengeQuestion;
         FluentAutomation.ElementProxy challengeAnswer;
         FluentAutomation.ElementProxy activationNextButton;
         FluentAutomation.ElementProxy activationErrorMessage;
@@ -44,11 +46,6 @@ namespace TestProj.Tests.AccessingApplication
 
 
             activate(browserInstance);
-
-            
-
-            
-
         }
 
         [TestFixtureTearDown]
@@ -64,31 +61,24 @@ namespace TestProj.Tests.AccessingApplication
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
 
-            getActivationControls(browserInstance, out msisdn, out username, out activationNumber, out userAlias, out challengeAnswer, out activationNextButton, out activationErrorMessage);
+            getActivationControls(browserInstance, out msisdn, out username, out activationNumber, out userAlias,out challengeQuestion, out challengeAnswer, out activationNextButton, out activationErrorMessage);
 
-
-            activationAction.MSISDNInput(browserInstance, msisdn, TestData.Instance.DefaultData.ActivationData.MSISDN);
-            activationAction.UsernameInput(browserInstance, username, TestData.Instance.DefaultData.ActivationData.Username);
-            activationAction.ActivationKeyInput(browserInstance, activationNumber, TestData.Instance.DefaultData.ActivationData.ActivationKey);
-            activationAction.AliasInput(browserInstance, userAlias, TestData.Instance.DefaultData.ActivationData.Alias);
-            browserInstance.Instance.Enter("NOT REQUIRED").In(challengeAnswer);
-            activationAction.ClickNext(browserInstance, activationNextButton);
-
+            activationAction.TestValidUserDetails(browserInstance, msisdn, username, activationNumber, userAlias,challengeQuestion, challengeAnswer, activationNextButton);
 
             Thread.Sleep(2000);
             browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser");
 
             getOTPControls(browserInstance, out otp, out otpNextButton, out optResendButton, out otpErrorMessage);
             activationAction.EnterAndVerifyOTPValue(browserInstance, otp, Classes.TestData.Instance.DefaultData.ActivationData.OTP);
-            activationAction.ClickNext(browserInstance, otpNextButton);
+            Helpers.Instance.ClickButton(browserInstance, otpNextButton);
 
             Thread.Sleep(2000);
             browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-managecatalogue");
 
             var catPageNext = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > div > div.nextBtnSection > button");
             var catPageUpdate = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > form:nth-child(3) > div.formRow > button");
-            activationAction.ClickNext(browserInstance, catPageNext);
-            activationAction.ClickNext(browserInstance, catPageUpdate);
+            Helpers.Instance.ClickButton(browserInstance, catPageNext);
+            Helpers.Instance.ClickButton(browserInstance, catPageUpdate);
 
             var waiting = browserInstance.Instance.Find("#loading-wating-messages");
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Class("hide").On("#loading-wating-messages"), TimeSpan.FromMinutes(30));
@@ -104,14 +94,13 @@ namespace TestProj.Tests.AccessingApplication
 
         }
 
-        private void getActivationControls(Classes.Browser browserInstance, out FluentAutomation.ElementProxy msisdn, out FluentAutomation.ElementProxy username, out FluentAutomation.ElementProxy activationNumber, out FluentAutomation.ElementProxy userAlias, out FluentAutomation.ElementProxy challengeAnswer, out FluentAutomation.ElementProxy activationNextButton, out FluentAutomation.ElementProxy errorMessage)
+        private void getActivationControls(Classes.Browser browserInstance, out FluentAutomation.ElementProxy msisdn, out FluentAutomation.ElementProxy username, out FluentAutomation.ElementProxy activationNumber, out FluentAutomation.ElementProxy userAlias, out FluentAutomation.ElementProxy challengeQuestion, out FluentAutomation.ElementProxy challengeAnswer, out FluentAutomation.ElementProxy activationNextButton, out FluentAutomation.ElementProxy errorMessage)
         {
             msisdn = browserInstance.Instance.Find("#msisdn");
             username = browserInstance.Instance.Find("#username");
             activationNumber = browserInstance.Instance.Find("#activationNumber");
             userAlias = browserInstance.Instance.Find("#userAlias");
-            //FIELD CANNOT BE REQUIRED -> IT IS A DROP DOWN
-            //var challengeQuestion = browserInstance.Instance.Find("challengeQuestion");
+            challengeQuestion = browserInstance.Instance.Find("#challengeQuestion");
             challengeAnswer = browserInstance.Instance.Find("#challengeAnswer");
 
             activationNextButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(8) > div > input");
@@ -206,9 +195,9 @@ namespace TestProj.Tests.AccessingApplication
             // 12. Verify that the basket label is displayed
             accessingApplicationAction.VerifyBasketLabelExists(browserInstance);
             // 13. Verify that the basket total amount of items field is displayed
-             accessingApplicationAction.VerifyBasketTotalAmountExists(browserInstance);
+            accessingApplicationAction.VerifyBasketTotalAmountExists(browserInstance);
             // 14. Verify that the search field is displayed on the top right hand corner of the screen
-             accessingApplicationAction.VerifySearchFieldExists(browserInstance);
+            accessingApplicationAction.VerifySearchFieldExists(browserInstance);
             // 15. Verify the text in the search field, it states that i am looking for
             accessingApplicationAction.VerifySearchFieldTextExists(browserInstance);
             // 16. Verify that the search text field is editable

@@ -135,6 +135,7 @@
     <Compile Include="Tests\Basket\BasketActions.cs" />
     <Compile Include="Tests\Catalogues\Catalogues.cs" />
     <Compile Include="Tests\Catalogues\CataloguesActions.cs" />
+    <Compile Include="Tests\Common\Helpers.cs" />
     <Compile Include="Tests\ContactUs\ContactUs.cs" />
     <Compile Include="Tests\ContactUs\ContactUsActions.cs" />
     <Compile Include="Tests\Favourites\Favourites.cs" />
