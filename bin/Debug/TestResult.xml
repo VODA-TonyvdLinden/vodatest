@@ -1,41 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-27" time="15:32:45">
+<test-results name="C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-11-28" time="08:45:20">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.6421" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="V000032056" user="kennedch" user-domain="VF-ROOT" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="34.723" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\kennedch\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="16.126" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="34.707" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="16.126" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="34.707" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="16.126" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Activation" executed="True" result="Failure" success="False" time="34.706" asserts="0">
+              <test-suite type="Namespace" name="Activation" executed="True" result="Success" success="True" time="16.125" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Failure" success="False" time="34.704" asserts="0">
+                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Success" success="True" time="16.125" asserts="0">
                     <categories>
                       <category name="Activation" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Activation.Activation._12_SetupCatalogueValidations" description="_12_SetupCatalogueValidations" executed="True" result="Error" success="False" time="22.799" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation._10_CorrectOneTimePin" description="_10_CorrectOneTimePin" executed="True" result="Success" success="True" time="3.674" asserts="0">
                         <categories>
-                          <category name="Setup_Catalogue" />
+                          <category name="Verify_user(OTP)" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
-                        <failure>
-                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
-  ----> FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector []]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IActivationActions_a77e9534ddaa4cd7b142832786bdc746.TestCatalogueSeachValidation(Browser browserInstance, ElementProxy searchValue, ElementProxy mcatSearchButton, ElementProxy mcatErrorMessage)
-at TestProj.Tests.Activation.Activation._12_SetupCatalogueValidations() in c:\Users\kennedch\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 671
---FluentElementNotFoundException
-at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
-at FluentAutomation.ElementProxy.get_Element()
-at lambda_method(Closure )
-at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
-at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
-]]></stack-trace>
-                        </failure>
                       </test-case>
                     </results>
                   </test-suite>

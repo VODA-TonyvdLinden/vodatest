@@ -1180,3 +1180,12 @@
 2014-11-27 15:28:47,658 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: _12_SetupCatalogueValidations -> 1.9 (SPACES BEFORE AND AFTER) -> No error message found on page 
 2014-11-27 15:28:47,660 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestCatalogueSeachValidation executed in 3 seconds
 2014-11-27 15:32:41,309 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestCatalogueSeachValidation executed in 6 seconds
+2014-11-28 07:52:40,645 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 1 seconds
+2014-11-28 07:53:59,626 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-28 07:53:59,709 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-28 07:54:00,086 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _10_CorrectOneTimePin -> Test case passed
+2014-11-28 07:54:50,965 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestMandatoryFields executed in 5 seconds
+2014-11-28 08:44:53,303 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestMandatoryFields executed in 5 seconds
+2014-11-28 08:45:15,682 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-11-28 08:45:15,737 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-11-28 08:45:16,177 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _10_CorrectOneTimePin -> Test case passed
