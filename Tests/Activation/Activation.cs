@@ -661,8 +661,6 @@ namespace TestProj.Tests.Activation
 
             /// 1. Search Field Validation
             activationAction.TestCatalogueSeachValidation(browserInstance, mcatSearch, mcatSearchButton, mcatErrorMessage);
-
-
         }
 
         /// <summary>
