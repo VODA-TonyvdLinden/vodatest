@@ -146,11 +146,14 @@ namespace TestProj.Tests.Common
             //   1.1.2 Enter valid  username
             FieldInput(browserInstance, username, TestData.Instance.DefaultData.ActivationData.Username);
 
+            //   1.1.4  Enter any user defined preferred alias
+            FieldInput(browserInstance, userAlias, TestData.Instance.DefaultData.ActivationData.Alias);
+
             //   1.1.3  Enter valid activation key, any number/string that is accepted by the field
             FieldInput(browserInstance, activationNumber, TestData.Instance.DefaultData.ActivationData.ActivationKey);
 
-            //   1.1.4  Enter any user defined preferred alias
-            FieldInput(browserInstance, userAlias, TestData.Instance.DefaultData.ActivationData.Alias);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists(string.Format("#challengeQuestion > option:nth-child({0})", TestData.Instance.DefaultData.ActivationData.ChallengeQuestion)), TimeSpan.FromMinutes(30));
+
 
             DropdownItemSelect(browserInstance, challengeQuestion, TestData.Instance.DefaultData.ActivationData.ChallengeQuestion);
 

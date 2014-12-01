@@ -65,19 +65,31 @@ namespace TestProj.Tests.AccessingApplication
 
             activationAction.TestValidUserDetails(browserInstance, msisdn, username, activationNumber, userAlias,challengeQuestion, challengeAnswer, activationNextButton);
 
-            Thread.Sleep(2000);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"), TimeSpan.FromMinutes(30));
             browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser");
+
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#otp"), TimeSpan.FromMinutes(30));
 
             getOTPControls(browserInstance, out otp, out otpNextButton, out optResendButton, out otpErrorMessage);
             activationAction.EnterAndVerifyOTPValue(browserInstance, otp, Classes.TestData.Instance.DefaultData.ActivationData.OTP);
             Helpers.Instance.ClickButton(browserInstance, otpNextButton);
 
-            Thread.Sleep(2000);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-managecatalogue"), TimeSpan.FromMinutes(30));
             browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-managecatalogue");
+
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#accordion"), TimeSpan.FromMinutes(30));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#accordion > div:nth-child(1) > div.title.rightarrow.catalog1.downarrow"), TimeSpan.FromMinutes(30));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#accordion > div:nth-child(4) > div.title.rightarrow.catalog4"), TimeSpan.FromMinutes(30));
 
             var catPageNext = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > div > div.nextBtnSection > button");
             var catPageUpdate = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > form:nth-child(3) > div.formRow > button");
             Helpers.Instance.ClickButton(browserInstance, catPageNext);
+            Thread.Sleep(100);
+            Helpers.Instance.ClickButton(browserInstance, catPageNext);
+
+            browserInstance.Instance.Assert.Exists("#messageBlock > ul > li:nth-child(1) > div > div:nth-child(3) > ul > li");
+            browserInstance.Instance.Assert.Exists("#messageBlock > ul > li:nth-child(2) > div > div:nth-child(3) > ul > li");
+
             Helpers.Instance.ClickButton(browserInstance, catPageUpdate);
 
             var waiting = browserInstance.Instance.Find("#loading-wating-messages");

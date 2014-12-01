@@ -156,13 +156,13 @@ namespace TestProj.Tests.AccessingApplication
         public void VerifySearchFieldTextExists(Classes.Browser browserInstance)
         {
             // 15. Verify the text in the search field, it states that i am looking for
-            var searchBox = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > input");
+            var searchBox = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
             browserInstance.Instance.Assert.Attribute("placeholder", "I'm looking for...").On(searchBox);
         }
         public void VerifySearchFieldTextEditableExists(Classes.Browser browserInstance)
         {
             // 16. Verify that the search text field is editable
-            var searchBox = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > input");
+            var searchBox = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
             browserInstance.Instance.Enter("test").In(searchBox);
             browserInstance.Instance.Assert.Text("test").In(searchBox);
 
