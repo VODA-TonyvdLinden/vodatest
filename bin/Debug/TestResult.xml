@@ -1,28 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-01" time="13:07:27">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-01" time="16:50:14">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Windows\system32" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="64.574" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="121.873" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="64.556" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="121.855" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="64.556" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="121.854" asserts="0">
             <results>
-              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Success" success="True" time="64.555" asserts="0">
+              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Failure" success="False" time="121.854" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="AccessingApplication" description="AccessingApplication" executed="True" result="Success" success="True" time="64.553" asserts="0">
+                  <test-suite type="TestFixture" name="AccessingApplication" description="AccessingApplication" executed="True" result="Failure" success="False" time="121.851" asserts="0">
                     <categories>
                       <category name="AccessingApplication" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication._01_ActivationLandingPage" description="_01_ActivationLandingPage" executed="True" result="Success" success="True" time="0.916" asserts="0">
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplication._04_ApplicationWithMultipleSpazas" description="_04_ApplicationWithMultipleSpazas" executed="True" result="Error" success="False" time="8.880" asserts="0">
                         <categories>
                           <category name="Accessing app" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [/html/body/div[1]/div/div/ng-include/div/div/div[2]/div[1]/div[4]/div/span[2]/ul/li[2]/a]]]></message>
+                          <stack-trace><![CDATA[at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.BaseCommandProvider.WaitUntil(Expression`1 conditionAction, TimeSpan timeout)
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.CommandProvider.Click(ElementProxy element)
+at FluentAutomation.ActionSyntaxProvider.Click(ElementProxy element)
+at TestProj.Tests.Common.Helpers.ClickButton(Browser browserInstance, ElementProxy buttonProxy) in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Common\Helpers.cs:line 64
+at TestProj.Tests.AccessingApplication.AccessingApplication._04_ApplicationWithMultipleSpazas() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\AccessingApplication\AccessingApplication.cs:line 364
+--FluentElementNotFoundException
+at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
+at FluentAutomation.ElementProxy.get_Element()
+at FluentAutomation.CommandProvider.<>c__DisplayClass18.<Click>b__17()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
                       </test-case>
                     </results>
                   </test-suite>

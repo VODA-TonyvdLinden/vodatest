@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TestProj.Classes;
+using TestProj.Tests.Common;
 
 namespace TestProj.Tests.AccessingApplication
 {
@@ -166,6 +167,92 @@ namespace TestProj.Tests.AccessingApplication
             browserInstance.Instance.Enter("test").In(searchBox);
             browserInstance.Instance.Assert.Text("test").In(searchBox);
 
+        }
+        public void VerifyAlertSearchBox(Classes.Browser browserInstance)
+        {
+            var alertLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.alertStatus > a > div");
+            Helpers.Instance.ClickButton(browserInstance, alertLink);
+            var searchBox = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
+            //   2.1.1 Please enter alphanumeric  < 07@ >
+            //   2.1.2 Please enter space before entering input on the field
+            //   2.1.3 Please enter special characters  <@@, &&> 
+            //   2.1.4 Please enter decimal numbers <0.00444> 
+            //   2.1.5 Please enter negative value <-1>
+            Helpers.Instance.TestFieldInputValidation(browserInstance, searchBox);
+            LogWriter.Instance.Log("TESTCASE:_02_ApplicationFieldValidation -> What is supposed to happen when invalid chars are inserted in the box? is it supposed to disallow you totally, or are you supposed to get an error of some type?", LogWriter.eLogType.Error);
+        }
+        public void VerifyBaskSearchBox(Classes.Browser browserInstance)
+        {
+            var basketLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.basketLinkContainer > div");
+            Helpers.Instance.ClickButton(browserInstance, basketLink);
+
+            // 3. Verify that the basket search field validations
+            //   3.1.1 Please enter alphanumeric  < 07@ >
+            //   3.1.2 Please enter space before entering input on the field
+            //   3.1.3 Please enter special characters  <@@, &&> 
+            //   3.1.4 Please enter decimal numbers <0.00444> 
+            //   3.1.5 Please enter negative value <-1>
+            var searchBox = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
+            LogWriter.Instance.Log("TESTCASE:_02_ApplicationFieldValidation -> What is supposed to happen when invalid chars are inserted in the box? is it supposed to disallow you totally, or are you supposed to get an error of some type?", LogWriter.eLogType.Error);
+            Helpers.Instance.TestFieldInputValidation(browserInstance, searchBox);
+        }
+
+        public void VerifySubAppAccessibility(Classes.Browser browserInstance)
+        {
+            // 3. Verify that the sub applications are in active for this version
+            var multiApplications = browserInstance.Instance.FindMultiple("#landingPage > div > div.rightBlock > div > div > div > div");
+            int firstInstance = 1;
+            LogWriter.Instance.Log("TESTCASE:_03_ApplicationLandingContentsFunctionality -> Test case wrong. The first application link is a link to specials, and is clickable", LogWriter.eLogType.Error);
+            multiApplications.Elements.ForEach((elementTuple) =>
+            {
+                //The first application is a link and not an app
+                if (firstInstance > 1)
+                {
+                    var commandProvider = elementTuple.Item1;
+                    var elementFunc = elementTuple.Item2;
+
+                    FluentAutomation.ElementProxy proxy = new FluentAutomation.ElementProxy(commandProvider, elementFunc);
+                    //   3.1 Click on the sub application place holder to see if they are accessable
+                    Helpers.Instance.ClickButton(browserInstance, proxy);
+                    //   3.1 The sub applications place holders are not accessable
+                    browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main");
+                }
+
+                firstInstance++;
+            });
+        }
+
+        public void VerifyMarbilAccessibility(Classes.Browser browserInstance)
+        {
+            // NB. Please note that the marbil add is only accesible when application is online 
+            if (Helpers.Instance.ApplicationIsOnline(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.networkStatus > div"))
+            {
+                // 2. Verify the Marbil add if is clickable
+                //   2.1 Click on the Marbil ad that is displayed on the screen.
+                var marbil = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.headerAdd.normalHeaderWidth");
+                Helpers.Instance.ClickButton(browserInstance, marbil);
+                //   2.1 The item selected from the marbil add is displayed
+                browserInstance.Instance.Assert.Url("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.headerAdd.normalHeaderWidth > img");
+                LogWriter.Instance.Log("TESTCASE:_03_ApplicationLandingContentsFunctionality -> Cannot test MARBIL. Nothing happens when you click on it.", LogWriter.eLogType.Error);
+                LogWriter.Instance.Log("TESTCASE:_03_ApplicationLandingContentsFunctionality -> is the MARBIL page url always the same?", LogWriter.eLogType.Error);
+            }
+            else
+            {
+                LogWriter.Instance.Log("TESTCASE:_03_ApplicationLandingContentsFunctionality -> Application is offline. Cannot test MARBIL", LogWriter.eLogType.Info);
+            }
+        }
+
+        public void VerifySpecialAccessibility(Classes.Browser browserInstance)
+        {
+            //   1.1 Select any specail within the catalogue to see if is selectable by a single click
+            var specialItem = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.leftBlock > div > div > div > div:nth-child(1) > div > div");
+            Helpers.Instance.ClickButton(browserInstance, specialItem);
+            //   1.1 The selected item is marked
+            LogWriter.Instance.Log("TESTCASE:_03_ApplicationLandingContentsFunctionality -> Item is not market when single click. Cannot test for this. Test case wrong. Same behaviour as double click", LogWriter.eLogType.Error);
+            //   1.2 double click on the item to see if clickable
+            Helpers.Instance.DoubleClickButton(browserInstance, specialItem);
+            //   1.2 The item is clickable and is displayed on the user interface two show that the user has selected it.
+            Helpers.Instance.Exists(browserInstance, "#product_modal > div");
         }
     }
 }

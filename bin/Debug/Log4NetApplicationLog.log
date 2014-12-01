@@ -2478,3 +2478,120 @@ R81.86
 2014-12-01 13:07:22,671 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldExists executed in 0 seconds
 2014-12-01 13:07:22,702 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldTextExists executed in 0 seconds
 2014-12-01 13:07:22,937 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldTextEditableExists executed in 0 seconds
+2014-12-01 15:01:22,885 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidUserDetails executed in 65 seconds
+2014-12-01 15:01:33,717 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-01 15:03:28,994 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-12-01 15:03:29,029 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-12-01 15:03:29,122 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-12-01 15:03:29,123 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-12-01 15:03:29,171 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-01 15:03:29,239 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-01 15:03:29,258 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-12-01 15:03:29,272 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-12-01 15:03:29,272 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-12-01 15:03:29,288 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TETCASE: VerifySubApplicationsExists -> I can see 6 app DIVs, but cannot check if they are enabled or not. PLEASE ADD ENABLE/DISABLE CLASS
+2014-12-01 15:03:29,288 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 0 seconds
+2014-12-01 15:03:29,332 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBottomNavExists executed in 0 seconds
+2014-12-01 15:03:29,355 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyAlertNotificationExists executed in 0 seconds
+2014-12-01 15:03:29,369 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBasketTotalFieldExists executed in 0 seconds
+2014-12-01 15:03:29,383 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBasketLabelExists executed in 0 seconds
+2014-12-01 15:03:29,396 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBasketTotalAmountExists executed in 0 seconds
+2014-12-01 15:03:29,409 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldExists executed in 0 seconds
+2014-12-01 15:03:29,435 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldTextExists executed in 0 seconds
+2014-12-01 15:03:29,630 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldTextEditableExists executed in 0 seconds
+2014-12-01 15:08:10,951 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidUserDetails executed in 11 seconds
+2014-12-01 15:08:12,585 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-01 15:09:30,055 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyAlertSearchBox executed in 5 seconds
+2014-12-01 15:22:54,532 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidUserDetails executed in 11 seconds
+2014-12-01 15:22:55,770 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-01 15:28:41,029 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidUserDetails executed in 10 seconds
+2014-12-01 15:28:42,188 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-01 15:29:50,468 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_03_ApplicationLandingContentsFunctionality -> Item is not market when single click. Cannot test for this. Test case wrong. Same behaviour as double click
+2014-12-01 15:29:50,530 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - statusDisplay BROWSER
+2014-12-01 15:29:50,535 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE:_03_ApplicationLandingContentsFunctionality -> Application is offline. Cannot test MARBIL
+2014-12-01 15:29:50,545 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_03_ApplicationLandingContentsFunctionality -> Test case wrong. The first application link is a link to specials, and is clickable
+2014-12-01 15:29:50,545 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_03_ApplicationLandingContentsFunctionality -> Test case wrong. The first application link is a link to specials, and is clickable
+2014-12-01 15:29:50,575 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_03_ApplicationLandingContentsFunctionality -> Test case wrong. The first application link is a link to specials, and is clickable
+2014-12-01 15:29:50,610 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_03_ApplicationLandingContentsFunctionality -> Test case wrong. The first application link is a link to specials, and is clickable
+2014-12-01 15:29:50,660 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_03_ApplicationLandingContentsFunctionality -> Test case wrong. The first application link is a link to specials, and is clickable
+2014-12-01 15:29:50,705 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_03_ApplicationLandingContentsFunctionality -> Test case wrong. The first application link is a link to specials, and is clickable
+2014-12-01 15:32:04,337 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidUserDetails executed in 11 seconds
+2014-12-01 15:32:05,696 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-01 15:33:26,059 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyAlertSearchBox executed in 5 seconds
+2014-12-01 15:39:44,905 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidUserDetails executed in 9 seconds
+2014-12-01 15:39:46,344 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-01 15:41:11,035 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-12-01 15:41:11,075 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-12-01 15:41:11,196 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-12-01 15:41:11,196 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-12-01 15:41:11,251 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-01 15:41:11,328 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-01 15:41:11,350 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-12-01 15:41:11,367 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-12-01 15:41:11,367 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-12-01 15:41:11,386 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TETCASE: VerifySubApplicationsExists -> I can see 6 app DIVs, but cannot check if they are enabled or not. PLEASE ADD ENABLE/DISABLE CLASS
+2014-12-01 15:41:11,386 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 0 seconds
+2014-12-01 15:41:11,440 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBottomNavExists executed in 0 seconds
+2014-12-01 15:41:11,468 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyAlertNotificationExists executed in 0 seconds
+2014-12-01 15:41:11,484 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBasketTotalFieldExists executed in 0 seconds
+2014-12-01 15:41:11,499 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBasketLabelExists executed in 0 seconds
+2014-12-01 15:41:11,514 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBasketTotalAmountExists executed in 0 seconds
+2014-12-01 15:41:11,529 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldExists executed in 0 seconds
+2014-12-01 15:41:11,559 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldTextExists executed in 0 seconds
+2014-12-01 15:41:11,764 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldTextEditableExists executed in 0 seconds
+2014-12-01 15:41:17,067 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyAlertSearchBox executed in 5 seconds
+2014-12-01 15:41:22,419 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialAccessibility executed in 5 seconds
+2014-12-01 15:42:30,645 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidUserDetails executed in 5 seconds
+2014-12-01 15:42:31,717 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-01 15:43:53,580 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-12-01 15:43:53,620 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-12-01 15:43:53,727 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-12-01 15:43:53,728 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-12-01 15:43:53,783 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-01 15:43:53,865 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-01 15:43:53,887 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2014-12-01 15:43:53,903 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2014-12-01 15:43:53,904 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2014-12-01 15:43:53,920 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TETCASE: VerifySubApplicationsExists -> I can see 6 app DIVs, but cannot check if they are enabled or not. PLEASE ADD ENABLE/DISABLE CLASS
+2014-12-01 15:43:53,920 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 0 seconds
+2014-12-01 15:43:53,973 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBottomNavExists executed in 0 seconds
+2014-12-01 15:43:54,000 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyAlertNotificationExists executed in 0 seconds
+2014-12-01 15:43:54,016 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBasketTotalFieldExists executed in 0 seconds
+2014-12-01 15:43:54,031 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBasketLabelExists executed in 0 seconds
+2014-12-01 15:43:54,046 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBasketTotalAmountExists executed in 0 seconds
+2014-12-01 15:43:54,062 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldExists executed in 0 seconds
+2014-12-01 15:43:54,092 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldTextExists executed in 0 seconds
+2014-12-01 15:43:54,274 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldTextEditableExists executed in 0 seconds
+2014-12-01 15:44:01,846 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyAlertSearchBox executed in 5 seconds
+2014-12-01 15:44:07,126 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialAccessibility executed in 5 seconds
+2014-12-01 15:52:55,942 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidUserDetails executed in 10 seconds
+2014-12-01 15:52:57,025 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-01 15:53:48,876 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-01 15:53:48,936 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-01 15:56:08,769 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidUserDetails executed in 10 seconds
+2014-12-01 15:56:10,338 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-01 15:57:20,749 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-01 15:57:20,803 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-01 15:57:20,952 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-01 16:22:18,330 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidUserDetails executed in 11 seconds
+2014-12-01 16:22:19,319 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-01 16:23:06,600 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-01 16:23:06,653 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-01 16:29:27,498 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidUserDetails executed in 10 seconds
+2014-12-01 16:29:28,569 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-01 16:31:03,280 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-01 16:31:03,360 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-01 16:32:03,533 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidUserDetails executed in 9 seconds
+2014-12-01 16:32:04,920 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-01 16:41:37,824 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidUserDetails executed in 10 seconds
+2014-12-01 16:41:38,923 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-01 16:42:36,445 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-01 16:42:36,507 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-01 16:46:16,392 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidUserDetails executed in 10 seconds
+2014-12-01 16:46:17,474 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-01 16:47:31,957 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-01 16:47:32,066 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-01 16:48:36,833 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidUserDetails executed in 12 seconds
+2014-12-01 16:48:42,440 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-01 16:50:04,441 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-01 16:50:04,664 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds

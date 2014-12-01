@@ -19,6 +19,12 @@ namespace TestProj.Interfaces
         void VerifySearchFieldExists(Classes.Browser browserInstance);
         void VerifySearchFieldTextExists(Classes.Browser browserInstance);
         void VerifySearchFieldTextEditableExists(Classes.Browser browserInstance);
+        void VerifyAlertSearchBox(Classes.Browser browserInstance);
+        void VerifyBaskSearchBox(Classes.Browser browserInstance);
+        void VerifySubAppAccessibility(Classes.Browser browserInstance);
+        void VerifyMarbilAccessibility(Classes.Browser browserInstance);
+        void VerifySpecialAccessibility(Classes.Browser browserInstance);
+
 
     }
 }

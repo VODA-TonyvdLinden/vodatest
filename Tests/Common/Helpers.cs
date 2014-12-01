@@ -63,7 +63,10 @@ namespace TestProj.Tests.Common
         {
             browserInstance.Instance.Click(buttonProxy);
         }
-
+        public void DoubleClickButton(Classes.Browser browserInstance, FluentAutomation.ElementProxy buttonProxy)
+        {
+            browserInstance.Instance.DoubleClick(buttonProxy);
+        }
         public void TestMandatory(Classes.Browser browserInstance, FluentAutomation.ElementProxy fieldProxy)
         {
             browserInstance.Instance.Assert.Attribute("required").On(fieldProxy);
@@ -105,6 +108,24 @@ namespace TestProj.Tests.Common
             var onlineOfflineIndicator = GetProxy(browserInstance, onlineIndicatorPath);
             CheckClass(browserInstance, "statusDisplay", onlineOfflineIndicator);
             CheckClass(browserInstance, "online", onlineOfflineIndicator);
+        }
+
+        public bool ApplicationIsOnline(Classes.Browser browserInstance, string onlineIndicatorPath)
+        {
+            Exists(browserInstance, onlineIndicatorPath);
+            var onlineOfflineIndicator = GetProxy(browserInstance, onlineIndicatorPath);
+
+            foreach (var element in onlineOfflineIndicator.Elements)
+            {
+                var commandProvider2 = element.Item1;
+                var elementFunc2 = element.Item2;
+                var newEl = elementFunc2();
+                LogWriter.Instance.Log(newEl.Attributes.Get("class"), LogWriter.eLogType.Fatal);
+                if (newEl.Attributes.Get("class").Contains("online"))
+                    return true;
+            }
+
+            return false;
         }
 
         public void CheckOfflineIndicator(Classes.Browser browserInstance, string onlineIndicatorPath)
