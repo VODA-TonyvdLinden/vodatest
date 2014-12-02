@@ -248,14 +248,16 @@ namespace TestProj.Tests.AccessingApplication
         /// Environment: Application Landiing page
         /// TEST STEPS:
         /// 1.Select the alerts search field
-        /// 2. Verify that the alerts search field validations                                                                                          2.1.1 Please enter alphanumeric  < 07@ >
+        /// 2. Verify that the alerts search field validations                                                                                          
+        /// 2.1.1 Please enter alphanumeric  < 07@ >
         /// 2.1.2 Please enter space before entering input on the field
         /// 2.1.3 Please enter special characters  <@@, &&> 
         /// 2.1.4 Please enter decimal numbers <0.00444> 
         /// 2.1.5 Please enter negative value <-1>  
         /// TEST OUTPUT:
         /// 1. Focus on the alerts search field    
-        /// 2.Invalid data should not be allowed to be entered in alerts field                                                                                                                                                             2.1.1 alphanumeric are not allowed    
+        /// 2.Invalid data should not be allowed to be entered in alerts field                                                                                                                                                             
+        /// 2.1.1 alphanumeric are not allowed    
         /// 2.1.2 a space before any input  is not allowed  
         /// 2.1.3 special characters are not allowed    
         /// 2.1.4 decimal numbers or float are not allowed   
