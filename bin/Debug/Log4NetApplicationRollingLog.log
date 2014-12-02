@@ -2595,3 +2595,20 @@ R81.86
 2014-12-01 16:48:42,440 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
 2014-12-01 16:50:04,441 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
 2014-12-01 16:50:04,664 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-02 09:12:04,899 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestValidUserDetails executed in 2 seconds
+2014-12-02 09:12:05,902 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-02 09:12:58,919 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_03_ApplicationLandingContentsFunctionality -> Item is not market when single click. Cannot test for this. Test case wrong. Same behaviour as double click
+2014-12-02 09:12:58,961 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpecialAccessibility executed in 0 seconds
+2014-12-02 09:12:59,053 [TestRunnerThread] FATAL TestProj.Classes.LogWriter - statusDisplay BROWSER
+2014-12-02 09:12:59,058 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TESTCASE:_03_ApplicationLandingContentsFunctionality -> Application is offline. Cannot test MARBIL
+2014-12-02 09:12:59,059 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyMarbilAccessibility executed in 0 seconds
+2014-12-02 09:12:59,065 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_03_ApplicationLandingContentsFunctionality -> Test case wrong. The first application link is a link to specials, and is clickable
+2014-12-02 09:12:59,230 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySubAppAccessibility executed in 0 seconds
+2014-12-02 09:13:21,848 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestValidUserDetails executed in 1 seconds
+2014-12-02 09:13:23,018 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-02 09:51:00,445 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestValidUserDetails executed in 2 seconds
+2014-12-02 09:51:01,547 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-02 09:52:57,573 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestValidUserDetails executed in 1 seconds
+2014-12-02 09:52:58,883 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-02 10:01:30,005 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestValidUserDetails executed in 2 seconds
+2014-12-02 10:01:31,105 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds

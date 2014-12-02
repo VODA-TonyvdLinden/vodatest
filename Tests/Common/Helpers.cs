@@ -158,27 +158,55 @@ namespace TestProj.Tests.Common
             browserInstance.Instance.Assert.Class("purpleButton").On(buttonProxy);
         }
 
-        public void _ActivationForm_EnterCorrectUserDetails(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy challengeQuestion, FluentAutomation.ElementProxy challengeAnswer, FluentAutomation.ElementProxy nextButton)
+        public void _ActivationForm_EnterCorrectMultiUserDetails(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy challengeQuestion, FluentAutomation.ElementProxy challengeAnswer, FluentAutomation.ElementProxy nextButton)
         {
 
             //   1.1.1 Enter valid msisdn
-            FieldInput(browserInstance, msisdn, TestData.Instance.DefaultData.ActivationData.MSISDN);
+            FieldInput(browserInstance, msisdn, TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.MSISDN);
 
             //   1.1.2 Enter valid  username
-            FieldInput(browserInstance, username, TestData.Instance.DefaultData.ActivationData.Username);
+            FieldInput(browserInstance, username, TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Username);
 
             //   1.1.4  Enter any user defined preferred alias
-            FieldInput(browserInstance, userAlias, TestData.Instance.DefaultData.ActivationData.Alias);
+            FieldInput(browserInstance, userAlias, TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Alias);
 
             //   1.1.3  Enter valid activation key, any number/string that is accepted by the field
-            FieldInput(browserInstance, activationNumber, TestData.Instance.DefaultData.ActivationData.ActivationKey);
+            FieldInput(browserInstance, activationNumber, TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.ActivationKey);
 
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists(string.Format("#challengeQuestion > option:nth-child({0})", TestData.Instance.DefaultData.ActivationData.ChallengeQuestion)), TimeSpan.FromMinutes(30));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists(string.Format("#challengeQuestion > option:nth-child({0})", TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.ChallengeQuestion)), TimeSpan.FromMinutes(30));
 
 
-            DropdownItemSelect(browserInstance, challengeQuestion, TestData.Instance.DefaultData.ActivationData.ChallengeQuestion);
+            DropdownItemSelect(browserInstance, challengeQuestion, TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.ChallengeQuestion);
 
-            FieldInput(browserInstance, challengeAnswer, TestData.Instance.DefaultData.ActivationData.ChallengeAnswer);
+            FieldInput(browserInstance, challengeAnswer, TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.ChallengeAnswer);
+
+            //#challengeQuestion > option:nth-child(4)
+            //   1.1.5 Press the next button
+
+            ClickButton(browserInstance, nextButton);
+        }
+
+        public void _ActivationForm_EnterCorrectSingleUserDetails(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy challengeQuestion, FluentAutomation.ElementProxy challengeAnswer, FluentAutomation.ElementProxy nextButton)
+        {
+
+            //   1.1.1 Enter valid msisdn
+            FieldInput(browserInstance, msisdn, TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.MSISDN);
+
+            //   1.1.2 Enter valid  username
+            FieldInput(browserInstance, username, TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.Username);
+
+            //   1.1.4  Enter any user defined preferred alias
+            FieldInput(browserInstance, userAlias, TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.Alias);
+
+            //   1.1.3  Enter valid activation key, any number/string that is accepted by the field
+            FieldInput(browserInstance, activationNumber, TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.ActivationKey);
+
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists(string.Format("#challengeQuestion > option:nth-child({0})", TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.ChallengeQuestion)), TimeSpan.FromMinutes(30));
+
+
+            DropdownItemSelect(browserInstance, challengeQuestion, TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.ChallengeQuestion);
+
+            FieldInput(browserInstance, challengeAnswer, TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.ChallengeAnswer);
 
             //#challengeQuestion > option:nth-child(4)
             //   1.1.5 Press the next button

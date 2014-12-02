@@ -43,7 +43,7 @@ namespace TestProj.Tests.AccessingApplication
             // 5. Verify that the preferred alias name is displayed on top right hand corner of the app with 
             browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.aliasName.ng-binding");
             var alias = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.aliasName.ng-binding");
-            browserInstance.Instance.Assert.True(() => alias.Element.Text == TestData.Instance.DefaultData.ActivationData.Alias);
+            browserInstance.Instance.Assert.True(() => alias.Element.Text == TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Alias);
         }
         public void VerifySpazaName(Classes.Browser browserInstance)
         {
@@ -53,13 +53,13 @@ namespace TestProj.Tests.AccessingApplication
 
             //LogWriter.Instance.Log(spazaName.Element.Text, LogWriter.eLogType.Error);
 
-            Classes.TestDataClasses.Spaza spaza = TestData.Instance.DefaultData.ActivationData.Spazas.Find(s => s.Name == spazaName.Element.Text);
+            Classes.TestDataClasses.Spaza spaza = TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas.Find(s => s.Name == spazaName.Element.Text);
             if (spaza == null)
             {
-                LogWriter.Instance.Log(string.Format("TESTCASE: VerifySpazaName -> {0} is not configured as a spaza shop for {1}", spazaName.Element.Text, TestData.Instance.DefaultData.ActivationData.Username), LogWriter.eLogType.Error);
-                if (TestData.Instance.DefaultData.ActivationData.Spazas.Count < 1)
-                    LogWriter.Instance.Log(string.Format("TESTCASE: VerifySpazaName -> There are no spaza shops configured for {0}", TestData.Instance.DefaultData.ActivationData.Username), LogWriter.eLogType.Error);
-                spaza = TestData.Instance.DefaultData.ActivationData.Spazas[0];
+                LogWriter.Instance.Log(string.Format("TESTCASE: VerifySpazaName -> {0} is not configured as a spaza shop for {1}", spazaName.Element.Text, TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Username), LogWriter.eLogType.Error);
+                if (TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas.Count < 1)
+                    LogWriter.Instance.Log(string.Format("TESTCASE: VerifySpazaName -> There are no spaza shops configured for {0}", TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Username), LogWriter.eLogType.Error);
+                spaza = TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas[0];
             }
 
             browserInstance.Instance.Assert.True(() => spazaName.Element.Text == spaza.Name);

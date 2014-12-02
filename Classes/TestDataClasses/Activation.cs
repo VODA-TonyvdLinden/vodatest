@@ -11,28 +11,12 @@ namespace TestProj.Classes.TestDataClasses
     {
         public Activation()
         {
-            Spazas = new List<Spaza>();
+            SingleSpazaUser = new User();
+            MultiSpazaUser = new User();
         }
-        [XmlElement]
-        public string Username { get; set; }
-        [XmlElement]
-        public string MSISDN { get; set; }
-        [XmlElement]
-        public string ActivationKey { get; set; }
-        [XmlElement]
-        public string Alias { get; set; }
-        [XmlElement]
-        public string OTP { get; set; }
-        [XmlElement]
-        public string InvalidOTP { get; set; }
-        [XmlElement]
-        public string ExpiredOPT { get; set; }
-        [XmlElement]
-        public int ChallengeQuestion { get; set; }
-        [XmlElement]
-        public string ChallengeAnswer { get; set; }
-        [XmlArray]
-        public List<Spaza> Spazas { get; set; }
+
+        public User SingleSpazaUser { get; set; }
+        public User MultiSpazaUser { get; set; }
 
     }
 }

@@ -108,6 +108,7 @@
     <Compile Include="Classes\TestDataClasses\Activation.cs" />
     <Compile Include="Classes\TestDataClasses\BuildDefaultData.cs" />
     <Compile Include="Classes\TestDataClasses\Defaults.cs" />
+    <Compile Include="Classes\TestDataClasses\User.cs" />
     <Compile Include="Classes\Timer.cs" />
     <Compile Include="Classes\XMLSeriallizer.cs" />
     <Compile Include="Interfaces\IAlertsActions.cs" />
