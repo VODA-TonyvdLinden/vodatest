@@ -2612,3 +2612,15 @@ R81.86
 2014-12-02 09:52:58,883 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
 2014-12-02 10:01:30,005 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestValidUserDetails executed in 2 seconds
 2014-12-02 10:01:31,105 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-02 12:28:49,995 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestValidUserDetails executed in 2 seconds
+2014-12-02 12:28:50,907 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-02 12:32:00,393 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestValidMultiUserDetails executed in 2 seconds
+2014-12-02 12:32:01,673 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-02 12:32:44,873 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IContactUs_GoToContactUs executed in 0 seconds
+2014-12-02 12:32:44,879 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_01_ContactUsTest -> Test step unclear. '2.1 Verify that customer service contact number' - Update test case
+2014-12-02 12:32:45,142 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IContactUs_VerifyCustomerServiceContactNo executed in 0 seconds
+2014-12-02 12:32:45,198 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IContactUs_VerifyPerfectStartupSection executed in 0 seconds
+2014-12-02 12:32:45,254 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IContactUs_VerifySelfServiceSection executed in 0 seconds
+2014-12-02 12:32:45,276 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_01_ContactUsTest -> Test case incomplete - Submenu check for frequently asked not specified. Update test case
+2014-12-02 12:32:45,313 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IContactUs_VerifyFAQSection executed in 0 seconds
+2014-12-02 12:32:45,314 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_01_ContactUsTest -> Test case incomplete - There is no test specified for the back button. Update test case

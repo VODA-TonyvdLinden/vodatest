@@ -45,14 +45,17 @@ namespace TestProj.Tests.Favourites
         /// Environment: Application landing page
         /// TEST STEPS:
         /// 1.Click on the favourites block on the bottom of the screen 
-        /// 2.Verify that delete orders from a specific supplier functions as expected                                                              2.1 Select a specific supplier by clicking  on the checkbox    
+        /// 2.Verify that delete orders from a specific supplier functions as expected                                                              
+        /// 2.1 Select a specific supplier by clicking  on the checkbox    
         /// 2.2 Click on the delete icon    
-        /// 3.Verify that clear all from all basket functions as expected                                                      3.1 Select more than one  supplier by clicking  on the checkboxes of different suppliers 
+        /// 3.Verify that clear all from all basket functions as expected                                                      
+        /// 3.1 Select more than one  supplier by clicking  on the checkboxes of different suppliers 
         /// 3.2 Click on the clear <all> button  
         /// 4. Verify that the list view button is displayed
         /// TEST OUTPUT:
         /// 1. The favourites page is displayed with catalogues in grid view    
-        /// 2.                                                                                                                                                                                                                   2.1 The checkbox on the supplier is clicked   
+        /// 2.                                                                                                                                                                                                                   
+        /// 2.1 The checkbox on the supplier is clicked   
         /// 2.2 The order is deleted from that supplier 
         /// 3.                                                                                                                                                                                                                                                                                                                                                                                                                   3.1 The checkboxes for different suppliers are selected
         /// 3.2 This clear all selected catalogue basket

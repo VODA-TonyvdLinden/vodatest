@@ -48,33 +48,6 @@ namespace TestProj.Tests.AccessingApplication
 
             activate(browserInstance);
 
-            /*
-             
-             <?xml version="1.0" encoding="utf-16"?>
-<Defaults xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <ActivationData>
-    <Username>5212055461087</Username>
-    <MSISDN>0829985519</MSISDN>
-    <ActivationKey>123456</ActivationKey>
-    <Alias>NUnit Tester</Alias>
-    <OTP>151846</OTP>
-    <InvalidOTP>INV123</InvalidOTP>
-    <ExpiredOPT>EXP123</ExpiredOPT>
-    <ChallengeQuestion>3</ChallengeQuestion>
-    <ChallengeAnswer>Pretoria</ChallengeAnswer>
-    <Spazas>
-      <Spaza>
-        <Name>10 City Tuck Shop</Name>
-      </Spaza>
-      <Spaza>
-        <Name>16 Tuck Shop</Name>
-      </Spaza>
-    </Spazas>
-
-  </ActivationData>
-</Defaults>
-             
-             */
         }
 
         [TestFixtureTearDown]
@@ -92,7 +65,7 @@ namespace TestProj.Tests.AccessingApplication
 
             getActivationControls(browserInstance, out msisdn, out username, out activationNumber, out userAlias, out challengeQuestion, out challengeAnswer, out activationNextButton, out activationErrorMessage);
 
-            activationAction.TestValidUserDetails(browserInstance, msisdn, username, activationNumber, userAlias, challengeQuestion, challengeAnswer, activationNextButton);
+            activationAction.TestValidMultiUserDetails(browserInstance, msisdn, username, activationNumber, userAlias, challengeQuestion, challengeAnswer, activationNextButton);
 
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"), TimeSpan.FromMinutes(30));
             browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser");

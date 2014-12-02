@@ -275,7 +275,7 @@ namespace TestProj.Tests.Activation
             //   1.1.3  Enter valid activation key, any number/string that is accepted by the field
             //   1.1.4  Enter any user defined preferred alias
             Classes.LogWriter.Instance.Log("TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST", Classes.LogWriter.eLogType.Error);
-            activationAction.TestValidUserDetails(browserInstance, msisdn, username, activationNumber, userAlias, challengeQuestion, challengeAnswer, activationNextButton);
+            activationAction.TestValidMultiUserDetails(browserInstance, msisdn, username, activationNumber, userAlias, challengeQuestion, challengeAnswer, activationNextButton);
 
             activationAction.ValidateOTPStart(browserInstance, msisdn.Element.Text);
         }
