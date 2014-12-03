@@ -3153,3 +3153,28 @@ R81.86
 2014-12-03 14:03:24,485 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
 2014-12-03 14:03:57,196 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
 2014-12-03 14:03:57,263 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-03 14:09:26,458 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-03 14:09:26,462 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-03 14:10:07,988 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 14:10:08,068 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 14:10:09,158 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 14:10:10,450 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_AddSpecialToBasket executed in 1 seconds
+2014-12-03 14:10:11,198 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 14:10:11,257 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 14:10:11,636 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 3 seconds
+2014-12-03 14:10:11,636 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_04_ApplicationWithMultipleSpazas -> Step 5 inferred by previous sections of the test. Update test case
+2014-12-03 14:10:16,537 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaNameForReturnToApp executed in 4 seconds
+2014-12-03 14:10:30,907 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-03 14:10:30,911 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-03 14:11:11,288 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 14:11:11,519 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 14:11:12,279 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 14:11:12,441 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 0 seconds
+2014-12-03 14:16:47,865 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-03 14:16:47,935 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-03 14:17:58,418 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 14:17:58,486 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 14:17:59,101 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 14:17:59,263 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 0 seconds
+2014-12-03 14:20:50,959 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-03 14:20:51,027 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0

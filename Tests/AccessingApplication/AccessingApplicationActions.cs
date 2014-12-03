@@ -261,6 +261,8 @@ namespace TestProj.Tests.AccessingApplication
             var spazaLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
             Helpers.Instance.ClickButton(browserInstance, spazaLink);
 
+            LogWriter.Instance.Log(string.Format("Current display size = {0}x{1}", browserInstance.Config.Settings.WindowWidth, browserInstance.Config.Settings.WindowHeight), LogWriter.eLogType.Info);
+
             var spazaOne = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName.open > ul > li:nth-child(2) > a");
             var spazaTwo = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName.open > ul > li:nth-child(3) > a");
 

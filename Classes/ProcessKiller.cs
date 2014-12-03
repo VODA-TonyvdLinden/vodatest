@@ -24,7 +24,6 @@ namespace TestProj.Classes
         }
         ProcessKiller()
         {
-            //container.RegisterType<Interfaces.IActivationActions, Tests.Activation.ActivationActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
         }
 
         public void Kill()
@@ -39,12 +38,6 @@ namespace TestProj.Classes
                 LogWriter.Instance.Log(string.Format("Found {0} -> Killing", process.ProcessName), LogWriter.eLogType.Info);
                 process.Kill();
             }
-
-            //foreach (Process proc in Process.GetProcessesByName("chromedriver.exe"))
-            //{
-            //    LogWriter.Instance.Log(string.Format("Found {0} -> Killing", proc.ProcessName), LogWriter.eLogType.Info);
-            //    proc.Kill();
-            //}
         }
     }
 }

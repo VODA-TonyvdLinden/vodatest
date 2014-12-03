@@ -12,10 +12,12 @@ namespace TestProj.Classes.Browsers
     {
         public FluentAutomation.Interfaces.IActionSyntaxProvider Create()
         {
+            FluentConfig.Current.WindowSize(1920, 1080);
+
             SeleniumWebDriver.Bootstrap(
                SeleniumWebDriver.Browser.Chrome
                );
-            FluentConfig.Current.WindowMaximized(true);
+            //FluentConfig.Current.WindowMaximized(true);
 
             return I;
         }
