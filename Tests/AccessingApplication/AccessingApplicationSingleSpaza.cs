@@ -12,8 +12,8 @@ using TestProj.Tests.Common;
 
 namespace TestProj.Tests.AccessingApplication
 {
-    [TestFixture, Description("AccessingApplication"), Category("AccessingApplication")]
-    public class AccessingApplication
+    [TestFixture, Description("AccessingApplicationSingleSpaza"), Category("AccessingApplication"),]
+    public class AccessingApplicationSingleSpaza
     {
         Classes.Browser browserInstance;
         IUnityContainer container = new UnityContainer();
@@ -34,7 +34,6 @@ namespace TestProj.Tests.AccessingApplication
         [TestFixtureSetUp]
         public void Initialise()
         {
-
             browserInstance = new Classes.Browser(Classes.Browser.eBrowser.Chrome);
             browserInstance.Config.ScreenshotPath(Properties.Settings.Default.ScreenshotPath);
             browserInstance.Instance.Wait(5);
@@ -46,8 +45,7 @@ namespace TestProj.Tests.AccessingApplication
             container.RegisterType<Interfaces.IActivationActions, Tests.Activation.ActivationActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
 
 
-            activate(browserInstance);
-
+            activate(browserInstance, true);
         }
 
         [TestFixtureTearDown]
@@ -58,14 +56,17 @@ namespace TestProj.Tests.AccessingApplication
             container.Dispose();
         }
 
-        private void activate(Classes.Browser browserInstance)
+        private void activate(Classes.Browser browserInstance, bool multipleSpazas)
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation"));
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
 
             getActivationControls(browserInstance, out msisdn, out username, out activationNumber, out userAlias, out challengeQuestion, out challengeAnswer, out activationNextButton, out activationErrorMessage);
 
-            activationAction.TestValidMultiUserDetails(browserInstance, msisdn, username, activationNumber, userAlias, challengeQuestion, challengeAnswer, activationNextButton);
+            if (multipleSpazas)
+                activationAction.TestValidMultiUserDetails(browserInstance, msisdn, username, activationNumber, userAlias, challengeQuestion, challengeAnswer, activationNextButton);
+            else
+                activationAction.TestValidSingleUserDetails(browserInstance, msisdn, username, activationNumber, userAlias, challengeQuestion, challengeAnswer, activationNextButton);
 
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"), TimeSpan.FromMinutes(30));
             browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser");
@@ -85,12 +86,21 @@ namespace TestProj.Tests.AccessingApplication
 
             var catPageNext = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > div > div.nextBtnSection > button");
             var catPageUpdate = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > form:nth-child(3) > div.formRow > button");
-            Helpers.Instance.ClickButton(browserInstance, catPageNext);
-            Thread.Sleep(100);
-            Helpers.Instance.ClickButton(browserInstance, catPageNext);
 
-            browserInstance.Instance.Assert.Exists("#messageBlock > ul > li:nth-child(1) > div > div:nth-child(3) > ul > li");
-            browserInstance.Instance.Assert.Exists("#messageBlock > ul > li:nth-child(2) > div > div:nth-child(3) > ul > li");
+            int spazaCount = 0;
+            int totalSpazas = 0;
+            getSpazaCounts(browserInstance, out spazaCount, out totalSpazas);
+
+            for (int k = spazaCount; k < totalSpazas; k++)
+            {
+                Helpers.Instance.ClickButton(browserInstance, catPageNext);
+                Thread.Sleep(100);
+            }
+
+            browserInstance.Instance.Assert.Exists("#catalog1");
+            browserInstance.Instance.Assert.Exists("#catalog2");
+            browserInstance.Instance.Assert.Exists("#catalog3");
+            browserInstance.Instance.Assert.Exists("#catalog4");
 
             Helpers.Instance.ClickButton(browserInstance, catPageUpdate);
 
@@ -103,6 +113,17 @@ namespace TestProj.Tests.AccessingApplication
             Thread.Sleep(3000);
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.headerLogo.left > a > img"), TimeSpan.FromMinutes(30));
 
+        }
+
+        private static void getSpazaCounts(Classes.Browser browserInstance, out int spazaCount, out int totalSpazas)
+        {
+            var SpazaCountElement = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock.managecatalogue.width862px > div > div.txt.ng-binding");
+
+            var working = SpazaCountElement.Element.Text.Split(':')[0];
+            working = working.Replace("Editing catalog for outlets ", "").Replace(" of ", ":");
+            string[] counts = working.Split(':');
+            spazaCount = int.Parse(counts[0]);
+            totalSpazas = int.Parse(counts[1]);
         }
 
         private void getActivationControls(Classes.Browser browserInstance, out FluentAutomation.ElementProxy msisdn, out FluentAutomation.ElementProxy username, out FluentAutomation.ElementProxy activationNumber, out FluentAutomation.ElementProxy userAlias, out FluentAutomation.ElementProxy challengeQuestion, out FluentAutomation.ElementProxy challengeAnswer, out FluentAutomation.ElementProxy activationNextButton, out FluentAutomation.ElementProxy errorMessage)
@@ -125,6 +146,7 @@ namespace TestProj.Tests.AccessingApplication
             optResendButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(4) > div > div > input:nth-child(2)");
             otpErrorMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
         }
+
 
         /// <summary>
         /// TEST: APPLICATION  LANDING PAGE
@@ -277,89 +299,6 @@ namespace TestProj.Tests.AccessingApplication
 
         }
 
-
-        /// <summary>
-        /// TEST: APPLICATION WITH MULTIPLE  SPAZA'S
-        /// Test Case ID: 4_FRS_Ref_5.1.7
-        /// Category: Accessing app
-        /// Feature: Accessing app
-        /// Pre-Condition: None
-        /// Environment: Application Landiing page
-        /// TEST STEPS:
-        /// 1. Logon with a user that has multiple spazas on his profile    
-        /// 2.Verify that the preferred alias name is displayed on top right hand corner of the app with the spaza owner's alias name and spaza name list  
-        /// 3.Select any spaza on the list  
-        /// 4. Verify the following changes basket switches to the outlet specific basket, orders needs to switch to the outlet specific orders (including invoices),catalogues, favourites and Messages  
-        /// 5. Verify that these function is available on all screens, by selecting the user’s active spaza name
-        /// 6. Verify that the default selected spaza at start-up will be the last selected spaza from the previous session. 
-        /// TEST OUTPUT:
-        /// 1.The application will present the user with an option to select a spaza from the list   
-        /// 2.The preferred alias name is displayed on the top right hand corner of the app, with the name spaza owner's alias name and the spaza name list 
-        /// 3. The selected spaza is displayed and  is only valid for the session   
-        /// 4. The basket  switches to the outlet specific basket, orders needs to switch to the outlet specific orders (including invoices)
-        /// ,catalogues, favourites and Messages remain the same"
-        /// 5. The active spaza list is populated for users with multiple spazas
-        /// 6.  The default selected spaza at start-up is the last selected spaza from the previous session. 
-        /// </summary>
-        [Test, Description("_04_ApplicationWithMultipleSpazas"), Category("Accessing app"), Repeat(1)]
-        public void _04_ApplicationWithMultipleSpazas()
-        {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
-            Interfaces.IAccessingApplicationActions accessingApplicationAction = container.Resolve<Interfaces.IAccessingApplicationActions>();
-            // 1. Logon with a user that has multiple spaza's on his profile
-            // 2.Verify that the preferred alias name is displayed on top right hand corner of the app with 
-            //   the spaza owner's alias name and spaza name list
-            accessingApplicationAction.VerifyPreferedAlias(browserInstance);
-            accessingApplicationAction.VerifySpazaName(browserInstance);
-            var spazaName = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
-            string currentSpazaName = spazaName.Element.Text;
-
-            //Add an item to the basket
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.leftBlock > div > div > div > div:nth-child(1) > div > div"));
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button"));
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button"));
-            //Check number of items in basket
-            var basketCount = Helpers.Instance.GetProxy(browserInstance, " body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding");
-            string count = basketCount.Element.Text.Replace(" Items", "").Replace(" ", "");
-            
-            // 3.Select any spaza on the list
-            var spazaLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
-            Helpers.Instance.ClickButton(browserInstance, spazaLink);
-//ISSUE HERE
-            var spazaMenu = Helpers.Instance.GetProxy(browserInstance, "/html/body/div[1]/div/div/ng-include/div/div/div[2]/div[1]/div[4]/div/span[2]/ul/li[2]/a");
-
-            Helpers.Instance.ClickButton(browserInstance, spazaMenu);
-
-            // 3. The selected spaza is displayed and  is only valid for the session
-            accessingApplicationAction.VerifySpazaName(browserInstance);
-            var secondSpazaName = spazaName.Element.Text;
-            browserInstance.Instance.Assert.False(() => currentSpazaName == secondSpazaName);
-
-            // 4. Verify the following changes basket switches to the outlet specific basket,orders needs to 
-            //   switch to the outlet specific orders (including invoices),catalogues, favourites and Messages
-
-            // 4. The basket  switches to the outlet specific basket,orders needs to switch to the outlet specific 
-            //   orders (including invoices),catalogues, favourites and Messages remain the same
-            var secondBasketCount = Helpers.Instance.GetProxy(browserInstance, " body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding");
-            string secondCount = basketCount.Element.Text.Replace(" Items", "").Replace(" ", "");
-            LogWriter.Instance.Log(string.Format("{0} <==> {1}", count, secondCount), LogWriter.eLogType.Fatal);
-
-            browserInstance.Instance.Assert.False(() => count == secondCount);
-
-            LogWriter.Instance.Log("TESTCASE:_04_ApplicationWithMultipleSpazas -> Step 5 inferred by previous sections of the test. Update test case", LogWriter.eLogType.Error);
-            // 5. Verify that these function is available on all screens, by selecting the user’s active spaza name
-            // 5. The active spaza list is populated for users with multiple spaza's
-
-            // 6. Verify that the default selected spaza at startup will be the last selected spaza from the previous session. 
-            // 6.  The default selected spaza at startup is the last selected spaza from the previous session. 
-            browserInstance.Navigate(new Uri("http://www.google.com"));
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://www.google.com"), TimeSpan.FromMinutes(30));
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main"), TimeSpan.FromMinutes(30));
-            spazaName = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
-            string returnSpazaName = spazaName.Element.Text;
-            browserInstance.Instance.Assert.True(() => secondSpazaName == returnSpazaName);
-        }
 
         /// <summary>
         /// TEST: ACCESS APPLICATION WITH SINGLE  SPAZA

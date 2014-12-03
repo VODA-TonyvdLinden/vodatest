@@ -1,7 +1,7 @@
 ﻿using System;
 namespace TestProj.Interfaces
 {
-    public interface IGeneralApplicationNavigationActions
+    public interface ISearchActions
     {
 
     }

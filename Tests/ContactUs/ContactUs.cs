@@ -165,9 +165,6 @@ namespace TestProj.Tests.ContactUs
             LogWriter.Instance.Log("TESTCASE:_01_ContactUsTest -> Test case incomplete - There is no test specified for the back button. Update test case", LogWriter.eLogType.Error);
         }
 
-
-
-
         /// <summary>
         /// TEST: HELP
         /// Test Case ID: 17_FRS_Ref_5.1.7
