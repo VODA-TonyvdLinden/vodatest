@@ -2867,3 +2867,26 @@ R81.86
 2014-12-03 10:29:21,236 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 2 seconds
 2014-12-03 10:29:21,236 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_04_ApplicationWithMultipleSpazas -> Step 5 inferred by previous sections of the test. Update test case
 2014-12-03 10:29:27,023 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaNameForReturnToApp executed in 5 seconds
+2014-12-03 11:12:01,505 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 11:12:01,620 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 11:12:02,856 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 11:12:03,982 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_AddSpecialToBasket executed in 1 seconds
+2014-12-03 11:12:04,696 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 11:12:04,746 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 11:12:05,120 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 3 seconds
+2014-12-03 11:12:05,121 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_04_ApplicationWithMultipleSpazas -> Step 5 inferred by previous sections of the test. Update test case
+2014-12-03 11:12:12,021 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaNameForReturnToApp executed in 6 seconds
+2014-12-03 11:15:34,959 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 11:15:35,067 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 11:15:36,197 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 11:15:37,272 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_AddSpecialToBasket executed in 1 seconds
+2014-12-03 11:15:37,982 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 11:15:38,030 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 11:15:38,396 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 3 seconds
+2014-12-03 11:15:38,396 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_04_ApplicationWithMultipleSpazas -> Step 5 inferred by previous sections of the test. Update test case
+2014-12-03 11:15:44,243 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaNameForReturnToApp executed in 5 seconds
+2014-12-03 11:16:31,271 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-12-03 11:16:31,317 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-12-03 11:16:31,427 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-12-03 11:16:31,427 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-12-03 11:16:36,542 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 5 seconds
