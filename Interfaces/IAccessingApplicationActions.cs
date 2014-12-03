@@ -24,7 +24,10 @@ namespace TestProj.Interfaces
         void VerifySubAppAccessibility(Classes.Browser browserInstance);
         void VerifyMarbilAccessibility(Classes.Browser browserInstance);
         void VerifySpecialAccessibility(Classes.Browser browserInstance);
-
+        void SelectSpaza(Classes.Browser browserInstance, string spazaName);
+        void AddSpecialToBasket(Classes.Browser browserInstance);
+        void VerifySpazaNameForReturnToApp(Classes.Browser browserInstance);
+        void SwitchSpazaAndCheckBasket(Classes.Browser browserInstance, Interfaces.IAccessingApplicationActions accessingApplicationAction);
 
     }
 }

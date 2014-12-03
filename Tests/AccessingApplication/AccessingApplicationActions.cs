@@ -254,5 +254,76 @@ namespace TestProj.Tests.AccessingApplication
             //   1.2 The item is clickable and is displayed on the user interface two show that the user has selected it.
             Helpers.Instance.Exists(browserInstance, "#product_modal > div");
         }
+
+        public void SelectSpaza(Classes.Browser browserInstance, string spazaName)
+        {
+            // 3.Select any spaza on the list
+            var spazaLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
+            //var spazaLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName");
+            //var spazaLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
+            Helpers.Instance.ClickButton(browserInstance, spazaLink);
+            //ISSUE HERE
+
+
+
+            var spazaOne = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName.open > ul > li:nth-child(2) > a");
+            var spazaTwo = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName.open > ul > li:nth-child(3) > a");
+
+            if (spazaOne.Element.Text == spazaName)
+                Helpers.Instance.ClickButton(browserInstance, spazaOne);
+            else
+                if (spazaTwo.Element.Text == spazaName)
+                    Helpers.Instance.ClickButton(browserInstance, spazaTwo);
+        }
+        public void AddSpecialToBasket(Classes.Browser browserInstance)
+        {
+            //Add an item to the basket
+            Helpers.Instance.AddSpecialToBasket(browserInstance);
+        }
+
+        public void VerifySpazaNameForReturnToApp(Classes.Browser browserInstance)
+        {
+            FluentAutomation.ElementProxy spazaName = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
+            string currentSpaza = spazaName.Element.Text;
+
+            browserInstance.Navigate(new Uri("https://www.wikipedia.org/"));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("https://www.wikipedia.org/"), TimeSpan.FromMinutes(30));
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main"), TimeSpan.FromMinutes(30));
+            spazaName = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
+            string returnSpazaName = spazaName.Element.Text;
+            browserInstance.Instance.Assert.True(() => currentSpaza == returnSpazaName);
+        }
+
+        public void SwitchSpazaAndCheckBasket(Classes.Browser browserInstance, Interfaces.IAccessingApplicationActions accessingApplicationAction)
+        {
+            // 4. Verify the following changes basket switches to the outlet specific basket,orders needs to 
+            //   switch to the outlet specific orders (including invoices),catalogues, favourites and Messages
+
+            // 4. The basket  switches to the outlet specific basket,orders needs to switch to the outlet specific 
+            //   orders (including invoices),catalogues, favourites and Messages remain the same
+            //Select first spaza
+            accessingApplicationAction.SelectSpaza(browserInstance, "10 City Tuck Shop");
+            FluentAutomation.ElementProxy spazaName = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
+            browserInstance.Instance.Assert.Text("10 City Tuck Shop").In(spazaName);
+            string currentSpazaName = spazaName.Element.Text;
+            accessingApplicationAction.AddSpecialToBasket(browserInstance);
+            //Check number of items in basket
+            var basketCount = Helpers.Instance.GetProxy(browserInstance, " body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding");
+            string count = basketCount.Element.Text.Replace(" Items", "").Replace(" ", "");
+
+            //Select the next spaza
+            accessingApplicationAction.SelectSpaza(browserInstance, "16 Tuck Shop");
+            // 3. The selected spaza is displayed and  is only valid for the session
+            accessingApplicationAction.VerifySpazaName(browserInstance);
+            browserInstance.Instance.Assert.Text("16 Tuck Shop").In(spazaName);
+            string secondSpazaName = spazaName.Element.Text;
+            browserInstance.Instance.Assert.False(() => currentSpazaName == secondSpazaName);
+
+            var secondBasketCount = Helpers.Instance.GetProxy(browserInstance, " body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding");
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.True(() => basketCount.Element.Text == "0 Items"));
+            string secondCount = basketCount.Element.Text.Replace(" Items", "").Replace(" ", "");
+            browserInstance.Instance.Assert.False(() => count == secondCount);
+        }
     }
 }

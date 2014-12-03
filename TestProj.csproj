@@ -125,8 +125,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Tests\AccessingApplication\AccessingApplicationMultiSpaza.cs" />
     <Compile Include="Tests\AccessingApplication\AccessingApplicationActions.cs" />
-    <Compile Include="Tests\AccessingApplication\AccessingApplication.cs" />
+    <Compile Include="Tests\AccessingApplication\AccessingApplicationSingleSpaza.cs" />
     <Compile Include="Tests\Activation\Activation.cs" />
     <Compile Include="Tests\Activation\ActivationActions.cs" />
     <Compile Include="Interfaces\IActivationActions.cs" />
