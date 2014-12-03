@@ -205,6 +205,8 @@ namespace TestProj.Tests.ContactUs
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IContactUs contactUsActions = container.Resolve<Interfaces.IContactUs>();
+
+            LogWriter.Instance.Log("TESTCASE:_02_Help -> Help page has not been implemented.", LogWriter.eLogType.Error);
             //TODO
         }
     }
