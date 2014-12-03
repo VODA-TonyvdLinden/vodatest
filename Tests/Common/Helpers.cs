@@ -63,10 +63,12 @@ namespace TestProj.Tests.Common
         {
             browserInstance.Instance.Click(buttonProxy);
         }
+
         public void DoubleClickButton(Classes.Browser browserInstance, FluentAutomation.ElementProxy buttonProxy)
         {
             browserInstance.Instance.DoubleClick(buttonProxy);
         }
+
         public void TestMandatory(Classes.Browser browserInstance, FluentAutomation.ElementProxy fieldProxy)
         {
             browserInstance.Instance.Assert.Attribute("required").On(fieldProxy);
@@ -214,6 +216,73 @@ namespace TestProj.Tests.Common
             ClickButton(browserInstance, nextButton);
         }
 
+        public void CheckMultiSpazaPreferedAlias(Classes.Browser browserInstance, string multiSpazaAliasPath)
+        {
+            browserInstance.Instance.Assert.Exists(multiSpazaAliasPath);
+            var alias = browserInstance.Instance.Find(multiSpazaAliasPath);
+            browserInstance.Instance.Assert.True(() => alias.Element.Text == TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Alias);
+        }
+        public void CheckSingleSpazaPreferedAlias(Classes.Browser browserInstance, string singleSpazaAliasPath)
+        {
+            browserInstance.Instance.Assert.Exists(singleSpazaAliasPath);
+            var alias = browserInstance.Instance.Find(singleSpazaAliasPath);
+            browserInstance.Instance.Assert.True(() => alias.Element.Text == TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.Alias);
+        }
 
+        public void CheckMultiSpazaName(Classes.Browser browserInstance, string multiSpazaNamePath)
+        {
+            // 5. Verify that the preferred alias name is displayed on top right hand corner of the app with 
+            browserInstance.Instance.Assert.Exists(multiSpazaNamePath);
+            var spazaName = browserInstance.Instance.Find(multiSpazaNamePath);
+
+            //LogWriter.Instance.Log(spazaName.Element.Text, LogWriter.eLogType.Error);
+
+            Classes.TestDataClasses.Spaza spaza = TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas.Find(s => s.Name == spazaName.Element.Text);
+            if (spaza == null)
+            {
+                LogWriter.Instance.Log(string.Format("TESTCASE: VerifySpazaName -> {0} is not configured as a spaza shop for {1}", spazaName.Element.Text, TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Username), LogWriter.eLogType.Error);
+                if (TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas.Count < 1)
+                    LogWriter.Instance.Log(string.Format("TESTCASE: VerifySpazaName -> There are no spaza shops configured for {0}", TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Username), LogWriter.eLogType.Error);
+                spaza = TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas[0];
+            }
+
+            browserInstance.Instance.Assert.True(() => spazaName.Element.Text == spaza.Name);
+        }
+        public void CheckSingleSpazaName(Classes.Browser browserInstance, string singleSpazaNamePath)
+        {
+            // 5. Verify that the preferred alias name is displayed on top right hand corner of the app with 
+            browserInstance.Instance.Assert.Exists(singleSpazaNamePath);
+            var spazaName = browserInstance.Instance.Find(singleSpazaNamePath);
+
+            //LogWriter.Instance.Log(spazaName.Element.Text, LogWriter.eLogType.Error);
+
+            Classes.TestDataClasses.Spaza spaza = TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.Spazas.Find(s => s.Name == spazaName.Element.Text);
+            if (spaza == null)
+            {
+                LogWriter.Instance.Log(string.Format("TESTCASE: VerifySpazaName -> {0} is not configured as a spaza shop for {1}", spazaName.Element.Text, TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Username), LogWriter.eLogType.Error);
+                if (TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas.Count < 1)
+                    LogWriter.Instance.Log(string.Format("TESTCASE: VerifySpazaName -> There are no spaza shops configured for {0}", TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Username), LogWriter.eLogType.Error);
+                spaza = TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas[0];
+            }
+
+            browserInstance.Instance.Assert.True(() => spazaName.Element.Text == spaza.Name);
+        }
+
+        public void CheckMarbilAd(Classes.Browser browserInstance, string marbilAdPath)
+        {
+            browserInstance.Instance.Assert.Exists(marbilAdPath);
+        }
+        public void CheckBottomNav(Classes.Browser browserInstance, string cataloguePath, string basketPath, string ordersPath, string favouritePath)
+        {
+            browserInstance.Instance.Assert.Exists(cataloguePath);
+            browserInstance.Instance.Assert.Exists(basketPath);
+            browserInstance.Instance.Assert.Exists(ordersPath);
+            browserInstance.Instance.Assert.Exists(favouritePath);
+        }
+        public void CheckAlertNotification(Classes.Browser browserInstance, string alertNotifactionPath, string alertNotificationLabelPath)
+        {
+            browserInstance.Instance.Assert.Exists(alertNotifactionPath);
+            browserInstance.Instance.Assert.Exists(alertNotificationLabelPath);
+        }
     }
 }

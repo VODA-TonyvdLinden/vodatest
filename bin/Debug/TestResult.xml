@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-02" time="12:32:49">
-  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
-  <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="64.182" asserts="0">
+<test-results name="C:\Users\molefeq\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-03" time="10:24:53">
+  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8009" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="BBD-QM" user="molefeq" user-domain="VF-ROOT" />
+  <culture-info current-culture="en-TT" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\molefeq\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="126.850" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="64.163" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="126.831" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="64.163" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="126.831" asserts="0">
             <results>
-              <test-suite type="Namespace" name="ContactUs" executed="True" result="Success" success="True" time="64.162" asserts="0">
+              <test-suite type="Namespace" name="Alerts" executed="True" result="Success" success="True" time="126.830" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="ContactUs" description="ContactUs" executed="True" result="Success" success="True" time="64.160" asserts="0">
+                  <test-suite type="TestFixture" name="Alerts" description="Alerts" executed="True" result="Success" success="True" time="126.827" asserts="0">
                     <categories>
-                      <category name="ContactUs" />
+                      <category name="Alerts" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.ContactUs.ContactUs._01_ContactUsTest" description="_01_ContactUs" executed="True" result="Success" success="True" time="1.298" asserts="0">
+                      <test-case name="TestProj.Tests.Alerts.Alerts._02_AlertsPollingService" description="_02_AlertsPollingService" executed="True" result="Success" success="True" time="30.201" asserts="0">
                         <categories>
-                          <category name="Contact Us" />
+                          <category name="Alerts" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
