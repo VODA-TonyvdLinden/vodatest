@@ -97,6 +97,7 @@
     <Compile Include="Classes\Browsers\IE.cs" />
     <Compile Include="Classes\Browsers\Firefox.cs" />
     <Compile Include="Classes\Browsers\Chrome.cs" />
+    <Compile Include="Classes\ProcessKiller.cs" />
     <Compile Include="Classes\ScreenshotRequirements\BuildScreenshotRequirements.cs" />
     <Compile Include="Classes\TestData.cs" />
     <Compile Include="Classes\CaptureRequirement.cs" />

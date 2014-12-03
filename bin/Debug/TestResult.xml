@@ -1,28 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-03" time="12:35:42">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-03" time="13:31:52">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="72.421" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="1.235" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="72.404" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="1.218" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="72.403" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="1.217" asserts="0">
             <results>
-              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Success" success="True" time="72.403" asserts="0">
+              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Failure" success="False" time="1.217" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="AccessingApplicationMultiSpaza" description="AccessingApplicationMultiSpaza" executed="True" result="Success" success="True" time="72.401" asserts="0">
+                  <test-suite type="TestFixture" name="AccessingApplicationMultiSpaza" description="AccessingApplicationMultiSpaza" executed="True" result="Error" success="False" time="1.211" asserts="0">
                     <categories>
                       <category name="AccessingApplication" />
                     </categories>
+                    <failure>
+                      <message><![CDATA[SetUp : System.IO.IOException : The process cannot access the file 'C:\Users\bbdnet0518\AppData\Local\Temp\chromedriver.exe' because it is being used by another process.]]></message>
+                      <stack-trace><![CDATA[at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
+at FluentAutomation.EmbeddedResources.UnpackFromAssembly(String resourceFileName, String outputFileName, Assembly assembly)
+at FluentAutomation.EmbeddedResources.UnpackFromAssembly(String resourceFileName, Assembly assembly)
+at FluentAutomation.SeleniumWebDriver.GenerateBrowserSpecificDriver(Browser browser, TimeSpan commandTimeout)
+at FluentAutomation.SeleniumWebDriver.<>c__DisplayClass2.<Bootstrap>b__0(TinyIoCContainer container)
+at FluentAutomation.FluentSession.BootstrapTypeRegistration(Action`1 containerAction)
+at FluentAutomation.FluentTest.get_I()
+at TestProj.Classes.Browsers.Chrome.Create() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Classes\Browsers\Chrome.cs:line 20
+at TestProj.Classes.Browser..ctor(eBrowser browserType) in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Classes\Browser.cs:line 44
+at TestProj.Tests.AccessingApplication.AccessingApplicationMultiSpaza.Initialise() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\AccessingApplication\AccessingApplicationMultiSpaza.cs:line 27
+]]></stack-trace>
+                    </failure>
                     <results>
-                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplicationMultiSpaza._04_ApplicationWithMultipleSpazas" description="_04_ApplicationWithMultipleSpazas" executed="True" result="Success" success="True" time="10.278" asserts="0">
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplicationMultiSpaza._04_ApplicationWithMultipleSpazas" description="_04_ApplicationWithMultipleSpazas" executed="True" result="Failure" success="False" time="0.000" asserts="0">
                         <categories>
                           <category name="Accessing app" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
+                        <failure>
+                          <message><![CDATA[TestFixtureSetUp failed in AccessingApplicationMultiSpaza]]></message>
+                          <stack-trace />
+                        </failure>
                       </test-case>
                     </results>
                   </test-suite>

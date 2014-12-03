@@ -5,7 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using TestProj.Classes;
 
 namespace TestProj.Tests.Catalogues
 {
@@ -18,6 +20,9 @@ namespace TestProj.Tests.Catalogues
         [TestFixtureSetUp]
         public void Initialise()
         {
+            ProcessKiller.Instance.Kill();
+            Thread.Sleep(500);
+
             browserInstance = new Classes.Browser(Classes.Browser.eBrowser.Chrome);
             browserInstance.Config.ScreenshotPath(Properties.Settings.Default.ScreenshotPath);
             browserInstance.Instance.Wait(5);

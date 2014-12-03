@@ -34,6 +34,9 @@ namespace TestProj.Tests.ContactUs
         [TestFixtureSetUp]
         public void Initialise()
         {
+            ProcessKiller.Instance.Kill();
+            Thread.Sleep(500);
+
             browserInstance = new Classes.Browser(Classes.Browser.eBrowser.Chrome);
             browserInstance.Config.ScreenshotPath(Properties.Settings.Default.ScreenshotPath);
             browserInstance.Instance.Wait(5);
