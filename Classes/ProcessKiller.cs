@@ -33,6 +33,7 @@ namespace TestProj.Classes
             var chromeDriverProcesses = Process.GetProcesses().
                                  Where(pr => pr.ProcessName == "chromedriver");
 
+            LogWriter.Instance.Log(string.Format("Chromedriver count = {0}", chromeDriverProcesses.Count()), LogWriter.eLogType.Info);
             foreach (var process in chromeDriverProcesses)
             {
                 LogWriter.Instance.Log(string.Format("Found {0} -> Killing", process.ProcessName), LogWriter.eLogType.Info);
