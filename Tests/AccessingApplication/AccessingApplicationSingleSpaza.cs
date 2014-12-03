@@ -215,9 +215,22 @@ namespace TestProj.Tests.AccessingApplication
         [Test, Description("_05_AccessApplicationWithSingleSpaza"), Category("Accessing app"), Repeat(1)]
         public void _05_AccessApplicationWithSingleSpaza()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
+            //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAccessingApplicationActions accessingApplicationAction = container.Resolve<Interfaces.IAccessingApplicationActions>();
-            //TODO
+
+            // 1. Logon with a user that has single spazas on his profile
+            // 2.Verify that the preferred alias name is displayed on top right hand corner of the app with the spaza owner's alias name and spaza name 
+            Helpers.Instance.CheckSingleSpazaPreferedAlias(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.aliasName.ng-binding");
+            // 3.Select spaza name  
+            var spazaLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
+            Helpers.Instance.ClickButton(browserInstance, spazaLink);
+
+            var spazaDiv = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName");
+            // 4. verify that the multiple spaza list function is de-activated if the user only has one spaza  
+            string divClass = spazaDiv.Element.Attributes.Get("class");
+
+            browserInstance.Instance.Assert.False(() => divClass == "spazaName open");
+
         }
     }
 }

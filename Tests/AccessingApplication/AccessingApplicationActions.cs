@@ -259,12 +259,7 @@ namespace TestProj.Tests.AccessingApplication
         {
             // 3.Select any spaza on the list
             var spazaLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
-            //var spazaLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName");
-            //var spazaLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
             Helpers.Instance.ClickButton(browserInstance, spazaLink);
-            //ISSUE HERE
-
-
 
             var spazaOne = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName.open > ul > li:nth-child(2) > a");
             var spazaTwo = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName.open > ul > li:nth-child(3) > a");
@@ -302,6 +297,7 @@ namespace TestProj.Tests.AccessingApplication
 
             // 4. The basket  switches to the outlet specific basket,orders needs to switch to the outlet specific 
             //   orders (including invoices),catalogues, favourites and Messages remain the same
+
             //Select first spaza
             accessingApplicationAction.SelectSpaza(browserInstance, "10 City Tuck Shop");
             FluentAutomation.ElementProxy spazaName = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");

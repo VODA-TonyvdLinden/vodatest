@@ -18,12 +18,9 @@ namespace TestProj.Tests.AccessingApplication
         Classes.Browser browserInstance;
         IUnityContainer container = new UnityContainer();
 
-
-
         [TestFixtureSetUp]
         public void Initialise()
         {
-
             browserInstance = new Classes.Browser(Classes.Browser.eBrowser.Chrome);
             browserInstance.Config.ScreenshotPath(Properties.Settings.Default.ScreenshotPath);
             browserInstance.Instance.Wait(5);
@@ -33,7 +30,6 @@ namespace TestProj.Tests.AccessingApplication
 
             container.RegisterType<Interfaces.IAccessingApplicationActions, Tests.AccessingApplication.AccessingApplicationActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
             Helpers.Instance.Activate(browserInstance, true);
-
         }
 
         [TestFixtureTearDown]
@@ -43,12 +39,6 @@ namespace TestProj.Tests.AccessingApplication
             container.RemoveAllExtensions();
             container.Dispose();
         }
-
-        
-
-        
-
-
 
         /// <summary>
         /// TEST: APPLICATION WITH MULTIPLE  SPAZA'S
@@ -97,9 +87,5 @@ namespace TestProj.Tests.AccessingApplication
 
             accessingApplicationAction.VerifySpazaNameForReturnToApp(browserInstance);
         }
-
-
-
-
     }
 }

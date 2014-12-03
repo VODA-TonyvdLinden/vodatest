@@ -2890,3 +2890,73 @@ R81.86
 2014-12-03 11:16:31,427 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
 2014-12-03 11:16:31,427 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
 2014-12-03 11:16:36,542 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 5 seconds
+2014-12-03 11:24:20,617 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_AlertsLandingPageVerfication -> Test step worded incorrectly. '1. Verify that the Vodacom logo and the red banner are displayed on the activation screen' - Update test case
+2014-12-03 11:24:20,720 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyVodacomLogoAndBanner executed in 0 seconds
+2014-12-03 11:24:20,723 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_AlertsLandingPageVerfication -> Test step cannot be implemented. '2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen' - Cannot test this since we do not have the online class/indicator anymore.
+2014-12-03 11:24:20,723 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyOnlineOffilineIndicator executed in 0 seconds
+2014-12-03 11:24:20,741 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyContactUsHelpMeLinks executed in 0 seconds
+2014-12-03 11:24:20,741 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_AlertsLandingPageVerfication -> Test step cannot be implemented. '4. See spelling, grammar and alignment' - We cannot test for this.
+2014-12-03 11:24:20,844 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifySpazaAliasAndName executed in 0 seconds
+2014-12-03 11:24:20,847 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_AlertsLandingPageVerfication -> Test step spelling incorrect, should be Marbil ad. '6. Verify that the Marbil add is displayed' - Update test case
+2014-12-03 11:24:20,856 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyMarbilAd executed in 0 seconds
+2014-12-03 11:24:20,856 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_AlertsLandingPageVerfication -> Test step incorrect we do not have sub applications displayed in the alerts page. '7. Verify that the sub application are displayed and also greyed out' - Update test case
+2014-12-03 11:24:20,888 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyBottomNavigationBlocks executed in 0 seconds
+2014-12-03 11:24:20,907 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyNotificationAndLabel executed in 0 seconds
+2014-12-03 11:24:20,934 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyBasketTotal executed in 0 seconds
+2014-12-03 11:24:20,946 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_AlertsLandingPageVerfication -> Test step the value with the search is 'I 'm looking for ...'. '14. Verify the text in the search field, it states that I am looking for' - Please update the test case.
+2014-12-03 11:24:21,091 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifySearchField executed in 0 seconds
+2014-12-03 11:24:21,102 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyNotificationSection executed in 0 seconds
+2014-12-03 11:24:21,122 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyActionSection executed in 0 seconds
+2014-12-03 11:24:21,157 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_AlertsLandingPageVerfication -> Test step the labels do not match the test case. '19. Verify that the Order Alerts label, has sub labels namely You have received new invoices, you have an unconfirmed order, your catalogue is out of sync' - Labels on the page different to the test case labels
+2014-12-03 11:24:21,157 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyOrderAlerts executed in 0 seconds
+2014-12-03 11:24:21,186 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_AlertsLandingPageVerfication -> Test step we only have to sub items here and the labels do not match the test case. '21.Veriy that the system alerts label, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed' - Update test case
+2014-12-03 11:24:21,186 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifySystemAlerts executed in 0 seconds
+2014-12-03 11:24:21,235 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifySideButtons executed in 0 seconds
+2014-12-03 11:27:16,815 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-12-03 11:27:16,866 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-12-03 11:27:17,002 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-12-03 11:27:17,002 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-12-03 11:27:22,116 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 5 seconds
+2014-12-03 11:56:26,595 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - spazaName open
+2014-12-03 11:57:58,218 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 11:57:58,332 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 11:57:58,436 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 11:57:58,437 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 0 seconds
+2014-12-03 11:58:35,568 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-12-03 11:58:35,615 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-12-03 11:58:35,725 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-12-03 11:58:35,726 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-12-03 11:58:40,848 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 5 seconds
+2014-12-03 11:58:46,753 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyAlertSearchBox executed in 5 seconds
+2014-12-03 11:58:51,817 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialAccessibility executed in 5 seconds
+2014-12-03 12:16:26,934 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-12-03 12:16:26,967 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-12-03 12:16:27,054 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-12-03 12:16:27,055 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-12-03 12:16:32,185 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 5 seconds
+2014-12-03 12:17:42,055 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 12:17:42,229 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 12:17:42,930 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 12:17:43,098 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 0 seconds
+2014-12-03 12:18:51,677 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 12:18:51,806 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 12:18:52,928 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 12:18:53,413 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_AddSpecialToBasket executed in 0 seconds
+2014-12-03 12:18:54,144 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 12:18:54,193 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 12:18:54,559 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 2 seconds
+2014-12-03 12:18:54,559 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_04_ApplicationWithMultipleSpazas -> Step 5 inferred by previous sections of the test. Update test case
+2014-12-03 12:18:59,780 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaNameForReturnToApp executed in 5 seconds
+2014-12-03 12:20:15,649 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 12:20:15,742 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 12:20:16,396 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 12:20:16,579 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 0 seconds
+2014-12-03 12:29:34,047 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 12:29:34,162 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 12:29:35,246 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 12:29:36,330 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_AddSpecialToBasket executed in 1 seconds
+2014-12-03 12:29:37,027 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 12:29:37,074 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 12:29:37,436 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 3 seconds
+2014-12-03 12:29:37,437 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_04_ApplicationWithMultipleSpazas -> Step 5 inferred by previous sections of the test. Update test case
+2014-12-03 12:29:43,415 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaNameForReturnToApp executed in 5 seconds

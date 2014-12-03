@@ -1,39 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-03" time="11:16:40">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-03" time="12:29:47">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="50.077" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="62.576" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="50.076" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="62.558" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="50.075" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="62.558" asserts="0">
             <results>
-              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Failure" success="False" time="50.074" asserts="0">
+              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Success" success="True" time="62.557" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="AccessingApplicationSingleSpaza" description="AccessingApplicationSingleSpaza" executed="True" result="Failure" success="False" time="50.072" asserts="0">
+                  <test-suite type="TestFixture" name="AccessingApplicationMultiSpaza" description="AccessingApplicationMultiSpaza" executed="True" result="Success" success="True" time="62.554" asserts="0">
                     <categories>
                       <category name="AccessingApplication" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplicationSingleSpaza._01_ActivationLandingPage" description="_01_ActivationLandingPage" executed="True" result="Error" success="False" time="5.407" asserts="0">
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplicationMultiSpaza._04_ApplicationWithMultipleSpazas" description="_04_ApplicationWithMultipleSpazas" executed="True" result="Success" success="True" time="9.867" asserts="0">
                         <categories>
                           <category name="Accessing app" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
-                        <failure>
-                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
-  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected expression [ => (value(TestProj.Tests.AccessingApplication.AccessingApplicationActions+<>c__DisplayClass2).alias.Element.Text == TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Alias)] to return true.]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IAccessingApplicationActions_a62831b3aa714a169fb3c13fa8188806.VerifyPreferedAlias(Browser browserInstance)
-at TestProj.Tests.AccessingApplication.AccessingApplicationSingleSpaza._01_ActivationLandingPage() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\AccessingApplication\AccessingApplicationSingleSpaza.cs:line 208
---FluentAssertFailedException
-at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
-at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
-at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
-]]></stack-trace>
-                        </failure>
                       </test-case>
                     </results>
                   </test-suite>

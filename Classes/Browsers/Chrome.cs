@@ -15,6 +15,7 @@ namespace TestProj.Classes.Browsers
             SeleniumWebDriver.Bootstrap(
                SeleniumWebDriver.Browser.Chrome
                );
+            FluentConfig.Current.WindowMaximized(true);
             return I;
         }
     }
