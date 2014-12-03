@@ -16,6 +16,7 @@ namespace TestProj.Classes.Browsers
                SeleniumWebDriver.Browser.Chrome
                );
             FluentConfig.Current.WindowMaximized(true);
+
             return I;
         }
     }
