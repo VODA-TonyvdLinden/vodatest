@@ -1,48 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-03" time="13:31:52">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-03" time="13:52:58">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="1.235" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="25.217" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="1.218" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="25.199" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="1.217" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="25.199" asserts="0">
             <results>
-              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Failure" success="False" time="1.217" asserts="0">
+              <test-suite type="Namespace" name="Activation" executed="True" result="Failure" success="False" time="25.198" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="AccessingApplicationMultiSpaza" description="AccessingApplicationMultiSpaza" executed="True" result="Error" success="False" time="1.211" asserts="0">
+                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Failure" success="False" time="25.196" asserts="0">
                     <categories>
-                      <category name="AccessingApplication" />
+                      <category name="Activation" />
                     </categories>
-                    <failure>
-                      <message><![CDATA[SetUp : System.IO.IOException : The process cannot access the file 'C:\Users\bbdnet0518\AppData\Local\Temp\chromedriver.exe' because it is being used by another process.]]></message>
-                      <stack-trace><![CDATA[at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-at System.IO.File.InternalWriteAllBytes(String path, Byte[] bytes, Boolean checkHost)
-at FluentAutomation.EmbeddedResources.UnpackFromAssembly(String resourceFileName, String outputFileName, Assembly assembly)
-at FluentAutomation.EmbeddedResources.UnpackFromAssembly(String resourceFileName, Assembly assembly)
-at FluentAutomation.SeleniumWebDriver.GenerateBrowserSpecificDriver(Browser browser, TimeSpan commandTimeout)
-at FluentAutomation.SeleniumWebDriver.<>c__DisplayClass2.<Bootstrap>b__0(TinyIoCContainer container)
-at FluentAutomation.FluentSession.BootstrapTypeRegistration(Action`1 containerAction)
-at FluentAutomation.FluentTest.get_I()
-at TestProj.Classes.Browsers.Chrome.Create() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Classes\Browsers\Chrome.cs:line 20
-at TestProj.Classes.Browser..ctor(eBrowser browserType) in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Classes\Browser.cs:line 44
-at TestProj.Tests.AccessingApplication.AccessingApplicationMultiSpaza.Initialise() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\AccessingApplication\AccessingApplicationMultiSpaza.cs:line 27
-]]></stack-trace>
-                    </failure>
                     <results>
-                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplicationMultiSpaza._04_ApplicationWithMultipleSpazas" description="_04_ApplicationWithMultipleSpazas" executed="True" result="Failure" success="False" time="0.000" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation._10_CorrectOneTimePin" description="_10_CorrectOneTimePin" executed="True" result="Error" success="False" time="11.954" asserts="0">
                         <categories>
-                          <category name="Accessing app" />
+                          <category name="Verify_user(OTP)" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                         <failure>
-                          <message><![CDATA[TestFixtureSetUp failed in AccessingApplicationMultiSpaza]]></message>
-                          <stack-trace />
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected URL to match [http://aspnet.dev.afrigis.co.za/bopapp/#/activation-managecatalogue] but it was actually [http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser].]]></message>
+                          <stack-trace><![CDATA[at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.BaseCommandProvider.WaitUntil(Expression`1 conditionAction, TimeSpan timeout)
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.CommandProvider.FluentAutomation.Interfaces.ICommandProvider.Act(CommandType , Action )
+at FluentAutomation.AssertProvider.Url(Uri expectedUrl)
+at FluentAutomation.AssertSyntaxProvider.Url(Uri expectedUri)
+at FluentAutomation.AssertSyntaxProvider.Url(String expectedUrl)
+at TestProj.Tests.Activation.Activation._10_CorrectOneTimePin() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Activation\Activation.cs:line 527
+--FluentAssertFailedException
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass53.<Url>b__52()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
                         </failure>
                       </test-case>
                     </results>

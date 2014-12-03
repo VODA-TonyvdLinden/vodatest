@@ -29,10 +29,21 @@ namespace TestProj.Classes
 
         public void Kill()
         {
-            foreach (Process proc in Process.GetProcessesByName("chromedriver.exe"))
+            LogWriter.Instance.Log("Killing chromedriver.exe", LogWriter.eLogType.Info);
+            var chromeDriverProcesses = Process.GetProcesses().
+                                 Where(pr => pr.ProcessName == "chromedriver");
+
+            foreach (var process in chromeDriverProcesses)
             {
-                proc.Kill();
+                LogWriter.Instance.Log(string.Format("Found {0} -> Killing", process.ProcessName), LogWriter.eLogType.Info);
+                process.Kill();
             }
+
+            //foreach (Process proc in Process.GetProcessesByName("chromedriver.exe"))
+            //{
+            //    LogWriter.Instance.Log(string.Format("Found {0} -> Killing", proc.ProcessName), LogWriter.eLogType.Info);
+            //    proc.Kill();
+            //}
         }
     }
 }

@@ -3041,3 +3041,14 @@ R81.86
 2014-12-03 13:13:19,343 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
 2014-12-03 13:13:19,591 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyLogoAndBanner executed in 0 seconds
 2014-12-03 13:13:24,649 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestCatalogueSeachValidation executed in 5 seconds
+2014-12-03 13:45:48,444 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-03 13:45:48,538 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-12-03 13:47:44,837 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-03 13:47:59,706 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-03 13:47:59,757 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-12-03 13:48:42,423 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-03 13:48:55,697 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-03 13:48:55,735 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-12-03 13:52:33,201 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-03 13:52:48,442 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-03 13:52:48,494 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
