@@ -166,7 +166,8 @@ namespace TestProj.Tests.AccessingApplication
         {
             // 16. Verify that the search text field is editable
             var searchBox = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
-            browserInstance.Instance.Enter("test").In(searchBox);
+            Helpers.Instance.FieldInput(browserInstance, searchBox, "test");
+            //browserInstance.Instance.Enter("test").In(searchBox);
             browserInstance.Instance.Assert.Text("test").In(searchBox);
 
         }

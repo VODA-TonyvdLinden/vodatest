@@ -1,28 +1,119 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-04" time="10:31:43">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="5" errors="4" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-04" time="21:23:58">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="23.860" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="154.729" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="23.843" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="154.728" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="23.843" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="154.726" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Activation" executed="True" result="Success" success="True" time="23.843" asserts="0">
+              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Failure" success="False" time="154.725" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Success" success="True" time="23.840" asserts="0">
+                  <test-suite type="TestFixture" name="AccessingApplicationMultiSpaza" description="AccessingApplicationMultiSpaza" executed="True" result="Failure" success="False" time="81.319" asserts="0">
                     <categories>
-                      <category name="Activation" />
+                      <category name="AccessingApplication" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Activation.Activation._06_ActivationOneTimePinFieldValidation" description="_06_ActivationOneTimePinFieldValidation" executed="True" result="Success" success="True" time="9.540" asserts="0">
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplicationMultiSpaza._04_ApplicationWithMultipleSpazas" description="_04_ApplicationWithMultipleSpazas" executed="True" result="Error" success="False" time="8.955" asserts="0">
                         <categories>
-                          <category name="Verify_user(OTP)" />
+                          <category name="Accessing app" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#landingPage > div > div.leftBlock > div > div > div > div:nth-child(1) > div > div]]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IAccessingApplicationActions_f800d49e0f5d4840a4e8dd4056d09b25.SwitchSpazaAndCheckBasket(Browser browserInstance, IAccessingApplicationActions accessingApplicationAction)
+at TestProj.Tests.AccessingApplication.AccessingApplicationMultiSpaza._04_ApplicationWithMultipleSpazas() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\AccessingApplication\AccessingApplicationMultiSpaza.cs:line 82
+--FluentElementNotFoundException
+at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
+at FluentAutomation.ElementProxy.get_Element()
+at FluentAutomation.CommandProvider.<>c__DisplayClass18.<Click>b__17()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="AccessingApplicationSingleSpaza" description="AccessingApplicationSingleSpaza" executed="True" result="Failure" success="False" time="73.395" asserts="0">
+                    <categories>
+                      <category name="AccessingApplication" />
+                    </categories>
+                    <results>
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplicationSingleSpaza._01_ActivationLandingPage" description="_01_ActivationLandingPage" executed="True" result="Error" success="False" time="6.308" asserts="0">
+                        <categories>
+                          <category name="Accessing app" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected expression [ => (value(TestProj.Tests.AccessingApplication.AccessingApplicationActions+<>c__DisplayClass5).spazaName.Element.Text == value(TestProj.Tests.AccessingApplication.AccessingApplicationActions+<>c__DisplayClass5).spaza.Name)] to return true.]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IAccessingApplicationActions_f800d49e0f5d4840a4e8dd4056d09b25.VerifySpazaName(Browser browserInstance)
+at TestProj.Tests.AccessingApplication.AccessingApplicationSingleSpaza._01_ActivationLandingPage() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\AccessingApplication\AccessingApplicationSingleSpaza.cs:line 108
+--FluentAssertFailedException
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplicationSingleSpaza._02_ApplicationFieldValidation" description="_02_ApplicationFieldValidation" executed="True" result="Success" success="True" time="2.082" asserts="0">
+                        <categories>
+                          <category name="Accessing app" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplicationSingleSpaza._03_ApplicationLandingContentsFunctionality" description="_03_ApplicationLandingContentsFunctionality" executed="True" result="Error" success="False" time="5.755" asserts="0">
+                        <categories>
+                          <category name="Accessing app" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#landingPage > div > div.leftBlock > div > div > div > div:nth-child(1) > div > div]]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IAccessingApplicationActions_f800d49e0f5d4840a4e8dd4056d09b25.VerifySpecialAccessibility(Browser browserInstance)
+at TestProj.Tests.AccessingApplication.AccessingApplicationSingleSpaza._03_ApplicationLandingContentsFunctionality() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\AccessingApplication\AccessingApplicationSingleSpaza.cs:line 191
+--FluentElementNotFoundException
+at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
+at FluentAutomation.ElementProxy.get_Element()
+at FluentAutomation.CommandProvider.<>c__DisplayClass18.<Click>b__17()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplicationSingleSpaza._05_AccessApplicationWithSingleSpaza" description="_05_AccessApplicationWithSingleSpaza" executed="True" result="Error" success="False" time="5.818" asserts="0">
+                        <categories>
+                          <category name="Accessing app" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected expression [ => (value(TestProj.Tests.AccessingApplication.AccessingApplicationSingleSpaza+<>c__DisplayClass0).divClass == "spazaName open")] to return false.]]></message>
+                          <stack-trace><![CDATA[at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.BaseCommandProvider.WaitUntil(Expression`1 conditionAction, TimeSpan timeout)
+at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
+at FluentAutomation.CommandProvider.FluentAutomation.Interfaces.ICommandProvider.Act(CommandType , Action )
+at FluentAutomation.AssertProvider.False(Expression`1 matchFunc)
+at FluentAutomation.AssertSyntaxProvider.False(Expression`1 matchFunc)
+at TestProj.Tests.AccessingApplication.AccessingApplicationSingleSpaza._05_AccessApplicationWithSingleSpaza() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\AccessingApplication\AccessingApplicationSingleSpaza.cs:line 235
+--FluentAssertFailedException
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass62.<False>b__61()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
                       </test-case>
                     </results>
                   </test-suite>

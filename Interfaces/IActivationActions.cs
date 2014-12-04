@@ -36,7 +36,6 @@ namespace TestProj.Interfaces
         void ClickSearchButton(Classes.Browser browserInstance, FluentAutomation.ElementProxy mcatSearchButton);
         void TestCatalogueSeachValidation(Classes.Browser browserInstance, FluentAutomation.ElementProxy searchValue, FluentAutomation.ElementProxy mcatSearchButton, FluentAutomation.ElementProxy mcatErrorMessage);
         void ValidateOTP(Classes.Browser browserInstance);
-        void CheckOTPErrorPopup(Classes.Browser browserInstance);
     }
 
 }

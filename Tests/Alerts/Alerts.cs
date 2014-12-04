@@ -212,8 +212,8 @@ namespace TestProj.Tests.Alerts
         /// TEST STEPS:
         /// 1.Verify that the active alert's text  is highlighted red "You have an unconfirmed order "   
         /// 2. Click on the <confirm now> button
-        /// 3. Click on the <confirm  order> button 
-        /// 4. view confirm order  page verification                                                                                              
+        /// 3. Click on the <confirm  order> button  
+        /// 4. view confirm order  page verification                                                                                             
         /// 4.1 Verify that the unconfirmed order number is displayed and is the only one
         /// 4.2 Verify item code, name, brand, pack size, price, qty, total and value are displayed
         /// 5. Click on the back on the <back to actions> button  
