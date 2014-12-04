@@ -17,5 +17,21 @@ namespace TestProj.Interfaces
         void VerifyOrderAlerts(Classes.Browser browserInstance);
         void VerifySystemAlerts(Classes.Browser browserInstance);
         void VerifySideButtons(Classes.Browser browserInstance);
+        void VerifyUrgentActions(Classes.Browser browserInstance);
+        void VerifyTextHighlightedRed(Classes.Browser browserInstance, string labelPath);
+        void VerifyConfirmNowButtonClick(Classes.Browser browserInstance);
+        void AddUnconfirmedOrder(Classes.Browser browserInstance);
+        void VerifyAsyncNow(Classes.Browser browserInstance);
+        void VerifyManageButtonClick(Classes.Browser browserInstance);
+        void VeriftyManageCatalogueSearch(Classes.Browser browserInstance);
+        void VeriftyManageExpandableArrows(Classes.Browser browserInstance);
+        void VeriftyManageExpandableWholesalerSelect(Classes.Browser browserInstance);
+        void VerifyDiagnoseButtonClick(Classes.Browser browserInstance);
+        void VerifyDiagnoseCheckingNotificationLabels(Classes.Browser browserInstance);
+        void VerifyDiagnoseCheckingNotificationTestButton(Classes.Browser browserInstance);
+        void VerifyDiagnoseConnectionSpeedTestButton(Classes.Browser browserInstance);
+        void VerifyDiagnoseCheckingNotificationTestButtonClick(Classes.Browser browserInstance);
+        void VerifyDiagnoseConnectionSpeedTestButtonClick(Classes.Browser browserInstance);
+        void VerifyDiagnoseResultPlaceholder(Classes.Browser browserInstance);
     }
 }
