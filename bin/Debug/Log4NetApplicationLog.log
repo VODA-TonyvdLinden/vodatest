@@ -3178,3 +3178,139 @@ R81.86
 2014-12-03 14:17:59,263 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 0 seconds
 2014-12-03 14:20:50,959 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
 2014-12-03 14:20:51,027 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-03 14:21:32,743 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 14:21:32,811 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 14:21:33,512 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Current display size = 1920x1080
+2014-12-03 14:21:33,864 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 14:21:35,048 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_AddSpecialToBasket executed in 1 seconds
+2014-12-03 14:21:35,395 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Current display size = 1920x1080
+2014-12-03 14:21:35,769 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 14:21:35,817 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 14:21:36,189 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 3 seconds
+2014-12-03 14:21:36,190 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_04_ApplicationWithMultipleSpazas -> Step 5 inferred by previous sections of the test. Update test case
+2014-12-03 14:21:41,263 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaNameForReturnToApp executed in 5 seconds
+2014-12-03 14:32:04,795 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-03 14:32:04,866 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-03 14:32:59,509 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 14:32:59,574 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 14:33:00,038 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Current display size = 1920x1080
+2014-12-03 14:33:05,286 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 5 seconds
+2014-12-03 14:33:05,447 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 5 seconds
+2014-12-03 14:36:54,873 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-03 14:36:54,940 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-03 14:37:35,819 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 14:37:35,889 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 14:37:36,412 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Current display size = 1920x1080
+2014-12-03 14:37:36,685 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 14:37:37,543 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_AddSpecialToBasket executed in 0 seconds
+2014-12-03 14:37:37,798 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Current display size = 1920x1080
+2014-12-03 14:37:38,086 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 14:37:38,135 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 14:37:38,413 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 2 seconds
+2014-12-03 14:37:38,414 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_04_ApplicationWithMultipleSpazas -> Step 5 inferred by previous sections of the test. Update test case
+2014-12-03 14:37:43,029 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaNameForReturnToApp executed in 4 seconds
+2014-12-03 14:41:29,222 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-03 14:41:29,230 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-03 14:42:14,036 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 14:42:14,136 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 14:42:14,531 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Current display size = 1920x1080
+2014-12-03 14:42:14,693 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 0 seconds
+2014-12-03 14:42:14,840 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 0 seconds
+2014-12-03 14:45:10,865 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-03 14:45:10,934 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-03 14:45:50,541 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 14:45:50,616 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 14:45:51,070 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Current display size = 1920x1080
+2014-12-03 14:45:56,494 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 5 seconds
+2014-12-03 14:45:56,647 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 6 seconds
+2014-12-03 14:48:19,818 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-03 14:48:19,885 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-03 14:49:10,132 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 14:49:10,209 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 14:49:10,682 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Current display size = 1920x1080
+2014-12-03 14:49:15,946 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 5 seconds
+2014-12-03 14:49:16,097 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 5 seconds
+2014-12-03 14:56:01,419 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-03 14:56:01,486 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-03 14:56:51,267 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-03 14:56:51,334 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-03 14:59:20,857 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-03 14:59:20,928 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-03 15:00:11,198 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-03 15:00:11,263 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-03 15:00:11,606 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Current display size = 1920x1080
+2014-12-03 15:00:17,249 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 5 seconds
+2014-12-03 15:00:17,396 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 6 seconds
+2014-12-04 08:48:51,323 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-04 08:48:51,401 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-04 08:49:04,399 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-12-04 08:49:04,446 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-12-04 08:49:04,524 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyPageLinks executed in 0 seconds
+2014-12-04 08:49:04,540 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> What css class is used to disable the next button?
+2014-12-04 08:49:04,540 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the next button, just the css class
+2014-12-04 08:49:04,540 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the next button, just the css class
+2014-12-04 08:49:04,540 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyActivationPageNextButton executed in 0 seconds
+2014-12-04 08:49:04,602 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> Two extra fields found on the screen, challengeQuestion and challengeAnswer.
+2014-12-04 08:49:04,602 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
+2014-12-04 08:49:04,602 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyFieldExist executed in 0 seconds
+2014-12-04 08:49:10,656 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestMandatoryFields executed in 6 seconds
+2014-12-04 08:49:11,047 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASEActivationFormIncorrectUserDetails -> Valid MSISDN no required
+2014-12-04 08:49:11,175 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:ActivationFormIncorrectUserDetails -> Valid UNSERNAME required
+2014-12-04 08:49:17,180 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestInvalidActivationKey executed in 6 seconds
+2014-12-04 08:49:17,195 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST
+2014-12-04 08:49:18,583 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidMultiUserDetails executed in 1 seconds
+2014-12-04 08:49:19,432 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
+2014-12-04 08:49:25,134 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ValidateOTPStart executed in 6 seconds
+2014-12-04 08:49:25,924 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-12-04 08:49:25,956 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-12-04 08:49:26,018 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyPageLinks executed in 0 seconds
+2014-12-04 08:49:26,018 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Cannot check spelling and grammer automatically
+2014-12-04 08:49:26,049 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> What css class is used to disable the next button?
+2014-12-04 08:49:26,049 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the next button, just the css class
+2014-12-04 08:49:26,049 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the next button, just the css class
+2014-12-04 08:49:26,049 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOTPNextButton executed in 0 seconds
+2014-12-04 08:49:26,081 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyResendButton -> What css class is used to disable the next button?
+2014-12-04 08:49:26,081 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the resend button, just the css class
+2014-12-04 08:49:26,081 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the resend button, just the css class
+2014-12-04 08:49:26,081 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyResendButton executed in 0 seconds
+2014-12-04 08:49:26,096 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
+2014-12-04 08:49:26,096 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOntTimeLable executed in 0 seconds
+2014-12-04 08:49:31,721 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOTPErrorMessage executed in 5 seconds
+2014-12-04 08:49:31,737 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:CorrectOneTimePinAndApplicationOffline -> Incomplete test case -> Must check if application is offline
+2014-12-04 08:49:37,575 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-04 08:49:43,439 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-12-04 08:49:49,126 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOTPErrorMessage executed in 5 seconds
+2014-12-04 08:49:49,653 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-04 08:49:49,757 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-12-04 08:49:49,914 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-12-04 08:49:49,984 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyPageLinks executed in 0 seconds
+2014-12-04 08:49:49,984 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _11_SetupCatalogueLandingPage -> Cannot check spelling and grammer
+2014-12-04 08:49:50,005 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE: _11_SetupCatalogueLandingPage -> The update button is displaying but by default disabled
+2014-12-04 08:49:50,005 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _11_SetupCatalogueLandingPage -> Cannot verify the button background colour and label text on the button
+2014-12-04 08:49:55,671 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyCatalogueLandingPage executed in 5 seconds
+2014-12-04 08:50:01,399 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestCatalogueSeachValidation executed in 5 seconds
+2014-12-04 09:37:36,702 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-04 09:37:36,765 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-04 09:49:01,419 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-04 09:49:01,481 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-04 09:49:16,218 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Inconsistant error handling. First error handled with message on screen, the rest with a popup
+2014-12-04 09:50:09,905 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-04 09:50:09,968 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-04 09:50:24,258 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Inconsistant error handling. First error handled with message on screen, the rest with a popup
+2014-12-04 09:50:24,410 [TestRunnerThread] FATAL TestProj.Classes.LogWriter [(null)] - 
+2014-12-04 09:51:58,234 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-04 09:51:58,297 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-04 09:52:12,280 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Inconsistant error handling. First error handled with message on screen, the rest with a popup
+2014-12-04 09:56:04,771 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-04 09:56:04,833 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-04 09:56:19,016 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Inconsistant error handling. First error handled with message on screen, the rest with a popup
+2014-12-04 09:57:07,971 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-04 09:57:08,034 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-04 09:57:21,037 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Inconsistant error handling. First error handled with message on screen, the rest with a popup
+2014-12-04 09:58:00,501 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-04 09:58:00,564 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-04 09:58:14,784 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Inconsistant error handling. First error handled with message on screen, the rest with a popup
+2014-12-04 10:31:20,173 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-04 10:31:20,235 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-04 10:31:35,870 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Inconsistant error handling. First error handled with message on screen, the rest with a popup -> Especially when the number is less than 6 chars
+2014-12-04 10:31:39,175 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ValidateOTP executed in 4 seconds

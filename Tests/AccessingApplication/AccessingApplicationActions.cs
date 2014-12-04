@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using TestProj.Classes;
 using TestProj.Tests.Common;
@@ -38,12 +39,13 @@ namespace TestProj.Tests.AccessingApplication
             var helpMe = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.helpMeContainer");
             browserInstance.Instance.Assert.True(() => helpMe.Element.Text == "Help me");
         }
-        public void VerifyPreferedAlias(Classes.Browser browserInstance)
+
+        public void VerifyPreferedAlias(Classes.Browser browserInstance, string aliasName)
         {
             // 5. Verify that the preferred alias name is displayed on top right hand corner of the app with 
             browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.aliasName.ng-binding");
             var alias = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.aliasName.ng-binding");
-            browserInstance.Instance.Assert.True(() => alias.Element.Text == TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Alias);
+            browserInstance.Instance.Assert.True(() => alias.Element.Text == aliasName);
         }
         public void VerifySpazaName(Classes.Browser browserInstance)
         {
@@ -258,10 +260,22 @@ namespace TestProj.Tests.AccessingApplication
         public void SelectSpaza(Classes.Browser browserInstance, string spazaName)
         {
             // 3.Select any spaza on the list
-            var spazaLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
+            //var spazaLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
+            var spazaLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName");
             Helpers.Instance.ClickButton(browserInstance, spazaLink);
 
             LogWriter.Instance.Log(string.Format("Current display size = {0}x{1}", browserInstance.Config.Settings.WindowWidth, browserInstance.Config.Settings.WindowHeight), LogWriter.eLogType.Info);
+
+            Helpers.Instance.Exists(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName");
+
+            //var spazaLink2 = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName");
+            //Helpers.Instance.ClickButton(browserInstance, spazaLink2);
+
+            Helpers.Instance.Exists(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName.open");
+
+            Thread.Sleep(1000);
+
+            Helpers.Instance.Exists(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName.open > ul > li:nth-child(2) > a");
 
             var spazaOne = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName.open > ul > li:nth-child(2) > a");
             var spazaTwo = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName.open > ul > li:nth-child(3) > a");
@@ -323,5 +337,7 @@ namespace TestProj.Tests.AccessingApplication
             string secondCount = basketCount.Element.Text.Replace(" Items", "").Replace(" ", "");
             browserInstance.Instance.Assert.False(() => count == secondCount);
         }
+
+
     }
 }

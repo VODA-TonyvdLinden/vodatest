@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using TestProj.Classes;
+using TestProj.Tests.Common;
 
 namespace TestProj.Tests.Activation
 {
@@ -367,7 +368,14 @@ namespace TestProj.Tests.Activation
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-verifyuser"));
             Interfaces.IActivationActions activationAction = container.Resolve<Interfaces.IActivationActions>();
+
+            // 1.1.1 Please don’t enter anything on the fields and click next
+            // 2. Select OTP field    
+
+            activationAction.ValidateOTP(browserInstance);
         }
+
+
 
         /// <summary>
         /// TEST: CORRECT ONE TIME PIN AND APPLICATION OFFLINE

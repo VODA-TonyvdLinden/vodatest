@@ -1,34 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-03" time="14:18:03">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-04" time="10:31:43">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="76.186" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="23.860" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="76.168" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="23.843" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="76.168" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="23.843" asserts="0">
             <results>
-              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Failure" success="False" time="76.168" asserts="0">
+              <test-suite type="Namespace" name="Activation" executed="True" result="Success" success="True" time="23.843" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="AccessingApplicationMultiSpaza" description="AccessingApplicationMultiSpaza" executed="True" result="Failure" success="False" time="76.164" asserts="0">
+                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Success" success="True" time="23.840" asserts="0">
                     <categories>
-                      <category name="AccessingApplication" />
+                      <category name="Activation" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplicationMultiSpaza._04_ApplicationWithMultipleSpazas" description="_04_ApplicationWithMultipleSpazas" executed="True" result="Error" success="False" time="1.191" asserts="0">
+                      <test-case name="TestProj.Tests.Activation.Activation._06_ActivationOneTimePinFieldValidation" description="_06_ActivationOneTimePinFieldValidation" executed="True" result="Success" success="True" time="9.540" asserts="0">
                         <categories>
-                          <category name="Accessing app" />
+                          <category name="Verify_user(OTP)" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
-                        <failure>
-                          <message><![CDATA[FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName.open > ul > li:nth-child(2) > a]]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IAccessingApplicationActions_66949669d09f465f850df69d5863cf0f.SwitchSpazaAndCheckBasket(Browser browserInstance, IAccessingApplicationActions accessingApplicationAction)
-at TestProj.Tests.AccessingApplication.AccessingApplicationMultiSpaza._04_ApplicationWithMultipleSpazas() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\AccessingApplication\AccessingApplicationMultiSpaza.cs:line 82
-]]></stack-trace>
-                        </failure>
                       </test-case>
                     </results>
                   </test-suite>

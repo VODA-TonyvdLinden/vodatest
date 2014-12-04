@@ -103,7 +103,7 @@ namespace TestProj.Tests.AccessingApplication
             //4. See spelling, grammar and alignment
             LogWriter.Instance.Log("TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer", LogWriter.eLogType.Info);
             //5. Verify that the preferred alias name is displayed on top right hand corner of the app with 
-            accessingApplicationAction.VerifyPreferedAlias(browserInstance);
+            accessingApplicationAction.VerifyPreferedAlias(browserInstance, TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.Alias);
             //the spaza owner's alias name and spaza name
             accessingApplicationAction.VerifySpazaName(browserInstance);
             //6. Verify that the user is served with specials on special block

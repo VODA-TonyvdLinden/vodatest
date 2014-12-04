@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
-  <TopNode>[0-1076]C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll</TopNode>
-  <SelectedNode>[0-1004]TestProj.Tests.AccessingApplication.AccessingApplication._04_ApplicationWithMultipleSpazas</SelectedNode>
+  <TopNode>[0-1077]C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll</TopNode>
+  <SelectedNode>[0-1001]TestProj.Tests.AccessingApplication.AccessingApplicationMultiSpaza._04_ApplicationWithMultipleSpazas</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
-    <Node UniqueName="[0-1076]C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" Expanded="true" />
-    <Node UniqueName="[0-1077]TestProj" Expanded="true" />
-    <Node UniqueName="[0-1078]TestProj.Tests" Expanded="true" />
-    <Node UniqueName="[0-1079]TestProj.Tests.AccessingApplication" Expanded="true" />
-    <Node UniqueName="[0-1000]TestProj.Tests.AccessingApplication.AccessingApplication" Expanded="true" />
-    <Node UniqueName="[0-1080]TestProj.Tests.Activation" Expanded="true" />
-    <Node UniqueName="[0-1006]TestProj.Tests.Activation.Activation" Expanded="true" />
-    <Node UniqueName="[0-1081]TestProj.Tests.Alerts" Expanded="true" />
-    <Node UniqueName="[0-1082]TestProj.Tests.Basket" Expanded="true" />
-    <Node UniqueName="[0-1083]TestProj.Tests.Catalogues" Expanded="true" />
-    <Node UniqueName="[0-1084]TestProj.Tests.ContactUs" Expanded="true" />
-    <Node UniqueName="[0-1049]TestProj.Tests.ContactUs.ContactUs" Expanded="true" />
-    <Node UniqueName="[0-1085]TestProj.Tests.Favourites" Expanded="true" />
-    <Node UniqueName="[0-1087]TestProj.Tests.Orders" Expanded="true" />
-    <Node UniqueName="[0-1086]TestProj.Tests.Search" Expanded="true" />
+    <Node UniqueName="[0-1077]C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" Expanded="true" />
+    <Node UniqueName="[0-1078]TestProj" Expanded="true" />
+    <Node UniqueName="[0-1079]TestProj.Tests" Expanded="true" />
+    <Node UniqueName="[0-1080]TestProj.Tests.AccessingApplication" Expanded="true" />
+    <Node UniqueName="[0-1000]TestProj.Tests.AccessingApplication.AccessingApplicationMultiSpaza" Expanded="true" />
+    <Node UniqueName="[0-1002]TestProj.Tests.AccessingApplication.AccessingApplicationSingleSpaza" Expanded="true" />
+    <Node UniqueName="[0-1081]TestProj.Tests.Activation" Expanded="true" />
+    <Node UniqueName="[0-1007]TestProj.Tests.Activation.Activation" Expanded="true" />
+    <Node UniqueName="[0-1082]TestProj.Tests.Alerts" Expanded="true" />
+    <Node UniqueName="[0-1024]TestProj.Tests.Alerts.Alerts" Expanded="true" />
+    <Node UniqueName="[0-1083]TestProj.Tests.Basket" Expanded="true" />
+    <Node UniqueName="[0-1084]TestProj.Tests.Catalogues" Expanded="true" />
+    <Node UniqueName="[0-1085]TestProj.Tests.ContactUs" Expanded="true" />
+    <Node UniqueName="[0-1086]TestProj.Tests.Favourites" Expanded="true" />
+    <Node UniqueName="[0-1088]TestProj.Tests.Orders" Expanded="true" />
+    <Node UniqueName="[0-1087]TestProj.Tests.Search" Expanded="true" />
   </Nodes>
 </VisualState>

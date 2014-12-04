@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using TestProj.Classes;
 using TestProj.Tests.Common;
@@ -347,6 +348,42 @@ namespace TestProj.Tests.Activation
             ClickSearchButton(browserInstance, mcatSearchButton);
             //browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "??");
             LogWriter.Instance.Log("TESTCASE: _12_SetupCatalogueValidations -> 1.9 (SPACES BEFORE AND AFTER) -> No error message found on page ", LogWriter.eLogType.Error);
+        }
+        public void ValidateOTP(Classes.Browser browserInstance)
+        {
+            // 3.1.1 Please enter space before entering input on the field 
+            // 3.1.1 a space before any input  is not allowed 
+            var otpNextButton = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(4) > div > div > input.btn.btn-large.nextBtn.pull-right.purpleButton.ng-scope.ng-binding");
+            var otpErrorMessage = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
+            var otp = Helpers.Instance.GetProxy(browserInstance, "#otp");
+
+            Helpers.Instance.FieldInput(browserInstance, otp, " Tets space");
+            Helpers.Instance.ClickButton(browserInstance, otpNextButton);
+            browserInstance.Instance.Assert.True(() => otpErrorMessage.Element.Text == "OTP should be a 6 digit number. Please, check it carefully.");
+            LogWriter.Instance.Log("Inconsistant error handling. First error handled with message on screen, the rest with a popup -> Especially when the number is less than 6 chars", LogWriter.eLogType.Error);
+
+            // 3.1.2 Please enter decimal numbers <0.00444> 
+            // 3.1.2  decimal or float numbers are not allowed
+            Helpers.Instance.FieldInput(browserInstance, otp, "0.00444");
+            Helpers.Instance.ClickButton(browserInstance, otpNextButton);
+
+            CheckOTPErrorPopup(browserInstance);
+            Thread.Sleep(500);
+            // 3.1.3 Please enter negative value <-1>  
+            // 3.1.3  A negative number is not allowed 
+            Helpers.Instance.FieldInput(browserInstance, otp, "-11111");
+            Helpers.Instance.ClickButton(browserInstance, otpNextButton);
+            CheckOTPErrorPopup(browserInstance);
+        }
+
+        public void CheckOTPErrorPopup(Classes.Browser browserInstance)
+        {
+            browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#errorModal"), 30);
+
+            var modalErr = Helpers.Instance.GetProxy(browserInstance, "#errorModal");
+            var err = Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(2) > div.col-sm-9 > div.errorDetailsList > ul > li.ng-binding");
+            browserInstance.Instance.Assert.True(() => err.Element.Text == "OTP validation failed");
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(3) > div > button"));
         }
     }
 }
