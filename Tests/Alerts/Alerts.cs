@@ -32,7 +32,6 @@ namespace TestProj.Tests.Alerts
             container.AddNewExtension<Interception>();
 
             container.RegisterType<Interfaces.IAlertsActions, Tests.Alerts.AlertsActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
-            container.RegisterType<Interfaces.IActivationActions, Tests.Activation.ActivationActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
 
             Helpers.Instance.Activate(browserInstance, true);
         }
@@ -156,24 +155,9 @@ namespace TestProj.Tests.Alerts
         [Test, Description("_02_AlertsPollingService"), Category("Alerts"), Repeat(1)]
         public void _02_AlertsPollingService()
         {
-            //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
+            //1. verify that the application places urgent actions  on the alerts page
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
-
-            var productItem = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.leftBlock > div > div > div > div:nth-child(1) > div > div");
-
-            Helpers.Instance.Exists(browserInstance, productItem);
-            Helpers.Instance.ClickButton(browserInstance, productItem);
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button"), TimeSpan.FromMinutes(30));
-
-            Helpers.Instance.Exists(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button");
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button"));
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button"));
-
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.alertStatus > a > div"), TimeSpan.FromMinutes(30));
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button"));
-            Thread.Sleep(30000);
-            //TODO
+            alertActions.VerifyUrgentActions(browserInstance);
         }
 
         /// <summary>
@@ -207,9 +191,15 @@ namespace TestProj.Tests.Alerts
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.leftBlock > div > div > div > div:nth-child(1) > div > div.productContainer"));
-            Thread.Sleep(3000);
-            //TODO
+
+            // Test:   1.Verify that the active alert's text  is highlighted red "You have received new invoices"
+            // Output: 1. The " You have received new invoices" text is highlighted in red 
+            Helpers.Instance.CheckClass(browserInstance, "", Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(1) > label"));
+
+            // Test:   2. Click on the <view invoices> button
+            // Output: 2. The notification invoices page is displayed and the new Invoice flag is cleared
+            Helpers.Instance.CheckButtonEnabled(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(1) > button");
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(1) > button"));
         }
 
         /// <summary>
@@ -242,8 +232,97 @@ namespace TestProj.Tests.Alerts
         [Test, Description("_04_AlertsConfirmNow"), Category("Alerts"), Repeat(1)]
         public void _04_AlertsConfirmNow()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
+            alertActions.AddUnconfirmedOrder(browserInstance);
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
+
+            // Test:   1. Verify that the active alert's text  is highlighted red "You have an unconfirmed order
+            // Output: 1. The " You have an unconfirmed order " text is highlighted in red
+            LogWriter.Instance.Log(@"TESTCASE:_04_AlertsConfirmNow -> Test step the label is not highlighted as red even when they are unconfirmed orders ...'. 
+                                    '1. Verify that the active alert's text  is highlighted red 'You have an unconfirmed order' - Please update the test case.", LogWriter.eLogType.Error);
+            alertActions.VerifyTextHighlightedRed(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > label");
+
+            // Test:   2. Click on the <confirm now> button
+            // Output: 2. The notification confirm now page is displayed
+            alertActions.VerifyConfirmNowButtonClick(browserInstance);
+
+            // Test:   3. Click on the <confirm  order> button 
+            // Output: 3. The list of unconfirmed orders requiring users attention is displayed
+            //var orderNumber = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
+            //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.True(() => orderNumber.Element.Text != ""), TimeSpan.FromMinutes(30));
+            //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(1)"));
+
+            LogWriter.Instance.Log("TESTCASE:_04_AlertsConfirmNow -> Test step clicking confirm order, confirms the order and sends you to the orders history page, which means all other test steps cannot be tested. '3. Click on the <confirm  order> button' - Please update the test case.", LogWriter.eLogType.Error);
+            // 4. view confirm order  page verification 
+            // 4.1 Verify that the unconfirmed order number is displayed and is the only one
+            // 4.1 The invoices number, supplier, invoice date and value are displayed a tabular format  and is the only one at a time 
+            // Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
+
+            // 4.2 Verify item code, name, brand, pack size, price, qty, total and value are displayed
+            // 4.2 The required number of columns are displayed with data 
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(1)");
+
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(2)");
+            // Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.subtitle > td");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(3)");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(4)");
+            // Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(5)");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(6)");
+
+            // 5. Click on the back on the <back to actions> button 
+            // 5. The user is returned to the alerts active page
+            // Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(4)"));
+            //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts?orderNumber=" + orderNumber.Element.Text));
+
+            // 6. Click on the <back to orders> button and order basket still intact 
+            // 6. The orders page is displayed  and there are no changes to the basketHelpers.Instance.CheckButtonEnabled(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button");
+            //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button"));
+            //browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td"), TimeSpan.FromMinutes(30));
+            // Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(3)"));
+
+            // 3. Click on the <confirm  order> button 
+            // 3.  The list of unconfirmed orders requiring users attention is displayed
+            //LogWriter.Instance.Log(@"TESTCASE:_04_AlertsConfirmNow -> Test step after clicking <confirm order> button you do not get the list of uncofirmed orders, but you get a popup which leads to list of all orders confirmed '. 
+            // '1. Verify that the active alert's text  is highlighted red 'You have an unconfirmed order' - Please update the test case.", LogWriter.eLogType.Error);
+
+            //var confirminationOrderNumber = Helpers.Instance.GetProxy(browserInstance, "#orderComplete > div > div > div.modal-body.text-center > p:nth-child(3) > strong");
+            //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.True(() => confirminationOrderNumber.Element.Text != ""));
+            //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderComplete > div > div > div.modal-body.text-center > div > button"));
+
+            //// 4.1 Verify that the unconfirmed order number is displayed and is the only one
+
+            ////4.2 Verify item code, name, brand, pack size, price, qty, total and value are displayed
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(1)");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(2)");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(3)");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(4)");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(5)");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(6)");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(7)");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(8)");
+
+            // 4. view confirm order  page verification 
+            // 4.1 The invoices number, supplier, invoice date and value are displayed a tabular format  and is the only one at a time  
+            //var confirminationOrderNumber = Helpers.Instance.GetProxy(browserInstance, "#orderComplete > div > div > div.modal-body.text-center > p:nth-child(3) > strong");
+            //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.True(() => confirminationOrderNumber.Element.Text != ""));
+            //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderComplete > div > div > div.modal-body.text-center > div > button"));
+
+            //// 4.1 Verify that the unconfirmed order number is displayed and is the only one
+
+            ////4.2 Verify item code, name, brand, pack size, price, qty, total and value are displayed
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(1)");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(2)");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(3)");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(4)");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(5)");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(6)");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(7)");
+            //Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(8)");
+            ///// 5. Click on the back on the <back to actions> button  
+            //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(4)"));
+            ///// 6. Click on the <back to orders> button and order basket still intact 
+            //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(3)"));
+            /// 7. Click on <back to actions> button 
             //TODO
         }
 
@@ -255,7 +334,7 @@ namespace TestProj.Tests.Alerts
         /// Pre-Condition: None
         /// Environment:Alerts Page
         /// TEST STEPS:
-        /// 1.Verify that the active alert's text  is highlighted red "You catalogue is out of sync"   
+        /// 1. Verify that the active alert's text  is highlighted red "You catalogue is out of sync"   
         /// 2. Verify if the application is online, in order to update the catalogue   
         /// 3. Click on the <sync now> button  
         /// TEST OUTPUT:
@@ -266,9 +345,20 @@ namespace TestProj.Tests.Alerts
         [Test, Description("_05_AlertsSyncNow"), Category("Alerts"), Repeat(1)]
         public void _05_AlertsSyncNow()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
-            //TODO
+
+            //Test:   1. Verify that the active alert's text  is highlighted red "Your catalogue is out of sync"
+            //Output: 1. The " Your catalogue is out of sync " text is highlighted in red
+            alertActions.VerifyTextHighlightedRed(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(3) > label");
+
+            //Test:   2. Verify if the application is online, in order to update the catalogue 
+            //Output: 2. The application is online
+            Helpers.Instance.CheckOnlineIndicator(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.networkStatus > div");
+
+            //Test:   3. Click on the <sync now> button
+            //Output: 3. The progress bar is  displayed  to show that an update to the catalogue is in progress and the application becomes in-active 
+            alertActions.VerifyAsyncNow(browserInstance);
         }
 
         /// <summary>
@@ -279,7 +369,7 @@ namespace TestProj.Tests.Alerts
         /// Pre-Condition: None
         /// Environment:Alerts Page
         /// TEST STEPS:
-        /// 1.Verify that the active alert's text  is highlighted red "Manage your Catalogue "   
+        /// 1. Verify that the active alert's text  is highlighted red "Manage your Catalogue"   
         /// 2. Click on the <manage> button     
         /// 3. Search returning one or multiple results                                                                                                            
         /// 3.1 Enter the allowable wholesaler <Makro>  in search field which  give any results and verify the user interface  
@@ -314,9 +404,33 @@ namespace TestProj.Tests.Alerts
         [Test, Description("_06_AlertsManageCatalogue"), Category("Setup_Catalogue"), Repeat(1)]
         public void _06_AlertsManageCatalogue()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
-            //TODO
+
+            // 1. Verify that the active alert's text  is highlighted red "Manage your Catalogue" 
+            // 1. The " Manage your catalogue " text is highlighted in red  
+            alertActions.VerifyTextHighlightedRed(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(1) > label");
+
+            // 2. Click on the <manage> button 
+            // 2. The manage your catalogue actions page is displayed
+            alertActions.VerifyManageButtonClick(browserInstance);
+            
+            // 3. Search returning one or multiple results
+            // 3.1 Enter the allowable wholesaler <Makro>  in search field which  give any results and verify the user interface
+            alertActions.VeriftyManageCatalogueSearch(browserInstance);
+
+            /// 4. Verify groupings arrows are expandable    
+            alertActions.VeriftyManageExpandableArrows(browserInstance);
+            LogWriter.Instance.Log("TESTCASE:_04_AlertsConfirmNow -> Test step clicking confirm order, confirms the order and sends you to the orders history page, which means all other test steps cannot be tested. '3. Click on the <confirm  order> button' - Please update the test case.", LogWriter.eLogType.Error);
+
+            // 5. Select one store from each range                                                                                                  
+            // 5.1 Select 0 - 25km  and select one wholesaler under that range by checkbox      
+            // 5.2 Select 25 - 50km  and select one wholesaler under that range by checkbox   
+            // 5.3 Select 50 - 75km  and select one wholesaler under that range by checkbox   
+            // 5.4 Select 75 - 100km  and select one wholesaler under that range by checkbox 
+            alertActions.VeriftyManageExpandableWholesalerSelect(browserInstance);
+
+            //LogWriter.Instance.Log();
         }
 
         /// <summary>
@@ -354,9 +468,45 @@ namespace TestProj.Tests.Alerts
         [Test, Description("_07_AlertsDiagnose"), Category("Alerts"), Repeat(1)]
         public void _07_AlertsDiagnose()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
-            //TODO
+
+            // 1. Verify that the active alert's text  is highlighted red "You have connection issues "
+            alertActions.VerifyTextHighlightedRed(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(2) > label");
+
+            // 2. Click on the <diagnose> button   
+            alertActions.VerifyDiagnoseButtonClick(browserInstance);
+
+            // 3. Verify the diagnose connection actions notification screen                                                                                            
+            // 3.1 Verify Checking Connection label is available, checking vital communication to the ordering process
+            alertActions.VerifyDiagnoseCheckingNotificationLabels(browserInstance);
+
+            // 3.2 Verify that the test now button for checking connection is available   
+            // 3.2  The test now checking connection button is displayed on the screen
+            alertActions.VerifyDiagnoseCheckingNotificationTestButton(browserInstance);
+
+            // 3.3 Verify that the test now button for checking connection speed is available
+            // 3.3 The test now button for checking connection speed is available
+            alertActions.VerifyDiagnoseConnectionSpeedTestButton(browserInstance);
+
+            // 4. Check Button Functionality      
+                                                                                                         
+            // 4.1 Click on check connection <test now> button
+            // 4.1 An indicator is displayed, that determines whether the connection was good or bad 
+            alertActions.VerifyDiagnoseCheckingNotificationTestButtonClick(browserInstance);
+            
+            // 4.2 Click on the on the connection speed <test now>button  
+            // 4.2 Displayed results are determined by the application whether the connection speed is poor or not
+            alertActions.VerifyDiagnoseConnectionSpeedTestButtonClick(browserInstance);
+            
+            // 3.4 Verify that the results place holder label is available, displaying the results of the test 
+            // 3.4 The results place holder label is available 
+            alertActions.VerifyDiagnoseResultPlaceholder(browserInstance);
+            
+            // 3.5 Verify that the <OK> button is available  
+            // 3.5 The OK button is displayed 
+            LogWriter.Instance.Log("TESTCASE:_07_AlertsDiagnose -> Test step there is no OK button in the page. '3.5 Verify that the <OK> button is available' - Please update the test case.", LogWriter.eLogType.Error);
+
         }
 
         /// <summary>
@@ -383,6 +533,8 @@ namespace TestProj.Tests.Alerts
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
             //TODO
+            LogWriter.Instance.Log("TESTCASE:_09_AlertsMessaging -> Test step there is no Messages to test how do we get this. '1.Verify Received Message Format  from MAS' - Please update the test case.", LogWriter.eLogType.Error);
+
         }
     }
 }
