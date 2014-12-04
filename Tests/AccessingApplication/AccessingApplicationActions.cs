@@ -47,7 +47,7 @@ namespace TestProj.Tests.AccessingApplication
             var alias = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.aliasName.ng-binding");
             browserInstance.Instance.Assert.True(() => alias.Element.Text == aliasName);
         }
-        public void VerifySpazaName(Classes.Browser browserInstance)
+        public void VerifySpazaName(Classes.Browser browserInstance, bool multiSpaza)
         {
             // 5. Verify that the preferred alias name is displayed on top right hand corner of the app with 
             browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
@@ -55,12 +55,17 @@ namespace TestProj.Tests.AccessingApplication
 
             //LogWriter.Instance.Log(spazaName.Element.Text, LogWriter.eLogType.Error);
 
-            Classes.TestDataClasses.Spaza spaza = TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas.Find(s => s.Name == spazaName.Element.Text);
+            Classes.TestDataClasses.Spaza spaza;
+            if (multiSpaza)
+                spaza = TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas.Find(s => s.Name == spazaName.Element.Text);
+            else
+                spaza = TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.Spazas.Find(s => s.Name == spazaName.Element.Text);
             if (spaza == null)
             {
-                LogWriter.Instance.Log(string.Format("TESTCASE: VerifySpazaName -> {0} is not configured as a spaza shop for {1}", spazaName.Element.Text, TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Username), LogWriter.eLogType.Error);
+                LogWriter.Instance.Log(string.Format("TESTCASE: VerifySpazaName -> {0} is not configured as a spaza shop for {1}", spazaName.Element.Text,
+                    multiSpaza ? TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Username : TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.Username), LogWriter.eLogType.Error);
                 if (TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas.Count < 1)
-                    LogWriter.Instance.Log(string.Format("TESTCASE: VerifySpazaName -> There are no spaza shops configured for {0}", TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Username), LogWriter.eLogType.Error);
+                    LogWriter.Instance.Log(string.Format("TESTCASE: VerifySpazaName -> There are no spaza shops configured for {0}", multiSpaza ? TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Username : TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.Username), LogWriter.eLogType.Error);
                 spaza = TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas[0];
             }
 
@@ -248,7 +253,9 @@ namespace TestProj.Tests.AccessingApplication
         public void VerifySpecialAccessibility(Classes.Browser browserInstance)
         {
             //   1.1 Select any specail within the catalogue to see if is selectable by a single click
-            var specialItem = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.leftBlock > div > div > div > div:nth-child(1) > div > div");
+            //var specialItem = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.leftBlock > div > div > div > div:nth-child(1) > div > div");
+            //For some reason this item moved
+            var specialItem = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.leftBlock > div > div > div:nth-child(1) > div:nth-child(1) > div > div");
             Helpers.Instance.ClickButton(browserInstance, specialItem);
             //   1.1 The selected item is marked
             LogWriter.Instance.Log("TESTCASE:_03_ApplicationLandingContentsFunctionality -> Item is not market when single click. Cannot test for this. Test case wrong. Same behaviour as double click", LogWriter.eLogType.Error);
@@ -328,7 +335,7 @@ namespace TestProj.Tests.AccessingApplication
             //Select the next spaza
             accessingApplicationAction.SelectSpaza(browserInstance, "16 Tuck Shop");
             // 3. The selected spaza is displayed and  is only valid for the session
-            accessingApplicationAction.VerifySpazaName(browserInstance);
+            accessingApplicationAction.VerifySpazaName(browserInstance, true);
             browserInstance.Instance.Assert.Text("16 Tuck Shop").In(spazaName);
             string secondSpazaName = spazaName.Element.Text;
             browserInstance.Instance.Assert.False(() => currentSpazaName == secondSpazaName);

@@ -7,7 +7,7 @@ namespace TestProj.Interfaces
         void VerifyOnlineIndicator(Classes.Browser browserInstance);
         void VerifyPageLinks(Classes.Browser browserInstance);
         void VerifyPreferedAlias(Classes.Browser browserInstance, string aliasName);
-        void VerifySpazaName(Classes.Browser browserInstance);
+        void VerifySpazaName(Classes.Browser browserInstance, bool multiSpaza);
         void VerifySpecialsExists(Classes.Browser browserInstance);
         void VerifyMarbilExists(Classes.Browser browserInstance);
         void VerifySubApplicationsExists(Classes.Browser browserInstance);

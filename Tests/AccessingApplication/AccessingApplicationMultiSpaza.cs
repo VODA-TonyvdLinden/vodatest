@@ -76,7 +76,7 @@ namespace TestProj.Tests.AccessingApplication
             // 2.Verify that the preferred alias name is displayed on top right hand corner of the app with 
             //   the spaza owner's alias name and spaza name list
             accessingApplicationAction.VerifyPreferedAlias(browserInstance, TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Alias);
-            accessingApplicationAction.VerifySpazaName(browserInstance);
+            accessingApplicationAction.VerifySpazaName(browserInstance, true);
 
             // 3.Select any spaza on the list  
             accessingApplicationAction.SwitchSpazaAndCheckBasket(browserInstance, accessingApplicationAction);
