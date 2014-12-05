@@ -65,7 +65,7 @@ namespace TestProj.Tests.Activation
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(8) > div > input"));
 
             Helpers.Instance.Exists(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding"));
-            //browserInstance.Instance.Assert.True(() => "E1-1-7 – Please complete all fields" == errorMessage.Element.Text);
+            //browserInstance.Instance.Assert.Value("E1-1-7 – Please complete all fields").In(errorMessage);
             LogWriter.Instance.Log(string.Format("TESTCASE:_02_ActivationFormFieldValidation -> Incorrect error message. '{0}' expercted, '{1}' returned. Assert commented out. ActivationAction.TestMandatoryFields", "E1-1-7 – Please complete all fields", errorMessage.Element.Text), LogWriter.eLogType.Error);
             LogWriter.Instance.Log("TESTCASE:_02_ActivationFormFieldValidation -> all fields must either be highlited in red or displayed on the screen. Which one?", LogWriter.eLogType.Error);
         }
@@ -85,7 +85,7 @@ namespace TestProj.Tests.Activation
             Helpers.Instance.FieldInput(browserInstance, userAlias, TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.Alias);
             // 3.2.1.4 click on the next button   
             // TEST:  3.2.1.4  An Error Message is displayed  "E1-1 -3 invalid input". Field must be highlited in red
-            //browserInstance.Instance.Assert.True(() => "E1-1 -3 invalid input" == errorMessage.Element.Text);
+            //browserInstance.Instance.Assert.Value("E1-1 -3 invalid input").In(errorMessage);
             LogWriter.Instance.Log(string.Format("TESTCASE:_03_ActivationFormIncorrectUserDetails -> Incorrect error message. '{0}' expercted, '{1}' returned. Assert commented out. ActivationAction.TestMSISDNLengthLimitSmaller", "E1-1-7 – Please complete all fields", errorMessage.Element.Text), LogWriter.eLogType.Error);
             //Helpers.Instance.CheckClass(browserInstance, "has-error", msisdn);
             //Helpers.Instance.CheckClass(browserInstance, "ng-invalid", msisdn);
@@ -108,7 +108,7 @@ namespace TestProj.Tests.Activation
             // 3.1.5 click on the next button                                                       
             Helpers.Instance.ClickButton(browserInstance, nextButton);
             // TEST: 3.1.5 An Error Message is displayed  "E1-1 -3 invalid input". Field must be highlited in red
-            //browserInstance.Instance.Assert.True(() => "E1-1 -3 invalid input" == errorMessage.Element.Text);
+            //browserInstance.Instance.Assert.Value("E1-1 -3 invalid input").In(errorMessage);
             LogWriter.Instance.Log(string.Format("TESTCASE:_03_ActivationFormIncorrectUserDetails -> Incorrect error message. '{0}' expercted, '{1}' returned. Assert commented out. ActivationAction.TestMSISDNLengthLimitGreater", "E1-1-7 – Please complete all fields", errorMessage.Element.Text), LogWriter.eLogType.Error);
             //Helpers.Instance.CheckClass(browserInstance, "has-error", msisdn);
             //Helpers.Instance.CheckClass(browserInstance, "ng-invalid", msisdn);
@@ -130,7 +130,7 @@ namespace TestProj.Tests.Activation
             // 2.1.5 click on the next button                               
             Helpers.Instance.ClickButton(browserInstance, nextButton);
             // TEST: 2.1.5 An Error Message is displayed  "E1-1 -3 invalid input". Field must be highlited in red
-            //browserInstance.Instance.Assert.True(() => "E1-1 -3 invalid input" == errorMessage.Element.Text);
+            //browserInstance.Instance.Assert.Value("E1-1 -3 invalid input").In(errorMessage);
             LogWriter.Instance.Log(string.Format("TESTCASE:_03_ActivationFormIncorrectUserDetails -> Incorrect error message. '{0}' expercted, '{1}' returned. Assert commented out. ActivationAction.TestInvalidUsername", "E1-1 -3 invalid input", errorMessage.Element.Text), LogWriter.eLogType.Error);
             //Helpers.Instance.CheckClass(browserInstance, "has-error", username);
             //Helpers.Instance.CheckClass(browserInstance, "ng-invalid", username);
@@ -168,7 +168,7 @@ namespace TestProj.Tests.Activation
             // 1.1.5 click on the next button   
             Helpers.Instance.ClickButton(browserInstance, nextButton);
             // TEST: 1.1.5 An Error Message is displayed  "E1-1 -3 invalid input". Field must be highlited in red
-            //browserInstance.Instance.Assert.True(() => "E1-1 -3 invalid input" == errorMessage.Element.Text);
+            //browserInstance.Instance.Assert.Value("E1-1 -3 invalid input").In(errorMessage);
             LogWriter.Instance.Log(string.Format("TESTCASE:_03_ActivationFormIncorrectUserDetails -> Incorrect error message. '{0}' expercted, '{1}' returned. Assert commented out. ActivationAction.TestInvalidActivationKey", "E1-1 -3 invalid input", errorMessage.Element.Text), LogWriter.eLogType.Error);
             LogWriter.Instance.Log("TESTCASE:_03_ActivationFormIncorrectUserDetails -> all fields must either be highlited in red or displayed on the screen. Which one?", LogWriter.eLogType.Error);
             //Helpers.Instance.CheckClass(browserInstance, "has-error", activationNumber);
@@ -255,7 +255,7 @@ namespace TestProj.Tests.Activation
             string numberSecond = msisdnNo.Substring(msisdnNo.Length - 4, 4);
 
             string message = string.Format("A One Time Pin has been sent to {0}*****{1}. Please enter the One time Pin here to continue", numberFirst, numberSecond);
-            //browserInstance.Instance.Assert.True(() => message == otpMessage.Element.Text);
+            //browserInstance.Instance.Assert.Value(message).In(otpMessage);
             LogWriter.Instance.Log(string.Format("TESTCASE:_04_ActivationFormCorrectUserDetails & _05_VerifyActivationOneTimePinLandingPage & _09_ResendOneTimePin -> OTP MSISDN message incorrect. '{0}' expercted, '{1}' returned. Assert commented out. ActivationAction.VerifyOTPErrorMessage", message, otpMessage.Element.Text), LogWriter.eLogType.Error);
         }
 
@@ -280,7 +280,7 @@ namespace TestProj.Tests.Activation
             Helpers.Instance.FieldInput(browserInstance, varOtp, otpVal);
             //browserInstance.Instance.Enter(otpVal).In(varOtp);
             //The one time pin entered is displayed  the one time pin filed
-            browserInstance.Instance.Assert.True(() => otp.Element.Text == otpVal);
+            browserInstance.Instance.Assert.Value(otpVal).In(otp);
 
         }
 
@@ -314,7 +314,7 @@ namespace TestProj.Tests.Activation
             /// 1.1 Without entering anything click on search button.
             ClickSearchButton(browserInstance, mcatSearchButton);
             /// 1.1 An error message is displayed: “E1-1-7 – Please complete all fields”. all fields must either be highlighted in red or displayed on the screen  
-            //browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "E1-1-7 – Please complete all fields. all fields must either be highlited in red or displayed on the screen");
+            //browserInstance.Instance.Assert.Value("E1-1-7 – Please complete all fields. all fields must either be highlited in red or displayed on the screen").In(mcatErrorMessage);
             LogWriter.Instance.Log("TESTCASE: _12_SetupCatalogueValidations -> 1.1 (NO VALUE) -> Cannot test the error message -> E1-1-7 – Please complete all fields. Assert commented out", LogWriter.eLogType.Error);
 
             /// 1.2 Click in the search field and press Enter key.
@@ -323,43 +323,43 @@ namespace TestProj.Tests.Activation
             /// 1.3 Enter any  one character and click on search button/press Enter key .
             Helpers.Instance.FieldInput(browserInstance, searchValue, "x");
             ClickSearchButton(browserInstance, mcatSearchButton);
-            //browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "E1-1-7 – Please complete all fields. all fields must either be highlited in red or displayed on the screen");
+            //browserInstance.Instance.Assert.Value("E1-1-7 – Please complete all fields.").In(mcatErrorMessage);
             LogWriter.Instance.Log("TESTCASE: _12_SetupCatalogueValidations -> 1.3 (ONE CHAR) -> No error message found on page. Assert commented out", LogWriter.eLogType.Error);
 
             /// 1.4 Enter only special characters and click on Search button
             Helpers.Instance.FieldInput(browserInstance, searchValue, "%$#@");
             ClickSearchButton(browserInstance, mcatSearchButton);
-            //browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "E1-1-7 – Please complete all fields. all fields must either be highlited in red or displayed on the screen");
+            //browserInstance.Instance.Assert.Value("E1-1-7 – Please complete all fields.").In(mcatErrorMessage);
             LogWriter.Instance.Log("TESTCASE: _12_SetupCatalogueValidations -> 1.4 (SPECIAL CHARS) -> No error message found on page. Assert commented out", LogWriter.eLogType.Error);
 
             /// 1.5 Enter  only numbers and click on search button
             Helpers.Instance.FieldInput(browserInstance, searchValue, "1234567");
             ClickSearchButton(browserInstance, mcatSearchButton);
-            //browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "E1-1-7 – Please complete all fields. all fields must either be highlited in red or displayed on the screen");
+            //browserInstance.Instance.Assert.Value("E1-1-7 – Please complete all fields.").In(mcatErrorMessage);
             LogWriter.Instance.Log("TESTCASE: _12_SetupCatalogueValidations -> 1.5 (ONLY NUMBERS) -> No error message found on page. Assert commented out", LogWriter.eLogType.Error);
 
             /// 1.6 Enter alphanumeric characters and click on search button
             Helpers.Instance.FieldInput(browserInstance, searchValue, "1Te2st");
             ClickSearchButton(browserInstance, mcatSearchButton);
-            //browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "E1-1-7 – Please complete all fields. all fields must either be highlited in red or displayed on the screen");
+            //browserInstance.Instance.Assert.Value("E1-1-7 – Please complete all fields.").In(mcatErrorMessage);
             LogWriter.Instance.Log("TESTCASE: _12_SetupCatalogueValidations -> 1.6 (APLHA CHARS) -> No error message found on page. Assert commented out", LogWriter.eLogType.Error);
 
             /// 1.7 Enter  alphanumeric characters and special characters and click on search button.
             Helpers.Instance.FieldInput(browserInstance, searchValue, "1Te2st!@#");
             ClickSearchButton(browserInstance, mcatSearchButton);
-            //browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "E1-1-7 – Please complete all fields. all fields must either be highlited in red or displayed on the screen");
+            //browserInstance.Instance.Assert.Value("E1-1-7 – Please complete all fields.").In(mcatErrorMessage);
             LogWriter.Instance.Log("TESTCASE: _12_SetupCatalogueValidations -> 1.7 (APLHA + SPECIAL CHARS) -> No error message found on page. Assert commented out", LogWriter.eLogType.Error);
 
             /// 1.8 Enter string more than the max char limit of the field.     
             Helpers.Instance.FieldInput(browserInstance, searchValue, "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890");
             ClickSearchButton(browserInstance, mcatSearchButton);
-            //browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "E1-1-7 – Please complete all fields. all fields must either be highlited in red or displayed on the screen");
+            //browserInstance.Instance.Assert.Value("E1-1-7 – Please complete all fields.").In(mcatErrorMessage);
             LogWriter.Instance.Log("TESTCASE: _12_SetupCatalogueValidations -> 1.8 (MAX LIMIT) -> Cannot test max limit as there ae no max limit set on the element. Assert commented out", LogWriter.eLogType.Error);
 
             /// 1.9 Enter string with spaces(before string , after string  and in between) and verify the results      
             Helpers.Instance.FieldInput(browserInstance, searchValue, " TEST WITH SPACES BEFORE AND AFTER ");
             ClickSearchButton(browserInstance, mcatSearchButton);
-            //browserInstance.Instance.Assert.True(() => mcatErrorMessage.Element.Text == "E1-1-7 – Please complete all fields. all fields must either be highlited in red or displayed on the screen");
+            //browserInstance.Instance.Assert.Value("E1-1-7 – Please complete all fields.").In(mcatErrorMessage);
             LogWriter.Instance.Log("TESTCASE: _12_SetupCatalogueValidations -> 1.9 (SPACES BEFORE AND AFTER) -> No error message found on page. Assert commented out", LogWriter.eLogType.Error);
 
         }
@@ -373,7 +373,7 @@ namespace TestProj.Tests.Activation
 
             Helpers.Instance.FieldInput(browserInstance, otp, " Test space");
             Helpers.Instance.ClickButton(browserInstance, otpNextButton);
-            browserInstance.Instance.Assert.True(() => otpErrorMessage.Element.Text == "OTP should be a 6 digit number. Please, check it carefully.");
+            browserInstance.Instance.Assert.Value("OTP should be a 6 digit number. Please, check it carefully.").In(otpErrorMessage);
             LogWriter.Instance.Log("Inconsistant error handling. First error handled with message on screen, the rest with a popup -> Especially when the number is less than 6 chars", LogWriter.eLogType.Error);
 
             // 3.1.2 Please enter decimal numbers <0.00444> 

@@ -679,7 +679,7 @@ namespace TestProj.Tests.Activation
             Helpers.Instance.FieldInput(browserInstance, searchBox, "NUnit Wholesaler");
             Helpers.Instance.ClickButton(browserInstance, searchButton);
             // 1.1 An Error message should be displayed in the search field " results not found"
-            //browserInstance.Instance.Assert.True(() => searchBox.Element.Text == "results not found");
+            //browserInstance.Instance.Assert.Value("results not found").In(searchBox);
             LogWriter.Instance.Log(string.Format("TESTCASE: _14_SetupCatalogueSearchFieldReturningNoResults -> Error message incorrect. '{0}' expected, '{1}' returned. Assert commented out", "results not found", searchBox.Element.Text), LogWriter.eLogType.Error);
         }
 
@@ -715,8 +715,9 @@ namespace TestProj.Tests.Activation
             var searchButton = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock.managecatalogue.width862px > form.ng-valid.ng-dirty > div > div.formRow.catalogsearch > button");
             Helpers.Instance.FieldInput(browserInstance, searchBox, "makro");
             /// 1.1 All the names starting with the first name will be pre-populated with a list
-            var makroLine = Helpers.Instance.GetProxy(browserInstance, "#catalog1 > ul > li.ng-scope > span");
-            browserInstance.Instance.Assert.True(() => makroLine.Element.Text == "Makro Woodmead");
+            var makroLine = Helpers.Instance.GetProxy(browserInstance, "#catalog75-100km > ul > li.ng-scope > span");
+            //var makroLine = Helpers.Instance.GetProxy(browserInstance, "#catalog1 > ul > li.ng-scope > span");
+            browserInstance.Instance.Assert.Value("Makro Woodmead").In(makroLine);
 
             /// 1.2 Select the one from the pre-populated list                                                                                         
             LogWriter.Instance.Log("TESTCASE: _15_SetupCatalogueSearchFieldFilter -> 'Test case unclear. 1.2 Select the one from the pre-populated lis'", LogWriter.eLogType.Error);

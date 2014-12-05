@@ -12,10 +12,12 @@ namespace TestProj.Classes.Browsers
     {
         public Chrome()
         {
-            FluentConfig.Current.WaitOnAllActions(true);
-            FluentConfig.Current.ScreenshotOnFailedAction(true);
-            FluentConfig.Current.WindowSize(1920, 1080);
-            FluentConfig.Current.WindowMaximized(true);
+            FluentConfig.Current.WaitOnAllActions(true)
+                .WaitOnAllExpects(true)
+                .WaitUntilTimeout(TimeSpan.FromMilliseconds(5000))
+                .ScreenshotOnFailedAction(true)
+                .WindowSize(1920, 1080)
+                .WindowMaximized(true);
         }
         public FluentAutomation.Interfaces.IActionSyntaxProvider Create()
         {

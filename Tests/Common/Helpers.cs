@@ -160,11 +160,11 @@ namespace TestProj.Tests.Common
             // 3. Verify that contact us and help me hyperlinks are displayed
             Exists(browserInstance, contactUsPath);
             var contactUs = GetProxy(browserInstance, contactUsPath);
-            browserInstance.Instance.Assert.True(() => contactUs.Element.Text == "Contact us");
+            browserInstance.Instance.Assert.Value("Contact us").In(contactUs);
 
             Exists(browserInstance, helpMePath);
             var helpMe = GetProxy(browserInstance, helpMePath);
-            browserInstance.Instance.Assert.True(() => helpMe.Element.Text == "Help me");
+            browserInstance.Instance.Assert.Value("Help me").In(helpMe);
         }
 
         public void CheckButtonEnabled(Classes.Browser browserInstance, string buttonPath)
@@ -236,13 +236,13 @@ namespace TestProj.Tests.Common
         {
             browserInstance.Instance.Assert.Exists(multiSpazaAliasPath);
             var alias = browserInstance.Instance.Find(multiSpazaAliasPath);
-            browserInstance.Instance.Assert.True(() => alias.Element.Text == TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Alias);
+            browserInstance.Instance.Assert.Value(TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Alias).In(alias);
         }
         public void CheckSingleSpazaPreferedAlias(Classes.Browser browserInstance, string singleSpazaAliasPath)
         {
             browserInstance.Instance.Assert.Exists(singleSpazaAliasPath);
             var alias = browserInstance.Instance.Find(singleSpazaAliasPath);
-            browserInstance.Instance.Assert.True(() => alias.Element.Text == TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.Alias);
+            browserInstance.Instance.Assert.Value(TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.Alias).In(alias);
         }
 
         public void CheckMultiSpazaName(Classes.Browser browserInstance, string multiSpazaNamePath)
@@ -262,7 +262,7 @@ namespace TestProj.Tests.Common
                 spaza = TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas[0];
             }
 
-            browserInstance.Instance.Assert.True(() => spazaName.Element.Text == spaza.Name);
+            browserInstance.Instance.Assert.Value(spaza.Name).In(spazaName);
         }
         public void CheckSingleSpazaName(Classes.Browser browserInstance, string singleSpazaNamePath)
         {
@@ -281,7 +281,7 @@ namespace TestProj.Tests.Common
                 spaza = TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas[0];
             }
 
-            browserInstance.Instance.Assert.True(() => spazaName.Element.Text == spaza.Name);
+            browserInstance.Instance.Assert.Value(spaza.Name).In(spazaName);
         }
 
         public void CheckMarbilAd(Classes.Browser browserInstance, string marbilAdPath)
@@ -356,21 +356,27 @@ namespace TestProj.Tests.Common
 
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#accordion"), TimeSpan.FromMinutes(30));
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#accordion > div:nth-child(1) > div.title.rightarrow.catalog1.downarrow"), TimeSpan.FromMinutes(30));
+            //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#accordion > div:nth-child(4) > div.title.rightarrow.catalog2"), TimeSpan.FromMinutes(30));
+            //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#accordion > div:nth-child(4) > div.title.rightarrow.catalog3"), TimeSpan.FromMinutes(30));
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#accordion > div:nth-child(4) > div.title.rightarrow.catalog4"), TimeSpan.FromMinutes(30));
+            Thread.Sleep(5000);
 
             var catPageNext = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > div > div.nextBtnSection > button");
             var catPageUpdate = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > form:nth-child(3) > div.formRow > button");
 
-            int spazaCount = 0;
-            int totalSpazas = 0;
-            getSpazaCounts(browserInstance, out spazaCount, out totalSpazas);
-
-            for (int k = spazaCount; k < totalSpazas; k++)
+            if (multipleSpazas)
             {
-                Helpers.Instance.ClickButton(browserInstance, catPageNext);
-                Thread.Sleep(100);
-            }
+                int spazaCount = 0;
+                int totalSpazas = 0;
+                getSpazaCounts(browserInstance, out spazaCount, out totalSpazas);
 
+                for (int k = spazaCount - 1; k < totalSpazas; k++)
+                {
+                    Helpers.Instance.ClickButton(browserInstance, catPageNext);
+                    Thread.Sleep(5000);
+                }
+            }
+            Thread.Sleep(1000);
             browserInstance.Instance.Assert.Exists("#catalog1");
             browserInstance.Instance.Assert.Exists("#catalog2");
             browserInstance.Instance.Assert.Exists("#catalog3");
@@ -388,6 +394,7 @@ namespace TestProj.Tests.Common
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.headerLogo.left > a > img"), TimeSpan.FromMinutes(30));
 
         }
+
         private static void getSpazaCounts(Classes.Browser browserInstance, out int spazaCount, out int totalSpazas)
         {
             var SpazaCountElement = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock.managecatalogue.width862px > div > div.txt.ng-binding");

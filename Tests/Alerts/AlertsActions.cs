@@ -98,7 +98,7 @@ namespace TestProj.Tests.Alerts
             // 15. Verify that the search text field is editable 
             // 15. The search text field is editable 
             Helpers.Instance.FieldInput(browserInstance, searchInput, "TEST");
-            browserInstance.Instance.Assert.True(() => searchInput.Element.Text == "TEST");
+            browserInstance.Instance.Assert.Value("TEST").In(searchInput);
         }
 
         public void VerifyNotificationSection(Classes.Browser browserInstance)
@@ -134,9 +134,9 @@ namespace TestProj.Tests.Alerts
             var unconfirmedOrderLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > label");
             var catalogueOutOfOrderLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(3) > label");
 
-            browserInstance.Instance.Assert.True(() => newInovoicesLabel.Element.Text == "You have received new invoices");
-            browserInstance.Instance.Assert.True(() => unconfirmedOrderLabel.Element.Text == "you have an unconfirmed order");
-            browserInstance.Instance.Assert.True(() => catalogueOutOfOrderLabel.Element.Text == "your catalogue is out of sync");
+            browserInstance.Instance.Assert.Value("You have received new invoices").In(newInovoicesLabel);
+            browserInstance.Instance.Assert.Value("you have an unconfirmed order").In(unconfirmedOrderLabel);
+            browserInstance.Instance.Assert.Value("your catalogue is out of sync").In(catalogueOutOfOrderLabel);
         }
 
         public void VerifySystemAlerts(Classes.Browser browserInstance)
@@ -156,9 +156,9 @@ namespace TestProj.Tests.Alerts
             var connactionIssuesOrderLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(2) > label");
             var changeActiveSpazaLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(3) > label");
 
-            browserInstance.Instance.Assert.True(() => manageYourCatalogueLabel.Element.Text == "manage your catalogue");
-            browserInstance.Instance.Assert.True(() => connactionIssuesOrderLabel.Element.Text == "you have connection issues");
-            browserInstance.Instance.Assert.True(() => changeActiveSpazaLabel.Element.Text == " change active spaza");
+            browserInstance.Instance.Assert.Value("manage your catalogue").In(manageYourCatalogueLabel);
+            browserInstance.Instance.Assert.Value("you have connection issues").In(connactionIssuesOrderLabel);
+            browserInstance.Instance.Assert.Value(" change active spaza").In(changeActiveSpazaLabel);
         }
 
         public void VerifySideButtons(Classes.Browser browserInstance)
@@ -246,7 +246,7 @@ namespace TestProj.Tests.Alerts
             var searchInput = Helpers.Instance.GetProxy(browserInstance, "#searchCatalog");
 
             Helpers.Instance.FieldInput(browserInstance, searchInput, "Makro");
-            browserInstance.Instance.Assert.True(() => searchInput.Element.Text == "Makro");
+            browserInstance.Instance.Assert.Value("Makro").In(searchInput);
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock.managecatalogue.width862px > form:nth-child(2) > div > div.formRow.catalogsearch > button"));
             Helpers.Instance.Exists(browserInstance, "#accordion > div > div.title.rightarrow.catalog1.downarrow");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#accordion > div:nth-child(1) > div.title.rightarrow.catalog1"));
