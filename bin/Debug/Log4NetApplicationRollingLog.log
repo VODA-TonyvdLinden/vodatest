@@ -809,3 +809,7 @@
 2014-12-05 09:15:25,963 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _16_SetupCatalogueLandingPageInterruptions -> Test case incorrect (2.2). When navigating back to this page, a popup is shown with message 'E2-3-6 ->You are not online. Please check your connectivity and try again Call our call center to get assistance'
 2014-12-05 09:15:26,244 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _17_SetupCatalogueSearchFieldReturningOneOrMultipleResults -> CANNOT COMPLETE TEST -> Wholesalers with the name of 'Wholesaler[something]' needs to be added for 25,50 and 75. Single Spaza contains 5 wholesalers in 75 - 100
 2014-12-05 09:15:26,244 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _17_SetupCatalogueSearchFieldReturningOneOrMultipleResults -> There is no test case that caters for testing of multi spazas on manage catalogue. No testing of <NEXT. and <BACK> is done
+2014-12-08 11:11:08,986 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-08 11:11:09,048 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-08 11:13:13,788 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-08 11:13:13,850 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0

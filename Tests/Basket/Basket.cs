@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using TestProj.Classes;
+using TestProj.Tests.Common;
 
 namespace TestProj.Tests.Basket
 {
@@ -31,6 +32,29 @@ namespace TestProj.Tests.Basket
             container.AddNewExtension<Interception>();
 
             container.RegisterType<Interfaces.IBasketActions, Tests.Basket.BasketActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
+
+            Helpers.Instance.Activate(browserInstance, false);
+
+            addOrders();
+        }
+
+        private void addOrders()
+        {
+            browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main");
+            var storesBox = Helpers.Instance.GetProxy(browserInstance,"#landingPage > div > div.rightBlock > div > div > div:nth-child(1) > div:nth-child(1) > a");
+            Helpers.Instance.ClickButton(browserInstance,storesBox);
+
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/stores"), 30);
+            var firstBrand = Helpers.Instance.GetProxy(browserInstance, "#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div > ul > li > a");
+            Helpers.Instance.ClickButton(browserInstance, firstBrand);
+
+            var firstProductBuyButton = Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.productbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.price > button");
+            Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
+            Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
+            Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
+            var basketLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.basketLinkContainer > div");
+            Helpers.Instance.ClickButton(browserInstance, basketLink);
+
         }
 
         [TestFixtureTearDown]
@@ -78,9 +102,9 @@ namespace TestProj.Tests.Basket
         [Test, Description("_01_BasketGridView"), Category("Basket"), Repeat(1)]
         public void _01_BasketGridView()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
+            //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
-            //TODO
+            Thread.Sleep(5000);
         }
 
         /// <summary>

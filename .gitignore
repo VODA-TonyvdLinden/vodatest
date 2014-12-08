@@ -59,3 +59,7 @@ Temporary Items
 *.pdb
 *.dll
 *.suo
+*.suo
+*.pdb
+*.dll
+*.log
