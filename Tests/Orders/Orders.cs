@@ -75,6 +75,7 @@ namespace TestProj.Tests.Orders
         {
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
 
+            Thread.Sleep(3000);
             Helpers.Instance.AddSpecialToBasket(browserInstance);
             Thread.Sleep(3000);
 
