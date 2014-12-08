@@ -7427,3 +7427,32 @@ R81.86
 2014-12-08 11:11:09,048 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
 2014-12-08 11:13:13,788 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
 2014-12-08 11:13:13,850 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-08 12:03:05,092 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-08 12:03:05,154 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-08 12:04:06,937 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_BasketGridView -> '2. Verify that order from a specific supplier functions as expected'. No checkbox on screen
+2014-12-08 12:04:06,938 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_BasketGridView -> Clicking on <Order Now> button instead
+2014-12-08 12:29:56,992 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-08 12:29:57,054 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-08 12:33:25,297 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-08 12:33:25,363 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-08 12:34:20,914 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_BasketGridView -> '2. Verify that order from a specific supplier functions as expected'. No checkbox on screen
+2014-12-08 12:34:20,915 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_BasketGridView -> Clicking on <Order Now> button instead
+2014-12-08 12:37:26,499 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-08 12:37:26,561 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-08 12:38:23,626 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_BasketGridView -> '2. Verify that order from a specific supplier functions as expected'. No checkbox on screen
+2014-12-08 12:38:23,627 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_BasketGridView -> Clicking on <Order Now> button instead
+2014-12-08 12:38:34,044 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2014-12-08 12:38:35,173 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_BasketGridView -> '3.Verify that delete orders from a specific supplier functions as expected' -> test process incorrect. This process will open the order now screen.
+2014-12-08 12:51:50,649 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-08 12:51:50,712 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-08 12:52:51,940 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2014-12-08 13:12:17,330 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-08 13:12:17,392 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-08 13:14:07,858 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-08 13:14:18,266 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckConfirmPopup executed in 10 seconds
+2014-12-08 13:14:18,282 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2014-12-08 13:14:19,426 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2014-12-08 13:14:19,820 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderDeleteButton executed in 0 seconds
+2014-12-08 13:14:29,378 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-08 13:14:29,511 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickClearAllButton executed in 0 seconds
+2014-12-08 13:14:29,525 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckListViewButtonExists executed in 0 seconds

@@ -402,6 +402,10 @@ namespace TestProj.Tests.Common
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Class("hide").On("#loading-wating-messages"), TimeSpan.FromMinutes(30));
             browserInstance.Instance.Assert.Class("hide").On("#loading-wating-messages");
             Thread.Sleep(100);
+
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/loadingscreen"), TimeSpan.FromMinutes(30));
+            Thread.Sleep(100);
+
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main"), TimeSpan.FromMinutes(30));
             browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main");
             Thread.Sleep(3000);

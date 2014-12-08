@@ -35,16 +35,22 @@ namespace TestProj.Tests.Basket
 
             Helpers.Instance.Activate(browserInstance, false);
 
-            addOrders();
+            addOrders(1);
         }
 
-        private void addOrders()
+        private void addOrders(int supplierIndex)
         {
             browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main");
-            var storesBox = Helpers.Instance.GetProxy(browserInstance,"#landingPage > div > div.rightBlock > div > div > div:nth-child(1) > div:nth-child(1) > a");
-            Helpers.Instance.ClickButton(browserInstance,storesBox);
+            var storesBox = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.rightBlock > div > div > div:nth-child(1) > div:nth-child(1) > a");
+            Helpers.Instance.ClickButton(browserInstance, storesBox);
 
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/stores"), 30);
+            //ClickSupplier
+            //#catalogCarousel > div > div > div:nth-child(1) > div > img
+            //#catalogCarousel > div > div > div:nth-child(2) > div > img
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, string.Format("#catalogCarousel > div > div > div:nth-child({0}) > div > img", supplierIndex)));
+
+
             var firstBrand = Helpers.Instance.GetProxy(browserInstance, "#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div > ul > li > a");
             Helpers.Instance.ClickButton(browserInstance, firstBrand);
 
@@ -52,9 +58,6 @@ namespace TestProj.Tests.Basket
             Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
             Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
             Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
-            var basketLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.basketLinkContainer > div");
-            Helpers.Instance.ClickButton(browserInstance, basketLink);
-
         }
 
         [TestFixtureTearDown]
@@ -104,8 +107,58 @@ namespace TestProj.Tests.Basket
         {
             //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
-            Thread.Sleep(5000);
+
+            // 1. Click on the basket block at the bottom of the screen  
+            // 1. The basket page is displayed with catalogues in grid view
+            basketActions.ClickBasketBlock(browserInstance);
+
+            // 2. Verify that order from a specific supplier functions as expected  
+            // 2.1 Select a specific supplier by clicking  on the checkbox 
+            // 2.1 The checkbox on the supplier is clicked    
+            //LogWriter.Instance.Log("TESTCASE:_01_BasketGridView -> '2. Verify that order from a specific supplier functions as expected'. No checkbox on screen", LogWriter.eLogType.Error);
+            //LogWriter.Instance.Log("TESTCASE:_01_BasketGridView -> Clicking on <Order Now> button instead", LogWriter.eLogType.Error);         
+            // 2.1 The confirm order pop-up is displayed  
+            basketActions.CheckConfirmPopup(browserInstance);
+
+            basketActions.ClickConfirmOrderPopupClose(browserInstance);
+
+
+
+            // 3.Verify that delete orders from a specific supplier functions as expected                
+            // 3.1 Select a specific supplier by clicking  on the checkbox   
+            // 3.1 The checkbox on the supplier is clicked    
+            //LogWriter.Instance.Log("TESTCASE:_01_BasketGridView -> '3.Verify that delete orders from a specific supplier functions as expected' -> test process incorrect. This process will open the order now screen.", LogWriter.eLogType.Error);
+
+            Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding"), "3 Items");
+            // 3.2 Click on the delete icon
+            basketActions.ClickOrderDeleteButton(browserInstance);
+
+
+            // 4.Verify that order all from basket  functions as expected                                
+            // 4.1 Select more than one  supplier by clicking  on the checkboxes of different suppliers 
+            // 4.1 The checkboxes for different suppliers are selected  
+
+            // 5.Verify that clear all from all basket functions as expected                             
+            // 5.1 Select more than one  supplier by clicking  on the checkboxes of different suppliers  
+            // 5.1 The checkboxes for different suppliers are selected  
+
+            // 5.2 Click on the clear <all> button  
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
+            addOrders(1);
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
+            addOrders(2);
+            basketActions.ClickBasketBlock(browserInstance);
+
+            // 5.2 This clear all selected catalogue basket   
+            Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding"), "6 Items");
+            basketActions.ClickClearAllButton(browserInstance);
+            // 6. Verify that the list view button is displayed
+            // 6. The list view button is displayed  
+            basketActions.CheckListViewButtonExists(browserInstance);
+
         }
+
+
 
         /// <summary>
         /// TEST: BASKET CONFIRM ORDER
