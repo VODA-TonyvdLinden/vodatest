@@ -438,7 +438,11 @@ namespace TestProj.Tests.Common
 
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(3) > div > button"));
             Thread.Sleep(1000);
+        }
 
+        public void CheckProxyValue(Classes.Browser browserInstance, FluentAutomation.ElementProxy proxy, string value)
+        {
+            browserInstance.Instance.Assert.Value(value).In(proxy);
         }
     }
 }
