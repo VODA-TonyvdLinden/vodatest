@@ -1,148 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="16" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-05" time="09:15:30">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-03" time="14:18:03">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="64.354" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="76.186" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="64.336" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="76.168" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="64.336" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="76.168" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Activation" executed="True" result="Success" success="True" time="64.336" asserts="0">
+              <test-suite type="Namespace" name="AccessingApplication" executed="True" result="Failure" success="False" time="76.168" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Success" success="True" time="64.332" asserts="0">
+                  <test-suite type="TestFixture" name="AccessingApplicationMultiSpaza" description="AccessingApplicationMultiSpaza" executed="True" result="Failure" success="False" time="76.164" asserts="0">
                     <categories>
-                      <category name="Activation" />
+                      <category name="AccessingApplication" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Activation.Activation._01_VerifyActivationLandingPage" description="_01_VerifyActivationLandingPage" executed="True" result="Success" success="True" time="4.200" asserts="0">
+                      <test-case name="TestProj.Tests.AccessingApplication.AccessingApplicationMultiSpaza._04_ApplicationWithMultipleSpazas" description="_04_ApplicationWithMultipleSpazas" executed="True" result="Error" success="False" time="1.191" asserts="0">
                         <categories>
-                          <category name="Activation Page" />
+                          <category name="Accessing app" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._02_ActivationFormFieldValidation" description="_02_ActivationFormFieldValidation" executed="True" result="Success" success="True" time="3.005" asserts="0">
-                        <categories>
-                          <category name="Activation Page" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._03_ActivationFormIncorrectUserDetails" description="_03_ActivationFormIncorrectUserDetails" executed="True" result="Success" success="True" time="3.833" asserts="0">
-                        <categories>
-                          <category name="Activation form" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._04_ActivationFormCorrectUserDetails" description="_04_ActivationFormCorrectUserDetails" executed="True" result="Success" success="True" time="2.298" asserts="0">
-                        <categories>
-                          <category name="Activation form" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._05_VerifyActivationOneTimePinLandingPage" description="_05_VerifyActivationOneTimePinLandingPage" executed="True" result="Success" success="True" time="0.628" asserts="0">
-                        <categories>
-                          <category name="Activation_form" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._06_ActivationOneTimePinFieldValidation" description="_06_ActivationOneTimePinFieldValidation" executed="True" result="Success" success="True" time="14.060" asserts="0">
-                        <categories>
-                          <category name="Verify_user(OTP)" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._07_CorrectOneTimePinAndApplicationOffline" description="_07_CorrectOneTimePinAndApplicationOffline" executed="True" result="Success" success="True" time="0.006" asserts="0">
-                        <categories>
-                          <category name="Verify_user(OTP)" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._08_IncorrectOneTimePin" description="_08_IncorrectOneTimePin" executed="True" result="Success" success="True" time="13.254" asserts="0">
-                        <categories>
-                          <category name="Verify_user(OTP)" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._09_ResendOneTimePin" description="_09_ResendOneTimePin" executed="True" result="Success" success="True" time="0.388" asserts="0">
-                        <categories>
-                          <category name="Verify_user(OTP)" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._10_CorrectOneTimePin" description="_10_CorrectOneTimePin" executed="True" result="Success" success="True" time="1.337" asserts="0">
-                        <categories>
-                          <category name="Verify_user(OTP)" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._11_SetupCatalogueLandingPage" description="_11_SetupCatalogueLandingPage" executed="True" result="Success" success="True" time="0.521" asserts="0">
-                        <categories>
-                          <category name="Setup_Catalogue" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._12_SetupCatalogueValidations" description="_12_SetupCatalogueValidations" executed="True" result="Success" success="True" time="2.150" asserts="0">
-                        <categories>
-                          <category name="Setup_Catalogue" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._14_SetupCatalogueSearchFieldReturningNoResults" description="_14_SetupCatalogueSearchFieldReturningNoResults" executed="True" result="Success" success="True" time="0.190" asserts="0">
-                        <categories>
-                          <category name="Setup_Catalogue" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._15_SetupCatalogueSearchFieldFilter" description="_15_SetupCatalogueSearchFieldFilter" executed="True" result="Success" success="True" time="0.373" asserts="0">
-                        <categories>
-                          <category name="Setup_Catalogue" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._16_SetupCatalogueLandingPageInterruptions" description="_16_SetupCatalogueLandingPageInterruptions" executed="True" result="Success" success="True" time="4.358" asserts="0">
-                        <categories>
-                          <category name="Setup_Catalogue" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._17_SetupCatalogueSearchFieldReturningOneOrMultipleResults" description="_17_SetupCatalogueSearchFieldReturningOneOrMultipleResults" executed="True" result="Success" success="True" time="0.275" asserts="0">
-                        <categories>
-                          <category name="Setup_Catalogue" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName.open > ul > li:nth-child(2) > a]]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IAccessingApplicationActions_66949669d09f465f850df69d5863cf0f.SwitchSpazaAndCheckBasket(Browser browserInstance, IAccessingApplicationActions accessingApplicationAction)
+at TestProj.Tests.AccessingApplication.AccessingApplicationMultiSpaza._04_ApplicationWithMultipleSpazas() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\AccessingApplication\AccessingApplicationMultiSpaza.cs:line 82
+]]></stack-trace>
+                        </failure>
                       </test-case>
                     </results>
                   </test-suite>
