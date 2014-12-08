@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using TestProj.Classes;
+using TestProj.Tests.Common;
 
 namespace TestProj.Tests.Orders
 {
@@ -31,6 +32,8 @@ namespace TestProj.Tests.Orders
             container.AddNewExtension<Interception>();
 
             container.RegisterType<Interfaces.IOrdersActions, Tests.Orders.OrdersActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
+
+            Helpers.Instance.Activate(browserInstance, true);
         }
 
         [TestFixtureTearDown]
@@ -70,9 +73,42 @@ namespace TestProj.Tests.Orders
         [Test, Description("_01_PendingOrdersConfirmation"), Category("Orders"), Repeat(1)]
         public void _01_PendingOrdersConfirmation()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            //TODO
+
+            Helpers.Instance.AddSpecialToBasket(browserInstance);
+            Thread.Sleep(3000);
+
+            //TEST STEPS 1:  Click on the basket block at the bottom of the screen
+            //TEST OUTPUT 1: The basket page is displayed with catalogues in grid view
+            ordersActions.VerifyBasketBlockClick(browserInstance);
+
+            // TEST STEPS  2: Select an order that is pending confirmation
+            // TEST OUTPUT 2: The confirmation pop-up is displayed
+            ordersActions.VerifyOrderSelect(browserInstance);
+            ordersActions.VerifyOrderNow(browserInstance);
+
+            LogWriter.Instance.Log(@"TESTCASE:_01_PendingOrdersConfirmation -> Test step orders which are pending confirmation do not allow the button to be clicked only orders which have been added to the basket 
+                                    can be clicked  ...'. 
+                                    '2. Select an order that is pending confirmation' - Please update the test case.", LogWriter.eLogType.Error);
+
+            // TEST STEPS 1:  3. Verify that the confirmation pop-up has the following items
+            // TEST STEPS 1:  3.1 Confirm that the name caption of the pop-up is confirm order
+            // TEST STEPS 1:  3.2  Make sure that the message content on that pop-up states that your order has been generated do you want to continue and place order, also the cancel and yes order is displayed 
+            ordersActions.VerifyConfirmOrderPopupContent(browserInstance);
+
+            // 4. Click on the Cancel button and verify that the order is still intact 
+            // 4.The Order is still the same, nothing has changed
+            ordersActions.VerifyCancelOrder(browserInstance);
+
+            // 5. Select again the order that is pending confirmation
+            // 5. The confirmation pop-up is displayed 
+            ordersActions.VerifyOrderSelect(browserInstance);
+            ordersActions.VerifyOrderNow(browserInstance);
+
+            // 6. Click on order now  
+            // 6. The basket is cleared , the order was successfully placed 
+            ordersActions.VerifyConfirm(browserInstance);
+            Thread.Sleep(3000);
         }
 
         /// <summary>
@@ -99,8 +135,23 @@ namespace TestProj.Tests.Orders
         [Test, Description("_02_ViewConfirmedOrder"), Category("Orders"), Repeat(1)]
         public void _02_ViewConfirmedOrder()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
+            Helpers.Instance.AddSpecialToBasket(browserInstance);
+            Thread.Sleep(3000);
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-catalog-view?viewtype=grid"));
+
+            /// 1. Select an order that has been placed   
+            //ordersActions.VerifyOrderSelect(browserInstance);
+
+            // 2. Verify that the confirm order pop -up has the following 
+            // 2.1 Make sure that name caption of the pop-up is confirm order  
+            // 2.2 Make sure that the message on the body of the pop-up is proceed to view your order    
+            // 2.3 make sure that the view my order button is displayed   
+
+            LogWriter.Instance.Log(@"TESTCASE:_02_ViewConfirmedOrder -> Test step system does not provide all of this functionality. '. 
+                                    '_02_ViewConfirmedOrder' - Please update the test case.", LogWriter.eLogType.Error);
+
+
             //TODO
         }
 
@@ -134,9 +185,14 @@ namespace TestProj.Tests.Orders
         [Test, Description("_03_OrderHistoryCollapsedView"), Category("Orders"), Repeat(1)]
         public void _03_OrderHistoryCollapsedView()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            //TODO
+            ordersActions.VerifyConfirmedOrder(browserInstance);
+
+            // 1. Click on the <orders> block  at the bottom of the screen
+            // 1. The orders history are displayed in a tabular format
+            ordersActions.VerifyOrdersBlockClick(browserInstance);
+
+            ordersActions.VerifyOrderHistoryFields(browserInstance);
         }
 
         /// <summary>
@@ -171,9 +227,24 @@ namespace TestProj.Tests.Orders
         [Test, Description("_04_OrderHistoryExpanded"), Category("Orders"), Repeat(1)]
         public void _04_OrderHistoryExpanded()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            //TODO
+
+            //Place supplier order 
+            ordersActions.VerifyConfirmedOrder(browserInstance);
+
+            // 1. Click on the <orders> block  at the bottom of the screen
+            // 1. The orders history are displayed in a tabular format
+            ordersActions.VerifyOrdersBlockClick(browserInstance);
+
+            ordersActions.VerifyOrderHistoryFields(browserInstance);
+
+            //// 3. Click on the + sign in the select column
+            //// 3. The + sign in the select column changes to - sign and a number of invoices under order number are displayed
+            browserInstance.Instance.Click("#accordion > td.width100 > div > div > img");
+            Thread.Sleep(3000);
+            var removeImage = Helpers.Instance.GetProxy(browserInstance, "#accordion > td.width100 > div > div > img");
+
+            browserInstance.Instance.Assert.Attribute("src", "http://aspnet.dev.afrigis.co.za/bopapp/images/removeButton.8e76665e.png").On(removeImage);
         }
 
         /// <summary>

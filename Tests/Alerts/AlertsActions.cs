@@ -190,8 +190,6 @@ namespace TestProj.Tests.Alerts
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button"));
             Thread.Sleep(3000);
             //    1.1.4 After the popup has appeared click the Yes Order button
-            // var description = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.productDesc.ng-binding");
-            //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.True(() => description.Element.Text != ""))
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#orderNow > div > div > div.modal-body.text-center > div > button:nth-child(1)"), TimeSpan.FromMinutes(30));
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderNow > div > div > div.modal-body.text-center > div > button:nth-child(1)"));
             Thread.Sleep(3000);

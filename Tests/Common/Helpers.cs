@@ -303,6 +303,23 @@ namespace TestProj.Tests.Common
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button"));
 
         }
+
+        public void AddOrderToBasket(Classes.Browser browserInstance)
+        {
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#landingPage > div > div.rightBlock > div > div > div:nth-child(1) > div:nth-child(1) > a"), TimeSpan.FromMinutes(30));
+            browserInstance.Instance.Click("#landingPage > div > div.rightBlock > div > div > div:nth-child(1) > div:nth-child(1) > a");
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/stores"), TimeSpan.FromMinutes(30));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div > ul > li:nth-child(1) > a"), TimeSpan.FromMinutes(30));
+            browserInstance.Instance.Click("#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div > ul > li:nth-child(1) > a");
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#brandStore > div.productbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.price > button"), TimeSpan.FromMinutes(30));
+            browserInstance.Instance.Click("#brandStore > div.productbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.price > button");
+
+            var totalAmount = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.basketValue.ng-binding");
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.True(() => totalAmount.Element.Text.Trim() != "R 0.00"));
+            
+        }
+
+
         public void Activate(Classes.Browser browserInstance, bool multipleSpazas)
         {
             FluentAutomation.ElementProxy msisdn;
@@ -337,12 +354,14 @@ namespace TestProj.Tests.Common
             activationAction.EnterAndVerifyOTPValue(browserInstance, otp, Classes.TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.OTP);
             Helpers.Instance.ClickButton(browserInstance, otpNextButton);
 
+
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-managecatalogue"), TimeSpan.FromMinutes(30));
             browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-managecatalogue");
 
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#accordion"), TimeSpan.FromMinutes(30));
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#accordion > div:nth-child(1) > div.title.rightarrow.catalog1.downarrow"), TimeSpan.FromMinutes(30));
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#accordion > div:nth-child(4) > div.title.rightarrow.catalog4"), TimeSpan.FromMinutes(30));
+
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#accordion > div:nth-child(1) > div.title.rightarrow.catalog0-25km.downarrow"), TimeSpan.FromMinutes(30));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#accordion > div:nth-child(4) > div.title.rightarrow.catalog75-100km"), TimeSpan.FromMinutes(30));
 
             var catPageNext = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > div > div.nextBtnSection > button");
             var catPageUpdate = browserInstance.Instance.Find("#alertsView > div.leftBlock.managecatalogue.width862px > form:nth-child(3) > div.formRow > button");
@@ -357,10 +376,10 @@ namespace TestProj.Tests.Common
                 Thread.Sleep(100);
             }
 
-            browserInstance.Instance.Assert.Exists("#catalog1");
-            browserInstance.Instance.Assert.Exists("#catalog2");
-            browserInstance.Instance.Assert.Exists("#catalog3");
-            browserInstance.Instance.Assert.Exists("#catalog4");
+            browserInstance.Instance.Assert.Exists("#accordion > div:nth-child(1) > div.title.rightarrow.catalog0-25km");
+            browserInstance.Instance.Assert.Exists("#accordion > div:nth-child(2) > div.title.rightarrow.catalog25-50km");
+            browserInstance.Instance.Assert.Exists("#accordion > div:nth-child(3) > div.title.rightarrow.catalog50-75km");
+            browserInstance.Instance.Assert.Exists("#accordion > div:nth-child(4) > div.title.rightarrow.catalog75-100km");
 
             Helpers.Instance.ClickButton(browserInstance, catPageUpdate);
 
