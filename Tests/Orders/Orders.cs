@@ -297,12 +297,7 @@ namespace TestProj.Tests.Orders
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            
-            // 1. Click on the <orders> block  at the bottom of the screen
-            // 1. The orders history are displayed in a tabular format
-            ordersActions.VerifyOrdersBlockClick(browserInstance);
-
-            ordersActions.VerifyOrderHistoryFields(browserInstance);
+            //TODO
         }
 
         /// <summary>
