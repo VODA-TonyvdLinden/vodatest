@@ -35,30 +35,9 @@ namespace TestProj.Tests.Basket
 
             Helpers.Instance.Activate(browserInstance, false);
 
-            addOrders(1);
         }
 
-        private void addOrders(int supplierIndex)
-        {
-            browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main");
-            var storesBox = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.rightBlock > div > div > div:nth-child(1) > div:nth-child(1) > a");
-            Helpers.Instance.ClickButton(browserInstance, storesBox);
 
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/stores"), 30);
-            //ClickSupplier
-            //#catalogCarousel > div > div > div:nth-child(1) > div > img
-            //#catalogCarousel > div > div > div:nth-child(2) > div > img
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, string.Format("#catalogCarousel > div > div > div:nth-child({0}) > div > img", supplierIndex)));
-
-
-            var firstBrand = Helpers.Instance.GetProxy(browserInstance, "#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div > ul > li > a");
-            Helpers.Instance.ClickButton(browserInstance, firstBrand);
-
-            var firstProductBuyButton = Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.productbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.price > button");
-            Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
-            Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
-            Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
-        }
 
         [TestFixtureTearDown]
         public void TearDown()
@@ -108,6 +87,8 @@ namespace TestProj.Tests.Basket
             //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
+            basketActions.AddOrders(browserInstance, 1);
+
             // 1. Click on the basket block at the bottom of the screen  
             // 1. The basket page is displayed with catalogues in grid view
             basketActions.ClickBasketBlock(browserInstance);
@@ -118,11 +99,10 @@ namespace TestProj.Tests.Basket
             //LogWriter.Instance.Log("TESTCASE:_01_BasketGridView -> '2. Verify that order from a specific supplier functions as expected'. No checkbox on screen", LogWriter.eLogType.Error);
             //LogWriter.Instance.Log("TESTCASE:_01_BasketGridView -> Clicking on <Order Now> button instead", LogWriter.eLogType.Error);         
             // 2.1 The confirm order pop-up is displayed  
+            basketActions.ClickOrderNowButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button"));
             basketActions.CheckConfirmPopup(browserInstance);
 
             basketActions.ClickConfirmOrderPopupClose(browserInstance);
-
-
 
             // 3.Verify that delete orders from a specific supplier functions as expected                
             // 3.1 Select a specific supplier by clicking  on the checkbox   
@@ -143,10 +123,8 @@ namespace TestProj.Tests.Basket
             // 5.1 The checkboxes for different suppliers are selected  
 
             // 5.2 Click on the clear <all> button  
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
-            addOrders(1);
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
-            addOrders(2);
+            basketActions.AddOrders(browserInstance, 1);
+            basketActions.AddOrders(browserInstance, 2);
             basketActions.ClickBasketBlock(browserInstance);
 
             // 5.2 This clear all selected catalogue basket   
@@ -157,8 +135,6 @@ namespace TestProj.Tests.Basket
             basketActions.CheckListViewButtonExists(browserInstance);
 
         }
-
-
 
         /// <summary>
         /// TEST: BASKET CONFIRM ORDER
@@ -185,9 +161,24 @@ namespace TestProj.Tests.Basket
         [Test, Description("_02_BasketConfirmOrder"), Category("Basket"), Repeat(1)]
         public void _02_BasketConfirmOrder()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
+            //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
-            //TODO
+            basketActions.AddOrders(browserInstance, 1);
+            var noItems = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding");
+            var itemsPrice = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.basketValue.ng-binding");
+            basketActions.ClickBasketBlock(browserInstance);
+            basketActions.ClickOrderNowButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button"));
+            basketActions.CheckConfirmPopup(browserInstance);
+
+            // 3. Verify the following the following for the confirm order caption screen                              
+            // 3.1 Make  sure that the message box form caption is written order now 
+            // 3.1 The message box form caption is displayed on top of the pop-up as order now 
+            //Done in previous step
+
+            // 3.2 Make sure that the is a message asking the user about confirming the order with a yes or no 
+            basketActions.VerifyConfirmPopup(browserInstance);
+
+            basketActions.VerifyConfirmPopupValues(browserInstance, noItems);
         }
 
         /// <summary>
@@ -233,7 +224,55 @@ namespace TestProj.Tests.Basket
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
-            //TODO
+
+
+            // 1. Click on the <list view> button on the basket tab
+            /// 1. Basket items are displayed in a tabular format as a list 
+            basketActions.AddOrders(browserInstance, 1);
+            basketActions.ClickBasketBlock(browserInstance);
+            //GRID
+            //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1) > button"));
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1)"));
+            //Helpers.Instance.Exists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul");
+
+            basketActions.VerifyListView(browserInstance);
+
+            basketActions.VerifyListViewActions(browserInstance);
+
+            // 3.2 Click on the order now   
+            LogWriter.Instance.Log("TESTCASE: _03_BasketListView -> '3.2 Click on the order now' -> Test case step missed -> 'Navigate back to List view'", LogWriter.eLogType.Error);
+            basketActions.ClickBasketBlock(browserInstance);
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1)"));
+
+            //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > table > tbody > tr:nth-child(1) > td:nth-child(4) > div.orderNow > button"));
+            /// 3.2 The confirm order pop-up is displayed   
+            /// TestProj.Tests.Basket.Basket._03_BasketListView:
+            basketActions.ClickOrderNowButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > table > tbody > tr > td:nth-child(4) > div.orderNow > button"));
+            basketActions.CheckConfirmPopup(browserInstance);
+            basketActions.ClickConfirmOrderPopupClose(browserInstance);
+
+            // 4.Verify that delete orders from a specific supplier functions as expected               
+            // 4.1  Select a specific supplier by clicking  on any record from the table
+            /// 4.1 The record on the list view table is selected   
+            LogWriter.Instance.Log("TESTCASE: _03_BasketListView -> '4.Verify that delete orders from a specific supplier functions as expected' -> Same as 3?", LogWriter.eLogType.Error);
+
+            basketActions.DeleteOrderFromList(browserInstance);
+
+            // 5.Verify that order all from basket  functions as expected                               
+            // 5.1 Select more than one  supplier by clicking  on multiple rows on the table
+            /// 5.1 Multiple records on the list view table are selected   
+            LogWriter.Instance.Log("TESTCASE: _03_BasketListView -> '5.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.", LogWriter.eLogType.Error);
+            basketActions.CheckOrderAllFunction(browserInstance, basketActions);
+            /// 5.2 The confirm order pop-up is displayed  
+            basketActions.CheckConfirmPopup(browserInstance);
+            basketActions.ClickConfirmOrderPopupClose(browserInstance);
+
+            // 6.Verify that clear all from all basket functions as expected                            
+            // 6.1 Select more than one  supplier by clicking  on multiple rows on the table     
+            LogWriter.Instance.Log("TESTCASE: _03_BasketListView -> '6.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.", LogWriter.eLogType.Error);
+            basketActions.CheckClearAllFunction(browserInstance);
+
+
         }
 
         /// <summary>
@@ -269,9 +308,9 @@ namespace TestProj.Tests.Basket
         [Test, Description("_04_BasketDetailGridView"), Category("Basket"), Repeat(1)]
         public void _04_BasketDetailGridView()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
+            //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
-            //TODO
+
         }
 
         /// <summary>
