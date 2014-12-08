@@ -11,7 +11,10 @@ namespace TestProj.Classes
 {
     public class Browser : FluentTest
     {
-
+        public Browser()
+        {
+            FluentConfig.Current.WindowSize(1920, 1080);
+        }
         string currentURL = "";
         public string CurrentURL
         {

@@ -10,10 +10,17 @@ namespace TestProj.Classes.Browsers
     //http://stackoverflow.com/questions/tagged/fluentautomation
     public class Chrome : FluentTest
     {
+        public Chrome()
+        {
+            FluentConfig.Current.WaitOnAllActions(true)
+                .WaitOnAllExpects(true)
+                .WaitUntilTimeout(TimeSpan.FromMilliseconds(5000))
+                .ScreenshotOnFailedAction(true)
+                .WindowSize(1920, 1080)
+                .WindowMaximized(true);
+        }
         public FluentAutomation.Interfaces.IActionSyntaxProvider Create()
         {
-            FluentConfig.Current.WindowSize(1920, 1080);
-
             SeleniumWebDriver.Bootstrap(
                SeleniumWebDriver.Browser.Chrome
                );

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using TestProj.Classes;
 using TestProj.Tests.Common;
@@ -33,19 +34,20 @@ namespace TestProj.Tests.AccessingApplication
             // 3. Verify that contact us and help me hyperlinks are displayed
             browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.contactUsContainer");
             var contactUs = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.contactUsContainer");
-            browserInstance.Instance.Assert.True(() => contactUs.Element.Text == "Contact us");
+            browserInstance.Instance.Assert.Value("Contact us").In(contactUs);
             browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.helpMeContainer");
             var helpMe = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.helpMeContainer");
-            browserInstance.Instance.Assert.True(() => helpMe.Element.Text == "Help me");
+            browserInstance.Instance.Assert.Value("Help me").In(helpMe);
         }
-        public void VerifyPreferedAlias(Classes.Browser browserInstance)
+
+        public void VerifyPreferedAlias(Classes.Browser browserInstance, string aliasName)
         {
             // 5. Verify that the preferred alias name is displayed on top right hand corner of the app with 
             browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.aliasName.ng-binding");
             var alias = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.aliasName.ng-binding");
-            browserInstance.Instance.Assert.True(() => alias.Element.Text == TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Alias);
+            browserInstance.Instance.Assert.Value(aliasName).In(alias);
         }
-        public void VerifySpazaName(Classes.Browser browserInstance)
+        public void VerifySpazaName(Classes.Browser browserInstance, bool multiSpaza)
         {
             // 5. Verify that the preferred alias name is displayed on top right hand corner of the app with 
             browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
@@ -53,16 +55,21 @@ namespace TestProj.Tests.AccessingApplication
 
             //LogWriter.Instance.Log(spazaName.Element.Text, LogWriter.eLogType.Error);
 
-            Classes.TestDataClasses.Spaza spaza = TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas.Find(s => s.Name == spazaName.Element.Text);
+            Classes.TestDataClasses.Spaza spaza;
+            if (multiSpaza)
+                spaza = TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas.Find(s => s.Name == spazaName.Element.Text);
+            else
+                spaza = TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.Spazas.Find(s => s.Name == spazaName.Element.Text);
             if (spaza == null)
             {
-                LogWriter.Instance.Log(string.Format("TESTCASE: VerifySpazaName -> {0} is not configured as a spaza shop for {1}", spazaName.Element.Text, TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Username), LogWriter.eLogType.Error);
+                LogWriter.Instance.Log(string.Format("TESTCASE: VerifySpazaName -> {0} is not configured as a spaza shop for {1}", spazaName.Element.Text,
+                    multiSpaza ? TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Username : TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.Username), LogWriter.eLogType.Error);
                 if (TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas.Count < 1)
-                    LogWriter.Instance.Log(string.Format("TESTCASE: VerifySpazaName -> There are no spaza shops configured for {0}", TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Username), LogWriter.eLogType.Error);
-                spaza = TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas[0];
+                    LogWriter.Instance.Log(string.Format("TESTCASE: VerifySpazaName -> There are no spaza shops configured for {0}", multiSpaza ? TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Username : TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.Username), LogWriter.eLogType.Error);
+                spaza = multiSpaza ? TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Spazas[0] : TestData.Instance.DefaultData.ActivationData.SingleSpazaUser.Spazas[0];
             }
 
-            browserInstance.Instance.Assert.True(() => spazaName.Element.Text == spaza.Name);
+            browserInstance.Instance.Assert.Value(spaza.Name).In(spazaName);
         }
         public void VerifySpecialsExists(Classes.Browser browserInstance)
         {
@@ -164,7 +171,8 @@ namespace TestProj.Tests.AccessingApplication
         {
             // 16. Verify that the search text field is editable
             var searchBox = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
-            browserInstance.Instance.Enter("test").In(searchBox);
+            Helpers.Instance.FieldInput(browserInstance, searchBox, "test");
+            //browserInstance.Instance.Enter("test").In(searchBox);
             browserInstance.Instance.Assert.Text("test").In(searchBox);
 
         }
@@ -245,7 +253,9 @@ namespace TestProj.Tests.AccessingApplication
         public void VerifySpecialAccessibility(Classes.Browser browserInstance)
         {
             //   1.1 Select any specail within the catalogue to see if is selectable by a single click
-            var specialItem = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.leftBlock > div > div > div > div:nth-child(1) > div > div");
+            //var specialItem = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.leftBlock > div > div > div > div:nth-child(1) > div > div");
+            //For some reason this item moved
+            var specialItem = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.leftBlock > div > div > div:nth-child(1) > div:nth-child(1) > div > div");
             Helpers.Instance.ClickButton(browserInstance, specialItem);
             //   1.1 The selected item is marked
             LogWriter.Instance.Log("TESTCASE:_03_ApplicationLandingContentsFunctionality -> Item is not market when single click. Cannot test for this. Test case wrong. Same behaviour as double click", LogWriter.eLogType.Error);
@@ -258,10 +268,22 @@ namespace TestProj.Tests.AccessingApplication
         public void SelectSpaza(Classes.Browser browserInstance, string spazaName)
         {
             // 3.Select any spaza on the list
-            var spazaLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
+            //var spazaLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
+            var spazaLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName");
             Helpers.Instance.ClickButton(browserInstance, spazaLink);
 
             LogWriter.Instance.Log(string.Format("Current display size = {0}x{1}", browserInstance.Config.Settings.WindowWidth, browserInstance.Config.Settings.WindowHeight), LogWriter.eLogType.Info);
+
+            Helpers.Instance.Exists(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName");
+
+            //var spazaLink2 = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName");
+            //Helpers.Instance.ClickButton(browserInstance, spazaLink2);
+
+            Helpers.Instance.Exists(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName.open");
+
+            Thread.Sleep(1000);
+
+            Helpers.Instance.Exists(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName.open > ul > li:nth-child(2) > a");
 
             var spazaOne = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName.open > ul > li:nth-child(2) > a");
             var spazaTwo = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName.open > ul > li:nth-child(3) > a");
@@ -289,7 +311,7 @@ namespace TestProj.Tests.AccessingApplication
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main"), TimeSpan.FromMinutes(30));
             spazaName = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
             string returnSpazaName = spazaName.Element.Text;
-            browserInstance.Instance.Assert.True(() => currentSpaza == returnSpazaName);
+            browserInstance.Instance.Assert.Value(currentSpaza).In(spazaName);
         }
 
         public void SwitchSpazaAndCheckBasket(Classes.Browser browserInstance, Interfaces.IAccessingApplicationActions accessingApplicationAction)
@@ -313,15 +335,17 @@ namespace TestProj.Tests.AccessingApplication
             //Select the next spaza
             accessingApplicationAction.SelectSpaza(browserInstance, "16 Tuck Shop");
             // 3. The selected spaza is displayed and  is only valid for the session
-            accessingApplicationAction.VerifySpazaName(browserInstance);
+            accessingApplicationAction.VerifySpazaName(browserInstance, true);
             browserInstance.Instance.Assert.Text("16 Tuck Shop").In(spazaName);
             string secondSpazaName = spazaName.Element.Text;
             browserInstance.Instance.Assert.False(() => currentSpazaName == secondSpazaName);
 
             var secondBasketCount = Helpers.Instance.GetProxy(browserInstance, " body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding");
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.True(() => basketCount.Element.Text == "0 Items"));
+            browserInstance.Instance.Assert.Value("0 Items").In(basketCount);
             string secondCount = basketCount.Element.Text.Replace(" Items", "").Replace(" ", "");
             browserInstance.Instance.Assert.False(() => count == secondCount);
         }
+
+
     }
 }

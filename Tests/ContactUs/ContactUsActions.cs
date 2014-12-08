@@ -69,7 +69,7 @@ namespace TestProj.Tests.ContactUs
             Helpers.Instance.Exists(browserInstance, "body > div:nth-child(2) > div > div.container-fluid > div > div.col-sm-offset-2.col-sm-8 > div.contactTitle.ng-binding");
             // 2.1 The customer service number is displayed   
             var csNumber = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(2) > div > div.container-fluid > div > div.col-sm-offset-2.col-sm-8 > div.contactTitle.ng-binding");
-            browserInstance.Instance.Assert.True(() => csNumber.Element.Text == "Customer Service: 082 123 456");
+            browserInstance.Instance.Assert.Value("Customer Service: 082 123 456").In(csNumber);
         }
         public void GoToContactUs(Classes.Browser browserInstance)
         {
