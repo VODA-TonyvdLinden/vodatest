@@ -11,28 +11,7 @@ namespace TestProj.Tests.Basket
 {
     public class BasketActions : Interfaces.IBasketActions
     {
-        public void AddOrders(Classes.Browser browserInstance, int supplierIndex)
-        {
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
-            browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main");
-            var storesBox = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.rightBlock > div > div > div:nth-child(1) > div:nth-child(1) > a");
-            Helpers.Instance.ClickButton(browserInstance, storesBox);
 
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/stores"), 30);
-            //ClickSupplier
-            //#catalogCarousel > div > div > div:nth-child(1) > div > img
-            //#catalogCarousel > div > div > div:nth-child(2) > div > img
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, string.Format("#catalogCarousel > div > div > div:nth-child({0}) > div > img", supplierIndex)));
-
-
-            var firstBrand = Helpers.Instance.GetProxy(browserInstance, "#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div > ul > li > a");
-            Helpers.Instance.ClickButton(browserInstance, firstBrand);
-
-            var firstProductBuyButton = Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.productbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.price > button");
-            Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
-            Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
-            Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
-        }
         public void CheckListViewButtonExists(Classes.Browser browserInstance)
         {
             Helpers.Instance.Exists(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1) > button");
@@ -109,9 +88,9 @@ namespace TestProj.Tests.Basket
 
             // 5.2 Click on the order all button  
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
-            basketActions.AddOrders(browserInstance, 1);
+            Helpers.Instance.AddOrders(browserInstance, 1);
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
-            basketActions.AddOrders(browserInstance, 2);
+            Helpers.Instance.AddOrders(browserInstance, 2);
             basketActions.ClickBasketBlock(browserInstance);
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(4)"));
         }

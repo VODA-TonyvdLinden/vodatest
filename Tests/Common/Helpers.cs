@@ -316,19 +316,24 @@ namespace TestProj.Tests.Common
 
         }
 
-        public void AddOrderToBasket(Classes.Browser browserInstance)
+        public void AddOrders(Classes.Browser browserInstance, int supplierIndex)
         {
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#landingPage > div > div.rightBlock > div > div > div:nth-child(1) > div:nth-child(1) > a"), TimeSpan.FromMinutes(30));
-            browserInstance.Instance.Click("#landingPage > div > div.rightBlock > div > div > div:nth-child(1) > div:nth-child(1) > a");
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/stores"), TimeSpan.FromMinutes(30));
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div > ul > li:nth-child(1) > a"), TimeSpan.FromMinutes(30));
-            browserInstance.Instance.Click("#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div > ul > li:nth-child(1) > a");
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#brandStore > div.productbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.price > button"), TimeSpan.FromMinutes(30));
-            browserInstance.Instance.Click("#brandStore > div.productbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.price > button");
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
+            browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main");
+            var storesBox = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.rightBlock > div > div > div:nth-child(1) > div:nth-child(1) > a");
+            Helpers.Instance.ClickButton(browserInstance, storesBox);
 
-            var totalAmount = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.basketValue.ng-binding");
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.True(() => totalAmount.Element.Text.Trim() != "R 0.00"));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/stores"), 30);
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, string.Format("#catalogCarousel > div > div > div:nth-child({0}) > div > img", supplierIndex)));
 
+
+            var firstBrand = Helpers.Instance.GetProxy(browserInstance, "#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div > ul > li > a");
+            Helpers.Instance.ClickButton(browserInstance, firstBrand);
+
+            var firstProductBuyButton = Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.productbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.price > button");
+            Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
+            Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
+            Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
         }
 
 
@@ -463,5 +468,7 @@ namespace TestProj.Tests.Common
         {
             browserInstance.Instance.Assert.Value(value).In(proxy);
         }
+
+
     }
 }

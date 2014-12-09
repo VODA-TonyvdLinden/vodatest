@@ -87,7 +87,7 @@ namespace TestProj.Tests.Basket
             //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
-            basketActions.AddOrders(browserInstance, 1);
+            Helpers.Instance.AddOrders(browserInstance, 1);
 
             // 1. Click on the basket block at the bottom of the screen  
             // 1. The basket page is displayed with catalogues in grid view
@@ -123,8 +123,8 @@ namespace TestProj.Tests.Basket
             // 5.1 The checkboxes for different suppliers are selected  
 
             // 5.2 Click on the clear <all> button  
-            basketActions.AddOrders(browserInstance, 1);
-            basketActions.AddOrders(browserInstance, 2);
+            Helpers.Instance.AddOrders(browserInstance, 1);
+            Helpers.Instance.AddOrders(browserInstance, 2);
             basketActions.ClickBasketBlock(browserInstance);
 
             // 5.2 This clear all selected catalogue basket   
@@ -163,7 +163,7 @@ namespace TestProj.Tests.Basket
         {
             //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
-            basketActions.AddOrders(browserInstance, 1);
+            Helpers.Instance.AddOrders(browserInstance, 1);
             var noItems = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding");
             var itemsPrice = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.basketValue.ng-binding");
             basketActions.ClickBasketBlock(browserInstance);
@@ -228,7 +228,7 @@ namespace TestProj.Tests.Basket
 
             // 1. Click on the <list view> button on the basket tab
             /// 1. Basket items are displayed in a tabular format as a list 
-            basketActions.AddOrders(browserInstance, 1);
+            Helpers.Instance.AddOrders(browserInstance, 1);
             basketActions.ClickBasketBlock(browserInstance);
             //GRID
             //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1) > button"));
@@ -310,7 +310,7 @@ namespace TestProj.Tests.Basket
         {
             //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
-            basketActions.AddOrders(browserInstance, 1);
+            Helpers.Instance.AddOrders(browserInstance, 1);
             basketActions.ClickBasketBlock(browserInstance);
 
             // 1.Click on the <grid> view button       

@@ -3,7 +3,6 @@ namespace TestProj.Interfaces
 {
     public interface IBasketActions
     {
-        void AddOrders(Classes.Browser browserInstance, int supplierIndex);
         void CheckListViewButtonExists(Classes.Browser browserInstance);
         void ClickClearAllButton(Classes.Browser browserInstance);
         void ClickOrderDeleteButton(Classes.Browser browserInstance);
