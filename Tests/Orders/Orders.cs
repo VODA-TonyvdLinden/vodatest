@@ -1,13 +1,13 @@
 ﻿using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.InterceptionExtension;
+
 using NUnit.Framework;
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+
 using TestProj.Classes;
+
 using TestProj.Tests.Common;
 
 namespace TestProj.Tests.Orders
@@ -75,8 +75,7 @@ namespace TestProj.Tests.Orders
         {
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
 
-            Thread.Sleep(3000);
-            Helpers.Instance.AddSpecialToBasket(browserInstance);
+            Helpers.Instance.AddOrders(browserInstance, 1);
             Thread.Sleep(3000);
 
             //TEST STEPS 1:  Click on the basket block at the bottom of the screen
@@ -136,7 +135,7 @@ namespace TestProj.Tests.Orders
         [Test, Description("_02_ViewConfirmedOrder"), Category("Orders"), Repeat(1)]
         public void _02_ViewConfirmedOrder()
         {
-            Helpers.Instance.AddSpecialToBasket(browserInstance);
+            Helpers.Instance.AddOrders(browserInstance, 1);
             Thread.Sleep(3000);
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-catalog-view?viewtype=grid"));
@@ -489,23 +488,15 @@ namespace TestProj.Tests.Orders
 
             // 1. Click on view invoices button on the view orders details screen
             // 1. The invoices are displayed in a tabular format 
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(4)"), TimeSpan.FromMinutes(30));
-            var orderNumber = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(4"));
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/order-invoices?orderNumber=" + orderNumber.Element.Text + "&from=main"));
-            browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.leftBlock > table");
+            var orderNumber = ordersActions.VerifyViewInvoicesButtonClick(browserInstance);
 
             // 2. Verify the caption of the order invoice  page is displayed as invoices 
             // 2. The caption of the order invoice page is displayed as invoices 
-            browserInstance.Instance.Assert.Exists("#alertsView > div.contentHeader > span");
-            var invoicesHeader = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentHeader > span");
-            browserInstance.Instance.Assert.True(() => invoicesHeader.Element.Text.ToLower() == "invoices");
+            ordersActions.VerifyInvoiceHeader(browserInstance);
 
             // 3. Verify that the invoice for order number is displayed
             // 3. The invoice order number is displayed
-            browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.leftBlock > table > tbody > tr:nth-child(1) > td");
-            var invoicesOrderNumber = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody > tr:nth-child(1) > td");
-            browserInstance.Instance.Assert.True(() => invoicesOrderNumber.Element.Text.ToLower().Contains(orderNumber.Element.Text));
+            ordersActions.VerifyInvoiceDetailOrderNumber(browserInstance, orderNumber.Element.Text);
 
             // 4.The  invoice number, supplier, invoice date , value are pre-populated  and displayed  
             // 5. Verify that  the total number of value price is correct
@@ -515,13 +506,10 @@ namespace TestProj.Tests.Orders
                                     ' 4.The  invoice number, supplier, invoice date , value are pre-populated  and displayed ' - Test case need to updated.", LogWriter.eLogType.Error);
 
             // 6. Verify that the back to orders button is displayed  
-            // 6. The back to orders button is displayed   
-            browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button");
-            
+            // 6. The back to orders button is displayed
             // 7. Click on the back to orders button   
-            // 7. The Orders screen is displayed
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button"));
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/order-detail?orderNumber=" + orderNumber.Element.Text + "&from=main"), TimeSpan.FromMinutes(30));
+            // 7. The Orders screen is displayed   
+            ordersActions.VerifyInvoiceBackToOrdersButton(browserInstance, orderNumber.Element.Text);
         }
 
         /// <summary>
