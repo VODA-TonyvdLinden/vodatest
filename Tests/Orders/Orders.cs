@@ -241,11 +241,7 @@ namespace TestProj.Tests.Orders
 
             //// 3. Click on the + sign in the select column
             //// 3. The + sign in the select column changes to - sign and a number of invoices under order number are displayed
-            browserInstance.Instance.Click("#accordion > td.width100 > div > div > img");
-            Thread.Sleep(3000);
-            var removeImage = Helpers.Instance.GetProxy(browserInstance, "#accordion > td.width100 > div > div > img");
-
-            browserInstance.Instance.Assert.Attribute("src", "http://aspnet.dev.afrigis.co.za/bopapp/images/removeButton.8e76665e.png").On(removeImage);
+            ordersActions.VerifyOrderHistoryExpandClick(browserInstance);
         }
 
         /// <summary>
@@ -295,9 +291,25 @@ namespace TestProj.Tests.Orders
         [Test, Description("_05_ViewInvoiceDetail"), Category("Orders"), Repeat(1)]
         public void _05_ViewInvoiceDetail()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            //TODO
+
+            //Place supplier order 
+            ordersActions.VerifyConfirmedOrder(browserInstance);
+
+            // Test Case: 1. Click on the <orders> block  at the bottom of the screen  
+            // Test Output: 1. The orders history are displayed in a tabular format
+            ordersActions.VerifyOrdersBlockClick(browserInstance);
+
+            // Test Case: 2. Verify the following on the order history that is displayed                                                         
+            ordersActions.VerifyOrderHistoryFields(browserInstance);
+
+            // Test Case: 3. Click on the + sign in the select column
+            // Test Output: 3. The + sign in the select column changes to - sign and a number of invoices under order number are displayed    
+            ordersActions.VerifyOrderHistoryExpandClick(browserInstance);
+
+            // 4. Click on the invoice  
+            LogWriter.Instance.Log(@"TESTCASE:_05_ViewInvoiceDetail -> Test step we cannot automate this step and the following steps as we have no control as to when the invoices will appear on the system. '. 
+                                    ' 4. Click on the invoice' - Test case need to manually tested.", LogWriter.eLogType.Error);
         }
 
         /// <summary>
@@ -330,9 +342,39 @@ namespace TestProj.Tests.Orders
         [Test, Description("_06_ViewOrderDetails"), Category("Orders"), Repeat(1)]
         public void _06_ViewOrderDetails()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            //TODO
+
+            //Place supplier order 
+            ordersActions.VerifyConfirmedOrder(browserInstance);
+
+            //Go to the orders history page
+            ordersActions.VerifyOrdersBlockClick(browserInstance);
+
+            // Test Case: 1. Click on the order number   
+            // Test Output: 1. The Order detail displays items under that order that order
+            ordersActions.VerifyOrderNumberClick(browserInstance);
+
+            // Test Case: 2. Verify that the following in the order detail screen                                                                   
+            // Test Case: 2.1 Verify that the list is split per supplier 
+            ordersActions.VerifyOrdersSplitBySupplier(browserInstance);
+
+            // Test Case: 2.2 Verify the order number is displayed on top of the table                                                                                                                                                        2.1 The list is split per supplier   
+            // Test Output: 2.2 The Order number is displayed on top of the table 
+            ordersActions.VerifyOrderDetailsOrderNumber(browserInstance);
+
+            // Test Case: 2.3 Verify that item sku code, name, brand, pack size, price ,invoice no, qty and total columns are displayed and pre-populated with values   
+            // Test Output: 2.3 The following items are displayed sku code, name, brand, pack size, price ,invoice no, qty and total columns are displayed and pre-populated with values 
+            ordersActions.VerifyOrderDetailColumns(browserInstance);
+
+            // Test Case: 2.4 Verify that the re-order button is displayed                    
+            // Test Output: 2.4 The re-order button is displayed 
+            // Test Case: 2.5 Verify that the unconfirmed order button is displayed 
+            // Test Output: 2.5 The unconfirmed order button is displayed 
+            // Test Case: 2.6 Verify that the back to orders button is displayed  
+            // Test Output: 2.6 The back to orders button is displayed  
+            // Test Case: 2.7 Verify that the view invoice button is displayed 
+            // Test Output: 2.7 The invoice button is displayed 
+            ordersActions.VerifyOrderDetailButtons(browserInstance);
         }
 
         /// <summary>
@@ -361,9 +403,20 @@ namespace TestProj.Tests.Orders
         [Test, Description("_07_ReOrder"), Category("Orders"), Repeat(1)]
         public void _07_eOrder()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            //TODO
+
+            // Place supplier order 
+            ordersActions.VerifyConfirmedOrder(browserInstance);
+
+            // Go to the orders history page
+            ordersActions.VerifyOrdersBlockClick(browserInstance);
+
+            // Go to the orders history details page
+            ordersActions.VerifyOrderNumberClick(browserInstance);
+
+            // 1. Click on the order re-order button on the view order details screen, but please note that invoking this process the following events happen
+            // 1. The result will be based on the outcome of the process
+            ordersActions.VerifyReOrderButton(browserInstance);
         }
 
         /// <summary>
@@ -385,9 +438,14 @@ namespace TestProj.Tests.Orders
         [Test, Description("_08_UnconfirmedOrders"), Category("Orders"), Repeat(1)]
         public void _08_UnconfirmedOrders()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            //TODO
+
+            // Place uncofirmed order.
+            ordersActions.VerifyUnConfirmedOrder(browserInstance);
+
+            // 3. The Unconfirmed order button should be inactive if there are no more orders to confirm
+            LogWriter.Instance.Log(@"TESTCASE:_08_UnconfirmedOrders -> Test step cannot be tested since the orders page only contains confirmed orders history. '. 
+                                    ' 1. Click on the unconfirmed orders button ' - Test case need to updated.", LogWriter.eLogType.Error);
         }
 
         /// <summary>
@@ -419,7 +477,51 @@ namespace TestProj.Tests.Orders
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            //TODO
+
+            // Place supplier order 
+            ordersActions.VerifyConfirmedOrder(browserInstance);
+
+            // Go to the orders history page
+            ordersActions.VerifyOrdersBlockClick(browserInstance);
+
+            // Go to the orders history details page
+            ordersActions.VerifyOrderNumberClick(browserInstance);
+
+            // 1. Click on view invoices button on the view orders details screen
+            // 1. The invoices are displayed in a tabular format 
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(4)"), TimeSpan.FromMinutes(30));
+            var orderNumber = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(4"));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/order-invoices?orderNumber=" + orderNumber.Element.Text + "&from=main"));
+            browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.leftBlock > table");
+
+            // 2. Verify the caption of the order invoice  page is displayed as invoices 
+            // 2. The caption of the order invoice page is displayed as invoices 
+            browserInstance.Instance.Assert.Exists("#alertsView > div.contentHeader > span");
+            var invoicesHeader = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentHeader > span");
+            browserInstance.Instance.Assert.True(() => invoicesHeader.Element.Text.ToLower() == "invoices");
+
+            // 3. Verify that the invoice for order number is displayed
+            // 3. The invoice order number is displayed
+            browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.leftBlock > table > tbody > tr:nth-child(1) > td");
+            var invoicesOrderNumber = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody > tr:nth-child(1) > td");
+            browserInstance.Instance.Assert.True(() => invoicesOrderNumber.Element.Text.ToLower().Contains(orderNumber.Element.Text));
+
+            // 4.The  invoice number, supplier, invoice date , value are pre-populated  and displayed  
+            // 5. Verify that  the total number of value price is correct
+            // 4.The  invoice number, supplier, invoice date , value are pre-populated  and displayed 
+            // 5. The total number value price is displayed and correct
+            LogWriter.Instance.Log(@"TESTCASE:_09_ViewInvoices -> Test step cannot be tested since the we cannot trigger instant invoices. '. 
+                                    ' 4.The  invoice number, supplier, invoice date , value are pre-populated  and displayed ' - Test case need to updated.", LogWriter.eLogType.Error);
+
+            // 6. Verify that the back to orders button is displayed  
+            // 6. The back to orders button is displayed   
+            browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button");
+            
+            // 7. Click on the back to orders button   
+            // 7. The Orders screen is displayed
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button"));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/order-detail?orderNumber=" + orderNumber.Element.Text + "&from=main"), TimeSpan.FromMinutes(30));
         }
 
         /// <summary>
@@ -456,7 +558,9 @@ namespace TestProj.Tests.Orders
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            //TODO
+
+            LogWriter.Instance.Log(@"TESTCASE:_10_LoggingDiscrepancies -> Test step cannot be tested since the we cannot trigger instant invoices and we do not have the log discrepancy button in the view invoices detail screen . '. 
+                                    '2. Click on the <log discrepancy> button' - Test case need to updated.", LogWriter.eLogType.Error);
         }
 
         /// <summary>
@@ -488,7 +592,9 @@ namespace TestProj.Tests.Orders
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            //TODO
+            LogWriter.Instance.Log(@"TESTCASE:_11_SearchingOrders -> Test step cannot be tested since the we cannot trigger instant invoices and we do not have search functionality to search invoices . '. 
+                                    '2. Click on the <search> button' - Test case need to updated.", LogWriter.eLogType.Error);
+
         }
     }
 }

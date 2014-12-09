@@ -8,9 +8,19 @@ namespace TestProj.Interfaces
         void VerifyOrderNow(Classes.Browser browserInstance);
         void VerifyConfirmOrderPopupContent(Classes.Browser browserInstance);
         void VerifyCancelOrder(Classes.Browser browserInstance);
+        void VerifyUnConfirmedOrder(Classes.Browser browserInstance);
         void VerifyConfirm(Classes.Browser browserInstance);
         void VerifyOrdersBlockClick(Classes.Browser browserInstance);
         void VerifyConfirmedOrder(Classes.Browser browserInstance);
         void VerifyOrderHistoryFields(Classes.Browser browserInstance);
+        void VerifyOrderHistoryExpandImage(Classes.Browser browserInstance);
+        void VerifyOrderHistoryExpandClick(Classes.Browser browserInstance);
+        void VerifyOrderNumberClick(Classes.Browser browserInstance);
+        void VerifyOrdersSplitBySupplier(Classes.Browser browserInstance);
+        void VerifyOrderDetailsOrderNumber(Classes.Browser browserInstance);
+        void VerifyOrderDetailColumns(Classes.Browser browserInstance);
+        void VerifyOrderDetailColumn(Classes.Browser browserInstance, string columnPath);
+        void VerifyOrderDetailButtons(Classes.Browser browserInstance);
+        void VerifyReOrderButton(Classes.Browser browserInstance);
     }
 }
