@@ -13,13 +13,14 @@ namespace TestProj.Interfaces
         void VerifyConfirmPopupValues(Classes.Browser browserInstance, FluentAutomation.ElementProxy noItems);
         void VerifyConfirmPopup(Classes.Browser browserInstance);
         void ClickOrderNowButton(Classes.Browser browserInstance, FluentAutomation.ElementProxy button);
-        void VerifyConfirmPopup(Classes.Browser browserInstance);
         void CheckClearAllFunction(Classes.Browser browserInstance);
         void CheckOrderAllFunction(Classes.Browser browserInstance, Interfaces.IBasketActions basketActions);
         void DeleteOrderFromList(Classes.Browser browserInstance);
         void VerifyListViewActions(Classes.Browser browserInstance);
         void VerifyListView(Classes.Browser browserInstance);
-
+        void VerifyButtons(Classes.Browser browserInstance);
+        void VerifyProductView(Classes.Browser browserInstance);
+        void CheckElementExists(Classes.Browser browserInstance, string element);
 
     }
 }

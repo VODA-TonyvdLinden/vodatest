@@ -222,7 +222,7 @@ namespace TestProj.Tests.Basket
         [Test, Description("_03_BasketListView"), Category("Basket"), Repeat(1)]
         public void _03_BasketListView()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
+            //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
 
@@ -310,8 +310,26 @@ namespace TestProj.Tests.Basket
         {
             //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
+            basketActions.AddOrders(browserInstance, 1);
+            basketActions.ClickBasketBlock(browserInstance);
 
+            // 1.Click on the <grid> view button       
+            /// 1. The application switches to grid view mode    
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(2) > button"));
+            basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul");
+
+            // 2.Click on the selected subcategory you wish to view products for               
+            /// 2. The selected subcategory products are displayed     
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
+            basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div");
+           // basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div");
+
+            // 3  Verify the following on the product view                                     
+            basketActions.VerifyProductView(browserInstance);
+
+            basketActions.VerifyButtons(browserInstance);
         }
+
 
         /// <summary>
         /// TEST: BASKET DETAIL LIST VIEW 

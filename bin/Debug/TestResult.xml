@@ -1,78 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="8" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-08" time="15:59:35">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-09" time="09:40:10">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="127.465" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="47.874" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="127.447" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="47.857" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="127.446" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="47.856" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Basket" executed="True" result="Success" success="True" time="127.446" asserts="0">
+              <test-suite type="Namespace" name="Basket" executed="True" result="Success" success="True" time="47.856" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Basket" description="Basket" executed="True" result="Success" success="True" time="127.443" asserts="0">
+                  <test-suite type="TestFixture" name="Basket" description="Basket" executed="True" result="Success" success="True" time="47.853" asserts="0">
                     <categories>
                       <category name="Basket" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Basket.Basket._01_BasketGridView" description="_01_BasketGridView" executed="True" result="Success" success="True" time="25.765" asserts="0">
-                        <categories>
-                          <category name="Basket" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Basket.Basket._02_BasketConfirmOrder" description="_02_BasketConfirmOrder" executed="True" result="Success" success="True" time="12.678" asserts="0">
-                        <categories>
-                          <category name="Basket" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Basket.Basket._03_BasketListView" description="_03_BasketListView" executed="True" result="Success" success="True" time="33.987" asserts="0">
-                        <categories>
-                          <category name="Basket" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Basket.Basket._04_BasketDetailGridView" description="_04_BasketDetailGridView" executed="True" result="Success" success="True" time="0.000" asserts="0">
-                        <categories>
-                          <category name="Basket" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Basket.Basket._05_BasketDetailListView" description="_05_BasketDetailListView" executed="True" result="Success" success="True" time="0.000" asserts="0">
-                        <categories>
-                          <category name="Basket" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Basket.Basket._06_BasketViewItemDetail" description="_06_BasketViewItemDetail" executed="True" result="Success" success="True" time="0.000" asserts="0">
-                        <categories>
-                          <category name="Basket" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Basket.Basket._07_BasketAddItemToFavourites" description="_07_BasketAddItemToFavourites" executed="True" result="Success" success="True" time="0.001" asserts="0">
-                        <categories>
-                          <category name="Basket" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Basket.Basket._08_BasketAddingAndRemovingProductQuantity" description="_08_BasketAddingAndRemovingProductQuantity" executed="True" result="Success" success="True" time="0.000" asserts="0">
+                      <test-case name="TestProj.Tests.Basket.Basket._04_BasketDetailGridView" description="_04_BasketDetailGridView" executed="True" result="Success" success="True" time="8.547" asserts="0">
                         <categories>
                           <category name="Basket" />
                         </categories>

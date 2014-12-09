@@ -962,3 +962,269 @@
 2014-12-08 15:59:29,434 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
 2014-12-08 15:59:30,862 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
 2014-12-08 15:59:30,862 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _03_BasketListView -> '6.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.
+2014-12-08 16:08:13,832 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-08 16:08:13,900 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-08 16:09:11,058 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 4 seconds
+2014-12-08 16:09:11,699 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-08 16:09:12,316 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2014-12-08 16:09:18,258 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckConfirmPopup executed in 5 seconds
+2014-12-08 16:09:18,539 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2014-12-08 16:09:19,957 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2014-12-08 16:09:20,665 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickOrderDeleteButton executed in 0 seconds
+2014-12-08 16:09:25,575 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 4 seconds
+2014-12-08 16:09:30,451 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 4 seconds
+2014-12-08 16:09:31,088 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-08 16:09:31,742 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickClearAllButton executed in 0 seconds
+2014-12-08 16:09:32,272 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckListViewButtonExists executed in 0 seconds
+2014-12-08 16:09:37,328 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 5 seconds
+2014-12-08 16:09:37,961 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-08 16:09:38,525 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2014-12-08 16:09:44,466 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckConfirmPopup executed in 5 seconds
+2014-12-08 16:09:45,082 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyConfirmPopup executed in 0 seconds
+2014-12-08 16:09:45,433 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _02_BasketConfirmOrder -> Total on popup does not contain the currency symbol. Asert commented out.
+2014-12-08 16:09:45,702 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyConfirmPopupValues executed in 0 seconds
+2014-12-08 16:09:51,562 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 5 seconds
+2014-12-08 16:09:52,196 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-08 16:09:52,328 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyListView executed in 0 seconds
+2014-12-08 16:09:52,573 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyListViewActions executed in 0 seconds
+2014-12-08 16:09:52,573 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _03_BasketListView -> '3.2 Click on the order now' -> Test case step missed -> 'Navigate back to List view'
+2014-12-08 16:09:53,184 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-08 16:09:53,841 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2014-12-08 16:09:59,651 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckConfirmPopup executed in 5 seconds
+2014-12-08 16:09:59,930 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2014-12-08 16:10:01,421 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2014-12-08 16:10:01,421 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _03_BasketListView -> '4.Verify that delete orders from a specific supplier functions as expected' -> Same as 3?
+2014-12-08 16:10:01,602 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_DeleteOrderFromList executed in 0 seconds
+2014-12-08 16:10:01,602 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _03_BasketListView -> '5.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.
+2014-12-08 16:10:06,214 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 4 seconds
+2014-12-08 16:10:11,023 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 4 seconds
+2014-12-08 16:10:11,641 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-08 16:10:11,678 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckOrderAllFunction executed in 10 seconds
+2014-12-08 16:10:17,607 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckConfirmPopup executed in 5 seconds
+2014-12-08 16:10:17,882 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2014-12-08 16:10:19,252 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2014-12-08 16:10:19,252 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _03_BasketListView -> '6.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.
+2014-12-08 16:10:19,352 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckClearAllFunction executed in 0 seconds
+2014-12-09 09:28:28,165 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-09 09:28:28,233 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-09 09:29:13,243 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 5 seconds
+2014-12-09 09:29:13,881 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-09 09:29:14,417 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _04_BasketDetailGridView -> Price is displayed without the currency indicator
+2014-12-09 09:35:11,012 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-09 09:35:11,078 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-09 09:35:55,939 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 5 seconds
+2014-12-09 09:35:56,581 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-09 09:35:56,786 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-09 09:35:57,377 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-09 09:36:03,694 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 6 seconds
+2014-12-09 09:36:39,098 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-09 09:36:39,165 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-09 09:37:21,082 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 5 seconds
+2014-12-09 09:37:21,736 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-09 09:37:22,324 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-09 09:37:28,649 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 6 seconds
+2014-12-09 09:39:22,577 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-09 09:39:22,641 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-09 09:40:03,760 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 6 seconds
+2014-12-09 09:40:04,406 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-09 09:40:05,006 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-09 09:40:05,606 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-09 09:40:05,677 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _04_BasketDetailGridView -> Price is displayed without the currency indicator
+2014-12-09 09:40:05,694 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyProductView executed in 0 seconds
+2014-12-09 09:40:05,727 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyButtons executed in 0 seconds
+2014-12-09 09:41:34,591 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-09 09:41:34,593 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-09 09:42:38,346 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-09 09:42:38,470 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-09 09:42:39,302 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Current display size = 1920x1080
+2014-12-09 09:42:40,948 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SelectSpaza executed in 2 seconds
+2014-12-09 09:42:42,062 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_AddSpecialToBasket executed in 1 seconds
+2014-12-09 09:42:42,411 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Current display size = 1920x1080
+2014-12-09 09:42:44,097 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SelectSpaza executed in 2 seconds
+2014-12-09 09:42:44,169 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2014-12-09 09:42:44,565 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 6 seconds
+2014-12-09 09:42:44,566 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_04_ApplicationWithMultipleSpazas -> Step 5 inferred by previous sections of the test. Update test case
+2014-12-09 09:42:50,774 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaNameForReturnToApp executed in 6 seconds
+2014-12-09 09:42:54,973 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-09 09:42:54,977 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-09 09:43:36,081 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-12-09 09:43:36,181 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-12-09 09:43:36,613 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2014-12-09 09:43:36,614 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2014-12-09 09:43:36,816 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2014-12-09 09:43:36,914 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: VerifySpazaName -> Mohammed Store is not configured as a spaza shop for 3012300230085
+2014-12-09 09:43:42,879 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 6 seconds
+2014-12-09 09:43:44,312 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_02_ActivationFormFieldValidation & _02_ApplicationFieldValidation -> Input field validations do not work as per test cases. Assert commented out. Helpers.TestFieldInputValidation
+2014-12-09 09:43:44,312 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_02_ApplicationFieldValidation -> What is supposed to happen when invalid chars are inserted in the box? is it supposed to disallow you totally, or are you supposed to get an error of some type?
+2014-12-09 09:43:44,312 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyAlertSearchBox executed in 0 seconds
+2014-12-09 09:43:44,363 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_02_ApplicationFieldValidation -> What is supposed to happen when invalid chars are inserted in the box? is it supposed to disallow you totally, or are you supposed to get an error of some type?
+2014-12-09 09:43:44,912 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_02_ActivationFormFieldValidation & _02_ApplicationFieldValidation -> Input field validations do not work as per test cases. Assert commented out. Helpers.TestFieldInputValidation
+2014-12-09 09:43:44,912 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifyBaskSearchBox executed in 0 seconds
+2014-12-09 09:43:50,631 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAccessingApplicationActions_VerifySpecialAccessibility executed in 5 seconds
+2014-12-09 09:44:00,624 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-09 09:44:00,627 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-09 09:44:14,162 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-12-09 09:44:14,206 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-12-09 09:44:14,325 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyPageLinks executed in 0 seconds
+2014-12-09 09:44:14,351 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> What css class is used to disable the next button?
+2014-12-09 09:44:14,352 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the next button, just the css class
+2014-12-09 09:44:14,352 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the next button, just the css class
+2014-12-09 09:44:14,352 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyActivationPageNextButton executed in 0 seconds
+2014-12-09 09:44:14,401 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Two extra fields found on the screen, challengeQuestion and challengeAnswer.
+2014-12-09 09:44:14,401 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyFieldExist executed in 0 seconds
+2014-12-09 09:44:14,582 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_02_ActivationFormFieldValidation -> Incorrect error message. 'E1-1-7 – Please complete all fields' expercted, 'Please complete all fields. CELL NUMBER must be started with 0 and it's length must be 10.' returned. Assert commented out. ActivationAction.TestMandatoryFields
+2014-12-09 09:44:14,582 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_02_ActivationFormFieldValidation -> all fields must either be highlited in red or displayed on the screen. Which one?
+2014-12-09 09:44:14,582 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestMandatoryFields executed in 0 seconds
+2014-12-09 09:44:15,248 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_02_ActivationFormFieldValidation & _02_ApplicationFieldValidation -> Input field validations do not work as per test cases. Assert commented out. Helpers.TestFieldInputValidation
+2014-12-09 09:44:15,249 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestMSISDNInputValidation executed in 0 seconds
+2014-12-09 09:44:15,445 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_02_ActivationFormFieldValidation -> Field validation not working. Assert commented out. ActivationAction.TestUsernameInputValidation
+2014-12-09 09:44:15,445 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestUsernameInputValidation executed in 0 seconds
+2014-12-09 09:44:15,616 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_02_ActivationFormFieldValidation -> Field validation not working. Assert commented out. ActivationAction.TestActivationKeyInputValidation
+2014-12-09 09:44:15,617 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestActivationKeyInputValidation executed in 0 seconds
+2014-12-09 09:44:15,765 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_02_ActivationFormFieldValidation -> Field validation not working. Assert commented out. ActivationAction.TestAliasInputValidation
+2014-12-09 09:44:15,765 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestAliasInputValidation executed in 0 seconds
+2014-12-09 09:44:15,929 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASEActivationFormIncorrectUserDetails -> Valid MSISDN no required
+2014-12-09 09:44:16,119 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:ActivationFormIncorrectUserDetails -> Valid UNSERNAME required
+2014-12-09 09:44:16,442 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_03_ActivationFormIncorrectUserDetails -> Incorrect error message. 'E1-1 -3 invalid input' expercted, 'Please complete all fields. CHALLENGE ANSWER is the answer for the above question. you need to give us your Challenge answer. Remember, this must be an answer that only you would know!' returned. Assert commented out. ActivationAction.TestInvalidActivationKey
+2014-12-09 09:44:16,442 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_03_ActivationFormIncorrectUserDetails -> all fields must either be highlited in red or displayed on the screen. Which one?
+2014-12-09 09:44:16,442 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_03_ActivationFormIncorrectUserDetails -> Invalid activation code functionality does not work. Any activation code is accepted. Assert commented out. ActivationAction.TestInvalidActivationKey
+2014-12-09 09:44:16,442 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestInvalidActivationKey executed in 0 seconds
+2014-12-09 09:44:17,064 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:ActivationFormIncorrectUserDetails -> Valid ACTIVATION No required
+2014-12-09 09:44:17,291 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_03_ActivationFormIncorrectUserDetails -> Incorrect error message. 'E1-1 -3 invalid input' expercted, 'Please complete all fields. USERNAME is the barcode provided to you by your Vodacom POS representative' returned. Assert commented out. ActivationAction.TestInvalidUsername
+2014-12-09 09:44:17,292 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_03_ActivationFormIncorrectUserDetails -> Cannot check invalid state of MSISDN. Classes 'has-error' and 'ng-invalid' not there anymore. ActivationAction.TestInvalidUsername
+2014-12-09 09:44:17,292 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestInvalidUsername executed in 0 seconds
+2014-12-09 09:44:17,298 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:ActivationFormIncorrectUserDetails -> TEST CASE DESCRIPTION INVALID: 3.1.1 Enter msisdn number > 10 , meaning 9 digit on msisdn field
+2014-12-09 09:44:17,551 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:ActivationFormIncorrectUserDetails -> Valid UNSERNAME required
+2014-12-09 09:44:17,878 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_03_ActivationFormIncorrectUserDetails -> Incorrect error message. 'E1-1-7 – Please complete all fields' expercted, 'Please complete all fields. CELL NUMBER must be started with 0 and it's length must be 10.' returned. Assert commented out. ActivationAction.TestMSISDNLengthLimitGreater
+2014-12-09 09:44:17,879 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_03_ActivationFormIncorrectUserDetails -> Cannot check invalid state of MSISDN. Classes 'has-error' and 'ng-invalid' not there anymore. ActivationAction.TestMSISDNLengthLimitGreater
+2014-12-09 09:44:17,879 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestMSISDNLengthLimitGreater executed in 0 seconds
+2014-12-09 09:44:17,885 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:ActivationFormIncorrectUserDetails -> TEST CASE DESCRIPTION INVALID: 3.2.1 Enter msisdn number less than 10 , meaning 11 digit on msisdn field
+2014-12-09 09:44:18,142 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:ActivationFormIncorrectUserDetails -> Valid UNSERNAME required
+2014-12-09 09:44:18,252 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:ActivationFormIncorrectUserDetails -> Valid ACTIVATION No required
+2014-12-09 09:44:18,405 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_03_ActivationFormIncorrectUserDetails -> Incorrect error message. 'E1-1-7 – Please complete all fields' expercted, 'Please complete all fields. CELL NUMBER must be started with 0 and it's length must be 10.' returned. Assert commented out. ActivationAction.TestMSISDNLengthLimitSmaller
+2014-12-09 09:44:18,405 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_03_ActivationFormIncorrectUserDetails -> Cannot check invalid state of MSISDN. Classes 'has-error' and 'ng-invalid' not there anymore. ActivationAction.TestMSISDNLengthLimitGreater
+2014-12-09 09:44:18,405 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestMSISDNLengthLimitSmaller executed in 0 seconds
+2014-12-09 09:44:18,410 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:ActivationFormCorrectUserDetails -> CHALLENGE ANSWER is required, but the test does not specify that it needs to be filled out. UPDATE TEST
+2014-12-09 09:44:19,252 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestValidMultiUserDetails executed in 0 seconds
+2014-12-09 09:44:20,179 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
+2014-12-09 09:44:20,221 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_04_ActivationFormCorrectUserDetails & _05_VerifyActivationOneTimePinLandingPage & _09_ResendOneTimePin -> OTP MSISDN message incorrect. 'A One Time Pin has been sent to 0*****5519. Please enter the One time Pin here to continue' expercted, 'A One Time Pin has been sent to 0*1234. Please enter the One Time Pin here to continue' returned. Assert commented out. ActivationAction.VerifyOTPErrorMessage
+2014-12-09 09:44:20,221 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ValidateOTPStart executed in 0 seconds
+2014-12-09 09:44:20,318 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-12-09 09:44:20,380 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-12-09 09:44:20,565 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyPageLinks executed in 0 seconds
+2014-12-09 09:44:20,566 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Cannot check spelling and grammer automatically
+2014-12-09 09:44:20,593 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> What css class is used to disable the next button?
+2014-12-09 09:44:20,594 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the next button, just the css class
+2014-12-09 09:44:20,594 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the next button, just the css class
+2014-12-09 09:44:20,594 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOTPNextButton executed in 0 seconds
+2014-12-09 09:44:20,621 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyResendButton -> What css class is used to disable the next button?
+2014-12-09 09:44:20,622 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the resend button, just the css class
+2014-12-09 09:44:20,622 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the resend button, just the css class
+2014-12-09 09:44:20,622 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyResendButton executed in 0 seconds
+2014-12-09 09:44:20,638 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:VerifyActivationOneTimePinLandingPage -> APPLICATION BUTTONS DO NOT SHOW. TEST CANNOT BE CREATED!
+2014-12-09 09:44:20,638 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOntTimeLable executed in 0 seconds
+2014-12-09 09:44:20,654 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_04_ActivationFormCorrectUserDetails & _05_VerifyActivationOneTimePinLandingPage & _09_ResendOneTimePin -> OTP MSISDN message incorrect. 'A One Time Pin has been sent to 0*****5519. Please enter the One time Pin here to continue' expercted, 'A One Time Pin has been sent to 0*1234. Please enter the One Time Pin here to continue' returned. Assert commented out. ActivationAction.VerifyOTPErrorMessage
+2014-12-09 09:44:20,654 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOTPErrorMessage executed in 0 seconds
+2014-12-09 09:44:26,870 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ValidateOTP executed in 6 seconds
+2014-12-09 09:44:26,888 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - Cannot test Activation._07_CorrectOneTimePinAndApplicationOffline. Unable to simulate offline application
+2014-12-09 09:44:26,892 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:CorrectOneTimePinAndApplicationOffline -> Incomplete test case -> Must check if application is offline
+2014-12-09 09:44:26,892 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_07_CorrectOneTimePinAndApplicationOffline -> Cannot test offline capability. Assert commented out. Activation._07_CorrectOneTimePinAndApplicationOffline
+2014-12-09 09:44:32,838 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 5 seconds
+2014-12-09 09:44:32,894 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-12-09 09:44:32,909 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_04_ActivationFormCorrectUserDetails & _05_VerifyActivationOneTimePinLandingPage & _09_ResendOneTimePin -> OTP MSISDN message incorrect. 'A One Time Pin has been sent to 0*****5519. Please enter the One time Pin here to continue' expercted, 'A One Time Pin has been sent to 0*1234. Please enter the One Time Pin here to continue' returned. Assert commented out. ActivationAction.VerifyOTPErrorMessage
+2014-12-09 09:44:32,910 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOTPErrorMessage executed in 0 seconds
+2014-12-09 09:44:32,910 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _09_ResendOneTimePin -> OTP NOT RECEIVED -> One Time Pin message cannot be tested as it is not displayed after the Resend Button is clicked
+2014-12-09 09:44:32,938 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-12-09 09:44:32,952 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_04_ActivationFormCorrectUserDetails & _05_VerifyActivationOneTimePinLandingPage & _09_ResendOneTimePin -> OTP MSISDN message incorrect. 'A One Time Pin has been sent to 0*****5519. Please enter the One time Pin here to continue' expercted, 'A One Time Pin has been sent to 0*1234. Please enter the One Time Pin here to continue' returned. Assert commented out. ActivationAction.VerifyOTPErrorMessage
+2014-12-09 09:44:32,953 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOTPErrorMessage executed in 0 seconds
+2014-12-09 09:44:32,953 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _09_ResendOneTimePin -> OTP NOT DELETE/LOST -> One Time Pin message cannot be tested as it is not displayed after the Resend Button is clicked
+2014-12-09 09:44:33,100 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-09 09:44:33,129 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2014-12-09 09:44:34,085 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TESTCASE: _10_CorrectOneTimePin -> Test case passed
+2014-12-09 09:44:34,384 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2014-12-09 09:44:34,446 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2014-12-09 09:44:34,644 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyPageLinks executed in 0 seconds
+2014-12-09 09:44:34,645 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TESTCASE: _11_SetupCatalogueLandingPage -> Cannot check spelling and grammer
+2014-12-09 09:44:34,746 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _11_SetupCatalogueLandingPage -> The update button is displaying but by default disabled
+2014-12-09 09:44:34,746 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TESTCASE: _11_SetupCatalogueLandingPage -> Cannot verify the button background colour and label text on the button
+2014-12-09 09:44:34,789 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_VerifyCatalogueLandingPage executed in 0 seconds
+2014-12-09 09:44:34,825 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _12_SetupCatalogueValidations -> 1.1 (NO VALUE) -> Cannot test the error message -> E1-1-7 – Please complete all fields. Assert commented out
+2014-12-09 09:44:34,825 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _12_SetupCatalogueValidations -> 1.2 Cannot simulate press enter key 
+2014-12-09 09:44:35,003 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _12_SetupCatalogueValidations -> 1.3 (ONE CHAR) -> No error message found on page. Assert commented out
+2014-12-09 09:44:35,196 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _12_SetupCatalogueValidations -> 1.4 (SPECIAL CHARS) -> No error message found on page. Assert commented out
+2014-12-09 09:44:35,368 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _12_SetupCatalogueValidations -> 1.5 (ONLY NUMBERS) -> No error message found on page. Assert commented out
+2014-12-09 09:44:35,525 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _12_SetupCatalogueValidations -> 1.6 (APLHA CHARS) -> No error message found on page. Assert commented out
+2014-12-09 09:44:35,764 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _12_SetupCatalogueValidations -> 1.7 (APLHA + SPECIAL CHARS) -> No error message found on page. Assert commented out
+2014-12-09 09:44:36,252 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _12_SetupCatalogueValidations -> 1.8 (MAX LIMIT) -> Cannot test max limit as there ae no max limit set on the element. Assert commented out
+2014-12-09 09:44:36,500 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _12_SetupCatalogueValidations -> 1.9 (SPACES BEFORE AND AFTER) -> No error message found on page. Assert commented out
+2014-12-09 09:44:36,501 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestCatalogueSeachValidation executed in 1 seconds
+2014-12-09 09:44:36,731 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _14_SetupCatalogueSearchFieldReturningNoResults -> Error message incorrect. 'results not found' expected, 'NUnit Wholesaler' returned. Assert commented out
+2014-12-09 09:44:36,917 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _15_SetupCatalogueSearchFieldFilter -> 'Test case unclear. 1.2 Select the one from the pre-populated lis'
+2014-12-09 09:44:36,917 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _15_SetupCatalogueSearchFieldFilter -> Test case result unclear. '1.2 The record you have selected is displayed with records that are related to that search, with their respective distance ranges' 
+2014-12-09 09:44:37,080 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _15_SetupCatalogueSearchFieldFilter -> POPUP only appreas when the <ENTER> button is pressed, not when the search button is clicked. Assert commented out
+2014-12-09 09:44:37,247 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TESTCASE: _16_SetupCatalogueLandingPageInterruptions -> Cannot set application to offlilne. Navigate away from page to emulate
+2014-12-09 09:44:42,279 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TESTCASE: _16_SetupCatalogueLandingPageInterruptions -> Cannot test offline error message 'O1-2-6 – You are not online. Please check your connectivity and try again'.
+2014-12-09 09:44:42,989 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _16_SetupCatalogueLandingPageInterruptions -> Test case incorrect (1.2). When navigating back to this page, a popup is shown with message 'E2-3-6 ->You are not online. Please check your connectivity and try again Call our call center to get assistance'
+2014-12-09 09:44:42,990 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _16_SetupCatalogueLandingPageInterruptions -> Test case unclear. '2.1 If the application is online and the allowable is selected and no action or record is returned'
+2014-12-09 09:44:42,990 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _16_SetupCatalogueLandingPageInterruptions -> Test case result unclear. '2.1 An error message is displayed E1-3-1 – No response from server, please try again”.' 
+2014-12-09 09:44:42,990 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _16_SetupCatalogueLandingPageInterruptions -> Test case incorrect (2.2). When navigating back to this page, a popup is shown with message 'E2-3-6 ->You are not online. Please check your connectivity and try again Call our call center to get assistance'
+2014-12-09 09:44:43,216 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _17_SetupCatalogueSearchFieldReturningOneOrMultipleResults -> CANNOT COMPLETE TEST -> Wholesalers with the name of 'Wholesaler[something]' needs to be added for 25,50 and 75. Single Spaza contains 5 wholesalers in 75 - 100
+2014-12-09 09:44:43,216 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _17_SetupCatalogueSearchFieldReturningOneOrMultipleResults -> There is no test case that caters for testing of multi spazas on manage catalogue. No testing of <NEXT. and <BACK> is done
+2014-12-09 09:44:47,423 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-09 09:44:47,426 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-09 09:45:52,288 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_01_AlertsLandingPageVerfication -> Test step worded incorrectly. '1. Verify that the Vodacom logo and the red banner are displayed on the activation screen' - Update test case
+2014-12-09 09:45:52,429 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifyVodacomLogoAndBanner executed in 0 seconds
+2014-12-09 09:45:52,432 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_01_AlertsLandingPageVerfication -> Test step cannot be implemented. '2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen' - Cannot test this since we do not have the online class/indicator anymore.
+2014-12-09 09:45:52,433 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifyOnlineOffilineIndicator executed in 0 seconds
+2014-12-09 09:45:52,460 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifyContactUsHelpMeLinks executed in 0 seconds
+2014-12-09 09:45:52,460 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_01_AlertsLandingPageVerfication -> Test step cannot be implemented. '4. See spelling, grammar and alignment' - We cannot test for this.
+2014-12-09 09:45:52,655 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifySpazaAliasAndName executed in 0 seconds
+2014-12-09 09:45:52,659 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_01_AlertsLandingPageVerfication -> Test step spelling incorrect, should be Marbil ad. '6. Verify that the Marbil add is displayed' - Update test case
+2014-12-09 09:45:52,671 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifyMarbilAd executed in 0 seconds
+2014-12-09 09:45:52,671 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_01_AlertsLandingPageVerfication -> Test step incorrect we do not have sub applications displayed in the alerts page. '7. Verify that the sub application are displayed and also greyed out' - Update test case
+2014-12-09 09:45:52,716 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifyBottomNavigationBlocks executed in 0 seconds
+2014-12-09 09:45:52,744 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifyNotificationAndLabel executed in 0 seconds
+2014-12-09 09:45:52,784 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifyBasketTotal executed in 0 seconds
+2014-12-09 09:45:52,801 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_01_AlertsLandingPageVerfication -> Test step the value with the search is 'I 'm looking for ...'. '14. Verify the text in the search field, it states that I am looking for' - Please update the test case.
+2014-12-09 09:45:53,098 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifySearchField executed in 0 seconds
+2014-12-09 09:45:53,114 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifyNotificationSection executed in 0 seconds
+2014-12-09 09:45:53,141 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifyActionSection executed in 0 seconds
+2014-12-09 09:45:53,194 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_01_AlertsLandingPageVerfication -> Test step the labels do not match the test case. '19. Verify that the Order Alerts label, has sub labels namely You have received new invoices, you have an unconfirmed order, your catalogue is out of sync' - Labels on the page different to the test case labels
+2014-12-09 09:45:58,994 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifyOrderAlerts executed in 5 seconds
+2014-12-09 09:46:04,896 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifyUrgentActions executed in 5 seconds
+2014-12-09 09:46:10,781 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_AddUnconfirmedOrder executed in 5 seconds
+2014-12-09 09:46:10,813 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifyTextHighlightedRed executed in 0 seconds
+2014-12-09 09:46:17,261 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifyTextHighlightedRed executed in 0 seconds
+2014-12-09 09:46:17,379 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifyManageButtonClick executed in 0 seconds
+2014-12-09 09:46:23,365 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VeriftyManageCatalogueSearch executed in 5 seconds
+2014-12-09 09:46:29,363 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IAlertsActions_VerifyTextHighlightedRed executed in 5 seconds
+2014-12-09 09:46:29,966 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_09_AlertsMessaging -> Test step there is no Messages to test how do we get this. '1.Verify Received Message Format  from MAS' - Please update the test case.
+2014-12-09 09:46:34,156 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-09 09:46:34,159 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-09 09:47:14,046 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 5 seconds
+2014-12-09 09:47:14,658 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-09 09:47:15,253 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2014-12-09 09:47:21,184 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckConfirmPopup executed in 5 seconds
+2014-12-09 09:47:21,473 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2014-12-09 09:47:22,898 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2014-12-09 09:47:23,577 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickOrderDeleteButton executed in 0 seconds
+2014-12-09 09:47:28,537 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 4 seconds
+2014-12-09 09:47:33,289 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 4 seconds
+2014-12-09 09:47:33,927 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-09 09:47:34,614 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickClearAllButton executed in 0 seconds
+2014-12-09 09:47:35,163 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckListViewButtonExists executed in 0 seconds
+2014-12-09 09:47:39,643 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 4 seconds
+2014-12-09 09:47:40,292 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-09 09:47:40,912 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2014-12-09 09:47:46,760 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckConfirmPopup executed in 5 seconds
+2014-12-09 09:47:47,384 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyConfirmPopup executed in 0 seconds
+2014-12-09 09:47:47,736 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - TESTCASE: _02_BasketConfirmOrder -> Total on popup does not contain the currency symbol. Asert commented out.
+2014-12-09 09:47:48,016 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyConfirmPopupValues executed in 0 seconds
+2014-12-09 09:47:54,540 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 6 seconds
+2014-12-09 09:48:01,052 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_AddOrders executed in 6 seconds
+2014-12-09 09:48:06,363 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-09 09:48:06,366 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-09 09:48:25,617 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-09 09:48:25,626 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-09 09:48:38,853 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_TestValidMultiUserDetails executed in 2 seconds
+2014-12-09 09:48:40,210 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
