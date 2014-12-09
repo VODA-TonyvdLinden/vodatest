@@ -22,5 +22,9 @@ namespace TestProj.Interfaces
         void VerifyOrderDetailColumn(Classes.Browser browserInstance, string columnPath);
         void VerifyOrderDetailButtons(Classes.Browser browserInstance);
         void VerifyReOrderButton(Classes.Browser browserInstance);
+        FluentAutomation.ElementProxy VerifyViewInvoicesButtonClick(Classes.Browser browserInstance);
+        void VerifyInvoiceHeader(Classes.Browser browserInstance);
+        void VerifyInvoiceDetailOrderNumber(Classes.Browser browserInstance, string orderNumber);
+        void VerifyInvoiceBackToOrdersButton(Classes.Browser browserInstance, string orderNumber);
     }
 }

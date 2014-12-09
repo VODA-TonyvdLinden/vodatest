@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+
 using TestProj.Classes;
+
 using TestProj.Tests.Common;
 
 namespace TestProj.Tests.Orders
@@ -79,7 +77,7 @@ namespace TestProj.Tests.Orders
         public void VerifyUnConfirmedOrder(Classes.Browser browserInstance)
         {
             Thread.Sleep(3000);
-            Helpers.Instance.AddSpecialToBasket(browserInstance);
+            Helpers.Instance.AddOrders(browserInstance, 1);
             Thread.Sleep(3000);
             VerifyBasketBlockClick(browserInstance);
             VerifyOrderSelect(browserInstance);
@@ -95,7 +93,7 @@ namespace TestProj.Tests.Orders
         {
 
             Thread.Sleep(3000);
-            Helpers.Instance.AddSpecialToBasket(browserInstance);
+            Helpers.Instance.AddOrders(browserInstance, 1);
             Thread.Sleep(3000);
             VerifyBasketBlockClick(browserInstance);
             VerifyOrderSelect(browserInstance);
@@ -258,5 +256,44 @@ namespace TestProj.Tests.Orders
             var basketItemCount = Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li:nth-child(1) > div.brandinfo > div.itemSelector.ng-binding");
             browserInstance.Instance.Assert.True(() => basketItemCount.Element.Text.ToLower().Trim() == "1 items");
         }
+
+        // 1. Click on view invoices button on the view orders details screen
+        // 1. The invoices are displayed in a tabular format 
+        public FluentAutomation.ElementProxy VerifyViewInvoicesButtonClick(Classes.Browser browserInstance)
+        {
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(4)"), TimeSpan.FromMinutes(30));
+            var orderNumber = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(4"));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/order-invoices?orderNumber=" + orderNumber.Element.Text + "&from=main"));
+            browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.leftBlock > table");
+
+            return orderNumber;
+        }
+
+        public void VerifyInvoiceHeader(Classes.Browser browserInstance)
+        {
+            browserInstance.Instance.Assert.Exists("#alertsView > div.contentHeader > span");
+            var invoicesHeader = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentHeader > span");
+            browserInstance.Instance.Assert.True(() => invoicesHeader.Element.Text.ToLower() == "invoices");
+        }
+
+        public void VerifyInvoiceDetailOrderNumber(Classes.Browser browserInstance, string orderNumber)
+        {
+            browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.leftBlock > table > tbody > tr:nth-child(1) > td");
+            var invoicesOrderNumber = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody > tr:nth-child(1) > td");
+            browserInstance.Instance.Assert.True(() => invoicesOrderNumber.Element.Text.ToLower().Contains(orderNumber));
+        }
+
+        public void VerifyInvoiceBackToOrdersButton(Classes.Browser browserInstance, string orderNumber)
+        {// 6. Verify that the back to orders button is displayed  
+            // 6. The back to orders button is displayed   
+            browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button");
+
+            // 7. Click on the back to orders button   
+            // 7. The Orders screen is displayed
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button"));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/order-detail?orderNumber=" + orderNumber + "&from=main"), TimeSpan.FromMinutes(30));
+        }
+
     }
 }

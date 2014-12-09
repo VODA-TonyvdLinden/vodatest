@@ -182,7 +182,7 @@ namespace TestProj.Tests.Alerts
         {
             // 1.1 Perform the order process and don't confirm order  
             //    1.1.1 Add special to basket
-            Helpers.Instance.AddSpecialToBasket(browserInstance);
+            Helpers.Instance.AddOrders(browserInstance, 1);
             //    1.1.2 Go to basket
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-catalog-view"));
             //    1.1.3 In the basket view click the order now button
