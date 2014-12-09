@@ -38,6 +38,7 @@ namespace TestProj.Tests.Orders
         public void VerifyOrderNow(Classes.Browser browserInstance)
         {
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderNow > div > div > div.modal-body.text-center > div > button:nth-child(1)"));
+            Thread.Sleep(5000);
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#checkoutConfirm > div > div > div.modal-body.text-center > div > button:nth-child(1)"), TimeSpan.FromMinutes(30));
         }
 

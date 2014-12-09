@@ -7842,3 +7842,50 @@ R81.86
 2014-12-09 09:48:25,626 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
 2014-12-09 09:48:38,853 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidMultiUserDetails executed in 2 seconds
 2014-12-09 09:48:40,210 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2014-12-09 10:40:51,175 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-09 10:40:51,241 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-09 12:10:04,131 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-09 12:10:04,196 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-09 12:11:17,518 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyBasketBlockClick executed in 0 seconds
+2014-12-09 12:11:21,124 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrderSelect executed in 3 seconds
+2014-12-09 12:13:52,448 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrderNow executed in 151 seconds
+2014-12-09 12:13:52,449 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_PendingOrdersConfirmation -> Test step orders which are pending confirmation do not allow the button to be clicked only orders which have been added to the basket 
+                                    can be clicked  ...'. 
+                                    '2. Select an order that is pending confirmation' - Please update the test case.
+2014-12-09 12:13:58,257 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyConfirmOrderPopupContent executed in 5 seconds
+2014-12-09 12:39:45,994 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-09 12:39:45,998 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-09 12:40:56,089 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyBasketBlockClick executed in 0 seconds
+2014-12-09 12:40:59,881 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrderSelect executed in 3 seconds
+2014-12-09 12:41:00,509 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrderNow executed in 0 seconds
+2014-12-09 12:41:00,509 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_PendingOrdersConfirmation -> Test step orders which are pending confirmation do not allow the button to be clicked only orders which have been added to the basket 
+                                    can be clicked  ...'. 
+                                    '2. Select an order that is pending confirmation' - Please update the test case.
+2014-12-09 12:41:01,202 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyConfirmOrderPopupContent executed in 0 seconds
+2014-12-09 12:41:01,256 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyCancelOrder executed in 0 seconds
+2014-12-09 12:41:05,000 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrderSelect executed in 3 seconds
+2014-12-09 12:46:42,699 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-09 12:46:42,769 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-09 12:47:55,151 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyBasketBlockClick executed in 0 seconds
+2014-12-09 12:47:58,884 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrderSelect executed in 3 seconds
+2014-12-09 12:48:04,671 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrderNow executed in 5 seconds
+2014-12-09 12:48:04,671 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_PendingOrdersConfirmation -> Test step orders which are pending confirmation do not allow the button to be clicked only orders which have been added to the basket 
+                                    can be clicked  ...'. 
+                                    '2. Select an order that is pending confirmation' - Please update the test case.
+2014-12-09 12:48:05,342 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyConfirmOrderPopupContent executed in 0 seconds
+2014-12-09 12:48:05,964 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyCancelOrder executed in 0 seconds
+2014-12-09 12:48:09,683 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrderSelect executed in 3 seconds
+2014-12-09 12:48:15,614 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrderNow executed in 5 seconds
+2014-12-09 12:48:15,710 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyConfirm executed in 0 seconds
+2014-12-09 12:52:03,527 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-09 12:52:03,535 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-09 12:53:14,659 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_02_ViewConfirmedOrder -> Test step system does not provide all of this functionality. '. 
+                                    '_02_ViewConfirmedOrder' - Please update the test case.
+2014-12-09 12:54:38,516 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-09 12:54:38,520 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-09 12:56:01,831 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyConfirmedOrder executed in 29 seconds
+2014-12-09 12:56:02,256 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrdersBlockClick executed in 0 seconds
+2014-12-09 12:56:02,738 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrderHistoryFields executed in 0 seconds
+2014-12-09 12:56:51,919 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2014-12-09 12:56:51,922 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2014-12-09 12:57:56,774 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyConfirmedOrder executed in 8 seconds

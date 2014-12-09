@@ -312,24 +312,26 @@ namespace TestProj.Tests.Basket
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
             Helpers.Instance.AddOrders(browserInstance, 1);
             basketActions.ClickBasketBlock(browserInstance);
+            //Go to detail view
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li:nth-child(1) > div.brandinfo > div.itemView"));
 
             // 1.Click on the <grid> view button       
             /// 1. The application switches to grid view mode    
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(2) > button"));
-            basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul");
+            basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div");
 
+            LogWriter.Instance.Log("TESTCASE: -> Test case unclear - '2.Click on the selected subcategory you wish to view products for'", LogWriter.eLogType.Error);
             // 2.Click on the selected subcategory you wish to view products for               
             /// 2. The selected subcategory products are displayed     
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
             basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div");
-           // basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div");
+            // basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div");
 
             // 3  Verify the following on the product view                                     
             basketActions.VerifyProductView(browserInstance);
 
             basketActions.VerifyButtons(browserInstance);
         }
-
 
         /// <summary>
         /// TEST: BASKET DETAIL LIST VIEW 
@@ -362,9 +364,40 @@ namespace TestProj.Tests.Basket
         [Test, Description("_05_BasketDetailListView"), Category("Basket"), Repeat(1)]
         public void _05_BasketDetailListView()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
+            // browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
-            //TODO
+
+            LogWriter.Instance.Log("TESTCASE:_05_BasketDetailListView -> Test step missed '1.Click on the <list> view button '", LogWriter.eLogType.Error);
+
+            Helpers.Instance.AddOrders(browserInstance, 1);
+            basketActions.ClickBasketBlock(browserInstance);
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1) > button"));
+
+            // 1. Click on the selected subcategory you wish to view products for   
+            /// 1. The selected subcategory products are displayed        
+
+            // 2  Verify the following on the product view                                     
+            // 2.1 Verify that the product icon is displayed   
+            /// 2.1 The product icon is displayed   
+
+            // 2.2 Verify that the product price is displayed 
+            /// 2.2 The product price is displayed  
+
+            // 2.3 Verify that the <clear button > button is available   
+            /// 2.3 The clear  button is displayed 
+
+            // 2.4 Verify that the product description is displayed 
+            /// 2.4 The product description is displayed   
+
+            // 3. Verify that the grid view button is displayed when user is on grid view mode 
+            /// 3. The grid  view button is displayed     
+
+            //                                                                                 
+            /// 4. The order all button is displayed  
+
+            // 5. Verify that the clear all button is displayed    
+            /// 5. The Clear all button is displayed    
+
         }
 
         /// <summary>
