@@ -22,5 +22,9 @@ namespace TestProj.Interfaces
         void VerifyDetailsValues(Classes.Browser browserInstance, Interfaces.IBasketActions basketActions);
         void CheckElementExists(Classes.Browser browserInstance, string element);
         void VerifyPopupValues(Classes.Browser browserInstance);
+        void CheckFavAdded(Classes.Browser browserInstance, string prodDescription);
+        void TestFavButtonOnPopup(Classes.Browser browserInstance);
+        string ClickProduct(Classes.Browser browserInstance);
+
     }
 }

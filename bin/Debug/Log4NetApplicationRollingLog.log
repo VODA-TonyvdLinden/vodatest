@@ -1338,3 +1338,85 @@
 2014-12-10 10:26:22,299 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
 2014-12-10 10:27:13,291 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
 2014-12-10 10:27:26,174 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyPopupValues executed in 5 seconds
+2014-12-10 10:30:06,957 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 10:30:07,020 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 10:30:50,561 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-10 10:30:57,455 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyPopupValues executed in 0 seconds
+2014-12-10 10:33:28,498 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 10:33:28,561 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 10:34:37,185 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 10:34:37,247 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 10:35:27,045 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-10 10:35:37,098 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - texting price
+2014-12-10 10:35:37,498 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyPopupValues executed in 1 seconds
+2014-12-10 10:36:25,126 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 10:36:25,204 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 10:37:12,887 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-10 10:37:19,511 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - texting price
+2014-12-10 10:37:19,886 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyPopupValues executed in 1 seconds
+2014-12-10 10:40:48,561 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 10:40:48,624 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 10:41:39,118 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-10 10:41:45,816 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - div
+2014-12-10 10:41:45,816 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - texting price
+2014-12-10 10:41:46,145 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyPopupValues executed in 0 seconds
+2014-12-10 10:43:48,752 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 10:43:48,831 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 10:44:40,977 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-10 10:44:49,072 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyPopupValues executed in 0 seconds
+2014-12-10 10:56:34,313 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 10:56:34,376 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 10:57:24,946 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-10 10:57:30,901 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - Description
+BAKING POWDER REF POUCH SNOWFLAKE 200G P
+2014-12-10 10:58:29,110 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 10:58:29,172 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 10:59:15,439 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-10 10:59:21,278 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - Description
+BAKING POWDER REF POUCH SNOWFLAKE 200G P
+2014-12-10 11:01:35,762 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 11:01:35,825 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 11:02:34,479 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-10 11:02:40,677 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - Description
+BAKING POWDER REF POUCH SNOWFLAKE 200G P
+2014-12-10 11:05:56,133 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 11:05:56,196 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 11:06:43,723 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-10 11:06:49,571 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - Description
+BAKING POWDER REF POUCH SNOWFLAKE 200G P
+2014-12-10 11:09:02,267 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 11:09:02,346 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 11:28:30,603 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 11:28:30,666 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 11:29:12,549 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+2014-12-10 11:29:18,235 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-10 11:29:25,374 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - Description
+BAKING POWDER REF POUCH SNOWFLAKE 200G P
+2014-12-10 11:29:25,436 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - btn addToFavButton
+2014-12-10 11:35:57,338 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 11:35:57,400 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 11:36:53,477 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-10 11:37:00,445 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - Description
+BAKING POWDER REF POUCH SNOWFLAKE 200G P
+2014-12-10 11:37:00,523 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - btn addToFavButton
+2014-12-10 11:39:05,527 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 11:39:05,606 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 11:39:57,360 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-10 11:41:34,381 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 11:41:34,443 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 11:42:29,019 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-10 11:42:35,347 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - Description
+BAKING POWDER REF POUCH SNOWFLAKE 200G P
+2014-12-10 11:42:35,425 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - btn addToFavButton
+2014-12-10 11:44:15,477 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 11:44:15,540 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 11:45:05,493 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-10 11:45:11,222 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - Description
+BAKING POWDER REF POUCH SNOWFLAKE 200G P
+2014-12-10 11:45:11,284 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter - btn addToFavButton
+2014-12-10 11:50:35,027 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-10 11:50:35,090 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-10 11:51:21,586 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-10 11:51:29,672 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickProduct executed in 6 seconds
+2014-12-10 11:51:31,884 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_TestFavButtonOnPopup executed in 2 seconds
+2014-12-10 11:51:37,828 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckFavAdded executed in 5 seconds

@@ -1,39 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-10" time="10:27:30">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-10" time="11:51:42">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="68.674" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="67.655" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="68.656" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="67.636" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="68.656" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="67.636" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Basket" executed="True" result="Failure" success="False" time="68.656" asserts="0">
+              <test-suite type="Namespace" name="Basket" executed="True" result="Success" success="True" time="67.636" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Basket" description="Basket" executed="True" result="Failure" success="False" time="68.653" asserts="0">
+                  <test-suite type="TestFixture" name="Basket" description="Basket" executed="True" result="Success" success="True" time="67.632" asserts="0">
                     <categories>
                       <category name="Basket" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Basket.Basket._06_BasketViewItemDetail" description="_06_BasketViewItemDetail" executed="True" result="Error" success="False" time="20.311" asserts="0">
+                      <test-case name="TestProj.Tests.Basket.Basket._07_BasketAddItemToFavourites" description="_07_BasketAddItemToFavourites" executed="True" result="Success" success="True" time="23.226" asserts="0">
                         <categories>
                           <category name="Basket" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
-                        <failure>
-                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
-  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected element matching selector [//*[@id="product_modal"]/div/div/div[2]/div[2]/div[2]/text()] to exist.]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IBasketActions_cbe348d555964f32aefc7ae88b6ec3d1.VerifyPopupValues(Browser browserInstance)
-at TestProj.Tests.Basket.Basket._06_BasketViewItemDetail() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Basket\Basket.cs:line 453
---FluentAssertFailedException
-at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
-at FluentAutomation.AssertProvider.<>c__DisplayClass6b.<Exists>b__6a()
-at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
-]]></stack-trace>
-                        </failure>
                       </test-case>
                     </results>
                   </test-suite>

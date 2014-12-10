@@ -103,6 +103,19 @@ namespace TestProj.Tests.Common
         {
             browserInstance.Instance.Assert.Exists(elementPath);
         }
+        public bool ElementExists(Classes.Browser browserInstance, string path)
+        {
+            var ret = true;
+            try
+            {
+                Helpers.Instance.Exists(browserInstance, path);
+            }
+            catch
+            {
+                ret = false;
+            }
+            return ret;
+        }
         public void CheckClass(Classes.Browser browserInstance, string className, FluentAutomation.ElementProxy elementProxy)
         {
             browserInstance.Instance.Assert.Class(className).On(elementProxy);
@@ -336,6 +349,16 @@ namespace TestProj.Tests.Common
             Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
             Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
         }
+        public void ClearFavourites(Classes.Browser browserInstance)
+        {
+
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div.ui-footer.ng-scope > ul > li:nth-child(4) > div"));
+            //if (ElementExists(browserInstance,"#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.delete > button"))
+            //    Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.delete > button"));
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button"));
+        }
+
+       
 
 
         public void Activate(Classes.Browser browserInstance, bool multipleSpazas)

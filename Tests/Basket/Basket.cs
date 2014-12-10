@@ -445,16 +445,14 @@ namespace TestProj.Tests.Basket
             // 1. Click on the product   
             /// 1. The product view screen is displayed 
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div > div.img"));
-           
+
             Thread.Sleep(5000);
             browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button"), 30);
 
             // 2. Verify that the product view screen                                                   
             basketActions.VerifyPopupValues(browserInstance);
-        
+
         }
-
-
 
         /// <summary>
         /// TEST: BASKET ADD ITEM TO FAVOURITES
@@ -475,10 +473,24 @@ namespace TestProj.Tests.Basket
         [Test, Description("_07_BasketAddItemToFavourites"), Category("Basket"), Repeat(1)]
         public void _07_BasketAddItemToFavourites()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
+            //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
-            //TODO
+            Helpers.Instance.ClearFavourites(browserInstance);
+
+            Helpers.Instance.AddOrders(browserInstance, 1);
+            basketActions.ClickBasketBlock(browserInstance);
+            //Click on supplier/wholesaler
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
+
+            string prodDescription = basketActions.ClickProduct(browserInstance);
+
+            basketActions.TestFavButtonOnPopup(browserInstance);
+            basketActions.CheckFavAdded(browserInstance, prodDescription);
         }
+
+
+
+
 
         /// <summary>
         /// TEST: BASKET  ADDING AND REMOVING PRODUCT QUANTITY

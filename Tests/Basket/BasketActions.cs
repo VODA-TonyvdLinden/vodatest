@@ -186,7 +186,7 @@ namespace TestProj.Tests.Basket
             // 2.1 Verify that the product description is displayed   
             /// 2.1 The product description is displayed
 
-            Helpers.Instance.Exists(browserInstance, "//*[@id=\"product_modal\"]/div/div/div[2]/div[2]/div[2]/text()");
+            Helpers.Instance.Exists(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.productDesc.ng-binding");
 
             // 2.2 Verify that product unit price is displayed  
             /// 2.2 The product unit price is displayed   
@@ -208,9 +208,7 @@ namespace TestProj.Tests.Basket
             /// 2.5  The total price field is displayed and not editable
             var price = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.itemTotal.centered.ng-binding");
             Helpers.Instance.Exists(browserInstance, price);
-            string priceVal = price.Element.Text;
-            browserInstance.Instance.Append("1").To(price);
-            Helpers.Instance.CheckProxyValue(browserInstance, price, priceVal);
+            browserInstance.Instance.Assert.True(() => price.Element.TagName == "div");
 
             // 2.6  Verify that the favourite icon represented by a star with a plus sign  is displayed 
             /// 2.6  A star with a plus sign is displayed  
@@ -219,6 +217,53 @@ namespace TestProj.Tests.Basket
             // 2.7 Verify that the save button is displayed    
             /// 2.7 The save button is displayed
             Helpers.Instance.Exists(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button");
+        }
+        public void CheckFavAdded(Classes.Browser browserInstance, string prodDescription)
+        {
+            // 3. Verify step 2 by selecting the favourites tab, to see if the recently added product is displayed 
+            /// 3.The recently added product is displayed in the favourites 
+            //Click Favourites block
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div.ui-footer.ng-scope > ul > li:nth-child(4) > div"));
+            //click on the supplier/wholesaler
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
+            //check prod exists
+            Helpers.Instance.Exists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div.product");
+            //Click on product
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div.product > div"));
+            //Wait for popup to show
+            Thread.Sleep(5000);
+            browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button"), 30);
+            //check prod description to be the same as the one that was added
+            var NewProd = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.productDesc.ng-binding");
+            Helpers.Instance.CheckProxyValue(browserInstance, NewProd, prodDescription);
+        }
+
+        public void TestFavButtonOnPopup(Classes.Browser browserInstance)
+        {
+            // 2. On the product view screen click on the favourites icon which is represented by a star and save
+            /// 2. The product is saved to favourites  
+            var favButton = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.devilsFeatureContainer > button");
+
+            browserInstance.Instance.Assert.True(() => favButton.Element.Attributes.Get("class") == "btn addToFavButton");
+            Helpers.Instance.ClickButton(browserInstance, favButton);
+            browserInstance.Instance.Assert.True(() => favButton.Element.Attributes.Get("class") == "btn removeToFavButton");
+            //close the popup
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.modal-header > div > button"));
+            Thread.Sleep(2000);
+        }
+
+        public string ClickProduct(Classes.Browser browserInstance)
+        {
+            // 1. Click on the product   
+            /// 1. The product view screen is displayed 
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div > div.img"));
+
+            Thread.Sleep(5000);
+            browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button"), 30);
+
+            var selectedProduct = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.productDesc.ng-binding");
+            string prodDescription = selectedProduct.Element.Text;
+            return prodDescription;
         }
     }
 }
