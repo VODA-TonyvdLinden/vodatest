@@ -33,7 +33,7 @@ namespace TestProj.Tests.Orders
 
             container.RegisterType<Interfaces.IOrdersActions, Tests.Orders.OrdersActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
 
-            Helpers.Instance.Activate(browserInstance, true);
+            Helpers.Instance.Activate(browserInstance, false);
         }
 
         [TestFixtureTearDown]

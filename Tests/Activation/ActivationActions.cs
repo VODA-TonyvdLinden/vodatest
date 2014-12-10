@@ -150,8 +150,7 @@ namespace TestProj.Tests.Activation
         {
             Helpers.Instance.ClickButton(browserInstance, nextButton);
         }
-
-
+        
         public void TestInvalidActivationKey(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy nextButton, FluentAutomation.ElementProxy errorMessage)
         {
             // 1. Invalid Activation Key – does not match one saved in BOP Manager                  

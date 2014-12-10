@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using TestProj.Classes;
+using TestProj.Tests.Common;
 
 namespace TestProj.Tests.Catalogues
 {
@@ -31,6 +32,8 @@ namespace TestProj.Tests.Catalogues
             container.AddNewExtension<Interception>();
 
             container.RegisterType<Interfaces.ICataloguesActions, Tests.Catalogues.CataloguesActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
+
+            Helpers.Instance.Activate(browserInstance, false);
         }
 
         [TestFixtureTearDown]
@@ -60,9 +63,21 @@ namespace TestProj.Tests.Catalogues
         [Test, Description("_01_SplashInterstialAdvert"), Category("Catalogues"), Repeat(1)]
         public void _01_SplashInterstialAdvert()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
+            //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
-            //TODO
+
+            // 1. Verify that  the advert is displayed on a full page and also for 5 seconds
+            // 1. The Interstitial advert is displayed for 5 seconds on a full screen
+            catalogueActions.VerifyInterstitialAdvert(browserInstance);
+
+            // 2. Verify that the advert  is clickable  
+            // 2.The Advert is clickable
+            catalogueActions.VerifyInterstitialAdvertClick(browserInstance);
+
+            // 3. Verify that the advert redirects user to the relevant product catalogue that is advertised
+            // 3. The splash ad redirects the user to the relevant product after clicking it 
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/stores"), TimeSpan.FromSeconds(5));
+
         }
 
         /// <summary>
@@ -123,9 +138,36 @@ namespace TestProj.Tests.Catalogues
         [Test, Description("_02_CatalogueLandingPage"), Category("Catalogues"), Repeat(1)]
         public void _02_CatalogueLandingPage()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
-            //TODO
+
+            // Test Case: 1.Click on the catalogues block at the bottom     
+            // Test Output: 1. The catalogues page is displayed with catalogues that were already added activation setup
+            catalogueActions.VerifyCatalogueBlockClick(browserInstance);
+
+            // Test Case: Verify that the catalogues landing page is displayed with the following                                                                                                        
+            // Test Case: 2. Verify that the available subcategories from catalogues are displayed and active  
+            // Test Output: 2. The available subcategories are available and displayed
+            catalogueActions.VerifyActiveCatalogueAndSubCategories(browserInstance);
+
+            // Test Case: 3. Verify that the unavailable sub categories must be displayed and greyed out
+            // Test Output: 3.  The unavailable subcategories are  displayed and made inactive  by greying out their colour
+            catalogueActions.VerifyInActiveCatalogueAndSubCategories(browserInstance);
+
+            // Test Case: 4. Verify that the list of catalogues is displayed and user is able to scroll left to right   
+            // Test Output: 4. The list of catalogue icons are displayed and user is able to scroll form left to right 
+            catalogueActions.VerifyCatalogueIconList(browserInstance);
+
+            // Test Case: 5. Verify that the category icons are fixed on top of the page  
+            // Test Output: 5.  The Categories are fixed and the list as follows   
+            catalogueActions.VerifyCategoryIcons(browserInstance);
+
+            // Test Case: 7. Verify that brands are displayed and user can scroll from left to right  
+            // Test Output: 7.The brands are displayed and you can scroll from left to right
+            catalogueActions.VerifyBrandList(browserInstance);
+
+            // Test Case: 8. Verify that specials are displayed and user can scroll from left to right 
+            // Test Output: 8. The specials are displayed on the left hand side of the landing page and user can scroll from left to right
+            catalogueActions.VerifySpecials(browserInstance);
         }
 
         /// <summary>
@@ -151,9 +193,26 @@ namespace TestProj.Tests.Catalogues
         [Test, Description("_03_CatalogueViewSubMenu"), Category("Catalogues"), Repeat(1)]
         public void _03_CatalogueViewSubMenu()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
-            //TODO
+            // Test Case: 1.Verify that sub categories are scrollable up and down  
+
+            // Test Case: 1.1 Select on any of the fixed categories        
+            // Test Output: 1.1 Subcategories under that category are displayed as a list and the selected category is displayed in red
+            FluentAutomation.ElementProxy category;
+            FluentAutomation.ElementProxy subCategories;
+            catalogueActions.VerifyCategoryClick(browserInstance, out category, out subCategories);
+
+            // Test Case: 1.2 Make sure that you can scroll up and down on that list  
+            // Test Output: 1.2 The user can scroll up and down on the sub categories
+            catalogueActions.VerifyElementScroll(browserInstance, subCategories, true);
+
+            // Test Case: 1.3 Scroll down and select any subcategory
+            // Test Output: 1.3  The selected subcategory is displayed in red  
+            catalogueActions.VerifyActiveSubCategorySelect(browserInstance);
+
+            // Test Case: 1.4 Click on the category and verify if it collapses the sub categories list
+            // Test Output: 1.4  The  subcategories list is collapsed
+            catalogueActions.VerifyCategoryUnSelect(browserInstance, category, subCategories);
         }
 
         /// <summary>
@@ -176,8 +235,8 @@ namespace TestProj.Tests.Catalogues
         /// TEST OUTPUT:
         /// 1 Subcategories under that category are displayed as a list and the selected category is displayed in red     
         /// 2 The user can scroll up and down on the sub categories 
-        /// 3  The selected subcategory is displayed in red     
-        /// 4   The selected subcategory products are displayed   
+        /// 3 The selected subcategory is displayed in red     
+        /// 4 The selected subcategory products are displayed   
         /// 5                                                                                                                                                                                                               
         /// 5.1 The product icon is displayed     
         /// 5.2 The product price is displayed      
@@ -189,9 +248,19 @@ namespace TestProj.Tests.Catalogues
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
-            //TODO
-        }
 
+            // Test Case: 1 Select on any of the fixed categories 
+            // Test Output: 1 Subcategories under that category are displayed as a list and the selected category is displayed in red  
+            // Test Case: 2 Make sure that you can scroll up and down on that list 
+            // Test Output: 2 The user can scroll up and down on the sub categories 
+            // Test Case: 3 Scroll down and select any subcategory 
+            // Test Output: 3 The selected subcategory is displayed in red 
+            // Test Case: 4 Click on the selected subcategory you wish to view products for 
+            // Test Output: 4 The selected subcategory products are displayed
+            // Test Case: 5  Verify the following on the product view   
+            catalogueActions.ClickSubCategory(browserInstance, true);
+        }
+        
         /// <summary>
         /// TEST: CATALOGUES VIEW PRODUCT DETAIL
         /// Test Case ID: 22_FRS_Ref_5.1.3
@@ -243,7 +312,24 @@ namespace TestProj.Tests.Catalogues
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
-            //TODO
+
+            // Test Case: 1 Select on any of the fixed categories 
+            // Test Output: 1 Subcategories under that category are displayed as a list and the selected category is displayed in red 
+            // Test Case: 2 Make sure that you can scroll up and down on that list 
+            // Test Output: 2 The user can scroll up and down on the sub categories
+            // Test Case: 3 Scroll down and select any subcategory 
+            // Test Output: 3 The selected subcategory is displayed in red  
+            // Test Case: 4 Click on the selected subcategory you wish to view products for 
+            // Test Output: 4 The selected subcategory products are displayed 
+            // Test Case: 5  Verify the following on the product view   
+            catalogueActions.ClickSubCategory(browserInstance);
+
+            // Test Case: 6. Click on the product  
+            // Test Case: 6. The product view screen is displayed
+            catalogueActions.VerifyProductClick(browserInstance);
+
+            // 7. Verify that the product view screen 
+            catalogueActions.VerifyProductItemClickPopup(browserInstance);
         }
 
         /// <summary>
@@ -254,7 +340,7 @@ namespace TestProj.Tests.Catalogues
         /// Pre-Condition: None
         /// Environment: Application landing page
         /// TEST STEPS:
-        /// 1.Select on any of the fixed categories  
+        /// 1. Select on any of the fixed categories  
         /// 2. Make sure that you can scroll up and down on that list   
         /// 3. Scroll down and select any subcategory   
         /// 4. Click on the selected subcategory you wish to view products for     
@@ -265,19 +351,40 @@ namespace TestProj.Tests.Catalogues
         /// 1. Subcategories under that category are displayed as a list and the selected category is displayed in red 
         /// 2. The user can scroll up and down on the sub categories   
         /// 3. The selected subcategory is displayed in red    
-        /// 4.   The selected subcategory products are displayed    
+        /// 4. The selected subcategory products are displayed    
         /// 5. The product view screen is displayed
-        /// 6.  The product is saved to favourites                                                                                                                                                                                        
-        /// 7.The recently added product is displayed in the favourites menu
+        /// 6. The product is saved to favourites                                                                                                                                                                                        
+        /// 7. The recently added product is displayed in the favourites menu
         /// </summary>
         [Test, Description("_06_CatalogueViewAddProductToFavourites"), Category("Catalogues"), Repeat(1)]
         public void _06_CatalogueViewAddProductToFavourites()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
-            //TODO
-        }
 
+            // Test Case: 1 Select on any of the fixed categories 
+            // Test Case: 2 Make sure that you can scroll up and down on that list 
+            // Test Case: 3 Scroll down and select any subcategory 
+            // Test Case: 4 Click on the selected subcategory you wish to view products for 
+            catalogueActions.ClickSubCategory(browserInstance);
+
+            // Test Case: 5. Click on the product   
+            // Test Output: 5. The product view screen is displayed
+            catalogueActions.VerifyProductClick(browserInstance);
+
+            // Test Case: 6. On the product view screen click on the favourites icon which is represented by a star and save  
+            // Test Output: 6. The product is saved to favourites 
+            
+            // Click on the favourites icon
+            catalogueActions.VerifyProductFavouritesIconClick(browserInstance);
+
+            // Click on the save button 
+            catalogueActions.VerifyProductSaveClick(browserInstance);
+
+            // 7. Verify step 6 by selecting the favourites tab, to see if the recently added product is displayed
+            // Click the favourites footer block
+            catalogueActions.VerifyFavouriteBlockClick(browserInstance);
+        }
+        
         /// <summary>
         /// TEST: CATALOGUES VIEW ADDING AND REMOVING PRODUCT QUANTITY
         /// Test Case ID: 22_FRS_Ref_5.1.3
@@ -298,18 +405,35 @@ namespace TestProj.Tests.Catalogues
         /// 1. Subcategories under that category are displayed as a list and the selected category is displayed in red   
         /// 2. The user can scroll up and down on the sub categories   
         /// 3. The selected subcategory is displayed in red   
-        /// 4.   The selected subcategory products are displayed  
+        /// 4. The selected subcategory products are displayed  
         /// 5. The product view screen is displayed     
-        /// 6.  The quantity addition button are working as expected      
+        /// 6. The quantity addition button are working as expected      
         /// 7.                                                                                                                                                                                                                         
         /// 7.1 The total is correct      
         /// </summary>
         [Test, Description("_07_CatalogueViewAddingAndRemovingProductQuantity"), Category("Catalogues"), Repeat(1)]
         public void _07_CatalogueViewAddingAndRemovingProductQuantity()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
-            //TODO
+            // Test Case: 1 Select on any of the fixed categories 
+            // Test Case: 2 Make sure that you can scroll up and down on that list 
+            // Test Case: 3 Scroll down and select any subcategory 
+            // Test Case: 4 Click on the selected subcategory you wish to view products for 
+            catalogueActions.ClickSubCategory(browserInstance);
+
+            // Test Case: 5. Click on the product   
+            // Test Output: 5. The product view screen is displayed
+            catalogueActions.VerifyProductClick(browserInstance);
+
+            // Test Case: 6. On the product view screen click on the - sign for removing and + adding quantity and save
+            // Test Output: 6. The quantity addition button are working as expected
+            catalogueActions.VerifyProductQuantityClick(browserInstance);
+
+            // Test Case: 7. verify the formula used for adding and removing product quantity                                       
+            // Test Case: 7.1 Total price = Unit price * Quantity, while adding and removing products make sure that the total is correct
+            // Test Output: 7.1 The total is correct 
+            catalogueActions.VerifyProductTotal(browserInstance);
         }
+
     }
 }
