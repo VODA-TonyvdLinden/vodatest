@@ -439,7 +439,7 @@ namespace TestProj.Tests.Common
             challengeQuestion = browserInstance.Instance.Find("#challengeQuestion");
             challengeAnswer = browserInstance.Instance.Find("#challengeAnswer");
 
-            activationNextButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(8) > div > input");
+            activationNextButton = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div:nth-child(7) > div > input");
             errorMessage = browserInstance.Instance.Find("body > div:nth-child(2) > div > div.activationContentMiddle > form > div.ng-binding");
 
         }
@@ -470,6 +470,18 @@ namespace TestProj.Tests.Common
             browserInstance.Instance.Assert.Value(value).In(proxy);
         }
 
+        public void CheckOrderPopup(Classes.Browser browserInstance, string errorMessage)
+        {
+            Thread.Sleep(5000);
+            browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button"), 30);
 
+            var err = Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(2) > div.col-sm-9 > div.errorHeading.ng-binding");
+
+            LogWriter.Instance.Log("TESTCASE: Helpers.CheckErrorPopup -> Assert commented out.", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log(string.Format("TESTCASE: Helpers.CheckErrorPopup -> Error popup incorrect message. '{0}' displayed, '{1}' expected.", err.Element.Text, errorMessage), LogWriter.eLogType.Error);
+
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(3) > div > button"));
+            Thread.Sleep(1000);
+        }
     }
 }

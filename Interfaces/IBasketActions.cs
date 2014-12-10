@@ -19,7 +19,8 @@ namespace TestProj.Interfaces
         void VerifyListView(Classes.Browser browserInstance);
         void VerifyButtons(Classes.Browser browserInstance);
         void VerifyProductView(Classes.Browser browserInstance);
+        void VerifyDetailsValues(Classes.Browser browserInstance, Interfaces.IBasketActions basketActions);
         void CheckElementExists(Classes.Browser browserInstance, string element);
-
+        void VerifyPopupValues(Classes.Browser browserInstance);
     }
 }

@@ -125,41 +125,100 @@ namespace TestProj.Tests.Basket
         {
             // 3.5 Verify that the list view button is displayed when user is on grid view mode
             /// 3.5 The list view button is displayed   
-            CheckElementExists(browserInstance,"#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1) > button");
+            CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1) > button");
+
+            // 3. Verify that the grid view button is displayed when user is on grid view mode 
+            /// 3. The grid  view button is displayed  
+            CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(2) > button");
             // 4. Verify that the order all button is displayed 
             /// 4. The order all button is displayed    
-            CheckElementExists(browserInstance,"#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(4) > button");
+            CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(4) > button");
 
             // 5. Verify that the clear all button is displayed  
             /// 5. The Clear all button is displayed      
-            CheckElementExists(browserInstance,"#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button");
+            CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button");
         }
 
         public void VerifyProductView(Classes.Browser browserInstance)
         {
             // 3.1 Verify that the product icon is displayed 
             /// 3.1 The product icon is displayed    
-            CheckElementExists(browserInstance,"#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div > div.img > div.realImg > img");
+            CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.img > div.realImg > img");
 
             // 3.2 Verify that the product price is displayed      
             /// 3.2 The product price is displayed 
-            CheckElementExists(browserInstance,"#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div > div.price > div");
+            CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.price > div");
             LogWriter.Instance.Log("TESTCASE: _04_BasketDetailGridView -> Price is displayed without the currency indicator", LogWriter.eLogType.Error);
 
             // 3.3 Verify that the <clear button > button is available        
             /// 3.3 The clear  button is displayed   
-            CheckElementExists(browserInstance,"#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div > div.price > button");
+            CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.price > button");
 
             // 3.4 Verify that the product description is displayed    
             /// 3.4 The product description is displayed  
-            CheckElementExists(browserInstance,"#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div > div.img > div.decsriptionOverlay.ng-binding");
+            CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.img > div.decsriptionOverlay.ng-binding");
 
 
+        }
+        public void VerifyDetailsValues(Classes.Browser browserInstance, Interfaces.IBasketActions basketActions)
+        {
+            // 2.2 Verify that the product price is displayed 
+            /// 2.2 The product price is displayed  
+            basketActions.CheckElementExists(browserInstance, "#alertsView > table > tbody > tr > td:nth-child(4)");
+            LogWriter.Instance.Log("TESTCASE: _05_BasketDetailListView -> Price does not have a currency indicator", LogWriter.eLogType.Error);
+
+            // 2.3 Verify that the <clear button > button is available   
+            /// 2.3 The clear  button is displayed 
+            basketActions.CheckElementExists(browserInstance, "#alertsView > table > tbody > tr > td:nth-child(7) > div > button");
+
+            // 2.4 Verify that the product description is displayed 
+            /// 2.4 The product description is displayed   
+            basketActions.CheckElementExists(browserInstance, "#alertsView > table > tbody > tr > td:nth-child(1)");
         }
 
         public void CheckElementExists(Classes.Browser browserInstance, string element)
         {
             Helpers.Instance.Exists(browserInstance, element);
+        }
+
+        public void VerifyPopupValues(Classes.Browser browserInstance)
+        {
+            // 2.1 Verify that the product description is displayed   
+            /// 2.1 The product description is displayed
+
+            Helpers.Instance.Exists(browserInstance, "//*[@id=\"product_modal\"]/div/div/div[2]/div[2]/div[2]/text()");
+
+            // 2.2 Verify that product unit price is displayed  
+            /// 2.2 The product unit price is displayed   
+            Helpers.Instance.Exists(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.itemTotal.centered.ng-binding");
+
+            // 2.3 Verify that the edit buttons are available for adding and removing products quantity 
+            /// 2.3  The edit buttons are displayed  
+            Helpers.Instance.Exists(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.decrease > button");
+            Helpers.Instance.Exists(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button");
+
+            // 2.4 Verify that the quantity field is displayed and not editable  
+            /// 2.4 The quantity field is displayed and is not editable  
+            var itemQty = Helpers.Instance.GetProxy(browserInstance, "#itemQuantity");
+            Helpers.Instance.Exists(browserInstance, itemQty);
+            browserInstance.Instance.Append("a").To(itemQty);
+            browserInstance.Instance.Assert.Value("3a").Not.In(itemQty);
+
+            // 2.5 Verify that the total price field is displayed and not editable 
+            /// 2.5  The total price field is displayed and not editable
+            var price = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.itemTotal.centered.ng-binding");
+            Helpers.Instance.Exists(browserInstance, price);
+            string priceVal = price.Element.Text;
+            browserInstance.Instance.Append("1").To(price);
+            Helpers.Instance.CheckProxyValue(browserInstance, price, priceVal);
+
+            // 2.6  Verify that the favourite icon represented by a star with a plus sign  is displayed 
+            /// 2.6  A star with a plus sign is displayed  
+            Helpers.Instance.Exists(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.devilsFeatureContainer > button");
+
+            // 2.7 Verify that the save button is displayed    
+            /// 2.7 The save button is displayed
+            Helpers.Instance.Exists(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button");
         }
     }
 }
