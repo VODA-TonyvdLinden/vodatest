@@ -86,6 +86,7 @@ namespace TestProj.Tests.Basket
         {
             //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
+            Helpers.Instance.ClearBasket(browserInstance);
 
             Helpers.Instance.AddOrders(browserInstance, 1);
 
@@ -163,6 +164,8 @@ namespace TestProj.Tests.Basket
         {
             //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
+            Helpers.Instance.ClearBasket(browserInstance);
+
             Helpers.Instance.AddOrders(browserInstance, 1);
             var noItems = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding");
             var itemsPrice = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.basketValue.ng-binding");
@@ -179,6 +182,8 @@ namespace TestProj.Tests.Basket
             basketActions.VerifyConfirmPopup(browserInstance);
 
             basketActions.VerifyConfirmPopupValues(browserInstance, noItems);
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderNow > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"));
+            Thread.Sleep(3000);
         }
 
         /// <summary>
@@ -224,7 +229,7 @@ namespace TestProj.Tests.Basket
         {
             //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
-
+            Helpers.Instance.ClearBasket(browserInstance);
 
             // 1. Click on the <list view> button on the basket tab
             /// 1. Basket items are displayed in a tabular format as a list 
@@ -271,8 +276,7 @@ namespace TestProj.Tests.Basket
             // 6.1 Select more than one  supplier by clicking  on multiple rows on the table     
             LogWriter.Instance.Log("TESTCASE: _03_BasketListView -> '6.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.", LogWriter.eLogType.Error);
             basketActions.CheckClearAllFunction(browserInstance);
-
-
+            
         }
 
         /// <summary>
@@ -310,6 +314,8 @@ namespace TestProj.Tests.Basket
         {
             //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
+            Helpers.Instance.ClearBasket(browserInstance);
+
             Helpers.Instance.AddOrders(browserInstance, 1);
             basketActions.ClickBasketBlock(browserInstance);
             //Go to detail view
@@ -368,6 +374,7 @@ namespace TestProj.Tests.Basket
         {
             // browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
+            Helpers.Instance.ClearBasket(browserInstance);
 
             LogWriter.Instance.Log("TESTCASE:_05_BasketDetailListView -> Test step missed '1.Click on the <list> view button '", LogWriter.eLogType.Error);
             Helpers.Instance.AddOrders(browserInstance, 1);
@@ -401,7 +408,10 @@ namespace TestProj.Tests.Basket
             /// 5. The Clear all button is displayed    
             basketActions.VerifyButtons(browserInstance);
 
+            basketActions.ClickPopupClose(browserInstance, "#alertsView > table > tbody > tr > td:nth-child(7) > div > button");
         }
+
+
 
         /// <summary>
         /// TEST: BASKET VIEW ITEM DETAIL
@@ -436,6 +446,7 @@ namespace TestProj.Tests.Basket
         {
             //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
+            Helpers.Instance.ClearBasket(browserInstance);
 
             Helpers.Instance.AddOrders(browserInstance, 1);
             basketActions.ClickBasketBlock(browserInstance);
@@ -451,6 +462,8 @@ namespace TestProj.Tests.Basket
 
             // 2. Verify that the product view screen                                                   
             basketActions.VerifyPopupValues(browserInstance);
+
+            basketActions.ClickPopupClose(browserInstance, "#product_modal > div > div > div.modal-header > div > button");
 
         }
 
@@ -476,6 +489,7 @@ namespace TestProj.Tests.Basket
             //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
             Helpers.Instance.ClearFavourites(browserInstance);
+            Helpers.Instance.ClearBasket(browserInstance);
 
             Helpers.Instance.AddOrders(browserInstance, 1);
             basketActions.ClickBasketBlock(browserInstance);
@@ -487,10 +501,6 @@ namespace TestProj.Tests.Basket
             basketActions.TestFavButtonOnPopup(browserInstance);
             basketActions.CheckFavAdded(browserInstance, prodDescription);
         }
-
-
-
-
 
         /// <summary>
         /// TEST: BASKET  ADDING AND REMOVING PRODUCT QUANTITY
@@ -507,14 +517,32 @@ namespace TestProj.Tests.Basket
         /// TEST OUTPUT:
         /// 1. The product view screen is displayed    
         /// 2.  The quantity addition button are working as expected 
-        /// 3.                                                                                                                                                                                                                         3.1 The total is correct 
+        /// 3.                                                                                                                                                                                                                         
+        /// 3.1 The total is correct 
         /// </summary>
         [Test, Description("_08_BasketAddingAndRemovingProductQuantity"), Category("Basket"), Repeat(1)]
         public void _08_BasketAddingAndRemovingProductQuantity()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
+            //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
-            //TODO
+            Helpers.Instance.ClearBasket(browserInstance);
+            Helpers.Instance.AddOrders(browserInstance, 1);
+            basketActions.ClickBasketBlock(browserInstance);
+            //Click on supplier/wholesaler
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
+
+            // 1. Click on the product
+            /// 1. The product view screen is displayed    
+            basketActions.ClickProduct(browserInstance);
+
+            FluentAutomation.ElementProxy qtyBox = Helpers.Instance.GetProxy(browserInstance, "#itemQuantity");
+            int qty;
+            basketActions.TestAddRemoveButtons(browserInstance, out qtyBox, out qty);
+
+
+            basketActions.VerifyFormula(browserInstance, qtyBox, qty);
         }
+
+
     }
 }

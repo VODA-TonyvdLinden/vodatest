@@ -46,16 +46,14 @@ namespace TestProj.Tests.Basket
             // 2.2 Click on the order now
             // 2.2 The confirm order pop-up is displayed 
             Thread.Sleep(5000);
-            browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#orderNow > div > div > div.modal-body.text-center > div > button:nth-child(2)"), 30);
+            //browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#orderNow > div > div > div.modal-body.text-center > p:nth-child(3)"), 30);
             Helpers.Instance.Exists(browserInstance, "#orderNow > div");
             Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderNow > div > div > div.modal-header.vodaBackgroundGrey > div.successMsg > strong"), "Order now");
         }
 
         public void ClickBasketBlock(Classes.Browser browserInstance)
         {
-            var basketBlock = Helpers.Instance.GetProxy(browserInstance, "body > div.ui-footer.ng-scope > ul > li:nth-child(2) > div");
-            Helpers.Instance.ClickButton(browserInstance, basketBlock);
-            browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-catalog-view?viewtype=grid");
+            Helpers.Instance.GoToBasket(browserInstance);
         }
         public void VerifyConfirmPopupValues(Classes.Browser browserInstance, FluentAutomation.ElementProxy noItems)
         {
@@ -176,6 +174,12 @@ namespace TestProj.Tests.Basket
             basketActions.CheckElementExists(browserInstance, "#alertsView > table > tbody > tr > td:nth-child(1)");
         }
 
+        public void ClickPopupClose(Classes.Browser browserInstance, string path)
+        {
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, path));
+            Thread.Sleep(3000);
+        }
+
         public void CheckElementExists(Classes.Browser browserInstance, string element)
         {
             Helpers.Instance.Exists(browserInstance, element);
@@ -242,6 +246,8 @@ namespace TestProj.Tests.Basket
         {
             // 2. On the product view screen click on the favourites icon which is represented by a star and save
             /// 2. The product is saved to favourites  
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.devilsFeatureContainer > button"));
+
             var favButton = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.devilsFeatureContainer > button");
 
             browserInstance.Instance.Assert.True(() => favButton.Element.Attributes.Get("class") == "btn addToFavButton");
@@ -264,6 +270,53 @@ namespace TestProj.Tests.Basket
             var selectedProduct = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.productDesc.ng-binding");
             string prodDescription = selectedProduct.Element.Text;
             return prodDescription;
+        }
+
+        public void VerifyFormula(Classes.Browser browserInstance, FluentAutomation.ElementProxy qtyBox, int qty)
+        {
+            // 3. verify the formula used for adding and removing product quantity                                             
+            // 3.1 Total price = Unit price * Quantity, while adding and removing products make sure that the total is correct
+            /// 3.1 The total is correct 
+            /// 
+            var unitPrice = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.unitPrice.ng-binding");
+            var test = unitPrice.Element.Text.Replace("Unit Price ", "").Replace("\r", "").Replace("\n", "").Replace(" ", "");
+
+            decimal unitP = Convert.ToDecimal(test);//i + (i2 / 100);
+            //If you get an error here (string not in correct format), check that your decimal char is set to '.' and not ',' in computer settings
+
+            var totalPrice = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.itemTotal.centered.ng-binding");
+
+            PressAddIcon(browserInstance, qtyBox, qty);
+            decimal totalP = unitP * (qty + 1);
+            Helpers.Instance.CheckProxyValue(browserInstance, totalPrice, totalP.ToString());
+
+            PressRemoveIcon(browserInstance, qtyBox, qty);
+            totalP = unitP * (qty);
+            Helpers.Instance.CheckProxyValue(browserInstance, totalPrice, totalP.ToString());
+        }
+
+        public void TestAddRemoveButtons(Classes.Browser browserInstance, out FluentAutomation.ElementProxy qtyBox, out int qty)
+        {
+            // 2. On the product view screen  click on the - sign for removing and + adding quantity and save   
+            /// 2.  The quantity addition button are working as expected 
+            qtyBox = Helpers.Instance.GetProxy(browserInstance, "#itemQuantity");
+            qty = int.Parse(qtyBox.Element.Text);
+            PressAddIcon(browserInstance, qtyBox, qty);
+            PressRemoveIcon(browserInstance, qtyBox, qty);
+        }
+
+        private void PressRemoveIcon(Classes.Browser browserInstance, FluentAutomation.ElementProxy qtyBox, int qty)
+        {
+            //Press -
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.decrease > button"));
+            Helpers.Instance.CheckProxyValue(browserInstance, qtyBox, (qty).ToString());
+        }
+
+        private void PressAddIcon(Classes.Browser browserInstance, FluentAutomation.ElementProxy qtyBox, int qty)
+        {
+            //Press +
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button"));
+            Helpers.Instance.CheckProxyValue(browserInstance, qtyBox, (qty + 1).ToString());
         }
     }
 }

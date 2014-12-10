@@ -349,6 +349,23 @@ namespace TestProj.Tests.Common
             Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
             Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
         }
+
+        public void ClearBasket(Classes.Browser browserInstance)
+        {
+            GoToBasket(browserInstance);
+            //browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-product-view?supplier=6001205000004");
+            //browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-catalog-view?viewtype=grid");
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button"));
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
+            //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main"), 30);
+        }
+        public void GoToBasket(Classes.Browser browserInstance)
+        {
+            var basketBlock = Helpers.Instance.GetProxy(browserInstance, "body > div.ui-footer.ng-scope > ul > li:nth-child(2) > div");
+            Helpers.Instance.ClickButton(browserInstance, basketBlock);
+            //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-product-view?supplier=6001205000004"), 30);
+            //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-catalog-view?viewtype=grid"), 30);
+        }
         public void ClearFavourites(Classes.Browser browserInstance)
         {
 
@@ -358,7 +375,7 @@ namespace TestProj.Tests.Common
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button"));
         }
 
-       
+
 
 
         public void Activate(Classes.Browser browserInstance, bool multipleSpazas)

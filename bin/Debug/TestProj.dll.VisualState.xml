@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
   <TopNode>[0-1077]C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll</TopNode>
-  <SelectedNode>[0-1039]TestProj.Tests.Basket.Basket._06_BasketViewItemDetail</SelectedNode>
+  <SelectedNode>[0-1033]TestProj.Tests.Basket.Basket</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
     <Node UniqueName="[0-1077]C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" Expanded="true" />
@@ -16,6 +16,7 @@
     <Node UniqueName="[0-1042]TestProj.Tests.Catalogues.Catalogues" Expanded="true" />
     <Node UniqueName="[0-1085]TestProj.Tests.ContactUs" Expanded="true" />
     <Node UniqueName="[0-1086]TestProj.Tests.Favourites" Expanded="true" />
+    <Node UniqueName="[0-1053]TestProj.Tests.Favourites.Favourites" Expanded="true" />
     <Node UniqueName="[0-1088]TestProj.Tests.Orders" Expanded="true" />
     <Node UniqueName="[0-1065]TestProj.Tests.Orders.Orders" Expanded="true" />
     <Node UniqueName="[0-1087]TestProj.Tests.Search" Expanded="true" />

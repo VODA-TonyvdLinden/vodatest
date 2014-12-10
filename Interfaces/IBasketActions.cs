@@ -25,6 +25,9 @@ namespace TestProj.Interfaces
         void CheckFavAdded(Classes.Browser browserInstance, string prodDescription);
         void TestFavButtonOnPopup(Classes.Browser browserInstance);
         string ClickProduct(Classes.Browser browserInstance);
+        void VerifyFormula(Classes.Browser browserInstance, FluentAutomation.ElementProxy qtyBox, int qty);
+        void TestAddRemoveButtons(Classes.Browser browserInstance, out FluentAutomation.ElementProxy qtyBox, out int qty);
+        void ClickPopupClose(Classes.Browser browserInstance, string path);
 
     }
 }
