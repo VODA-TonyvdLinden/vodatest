@@ -32,7 +32,7 @@ namespace TestProj.Tests.Basket
 
         public void ClickConfirmOrderPopupClose(Classes.Browser browserInstance)
         {
-            LogWriter.Instance.Log("TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON", LogWriter.eLogType.Error);
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderNow > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"));
             Thread.Sleep(1000);
         }
@@ -61,7 +61,7 @@ namespace TestProj.Tests.Basket
             // 3.3  The total number of items and total price of items are displayed on the pop-up 
             Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderNow > div > div > div.modal-body.text-center > p:nth-child(2)"), noItems.Element.Text);
             //Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderNow > div > div > div.modal-body.text-center > p:nth-child(3)"), "Total: " + itemsPrice.Element.Text);
-            LogWriter.Instance.Log("TESTCASE: _02_BasketConfirmOrder -> Total on popup does not contain the currency symbol. Asert commented out.", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 40: TESTCASE: _02_BasketConfirmOrder -> Total on popup does not contain the currency symbol. Asert commented out.", LogWriter.eLogType.Error);
         }
 
         public void VerifyConfirmPopup(Classes.Browser browserInstance)
@@ -146,7 +146,7 @@ namespace TestProj.Tests.Basket
             // 3.2 Verify that the product price is displayed      
             /// 3.2 The product price is displayed 
             CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.price > div");
-            LogWriter.Instance.Log("TESTCASE: _04_BasketDetailGridView -> Price is displayed without the currency indicator", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 48: TESTCASE: _04_BasketDetailGridView -> Price is displayed without the currency indicator", LogWriter.eLogType.Error);
 
             // 3.3 Verify that the <clear button > button is available        
             /// 3.3 The clear  button is displayed   
@@ -163,7 +163,7 @@ namespace TestProj.Tests.Basket
             // 2.2 Verify that the product price is displayed 
             /// 2.2 The product price is displayed  
             basketActions.CheckElementExists(browserInstance, "#alertsView > table > tbody > tr > td:nth-child(4)");
-            LogWriter.Instance.Log("TESTCASE: _05_BasketDetailListView -> Price does not have a currency indicator", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 55: TESTCASE: _05_BasketDetailListView -> Price does not have a currency indicator", LogWriter.eLogType.Error);
 
             // 2.3 Verify that the <clear button > button is available   
             /// 2.3 The clear  button is displayed 
@@ -240,6 +240,8 @@ namespace TestProj.Tests.Basket
             //check prod description to be the same as the one that was added
             var NewProd = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.productDesc.ng-binding");
             Helpers.Instance.CheckProxyValue(browserInstance, NewProd, prodDescription);
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.modal-header > div > button"));
+            Thread.Sleep(2000);
         }
 
         public void TestFavButtonOnPopup(Classes.Browser browserInstance)
@@ -250,10 +252,14 @@ namespace TestProj.Tests.Basket
 
             var favButton = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.devilsFeatureContainer > button");
 
+            Thread.Sleep(3000);
             browserInstance.Instance.Assert.True(() => favButton.Element.Attributes.Get("class") == "btn addToFavButton");
+            Thread.Sleep(3000);
             Helpers.Instance.ClickButton(browserInstance, favButton);
+            Thread.Sleep(3000);
             browserInstance.Instance.Assert.True(() => favButton.Element.Attributes.Get("class") == "btn removeToFavButton");
             //close the popup
+            Thread.Sleep(3000);
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.modal-header > div > button"));
             Thread.Sleep(2000);
         }

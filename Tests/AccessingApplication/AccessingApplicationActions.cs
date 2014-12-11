@@ -89,7 +89,7 @@ namespace TestProj.Tests.AccessingApplication
             var multi = browserInstance.Instance.FindMultiple("#landingPage > div > div.rightBlock > div > div > div > div");
             browserInstance.Instance.Assert.True(() => multi.Elements.Count > 0);
             browserInstance.Instance.Assert.True(() => multi.Elements.Count == 6);
-            LogWriter.Instance.Log("TETCASE: VerifySubApplicationsExists -> I can see 6 app DIVs, but cannot check if they are enabled or not. PLEASE ADD ENABLE/DISABLE CLASS", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 3: TETCASE: VerifySubApplicationsExists -> I can see 6 app DIVs, but cannot check if they are enabled or not. PLEASE ADD ENABLE/DISABLE CLASS", LogWriter.eLogType.Error);
 
             //HOW TO ITTERATE INNER OBJECTS
             //multi.Elements.ForEach((elementTuple) =>
@@ -186,8 +186,32 @@ namespace TestProj.Tests.AccessingApplication
             //   2.1.3 Please enter special characters  <@@, &&> 
             //   2.1.4 Please enter decimal numbers <0.00444> 
             //   2.1.5 Please enter negative value <-1>
-            Helpers.Instance.TestFieldInputValidation(browserInstance, searchBox);
-            LogWriter.Instance.Log("TESTCASE:_02_ApplicationFieldValidation -> What is supposed to happen when invalid chars are inserted in the box? is it supposed to disallow you totally, or are you supposed to get an error of some type?", LogWriter.eLogType.Error);
+
+            var searchButton = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > span");
+            //     3.1.1 Please enter alphanumeric  < 07@ >
+            TestInvalidValue(browserInstance, searchBox, searchButton, "07@");
+
+            //     3.1.2 Please enter space before entering input on the field
+            TestInvalidValue(browserInstance, searchBox, searchButton, " 082");
+
+            //     3.1.3 Please enter special characters  <@@, &&> 
+            TestInvalidValue(browserInstance, searchBox, searchButton, "@@, &&");
+
+            //     3.1.4 Please enter decimal numbers <0.00444> 
+            TestInvalidValue(browserInstance, searchBox, searchButton, "0.00444");
+
+            TestInvalidValue(browserInstance, searchBox, searchButton, "-111");
+
+            //     3.1.5 Please enter negative value <-1>   
+            Helpers.Instance.FieldInput(browserInstance, searchBox, "-1");
+            Helpers.Instance.ClickButton(browserInstance, searchButton);
+
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#errorModal > div"));
+            Thread.Sleep(2000);
+            Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(2) > div.col-sm-9 > div.errorHeading.ng-binding"), "E1-0-3");
+            Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(2) > div.col-sm-9 > div.errorDetailsList > ul > li.ng-binding"), "The minimum search text should at least 3 characters, leave empty if you want to search orders by date only");
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(3) > div > button"));
+            Thread.Sleep(2000);
         }
         public void VerifyBaskSearchBox(Classes.Browser browserInstance)
         {
@@ -201,8 +225,48 @@ namespace TestProj.Tests.AccessingApplication
             //   3.1.4 Please enter decimal numbers <0.00444> 
             //   3.1.5 Please enter negative value <-1>
             var searchBox = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
-            LogWriter.Instance.Log("TESTCASE:_02_ApplicationFieldValidation -> What is supposed to happen when invalid chars are inserted in the box? is it supposed to disallow you totally, or are you supposed to get an error of some type?", LogWriter.eLogType.Error);
-            Helpers.Instance.TestFieldInputValidation(browserInstance, searchBox);
+            var searchButton = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > span");
+
+            //     3.1.1 Please enter alphanumeric  < 07@ >
+            TestInvalidValue(browserInstance, searchBox, searchButton, "07@");
+
+            //     3.1.2 Please enter space before entering input on the field
+            TestInvalidValue(browserInstance, searchBox, searchButton, " 082");
+
+            //     3.1.3 Please enter special characters  <@@, &&> 
+            TestInvalidValue(browserInstance, searchBox, searchButton, "@@, &&");
+
+            //     3.1.4 Please enter decimal numbers <0.00444> 
+            TestInvalidValue(browserInstance, searchBox, searchButton, "0.00444");
+
+            TestInvalidValue(browserInstance, searchBox, searchButton, "-111");
+
+            //     3.1.5 Please enter negative value <-1>   
+            Helpers.Instance.FieldInput(browserInstance, searchBox, "-1");
+            Helpers.Instance.ClickButton(browserInstance, searchButton);
+
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#errorModal > div"));
+            Thread.Sleep(1000);
+            Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(2) > div.col-sm-9 > div.errorHeading.ng-binding"), "E1-23-3");
+            Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(2) > div.col-sm-9 > div.errorDetailsList > ul > li.ng-binding"), "The minimum search text should at least 3 characters, leave empty if you want to search orders by date only");
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(3) > div > button"));
+            Thread.Sleep(500);
+        }
+
+        private static void TestInvalidValue(Classes.Browser browserInstance, FluentAutomation.ElementProxy searchBox, FluentAutomation.ElementProxy searchButton, string text)
+        {
+            Helpers.Instance.FieldInput(browserInstance, searchBox, text);
+            Helpers.Instance.ClickButton(browserInstance, searchButton);
+            VerifyNoResultsPopup(browserInstance);
+        }
+
+        private static void VerifyNoResultsPopup(Classes.Browser browserInstance)
+        {
+            Thread.Sleep(1000);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#searchNotFound > div"));
+            Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#searchNotFound > div > div > div.modal-header.vodaBackgroundGrey > div.successMsg"), "No Search Result !");
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#searchNotFound > div > div > div.modal-body.text-center > div > button"));
+            Thread.Sleep(500);
         }
 
         public void VerifySubAppAccessibility(Classes.Browser browserInstance)
@@ -237,12 +301,11 @@ namespace TestProj.Tests.AccessingApplication
             {
                 // 2. Verify the Marbil add if is clickable
                 //   2.1 Click on the Marbil ad that is displayed on the screen.
-                var marbil = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.headerAdd.normalHeaderWidth");
+                var marbil = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.headerAdd.normalHeaderWidth > img");
                 Helpers.Instance.ClickButton(browserInstance, marbil);
                 //   2.1 The item selected from the marbil add is displayed
-                browserInstance.Instance.Assert.Url("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.headerAdd.normalHeaderWidth > img");
-                LogWriter.Instance.Log("TESTCASE:_03_ApplicationLandingContentsFunctionality -> Cannot test MARBIL. Nothing happens when you click on it.", LogWriter.eLogType.Error);
-                LogWriter.Instance.Log("TESTCASE:_03_ApplicationLandingContentsFunctionality -> is the MARBIL page url always the same?", LogWriter.eLogType.Error);
+                LogWriter.Instance.Log("ISSUE 5: TESTCASE:_03_ApplicationLandingContentsFunctionality -> Cannot test MARBIL. Nothing happens when you click on it.", LogWriter.eLogType.Error);
+                LogWriter.Instance.Log("ISSUE 6: TESTCASE:_03_ApplicationLandingContentsFunctionality -> is the MARBIL page url always the same?", LogWriter.eLogType.Error);
             }
             else
             {
@@ -255,10 +318,13 @@ namespace TestProj.Tests.AccessingApplication
             //   1.1 Select any specail within the catalogue to see if is selectable by a single click
             //var specialItem = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.leftBlock > div > div > div > div:nth-child(1) > div > div");
             //For some reason this item moved
+            Thread.Sleep(5000);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Expect.Exists("#landingPage > div > div.leftBlock > div > div > div:nth-child(1) > div:nth-child(1) > div > div"));
+
             var specialItem = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.leftBlock > div > div > div:nth-child(1) > div:nth-child(1) > div > div");
             Helpers.Instance.ClickButton(browserInstance, specialItem);
             //   1.1 The selected item is marked
-            LogWriter.Instance.Log("TESTCASE:_03_ApplicationLandingContentsFunctionality -> Item is not market when single click. Cannot test for this. Test case wrong. Same behaviour as double click", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 4: TESTCASE:_03_ApplicationLandingContentsFunctionality -> Item is not market when single click. Cannot test for this. Test case wrong. Same behaviour as double click", LogWriter.eLogType.Error);
             //   1.2 double click on the item to see if clickable
             Helpers.Instance.DoubleClickButton(browserInstance, specialItem);
             //   1.2 The item is clickable and is displayed on the user interface two show that the user has selected it.

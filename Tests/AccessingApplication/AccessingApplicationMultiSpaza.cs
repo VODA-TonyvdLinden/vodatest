@@ -81,7 +81,7 @@ namespace TestProj.Tests.AccessingApplication
             // 3.Select any spaza on the list  
             accessingApplicationAction.SwitchSpazaAndCheckBasket(browserInstance, accessingApplicationAction);
 
-            LogWriter.Instance.Log("TESTCASE:_04_ApplicationWithMultipleSpazas -> Step 5 inferred by previous sections of the test. Update test case", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 1: TESTCASE:_04_ApplicationWithMultipleSpazas -> Step 5 inferred by previous sections of the test. Update test case", LogWriter.eLogType.Error);
             // 5. Verify that these function is available on all screens, by selecting the user’s active spaza name
             // 5. The active spaza list is populated for users with multiple spaza's
 

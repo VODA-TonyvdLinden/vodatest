@@ -87,7 +87,7 @@ namespace TestProj.Tests.Basket
             //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
             Helpers.Instance.ClearBasket(browserInstance);
-
+            Thread.Sleep(3000);
             Helpers.Instance.AddOrders(browserInstance, 1);
 
             // 1. Click on the basket block at the bottom of the screen  
@@ -245,7 +245,7 @@ namespace TestProj.Tests.Basket
             basketActions.VerifyListViewActions(browserInstance);
 
             // 3.2 Click on the order now   
-            LogWriter.Instance.Log("TESTCASE: _03_BasketListView -> '3.2 Click on the order now' -> Test case step missed -> 'Navigate back to List view'", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 41: TESTCASE: _03_BasketListView -> '3.2 Click on the order now' -> Test case step missed -> 'Navigate back to List view'", LogWriter.eLogType.Error);
             basketActions.ClickBasketBlock(browserInstance);
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1)"));
 
@@ -259,14 +259,14 @@ namespace TestProj.Tests.Basket
             // 4.Verify that delete orders from a specific supplier functions as expected               
             // 4.1  Select a specific supplier by clicking  on any record from the table
             /// 4.1 The record on the list view table is selected   
-            LogWriter.Instance.Log("TESTCASE: _03_BasketListView -> '4.Verify that delete orders from a specific supplier functions as expected' -> Same as 3?", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 42: TESTCASE: _03_BasketListView -> '4.Verify that delete orders from a specific supplier functions as expected' -> Same as 3?", LogWriter.eLogType.Error);
 
             basketActions.DeleteOrderFromList(browserInstance);
 
             // 5.Verify that order all from basket  functions as expected                               
             // 5.1 Select more than one  supplier by clicking  on multiple rows on the table
             /// 5.1 Multiple records on the list view table are selected   
-            LogWriter.Instance.Log("TESTCASE: _03_BasketListView -> '5.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 43: TESTCASE: _03_BasketListView -> '5.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.", LogWriter.eLogType.Error);
             basketActions.CheckOrderAllFunction(browserInstance, basketActions);
             /// 5.2 The confirm order pop-up is displayed  
             basketActions.CheckConfirmPopup(browserInstance);
@@ -274,7 +274,7 @@ namespace TestProj.Tests.Basket
 
             // 6.Verify that clear all from all basket functions as expected                            
             // 6.1 Select more than one  supplier by clicking  on multiple rows on the table     
-            LogWriter.Instance.Log("TESTCASE: _03_BasketListView -> '6.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 44: TESTCASE: _03_BasketListView -> '6.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.", LogWriter.eLogType.Error);
             basketActions.CheckClearAllFunction(browserInstance);
             
         }
@@ -319,7 +319,7 @@ namespace TestProj.Tests.Basket
             Helpers.Instance.AddOrders(browserInstance, 1);
             basketActions.ClickBasketBlock(browserInstance);
             //Go to detail view
-            LogWriter.Instance.Log("TESTCASE: _04_BasketDetailGridView -> Step missed -> Click on a supplier/wholesaler", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 45: TESTCASE: _04_BasketDetailGridView -> Step missed -> Click on a supplier/wholesaler", LogWriter.eLogType.Error);
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li:nth-child(1) > div.brandinfo > div.itemView"));
             Thread.Sleep(500);
             // 1.Click on the <grid> view button       
@@ -327,8 +327,8 @@ namespace TestProj.Tests.Basket
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(2) > button"));
             basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div");
 
-            LogWriter.Instance.Log("TESTCASE: _04_BasketDetailGridView -> Test case unclear - '2.Click on the selected subcategory you wish to view products for'", LogWriter.eLogType.Error);
-            LogWriter.Instance.Log("TESTCASE: _04_BasketDetailGridView -> Test case unclear - 'There are no sub categories here, only products previously added to the basket'", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 46: TESTCASE: _04_BasketDetailGridView -> Test case unclear - '2.Click on the selected subcategory you wish to view products for'", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 47: TESTCASE: _04_BasketDetailGridView -> Test case unclear - 'There are no sub categories here, only products previously added to the basket'", LogWriter.eLogType.Error);
             // 2.Click on the selected subcategory you wish to view products for               
             /// 2. The selected subcategory products are displayed     
             //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
@@ -376,19 +376,19 @@ namespace TestProj.Tests.Basket
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
             Helpers.Instance.ClearBasket(browserInstance);
 
-            LogWriter.Instance.Log("TESTCASE:_05_BasketDetailListView -> Test step missed '1.Click on the <list> view button '", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 49: TESTCASE:_05_BasketDetailListView -> Test step missed '1.Click on the <list> view button '", LogWriter.eLogType.Error);
             Helpers.Instance.AddOrders(browserInstance, 1);
             basketActions.ClickBasketBlock(browserInstance);
 
             //Go to detail view
-            LogWriter.Instance.Log("TESTCASE: _05_BasketDetailListView -> Step missed -> Click on a supplier/wholesaler", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 50: TESTCASE: _05_BasketDetailListView -> Step missed -> Click on a supplier/wholesaler", LogWriter.eLogType.Error);
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
             Thread.Sleep(500);
             // 1. Click on the selected subcategory you wish to view products for   
             /// 1. The selected subcategory products are displayed        
-            LogWriter.Instance.Log("TESTCASE: _05_BasketDetailListView -> Test case unclear - '2.Click on the selected subcategory you wish to view products for'", LogWriter.eLogType.Error);
-            LogWriter.Instance.Log("TESTCASE: _05_BasketDetailListView -> Test case unclear - 'There are no sub categories here, only products previously added to the basket'", LogWriter.eLogType.Error);
-            LogWriter.Instance.Log("TESTCASE: _05_BasketDetailListView -> Test case missed - 'Click on the <list> view button'", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 51: TESTCASE: _05_BasketDetailListView -> Test case unclear - '2.Click on the selected subcategory you wish to view products for'", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 52: TESTCASE: _05_BasketDetailListView -> Test case unclear - 'There are no sub categories here, only products previously added to the basket'", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 53: TESTCASE: _05_BasketDetailListView -> Test case missed - 'Click on the <list> view button'", LogWriter.eLogType.Error);
 
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1) > button"));
             basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div");
@@ -397,7 +397,7 @@ namespace TestProj.Tests.Basket
             // 2  Verify the following on the product view                                     
             // 2.1 Verify that the product icon is displayed   
             /// 2.1 The product icon is displayed   
-            LogWriter.Instance.Log("TESTCASE: _05_BasketDetailListView -> Test case incorrect - '2.1 The product icon is displayed' -> No prosuct icon in list view", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 54: TESTCASE: _05_BasketDetailListView -> Test case incorrect - '2.1 The product icon is displayed' -> No prosuct icon in list view", LogWriter.eLogType.Error);
 
             basketActions.VerifyDetailsValues(browserInstance, basketActions);
 
@@ -490,7 +490,7 @@ namespace TestProj.Tests.Basket
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
             Helpers.Instance.ClearFavourites(browserInstance);
             Helpers.Instance.ClearBasket(browserInstance);
-
+            Thread.Sleep(3000);
             Helpers.Instance.AddOrders(browserInstance, 1);
             basketActions.ClickBasketBlock(browserInstance);
             //Click on supplier/wholesaler
@@ -526,6 +526,7 @@ namespace TestProj.Tests.Basket
             //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
             Helpers.Instance.ClearBasket(browserInstance);
+            Thread.Sleep(3000);
             Helpers.Instance.AddOrders(browserInstance, 1);
             basketActions.ClickBasketBlock(browserInstance);
             //Click on supplier/wholesaler

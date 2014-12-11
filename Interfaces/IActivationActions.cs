@@ -7,17 +7,18 @@ namespace TestProj.Interfaces
         //void UsernameInput(Classes.Browser browserInstance, FluentAutomation.ElementProxy username, string input);
         //void AliasInput(Classes.Browser browserInstance, FluentAutomation.ElementProxy alias, string input);
         //void ActivationKeyInput(Classes.Browser browserInstance, FluentAutomation.ElementProxy activationNumber, string input);
+        void CheckErrorPopup(Classes.Browser browserInstance, string errorCode, string errorMessage);
         void ClickNext(Classes.Browser browserInstance, FluentAutomation.ElementProxy nextButton);
         void TestActivationKeyInputValidation(TestProj.Classes.Browser browserInstance, FluentAutomation.ElementProxy activationNumber);
         void TestAliasInputValidation(TestProj.Classes.Browser browserInstance, FluentAutomation.ElementProxy userAlias);
-        void TestInvalidActivationKey(TestProj.Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy nextButton, FluentAutomation.ElementProxy errorMessage);
-        void TestInvalidUsername(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy nextButton, FluentAutomation.ElementProxy errorMessage);
+        void TestInvalidActivationKey(TestProj.Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy challengeQuestion, FluentAutomation.ElementProxy challengeAnswer, FluentAutomation.ElementProxy nextButton);
+        void TestInvalidUsername(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy challengeQuestion, FluentAutomation.ElementProxy challengeAnswer, FluentAutomation.ElementProxy nextButton);
         void TestValidSingleUserDetails(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy challengeQuestion, FluentAutomation.ElementProxy challengeAnswer, FluentAutomation.ElementProxy nextButton);
         void TestValidMultiUserDetails(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy challengeQuestion, FluentAutomation.ElementProxy challengeAnswer, FluentAutomation.ElementProxy nextButton);
-        void TestMandatoryFields(TestProj.Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy challengeQuestion, FluentAutomation.ElementProxy challengeAnswer, FluentAutomation.ElementProxy errorMessage);
+        void TestMandatoryFields(TestProj.Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy challengeQuestion, FluentAutomation.ElementProxy challengeAnswer);
         void TestMSISDNInputValidation(TestProj.Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn);
-        void TestMSISDNLengthLimitGreater(TestProj.Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy nextButton, FluentAutomation.ElementProxy errorMessage);
-        void TestMSISDNLengthLimitSmaller(TestProj.Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy errorMessage);
+        void TestMSISDNLengthLimitGreater(TestProj.Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy challengeQuestion, FluentAutomation.ElementProxy challengeAnswer, FluentAutomation.ElementProxy nextButton);
+        void TestMSISDNLengthLimitSmaller(TestProj.Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy challengeQuestion, FluentAutomation.ElementProxy challengeAnswer, FluentAutomation.ElementProxy nextButton);
         void TestUsernameInputValidation(TestProj.Classes.Browser browserInstance, FluentAutomation.ElementProxy username);
         void VerifyLogoAndBanner(Classes.Browser browserInstance);
         void VerifyOnlineIndicator(Classes.Browser browserInstance);
@@ -28,7 +29,7 @@ namespace TestProj.Interfaces
         void VerifyResendButton(Classes.Browser browserInstance);
         void VerifyFieldExist(Classes.Browser browserInstance);
         void ValidateOTPStart(Classes.Browser browserInstance, string msisdnNo);
-        void VerifyOTPErrorMessage(Classes.Browser browserInstance, string msisdnNo);
+        void VerifyOTPErrorMessage(Classes.Browser browserInstance, string msisdnNo, bool resent = false);
         void VerifyOntTimeLable(Classes.Browser browserInstance);
         void EnterAndVerifyOTPValue(Classes.Browser browserInstance, FluentAutomation.ElementProxy otp, string otpVal);
         void VerifyCatalogueLandingPage(Classes.Browser browserInstance);
@@ -36,6 +37,8 @@ namespace TestProj.Interfaces
         void ClickSearchButton(Classes.Browser browserInstance, FluentAutomation.ElementProxy mcatSearchButton);
         void TestCatalogueSeachValidation(Classes.Browser browserInstance, FluentAutomation.ElementProxy searchValue, FluentAutomation.ElementProxy mcatSearchButton, FluentAutomation.ElementProxy mcatErrorMessage);
         void ValidateOTP(Classes.Browser browserInstance);
+        void CatSearchTest(Classes.Browser browserInstance, FluentAutomation.ElementProxy searchValue, FluentAutomation.ElementProxy mcatSearchButton, string val, bool expectResult);
+        void ResetSearch(Classes.Browser browserInstance, FluentAutomation.ElementProxy searchValue, FluentAutomation.ElementProxy mcatSearchButton);
     }
 
 }

@@ -111,7 +111,7 @@ namespace TestProj.Tests.AccessingApplication
             // 7. Verify that the marbil add is displayed
             accessingApplicationAction.VerifyMarbilExists(browserInstance);
             // 8. Verify that the sub application are displayed and also greyed out
-            LogWriter.Instance.Log("TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 2: TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out", LogWriter.eLogType.Error);
             accessingApplicationAction.VerifySubApplicationsExists(browserInstance);
             // 9. Verify that the catalogue , basket, orders and favourites blocks are displayed
             accessingApplicationAction.VerifyBottomNavExists(browserInstance);
@@ -166,6 +166,9 @@ namespace TestProj.Tests.AccessingApplication
             accessingApplicationAction.VerifyAlertSearchBox(browserInstance);
             // 2.Select the basket search field
             accessingApplicationAction.VerifyBaskSearchBox(browserInstance);
+
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.headerLogo.left > a > img"));
+            Thread.Sleep(5000);
         }
 
         /// <summary>
