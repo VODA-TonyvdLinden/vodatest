@@ -1,53 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-11" time="15:02:43">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="8" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-11" time="15:25:41">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="57.040" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="344.612" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="57.022" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="344.594" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="57.022" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="344.593" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Basket" executed="True" result="Failure" success="False" time="57.021" asserts="0">
+              <test-suite type="Namespace" name="Basket" executed="True" result="Success" success="True" time="344.593" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Basket" description="Basket" executed="True" result="Failure" success="False" time="57.018" asserts="0">
+                  <test-suite type="TestFixture" name="Basket" description="Basket" executed="True" result="Success" success="True" time="344.589" asserts="0">
                     <categories>
                       <category name="Basket" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Basket.Basket._01_BasketGridView" description="_01_BasketGridView" executed="True" result="Error" success="False" time="9.895" asserts="0">
+                      <test-case name="TestProj.Tests.Basket.Basket._01_BasketGridView" description="_01_BasketGridView" executed="True" result="Success" success="True" time="62.026" asserts="0">
                         <categories>
                           <category name="Basket" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
-                        <failure>
-                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : An unexpected exception was thrown inside WaitUntil(Action). See InnerException for details.
-  ----> OpenQA.Selenium.StaleElementReferenceException : stale element reference: element is not attached to the page document
-  (Session info: chrome=39.0.2171.71)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.3 x86_64)]]></message>
-                          <stack-trace><![CDATA[at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
-at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
-at FluentAutomation.BaseCommandProvider.WaitUntil(Expression`1 conditionAction, TimeSpan timeout)
-at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
-at FluentAutomation.CommandProvider.Click(ElementProxy element)
-at FluentAutomation.ActionSyntaxProvider.Click(ElementProxy element)
-at TestProj.Tests.Common.Helpers.ClickButton(Browser browserInstance, ElementProxy buttonProxy) in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Common\Helpers.cs:line 78
-at TestProj.Tests.Common.Helpers.AddOrders(Browser browserInstance, Int32 supplierIndex) in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Common\Helpers.cs:line 347
-at TestProj.Tests.Basket.Basket._01_BasketGridView() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Basket\Basket.cs:line 91
---StaleElementReferenceException
-at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
-at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
-at OpenQA.Selenium.Remote.RemoteWebElement.get_TagName()
-at FluentAutomation.Element..ctor(IWebElement webElement, String selector)
-at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
-at FluentAutomation.ElementProxy.get_Element()
-at FluentAutomation.CommandProvider.<>c__DisplayClass18.<Click>b__17()
-at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
-]]></stack-trace>
-                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._02_BasketConfirmOrder" description="_02_BasketConfirmOrder" executed="True" result="Success" success="True" time="25.388" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._03_BasketListView" description="_03_BasketListView" executed="True" result="Success" success="True" time="66.320" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._04_BasketDetailGridView" description="_04_BasketDetailGridView" executed="True" result="Success" success="True" time="20.691" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._05_BasketDetailListView" description="_05_BasketDetailListView" executed="True" result="Success" success="True" time="22.552" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._06_BasketViewItemDetail" description="_06_BasketViewItemDetail" executed="True" result="Success" success="True" time="24.251" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._07_BasketAddItemToFavourites" description="_07_BasketAddItemToFavourites" executed="True" result="Success" success="True" time="54.020" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._08_BasketAddingAndRemovingProductQuantity" description="_08_BasketAddingAndRemovingProductQuantity" executed="True" result="Success" success="True" time="24.907" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
                       </test-case>
                     </results>
                   </test-suite>

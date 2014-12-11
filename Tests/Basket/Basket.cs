@@ -124,8 +124,11 @@ namespace TestProj.Tests.Basket
             // 5.1 The checkboxes for different suppliers are selected  
 
             // 5.2 Click on the clear <all> button  
+            Thread.Sleep(2000);
             Helpers.Instance.AddOrders(browserInstance, 1);
+            Thread.Sleep(2000);
             Helpers.Instance.AddOrders(browserInstance, 2);
+            Thread.Sleep(1000);
             basketActions.ClickBasketBlock(browserInstance);
 
             // 5.2 This clear all selected catalogue basket   
@@ -260,7 +263,7 @@ namespace TestProj.Tests.Basket
             // 4.1  Select a specific supplier by clicking  on any record from the table
             /// 4.1 The record on the list view table is selected   
             LogWriter.Instance.Log("ISSUE 42: TESTCASE: _03_BasketListView -> '4.Verify that delete orders from a specific supplier functions as expected' -> Same as 3?", LogWriter.eLogType.Error);
-
+            Thread.Sleep(3000);
             basketActions.DeleteOrderFromList(browserInstance);
 
             // 5.Verify that order all from basket  functions as expected                               
@@ -315,7 +318,7 @@ namespace TestProj.Tests.Basket
             //browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
             Helpers.Instance.ClearBasket(browserInstance);
-
+            Thread.Sleep(3000);
             Helpers.Instance.AddOrders(browserInstance, 1);
             basketActions.ClickBasketBlock(browserInstance);
             //Go to detail view

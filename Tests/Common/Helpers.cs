@@ -331,9 +331,8 @@ namespace TestProj.Tests.Common
 
         public void AddOrders(Classes.Browser browserInstance, int supplierIndex)
         {
-            Thread.Sleep(2000);
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
-            Thread.Sleep(2000);
+            Thread.Sleep(6000);
             browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main");
             var storesBox = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.rightBlock > div > div > div:nth-child(1) > div:nth-child(1) > a");
             Helpers.Instance.ClickButton(browserInstance, storesBox);

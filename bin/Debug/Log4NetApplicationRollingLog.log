@@ -3732,3 +3732,165 @@ BAKING POWDER REF POUCH SNOWFLAKE 200G P
 2014-12-11 15:06:05,839 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
 2014-12-11 15:06:05,839 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 44: TESTCASE: _03_BasketListView -> '6.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.
 2014-12-11 15:06:06,538 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckClearAllFunction executed in 0 seconds
+2014-12-11 15:06:18,979 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:06:18,979 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 45: TESTCASE: _04_BasketDetailGridView -> Step missed -> Click on a supplier/wholesaler
+2014-12-11 15:06:20,366 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:06:20,366 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 46: TESTCASE: _04_BasketDetailGridView -> Test case unclear - '2.Click on the selected subcategory you wish to view products for'
+2014-12-11 15:06:20,367 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 47: TESTCASE: _04_BasketDetailGridView -> Test case unclear - 'There are no sub categories here, only products previously added to the basket'
+2014-12-11 15:06:20,960 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:06:21,274 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 48: TESTCASE: _04_BasketDetailGridView -> Price is displayed without the currency indicator
+2014-12-11 15:06:21,581 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyProductView executed in 0 seconds
+2014-12-11 15:06:22,192 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyButtons executed in 0 seconds
+2014-12-11 15:06:22,370 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 49: TESTCASE:_05_BasketDetailListView -> Test step missed '1.Click on the <list> view button '
+2014-12-11 15:06:34,651 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:06:34,652 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 50: TESTCASE: _05_BasketDetailListView -> Step missed -> Click on a supplier/wholesaler
+2014-12-11 15:06:35,223 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 51: TESTCASE: _05_BasketDetailListView -> Test case unclear - '2.Click on the selected subcategory you wish to view products for'
+2014-12-11 15:06:35,223 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 52: TESTCASE: _05_BasketDetailListView -> Test case unclear - 'There are no sub categories here, only products previously added to the basket'
+2014-12-11 15:06:35,223 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 53: TESTCASE: _05_BasketDetailListView -> Test case missed - 'Click on the <list> view button'
+2014-12-11 15:06:35,889 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:06:36,466 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:06:36,467 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 54: TESTCASE: _05_BasketDetailListView -> Test case incorrect - '2.1 The product icon is displayed' -> No prosuct icon in list view
+2014-12-11 15:06:37,307 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:06:37,307 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 55: TESTCASE: _05_BasketDetailListView -> Price does not have a currency indicator
+2014-12-11 15:06:37,869 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:06:38,433 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:06:38,717 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyDetailsValues executed in 2 seconds
+2014-12-11 15:06:39,315 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyButtons executed in 0 seconds
+2014-12-11 15:06:42,920 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickPopupClose executed in 3 seconds
+2014-12-11 15:06:55,462 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:07:01,582 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyPopupValues executed in 0 seconds
+2014-12-11 15:07:05,382 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickPopupClose executed in 3 seconds
+2014-12-11 15:07:27,233 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:07:33,122 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickProduct executed in 5 seconds
+2014-12-11 15:07:48,163 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_TestFavButtonOnPopup executed in 15 seconds
+2014-12-11 15:07:56,581 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckFavAdded executed in 8 seconds
+2014-12-11 15:08:11,920 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:08:17,864 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickProduct executed in 5 seconds
+2014-12-11 15:08:18,664 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_TestAddRemoveButtons executed in 0 seconds
+2014-12-11 15:08:19,542 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyFormula executed in 0 seconds
+2014-12-11 15:09:03,157 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-11 15:09:03,231 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-11 15:10:07,328 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:10:07,940 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2014-12-11 15:10:13,876 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckConfirmPopup executed in 5 seconds
+2014-12-11 15:10:14,537 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyConfirmPopup executed in 0 seconds
+2014-12-11 15:10:14,910 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 40: TESTCASE: _02_BasketConfirmOrder -> Total on popup does not contain the currency symbol. Asert commented out.
+2014-12-11 15:10:15,195 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyConfirmPopupValues executed in 0 seconds
+2014-12-11 15:10:30,954 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:10:31,609 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyListView executed in 0 seconds
+2014-12-11 15:10:32,561 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyListViewActions executed in 0 seconds
+2014-12-11 15:10:32,562 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 41: TESTCASE: _03_BasketListView -> '3.2 Click on the order now' -> Test case step missed -> 'Navigate back to List view'
+2014-12-11 15:10:33,198 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:10:33,872 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2014-12-11 15:10:39,809 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckConfirmPopup executed in 5 seconds
+2014-12-11 15:10:40,106 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2014-12-11 15:10:41,604 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2014-12-11 15:10:41,604 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 42: TESTCASE: _03_BasketListView -> '4.Verify that delete orders from a specific supplier functions as expected' -> Same as 3?
+2014-12-11 15:10:42,782 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_DeleteOrderFromList executed in 1 seconds
+2014-12-11 15:10:51,963 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 49: TESTCASE:_05_BasketDetailListView -> Test step missed '1.Click on the <list> view button '
+2014-12-11 15:11:04,073 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:11:04,073 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 50: TESTCASE: _05_BasketDetailListView -> Step missed -> Click on a supplier/wholesaler
+2014-12-11 15:11:04,639 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 51: TESTCASE: _05_BasketDetailListView -> Test case unclear - '2.Click on the selected subcategory you wish to view products for'
+2014-12-11 15:11:04,639 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 52: TESTCASE: _05_BasketDetailListView -> Test case unclear - 'There are no sub categories here, only products previously added to the basket'
+2014-12-11 15:11:04,640 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 53: TESTCASE: _05_BasketDetailListView -> Test case missed - 'Click on the <list> view button'
+2014-12-11 15:11:05,533 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:11:06,109 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:11:06,109 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 54: TESTCASE: _05_BasketDetailListView -> Test case incorrect - '2.1 The product icon is displayed' -> No prosuct icon in list view
+2014-12-11 15:11:06,957 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:11:06,957 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 55: TESTCASE: _05_BasketDetailListView -> Price does not have a currency indicator
+2014-12-11 15:11:07,531 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:11:08,093 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:11:08,377 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyDetailsValues executed in 2 seconds
+2014-12-11 15:11:08,975 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyButtons executed in 0 seconds
+2014-12-11 15:11:12,717 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickPopupClose executed in 3 seconds
+2014-12-11 15:11:25,000 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:11:31,112 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyPopupValues executed in 0 seconds
+2014-12-11 15:11:34,947 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickPopupClose executed in 3 seconds
+2014-12-11 15:11:56,859 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:12:02,769 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickProduct executed in 5 seconds
+2014-12-11 15:12:17,892 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_TestFavButtonOnPopup executed in 15 seconds
+2014-12-11 15:12:26,316 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckFavAdded executed in 8 seconds
+2014-12-11 15:12:41,773 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:12:47,747 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickProduct executed in 5 seconds
+2014-12-11 15:12:48,514 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_TestAddRemoveButtons executed in 0 seconds
+2014-12-11 15:12:49,385 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyFormula executed in 0 seconds
+2014-12-11 15:18:01,640 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-11 15:18:01,712 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-11 15:19:07,249 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:19:07,871 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2014-12-11 15:19:13,825 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckConfirmPopup executed in 5 seconds
+2014-12-11 15:19:14,471 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyConfirmPopup executed in 0 seconds
+2014-12-11 15:19:14,837 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 40: TESTCASE: _02_BasketConfirmOrder -> Total on popup does not contain the currency symbol. Asert commented out.
+2014-12-11 15:19:15,130 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyConfirmPopupValues executed in 0 seconds
+2014-12-11 15:19:57,575 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Killing chromedriver.exe
+2014-12-11 15:19:57,645 [TestRunnerThread] INFO TestProj.Classes.LogWriter - Chromedriver count = 0
+2014-12-11 15:20:55,525 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:20:56,109 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2014-12-11 15:21:02,050 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckConfirmPopup executed in 5 seconds
+2014-12-11 15:21:02,327 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2014-12-11 15:21:03,829 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2014-12-11 15:21:04,498 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickOrderDeleteButton executed in 0 seconds
+2014-12-11 15:21:37,904 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:21:38,645 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickClearAllButton executed in 0 seconds
+2014-12-11 15:21:39,204 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckListViewButtonExists executed in 0 seconds
+2014-12-11 15:21:53,670 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:21:54,277 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2014-12-11 15:22:00,277 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckConfirmPopup executed in 5 seconds
+2014-12-11 15:22:00,910 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyConfirmPopup executed in 0 seconds
+2014-12-11 15:22:01,281 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 40: TESTCASE: _02_BasketConfirmOrder -> Total on popup does not contain the currency symbol. Asert commented out.
+2014-12-11 15:22:01,558 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyConfirmPopupValues executed in 0 seconds
+2014-12-11 15:22:19,417 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:22:20,030 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyListView executed in 0 seconds
+2014-12-11 15:22:21,003 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyListViewActions executed in 0 seconds
+2014-12-11 15:22:21,003 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 41: TESTCASE: _03_BasketListView -> '3.2 Click on the order now' -> Test case step missed -> 'Navigate back to List view'
+2014-12-11 15:22:21,609 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:22:22,259 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2014-12-11 15:22:28,153 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckConfirmPopup executed in 5 seconds
+2014-12-11 15:22:28,443 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2014-12-11 15:22:29,917 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2014-12-11 15:22:29,917 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 42: TESTCASE: _03_BasketListView -> '4.Verify that delete orders from a specific supplier functions as expected' -> Same as 3?
+2014-12-11 15:22:33,832 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_DeleteOrderFromList executed in 0 seconds
+2014-12-11 15:22:33,832 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 43: TESTCASE: _03_BasketListView -> '5.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.
+2014-12-11 15:23:02,297 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:23:02,604 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckOrderAllFunction executed in 28 seconds
+2014-12-11 15:23:08,555 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckConfirmPopup executed in 5 seconds
+2014-12-11 15:23:08,840 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2014-12-11 15:23:10,279 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2014-12-11 15:23:10,279 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 44: TESTCASE: _03_BasketListView -> '6.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.
+2014-12-11 15:23:10,935 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckClearAllFunction executed in 0 seconds
+2014-12-11 15:23:28,491 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:23:28,491 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 45: TESTCASE: _04_BasketDetailGridView -> Step missed -> Click on a supplier/wholesaler
+2014-12-11 15:23:29,901 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:23:29,902 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 46: TESTCASE: _04_BasketDetailGridView -> Test case unclear - '2.Click on the selected subcategory you wish to view products for'
+2014-12-11 15:23:29,902 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 47: TESTCASE: _04_BasketDetailGridView -> Test case unclear - 'There are no sub categories here, only products previously added to the basket'
+2014-12-11 15:23:30,463 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:23:30,758 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 48: TESTCASE: _04_BasketDetailGridView -> Price is displayed without the currency indicator
+2014-12-11 15:23:31,051 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyProductView executed in 0 seconds
+2014-12-11 15:23:31,630 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyButtons executed in 0 seconds
+2014-12-11 15:23:31,814 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 49: TESTCASE:_05_BasketDetailListView -> Test step missed '1.Click on the <list> view button '
+2014-12-11 15:23:45,852 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:23:45,852 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 50: TESTCASE: _05_BasketDetailListView -> Step missed -> Click on a supplier/wholesaler
+2014-12-11 15:23:46,431 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 51: TESTCASE: _05_BasketDetailListView -> Test case unclear - '2.Click on the selected subcategory you wish to view products for'
+2014-12-11 15:23:46,432 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 52: TESTCASE: _05_BasketDetailListView -> Test case unclear - 'There are no sub categories here, only products previously added to the basket'
+2014-12-11 15:23:46,432 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 53: TESTCASE: _05_BasketDetailListView -> Test case missed - 'Click on the <list> view button'
+2014-12-11 15:23:47,236 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:23:47,766 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:23:47,766 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 54: TESTCASE: _05_BasketDetailListView -> Test case incorrect - '2.1 The product icon is displayed' -> No prosuct icon in list view
+2014-12-11 15:23:48,564 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:23:48,565 [TestRunnerThread] ERROR TestProj.Classes.LogWriter - ISSUE 55: TESTCASE: _05_BasketDetailListView -> Price does not have a currency indicator
+2014-12-11 15:23:49,096 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:23:49,634 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2014-12-11 15:23:49,892 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyDetailsValues executed in 2 seconds
+2014-12-11 15:23:50,452 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyButtons executed in 0 seconds
+2014-12-11 15:23:54,186 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickPopupClose executed in 3 seconds
+2014-12-11 15:24:08,567 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:24:14,675 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyPopupValues executed in 0 seconds
+2014-12-11 15:24:18,441 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickPopupClose executed in 3 seconds
+2014-12-11 15:24:42,411 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:24:48,371 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickProduct executed in 5 seconds
+2014-12-11 15:25:03,478 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_TestFavButtonOnPopup executed in 15 seconds
+2014-12-11 15:25:12,465 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_CheckFavAdded executed in 8 seconds
+2014-12-11 15:25:29,878 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2014-12-11 15:25:35,771 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_ClickProduct executed in 5 seconds
+2014-12-11 15:25:36,533 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_TestAddRemoveButtons executed in 0 seconds
+2014-12-11 15:25:37,376 [TestRunnerThread] INFO TestProj.Classes.LogWriter - TIMER: IBasketActions_VerifyFormula executed in 0 seconds
