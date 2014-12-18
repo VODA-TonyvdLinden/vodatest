@@ -17,7 +17,9 @@ namespace TestProj.Tests.Catalogues
         {
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#landingPage > div > div.rightBlock > div > div > div:nth-child(1) > div:nth-child(1) > a"), TimeSpan.FromMinutes(30));
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.rightBlock > div > div > div:nth-child(1) > div:nth-child(1) > a"));
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/fullScreenAd"), TimeSpan.FromSeconds(5));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/fullScreenAd"));
+            Thread.Sleep(5000);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/stores"));
         }
 
         // Test Case: 2. Verify that the advert  is clickable  
@@ -39,6 +41,9 @@ namespace TestProj.Tests.Catalogues
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("body > div.ui-footer.ng-scope > ul > li:nth-child(1) > div"), TimeSpan.FromMinutes(30));
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div.ui-footer.ng-scope > ul > li:nth-child(1) > div"));
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/stores"), TimeSpan.FromSeconds(30));
+
+            var catalogues = browserInstance.Instance.FindMultiple("#categoryCarousel > div");
+            browserInstance.Instance.Assert.True(() => catalogues.Elements.Count > 0);
         }
 
         // Test Case: Verify that the catalogues landing page is displayed with the following                                                                                                        
@@ -78,7 +83,7 @@ namespace TestProj.Tests.Catalogues
             Helpers.Instance.CheckClass(browserInstance, "headerScroller", Helpers.Instance.GetProxy(browserInstance, "#categoryCarousel"));
             var catalogueIcons = browserInstance.Instance.FindMultiple("#categoryCarousel > div > a > img");
             browserInstance.Instance.Assert.True(() => catalogueIcons.Elements.Count > 0);
-            LogWriter.Instance.Log(@"TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues. '. 
+            LogWriter.Instance.Log(@"ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
                                     '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.", LogWriter.eLogType.Error);
         }
 
@@ -146,7 +151,10 @@ namespace TestProj.Tests.Catalogues
             browserInstance.Instance.Assert.Exists("#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div > ul");
             var brands = browserInstance.Instance.FindMultiple("#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div > ul > li");
             browserInstance.Instance.Assert.True(() => brands.Elements.Count > 0);
-            LogWriter.Instance.Log(@"TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the brands. '. 
+
+            var brandsContainer = Helpers.Instance.GetProxy(browserInstance, "#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div");
+            browserInstance.Instance.Assert.Css("overflow-x", "scroll").On(brandsContainer);
+            LogWriter.Instance.Log(@"TESTCASE:ISSUE 112: _02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the brands.'
                                     '7. Verify that brands are displayed and user can scroll from left to right' - Test case to be updated.", LogWriter.eLogType.Error);
         }
 
@@ -206,7 +214,7 @@ namespace TestProj.Tests.Catalogues
 
             var activeSubCategories = browserInstance.Instance.FindMultiple("#categoryCarousel > div.catagoryItemContainer.categoryFilterBarHeight.ng-scope.active.open > ul > li.ng-scope.ng-binding.active");
 
-            FluentAutomation.ElementProxy subCategory = new FluentAutomation.ElementProxy(activeSubCategories.Elements[0].Item1, activeSubCategories.Elements[0].Item2);
+            FluentAutomation.ElementProxy subCategory = new FluentAutomation.ElementProxy(activeSubCategories.Elements[activeSubCategories.Elements.Count - 1].Item1, activeSubCategories.Elements[activeSubCategories.Elements.Count - 1].Item2);
             browserInstance.Instance.Hover(subCategory);
             browserInstance.Instance.Assert.Css("background", "red").On(subCategory);
         }
@@ -225,8 +233,9 @@ namespace TestProj.Tests.Catalogues
         {
             browserInstance.Instance.Assert.Exists("#categoryCarousel > div.catagoryItemContainer.categoryFilterBarHeight.ng-scope.active.open > ul > li.ng-scope.ng-binding.active");
             var activeSubCategories = browserInstance.Instance.FindMultiple("#categoryCarousel > div.catagoryItemContainer.categoryFilterBarHeight.ng-scope.active.open > ul > li.ng-scope.ng-binding.active");
-            FluentAutomation.ElementProxy subCategory = new FluentAutomation.ElementProxy(activeSubCategories.Elements[0].Item1, activeSubCategories.Elements[0].Item2);
+            FluentAutomation.ElementProxy subCategory = new FluentAutomation.ElementProxy(activeSubCategories.Elements[activeSubCategories.Elements.Count - 1].Item1, activeSubCategories.Elements[activeSubCategories.Elements.Count - 1].Item2);
             Helpers.Instance.ClickButton(browserInstance, subCategory);
+
             browserInstance.Instance.Assert.Exists("#brandStore > div.productbody > div.leftBlock > div > div > div > div > div > div > div");
             var subCategoryProducts = browserInstance.Instance.FindMultiple("#brandStore > div.productbody > div.leftBlock > div > div > div > div > div > div > div");
             browserInstance.Instance.Assert.True(() => subCategoryProducts.Elements.Count > 1);
@@ -279,6 +288,7 @@ namespace TestProj.Tests.Catalogues
         public void VerifyProductClick(Classes.Browser browserInstance)
         {
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.productbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.img"));
+            Helpers.Instance.VerifyPopPup(browserInstance, "#product_modal");
             browserInstance.Instance.Assert.Exists("#product_modal > div > div");
         }
 
@@ -307,35 +317,49 @@ namespace TestProj.Tests.Catalogues
             // Test Case: 7.5 Verify that the total price field is displayed and not editable
             // Test Output: 7.5  The total price field is displayed and not editable
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.itemTotal.centered.ng-binding");
+            var totalPrice = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.itemTotal.centered.ng-binding");
+            Helpers.Instance.FieldInput(browserInstance, totalPrice, "3");
+            browserInstance.Instance.Assert.Value("3").Not.In(totalPrice);
 
             // Test Case: 7.6  Verify that the favourite icon represented by a star with a plus sign  is displayed
             // Test Output: 7.6  A star with a plus sign is displayed
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.devilsFeatureContainer > button");
+            var favouriteButton = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.devilsFeatureContainer > button");
+            Helpers.Instance.CheckClass(browserInstance, "addToFavButton", favouriteButton);
 
             // Test Case: 7.7 Verify that the save button is displayed  
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button");
-            LogWriter.Instance.Log(@"TESTCASE:_05_CatalogueViewProductDetail -> Test step the test output is not correct. '. 
+            var saveButton = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button");
+            browserInstance.Instance.Assert.True(() => saveButton.Element.Text == "SAVE");
+
+            LogWriter.Instance.Log(@"TESTCASE:ISSUE 113: _05_CatalogueViewProductDetail -> Test step the test output is not correct.' 
                                     '7.7 Verify that the save button is displayed' - Test case to be updated.", LogWriter.eLogType.Error);
 
         }
 
-        public void VerifyFavouriteBlockClick(Classes.Browser browserInstance)
+        // Click on the favourites icon
+        public void VerifyProductFavouritesIconClick(Classes.Browser browserInstance)
         {
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div.ui-footer.ng-scope > ul > li:nth-child(4) > div"));
-            browserInstance.Instance.Assert.Exists("#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li:nth-child(1) > div.brandinfo > div.itemView");
-
+            browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.devilsFeatureContainer > button");
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.devilsFeatureContainer > button"));
         }
 
+        // Click on the save button 
         public void VerifyProductSaveClick(Classes.Browser browserInstance)
         {
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button"));
         }
 
-        public void VerifyProductFavouritesIconClick(Classes.Browser browserInstance)
+        // Test Case: 7. Verify step 6 by selecting the favourites tab, to see if the recently added product is displayed
+        // Test Output: 7. The recently added product is displayed in the favourites menu
+        public void VerifyFavouriteBlockClick(Classes.Browser browserInstance)
         {
-            browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.devilsFeatureContainer > button");
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.devilsFeatureContainer > button"));
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div.ui-footer.ng-scope > ul > li:nth-child(4) > div"));
+            browserInstance.Instance.Assert.Exists("#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li:nth-child(1) > div.brandinfo > div.itemView");
+            browserInstance.Instance.Assert.Exists("#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.searchgridviewblcok.ng-scope > div > ul > li:nth-child(1) > div.brandinfo > div.itemSelector.ng-binding");
+            var itemsCount = Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.searchgridviewblcok.ng-scope > div > ul > li:nth-child(1) > div.brandinfo > div.itemSelector.ng-binding");
+            browserInstance.Instance.Assert.True(() => itemsCount.Element.Text.Trim() == "1 ITEMS");
         }
 
         // Test Case: 6. On the product view screen click on the - sign for removing and + adding quantity and save
@@ -344,6 +368,7 @@ namespace TestProj.Tests.Catalogues
         {
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.itemTotal.centered.ng-binding");
             var total = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.itemTotal.centered.ng-binding");
+           
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button"));
             browserInstance.Instance.Assert.Value(" 0.00 ").Not.In(total);
@@ -364,17 +389,36 @@ namespace TestProj.Tests.Catalogues
             // Click the product
             VerifyProductClick(browserInstance);
 
+            browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.itemTotal.centered.ng-binding");
             var total = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.itemTotal.centered.ng-binding");
-
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button"));
-            var quantityInput = Helpers.Instance.GetProxy(browserInstance, "#itemQuantity");
+           
+            browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.unitPrice.ng-binding");
             var price = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.unitPrice.ng-binding");
+
+            browserInstance.Instance.Assert.Exists("#itemQuantity");
+            var quantityInput = Helpers.Instance.GetProxy(browserInstance, "#itemQuantity");
+
+            browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button");
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button"));
+            
             string totalValue = (Convert.ToDecimal(quantityInput.Element.Value.Trim()) * Convert.ToDecimal(price.Element.Text.Trim())).ToString();
             browserInstance.Instance.Assert.Value(totalValue).In(total);
 
+            browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.decrease > button");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.decrease > button"));
+            
             totalValue = (Convert.ToDecimal(quantityInput.Element.Value.Trim()) * Convert.ToDecimal(price.Element.Text.Trim())).ToString();
             browserInstance.Instance.Assert.Value(totalValue).In(total);
+        }
+
+        public void AddFavouriteProduct(Classes.Browser browserInstance)
+        {
+            ClickSubCategory(browserInstance);
+            VerifyProductClick(browserInstance);
+            VerifyProductFavouritesIconClick(browserInstance);
+            VerifyProductSaveClick(browserInstance);
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("body > div.ui-footer.ng-scope > ul > li:nth-child(4) > div"), TimeSpan.FromMinutes(30));
         }
     }
 }

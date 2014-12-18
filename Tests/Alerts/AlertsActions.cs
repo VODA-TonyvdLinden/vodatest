@@ -11,119 +11,126 @@ namespace TestProj.Tests.Alerts
 {
     public class AlertsActions : Interfaces.IAlertsActions
     {
+        // Test Case: 1. Verify that the Vodacom logo and the red banner are displayed on the activation screen
+        // Test Output: 1. The Vodacom banner logo and banner are displayed
         public void VerifyVodacomLogoAndBanner(Classes.Browser browserInstance)
         {
-            // 1. Verify that the Vodacom logo and the red banner are displayed on the activation screen
-            // 1. The Vodacom banner logo and banner are displayed 
-            LogWriter.Instance.Log("TESTCASE:_01_AlertsLandingPageVerfication -> Test step worded incorrectly. '1. Verify that the Vodacom logo and the red banner are displayed on the activation screen' - Update test case", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 119: TESTCASE:_01_AlertsLandingPageVerfication -> Test step worded incorrectly. '1. Verify that the Vodacom logo and the red banner are displayed on the activation screen' - Update test case", LogWriter.eLogType.Error);
             Helpers.Instance.CheckLogoAndBanner(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.headerLogo.left > a > img", "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed");
         }
 
+        // Test Case: 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
+        // Test Output: 2. The online/offline indicator is displayed on the top left hand corner of the screen
         public void VerifyOnlineOffilineIndicator(Classes.Browser browserInstance)
         {
-            // 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
-            // 2. The online/offline indicator is displayed on the top left hand corner of the screen
-            LogWriter.Instance.Log("TESTCASE:_01_AlertsLandingPageVerfication -> Test step cannot be implemented. '2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen' - Cannot test this since we do not have the online class/indicator anymore.", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("TESTCASE:ISSUE 120: TEST CASE: _01_AlertsLandingPageVerfication -> Test step cannot be implemented. '2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen' - Cannot test this since we do not have the online class/indicator anymore.", LogWriter.eLogType.Error);
         }
 
+        // Test Case: 3. Verify that contact us and help me hyperlinks are displayed
+        // Test Output: 3. The contact us and help me hyperlinks are displayed
         public void VerifyContactUsHelpMeLinks(Classes.Browser browserInstance)
         {
-            // 3. Verify that contact us and help me hyperlinks are displayed
-            // 3. The contact us and help me hyperlinks are displayed
-            Helpers.Instance.Exists(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.contactUsContainer");
-            Helpers.Instance.Exists(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.helpMeContainer");
+            Helpers.Instance.CheckPageLinks(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.contactUsContainer", "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.helpMeContainer");
         }
 
+        // Test Case: 5. Verify that the preferred alias name is displayed on top right hand corner of the app with the spaza owner's alias name and spaza name  
+        // Test Output: 5. The preferred alias name is displayed on the top right hand corner of the app, with the name spaza owner's alias name and the spaza name    
         public void VerifySpazaAliasAndName(Classes.Browser browserInstance)
         {
-            // 5. Verify that the preferred alias name is displayed on top right hand corner of the app with the spaza owner's alias name and spaza name  
-            // 5. The preferred alias name is displayed on the top right hand corner of the app, with the name spaza owner's alias name and the spaza name    
-            Helpers.Instance.CheckMultiSpazaPreferedAlias(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.aliasName.ng-binding");
-            Helpers.Instance.CheckMultiSpazaName(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
+            Helpers.Instance.CheckSingleSpazaPreferedAlias(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.aliasName.ng-binding");
+            Helpers.Instance.CheckSingleSpazaName(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.spazaSection > div > span.spazaName > a");
         }
 
+        // Test Case: 6. Verify that the Marbil add is displayed     
+        // Test Output: 6. The Marbil add is displayed  
         public void VerifyMarbilAd(Classes.Browser browserInstance)
         {
-            // 6. Verify that the Marbil add is displayed     
-            // 6. The Marbil add is displayed  
-            LogWriter.Instance.Log("TESTCASE:_01_AlertsLandingPageVerfication -> Test step spelling incorrect, should be Marbil ad. '6. Verify that the Marbil add is displayed' - Update test case", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 122: TEST CASE: _01_AlertsLandingPageVerfication -> Test step spelling incorrect, should be Marbil ad. '6. Verify that the Marbil add is displayed' - Update test case", LogWriter.eLogType.Error);
             Helpers.Instance.CheckMarbilAd(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.headerAdd.normalHeaderWidth > img");
         }
 
+        // Test Case: 8. Verify that the catalogue , basket, orders and favourites blocks are displayed
+        // Test Output: 8. The catalogue, basket, orders and favourites blocks are displayed on the bottom of the bottom of the page    
         public void VerifyBottomNavigationBlocks(Classes.Browser browserInstance)
         {
-            // 8. Verify that the catalogue , basket, orders and favourites blocks are displayed
-            // 8. The catalogue, basket, orders and favourites blocks are displayed on the bottom of the bottom of the page  
-            Helpers.Instance.CheckBottomNav(browserInstance, "body > div.ui-footer.ng-scope > ul > li:nth-child(1) > div", "body > div.ui-footer.ng-scope > ul > li:nth-child(1) > div",
-                                           "body > div.ui-footer.ng-scope > ul > li:nth-child(1) > div", "body > div.ui-footer.ng-scope > ul > li:nth-child(1) > div");
+            Helpers.Instance.CheckBottomNav(browserInstance, "body > div.ui-footer.ng-scope > ul > li:nth-child(1) > div", "body > div.ui-footer.ng-scope > ul > li:nth-child(2) > div",
+                                           "body > div.ui-footer.ng-scope > ul > li:nth-child(3) > div", "body > div.ui-footer.ng-scope > ul > li:nth-child(4) > div");
         }
 
+        // Test Case: 9. Verify that the Alert Notification and label are displayed
+        // Test Output: 9. The Alert Notification and label are displayed 
         public void VerifyNotificationAndLabel(Classes.Browser browserInstance)
         {
-            // 9. Verify that the Alert Notification and label are displayed       
-            // 9. The Alert Notification and label are displayed  
             Helpers.Instance.CheckAlertNotification(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.alertStatus",
                                                     "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.alertStatus > a > div");
         }
 
         public void VerifyBasketTotal(Classes.Browser browserInstance)
         {
-            // 10. Verify that the basket total value field is displayed
-            // 10. The basket total value field is displayed   
+            // Test Case: 10. Verify that the basket total value field is displayed
+            // Test Output: 10. The basket total value field is displayed
             Helpers.Instance.Exists(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding");
 
-            // 11. Verify that the basket label is displayed 
-            // 11. The basket label is displayed 
+            // Test Case: 11. Verify that the basket label is displayed
+            // Test Output: 11. The basket label is displayed 
             Helpers.Instance.Exists(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.basketLinkContainer > div.basketicon");
+            var backetLabel = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.basketLinkContainer > div.basketicon");
+            browserInstance.Instance.Assert.Value("Basket").In(backetLabel);
 
-            // 12. Verify that the basket total amount of items field is displayed  
-            // 12. The basket total amount field is displayed
+            // Test Case: 12. Verify that the basket total amount of items field is displayed
+            // Test Output: 12. The basket total amount field is displayed
             Helpers.Instance.Exists(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.basketValue.ng-binding");
         }
 
         public void VerifySearchField(Classes.Browser browserInstance)
         {
-            // 13. Verify that the search field is displayed on the top right hand corner of the screen  
-            // 13. The Search field is displayed     
+            // Test Case: 13. Verify that the search field is displayed on the top right hand corner of the screen  
+            // Test Output: 13. The Search field is displayed     
             Helpers.Instance.Exists(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
 
-            // 14. Verify the text in the search field, it states that I am looking for    
-            // 14. The text that is displayed within the field I am looking for 
+            // Test Case: 14. Verify the text in the search field, it states that I am looking for    
+            // Test Output: 14. The text that is displayed within the field I am looking for 
             var searchInput = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
 
             LogWriter.Instance.Log("TESTCASE:_01_AlertsLandingPageVerfication -> Test step the value with the search is 'I 'm looking for ...'. '14. Verify the text in the search field, it states that I am looking for' - Please update the test case.", LogWriter.eLogType.Error);
 
             browserInstance.Instance.Assert.True(() => searchInput.Element.Attributes.Get("placeholder") == "I'm looking for...");
 
-            // 15. Verify that the search text field is editable 
-            // 15. The search text field is editable 
+            // Test Case: 15. Verify that the search text field is editable 
+            // Test Output: 15. The search text field is editable 
             Helpers.Instance.FieldInput(browserInstance, searchInput, "TEST");
             browserInstance.Instance.Assert.Value("TEST").In(searchInput);
         }
 
+        // Test Case: 16. Verify that the notification section is displayed
+        // Test Output: 16. The Notification section is displayed 
         public void VerifyNotificationSection(Classes.Browser browserInstance)
         {
-            // 16. Verify that the notification section is displayed
-            // 16. The Notification section is displayed    
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentHeader > div");
+            var notificationSection = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentHeader > div");
+            browserInstance.Instance.Assert.Text("NOTIFICATIONS").In(notificationSection);
         }
 
+        // Test Case: 17. Verify that actions section in the screen is displayed with an notification exclamation   
+        // Test Output: 17. Verify that actions are displayed section and label is displayed  
         public void VerifyActionSection(Classes.Browser browserInstance)
         {
-            // 17. Verify that actions section in the screen is displayed with an notification exclamation   
-            // 17. Verify that actions are displayed section and label is displayed  
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.subtitle > ul.alerts > li");
-            Helpers.Instance.Exists(browserInstance, "#alertsView > div.subtitle > span");
+
+            var actionsSection = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.subtitle > ul.alerts > li");
+            browserInstance.Instance.Assert.Text("ACTIONS").In(actionsSection);
+
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.subtitle > span.alerticon");
         }
 
         public void VerifyOrderAlerts(Classes.Browser browserInstance)
         {
-            // 18. Verify that  Order alerts label is displayed 
-            // 18. The order label is displayed     
+            // Test Case: 18. Verify that  Order alerts label is displayed 
+            // Test Output: 18. The order label is displayed     
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > span");
 
-            // 19. Verify that the Order Alerts label, has sub labels namely You have received new invoices, you have an unconfirmed order, your catalogue is out of sync  
-            // 19. The order Alerts label, has sub labels namely You have received new invoices, you have an unconfirmed order, your catalogue is out of sync     
+            // Test Case: 19. Verify that the Order Alerts label, has sub labels namely You have received new invoices, you have an unconfirmed order, your catalogue is out of sync  
+            // Test Output: 19. The order Alerts label, has sub labels namely You have received new invoices, you have an unconfirmed order, your catalogue is out of sync     
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(1) > label");
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > label");
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(3) > label");
@@ -141,16 +148,16 @@ namespace TestProj.Tests.Alerts
 
         public void VerifySystemAlerts(Classes.Browser browserInstance)
         {
-            // 20. Verify that the system alerts label is displayed
-            // 20. The system alerts label is displayed  
+            // Test Case: 20. Verify that the system alerts label is displayed
+            // Test Output: 20. The system alerts label is displayed  
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > span");
 
-            // 21.Veriy that the system alerts label, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed  
-            // 21. The system alerts label is displayed, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed     
+            // Test Case: 21.Veriy that the system alerts label, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed  
+            // Test Output: 21. The system alerts label is displayed, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed     
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(1) > label");
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(2) > label");
 
-            LogWriter.Instance.Log("TESTCASE:_01_AlertsLandingPageVerfication -> Test step we only have to sub items here and the labels do not match the test case. '21.Veriy that the system alerts label, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed' - Update test case", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 124: TEST CASE: _01_AlertsLandingPageVerfication -> Test step we only have to sub items here and the labels do not match the test case. '21.Veriy that the system alerts label, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed' - Update test case", LogWriter.eLogType.Error);
 
             var manageYourCatalogueLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(1) > label");
             var connactionIssuesOrderLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(2) > label");
@@ -163,38 +170,36 @@ namespace TestProj.Tests.Alerts
 
         public void VerifySideButtons(Classes.Browser browserInstance)
         {
-            // 22. Verify that the following buttons are displayed on the screen, view invoices button, confirm now button, sync now button, manage button, diagnose button and change now  
-            // 22. The notifications buttons are displayed
+            // Test Case: 22. Verify that the following buttons are displayed on the screen, view invoices button, confirm now button, sync now button, manage button, diagnose button and change now  
+            // Test Output: 22. The notifications buttons are displayed
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(1) > button");
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button");
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(3) > button");
+
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(1) > button");
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(2) > button");
+
+            var viewInvoicesButton = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(1) > button");
+            var confirmNowButton = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button");
+            var syncNowButton = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(3) > button");
+
+            var manageButton = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(1) > button");
+            var diagnoseButton = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(2) > button");
+
+            LogWriter.Instance.Log("ISSUE 125: TEST CASE: _01_AlertsLandingPageVerfication -> Test step do not have the Change Now button. '21.Veriy that the system alerts label, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed' - Update test case", LogWriter.eLogType.Error);
+
+            browserInstance.Instance.Assert.Value("VIEW INVOICES").In(viewInvoicesButton);
+            browserInstance.Instance.Assert.Value("CONFIRM NOW").In(confirmNowButton);
+            browserInstance.Instance.Assert.Value("SYNC NOW").In(syncNowButton);
+
+            browserInstance.Instance.Assert.Value("MANAGE").In(manageButton);
+            browserInstance.Instance.Assert.Value(" DIAGNOSE").In(diagnoseButton);
         }
 
-        public void VerifyUrgentActions(Classes.Browser browserInstance)
+        public void VerifyUrgentActions(Classes.Browser browserInstance, Interfaces.IOrdersActions ordersActions, Interfaces.IBasketActions basketActions)
         {
-            AddUnconfirmedOrder(browserInstance);
+            ordersActions.PlaceUnConfirmedOrder(browserInstance, basketActions);
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.alertStatus > a > div.alertredicon"), TimeSpan.FromMinutes(30));
-        }
-
-        public void AddUnconfirmedOrder(Classes.Browser browserInstance)
-        {
-            // 1.1 Perform the order process and don't confirm order  
-            //    1.1.1 Add special to basket
-            Helpers.Instance.AddOrders(browserInstance, 1);
-            //    1.1.2 Go to basket
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-catalog-view"));
-            //    1.1.3 In the basket view click the order now button
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button"), TimeSpan.FromMinutes(30));
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button"));
-            Thread.Sleep(3000);
-            //    1.1.4 After the popup has appeared click the Yes Order button
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#orderNow > div > div > div.modal-body.text-center > div > button:nth-child(1)"), TimeSpan.FromMinutes(30));
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderNow > div > div > div.modal-body.text-center > div > button:nth-child(1)"));
-            Thread.Sleep(3000);
-            //    1.1.5 Wait until the alerts icon changes to red
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.alertStatus > a"));
         }
 
         public void VerifyTextHighlightedRed(Classes.Browser browserInstance, string labelPath)
@@ -202,15 +207,14 @@ namespace TestProj.Tests.Alerts
             Helpers.Instance.CheckClass(browserInstance, "", Helpers.Instance.GetProxy(browserInstance, labelPath));
         }
 
+        // Test:   2. Click on the <confirm now> button
+        // Output: 2. The notification confirm now page is displayed
         public void VerifyConfirmNowButtonClick(Classes.Browser browserInstance)
         {
-            // Test:   2. Click on the <confirm now> button
-            // Output: 2. The notification confirm now page is displayed
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button");
             ClickAlertButton(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button");
-            browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td"), TimeSpan.FromMinutes(30));
-            LogWriter.Instance.Log(@"TESTCASE:_04_AlertsConfirmNow -> Dear Tony, Is there a way to check if the url contains some text, this is for when the url contains a query string which we do not know its value before hand. 
-                                    '2. Click on the <confirm now> button' - Please update the test case.", LogWriter.eLogType.Error);
-
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Not.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
         }
 
         public void VerifyAsyncNow(Classes.Browser browserInstance)
@@ -232,148 +236,197 @@ namespace TestProj.Tests.Alerts
         {
             // 2. Click on the <manage> button 
             // 2. The manage your catalogue actions page is displayed
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(1) > button");
             ClickAlertButton(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(1) > button");
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-managecatalogue"), TimeSpan.FromMinutes(30));
         }
 
+        // Test Case: 3.1 Enter the allowable wholesaler <Makro>  in search field which  give any results and verify the user interface
+        // Test Output: 3.1 The wholesaler records which are found are displayed as catalogue – outlet name  on the screen, with a location list sorted by group and grouped into groups on increments 25km
         public void VeriftyManageCatalogueSearch(Classes.Browser browserInstance)
         {
-            // 3. Search returning one or multiple results
-            // 3.1 Enter the allowable wholesaler <Makro>  in search field which  give any results and verify the user interface
             Helpers.Instance.Exists(browserInstance, "#searchCatalog");
             var searchInput = Helpers.Instance.GetProxy(browserInstance, "#searchCatalog");
 
             Helpers.Instance.FieldInput(browserInstance, searchInput, "Makro");
             browserInstance.Instance.Assert.Value("Makro").In(searchInput);
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock.managecatalogue.width862px > form:nth-child(2) > div > div.formRow.catalogsearch > button"));
-            Helpers.Instance.Exists(browserInstance, "#accordion > div > div.title.rightarrow.catalog1.downarrow");
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#accordion > div:nth-child(1) > div.title.rightarrow.catalog1"));
-            Helpers.Instance.CheckClass(browserInstance, "collapse in", Helpers.Instance.GetProxy(browserInstance, "#catalog1"));
-        }
 
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock.managecatalogue.width862px > form.ng-valid.ng-dirty > div > div.formRow.catalogsearch > button"));
+            Helpers.Instance.Exists(browserInstance, "#accordion > div > div.title.rightarrow");
+
+            var recordsFound = browserInstance.Instance.FindMultiple("#accordion > div > div.collapse > ul > li.ng-scope > span:nth-child(2)");
+            browserInstance.Instance.Assert.True(() => recordsFound.Elements.Count > 0);
+
+            recordsFound.Elements.ForEach((elementTuple) =>
+            {
+                FluentAutomation.ElementProxy recordfound = new FluentAutomation.ElementProxy(elementTuple.Item1, elementTuple.Item2);
+                var cataloguOutletName = recordfound.Element.Text.Split(new string[] { "-" }, StringSplitOptions.RemoveEmptyEntries);
+                browserInstance.Instance.Assert.True(() => cataloguOutletName.Length > 1);
+            });
+
+            var locations = browserInstance.Instance.FindMultiple("#accordion > div > div.title.rightarrow");
+            browserInstance.Instance.Assert.True(() => locations.Elements.Count > 0);
+
+            locations.Elements.ForEach((elementTuple) =>
+            {
+                FluentAutomation.ElementProxy location = new FluentAutomation.ElementProxy(elementTuple.Item1, elementTuple.Item2);
+                var locationDistances = location.Element.Text.Split(new string[] { "-" }, StringSplitOptions.RemoveEmptyEntries);
+                browserInstance.Instance.Assert.True(() => locationDistances.Length > 1);
+
+                int startPoint = Convert.ToInt32(locationDistances[0].Trim());
+                int endPoint = Convert.ToInt32(locationDistances[1].Trim().Substring(0, locationDistances[1].Trim().Length - 2));
+
+                browserInstance.Instance.Assert.True(() => endPoint - startPoint == 25);
+            });
+
+        }
+        // Test Case: 4.1 Select 0 - 25km arrow  and expand it         
+        // Test Output: 4.1 The 0 - 25km is expanded and also displaying stores within that distance proximity   
+        // Test Case: 4.2 Select 25 - 50km arrow and expand it 
+        // Test Output: 4.2 The 25 - 50km is expanded and also displaying stores within that distance proximity   
+        // Test Case: 4.3 Select  50 - 75km arrow and expand it  
+        // Test Output: 4.3 The 50 - 75km is expanded and also displaying stores within that distance proximity  
+        // Test Case: 4.4 Select  75 - 100km arrow and expand it  
+        // Test Output: 4.4 The 75 - 100km is expanded and also displaying stores within that distance proximity 
         public void VeriftyManageExpandableArrows(Classes.Browser browserInstance)
         {
             Helpers.Instance.Exists(browserInstance, "#searchCatalog");
             var searchInput = Helpers.Instance.GetProxy(browserInstance, "#searchCatalog");
 
-            /// 4. Verify groupings arrows are expandable    
             Helpers.Instance.FieldInput(browserInstance, searchInput, "");
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock.managecatalogue.width862px > form:nth-child(2) > div > div.formRow.catalogsearch > button"));
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock.managecatalogue.width862px > form.ng-valid.ng-dirty > div > div.formRow.catalogsearch > button"));
             Thread.Sleep(3000);
 
-            /// 4.1 Select 0 - 25km arrow  and expand it   
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#accordion > div:nth-child(1)"));
-            Helpers.Instance.CheckClass(browserInstance, "collapse in", Helpers.Instance.GetProxy(browserInstance, "#catalog1"));
-            Thread.Sleep(3000);
+            var locationGroupings = browserInstance.Instance.FindMultiple("#accordion > div.catalog.ng-scope");
+            browserInstance.Instance.Assert.True(() => locationGroupings.Elements.Count == 4);
 
-            /// 4.2 Select 25 - 50km arrow and expand it 
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#accordion > div:nth-child(2)"));
-            Helpers.Instance.CheckClass(browserInstance, "collapse in", Helpers.Instance.GetProxy(browserInstance, "#catalog2"));
-            Thread.Sleep(3000);
+            locationGroupings.Elements.ForEach((elementTuple) =>
+            {
+                FluentAutomation.ElementProxy locationGroup = new FluentAutomation.ElementProxy(elementTuple.Item1, elementTuple.Item2);
 
-            /// 4.3 Select  50 - 75km arrow and expand it  
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#accordion > div:nth-child(3)"));
-            Helpers.Instance.CheckClass(browserInstance, "collapse in", Helpers.Instance.GetProxy(browserInstance, "catalog3"));
-            Thread.Sleep(3000);
+                browserInstance.Instance.Assert.True(() => locationGroup.Children.Count > 1);
 
-            /// 4.4 Select  75 - 100km arrow and expand it   
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#accordion > div:nth-child(4)"));
-            Helpers.Instance.CheckClass(browserInstance, "collapse in", Helpers.Instance.GetProxy(browserInstance, "#catalog4"));
-            Thread.Sleep(3000);
+                var location = locationGroup.Children[0]();
+                var locationResults = locationGroup.Children[1]();
+
+                Helpers.Instance.ClickButton(browserInstance, location);
+                Helpers.Instance.CheckClass(browserInstance, "in", locationResults);
+            });
         }
 
         public void VeriftyManageExpandableWholesalerSelect(Classes.Browser browserInstance)
         {
-            // 5. Select one store from each range                                          
-            // 5.2 Select 25 - 50km  and select one wholesaler under that range by checkbox   
-            // 5.3 Select 50 - 75km  and select one wholesaler under that range by checkbox   
-            // 5.4 Select 75 - 100km  and select one wholesaler under that range by checkbox 
+            // 5. Select one store from each range     
             Helpers.Instance.Exists(browserInstance, "#searchCatalog");
             var searchInput = Helpers.Instance.GetProxy(browserInstance, "#searchCatalog");
 
-            // 5. Select one store from each range      
             Helpers.Instance.FieldInput(browserInstance, searchInput, "");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock.managecatalogue.width862px > form:nth-child(2) > div > div.formRow.catalogsearch > button"));
             Thread.Sleep(3000);
 
-            // 5.1 Select 0 - 25km  and select one wholesaler under that range by checkbox  
-            /// 5.1 The selected wholesaler is displayed with a checkbox next to it
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#accordion > div:nth-child(1)"));
-            Helpers.Instance.CheckClass(browserInstance, "collapse in", Helpers.Instance.GetProxy(browserInstance, "#catalog1"));
-            Helpers.Instance.CheckClass(browserInstance, "collapse in", Helpers.Instance.GetProxy(browserInstance, "#catalog1"));
-            Thread.Sleep(3000);
+            // Test Case: 5.1 Select 0 - 25km  and select one wholesaler under that range by checkbox  
+            // Test Output: 5.1 The selected wholesaler is displayed with a checkbox next to it
+            // Test Case: 5.2 Select 25 - 50km  and select one wholesaler under that range by checkbox 
+            // Test Output: 5.2  Select 25 - 50km  and select one wholesaler under that range by checkbox
+            // Test Case: 5.3 Select 50 - 75km  and select one wholesaler under that range by checkbox 
+            // Test Output: 5.3  Select 50 - 75km  and select one wholesaler under that range by checkbox
+            // Test Case: 5.4 Select 75 - 100km  and select one wholesaler under that range by checkbox  
+            // Test Output: 5.4  Select 50 - 75km  and select one wholesaler under that range by checkbox
 
-            // 5.2 Select 25 - 50km  and select one wholesaler under that range by checkbox 
-            // 5.2  Select 25 - 50km  and select one wholesaler under that range by checkbox
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#accordion > div:nth-child(2)"));
-            Helpers.Instance.CheckClass(browserInstance, "collapse in", Helpers.Instance.GetProxy(browserInstance, "#catalog2"));
-            Helpers.Instance.CheckClass(browserInstance, "collapse in", Helpers.Instance.GetProxy(browserInstance, "#catalog1"));
-            Thread.Sleep(3000);
+            var locationGroupings = browserInstance.Instance.FindMultiple("#accordion > div.catalog.ng-scope");
+            browserInstance.Instance.Assert.True(() => locationGroupings.Elements.Count == 4);
 
-            // 5.3 Select 50 - 75km  and select one wholesaler under that range by checkbox 
-            // 5.3  Select 50 - 75km  and select one wholesaler under that range by checkbox
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#accordion > div:nth-child(3)"));
-            Helpers.Instance.CheckClass(browserInstance, "collapse in", Helpers.Instance.GetProxy(browserInstance, "catalog3"));
-            Helpers.Instance.CheckClass(browserInstance, "collapse in", Helpers.Instance.GetProxy(browserInstance, "#catalog1"));
-            Thread.Sleep(3000);
+            locationGroupings.Elements.ForEach((elementTuple) =>
+            {
+                FluentAutomation.ElementProxy locationGroup = new FluentAutomation.ElementProxy(elementTuple.Item1, elementTuple.Item2);
 
-            // 5.4 Select 75 - 100km  and select one wholesaler under that range by checkbox  
-            // 5.4  Select 50 - 75km  and select one wholesaler under that range by checkbox
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#accordion > div:nth-child(4)"));
-            Helpers.Instance.CheckClass(browserInstance, "collapse in", Helpers.Instance.GetProxy(browserInstance, "#catalog4"));
-            Helpers.Instance.CheckClass(browserInstance, "collapse in", Helpers.Instance.GetProxy(browserInstance, "#catalog1"));
-            Thread.Sleep(3000);
+                browserInstance.Instance.Assert.True(() => locationGroup.Children.Count > 1);
+
+                var location = locationGroup.Children[0]();
+                var locationResults = locationGroup.Children[1]();
+                Helpers.Instance.ClickButton(browserInstance, location);
+                Helpers.Instance.CheckClass(browserInstance, "in", locationResults);
+
+                browserInstance.Instance.Assert.True(() => locationResults.Children.Count > 0);
+
+                var locationResultItems = locationResults.Children[0]();
+
+                locationResultItems.Children.ForEach((locationResultItem) =>
+                {
+                    if (locationResultItem().Children.Count > 0)
+                    {
+                        var checkbox = locationResultItem().Children[0]();
+                        Helpers.Instance.ClickButton(browserInstance, checkbox);
+                    }
+                });
+
+            });
         }
 
+        // Test Case: 2. Click on the <manage> button 
+        // Test Output: 2. The manage your catalogue actions page is displayed
         public void VerifyDiagnoseButtonClick(Classes.Browser browserInstance)
         {
-            // 2. Click on the <manage> button 
-            // 2. The manage your catalogue actions page is displayed
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(2) > button");
             ClickAlertButton(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(2) > button");
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts-diagnose"), TimeSpan.FromMinutes(30));
         }
 
+        // Test Case: 3.1 Verify Checking Connection label is available, checking vital communication to the ordering process
+        // Test Output: 3.1 The Checking Connection label is available, checking vital communication to the ordering service, connection speed, test your speed connection now  are displayed on the diagnose connection screen
         public void VerifyDiagnoseCheckingNotificationLabels(Classes.Browser browserInstance)
         {
-            // 3. Verify the diagnose connection actions notification screen                                                                                            
-            // 3.1 Verify Checking Connection label is available, checking vital communication to the ordering process
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > div:nth-child(1) > span");
+            var checkingConnectionLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > div:nth-child(1) > span");
+            browserInstance.Instance.Assert.True(() => checkingConnectionLabel.Element.Text.Contains("Checking Connection"));
+
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > div:nth-child(1) > ul > li > label");
+            var checkingVitalCommunicationLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > div:nth-child(1) > ul > li > label");
+            browserInstance.Instance.Assert.True(() => checkingVitalCommunicationLabel.Element.Text.Contains("checking vital communication to the ordering service"));
+
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > div > span");
+            var connectionSpeedLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > div > span");
+            browserInstance.Instance.Assert.True(() => connectionSpeedLabel.Element.Text.Contains("connection speed"));
+
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > div > ul > li > label");
+            var testYourConnectionSpeedLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > div > ul > li > label");
+            browserInstance.Instance.Assert.True(() => testYourConnectionSpeedLabel.Element.Text.Contains("test your speed connection now"));
         }
 
+        // Test Case: 3.2 Verify that the test now button for checking connection is available   
+        // Test Output: 3.2  The test now checking connection button is displayed on the screen
         public void VerifyDiagnoseCheckingNotificationTestButton(Classes.Browser browserInstance)
         {
-            // 3.2 Verify that the test now button for checking connection is available 
-            // 3.2  The test now checking connection button is displayed on the screen
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > div:nth-child(1) > ul > li > button");
         }
 
+        // Test Case: 3.3 Verify that the test now button for checking connection speed is available
+        // Test Output: 3.3 The test now button for checking connection speed is available
         public void VerifyDiagnoseConnectionSpeedTestButton(Classes.Browser browserInstance)
         {
-            // 3.3 Verify that the test now button for checking connection speed is available
-            // 3.3 The test now button for checking connection speed is available
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > div > ul > li > button");
         }
 
+        // Test Case: 4.1 Click on check connection <test now> button
+        // Test Output: 4.1 An indicator is displayed, that determines whether the connection was good or bad 
         public void VerifyDiagnoseCheckingNotificationTestButtonClick(Classes.Browser browserInstance)
         {
-            // 4.1 Click on check connection <test now> button
-            // 4.1 An indicator is displayed, that determines whether the connection was good or bad
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > div:nth-child(1) > ul > li > button"));
-            Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > div:nth-child(1) > ul > li > span");
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > div:nth-child(1) > ul > li > span.pull-right.connection.online");
         }
 
+        // Test Case: 4.2 Click on the on the connection speed <test now>button  
+        // Test Output: 4.2 Displayed results are determined by the application whether the connection speed is poor or not
         public void VerifyDiagnoseConnectionSpeedTestButtonClick(Classes.Browser browserInstance)
         {
-            // 4.2 Click on the on the connection speed <test now>button  
-            // 4.2 Displayed results are determined by the application whether the connection speed is poor or not
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > div > ul > li > button"));
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(3) > div.resultSection");
         }
+
+        // Test Case: 3.4 Verify that the results place holder label is available, displaying the results of the test 
+        // Test Output: 3.4 The results place holder label is available 
         public void VerifyDiagnoseResultPlaceholder(Classes.Browser browserInstance)
         {
-            // 3.4 Verify that the results place holder label is available, displaying the results of the test 
-            // 3.4 The results place holder label is available 
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(3) > div > span");
         }
     }

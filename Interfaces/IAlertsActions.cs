@@ -17,10 +17,9 @@ namespace TestProj.Interfaces
         void VerifyOrderAlerts(Classes.Browser browserInstance);
         void VerifySystemAlerts(Classes.Browser browserInstance);
         void VerifySideButtons(Classes.Browser browserInstance);
-        void VerifyUrgentActions(Classes.Browser browserInstance);
+        void VerifyUrgentActions(Classes.Browser browserInstance, Interfaces.IOrdersActions ordersActions, Interfaces.IBasketActions basketActions);
         void VerifyTextHighlightedRed(Classes.Browser browserInstance, string labelPath);
         void VerifyConfirmNowButtonClick(Classes.Browser browserInstance);
-        void AddUnconfirmedOrder(Classes.Browser browserInstance);
         void VerifyAsyncNow(Classes.Browser browserInstance);
         void VerifyManageButtonClick(Classes.Browser browserInstance);
         void VeriftyManageCatalogueSearch(Classes.Browser browserInstance);

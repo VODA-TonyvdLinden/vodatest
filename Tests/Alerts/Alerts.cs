@@ -33,7 +33,7 @@ namespace TestProj.Tests.Alerts
 
             container.RegisterType<Interfaces.IAlertsActions, Tests.Alerts.AlertsActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
 
-            Helpers.Instance.Activate(browserInstance, true);
+            Helpers.Instance.Activate(browserInstance, false);
         }
 
         [TestFixtureTearDown]
@@ -104,29 +104,77 @@ namespace TestProj.Tests.Alerts
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
 
+            // Test Case: 1. Verify that the Vodacom logo and the red banner are displayed on the activation screen
+            // Test Output: 1. The Vodacom banner logo and banner are displayed
             alertActions.VerifyVodacomLogoAndBanner(browserInstance);
+
+            // Test Case: 2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen
+            // Test Output: 2. The online/offline indicator is displayed on the top left hand corner of the screen
             alertActions.VerifyOnlineOffilineIndicator(browserInstance);
+
+            // Test Case: 3. Verify that contact us and help me hyperlinks are displayed
+            // Test Output: 3. The contact us and help me hyperlinks are displayed
             alertActions.VerifyContactUsHelpMeLinks(browserInstance);
 
-            // 4. See spelling, grammar and alignment  
-            // 4. Spelling, Grammar and alignment correct (Screen should resize on all devices also able to rotate from Portrait to landscape)  
-            LogWriter.Instance.Log("TESTCASE:_01_AlertsLandingPageVerfication -> Test step cannot be implemented. '4. See spelling, grammar and alignment' - We cannot test for this.", LogWriter.eLogType.Error);
+            // Test Case: 4. See spelling, grammar and alignment  
+            // Test Output: 4. Spelling, Grammar and alignment correct (Screen should resize on all devices also able to rotate from Portrait to landscape)  
+            LogWriter.Instance.Log("ISSUE 121 : TEST CASE: _01_AlertsLandingPageVerfication -> Test step cannot be implemented. '4. See spelling, grammar and alignment' - We cannot test for this.", LogWriter.eLogType.Error);
 
+            // Test Case: 5. Verify that the preferred alias name is displayed on top right hand corner of the app with the spaza owner's alias name and spaza name  
+            // Test Output: 5. The preferred alias name is displayed on the top right hand corner of the app, with the name spaza owner's alias name and the spaza name    
             alertActions.VerifySpazaAliasAndName(browserInstance);
+
+            // Test Case: 6. Verify that the Marbil add is displayed     
+            // Test Output: 6. The Marbil add is displayed  
             alertActions.VerifyMarbilAd(browserInstance);
 
-            // 7. Verify that the sub application are displayed and also greyed out 
-            // 7. The Sub Applications are displayed with a grey colour to show they are not active  
-            LogWriter.Instance.Log("TESTCASE:_01_AlertsLandingPageVerfication -> Test step incorrect we do not have sub applications displayed in the alerts page. '7. Verify that the sub application are displayed and also greyed out' - Update test case", LogWriter.eLogType.Error);
+            // Test Case: 7. Verify that the sub application are displayed and also greyed out 
+            // Test Output: 7. The Sub Applications are displayed with a grey colour to show they are not active  
+            LogWriter.Instance.Log("ISSUE 123: TEST CASE: _01_AlertsLandingPageVerfication -> Test step incorrect we do not have sub applications displayed in the alerts page. '7. Verify that the sub application are displayed and also greyed out' - Update test case", LogWriter.eLogType.Error);
 
+            // Test Case: 8. Verify that the catalogue , basket, orders and favourites blocks are displayed
+            // Test Output: 8. The catalogue, basket, orders and favourites blocks are displayed on the bottom of the bottom of the page    
             alertActions.VerifyBottomNavigationBlocks(browserInstance);
+
+            // Test Case: 9. Verify that the Alert Notification and label are displayed
+            // Test Output: 9. The Alert Notification and label are displayed 
             alertActions.VerifyNotificationAndLabel(browserInstance);
+
+            // Test Case: 10. Verify that the basket total value field is displayed
+            // Test Output: 10. The basket total value field is displayed
+            // Test Case: 11. Verify that the basket label is displayed
+            // Test Output: 11. The basket label is displayed 
+            // Test Case: 12. Verify that the basket total amount of items field is displayed
+            // Test Output: 12. The basket total amount field is displayed
             alertActions.VerifyBasketTotal(browserInstance);
+
+            // Test Case: 13. Verify that the search field is displayed on the top right hand corner of the screen
+            // Test Case: 14. Verify the text in the search field, it states that I am looking for
+            // Test Case: 15. Verify that the search text field is editable      
             alertActions.VerifySearchField(browserInstance);
+
+            // Test Case: 16. Verify that the notification section is displayed
+            // Test Output: 16. The Notification section is displayed
             alertActions.VerifyNotificationSection(browserInstance);
+
+            // Test Case: 17. Verify that actions section in the screen is displayed with an notification exclamation 
+            // Test Output: 17. Verify that actions are displayed section and label is displayed
             alertActions.VerifyActionSection(browserInstance);
+
+            // Test Case: 18. Verify that  Order alerts label is displayed 
+            // Test Output: 18. The order label is displayed
+            // Test Case: 19. Verify that the Order Alerts label, has sub labels namely You have received new invoices, you have an unconfirmed order, your catalogue is out of sync 
+            // Test Output: 19. The order Alerts label, has sub labels namely You have received new invoices, you have an unconfirmed order, your catalogue is out of sync 
             alertActions.VerifyOrderAlerts(browserInstance);
+
+            // Test Case: 20. Verify that the system alerts label is displayed
+            // Test Output: 20. The system alerts label is displayed 
+            // Test Case: 21. Veriy that the system alerts label, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed
+            // Test Output: 21. Veriy that the system alerts label, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed    
             alertActions.VerifySystemAlerts(browserInstance);
+
+            // Test Case: 22. Verify that the following buttons are displayed on the screen, view invoices button, confirm now button, sync now button, manage button, diagnose button and change now 
+            // Test Output: 22. The notifications buttons are displayed
             alertActions.VerifySideButtons(browserInstance);
         }
 
@@ -141,8 +189,8 @@ namespace TestProj.Tests.Alerts
         /// 1. verify that the application places urgent actions  on the alerts page
         /// NB. In order to achieve this you need to follow the order process and then don't confirm order "
         /// 1.1 Perform the order process and don't confirm order  
-        /// 1.2  Wait for approximately 30 min, to see if the alert is displayed
-        /// 1.3  Confirm the Order on alerts page and verify if its not back after 30 min
+        /// 1.2 Wait for approximately 30 min, to see if the alert is displayed
+        /// 1.3 Confirm the Order on alerts page and verify if its not back after 30 min
         /// 1.4 Repeat step 1.1 for all processes that requires confirmation to see if polling service work   
         /// TEST OUTPUT:
         /// 1                                                                                                                                                                                                                   
@@ -155,9 +203,14 @@ namespace TestProj.Tests.Alerts
         [Test, Description("_02_AlertsPollingService"), Category("Alerts"), Repeat(1)]
         public void _02_AlertsPollingService()
         {
-            //1. verify that the application places urgent actions  on the alerts page
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
-            alertActions.VerifyUrgentActions(browserInstance);
+            Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
+            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
+
+            // TEST CASE: 1. verify that the application places urgent actions  on the alerts page
+            alertActions.VerifyUrgentActions(browserInstance, ordersActions, basketActions);
+
+            LogWriter.Instance.Log("ISSUE 126: TEST CASE: _02_AlertsPollingService -> Test step cannot be tested automatically need to be tested manually. '1. verify that the application places urgent actions  on the alerts page' - Update test case", LogWriter.eLogType.Error);
         }
 
         /// <summary>
@@ -192,12 +245,18 @@ namespace TestProj.Tests.Alerts
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
 
-            // Test:   1.Verify that the active alert's text  is highlighted red "You have received new invoices"
+            // Test:   1. Verify that the active alert's text  is highlighted red "You have received new invoices"
             // Output: 1. The " You have received new invoices" text is highlighted in red 
-            Helpers.Instance.CheckClass(browserInstance, "", Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(1) > label"));
+            LogWriter.Instance.Log("ISSUE 127: TEST CASE: _03_AlertsViewInvoices -> Test step text does not turn red even if there are new invoices. '1. Verify that the active alert's text  is highlighted red 'You have received new invoices' ' - Update test case", LogWriter.eLogType.Error);
+           // Helpers.Instance.CheckClass(browserInstance, "", Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(1) > label"));
 
             // Test:   2. Click on the <view invoices> button
             // Output: 2. The notification invoices page is displayed and the new Invoice flag is cleared
+            // Test:   3.  Click on the <view orders> button
+            // Output: 3.  The list of invoices for all orders requiring users attention is displayed
+            // Test:   4. view invoice for orders page verification   
+            LogWriter.Instance.Log("ISSUE 128: TEST CASE: _03_AlertsViewInvoices -> Test step cannot be test the View Invoices button is always disabled need to be manually tested. '2. Click on the <view invoices> button' - Update test case", LogWriter.eLogType.Error);
+            
             Helpers.Instance.CheckButtonEnabled(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(1) > button");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(1) > button"));
         }
@@ -233,12 +292,15 @@ namespace TestProj.Tests.Alerts
         public void _04_AlertsConfirmNow()
         {
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
-            alertActions.AddUnconfirmedOrder(browserInstance);
+            Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
+            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
+
+            ordersActions.PlaceConfirmedOrder(browserInstance, basketActions);
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
 
             // Test:   1. Verify that the active alert's text  is highlighted red "You have an unconfirmed order
             // Output: 1. The " You have an unconfirmed order " text is highlighted in red
-            LogWriter.Instance.Log(@"TESTCASE:_04_AlertsConfirmNow -> Test step the label is not highlighted as red even when they are unconfirmed orders ...'. 
+            LogWriter.Instance.Log(@"ISSUE 127: TEST CASE: _04_AlertsConfirmNow -> Test step the label is not highlighted as red even when they are unconfirmed orders ...'. 
                                     '1. Verify that the active alert's text  is highlighted red 'You have an unconfirmed order' - Please update the test case.", LogWriter.eLogType.Error);
             alertActions.VerifyTextHighlightedRed(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > label");
 
@@ -252,7 +314,7 @@ namespace TestProj.Tests.Alerts
             //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.True(() => orderNumber.Element.Text != ""), TimeSpan.FromMinutes(30));
             //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(1)"));
 
-            LogWriter.Instance.Log("TESTCASE:_04_AlertsConfirmNow -> Test step clicking confirm order, confirms the order and sends you to the orders history page, which means all other test steps cannot be tested. '3. Click on the <confirm  order> button' - Please update the test case.", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 129: TEST CASE: _04_AlertsConfirmNow -> Test step clicking confirm order, confirms the order brings a popup and sends you to the orders history page, which means all other test steps cannot be tested. '3. Click on the <confirm  order> button' - Please update the test case.", LogWriter.eLogType.Error);
             // 4. view confirm order  page verification 
             // 4.1 Verify that the unconfirmed order number is displayed and is the only one
             // 4.1 The invoices number, supplier, invoice date and value are displayed a tabular format  and is the only one at a time 
@@ -407,30 +469,28 @@ namespace TestProj.Tests.Alerts
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
 
-            // 1. Verify that the active alert's text  is highlighted red "Manage your Catalogue" 
-            // 1. The " Manage your catalogue " text is highlighted in red  
+            // Test Case: 1. Verify that the active alert's text  is highlighted red "Manage your Catalogue" 
+            // Test Output: 1. The " Manage your catalogue " text is highlighted in red  
             alertActions.VerifyTextHighlightedRed(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(1) > label");
 
-            // 2. Click on the <manage> button 
-            // 2. The manage your catalogue actions page is displayed
+            // Test Case: 2. Click on the <manage> button 
+            // Test Output: 2. The manage your catalogue actions page is displayed
             alertActions.VerifyManageButtonClick(browserInstance);
-            
-            // 3. Search returning one or multiple results
-            // 3.1 Enter the allowable wholesaler <Makro>  in search field which  give any results and verify the user interface
+
+            // Test Case: 3. Search returning one or multiple results
+            // Test Case: 3.1 Enter the allowable wholesaler <Makro>  in search field which  give any results and verify the user interface
+            // Test Output: 3.1 The wholesaler records which are found are displayed as catalogue – outlet name  on the screen, with a location list sorted by group and grouped into groups on increments 25km
             alertActions.VeriftyManageCatalogueSearch(browserInstance);
 
-            /// 4. Verify groupings arrows are expandable    
+            /// Test Case: 4. Verify groupings arrows are expandable    
             alertActions.VeriftyManageExpandableArrows(browserInstance);
-            LogWriter.Instance.Log("TESTCASE:_04_AlertsConfirmNow -> Test step clicking confirm order, confirms the order and sends you to the orders history page, which means all other test steps cannot be tested. '3. Click on the <confirm  order> button' - Please update the test case.", LogWriter.eLogType.Error);
 
-            // 5. Select one store from each range                                                                                                  
-            // 5.1 Select 0 - 25km  and select one wholesaler under that range by checkbox      
-            // 5.2 Select 25 - 50km  and select one wholesaler under that range by checkbox   
-            // 5.3 Select 50 - 75km  and select one wholesaler under that range by checkbox   
-            // 5.4 Select 75 - 100km  and select one wholesaler under that range by checkbox 
+            // Test Case: 5. Select one store from each range                                                                                                  
+            // Test Case: 5.1 Select 0 - 25km  and select one wholesaler under that range by checkbox      
+            // Test Case: 5.2 Select 25 - 50km  and select one wholesaler under that range by checkbox   
+            // Test Case: 5.3 Select 50 - 75km  and select one wholesaler under that range by checkbox   
+            // Test Case: 5.4 Select 75 - 100km  and select one wholesaler under that range by checkbox 
             alertActions.VeriftyManageExpandableWholesalerSelect(browserInstance);
-
-            //LogWriter.Instance.Log();
         }
 
         /// <summary>
@@ -471,42 +531,44 @@ namespace TestProj.Tests.Alerts
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
 
-            // 1. Verify that the active alert's text  is highlighted red "You have connection issues "
+            // Test Case: 1. Verify that the active alert's text  is highlighted red "You have connection issues "
+            // Test Output: 1. The " You have connection issues" text is highlighted in red 
             alertActions.VerifyTextHighlightedRed(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(2) > label");
 
-            // 2. Click on the <diagnose> button   
+            // Test Case: 2. Click on the <diagnose> button   
+            // Test Output: 2. The notification diagnose connection page is displayed   
             alertActions.VerifyDiagnoseButtonClick(browserInstance);
 
-            // 3. Verify the diagnose connection actions notification screen                                                                                            
-            // 3.1 Verify Checking Connection label is available, checking vital communication to the ordering process
+            // Test Case: 3. Verify the diagnose connection actions notification screen                                                                                            
+            // Test Case: 3.1 Verify Checking Connection label is available, checking vital communication to the ordering process
+            // Test Output: 3.1 The Checking Connection label is available, checking vital communication to the ordering service, connection speed, test your speed connection now  are displayed on the diagnose connection screen
             alertActions.VerifyDiagnoseCheckingNotificationLabels(browserInstance);
 
-            // 3.2 Verify that the test now button for checking connection is available   
-            // 3.2  The test now checking connection button is displayed on the screen
+            // Test Case: 3.2 Verify that the test now button for checking connection is available   
+            // Test Output: 3.2  The test now checking connection button is displayed on the screen
             alertActions.VerifyDiagnoseCheckingNotificationTestButton(browserInstance);
 
-            // 3.3 Verify that the test now button for checking connection speed is available
-            // 3.3 The test now button for checking connection speed is available
+            // Test Case: 3.3 Verify that the test now button for checking connection speed is available
+            // Test Output: 3.3 The test now button for checking connection speed is available
             alertActions.VerifyDiagnoseConnectionSpeedTestButton(browserInstance);
 
             // 4. Check Button Functionality      
-                                                                                                         
-            // 4.1 Click on check connection <test now> button
-            // 4.1 An indicator is displayed, that determines whether the connection was good or bad 
-            alertActions.VerifyDiagnoseCheckingNotificationTestButtonClick(browserInstance);
-            
-            // 4.2 Click on the on the connection speed <test now>button  
-            // 4.2 Displayed results are determined by the application whether the connection speed is poor or not
-            alertActions.VerifyDiagnoseConnectionSpeedTestButtonClick(browserInstance);
-            
-            // 3.4 Verify that the results place holder label is available, displaying the results of the test 
-            // 3.4 The results place holder label is available 
-            alertActions.VerifyDiagnoseResultPlaceholder(browserInstance);
-            
-            // 3.5 Verify that the <OK> button is available  
-            // 3.5 The OK button is displayed 
-            LogWriter.Instance.Log("TESTCASE:_07_AlertsDiagnose -> Test step there is no OK button in the page. '3.5 Verify that the <OK> button is available' - Please update the test case.", LogWriter.eLogType.Error);
 
+            // Test Case: 4.1 Click on check connection <test now> button
+            // Test Output: 4.1 An indicator is displayed, that determines whether the connection was good or bad 
+            alertActions.VerifyDiagnoseCheckingNotificationTestButtonClick(browserInstance);
+
+            // Test Case: 4.2 Click on the on the connection speed <test now>button  
+            // Test Output: 4.2 Displayed results are determined by the application whether the connection speed is poor or not
+            alertActions.VerifyDiagnoseConnectionSpeedTestButtonClick(browserInstance);
+
+            // Test Case: 3.4 Verify that the results place holder label is available, displaying the results of the test 
+            // Test Output: 3.4 The results place holder label is available 
+            alertActions.VerifyDiagnoseResultPlaceholder(browserInstance);
+
+            // Test Case: 3.5 Verify that the <OK> button is available  
+            // Test Output: 3.5 The OK button is displayed 
+            LogWriter.Instance.Log("ISSUE 130: TEST CASE: _07_AlertsDiagnose -> Test step there is no OK button in the page. '3.5 Verify that the <OK> button is available' - Please update the test case.", LogWriter.eLogType.Error);
         }
 
         /// <summary>
@@ -533,7 +595,7 @@ namespace TestProj.Tests.Alerts
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IAlertsActions alertActions = container.Resolve<Interfaces.IAlertsActions>();
             //TODO
-            LogWriter.Instance.Log("TESTCASE:_09_AlertsMessaging -> Test step there is no Messages to test how do we get this. '1.Verify Received Message Format  from MAS' - Please update the test case.", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log("ISSUE 131: TESTCASE: _09_AlertsMessaging -> Test step there is no Messages to test, we cannot automate this, manual testing will be required. '1.Verify Received Message Format  from MAS' - Please update the test case.", LogWriter.eLogType.Error);
 
         }
     }

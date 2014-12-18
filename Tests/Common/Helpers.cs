@@ -528,5 +528,12 @@ namespace TestProj.Tests.Common
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(3) > div > button"));
             Thread.Sleep(1000);
         }
+
+        public void VerifyPopPup(Classes.Browser browserInstance, string popupHolderPath)
+        {
+            browserInstance.Instance.Assert.Exists(popupHolderPath);
+            var errorModal = Helpers.Instance.GetProxy(browserInstance, popupHolderPath);
+            browserInstance.Instance.Assert.Css("display", "block").On(errorModal);
+        }
     }
 }

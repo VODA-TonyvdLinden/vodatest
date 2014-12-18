@@ -74,41 +74,38 @@ namespace TestProj.Tests.Orders
         public void _01_PendingOrdersConfirmation()
         {
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
+            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
-            Helpers.Instance.AddOrders(browserInstance, 1);
-            Thread.Sleep(3000);
+            // Place Unconfirmed Order
+            ordersActions.PlaceUnConfirmedOrder(browserInstance, basketActions);
 
-            //TEST STEPS 1:  Click on the basket block at the bottom of the screen
-            //TEST OUTPUT 1: The basket page is displayed with catalogues in grid view
-            ordersActions.VerifyBasketBlockClick(browserInstance);
+            // Test Case 1:  Click on the basket block at the bottom of the screen
+            // Test Output 1: The basket page is displayed with catalogues in grid view
+            basketActions.ClickBasketBlock(browserInstance);
 
-            // TEST STEPS  2: Select an order that is pending confirmation
-            // TEST OUTPUT 2: The confirmation pop-up is displayed
-            ordersActions.VerifyOrderSelect(browserInstance);
-            ordersActions.VerifyOrderNow(browserInstance);
-
-            LogWriter.Instance.Log(@"TESTCASE:_01_PendingOrdersConfirmation -> Test step orders which are pending confirmation do not allow the button to be clicked only orders which have been added to the basket 
-                                    can be clicked  ...'. 
-                                    '2. Select an order that is pending confirmation' - Please update the test case.", LogWriter.eLogType.Error);
+            // Test Case: 2 Select an order that is pending confirmation
+            // Test Output: 2 The confirmation pop-up is displayed
+            basketActions.ClickOrderNowButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button"));
+            Helpers.Instance.VerifyPopPup(browserInstance, "#errorModal");
 
             // TEST STEPS 1:  3. Verify that the confirmation pop-up has the following items
             // TEST STEPS 1:  3.1 Confirm that the name caption of the pop-up is confirm order
             // TEST STEPS 1:  3.2  Make sure that the message content on that pop-up states that your order has been generated do you want to continue and place order, also the cancel and yes order is displayed 
-            ordersActions.VerifyConfirmOrderPopupContent(browserInstance);
+            
+            LogWriter.Instance.Log(@"ISSUE 100: TESTCASE:_01_PendingOrdersConfirmation -> Test step orders which are pending confirmation cannot be confirmed from the basket page, error pop up is shown.'. 
+                                    '2. Select an order that is pending confirmation' - Please update the test case.", LogWriter.eLogType.Error);
 
             // 4. Click on the Cancel button and verify that the order is still intact 
             // 4.The Order is still the same, nothing has changed
-            ordersActions.VerifyCancelOrder(browserInstance);
+
 
             // 5. Select again the order that is pending confirmation
             // 5. The confirmation pop-up is displayed 
-            ordersActions.VerifyOrderSelect(browserInstance);
-            ordersActions.VerifyOrderNow(browserInstance);
+
 
             // 6. Click on order now  
             // 6. The basket is cleared , the order was successfully placed 
-            ordersActions.VerifyConfirm(browserInstance);
-            Thread.Sleep(3000);
+
         }
 
         /// <summary>
@@ -135,24 +132,22 @@ namespace TestProj.Tests.Orders
         [Test, Description("_02_ViewConfirmedOrder"), Category("Orders"), Repeat(1)]
         public void _02_ViewConfirmedOrder()
         {
-            Helpers.Instance.AddOrders(browserInstance, 1);
-            Thread.Sleep(3000);
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-catalog-view?viewtype=grid"));
+            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
-            /// 1. Select an order that has been placed   
-            //ordersActions.VerifyOrderSelect(browserInstance);
+            // Test Case: 1. Select an order that has been placed   
+            // Test Output: 1. A confirm order pop-up is displayed  
+            ordersActions.SelectOrder(browserInstance, basketActions);
 
-            // 2. Verify that the confirm order pop -up has the following 
-            // 2.1 Make sure that name caption of the pop-up is confirm order  
-            // 2.2 Make sure that the message on the body of the pop-up is proceed to view your order    
-            // 2.3 make sure that the view my order button is displayed   
+            // Test Case: 2. Verify that the confirm order pop -up has the following 
 
-            LogWriter.Instance.Log(@"TESTCASE:_02_ViewConfirmedOrder -> Test step system does not provide all of this functionality. '. 
-                                    '_02_ViewConfirmedOrder' - Please update the test case.", LogWriter.eLogType.Error);
+            // Test Case: 2.3 make sure that the view my order button is displayed   
+            // Test Output: 2.3 The view my order button is displayed  
+            ordersActions.VerifyConfirmOrderPopup(browserInstance);
 
-
-            //TODO
+            // 3. Click on the view order button 
+            LogWriter.Instance.Log(@"ISSUE 103: TESTCASE:_02_ViewConfirmedOrder -> Test step in the order confirmation pop up there is no button to view my order, this test cannot be tested.' 
+                                    '3. Click on the view order button' - Please update the test case.", LogWriter.eLogType.Error);
         }
 
         /// <summary>
@@ -186,12 +181,15 @@ namespace TestProj.Tests.Orders
         public void _03_OrderHistoryCollapsedView()
         {
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            ordersActions.VerifyConfirmedOrder(browserInstance);
+            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
-            // 1. Click on the <orders> block  at the bottom of the screen
-            // 1. The orders history are displayed in a tabular format
+            ordersActions.PlaceConfirmedOrder(browserInstance, basketActions);
+
+            // Test Case: 1. Click on the <orders> block  at the bottom of the screen
+            // Test Output: 1. The orders history are displayed in a tabular format
             ordersActions.VerifyOrdersBlockClick(browserInstance);
 
+            // Test Case: 2. Verify the following on the order history that is displayed
             ordersActions.VerifyOrderHistoryFields(browserInstance);
         }
 
@@ -228,18 +226,19 @@ namespace TestProj.Tests.Orders
         public void _04_OrderHistoryExpanded()
         {
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
+            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
-            //Place supplier order 
-            ordersActions.VerifyConfirmedOrder(browserInstance);
+            ordersActions.PlaceConfirmedOrder(browserInstance, basketActions);
 
-            // 1. Click on the <orders> block  at the bottom of the screen
-            // 1. The orders history are displayed in a tabular format
+            // Test Case: 1. Click on the <orders> block  at the bottom of the screen
+            // Test Output: 1. The orders history are displayed in a tabular format
             ordersActions.VerifyOrdersBlockClick(browserInstance);
 
+            // Test Case: 2. Verify the following on the order history that is displayed
             ordersActions.VerifyOrderHistoryFields(browserInstance);
 
-            //// 3. Click on the + sign in the select column
-            //// 3. The + sign in the select column changes to - sign and a number of invoices under order number are displayed
+            // Test Case: 3. Click on the + sign in the select column
+            // Test Output: 3. The + sign in the select column changes to - sign and a number of invoices under order number are displayed
             ordersActions.VerifyOrderHistoryExpandClick(browserInstance);
         }
 
@@ -291,9 +290,9 @@ namespace TestProj.Tests.Orders
         public void _05_ViewInvoiceDetail()
         {
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
+            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
-            //Place supplier order 
-            ordersActions.VerifyConfirmedOrder(browserInstance);
+            ordersActions.PlaceConfirmedOrder(browserInstance, basketActions);
 
             // Test Case: 1. Click on the <orders> block  at the bottom of the screen  
             // Test Output: 1. The orders history are displayed in a tabular format
@@ -306,9 +305,10 @@ namespace TestProj.Tests.Orders
             // Test Output: 3. The + sign in the select column changes to - sign and a number of invoices under order number are displayed    
             ordersActions.VerifyOrderHistoryExpandClick(browserInstance);
 
-            // 4. Click on the invoice  
-            LogWriter.Instance.Log(@"TESTCASE:_05_ViewInvoiceDetail -> Test step we cannot automate this step and the following steps as we have no control as to when the invoices will appear on the system. '. 
-                                    ' 4. Click on the invoice' - Test case need to manually tested.", LogWriter.eLogType.Error);
+            // Test Case: 4. Click on the invoice  
+            // Test Output: 4. The invoice is displayed in detail
+            LogWriter.Instance.Log(@"TESTCASE:ISSUE 104: _05_ViewInvoiceDetail -> Test step we cannot automate this step and the following steps as we have no control as to when the invoices will appear on the system.'
+                                    ' 4. Click on the invoice' - Test case need to be manually tested.", LogWriter.eLogType.Error);
         }
 
         /// <summary>
@@ -342,11 +342,9 @@ namespace TestProj.Tests.Orders
         public void _06_ViewOrderDetails()
         {
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
+            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
-            //Place supplier order 
-            ordersActions.VerifyConfirmedOrder(browserInstance);
-
-            //Go to the orders history page
+            ordersActions.PlaceConfirmedOrder(browserInstance, basketActions);
             ordersActions.VerifyOrdersBlockClick(browserInstance);
 
             // Test Case: 1. Click on the order number   
@@ -403,14 +401,10 @@ namespace TestProj.Tests.Orders
         public void _07_eOrder()
         {
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
+            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
-            // Place supplier order 
-            ordersActions.VerifyConfirmedOrder(browserInstance);
-
-            // Go to the orders history page
+            ordersActions.PlaceConfirmedOrder(browserInstance, basketActions);
             ordersActions.VerifyOrdersBlockClick(browserInstance);
-
-            // Go to the orders history details page
             ordersActions.VerifyOrderNumberClick(browserInstance);
 
             // 1. Click on the order re-order button on the view order details screen, but please note that invoking this process the following events happen
@@ -438,12 +432,15 @@ namespace TestProj.Tests.Orders
         public void _08_UnconfirmedOrders()
         {
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
+            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
-            // Place uncofirmed order.
-            ordersActions.VerifyUnConfirmedOrder(browserInstance);
+            // Place Unconfirmed Order
+            ordersActions.PlaceUnConfirmedOrder(browserInstance, basketActions);
+            ordersActions.VerifyOrdersBlockClick(browserInstance);
 
-            // 3. The Unconfirmed order button should be inactive if there are no more orders to confirm
-            LogWriter.Instance.Log(@"TESTCASE:_08_UnconfirmedOrders -> Test step cannot be tested since the orders page only contains confirmed orders history. '. 
+            // Test Case: 1. Click on the unconfirmed orders button 
+            // Test Output: 1. The unconfirmed order is displayed if they are unconfirmed orders
+            LogWriter.Instance.Log(@"TESTCASE:ISSUE 107: _08_UnconfirmedOrders -> Test step cannot be tested since the orders page only contains confirmed orders history and we do not have the unconfirmed order button in the page.'
                                     ' 1. Click on the unconfirmed orders button ' - Test case need to updated.", LogWriter.eLogType.Error);
         }
 
@@ -476,40 +473,36 @@ namespace TestProj.Tests.Orders
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
+            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
-            // Place supplier order 
-            ordersActions.VerifyConfirmedOrder(browserInstance);
-
-            // Go to the orders history page
+            ordersActions.PlaceConfirmedOrder(browserInstance, basketActions);
             ordersActions.VerifyOrdersBlockClick(browserInstance);
-
-            // Go to the orders history details page
             ordersActions.VerifyOrderNumberClick(browserInstance);
 
-            // 1. Click on view invoices button on the view orders details screen
-            // 1. The invoices are displayed in a tabular format 
-            var orderNumber = ordersActions.VerifyViewInvoicesButtonClick(browserInstance);
+            // Test Case: 1. Click on view invoices button on the view orders details screen
+            // Test Output: 1. The invoices are displayed in a tabular format 
+            ordersActions.VerifyViewInvoicesButtonClick(browserInstance);
 
-            // 2. Verify the caption of the order invoice  page is displayed as invoices 
-            // 2. The caption of the order invoice page is displayed as invoices 
+            // Test Case: 2. Verify the caption of the order invoice  page is displayed as invoices 
+            // Test Output: 2. The caption of the order invoice page is displayed as invoices 
             ordersActions.VerifyInvoiceHeader(browserInstance);
 
-            // 3. Verify that the invoice for order number is displayed
-            // 3. The invoice order number is displayed
-            ordersActions.VerifyInvoiceDetailOrderNumber(browserInstance, orderNumber.Element.Text);
+            // Test Case: 3. Verify that the invoice for order number is displayed
+            // Test Output: 3. The invoice order number is displayed
+            ordersActions.VerifyInvoiceDetailOrderNumber(browserInstance);
 
-            // 4.The  invoice number, supplier, invoice date , value are pre-populated  and displayed  
-            // 5. Verify that  the total number of value price is correct
-            // 4.The  invoice number, supplier, invoice date , value are pre-populated  and displayed 
-            // 5. The total number value price is displayed and correct
-            LogWriter.Instance.Log(@"TESTCASE:_09_ViewInvoices -> Test step cannot be tested since the we cannot trigger instant invoices. '. 
-                                    ' 4.The  invoice number, supplier, invoice date , value are pre-populated  and displayed ' - Test case need to updated.", LogWriter.eLogType.Error);
+            // Test Case: 4. The  invoice number, supplier, invoice date , value are pre-populated  and displayed  
+            // Test Output: 4. The  invoice number, supplier, invoice date , value are pre-populated  and displayed 
+            // Test Case: 5. Verify that  the total number of value price is correct
+            // Test Output: 5. The total number value price is displayed and correct
+            LogWriter.Instance.Log(@"TESTCASE:ISSUE 108: _09_ViewInvoices -> Test step cannot be tested since we cannot trigger instant invoices in our test cases.'
+                                    ' 4.The  invoice number, supplier, invoice date , value are pre-populated  and displayed ' - Test case need to be manually tested.", LogWriter.eLogType.Error);
 
-            // 6. Verify that the back to orders button is displayed  
-            // 6. The back to orders button is displayed
-            // 7. Click on the back to orders button   
-            // 7. The Orders screen is displayed   
-            ordersActions.VerifyInvoiceBackToOrdersButton(browserInstance, orderNumber.Element.Text);
+            // Test Case: 6. Test Case: Verify that the back to orders button is displayed  
+            // Test Output: 6. The back to orders button is displayed
+            // Test Case: 7. Click on the back to orders button   
+            // Test Output: 7. The Orders screen is displayed   
+            ordersActions.VerifyInvoiceBackToOrdersButton(browserInstance);
         }
 
         /// <summary>
@@ -547,8 +540,8 @@ namespace TestProj.Tests.Orders
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
 
-            LogWriter.Instance.Log(@"TESTCASE:_10_LoggingDiscrepancies -> Test step cannot be tested since the we cannot trigger instant invoices and we do not have the log discrepancy button in the view invoices detail screen . '. 
-                                    '2. Click on the <log discrepancy> button' - Test case need to updated.", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log(@"TESTCASE:ISSUE 109: _10_LoggingDiscrepancies -> Test step cannot be tested since we cannot trigger instant invoices and we do not have the log discrepancy button in the view invoices detail screen.' 
+                                    '2. Click on the <log discrepancy> button' - Test case need to be manually tested.", LogWriter.eLogType.Error);
         }
 
         /// <summary>
@@ -580,8 +573,8 @@ namespace TestProj.Tests.Orders
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            LogWriter.Instance.Log(@"TESTCASE:_11_SearchingOrders -> Test step cannot be tested since the we cannot trigger instant invoices and we do not have search functionality to search invoices . '. 
-                                    '2. Click on the <search> button' - Test case need to updated.", LogWriter.eLogType.Error);
+            LogWriter.Instance.Log(@"TESTCASE:ISSUE 110: _11_SearchingOrders -> Test step cannot be tested since we cannot trigger instant invoices and we do not have search functionality to search invoices.' 
+                                    '2. Click on the <search> button' - Test case need to be manually tested.", LogWriter.eLogType.Error);
 
         }
     }

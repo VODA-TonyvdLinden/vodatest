@@ -27,5 +27,6 @@ namespace TestProj.Interfaces
         void VerifyProductFavouritesIconClick(Classes.Browser browserInstance);
         void VerifyProductQuantityClick(Classes.Browser browserInstance);
         void VerifyProductTotal(Classes.Browser browserInstance);
+        void AddFavouriteProduct(Classes.Browser browserInstance);
     }
 }

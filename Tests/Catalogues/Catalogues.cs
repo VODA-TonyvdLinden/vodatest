@@ -77,7 +77,6 @@ namespace TestProj.Tests.Catalogues
             // 3. Verify that the advert redirects user to the relevant product catalogue that is advertised
             // 3. The splash ad redirects the user to the relevant product after clicking it 
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/stores"), TimeSpan.FromSeconds(5));
-
         }
 
         /// <summary>
@@ -246,7 +245,6 @@ namespace TestProj.Tests.Catalogues
         [Test, Description("_04_CatalogueViewProducts"), Category("Catalogues"), Repeat(1)]
         public void _04_CatalogueViewProducts()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
 
             // Test Case: 1 Select on any of the fixed categories 
@@ -257,7 +255,6 @@ namespace TestProj.Tests.Catalogues
             // Test Output: 3 The selected subcategory is displayed in red 
             // Test Case: 4 Click on the selected subcategory you wish to view products for 
             // Test Output: 4 The selected subcategory products are displayed
-            // Test Case: 5  Verify the following on the product view   
             catalogueActions.ClickSubCategory(browserInstance, true);
         }
         
@@ -380,8 +377,8 @@ namespace TestProj.Tests.Catalogues
             // Click on the save button 
             catalogueActions.VerifyProductSaveClick(browserInstance);
 
-            // 7. Verify step 6 by selecting the favourites tab, to see if the recently added product is displayed
-            // Click the favourites footer block
+            // Test Case: 7. Verify step 6 by selecting the favourites tab, to see if the recently added product is displayed
+            // Test Output: 7. The recently added product is displayed in the favourites menu
             catalogueActions.VerifyFavouriteBlockClick(browserInstance);
         }
         
