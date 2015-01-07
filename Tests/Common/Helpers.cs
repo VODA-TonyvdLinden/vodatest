@@ -101,6 +101,7 @@ namespace TestProj.Tests.Common
         {
             browserInstance.Instance.Assert.Exists(elementPath);
         }
+
         public bool ElementExists(Classes.Browser browserInstance, string path)
         {
             var ret = true;
@@ -359,6 +360,7 @@ namespace TestProj.Tests.Common
             //browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-catalog-view?viewtype=grid");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button"));
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
+            Helpers.Instance.CheckClearPopup(browserInstance);
             //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main"), 30);
         }
         public void GoToBasket(Classes.Browser browserInstance)
@@ -458,8 +460,8 @@ namespace TestProj.Tests.Common
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/loadingscreen"), TimeSpan.FromMinutes(30));
             Thread.Sleep(100);
 
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main"), TimeSpan.FromMinutes(30));
-            browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main");
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main?justSynced"), TimeSpan.FromMinutes(30));
+            browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main?justSynced");
             Thread.Sleep(3000);
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.headerLogo.left > a > img"), TimeSpan.FromMinutes(30));
 
@@ -507,6 +509,17 @@ namespace TestProj.Tests.Common
             LogWriter.Instance.Log(string.Format("TESTCASE: Helpers.CheckErrorPopup -> Error popup incorrect message. '{0}' displayed, '{1}' expected.", err.Element.Text, errorMessage), LogWriter.eLogType.Error);
 
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(3) > div > button"));
+            Thread.Sleep(1000);
+        }
+
+        public void CheckClearPopup(Classes.Browser browserInstance)
+        {
+            Thread.Sleep(5000);
+            browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#basketConfirm > div > div > div.modal-body.text-center > div > button:nth-child(1)"), 30);
+
+            var yesButton = Helpers.Instance.GetProxy(browserInstance, "#basketConfirm > div > div > div.modal-body.text-center > div > button:nth-child(1)");
+
+            Helpers.Instance.ClickButton(browserInstance, yesButton);
             Thread.Sleep(1000);
         }
 

@@ -285,8 +285,8 @@ namespace TestProj.Tests.Basket
             /// 3.1 The total is correct 
             /// 
             var unitPrice = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.unitPrice.ng-binding");
-            var test = unitPrice.Element.Text.Replace("Unit Price ", "").Replace("\r", "").Replace("\n", "").Replace(" ", "");
-
+            var test = unitPrice.Element.Text.Replace("Unit Price ", "").Replace("\r", "").Replace("\n", "").Replace("R", "").Replace(" ", "");
+            LogWriter.Instance.Log(test, LogWriter.eLogType.Debug);
             decimal unitP = Convert.ToDecimal(test);//i + (i2 / 100);
             //If you get an error here (string not in correct format), check that your decimal char is set to '.' and not ',' in computer settings
 
@@ -294,11 +294,11 @@ namespace TestProj.Tests.Basket
 
             PressAddIcon(browserInstance, qtyBox, qty);
             decimal totalP = unitP * (qty + 1);
-            Helpers.Instance.CheckProxyValue(browserInstance, totalPrice, totalP.ToString());
+            Helpers.Instance.CheckProxyValue(browserInstance, totalPrice, string.Format("R {0}",totalP));
 
             PressRemoveIcon(browserInstance, qtyBox, qty);
             totalP = unitP * (qty);
-            Helpers.Instance.CheckProxyValue(browserInstance, totalPrice, totalP.ToString());
+            Helpers.Instance.CheckProxyValue(browserInstance, totalPrice, string.Format("R {0}", totalP));
         }
 
         public void TestAddRemoveButtons(Classes.Browser browserInstance, out FluentAutomation.ElementProxy qtyBox, out int qty)
