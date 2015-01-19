@@ -483,8 +483,7 @@ namespace TestProj.Tests.Activation
             activationAction.ClickNext(browserInstance, otpNextButton);
             ///   1.2 An error message is displayed[ error: “O1-2-8 – Passwords do not match. Please try again”
             ///   
-            activationAction.CheckErrorPopup(browserInstance, "E2-2--1", "OTP validation failed");
-            LogWriter.Instance.Log("ISSUE 12: TESTCASE: _08_IncorrectOneTimePin -> Error message seems incorrect -> Code 'E2-2--1'", LogWriter.eLogType.Error);
+            activationAction.CheckErrorPopup(browserInstance, "E2-2-4", "OTP validation failed");
 
             /// 2. Expired OTP
             ///   2.1 Plese enter <Expired OTP>
@@ -492,8 +491,7 @@ namespace TestProj.Tests.Activation
             ///   2.2 Press the <next> button
             activationAction.ClickNext(browserInstance, otpNextButton);
             ///   2.2 An error message is displayed[ error: “O1-2-8 – Passwords do not match. Please try again”
-            activationAction.CheckErrorPopup(browserInstance, "E2-2--1", "OTP validation failed");
-            LogWriter.Instance.Log("ISSUE 13: TESTCASE: _08_IncorrectOneTimePin -> Error message seems incorrect -> Code 'E2-2--1'", LogWriter.eLogType.Error);
+            activationAction.CheckErrorPopup(browserInstance, "E2-2-4", "OTP validation failed");
         }
 
         /// <summary>

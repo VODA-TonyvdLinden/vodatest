@@ -155,8 +155,7 @@ namespace TestProj.Tests.Activation
             // TEST: 2.1.5 An Error Message is displayed  "E1-1 -3 invalid input". Field must be highlited in red
             //browserInstance.Instance.Assert.Value("E1-1 -3 invalid input").In(errorMessage);
             Thread.Sleep(2000);
-            CheckErrorPopup(browserInstance, "E2-1-1", "Error activating app");
-            LogWriter.Instance.Log(string.Format("ISSUE 10: TESTCASE:_03_ActivationFormIncorrectUserDetails -> The error that is shown is E2-1-1: TIMEOUT: Error activating app, instead of invalid username"), LogWriter.eLogType.Error);
+            CheckErrorPopup(browserInstance, "E2-1-13", "Username or ActivationCode is invalid");
         }
 
         public void TestValidSingleUserDetails(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy challengeQuestion, FluentAutomation.ElementProxy challengeAnswer, FluentAutomation.ElementProxy nextButton)

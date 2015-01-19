@@ -1,84 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="8" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-12-11" time="15:25:41">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-01-07" time="15:41:02">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="344.612" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="66.498" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="344.594" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="66.497" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="344.593" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="66.496" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Basket" executed="True" result="Success" success="True" time="344.593" asserts="0">
+              <test-suite type="Namespace" name="Catalogues" executed="True" result="Failure" success="False" time="66.494" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Basket" description="Basket" executed="True" result="Success" success="True" time="344.589" asserts="0">
+                  <test-suite type="TestFixture" name="Catalogues" description="Catalogues" executed="True" result="Failure" success="False" time="66.493" asserts="0">
                     <categories>
-                      <category name="Basket" />
+                      <category name="Catalogues" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Basket.Basket._01_BasketGridView" description="_01_BasketGridView" executed="True" result="Success" success="True" time="62.026" asserts="0">
+                      <test-case name="TestProj.Tests.Catalogues.Catalogues._02_CatalogueLandingPage" description="_02_CatalogueLandingPage" executed="True" result="Error" success="False" time="3.144" asserts="0">
                         <categories>
-                          <category name="Basket" />
+                          <category name="Catalogues" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Basket.Basket._02_BasketConfirmOrder" description="_02_BasketConfirmOrder" executed="True" result="Success" success="True" time="25.388" asserts="0">
-                        <categories>
-                          <category name="Basket" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Basket.Basket._03_BasketListView" description="_03_BasketListView" executed="True" result="Success" success="True" time="66.320" asserts="0">
-                        <categories>
-                          <category name="Basket" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Basket.Basket._04_BasketDetailGridView" description="_04_BasketDetailGridView" executed="True" result="Success" success="True" time="20.691" asserts="0">
-                        <categories>
-                          <category name="Basket" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Basket.Basket._05_BasketDetailListView" description="_05_BasketDetailListView" executed="True" result="Success" success="True" time="22.552" asserts="0">
-                        <categories>
-                          <category name="Basket" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Basket.Basket._06_BasketViewItemDetail" description="_06_BasketViewItemDetail" executed="True" result="Success" success="True" time="24.251" asserts="0">
-                        <categories>
-                          <category name="Basket" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Basket.Basket._07_BasketAddItemToFavourites" description="_07_BasketAddItemToFavourites" executed="True" result="Success" success="True" time="54.020" asserts="0">
-                        <categories>
-                          <category name="Basket" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Basket.Basket._08_BasketAddingAndRemovingProductQuantity" description="_08_BasketAddingAndRemovingProductQuantity" executed="True" result="Success" success="True" time="24.907" asserts="0">
-                        <categories>
-                          <category name="Basket" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : An unexpected exception was thrown inside WaitUntil(Action). See InnerException for details.
+  ----> System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_ICataloguesActions_a6ad912d3f64485c86703b92dd1c51fd.VerifyActiveCatalogueAndSubCategories(Browser browserInstance)
+at TestProj.Tests.Catalogues.Catalogues._02_CatalogueLandingPage() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Catalogues\Catalogues.cs:line 149
+--NullReferenceException
+at lambda_method(Closure )
+at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
                       </test-case>
                     </results>
                   </test-suite>
