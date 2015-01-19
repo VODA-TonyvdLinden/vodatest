@@ -189,11 +189,13 @@ namespace TestProj.Tests.Catalogues
             // Test Case: 1.1 Select on any of the fixed categories        
             // Test Output: 1.1 Subcategories under that category are displayed as a list and the selected category is displayed in red
 
-            catalogueActions.VerifyCategoryClick(browserInstance);
+            //[TONY]
+            //catalogueActions.VerifyCategoryClick(browserInstance);
 
             // Test Case: 1.2 Make sure that you can scroll up and down on that list  
             // Test Output: 1.2 The user can scroll up and down on the sub categories
-            catalogueActions.VerifySubCategoriesScroll(browserInstance);
+            //[TONY]
+            //catalogueActions.VerifySubCategoriesScroll(browserInstance);
 
             // Test Case: 1.3 Scroll down and select any subcategory
             // Test Output: 1.3  The selected subcategory is displayed in red  
@@ -201,7 +203,8 @@ namespace TestProj.Tests.Catalogues
 
             // Test Case: 1.4 Click on the category and verify if it collapses the sub categories list
             // Test Output: 1.4  The  subcategories list is collapsed
-            catalogueActions.VerifyCategoryUnSelect(browserInstance);
+            //[TONY]
+            //catalogueActions.VerifyCategoryUnSelect(browserInstance);
         }
 
         /// <summary>

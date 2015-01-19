@@ -13,11 +13,12 @@ namespace TestProj.Interfaces
         void VerifyCategoryIcon(Classes.Browser browserInstance, string iconImagePath, string categoryItemPath,string categoryClassPath, string categoryName);
         void VerifyBrandList(Classes.Browser browserInstance);
         void VerifySpecials(Classes.Browser browserInstance);
-        void VerifyCategoryClick(Classes.Browser browserInstance);
-        void VerifySubCategoriesScroll(Classes.Browser browserInstance);
+        void VerifyCategoryClick(Classes.Browser browserInstance, out FluentAutomation.ElementProxy category, out FluentAutomation.ElementProxy subCategories);
+        //void VerifySubCategoriesScroll(Classes.Browser browserInstance);
         void VerifyElementScroll(Classes.Browser browserInstance, FluentAutomation.ElementProxy scrollElement, bool isVertical);
         void VerifyActiveSubCategorySelect(Classes.Browser browserInstance);
-        void VerifyCategoryUnSelect(Classes.Browser browserInstance);
+        void VerifyCategoryUnSelect(Classes.Browser browserInstance, FluentAutomation.ElementProxy category, FluentAutomation.ElementProxy subCategories);
+        //void VerifyCategoryUnSelect(Classes.Browser browserInstance);
         void VerifySubCategoryClick(Classes.Browser browserInstance);
         void VerifyProductView(Classes.Browser browserInstance);
         void ClickSubCategory(Classes.Browser browserInstance, bool verifyProductPopUp = false);

@@ -164,13 +164,17 @@ namespace TestProj.Tests.AccessingApplication
         public void VerifySearchFieldTextExists(Classes.Browser browserInstance)
         {
             // 15. Verify the text in the search field, it states that i am looking for
-            var searchBox = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
+            var searchBox = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > div > input");
+            //[DELETE]
+            //var searchBox = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
             browserInstance.Instance.Assert.Attribute("placeholder", "I'm looking for...").On(searchBox);
         }
         public void VerifySearchFieldTextEditableExists(Classes.Browser browserInstance)
         {
             // 16. Verify that the search text field is editable
-            var searchBox = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
+            var searchBox = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > div > input");
+            //[DELETE]
+            //var searchBox = browserInstance.Instance.Find("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
             Helpers.Instance.FieldInput(browserInstance, searchBox, "test");
             //browserInstance.Instance.Enter("test").In(searchBox);
             browserInstance.Instance.Assert.Text("test").In(searchBox);
@@ -180,14 +184,17 @@ namespace TestProj.Tests.AccessingApplication
         {
             var alertLink = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.alertStatus > a > div");
             Helpers.Instance.ClickButton(browserInstance, alertLink);
-            var searchBox = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
+            var searchBox = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > div > input");
+            
+            //[DELETE]
+            //var searchBox = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
             //   2.1.1 Please enter alphanumeric  < 07@ >
             //   2.1.2 Please enter space before entering input on the field
             //   2.1.3 Please enter special characters  <@@, &&> 
             //   2.1.4 Please enter decimal numbers <0.00444> 
             //   2.1.5 Please enter negative value <-1>
 
-            var searchButton = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > span");
+            var searchButton = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > div > span");
             //     3.1.1 Please enter alphanumeric  < 07@ >
             TestInvalidValue(browserInstance, searchBox, searchButton, "07@");
 
@@ -224,8 +231,12 @@ namespace TestProj.Tests.AccessingApplication
             //   3.1.3 Please enter special characters  <@@, &&> 
             //   3.1.4 Please enter decimal numbers <0.00444> 
             //   3.1.5 Please enter negative value <-1>
-            var searchBox = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
-            var searchButton = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > span");
+            var searchBox = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > div > input");
+            //[DELETE]
+            //var searchBox = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > input");
+            //[DELETE]
+            //var searchButton = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > span");
+            var searchButton = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.bottomRow.vodaBackgroundRed > div > div.searchInputContainer > div > div > span");
 
             //     3.1.1 Please enter alphanumeric  < 07@ >
             TestInvalidValue(browserInstance, searchBox, searchButton, "07@");
@@ -318,10 +329,13 @@ namespace TestProj.Tests.AccessingApplication
             //   1.1 Select any specail within the catalogue to see if is selectable by a single click
             //var specialItem = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.leftBlock > div > div > div > div:nth-child(1) > div > div");
             //For some reason this item moved
+            //Click home button first
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.headerLogo.left > a"));
             Thread.Sleep(5000);
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Expect.Exists("#landingPage > div > div.leftBlock > div > div > div:nth-child(1) > div:nth-child(1) > div > div"));
-
-            var specialItem = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.leftBlock > div > div > div:nth-child(1) > div:nth-child(1) > div > div");
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Expect.Exists("#landingPage > div > div.leftBlock > div.productSpecialsCarouselContainer > div > div:nth-child(1) > div:nth-child(1) > div > div > div.img > div.decsriptionOverlay.ng-binding"));
+            //[DELETE]
+            //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Expect.Exists("#landingPage > div > div.leftBlock > div > div > div:nth-child(1) > div:nth-child(1) > div > div"));
+            var specialItem = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.leftBlock > div.productSpecialsCarouselContainer > div > div:nth-child(1) > div:nth-child(1) > div > div > div.img > div.decsriptionOverlay.ng-binding");
             Helpers.Instance.ClickButton(browserInstance, specialItem);
             //   1.1 The selected item is marked
             LogWriter.Instance.Log("ISSUE 4: TESTCASE:_03_ApplicationLandingContentsFunctionality -> Item is not market when single click. Cannot test for this. Test case wrong. Same behaviour as double click", LogWriter.eLogType.Error);
