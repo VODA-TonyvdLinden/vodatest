@@ -61,7 +61,11 @@ namespace TestProj.Tests.Catalogues
             {
                 // Verify that a active sub category has mutliple subcategories
                 FluentAutomation.ElementProxy proxy = new FluentAutomation.ElementProxy(elementTuple.Item1, elementTuple.Item2);
-                browserInstance.Instance.Assert.True(() => proxy.Children.Count > 0);
+                LogWriter.Instance.Log(proxy.ToString(), LogWriter.eLogType.Debug);
+                if (proxy != null)
+                    LogWriter.Instance.Log(string.Format("ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for {0}", elementTuple.ToString()), LogWriter.eLogType.Error);
+                else
+                    browserInstance.Instance.Assert.True(() => proxy.Children.Count > 0);
             });
         }
 
@@ -71,6 +75,7 @@ namespace TestProj.Tests.Catalogues
         {
             var inactiveCategories = browserInstance.Instance.FindMultiple("#categoryCarousel > div.categoryFilterBarHeight.ng-scope:not(.active)");
             var inactiveSubCategoriesContainers = browserInstance.Instance.FindMultiple("#categoryCarousel > div.catagoryItemContainer.categoryFilterBarHeight.ng-scope > ul.INACTIVE");
+
 
             browserInstance.Instance.Assert.True(() => inactiveSubCategoriesContainers.Elements.Count == inactiveCategories.Elements.Count);
         }
@@ -90,58 +95,65 @@ namespace TestProj.Tests.Catalogues
         public void VerifyCategoryIcons(Classes.Browser browserInstance)
         {
             // Test Case: o Bakery
-            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(2) > a > img", "#categoryCarousel > div:nth-child(2) > ul > li.heading.ng-binding", "Baby");
+            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(2) > a > img", "#categoryCarousel > div:nth-child(2) > ul > li", "#categoryCarousel > div:nth-child(2) > ul", "Bakery");
 
             // Test Case: o Fruit & Vegetables
-            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(8) > a > img", "#categoryCarousel > div:nth-child(8) > ul > li.heading.ng-binding", "Baby");
+            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(8) > a > img", "#categoryCarousel > div:nth-child(8) > ul > li", "#categoryCarousel > div:nth-child(8) > ul", "Fruit & Vegetables");
 
             // Test Case: o Dairy & Eggs
-            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(5) > a > img", "#categoryCarousel > div:nth-child(5) > ul > li.heading.ng-binding", "Baby");
+            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(5) > a > img", "#categoryCarousel > div:nth-child(5) > ul > li", "#categoryCarousel > div:nth-child(5) > ul", "Dairy & Eggs");
 
             // Test Case: o Meat, Fish & Poultry
-            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(11) > a > img", "#categoryCarousel > div:nth-child(11) > ul > li.heading.ng-binding", "Baby");
+            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(11) > a > img", "#categoryCarousel > div:nth-child(11) > ul > li.heading.ng-binding", "#categoryCarousel > div:nth-child(11) > ul", "Meat,Fish & Poultry");
 
             // Test Case: o Frozen
-            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(7) > a > img", "#categoryCarousel > div:nth-child(7) > ul > li.heading.ng-binding", "Baby");
+            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(7) > a > img", "#categoryCarousel > div:nth-child(7) > ul > li.heading.ng-binding", "#categoryCarousel > div:nth-child(7) > ul", "Frozen");
 
             // Test Case: o Tins, Jars and Cooking
-            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(14) > a > img", "#categoryCarousel > div:nth-child(14) > ul > li.heading.ng-binding", "Baby");
+            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(14) > a > img", "#categoryCarousel > div:nth-child(14) > ul > li.heading.ng-binding", "#categoryCarousel > div:nth-child(14) > ul", "Tins, Jars and Cooking");
 
             // Test Case: o Packets and Cereals
-            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(12) > a > img", "#categoryCarousel > div:nth-child(12) > ul > li.heading.ng-binding", "Baby");
+            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(12) > a > img", "#categoryCarousel > div:nth-child(12) > ul > li.heading.ng-binding", "#categoryCarousel > div:nth-child(12) > ul", "Packets and Cereals");
 
             // Test Case: o Baking
-            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(3) > a > img", "#categoryCarousel > div:nth-child(3) > ul > li.heading.ng-binding", "Baby");
+            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(3) > a > img", "#categoryCarousel > div:nth-child(3) > ul > li.heading.ng-binding", "#categoryCarousel > div:nth-child(3) > ul", "Baking");
 
             // Test Case: o Coffee, Teas and Creamers
-            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(4) > a > img", "#categoryCarousel > div:nth-child(4) > ul > li.heading.ng-binding", "Baby");
+            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(4) > a > img", "#categoryCarousel > div:nth-child(4) > ul > li.heading.ng-binding", "#categoryCarousel > div:nth-child(4) > ul", "Coffee, Teas & Creamers");
 
             // Test Case: o Snacks, Sweets & Biscuits
-            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(13) > a > img", "#categoryCarousel > div:nth-child(13) > ul > li.heading.ng-binding", "Baby");
+            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(13) > a > img", "#categoryCarousel > div:nth-child(13) > ul > li.heading.ng-binding", "#categoryCarousel > div:nth-child(13) > ul", "Snacks, Sweets & Biscuits");
 
             // Test Case: o Drinks
-            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(6) > a > img", "#categoryCarousel > div:nth-child(6) > ul > li.heading.ng-binding", "Baby");
+            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(6) > a > img", "#categoryCarousel > div:nth-child(6) > ul > li.heading.ng-binding", "#categoryCarousel > div:nth-child(6) > ul", "Drinks");
 
             // Test Case: o Household
-            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(10) > a > img", "#categoryCarousel > div:nth-child(10) > ul > li.heading.ng-binding", "Baby");
+            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(10) > a > img", "#categoryCarousel > div:nth-child(10) > ul > li.heading.ng-binding", "#categoryCarousel > div:nth-child(10) > ul", "Household");
 
             // Test Case: o Baby
-            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(1) > a > img", "#categoryCarousel > div:nth-child(1) > ul > li.heading.ng-binding", "Baby");
+            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(1) > a > img", "#categoryCarousel > div:nth-child(1) > ul > li.heading.ng-binding", "#categoryCarousel > div:nth-child(1) > ul", "Baby");
 
             // Test Case: o Health and Beauty 
-            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(9) > a > img", "#categoryCarousel > div:nth-child(9) > ul > li.heading.ng-binding", "Baby");
+            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(9) > a > img", "#categoryCarousel > div:nth-child(9) > ul > li.heading.ng-binding", "#categoryCarousel > div:nth-child(9) > ul", "Health and Beauty");
 
             // Test Case: o Other  
-            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(15) > a > img", "#categoryCarousel > div:nth-child(15) > ul > li.heading.ng-binding", "Baby");
+            VerifyCategoryIcon(browserInstance, "#categoryCarousel > div:nth-child(15) > a > img", "#categoryCarousel > div:nth-child(15) > ul > li.heading.ng-binding", "#categoryCarousel > div:nth-child(15) > ul", "Other");
 
         }
 
-        public void VerifyCategoryIcon(Classes.Browser browserInstance, string iconImagePath, string categoryItemPath, string categoryName)
+        public void VerifyCategoryIcon(Classes.Browser browserInstance, string iconImagePath, string categoryItemPath, string categoryClassPath, string categoryName)
         {
             browserInstance.Instance.Assert.Exists(iconImagePath);
             browserInstance.Instance.Assert.Exists(categoryItemPath);
             var categoryItem = Helpers.Instance.GetProxy(browserInstance, categoryItemPath);
-            browserInstance.Instance.Assert.True(() => categoryItem.Element.Text == categoryName);
+
+            //Category name is only available when the item is clicked
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, iconImagePath.Replace(" > img", "")));
+
+            var categoryItemUL = Helpers.Instance.GetProxy(browserInstance, categoryClassPath);
+
+            Helpers.Instance.CheckProxyValue(browserInstance, categoryItem, categoryName);
+            //browserInstance.Instance.Assert.True(() => categoryItem.Element.Text == categoryName);
         }
 
         // Test Case: 7. Verify that brands are displayed and user can scroll from left to right  
@@ -368,7 +380,7 @@ namespace TestProj.Tests.Catalogues
         {
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.itemTotal.centered.ng-binding");
             var total = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.itemTotal.centered.ng-binding");
-           
+
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button"));
             browserInstance.Instance.Assert.Value(" 0.00 ").Not.In(total);
@@ -391,7 +403,7 @@ namespace TestProj.Tests.Catalogues
 
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.itemTotal.centered.ng-binding");
             var total = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.itemTotal.centered.ng-binding");
-           
+
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.unitPrice.ng-binding");
             var price = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.unitPrice.ng-binding");
 
@@ -400,13 +412,13 @@ namespace TestProj.Tests.Catalogues
 
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button"));
-            
+
             string totalValue = (Convert.ToDecimal(quantityInput.Element.Value.Trim()) * Convert.ToDecimal(price.Element.Text.Trim())).ToString();
             browserInstance.Instance.Assert.Value(totalValue).In(total);
 
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.decrease > button");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.decrease > button"));
-            
+
             totalValue = (Convert.ToDecimal(quantityInput.Element.Value.Trim()) * Convert.ToDecimal(price.Element.Text.Trim())).ToString();
             browserInstance.Instance.Assert.Value(totalValue).In(total);
         }

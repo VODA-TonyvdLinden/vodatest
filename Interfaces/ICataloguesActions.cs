@@ -10,7 +10,7 @@ namespace TestProj.Interfaces
         void VerifyInActiveCatalogueAndSubCategories(Classes.Browser browserInstance);
         void VerifyCatalogueIconList(Classes.Browser browserInstance);
         void VerifyCategoryIcons(Classes.Browser browserInstance);
-        void VerifyCategoryIcon(Classes.Browser browserInstance, string iconImagePath, string categoryItemPath, string categoryName);
+        void VerifyCategoryIcon(Classes.Browser browserInstance, string iconImagePath, string categoryItemPath,string categoryClassPath, string categoryName);
         void VerifyBrandList(Classes.Browser browserInstance);
         void VerifySpecials(Classes.Browser browserInstance);
         void VerifyCategoryClick(Classes.Browser browserInstance, out FluentAutomation.ElementProxy category, out FluentAutomation.ElementProxy subCategories);

@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-01-07" time="15:41:02">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-01-19" time="10:52:53">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="66.498" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="61.123" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="66.497" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="61.105" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="66.496" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="61.105" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Catalogues" executed="True" result="Failure" success="False" time="66.494" asserts="0">
+              <test-suite type="Namespace" name="Catalogues" executed="True" result="Failure" success="False" time="61.104" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Catalogues" description="Catalogues" executed="True" result="Failure" success="False" time="66.493" asserts="0">
+                  <test-suite type="TestFixture" name="Catalogues" description="Catalogues" executed="True" result="Failure" success="False" time="61.101" asserts="0">
                     <categories>
                       <category name="Catalogues" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Catalogues.Catalogues._02_CatalogueLandingPage" description="_02_CatalogueLandingPage" executed="True" result="Error" success="False" time="3.144" asserts="0">
+                      <test-case name="TestProj.Tests.Catalogues.Catalogues._02_CatalogueLandingPage" description="_02_CatalogueLandingPage" executed="True" result="Error" success="False" time="12.284" asserts="0">
                         <categories>
                           <category name="Catalogues" />
                         </categories>
@@ -24,13 +24,13 @@
                           <property name="Repeat" value="1" />
                         </properties>
                         <failure>
-                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : An unexpected exception was thrown inside WaitUntil(Action). See InnerException for details.
-  ----> System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_ICataloguesActions_a6ad912d3f64485c86703b92dd1c51fd.VerifyActiveCatalogueAndSubCategories(Browser browserInstance)
-at TestProj.Tests.Catalogues.Catalogues._02_CatalogueLandingPage() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Catalogues\Catalogues.cs:line 149
---NullReferenceException
-at lambda_method(Closure )
-at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected element [#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div]'s CSS property [overflow-x] to have a value of [scroll] but it was actually [visible].]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_ICataloguesActions_4f51c68e3fed4231bbeebbe22ad959e2.VerifyBrandList(Browser browserInstance)
+at TestProj.Tests.Catalogues.Catalogues._02_CatalogueLandingPage() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Catalogues\Catalogues.cs:line 165
+--FluentAssertFailedException
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass1b.<CssProperty>b__1a()
 at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
 ]]></stack-trace>
                         </failure>

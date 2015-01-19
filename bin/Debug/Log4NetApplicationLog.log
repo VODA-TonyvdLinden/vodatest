@@ -11083,3 +11083,501 @@ BAKING POWDER REF POUCH SNOWFLAKE 200G P
 2015-01-07 15:39:55,887 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
 2015-01-07 15:40:57,283 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 2 seconds
 2015-01-07 15:40:58,138 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 09:14:34,643 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 09:14:34,706 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 09:15:51,523 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInterstitialAdvert executed in 6 seconds
+2015-01-19 09:15:52,421 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInterstitialAdvertClick executed in 0 seconds
+2015-01-19 09:15:53,188 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 0 seconds
+2015-01-19 09:15:54,509 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 1 seconds
+2015-01-19 09:16:01,407 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_ClickSubCategory executed in 6 seconds
+2015-01-19 09:16:10,275 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_ClickSubCategory executed in 6 seconds
+2015-01-19 09:16:16,772 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_ClickSubCategory executed in 6 seconds
+2015-01-19 09:16:23,278 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_ClickSubCategory executed in 6 seconds
+2015-01-19 09:19:09,526 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 09:19:09,531 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 09:20:02,286 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 1 seconds
+2015-01-19 09:20:03,575 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 1 seconds
+2015-01-19 09:22:24,380 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 09:22:24,450 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 09:23:28,360 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 5 seconds
+2015-01-19 09:23:28,685 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - start
+2015-01-19 09:23:28,693 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 8
+2015-01-19 09:23:28,700 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 8
+2015-01-19 09:23:28,701 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - end
+2015-01-19 09:23:29,965 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 1 seconds
+2015-01-19 09:24:56,167 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 09:24:56,238 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 09:26:04,612 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 3 seconds
+2015-01-19 09:26:05,592 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 09:29:36,945 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 09:29:37,015 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 09:30:51,096 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 09:30:51,165 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 09:31:57,545 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 1 seconds
+2015-01-19 09:31:57,840 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - start
+2015-01-19 09:31:57,840 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 8
+2015-01-19 09:31:57,840 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 8
+2015-01-19 09:31:57,840 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - end
+2015-01-19 09:31:57,842 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:31:57,842 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:31:58,629 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 1 seconds
+2015-01-19 09:33:42,990 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 09:33:43,058 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 09:34:43,351 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 2 seconds
+2015-01-19 09:34:43,622 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:34:43,622 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:34:43,623 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:34:43,623 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:34:43,623 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:34:43,623 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:34:43,623 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:34:43,624 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:34:43,624 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:34:43,624 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:34:43,624 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:34:43,624 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:34:43,625 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:34:43,625 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:34:43,625 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:34:43,625 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:34:43,925 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 09:34:43,998 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 09:34:44,046 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
+                                    '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.
+2015-01-19 09:34:44,046 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueIconList executed in 0 seconds
+2015-01-19 09:34:50,102 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCategoryIcons executed in 6 seconds
+2015-01-19 09:49:13,650 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 09:49:13,720 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 09:50:20,962 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 4 seconds
+2015-01-19 09:50:21,247 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:50:21,248 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:50:21,248 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:50:21,248 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:50:21,248 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:50:21,248 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:50:21,248 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:50:21,248 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:50:21,248 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:50:21,248 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:50:21,248 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:50:21,248 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:50:21,248 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:50:21,249 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:50:21,249 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 09:50:21,249 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 09:50:21,582 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 09:50:22,255 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 09:50:22,617 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
+                                    '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.
+2015-01-19 09:50:22,943 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueIconList executed in 0 seconds
+2015-01-19 09:50:29,702 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCategoryIcons executed in 6 seconds
+2015-01-19 10:11:33,145 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 10:11:33,216 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 10:12:26,323 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 1 seconds
+2015-01-19 10:12:26,640 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:12:26,641 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:12:26,641 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:12:26,641 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:12:26,641 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:12:26,641 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:12:26,641 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:12:26,642 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:12:26,642 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:12:26,642 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:12:26,642 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:12:26,642 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:12:26,642 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:12:26,642 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:12:26,643 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:12:26,643 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:12:26,975 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:12:27,653 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:12:28,016 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
+                                    '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.
+2015-01-19 10:12:28,339 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueIconList executed in 0 seconds
+2015-01-19 10:12:28,686 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Bakery
+2015-01-19 10:12:34,882 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCategoryIcons executed in 6 seconds
+2015-01-19 10:15:00,928 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 10:15:00,998 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 10:15:52,412 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 1 seconds
+2015-01-19 10:15:52,704 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:15:52,704 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:15:52,705 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:15:52,705 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:15:52,705 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:15:52,705 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:15:52,705 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:15:52,705 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:15:52,706 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:15:52,706 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:15:52,706 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:15:52,706 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:15:52,706 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:15:52,706 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:15:52,706 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:15:52,706 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:15:53,039 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:15:53,703 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:15:54,068 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
+                                    '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.
+2015-01-19 10:15:54,390 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueIconList executed in 0 seconds
+2015-01-19 10:15:54,731 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Bakery
+2015-01-19 10:15:54,753 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:16:01,112 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCategoryIcons executed in 6 seconds
+2015-01-19 10:21:10,941 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 10:21:11,009 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 10:21:59,364 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 1 seconds
+2015-01-19 10:21:59,624 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:21:59,624 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:21:59,624 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:21:59,625 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:21:59,625 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:21:59,625 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:21:59,625 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:21:59,625 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:21:59,625 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:21:59,626 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:21:59,626 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:21:59,626 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:21:59,626 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:21:59,626 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:21:59,626 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:21:59,626 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:21:59,921 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:22:00,582 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:22:00,943 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
+                                    '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.
+2015-01-19 10:22:01,257 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueIconList executed in 0 seconds
+2015-01-19 10:22:01,595 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Bakery
+2015-01-19 10:22:01,619 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:22:08,003 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCategoryIcons executed in 6 seconds
+2015-01-19 10:24:47,536 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 10:24:47,606 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 10:25:39,367 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 4 seconds
+2015-01-19 10:25:39,648 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:25:39,649 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:25:39,649 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:25:39,649 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:25:39,649 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:25:39,650 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:25:39,650 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:25:39,650 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:25:39,650 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:25:39,650 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:25:39,651 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:25:39,651 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:25:39,651 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:25:39,651 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:25:39,651 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:25:39,651 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:25:39,996 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:25:40,681 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:25:41,048 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
+                                    '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.
+2015-01-19 10:25:41,386 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueIconList executed in 0 seconds
+2015-01-19 10:25:42,078 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCategoryIcons executed in 0 seconds
+2015-01-19 10:26:40,878 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 10:26:40,948 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 10:27:29,881 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 1 seconds
+2015-01-19 10:27:30,124 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:27:30,125 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:27:30,125 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:27:30,125 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:27:30,125 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:27:30,125 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:27:30,125 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:27:30,126 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:27:30,126 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:27:30,126 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:27:30,126 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:27:30,127 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:27:30,127 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:27:30,127 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:27:30,127 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:27:30,127 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:27:30,357 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:27:30,905 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:27:31,280 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
+                                    '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.
+2015-01-19 10:27:31,626 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueIconList executed in 0 seconds
+2015-01-19 10:27:32,002 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - dropdown-menu INACTIVE
+2015-01-19 10:27:32,002 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Bakery
+2015-01-19 10:27:32,027 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:27:38,179 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCategoryIcons executed in 6 seconds
+2015-01-19 10:33:44,075 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 10:33:44,147 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 10:34:34,420 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 4 seconds
+2015-01-19 10:34:34,678 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:34:34,679 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:34:34,679 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:34:34,679 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:34:34,680 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:34:34,680 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:34:34,680 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:34:34,680 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:34:34,680 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:34:34,681 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:34:34,681 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:34:34,681 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:34:34,681 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:34:34,681 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:34:34,681 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:34:34,681 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:34:35,032 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:34:35,718 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:34:36,090 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
+                                    '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.
+2015-01-19 10:34:36,430 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueIconList executed in 0 seconds
+2015-01-19 10:34:36,805 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Bakery, item is disabled
+2015-01-19 10:34:36,842 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Fruit & Vegetables, item is disabled
+2015-01-19 10:34:43,281 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCategoryIcons executed in 6 seconds
+2015-01-19 10:36:38,000 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 10:36:38,072 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 10:37:29,900 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 4 seconds
+2015-01-19 10:37:30,187 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:37:30,188 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:37:30,188 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:37:30,188 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:37:30,188 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:37:30,188 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:37:30,188 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:37:30,189 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:37:30,189 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:37:30,189 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:37:30,189 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:37:30,189 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:37:30,189 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:37:30,189 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:37:30,190 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:37:30,190 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:37:30,517 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:37:31,175 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:37:31,533 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
+                                    '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.
+2015-01-19 10:37:31,857 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueIconList executed in 0 seconds
+2015-01-19 10:37:32,224 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Bakery, item is disabled
+2015-01-19 10:37:32,263 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Fruit & Vegetables, item is disabled
+2015-01-19 10:37:38,448 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCategoryIcons executed in 6 seconds
+2015-01-19 10:40:59,255 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 10:40:59,258 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 10:41:38,312 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 1 seconds
+2015-01-19 10:41:38,584 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:41:38,584 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:41:38,584 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:41:38,584 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:41:38,585 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:41:38,585 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:41:38,585 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:41:38,585 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:41:38,585 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:41:38,586 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:41:38,586 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:41:38,586 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:41:38,586 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:41:38,586 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:41:38,586 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:41:38,586 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:41:38,932 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:41:39,603 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:41:39,966 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
+                                    '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.
+2015-01-19 10:41:40,291 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueIconList executed in 0 seconds
+2015-01-19 10:41:40,651 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Bakery, item is disabled
+2015-01-19 10:41:40,686 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Fruit & Vegetables, item is disabled
+2015-01-19 10:41:47,124 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCategoryIcons executed in 6 seconds
+2015-01-19 10:42:59,540 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 10:42:59,611 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 10:43:44,550 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 1 seconds
+2015-01-19 10:43:44,834 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:43:44,834 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:43:44,834 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:43:44,835 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:43:44,835 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:43:44,835 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:43:44,835 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:43:44,835 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:43:44,835 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:43:44,836 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:43:44,836 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:43:44,836 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:43:44,836 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:43:44,836 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:43:44,836 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:43:44,836 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:43:45,171 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:43:45,839 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:43:46,195 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
+                                    '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.
+2015-01-19 10:43:46,520 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueIconList executed in 0 seconds
+2015-01-19 10:43:46,891 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:43:46,909 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Bakery, item is disabled
+2015-01-19 10:43:46,952 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:43:46,970 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Fruit & Vegetables, item is disabled
+2015-01-19 10:43:47,010 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:43:53,449 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCategoryIcons executed in 6 seconds
+2015-01-19 10:44:36,878 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 10:44:36,951 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 10:45:23,460 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 1 seconds
+2015-01-19 10:45:23,737 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:45:23,738 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:45:23,738 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:45:23,738 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:45:23,738 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:45:23,738 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:45:23,739 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:45:23,739 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:45:23,739 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:45:23,739 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:45:23,739 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:45:23,739 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:45:23,739 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:45:23,739 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:45:23,740 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:45:23,740 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:45:24,062 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:45:24,708 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:45:25,058 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
+                                    '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.
+2015-01-19 10:45:25,391 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueIconList executed in 0 seconds
+2015-01-19 10:45:25,750 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:45:25,765 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:45:25,785 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Bakery, item is disabled
+2015-01-19 10:45:25,824 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:45:25,841 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:45:25,858 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Fruit & Vegetables, item is disabled
+2015-01-19 10:45:25,898 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:45:25,914 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:45:32,124 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCategoryIcons executed in 6 seconds
+2015-01-19 10:47:43,338 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 10:47:43,409 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 10:48:30,943 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 1 seconds
+2015-01-19 10:48:31,237 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:48:31,237 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:48:31,237 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:48:31,237 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:48:31,238 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:48:31,238 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:48:31,238 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:48:31,238 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:48:31,238 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:48:31,238 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:48:31,238 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:48:31,239 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:48:31,239 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:48:31,239 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:48:31,239 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:48:31,239 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:48:31,567 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:48:32,237 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:48:32,598 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
+                                    '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.
+2015-01-19 10:48:32,926 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueIconList executed in 0 seconds
+2015-01-19 10:48:33,327 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:48:33,344 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:48:33,363 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Bakery, item is disabled
+2015-01-19 10:48:33,450 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:48:33,466 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:48:33,484 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Fruit & Vegetables, item is disabled
+2015-01-19 10:48:33,574 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Dairy & Eggs
+2015-01-19 10:48:33,592 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Dairy & Eggs
+2015-01-19 10:48:33,724 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:48:33,741 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:48:33,761 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Meat,Fish & Poultry, item is disabled
+2015-01-19 10:48:33,849 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:48:33,865 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:48:33,883 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Frozen, item is disabled
+2015-01-19 10:48:33,967 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:48:33,985 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:48:34,003 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Tins, Jars and Cooking, item is disabled
+2015-01-19 10:48:34,073 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:48:34,090 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - 
+2015-01-19 10:48:40,326 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCategoryIcons executed in 7 seconds
+2015-01-19 10:49:58,556 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 10:49:58,625 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 10:50:44,347 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 0 seconds
+2015-01-19 10:50:44,625 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:50:44,626 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:50:44,626 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:50:44,626 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:50:44,627 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:50:44,627 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:50:44,627 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:50:44,627 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:50:44,627 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:50:44,627 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:50:44,628 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:50:44,628 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:50:44,628 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:50:44,628 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:50:44,628 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:50:44,628 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:50:44,900 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:50:45,560 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:50:45,904 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
+                                    '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.
+2015-01-19 10:50:46,220 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueIconList executed in 0 seconds
+2015-01-19 10:50:46,614 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Bakery
+2015-01-19 10:50:46,631 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Bakery
+2015-01-19 10:50:46,649 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Bakery, item is disabled
+2015-01-19 10:50:46,756 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Fruit & Vegetables
+2015-01-19 10:50:46,774 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Fruit & Vegetables
+2015-01-19 10:50:46,791 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Fruit & Vegetables, item is disabled
+2015-01-19 10:50:46,864 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Dairy & Eggs
+2015-01-19 10:50:46,883 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Dairy & Eggs
+2015-01-19 10:50:47,018 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Meat,Fish & Poultry
+2015-01-19 10:50:47,036 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Meat,Fish & Poultry
+2015-01-19 10:50:47,054 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Meat,Fish & Poultry, item is disabled
+2015-01-19 10:50:47,130 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Frozen
+2015-01-19 10:50:47,149 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Frozen
+2015-01-19 10:50:47,168 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Frozen, item is disabled
+2015-01-19 10:50:47,247 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Tins, Jars and Cooking
+2015-01-19 10:50:47,264 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Tins, Jars and Cooking
+2015-01-19 10:50:47,283 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Tins, Jars and Cooking, item is disabled
+2015-01-19 10:50:47,359 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Packets and Cereals
+2015-01-19 10:50:47,377 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Packets and Cereals
+2015-01-19 10:50:47,512 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Baking
+2015-01-19 10:50:47,529 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Baking
+2015-01-19 10:50:47,659 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Coffee, Teas & Creamers
+2015-01-19 10:50:47,677 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Coffee, Teas & Creamers
+2015-01-19 10:50:47,810 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Snacks, Sweets & Biscuits
+2015-01-19 10:50:47,829 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Snacks, Sweets & Biscuits
+2015-01-19 10:50:47,963 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Drinks
+2015-01-19 10:50:47,981 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Drinks
+2015-01-19 10:50:47,999 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Drinks, item is disabled
+2015-01-19 10:50:48,074 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Household
+2015-01-19 10:50:48,094 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Household
+2015-01-19 10:50:48,237 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Baby
+2015-01-19 10:50:48,255 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Baby
+2015-01-19 10:50:48,391 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Health and Beauty
+2015-01-19 10:50:48,409 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Health and Beauty
+2015-01-19 10:50:48,546 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Other
+2015-01-19 10:50:48,565 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - Other
+2015-01-19 10:50:48,584 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Unable to check category name for Other, item is disabled
+2015-01-19 10:50:48,902 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCategoryIcons executed in 2 seconds
+2015-01-19 10:50:54,910 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyBrandList executed in 6 seconds
+2015-01-19 10:51:52,729 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 10:51:52,799 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 10:52:38,345 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 1 seconds
+2015-01-19 10:52:38,600 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:52:38,601 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:52:38,601 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:52:38,601 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:52:38,601 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:52:38,601 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:52:38,602 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:52:38,602 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:52:38,602 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:52:38,602 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:52:38,602 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:52:38,602 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:52:38,602 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:52:38,603 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:52:38,603 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 10:52:38,603 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-19 10:52:38,905 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:52:39,570 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-19 10:52:39,936 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
+                                    '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.
+2015-01-19 10:52:40,267 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueIconList executed in 0 seconds
+2015-01-19 10:52:42,557 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCategoryIcons executed in 2 seconds
+2015-01-19 10:52:49,121 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyBrandList executed in 6 seconds

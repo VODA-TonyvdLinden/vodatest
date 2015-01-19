@@ -527,6 +527,10 @@ namespace TestProj.Tests.Common
         {
             browserInstance.Instance.Assert.Value(value).In(proxy);
         }
+        public void CheckProxyText(Classes.Browser browserInstance, FluentAutomation.ElementProxy proxy, string value)
+        {
+            browserInstance.Instance.Assert.Text(value).In(proxy);
+        }
 
         public void CheckOrderPopup(Classes.Browser browserInstance, string errorMessage)
         {
