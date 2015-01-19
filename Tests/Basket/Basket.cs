@@ -36,9 +36,7 @@ namespace TestProj.Tests.Basket
             Helpers.Instance.Activate(browserInstance, false);
 
         }
-
-
-
+        
         [TestFixtureTearDown]
         public void TearDown()
         {

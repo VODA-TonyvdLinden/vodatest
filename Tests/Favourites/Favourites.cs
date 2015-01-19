@@ -28,6 +28,8 @@ namespace TestProj.Tests.Favourites
             container.AddNewExtension<Interception>();
 
             container.RegisterType<Interfaces.IFavouritesActions, Tests.Favourites.FavouritesActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
+            container.RegisterType<Interfaces.IBasketActions, Tests.Basket.BasketActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
+            container.RegisterType<Interfaces.ICataloguesActions, Tests.Catalogues.CataloguesActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
 
             Helpers.Instance.Activate(browserInstance, false);
         }
@@ -48,57 +50,36 @@ namespace TestProj.Tests.Favourites
         /// Pre-Condition: None
         /// Environment: Application landing page
         /// TEST STEPS:
-        /// 1.Click on the favourites block on the bottom of the screen 
-        /// 2.Verify that delete orders from a specific supplier functions as expected                                                              
-        /// 2.1 Select a specific supplier by clicking  on the checkbox    
-        /// 2.2 Click on the delete icon    
-        /// 3.Verify that clear all from all basket functions as expected                                                      
-        /// 3.1 Select more than one  supplier by clicking  on the checkboxes of different suppliers 
-        /// 3.2 Click on the clear <all> button  
+        /// 1. Click on the favourites block on the bottom of the screen                                                             
+        /// 2. Click on the delete icon    
+        /// 3. Click on the clear <all> button
         /// 4. Verify that the list view button is displayed
         /// TEST OUTPUT:
-        /// 1. The favourites page is displayed with catalogues in grid view    
-        /// 2.                                                                                                                                                                                                                   
-        /// 2.1 The checkbox on the supplier is clicked   
-        /// 2.2 The order is deleted from that supplier 
-        /// 3.                                                                                                                                                                                                                                                                                                                                                                                                                   
-        /// 3.1 The checkboxes for different suppliers are selected
-        /// 3.2 This clear all selected catalogue basket
+        /// 1. The favourites page is displayed with catalogues in grid view  
+        /// 2. The order is deleted from that supplier
+        /// 3. This clear all selected catalogue basket
         /// 4. The list view button is displayed 
         /// </summary>
         [Test, Description("_01_FavouritesInGridView"), Category("Favourites"), Repeat(1)]
         public void _01_FavouritesInGridView()
         {
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
-            Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
 
-            catalogueActions.AddFavouriteProduct(browserInstance);
+            Helpers.Instance.AddFavouriteItem(browserInstance);
 
             // Test Case: 1. Click on the favourites block on the bottom of the screen 
             // Test Output: 1. The favourites page is displayed with catalogues in grid view
             favActions.VerifyFavouriteIconClick(browserInstance);
 
-            // Test Case: 2. Verify that delete orders from a specific supplier functions as expected                                                              
-            // Test Case: 2.1 Select a specific supplier by clicking  on the checkbox    
-            // Test Output: 2.1 The checkbox on the supplier is clicked 
-            LogWriter.Instance.Log(@"TESTCASE:ISSUE 114: _01_FavouritesInGridView -> Test step we do not have the checkbox to select a specific supplier.'
-                                    '2.1 Select a specific supplier by clicking  on the checkbox ' - Test case to be updated.", LogWriter.eLogType.Error);
-
-            // Test Case: 2.2 Click on the delete icon    
-            // Test Output: 2.2 The order is deleted from that supplier
+            // Test Case: 2 Click on the delete icon    
+            // Test Output: 2 The order is deleted from that supplier
             favActions.VerifyDeleteIcon(browserInstance);
 
-            // Test Case: 3. Verify that clear all from all basket functions as expected  
-            catalogueActions.AddFavouriteProduct(browserInstance);
+            // Test Case: 3 Click on the clear <all> button  
+            // Test Output: 3 This clear all selected catalogue basket
+            Helpers.Instance.AddFavouriteItem(browserInstance);
             favActions.VerifyFavouriteIconClick(browserInstance);
 
-            // Test Case: 3.1 Select more than one  supplier by clicking  on the checkboxes of different suppliers 
-            // Test Output: 3.1 The checkboxes for different suppliers are selected
-            LogWriter.Instance.Log(@"TESTCASE:ISSUE 114: _01_FavouritesInGridView -> Test step we do not have the checkbox to select a specific supplier. '. 
-                                    '3.1 Select more than one  supplier by clicking  on the checkboxes of different suppliers ' - Test case to be updated.", LogWriter.eLogType.Error);
-
-            // Test Case: 3.2 Click on the clear <all> button  
-            // Test Output: 3.2 This clear all selected catalogue basket
             favActions.VerifyClearAllButtonClick(browserInstance);
 
             // Test Case: 4. Verify that the list view button is displayed
@@ -114,23 +95,15 @@ namespace TestProj.Tests.Favourites
         /// Pre-Condition: None
         /// Environment: Favourites landing page
         /// TEST STEPS:
-        /// 1 Click on the list view button on the screen   
-        /// 2. Click on the subcategory product  
-        /// 3.Verify that delete orders from a specific supplier functions as expected                                                              
-        /// 3.1 Select a specific supplier by clicking  on the checkbox 
-        /// 4.Verify that clear all from all basket functions as expected                                                              
-        /// 4.1 Select more than one  supplier by clicking  on the checkboxes of different suppliers    
-        /// 4.2 Click on the clear <all> button    
-        /// 5. Verify that the grid view button is displayed  
+        /// 1. Click on the list view button on the screen   
+        /// 2. Click on the Supplier image    
+        /// 3. Click on the clear <all> button    
+        /// 4. Verify that the grid view button is displayed  
         /// TEST OUTPUT:
         /// 1 The display mode switches to list view where items are displayed in a tabular format   
         /// 2. product are displayed  
-        /// 3                                                                                                                                                                                                            
-        /// 3.1The checkbox on the supplier is clicked   
-        /// 4.                                                                                                                                                                                                                                                                                                                                                                                                                   
-        /// 4.1 The checkboxes for different suppliers are selected  
-        /// 4.2 This clear all selected catalogue basket   
-        /// 5. The list view button is displayed      
+        /// 3. This clear all selected catalogue basket   
+        /// 4. The list view button is displayed      
         /// </summary>
         [Test, Description("_02_FavouritesInListView"), Category("Favourites"), Repeat(1)]
         public void _02_FavouritesInListView()
@@ -138,39 +111,28 @@ namespace TestProj.Tests.Favourites
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
 
-            catalogueActions.AddFavouriteProduct(browserInstance);
+            Helpers.Instance.AddFavouriteItem(browserInstance);
+
             favActions.VerifyFavouriteIconClick(browserInstance);
 
             // Test Case: 1 Click on the list view button on the screen
             // Test Output: 1 The display mode switches to list view where items are displayed in a tabular format 
             favActions.VerifyListViewClick(browserInstance);
 
-            // Test Case: 2. Click on the subcategory product
+            // Test Case: 2. Click on the Supplier image   
             // Test Output: 2. product are displayed 
+            LogWriter.Instance.Log(@"TESTCASE:ISSUE 114: _02_FavouritesInListView -> Test step we do not have the an supplier image to click when the view type is list view. '. 
+                                    '2. Click on the Supplier image' - Test case to be updated.", LogWriter.eLogType.Error);
             favActions.VerifyListViewProductClick(browserInstance);
 
-            // Test Case: 3.Verify that delete orders from a specific supplier functions as expected
-            // Test Case:  3.1 Select a specific supplier by clicking  on the checkbox 
-            // Test Output: 3.1 The checkbox on the supplier is clicked
-            LogWriter.Instance.Log(@"TESTCASE:ISSUE 114: _02_FavouritesInListView -> Test step we do not have the checkbox to select a specific supplier. '. 
-                                    '3.1 Select a specific supplier by clicking  on the checkbox ' - Test case to be updated.", LogWriter.eLogType.Error);
-            LogWriter.Instance.Log(@"TESTCASE:ISSUE 115: _02_FavouritesInListView -> Test step is not complete.' 
-                                    '3.1 Select a specific supplier by clicking  on the checkbox ' - Test case to be updated.", LogWriter.eLogType.Error);
-
-            // Test Case: 4.Verify that clear all from all basket functions as expected  
-            // Test Case: 4.1 Select more than one  supplier by clicking  on the checkboxes of different suppliers 
-            // Test Output: 4.1 The checkboxes for different suppliers are selected  
-            LogWriter.Instance.Log(@"TESTCASE:ISSUE 114: _02_FavouritesInListView -> Test step we do not have the checkbox to select a specific supplier. '. 
-                                    '4.1 Select more than one  supplier by clicking  on the checkboxes of different suppliers  ' - Test case to be updated.", LogWriter.eLogType.Error);
-
-            // Test Case: 4.2 Click on the clear <all> button  
-            // Test Output: 4.2 This clear all selected catalogue basket 
+            // Test Case: 3. Click on the clear <all> button 
+            // Test Output: 3. This clear all selected catalogue basket
             favActions.VerifyClearAllButtonClick(browserInstance);
 
-            // Test Case: 5. Verify that the grid view button is displayed
-            // Test Output: 5. The list view button is displayed
+            // Test Case: 4. Verify that the grid view button is displayed       
+            // Test Output: 4. The list view button is displayed 
             favActions.VerifyGridViewButton(browserInstance);
-            LogWriter.Instance.Log(@"TESTCASE:ISSUE 116:_02_FavouritesInListView -> Test step the expected output is not correct.' 
+            LogWriter.Instance.Log(@"TESTCASE:ISSUE 115:_02_FavouritesInListView -> Test step the expected output is not correct.' 
                                     '5. Verify that the grid view button is displayed' - Test case to be updated.", LogWriter.eLogType.Error);
         }
 
@@ -185,17 +147,13 @@ namespace TestProj.Tests.Favourites
         /// 1. Click on the <grid view> button      
         /// 2. Verify that on the list view the is a grid view button that will allow to switch back 
         /// 3. Verify that order from a specific supplier functions as expected                                                                                
-        /// 3.1 Select a specific supplier by clicking  on any record from the table  
-        /// 3.2 Click on the order now 
-        /// 4.Verify that delete orders from a specific supplier functions as expected                                                              
-        /// 4.1  Select a specific supplier by clicking  on any record from the table  
-        /// 4.2 Click on the delete icon   
-        /// 5.Verify that order all from basket  functions as expected                                                                                             
-        /// 5.1 Select more than one  supplier by clicking  on multiple rows on the table  
-        /// 5.2 Click on the order all button     
-        /// 6.Verify that clear all from all basket functions as expected                                                               
-        /// 6.1 Select more than one  supplier by clicking  on multiple rows on the table    
-        /// 6.2 Click on the clear <all> button  
+        /// 3.1. Select a specific supplier by clicking  on any record from the table  
+        /// 3.2. Click on the order now 
+        /// 4. Verify that delete orders from a specific supplier functions as expected                                                              
+        /// 4.1.  Select a specific supplier by clicking  on any record from the table  
+        /// 4.2. Click on the delete icon   
+        /// 5. Click on the order all button  
+        /// 6. Click on the clear <all> button  
         /// TEST OUTPUT:
         /// 1. Favourites  items are displayed  are displayed in a grid view         
         /// 2. The grid view button is displayed   
@@ -205,21 +163,16 @@ namespace TestProj.Tests.Favourites
         /// 4.                                                                                                                                                                                                                   
         /// 4.1 The record on the list view table is selected   
         /// 4.2 The order is deleted from that supplier 
-        /// 5.                                                                                                                                                                                                                 
-        /// 5.1 Multiple records on the list view table are selected   
-        /// 5.2 The confirm order pop-up is displayed  
-        /// 6.                                                                                                                                                                                                                 
-        /// 6.1 Multiple records on the list view table are selected      
-        /// 6.2 This clear all selected catalogue basket    
+        /// 5. The confirm order pop-up is displayed  
+        /// 6. This clear all selected catalogue basket    
         /// </summary>
         [Test, Description("_03_FavouritesDetailGridView"), Category("Favourites"), Repeat(1)]
         public void _03_FavouritesDetailGridView()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
-            Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
 
-            catalogueActions.AddFavouriteProduct(browserInstance);
+            Helpers.Instance.AddFavouriteItem(browserInstance);
             favActions.VerifyFavouriteIconClick(browserInstance);
 
             // Test Case: 1. Click on the <grid view> button 
@@ -241,23 +194,17 @@ namespace TestProj.Tests.Favourites
             // Test Case: 4.Verify that delete orders from a specific supplier functions as expected 
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.modal-header > div > button");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.modal-header > div > button"));
+
             favActions.VerifyGridViewProductOrderDelete(browserInstance);
 
-            // Test Case: 5.Verify that order all from basket  functions as expected                                                                                             
-            // Test Case: 5.1 Select more than one  supplier by clicking  on multiple rows on the table  
-            // Test Case: 5.2 Click on the order all button     
-            // Test Output: 5.2 The confirm order pop-up is displayed  
+            // Test Case:  5. Click on the order all button                                             
+            // Test Output: 5. The confirm order pop-up is displayed
             LogWriter.Instance.Log(@"TESTCASE:ISSUE 118: _03_FavouritesDetailGridView -> Test step we do not have the order all button in the favourite tab and we do not have the ability to select more than supplier.' 
-                                    '5.Verify that order all from basket  functions as expected ' - Test case to be updated.", LogWriter.eLogType.Error);
+                                    '5. Click on the order all button ' - Test case to be updated.", LogWriter.eLogType.Error);
 
-            // Test Case 6.Verify that clear all from all basket functions as expected                                                               
-            // Test Case 6.1 Select more than one  supplier by clicking  on multiple rows on the table    
-            // Test Case 6.2 Click on the clear <all> button  
-            // Test Output: 6.2 This clear all selected catalogue basket
-            catalogueActions.AddFavouriteProduct(browserInstance);
-            favActions.VerifyFavouriteIconClick(browserInstance);
-            favActions.VerifyGridViewProductClick(browserInstance);
-            favActions.VerifyGridViewClearAllButtonClick(browserInstance, catalogueActions);
+            // Test Case 6. Click on the clear <all> button                                                             
+            // Test Output 6. This clear all selected catalogue basket     
+            favActions.VerifyGridViewClearAllButtonClick(browserInstance);
         }
 
         /// <summary>
@@ -279,29 +226,28 @@ namespace TestProj.Tests.Favourites
         /// 5.Verify that order all from basket  functions as expected                                                                                             
         /// 5.1 Select more than one  supplier by clicking  on multiple rows on the table
         /// 5.2 Click on the order all button   
-        /// 6.Verify that clear all from all basket functions as expected                                                               
-        /// 6.1 Select more than one  supplier by clicking  on multiple rows on the table     
-        /// 6.2 Click on the clear <all> button   
+        /// 6. Click on the clear <all> button   
         /// TEST OUTPUT:
         /// 1. Favourites items are displayed as tabular format     
         /// 2. The grid view button is displayed  
-        /// 3.                                                                                                                                                                                                                  3.1 The record on the list view table is selected  
+        /// 3.                                                                                                                                                                                                                  
+        /// 3.1 The record on the list view table is selected  
         /// 3.2 The confirm order pop-up is displayed  
-        /// 4.                                                                                                                                                                                                                   4.1 The record on the list view table is selected 
+        /// 4.                                                                                                                                                                                                                   
+        /// 4.1 The record on the list view table is selected 
         /// 4.2 The order is deleted from that supplier  
-        /// 5.                                                                                                                                                                                                                 5.1 Multiple records on the list view table are selected
+        /// 5.                                                                                                                                                                                                                 
+        /// 5.1 Multiple records on the list view table are selected
         /// 5.2 The confirm order pop-up is displayed   
-        /// 6.                                                                                                                                                                                                                 6.1 Multiple records on the list view table are selected   
-        /// 6.2 This clear all selected catalogue basket 
+        /// 6. This clear all selected catalogue basket 
         /// </summary>
         [Test, Description("_04_FavouritesDetailListView"), Category("Favourites"), Repeat(1)]
         public void _04_FavouritesDetailListView()
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
-            Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
 
-            catalogueActions.AddFavouriteProduct(browserInstance);
+            Helpers.Instance.AddFavouriteItem(browserInstance);
             favActions.VerifyFavouriteIconClick(browserInstance);
 
             // Test Case: 1. Click on the <list view> button 
@@ -320,13 +266,12 @@ namespace TestProj.Tests.Favourites
             favActions.VerifyConfirmOrderPopup(browserInstance);
 
             // Test Case: 4.Verify that delete orders from a specific supplier functions as expected                                                              
-            // Test Case: 4.1  Select a specific supplier by clicking  on any record from the table       
+            // Test Case: 4.1  Select a specific supplier by clicking  on any record from the table    
+            // Test Output: 4.1 The record on the list view table is selected   
             // Test Case: 4.2 Click on the delete icon  
             // Test Output: 4.2 The order is deleted from that supplier
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.modal-header > div > button");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.modal-header > div > button"));
-            favActions.VerifyFavouriteIconClick(browserInstance);
-            favActions.VerifyListViewClick(browserInstance);
             favActions.VerifyListViewProductOrderDelete(browserInstance);
 
             // Test Case: 5.Verify that order all from basket  functions as expected                                                                                             
@@ -336,10 +281,9 @@ namespace TestProj.Tests.Favourites
             LogWriter.Instance.Log(@"ISSUE 118: TESTCASE:_04_FavouritesDetailListView -> Test step we do not have the order all button in the favourite tab and we do not have the ability to select more than supplier. '. 
                                     '5.Verify that order all from basket  functions as expected ' - Test case to be updated.", LogWriter.eLogType.Error);
 
-            // Test Case: 6. Verify that clear all from all basket functions as expected 
-            catalogueActions.AddFavouriteProduct(browserInstance);
-            favActions.VerifyFavouriteIconClick(browserInstance);
-            favActions.VerifyListViewClearAllButtonClick(browserInstance, catalogueActions);
+            // Test Case: 6. Click on the clear <all> button 
+            // Test Case: 6. This clear all selected catalogue basket
+            favActions.VerifyListViewClearAllButtonClick(browserInstance);
         }
 
         /// <summary>
@@ -374,11 +318,10 @@ namespace TestProj.Tests.Favourites
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
-            Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
 
             // Test Case: 1. Click on the product
             // Test Output: 1. The product view screen is displayed
-            favActions.ClickFavouriteProduct(browserInstance, catalogueActions);
+            favActions.ClickFavouriteProduct(browserInstance);
 
             // Test Case: 2. Verify that the product view screen  
             favActions.VerifyProductViewScreen(browserInstance);
@@ -430,12 +373,11 @@ namespace TestProj.Tests.Favourites
         /// TEST STEPS:
         /// 1. Click on the product    
         /// 2. On the product view screen  click on the - sign for removing and + adding quantity and save  
-        /// 3.1 Total price = Unit price * Quantity, while adding and removing products make sure that the total is correct
+        /// 3. Total price = Unit price * Quantity, while adding and removing products make sure that the total is correct
         /// TEST OUTPUT:
         /// 1. The product view screen is displayed                   
-        /// 2.  The quantity addition button are working as expected   
-        /// 3.                                                                                                                                                                                                                         
-        /// 3.1 The total is correct    
+        /// 2.  The quantity addition button are working as expected                                                                                                                                                                   
+        /// 3.1The total is correct    
         /// </summary>
         [Test, Description("_07_FavouritesAddingAndRemovingProductQuantity"), Category("Basket"), Repeat(1)]
         public void _07_FavouritesAddingAndRemovingProductQuantity()
@@ -456,6 +398,8 @@ namespace TestProj.Tests.Favourites
 
             // 3.1 Total price = Unit price * Quantity, while adding and removing products make sure that the total is correct
 
+            Thread.Sleep(3000);
+            var productDescription1 = favActions.ClickBasketProduct(browserInstance, basketActions);
             catalogActions.VerifyProductTotal(browserInstance);
         }
     }

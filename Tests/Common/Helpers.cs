@@ -250,6 +250,7 @@ namespace TestProj.Tests.Common
             var alias = browserInstance.Instance.Find(multiSpazaAliasPath);
             browserInstance.Instance.Assert.Value(TestData.Instance.DefaultData.ActivationData.MultiSpazaUser.Alias).In(alias);
         }
+
         public void CheckSingleSpazaPreferedAlias(Classes.Browser browserInstance, string singleSpazaAliasPath)
         {
             browserInstance.Instance.Assert.Exists(singleSpazaAliasPath);
@@ -276,6 +277,7 @@ namespace TestProj.Tests.Common
 
             browserInstance.Instance.Assert.Value(spaza.Name).In(spazaName);
         }
+
         public void CheckSingleSpazaName(Classes.Browser browserInstance, string singleSpazaNamePath)
         {
             // 5. Verify that the preferred alias name is displayed on top right hand corner of the app with 
@@ -300,6 +302,7 @@ namespace TestProj.Tests.Common
         {
             browserInstance.Instance.Assert.Exists(marbilAdPath);
         }
+
         public void CheckBottomNav(Classes.Browser browserInstance, string cataloguePath, string basketPath, string ordersPath, string favouritePath)
         {
             browserInstance.Instance.Assert.Exists(cataloguePath);
@@ -307,6 +310,7 @@ namespace TestProj.Tests.Common
             browserInstance.Instance.Assert.Exists(ordersPath);
             browserInstance.Instance.Assert.Exists(favouritePath);
         }
+
         public void CheckAlertNotification(Classes.Browser browserInstance, string alertNotifactionPath, string alertNotificationLabelPath)
         {
             browserInstance.Instance.Assert.Exists(alertNotifactionPath);
@@ -334,22 +338,63 @@ namespace TestProj.Tests.Common
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
             Thread.Sleep(6000);
             browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main");
-            var storesBox = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.rightBlock > div > div > div:nth-child(1) > div:nth-child(1) > a");
+
+            var storesBox = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.rightBlock > div > div > div:nth-child(1) > div.app.enabled > a");
             Helpers.Instance.ClickButton(browserInstance, storesBox);
             Thread.Sleep(2000);
 
-            //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/stores"), 30);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/stores"), 30);
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, string.Format("#catalogCarousel > div > div > div:nth-child({0}) > div > img", supplierIndex)));
 
-
-            var firstBrand = Helpers.Instance.GetProxy(browserInstance, "#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div > ul > li > a");
+            var firstBrand = Helpers.Instance.GetProxy(browserInstance, "#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div > ul > li:nth-child(1) > a");
             Helpers.Instance.ClickButton(browserInstance, firstBrand);
             Thread.Sleep(3000);
 
-            var firstProductBuyButton = Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.productbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.price > button");
+            var firstProductBuyButton = Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.productbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.ng-scope > div > div:nth-child(1) > div > div.price > button");
             Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
             Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
             Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
+        }
+
+        public void AddFavouriteItem(Classes.Browser browserInstance)
+        {
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
+            Thread.Sleep(6000);
+
+            browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main");
+            var storesBox = Helpers.Instance.GetProxy(browserInstance, "#landingPage > div > div.rightBlock > div > div > div:nth-child(1) > div.app.enabled > a");
+            Helpers.Instance.ClickButton(browserInstance, storesBox);
+            Thread.Sleep(2000);
+
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/stores"), 30);
+            Thread.Sleep(2000);
+
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#catalogCarousel > div > div > div:nth-child(1) > div > img"));
+            Thread.Sleep(2000);
+
+            var firstBrand = Helpers.Instance.GetProxy(browserInstance, "#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div > ul > li:nth-child(1) > a");
+            Helpers.Instance.ClickButton(browserInstance, firstBrand);
+            Thread.Sleep(3000);
+
+            var firstProduct = Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.productbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.ng-scope > div > div:nth-child(1) > div > div.img");
+            Helpers.Instance.ClickButton(browserInstance, firstProduct);
+            Thread.Sleep(3000);
+
+            browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.devilsFeatureContainer > button");
+            var favouriteButton = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.devilsFeatureContainer > button");
+
+            if (!favouriteButton.Element.Attributes.Get("class").Contains("removeToFavButton"))
+            {
+                Helpers.Instance.ClickButton(browserInstance, favouriteButton);
+                Thread.Sleep(3000);
+            }
+
+            browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button");
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button"));      
+            Thread.Sleep(3000);
+
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("body > div.ui-footer.ng-scope > ul > li:nth-child(4) > div"), TimeSpan.FromMinutes(30));
         }
 
         public void ClearBasket(Classes.Browser browserInstance)
@@ -379,10 +424,7 @@ namespace TestProj.Tests.Common
             Thread.Sleep(3000);
 
         }
-
-
-
-
+        
         public void Activate(Classes.Browser browserInstance, bool multipleSpazas)
         {
             FluentAutomation.ElementProxy msisdn;
@@ -458,10 +500,10 @@ namespace TestProj.Tests.Common
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/loadingscreen"), TimeSpan.FromMinutes(30));
             Thread.Sleep(100);
 
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main"), TimeSpan.FromMinutes(30));
-            browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main");
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main?justSynced"), TimeSpan.FromMinutes(2));
+            browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main?justSynced");
             Thread.Sleep(3000);
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.headerLogo.left > a > img"), TimeSpan.FromMinutes(30));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.headerLogo.left > a > img"), TimeSpan.FromMinutes(1));
 
         }
 
