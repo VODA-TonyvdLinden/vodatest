@@ -14,10 +14,10 @@
         void VerifyConfirmOrderPopup(Classes.Browser browserInstance);
         void VerifyGridViewProductClick(Classes.Browser browserInstance);
         void VerifyGridViewProductOrderDelete(Classes.Browser browserInstance);
-        void VerifyGridViewClearAllButtonClick(Classes.Browser browserInstance, Interfaces.ICataloguesActions catalogueActions);
+        void VerifyGridViewClearAllButtonClick(Classes.Browser browserInstance);
         void VerifyListViewProductOrderDelete(Classes.Browser browserInstance);
-        void VerifyListViewClearAllButtonClick(Classes.Browser browserInstance, Interfaces.ICataloguesActions catalogueActions);
-        void ClickFavouriteProduct(Classes.Browser browserInstance, Interfaces.ICataloguesActions catalogueActions);
+        void VerifyListViewClearAllButtonClick(Classes.Browser browserInstance);
+        void ClickFavouriteProduct(Classes.Browser browserInstance);
         void VerifyProductViewScreen(Classes.Browser browserInstance);
         FluentAutomation.ElementProxy ClickBasketProduct(Classes.Browser browserInstance, Interfaces.IBasketActions basketActions);
         void AddBasketProductToFavourites(Classes.Browser browserInstance);

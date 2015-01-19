@@ -250,7 +250,7 @@ namespace TestProj.Tests.Alerts
             // Test:   1. Verify that the active alert's text  is highlighted red "You have received new invoices"
             // Output: 1. The " You have received new invoices" text is highlighted in red 
             LogWriter.Instance.Log("ISSUE 127: TEST CASE: _03_AlertsViewInvoices -> Test step text does not turn red even if there are new invoices. '1. Verify that the active alert's text  is highlighted red 'You have received new invoices' ' - Update test case", LogWriter.eLogType.Error);
-           // Helpers.Instance.CheckClass(browserInstance, "", Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(1) > label"));
+            // Helpers.Instance.CheckClass(browserInstance, "", Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(1) > label"));
 
             // Test:   2. Click on the <view invoices> button
             // Output: 2. The notification invoices page is displayed and the new Invoice flag is cleared
@@ -258,7 +258,7 @@ namespace TestProj.Tests.Alerts
             // Output: 3.  The list of invoices for all orders requiring users attention is displayed
             // Test:   4. view invoice for orders page verification   
             LogWriter.Instance.Log("ISSUE 128: TEST CASE: _03_AlertsViewInvoices -> Test step cannot be test the View Invoices button is always disabled need to be manually tested. '2. Click on the <view invoices> button' - Update test case", LogWriter.eLogType.Error);
-            
+
             Helpers.Instance.CheckButtonEnabled(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(1) > button");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(1) > button"));
         }
@@ -297,13 +297,13 @@ namespace TestProj.Tests.Alerts
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
-            ordersActions.PlaceConfirmedOrder(browserInstance, basketActions);
+            ordersActions.PlaceUnConfirmedOrder(browserInstance, basketActions);
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
 
             // Test:   1. Verify that the active alert's text  is highlighted red "You have an unconfirmed order
             // Output: 1. The " You have an unconfirmed order " text is highlighted in red
             LogWriter.Instance.Log(@"ISSUE 127: TEST CASE: _04_AlertsConfirmNow -> Test step the label is not highlighted as red even when they are unconfirmed orders ...'. 
-                                    '1. Verify that the active alert's text  is highlighted red 'You have an unconfirmed order' - Please update the test case.", LogWriter.eLogType.Error);
+                                                '1. Verify that the active alert's text  is highlighted red 'You have an unconfirmed order' - Please update the test case.", LogWriter.eLogType.Error);
             alertActions.VerifyTextHighlightedRed(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > label");
 
             // Test:   2. Click on the <confirm now> button
@@ -312,9 +312,8 @@ namespace TestProj.Tests.Alerts
 
             // Test:   3. Click on the <confirm  order> button 
             // Output: 3. The list of unconfirmed orders requiring users attention is displayed
-            //var orderNumber = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
-            //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.True(() => orderNumber.Element.Text != ""), TimeSpan.FromMinutes(30));
-            //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(1)"));
+            LogWriter.Instance.Log(@"ISSUE 128: TEST CASE: _04_AlertsConfirmNow -> Test step when confirm order button is clicked the pop up comes up not list of uncofirmed orders...'. 
+                                                '3. Click on the <confirm  order> button - Please update the test case.", LogWriter.eLogType.Error);
 
             LogWriter.Instance.Log("ISSUE 129: TEST CASE: _04_AlertsConfirmNow -> Test step clicking confirm order, confirms the order brings a popup and sends you to the orders history page, which means all other test steps cannot be tested. '3. Click on the <confirm  order> button' - Please update the test case.", LogWriter.eLogType.Error);
             // 4. view confirm order  page verification 

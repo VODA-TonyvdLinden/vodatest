@@ -52,13 +52,9 @@ namespace TestProj.Tests.Catalogues
         /// Pre-Condition: None
         /// Environment: Any Landing Page
         /// TEST STEPS:
-        /// 1. Verify that  the advert is displayed on a full page and also for 5 seconds   
-        /// 2. Verify that the advert  is clickable  
-        /// 3. Verify that the advert redirects user to the relevant product catalogue that is advertised                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+        /// 1.Verify that  the advert is displayed on a full page and also for 5 seconds                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
         /// TEST OUTPUT:
-        /// 1. The Interstitial advert is displayed for 5 seconds on a full screen
-        /// 2.The Advert is clickable     
-        /// 3. The splash ad redirects the user to the relevant product after clicking it     
+        /// 1. The Interstitial advert is displayed for 5 seconds on a full screen  
         /// </summary>
         [Test, Description("_01_SplashInterstialAdvert"), Category("Catalogues"), Repeat(1)]
         public void _01_SplashInterstialAdvert()
@@ -69,14 +65,6 @@ namespace TestProj.Tests.Catalogues
             // 1. Verify that  the advert is displayed on a full page and also for 5 seconds
             // 1. The Interstitial advert is displayed for 5 seconds on a full screen
             catalogueActions.VerifyInterstitialAdvert(browserInstance);
-
-            // 2. Verify that the advert  is clickable  
-            // 2.The Advert is clickable
-            catalogueActions.VerifyInterstitialAdvertClick(browserInstance);
-
-            // 3. Verify that the advert redirects user to the relevant product catalogue that is advertised
-            // 3. The splash ad redirects the user to the relevant product after clicking it 
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/stores"), TimeSpan.FromSeconds(5));
         }
 
         /// <summary>
@@ -193,17 +181,19 @@ namespace TestProj.Tests.Catalogues
         public void _03_CatalogueViewSubMenu()
         {
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
+
+            catalogueActions.VerifyCatalogueBlockClick(browserInstance);
+
             // Test Case: 1.Verify that sub categories are scrollable up and down  
 
             // Test Case: 1.1 Select on any of the fixed categories        
             // Test Output: 1.1 Subcategories under that category are displayed as a list and the selected category is displayed in red
-            FluentAutomation.ElementProxy category;
-            FluentAutomation.ElementProxy subCategories;
-            catalogueActions.VerifyCategoryClick(browserInstance, out category, out subCategories);
+
+            catalogueActions.VerifyCategoryClick(browserInstance);
 
             // Test Case: 1.2 Make sure that you can scroll up and down on that list  
             // Test Output: 1.2 The user can scroll up and down on the sub categories
-            catalogueActions.VerifyElementScroll(browserInstance, subCategories, true);
+            catalogueActions.VerifySubCategoriesScroll(browserInstance);
 
             // Test Case: 1.3 Scroll down and select any subcategory
             // Test Output: 1.3  The selected subcategory is displayed in red  
@@ -211,7 +201,7 @@ namespace TestProj.Tests.Catalogues
 
             // Test Case: 1.4 Click on the category and verify if it collapses the sub categories list
             // Test Output: 1.4  The  subcategories list is collapsed
-            catalogueActions.VerifyCategoryUnSelect(browserInstance, category, subCategories);
+            catalogueActions.VerifyCategoryUnSelect(browserInstance);
         }
 
         /// <summary>
@@ -247,6 +237,8 @@ namespace TestProj.Tests.Catalogues
         {
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
 
+            catalogueActions.VerifyCatalogueBlockClick(browserInstance);
+
             // Test Case: 1 Select on any of the fixed categories 
             // Test Output: 1 Subcategories under that category are displayed as a list and the selected category is displayed in red  
             // Test Case: 2 Make sure that you can scroll up and down on that list 
@@ -257,7 +249,7 @@ namespace TestProj.Tests.Catalogues
             // Test Output: 4 The selected subcategory products are displayed
             catalogueActions.ClickSubCategory(browserInstance, true);
         }
-        
+
         /// <summary>
         /// TEST: CATALOGUES VIEW PRODUCT DETAIL
         /// Test Case ID: 22_FRS_Ref_5.1.3
@@ -307,8 +299,9 @@ namespace TestProj.Tests.Catalogues
         [Test, Description("_05_CatalogueViewProductDetail"), Category("Catalogues"), Repeat(1)]
         public void _05_CatalogueViewProductDetail()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
+
+            catalogueActions.VerifyCatalogueBlockClick(browserInstance);
 
             // Test Case: 1 Select on any of the fixed categories 
             // Test Output: 1 Subcategories under that category are displayed as a list and the selected category is displayed in red 
@@ -358,6 +351,8 @@ namespace TestProj.Tests.Catalogues
         {
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
 
+            catalogueActions.VerifyCatalogueBlockClick(browserInstance);
+
             // Test Case: 1 Select on any of the fixed categories 
             // Test Case: 2 Make sure that you can scroll up and down on that list 
             // Test Case: 3 Scroll down and select any subcategory 
@@ -370,18 +365,20 @@ namespace TestProj.Tests.Catalogues
 
             // Test Case: 6. On the product view screen click on the favourites icon which is represented by a star and save  
             // Test Output: 6. The product is saved to favourites 
-            
+
             // Click on the favourites icon
             catalogueActions.VerifyProductFavouritesIconClick(browserInstance);
 
             // Click on the save button 
             catalogueActions.VerifyProductSaveClick(browserInstance);
 
+            Thread.Sleep(500);
+
             // Test Case: 7. Verify step 6 by selecting the favourites tab, to see if the recently added product is displayed
             // Test Output: 7. The recently added product is displayed in the favourites menu
             catalogueActions.VerifyFavouriteBlockClick(browserInstance);
         }
-        
+
         /// <summary>
         /// TEST: CATALOGUES VIEW ADDING AND REMOVING PRODUCT QUANTITY
         /// Test Case ID: 22_FRS_Ref_5.1.3
@@ -412,6 +409,10 @@ namespace TestProj.Tests.Catalogues
         public void _07_CatalogueViewAddingAndRemovingProductQuantity()
         {
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
+
+            catalogueActions.VerifyCatalogueBlockClick(browserInstance);
+
+
             // Test Case: 1 Select on any of the fixed categories 
             // Test Case: 2 Make sure that you can scroll up and down on that list 
             // Test Case: 3 Scroll down and select any subcategory 
@@ -429,6 +430,8 @@ namespace TestProj.Tests.Catalogues
             // Test Case: 7. verify the formula used for adding and removing product quantity                                       
             // Test Case: 7.1 Total price = Unit price * Quantity, while adding and removing products make sure that the total is correct
             // Test Output: 7.1 The total is correct 
+            Thread.Sleep(500);
+            catalogueActions.VerifyProductClick(browserInstance);
             catalogueActions.VerifyProductTotal(browserInstance);
         }
 
