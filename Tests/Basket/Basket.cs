@@ -324,6 +324,7 @@ namespace TestProj.Tests.Basket
             Helpers.Instance.ClearBasket(browserInstance);
             Thread.Sleep(3000);
             Helpers.Instance.AddOrders(browserInstance, 1);
+            Thread.Sleep(3000);
             basketActions.ClickBasketBlock(browserInstance);
             //Go to detail view
             //LogWriter.Instance.Log("ISSUE 45: TESTCASE: _04_BasketDetailGridView -> Step missed -> Click on a supplier/wholesaler", LogWriter.eLogType.Error);
@@ -464,9 +465,12 @@ namespace TestProj.Tests.Basket
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
             Helpers.Instance.ClearBasket(browserInstance);
 
+            Thread.Sleep(3000);
             Helpers.Instance.AddOrders(browserInstance, 1);
+            Thread.Sleep(3000);
             basketActions.ClickBasketBlock(browserInstance);
             //Click on supplier/wholesaler
+            Thread.Sleep(3000);
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.searchgridviewblcok.ng-scope > div > ul > li > div.brandinfo > div.itemView.bcgtitemsview"));
             //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
 
