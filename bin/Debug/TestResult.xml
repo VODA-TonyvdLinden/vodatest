@@ -1,22 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-01-20" time="15:21:52">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="8" errors="3" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-01-20" time="15:50:48">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="92.836" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="524.568" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="92.835" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="524.549" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="92.834" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="524.549" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Basket" executed="True" result="Failure" success="False" time="92.833" asserts="0">
+              <test-suite type="Namespace" name="Basket" executed="True" result="Failure" success="False" time="524.549" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Basket" description="Basket" executed="True" result="Failure" success="False" time="92.832" asserts="0">
+                  <test-suite type="TestFixture" name="Basket" description="Basket" executed="True" result="Failure" success="False" time="524.545" asserts="0">
                     <categories>
                       <category name="Basket" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Basket.Basket._08_BasketAddingAndRemovingProductQuantity" description="_08_BasketAddingAndRemovingProductQuantity" executed="True" result="Error" success="False" time="28.958" asserts="0">
+                      <test-case name="TestProj.Tests.Basket.Basket._01_BasketGridView" description="_01_BasketGridView" executed="True" result="Success" success="True" time="87.695" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._02_BasketConfirmOrder" description="_02_BasketConfirmOrder" executed="True" result="Success" success="True" time="30.289" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._03_BasketListView" description="_03_BasketListView" executed="True" result="Success" success="True" time="106.069" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._04_BasketDetailGridView" description="_04_BasketDetailGridView" executed="True" result="Success" success="True" time="35.213" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._05_BasketDetailListView" description="_05_BasketDetailListView" executed="True" result="Error" success="False" time="39.191" asserts="0">
                         <categories>
                           <category name="Basket" />
                         </categories>
@@ -25,19 +57,66 @@
                         </properties>
                         <failure>
                           <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
-  ----> FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView]]]></message>
+  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected element matching selector [#brandStore > div.basketbody > div.leftBlock > div > div > div] to exist.]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IBasketActions_e4497895cc7e4d48890b196ea2705c27.CheckElementExists(Browser browserInstance, String element)
+at TestProj.Tests.Basket.Basket._05_BasketDetailListView() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Basket\Basket.cs:line 411
+--FluentAssertFailedException
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass6b.<Exists>b__6a()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._06_BasketViewItemDetail" description="_06_BasketViewItemDetail" executed="True" result="Success" success="True" time="45.005" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._07_BasketAddItemToFavourites" description="_07_BasketAddItemToFavourites" executed="True" result="Error" success="False" time="56.813" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected expression [ => (value(TestProj.Tests.Basket.BasketActions+<>c__DisplayClass6).favButton.Element.Attributes.Get("class") == "btn addToFavButton")] to return true.]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IBasketActions_e4497895cc7e4d48890b196ea2705c27.TestFavButtonOnPopup(Browser browserInstance)
+at TestProj.Tests.Basket.Basket._07_BasketAddItemToFavourites() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Basket\Basket.cs:line 524
+--FluentAssertFailedException
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass5f.<True>b__5e()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Basket.Basket._08_BasketAddingAndRemovingProductQuantity" description="_08_BasketAddingAndRemovingProductQuantity" executed="True" result="Error" success="False" time="21.081" asserts="0">
+                        <categories>
+                          <category name="Basket" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected URL to match [http://aspnet.dev.afrigis.co.za/bopapp/#/main] but it was actually [http://aspnet.dev.afrigis.co.za/bopapp/#/basket-product-view?supplier=6008981672893].]]></message>
                           <stack-trace><![CDATA[at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
 at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
 at FluentAutomation.BaseCommandProvider.WaitUntil(Expression`1 conditionAction, TimeSpan timeout)
 at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
-at FluentAutomation.CommandProvider.Click(ElementProxy element)
-at FluentAutomation.ActionSyntaxProvider.Click(ElementProxy element)
-at TestProj.Tests.Common.Helpers.ClickButton(Browser browserInstance, ElementProxy buttonProxy) in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Common\Helpers.cs:line 78
-at TestProj.Tests.Basket.Basket._08_BasketAddingAndRemovingProductQuantity() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Basket\Basket.cs:line 553
---FluentElementNotFoundException
-at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
-at FluentAutomation.ElementProxy.get_Element()
-at FluentAutomation.CommandProvider.<>c__DisplayClass18.<Click>b__17()
+at FluentAutomation.CommandProvider.FluentAutomation.Interfaces.ICommandProvider.Act(CommandType , Action )
+at FluentAutomation.AssertProvider.Url(Uri expectedUrl)
+at FluentAutomation.AssertSyntaxProvider.Url(Uri expectedUri)
+at FluentAutomation.AssertSyntaxProvider.Url(String expectedUrl)
+at TestProj.Tests.Common.Helpers.AddOrders(Browser browserInstance, Int32 supplierIndex) in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Common\Helpers.cs:line 341
+at TestProj.Tests.Basket.Basket._08_BasketAddingAndRemovingProductQuantity() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Basket\Basket.cs:line 554
+--FluentAssertFailedException
+at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
+at FluentAutomation.AssertProvider.<>c__DisplayClass53.<Url>b__52()
 at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
 ]]></stack-trace>
                         </failure>
