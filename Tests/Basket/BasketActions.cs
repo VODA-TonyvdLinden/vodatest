@@ -19,13 +19,17 @@ namespace TestProj.Tests.Basket
 
         public void ClickClearAllButton(Classes.Browser browserInstance)
         {
+
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button"));
+            Helpers.Instance.CheckClearPopup(browserInstance);
             Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding"), "0 Items");
         }
 
         public void ClickOrderDeleteButton(Classes.Browser browserInstance)
         {
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.delete > button"));
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.searchgridviewblcok.ng-scope > div > ul > li > div.delete > button"));
+            Helpers.Instance.CheckConfirmDeletePopup(browserInstance);
+
             // 3.2 The order is deleted from that supplier
             Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding"), "0 Items");
         }
@@ -45,23 +49,23 @@ namespace TestProj.Tests.Basket
         {
             // 2.2 Click on the order now
             // 2.2 The confirm order pop-up is displayed 
-            Thread.Sleep(5000);
-            //browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#orderNow > div > div > div.modal-body.text-center > p:nth-child(3)"), 30);
-            Helpers.Instance.Exists(browserInstance, "#orderNow > div");
+            Thread.Sleep(2000);
+            browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#orderNow"), 30);
+            //Helpers.Instance.Exists(browserInstance, "#orderNow > div");
             Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderNow > div > div > div.modal-header.vodaBackgroundGrey > div.successMsg > strong"), "Order now");
         }
 
         public void ClickBasketBlock(Classes.Browser browserInstance)
         {
             Helpers.Instance.GoToBasket(browserInstance);
+            Thread.Sleep(3000);
         }
-        public void VerifyConfirmPopupValues(Classes.Browser browserInstance, FluentAutomation.ElementProxy noItems)
+        public void VerifyConfirmPopupValues(Classes.Browser browserInstance, FluentAutomation.ElementProxy noItems, FluentAutomation.ElementProxy itemsPrice)
         {
             // 3.3 Make sure that the total number of items and total price of items to be ordered are displayed 
             // 3.3  The total number of items and total price of items are displayed on the pop-up 
             Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderNow > div > div > div.modal-body.text-center > p:nth-child(2)"), noItems.Element.Text);
-            //Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderNow > div > div > div.modal-body.text-center > p:nth-child(3)"), "Total: " + itemsPrice.Element.Text);
-            LogWriter.Instance.Log("ISSUE 40: TESTCASE: _02_BasketConfirmOrder -> Total on popup does not contain the currency symbol. Asert commented out.", LogWriter.eLogType.Error);
+            Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderNow > div > div > div.modal-body.text-center > p:nth-child(3)"), "Total: " + itemsPrice.Element.Text);
         }
 
         public void VerifyConfirmPopup(Classes.Browser browserInstance)
@@ -77,6 +81,7 @@ namespace TestProj.Tests.Basket
             /// 6.1 Multiple records on the list view table are selected  
             // 6.2 Click on the clear <all> button    
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button"));
+            Helpers.Instance.CheckClearPopup(browserInstance);
             /// 6.2 This clear all selected catalogue basket      
             Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding"), "0 Items");
         }
@@ -86,9 +91,12 @@ namespace TestProj.Tests.Basket
 
             // 5.2 Click on the order all button  
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
+            Thread.Sleep(2000);
             Helpers.Instance.AddOrders(browserInstance, 1);
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
+            Thread.Sleep(2000);
             Helpers.Instance.AddOrders(browserInstance, 2);
+            Thread.Sleep(3000);
             basketActions.ClickBasketBlock(browserInstance);
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(4)"));
         }
@@ -99,6 +107,8 @@ namespace TestProj.Tests.Basket
             /// 4.2 The order is deleted from that supplier  
             var itemCount = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > table > tbody > tr > td:nth-child(4) > div.delete > button"));
+            
+            Helpers.Instance.CheckConfirmDeletePopup(browserInstance);
             browserInstance.Instance.Assert.Not.Exists("#alertsView > table > tbody > tr > td:nth-child(1)");
         }
 
@@ -109,7 +119,8 @@ namespace TestProj.Tests.Basket
             /// 3.1 The record on the list view table is selected   
             var supplierRecord = Helpers.Instance.GetProxy(browserInstance, "#alertsView > table > tbody > tr > td:nth-child(1)");
             Helpers.Instance.ClickButton(browserInstance, supplierRecord);
-            Helpers.Instance.Exists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div");
+            Helpers.Instance.Exists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.ng-scope > div > div > div");
+            //Helpers.Instance.Exists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div");
         }
 
         public void VerifyListView(Classes.Browser browserInstance)
@@ -140,21 +151,25 @@ namespace TestProj.Tests.Basket
         public void VerifyProductView(Classes.Browser browserInstance)
         {
             // 3.1 Verify that the product icon is displayed 
-            /// 3.1 The product icon is displayed    
-            CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.img > div.realImg > img");
+            /// 3.1 The product icon is displayed   
+            CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.ng-scope > div > div > div > div.img");
+            //CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.img > div.realImg > img");
 
             // 3.2 Verify that the product price is displayed      
             /// 3.2 The product price is displayed 
-            CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.price > div");
-            LogWriter.Instance.Log("ISSUE 48: TESTCASE: _04_BasketDetailGridView -> Price is displayed without the currency indicator", LogWriter.eLogType.Error);
+            CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.ng-scope > div > div > div > div.price > div.txt.bpgtfontsizep.ng-binding");
+            //CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.price > div");
+            //LogWriter.Instance.Log("ISSUE 48: TESTCASE: _04_BasketDetailGridView -> Price is displayed without the currency indicator", LogWriter.eLogType.Error);
 
             // 3.3 Verify that the <clear button > button is available        
-            /// 3.3 The clear  button is displayed   
-            CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.price > button");
+            /// 3.3 The clear  button is displayed 
+            CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.ng-scope > div > div > div > div.price > button");
+            //CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.price > button");
 
             // 3.4 Verify that the product description is displayed    
             /// 3.4 The product description is displayed  
-            CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.img > div.decsriptionOverlay.ng-binding");
+            CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.ng-scope > div > div > div > div.img > div.decsriptionOverlay.ng-binding");
+            //CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div:nth-child(1) > div > div.img > div.decsriptionOverlay.ng-binding");
 
 
         }
@@ -229,11 +244,15 @@ namespace TestProj.Tests.Basket
             //Click Favourites block
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div.ui-footer.ng-scope > ul > li:nth-child(4) > div"));
             //click on the supplier/wholesaler
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
+            Thread.Sleep(3000);
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.searchgridviewblcok.ng-scope > div > ul > li > div.brandinfo > div.itemView"));
+            Thread.Sleep(3000);
+            //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
             //check prod exists
-            Helpers.Instance.Exists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div.product");
+            Helpers.Instance.Exists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.ng-scope > div > div > div.product");
+            //Helpers.Instance.Exists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div.product");
             //Click on product
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div.product > div"));
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.ng-scope > div > div > div.product > div.img"));
             //Wait for popup to show
             Thread.Sleep(5000);
             browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button"), 30);
@@ -268,7 +287,8 @@ namespace TestProj.Tests.Basket
         {
             // 1. Click on the product   
             /// 1. The product view screen is displayed 
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div > div.img"));
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.ng-scope > div > div > div > div.img"));
+            //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div > div.img"));
 
             Thread.Sleep(5000);
             browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button"), 30);

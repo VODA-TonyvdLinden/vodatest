@@ -1,149 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="8" errors="5" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-01-19" time="13:24:19">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-01-20" time="15:21:52">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
   <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="1917.870" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="92.836" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="1917.869" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="92.835" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="1917.868" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="92.834" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Alerts" executed="True" result="Failure" success="False" time="1917.866" asserts="0">
+              <test-suite type="Namespace" name="Basket" executed="True" result="Failure" success="False" time="92.833" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Alerts" description="Alerts" executed="True" result="Failure" success="False" time="1917.864" asserts="0">
+                  <test-suite type="TestFixture" name="Basket" description="Basket" executed="True" result="Failure" success="False" time="92.832" asserts="0">
                     <categories>
-                      <category name="Alerts" />
+                      <category name="Basket" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Alerts.Alerts._01_AlertsLandingPageVerfication" description="_01_AlertsLandingPageVerfication" executed="True" result="Success" success="True" time="1.137" asserts="0">
+                      <test-case name="TestProj.Tests.Basket.Basket._08_BasketAddingAndRemovingProductQuantity" description="_08_BasketAddingAndRemovingProductQuantity" executed="True" result="Error" success="False" time="28.958" asserts="0">
                         <categories>
-                          <category name="Alerts" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Alerts.Alerts._02_AlertsPollingService" description="_02_AlertsPollingService" executed="True" result="Error" success="False" time="1833.431" asserts="0">
-                        <categories>
-                          <category name="Alerts" />
+                          <category name="Basket" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
                         <failure>
-                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [1800000ms] for expression [ => value(TestProj.Tests.Alerts.AlertsActions+<>c__DisplayClassc).browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.alertStatus > a > div.alertredicon")]. See InnerException for details of the last FluentException thrown.
-  ----> FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
-  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected element matching selector [body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.alertStatus > a > div.alertredicon] to exist.]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IAlertsActions_ffb3163f4785486286de1962aeb9592c.VerifyUrgentActions(Browser browserInstance, IOrdersActions ordersActions, IBasketActions basketActions)
-at TestProj.Tests.Alerts.Alerts._02_AlertsPollingService() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Alerts\Alerts.cs:line 213
---FluentException
-at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView]]]></message>
+                          <stack-trace><![CDATA[at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
 at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
 at FluentAutomation.BaseCommandProvider.WaitUntil(Expression`1 conditionAction, TimeSpan timeout)
 at FluentAutomation.BaseCommandProvider.Act(CommandType commandType, Action action)
-at FluentAutomation.CommandProvider.FluentAutomation.Interfaces.ICommandProvider.Act(CommandType , Action )
-at FluentAutomation.AssertProvider.Exists(String selector)
-at FluentAutomation.AssertSyntaxProvider.Exists(String selector)
-at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
---FluentAssertFailedException
-at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
-at FluentAutomation.AssertProvider.<>c__DisplayClass6b.<Exists>b__6a()
-at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
-]]></stack-trace>
-                        </failure>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Alerts.Alerts._03_AlertsViewInvoices" description="_03_AlertsViewInvoices" executed="True" result="Success" success="True" time="0.138" asserts="0">
-                        <categories>
-                          <category name="Alerts" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Alerts.Alerts._04_AlertsConfirmNow" description="_04_AlertsConfirmNow" executed="True" result="Error" success="False" time="21.759" asserts="0">
-                        <categories>
-                          <category name="Alerts" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                        <failure>
-                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
-  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected DOM Element [#orderNow > div > div > div.modal-body.text-center > p:nth-child(1)] value to be [Are you sure you want to place this order?] but it was actually [].]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IOrdersActions_285dc72b666042feb6d73f86309a3da1.PlaceUnConfirmedOrder(Browser browserInstance, IBasketActions basketActions)
-at TestProj.Tests.Alerts.Alerts._04_AlertsConfirmNow() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Alerts\Alerts.cs:line 300
---FluentAssertFailedException
-at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
-at FluentAutomation.AssertProvider.<>c__DisplayClass40.<Value>b__3e()
+at FluentAutomation.CommandProvider.Click(ElementProxy element)
+at FluentAutomation.ActionSyntaxProvider.Click(ElementProxy element)
+at TestProj.Tests.Common.Helpers.ClickButton(Browser browserInstance, ElementProxy buttonProxy) in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Common\Helpers.cs:line 78
+at TestProj.Tests.Basket.Basket._08_BasketAddingAndRemovingProductQuantity() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Basket\Basket.cs:line 553
+--FluentElementNotFoundException
+at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
+at FluentAutomation.ElementProxy.get_Element()
+at FluentAutomation.CommandProvider.<>c__DisplayClass18.<Click>b__17()
 at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
 ]]></stack-trace>
                         </failure>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Alerts.Alerts._05_AlertsSyncNow" description="_05_AlertsSyncNow" executed="True" result="Error" success="False" time="7.018" asserts="0">
-                        <categories>
-                          <category name="Alerts" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                        <failure>
-                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
-  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected element matching selector [#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(3) > button] to exist.]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IAlertsActions_ffb3163f4785486286de1962aeb9592c.VerifyAsyncNow(Browser browserInstance)
-at TestProj.Tests.Alerts.Alerts._05_AlertsSyncNow() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Alerts\Alerts.cs:line 424
---FluentAssertFailedException
-at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
-at FluentAutomation.AssertProvider.<>c__DisplayClass6b.<Exists>b__6a()
-at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
-]]></stack-trace>
-                        </failure>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Alerts.Alerts._06_AlertsManageCatalogue" description="_06_AlertsManageCatalogue" executed="True" result="Error" success="False" time="6.893" asserts="0">
-                        <categories>
-                          <category name="Setup_Catalogue" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                        <failure>
-                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
-  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected element matching selector [#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(1) > button] to exist.]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IAlertsActions_ffb3163f4785486286de1962aeb9592c.VerifyManageButtonClick(Browser browserInstance)
-at TestProj.Tests.Alerts.Alerts._06_AlertsManageCatalogue() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Alerts\Alerts.cs:line 479
---FluentAssertFailedException
-at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
-at FluentAutomation.AssertProvider.<>c__DisplayClass6b.<Exists>b__6a()
-at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
-]]></stack-trace>
-                        </failure>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Alerts.Alerts._07_AlertsDiagnose" description="_07_AlertsDiagnose" executed="True" result="Error" success="False" time="6.930" asserts="0">
-                        <categories>
-                          <category name="Alerts" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                        <failure>
-                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
-  ----> FluentAutomation.Exceptions.FluentAssertFailedException : Expected element matching selector [#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(2) > button] to exist.]]></message>
-                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IAlertsActions_ffb3163f4785486286de1962aeb9592c.VerifyDiagnoseButtonClick(Browser browserInstance)
-at TestProj.Tests.Alerts.Alerts._07_AlertsDiagnose() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Alerts\Alerts.cs:line 541
---FluentAssertFailedException
-at FluentAutomation.AssertProvider.ReportError(String message, Object[] formatParams)
-at FluentAutomation.AssertProvider.<>c__DisplayClass6b.<Exists>b__6a()
-at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
-]]></stack-trace>
-                        </failure>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Alerts.Alerts._09_AlertsMessaging" description="_09_AlertsMessaging" executed="True" result="Success" success="True" time="0.734" asserts="0">
-                        <categories>
-                          <category name="Alerts" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
                       </test-case>
                     </results>
                   </test-suite>

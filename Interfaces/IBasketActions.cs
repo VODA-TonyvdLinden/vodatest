@@ -9,7 +9,7 @@ namespace TestProj.Interfaces
         void ClickConfirmOrderPopupClose(Classes.Browser browserInstance);
         void CheckConfirmPopup(Classes.Browser browserInstance);
         void ClickBasketBlock(Classes.Browser browserInstance);
-        void VerifyConfirmPopupValues(Classes.Browser browserInstance, FluentAutomation.ElementProxy noItems);
+        void VerifyConfirmPopupValues(Classes.Browser browserInstance, FluentAutomation.ElementProxy noItems, FluentAutomation.ElementProxy itemPrice);
         void VerifyConfirmPopup(Classes.Browser browserInstance);
         void ClickOrderNowButton(Classes.Browser browserInstance, FluentAutomation.ElementProxy button);
         void CheckClearAllFunction(Classes.Browser browserInstance);

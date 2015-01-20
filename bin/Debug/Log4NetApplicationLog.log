@@ -12045,3 +12045,235 @@ BAKING POWDER REF POUCH SNOWFLAKE 200G P
 2015-01-19 14:26:11,919 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceUnConfirmedOrder executed in 28 seconds
 2015-01-19 15:00:15,599 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
 2015-01-19 15:00:15,669 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 15:01:55,311 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 15:01:55,322 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 15:08:04,500 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 15:08:04,568 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 15:11:13,471 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 15:11:13,539 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 15:11:59,362 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 15:13:44,694 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 15:13:44,762 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 15:14:31,452 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 15:14:31,488 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - CLEAR ALL
+2015-01-19 15:14:31,505 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - true
+2015-01-19 15:16:33,676 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 15:16:33,745 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 15:17:20,215 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - START
+2015-01-19 15:17:20,776 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Innter
+2015-01-19 15:17:20,776 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 15:17:20,824 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - CLEAR ALL
+2015-01-19 15:17:20,856 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - true
+2015-01-19 15:19:42,094 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 15:19:42,163 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 15:20:32,685 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - START
+2015-01-19 15:21:27,193 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 15:21:27,261 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 15:22:16,196 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - START
+2015-01-19 15:22:17,767 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Innter
+2015-01-19 15:22:17,768 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-19 15:22:17,814 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - CLEAR ALL
+2015-01-19 15:22:17,842 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - true
+2015-01-19 15:22:17,878 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - END
+2015-01-19 15:24:48,869 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 15:24:48,937 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 15:26:49,235 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 15:26:49,307 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-19 15:31:54,876 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-19 15:31:54,944 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 11:08:24,267 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 11:08:24,345 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 11:45:44,319 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 11:45:44,382 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 11:48:33,987 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 11:48:34,050 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 11:52:21,259 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 11:52:21,337 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 11:54:25,958 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 11:54:26,021 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 11:56:04,293 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2015-01-20 11:56:10,753 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-20 12:00:21,848 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 12:00:21,926 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 12:02:08,404 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2015-01-20 12:02:14,193 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-20 12:02:20,101 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckConfirmPopup executed in 5 seconds
+2015-01-20 12:02:20,383 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2015-01-20 12:02:21,867 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2015-01-20 12:02:28,354 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderDeleteButton executed in 6 seconds
+2015-01-20 12:09:34,858 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 12:09:34,939 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 12:10:45,826 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2015-01-20 12:10:48,542 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-20 12:10:54,451 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckConfirmPopup executed in 5 seconds
+2015-01-20 12:10:54,732 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2015-01-20 12:10:56,421 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2015-01-20 12:11:02,801 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderDeleteButton executed in 6 seconds
+2015-01-20 12:15:21,896 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 12:15:21,975 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 12:17:10,541 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 1 seconds
+2015-01-20 12:17:13,294 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-20 12:17:19,172 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckConfirmPopup executed in 5 seconds
+2015-01-20 12:17:19,453 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2015-01-20 12:17:21,064 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2015-01-20 12:17:28,201 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderDeleteButton executed in 7 seconds
+2015-01-20 12:18:05,610 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2015-01-20 12:18:12,670 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickClearAllButton executed in 7 seconds
+2015-01-20 12:18:13,233 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckListViewButtonExists executed in 0 seconds
+2015-01-20 12:18:30,463 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 12:18:30,479 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 12:19:59,101 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2015-01-20 12:20:05,518 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-20 12:26:12,033 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 12:26:12,103 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 12:27:30,106 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2015-01-20 12:27:36,572 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-20 12:28:43,174 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 12:28:43,245 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 12:30:14,548 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2015-01-20 12:30:15,131 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-20 12:30:18,002 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckConfirmPopup executed in 2 seconds
+2015-01-20 12:30:18,617 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyConfirmPopup executed in 0 seconds
+2015-01-20 12:30:19,298 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyConfirmPopupValues executed in 0 seconds
+2015-01-20 12:45:30,981 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 12:45:30,988 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 12:46:54,600 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2015-01-20 13:25:46,594 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 13:25:46,664 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 13:26:54,108 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2015-01-20 13:27:33,111 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 13:27:33,181 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 13:29:17,076 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 0 seconds
+2015-01-20 13:30:37,279 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 13:30:37,352 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 13:32:03,617 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 4 seconds
+2015-01-20 13:32:04,259 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyListView executed in 0 seconds
+2015-01-20 13:32:05,568 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyListViewActions executed in 1 seconds
+2015-01-20 13:32:09,319 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-20 13:32:09,992 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-20 13:32:12,825 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckConfirmPopup executed in 2 seconds
+2015-01-20 13:32:13,110 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2015-01-20 13:32:14,542 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2015-01-20 13:32:24,114 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_DeleteOrderFromList executed in 6 seconds
+2015-01-20 13:38:23,054 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 13:38:23,124 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 13:39:39,012 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 4 seconds
+2015-01-20 13:39:39,635 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyListView executed in 0 seconds
+2015-01-20 13:39:45,060 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyListViewActions executed in 5 seconds
+2015-01-20 13:39:48,827 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-20 13:39:49,486 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-20 13:39:52,427 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckConfirmPopup executed in 2 seconds
+2015-01-20 13:39:52,704 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2015-01-20 13:39:54,132 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2015-01-20 13:40:04,167 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_DeleteOrderFromList executed in 7 seconds
+2015-01-20 13:40:04,168 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 43: TESTCASE: _03_BasketListView -> '5.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.
+2015-01-20 13:40:32,402 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckOrderAllFunction executed in 28 seconds
+2015-01-20 13:51:28,082 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 13:51:28,152 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 13:53:42,286 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 4 seconds
+2015-01-20 13:53:42,918 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyListView executed in 0 seconds
+2015-01-20 13:53:44,127 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyListViewActions executed in 1 seconds
+2015-01-20 13:53:47,895 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-20 13:53:48,549 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-20 13:53:51,500 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckConfirmPopup executed in 2 seconds
+2015-01-20 13:53:51,779 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2015-01-20 13:53:53,209 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2015-01-20 13:54:03,304 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_DeleteOrderFromList executed in 7 seconds
+2015-01-20 13:54:48,346 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-20 13:54:48,663 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckOrderAllFunction executed in 43 seconds
+2015-01-20 13:54:51,575 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckConfirmPopup executed in 2 seconds
+2015-01-20 13:54:51,845 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2015-01-20 13:54:53,342 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2015-01-20 13:54:53,342 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 44: TESTCASE: _03_BasketListView -> '6.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.
+2015-01-20 13:54:59,715 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckClearAllFunction executed in 6 seconds
+2015-01-20 14:00:34,962 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 14:00:35,030 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 14:02:10,347 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 4 seconds
+2015-01-20 14:02:10,972 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyListView executed in 0 seconds
+2015-01-20 14:02:11,888 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyListViewActions executed in 0 seconds
+2015-01-20 14:02:15,650 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-20 14:02:16,300 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-20 14:02:19,116 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckConfirmPopup executed in 2 seconds
+2015-01-20 14:02:19,393 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2015-01-20 14:02:20,845 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2015-01-20 14:02:30,802 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_DeleteOrderFromList executed in 6 seconds
+2015-01-20 14:03:15,695 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-20 14:03:16,002 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckOrderAllFunction executed in 43 seconds
+2015-01-20 14:03:18,776 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckConfirmPopup executed in 2 seconds
+2015-01-20 14:03:19,047 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2015-01-20 14:03:20,509 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2015-01-20 14:03:27,598 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckClearAllFunction executed in 7 seconds
+2015-01-20 14:23:03,515 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 14:23:03,521 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 14:26:03,413 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-20 14:26:03,414 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 45: TESTCASE: _04_BasketDetailGridView -> Step missed -> Click on a supplier/wholesaler
+2015-01-20 14:35:33,745 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 14:35:33,819 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 14:36:51,486 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-20 14:36:58,362 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckElementExists executed in 6 seconds
+2015-01-20 14:37:50,253 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 14:37:50,327 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 14:39:09,559 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-20 14:39:50,045 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 14:39:50,113 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 14:41:08,620 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-20 14:41:16,206 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2015-01-20 14:41:16,744 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2015-01-20 14:41:17,309 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyProductView executed in 0 seconds
+2015-01-20 14:41:17,884 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyButtons executed in 0 seconds
+2015-01-20 14:42:38,016 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 14:42:38,087 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 14:43:59,137 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-20 14:45:07,540 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 14:45:07,542 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 14:45:07,609 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 14:45:07,609 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 14:46:07,849 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 49: TESTCASE:_05_BasketDetailListView -> Test step missed '1.Click on the <list> view button '
+2015-01-20 14:46:28,185 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-20 14:53:54,245 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 14:53:54,315 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 14:54:52,821 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 49: TESTCASE:_05_BasketDetailListView -> Test step missed '1.Click on the <list> view button '
+2015-01-20 14:55:12,290 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-20 14:56:20,812 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 14:56:20,825 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 14:57:18,214 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 49: TESTCASE:_05_BasketDetailListView -> Test step missed '1.Click on the <list> view button '
+2015-01-20 14:57:38,484 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-20 14:58:18,971 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 14:58:19,040 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 14:59:31,419 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 49: TESTCASE:_05_BasketDetailListView -> Test step missed '1.Click on the <list> view button '
+2015-01-20 14:59:54,315 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 4 seconds
+2015-01-20 14:59:58,780 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2015-01-20 14:59:59,310 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2015-01-20 14:59:59,311 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 54: TESTCASE: _05_BasketDetailListView -> Test case incorrect - '2.1 The product icon is displayed' -> No prosuct icon in list view
+2015-01-20 15:00:00,110 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2015-01-20 15:00:00,111 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 55: TESTCASE: _05_BasketDetailListView -> Price does not have a currency indicator
+2015-01-20 15:00:00,672 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2015-01-20 15:00:01,209 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckElementExists executed in 0 seconds
+2015-01-20 15:00:01,469 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyDetailsValues executed in 2 seconds
+2015-01-20 15:00:02,021 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyButtons executed in 0 seconds
+2015-01-20 15:00:05,736 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickPopupClose executed in 3 seconds
+2015-01-20 15:01:14,571 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 15:01:14,577 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 15:02:20,571 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 4 seconds
+2015-01-20 15:02:26,797 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyPopupValues executed in 0 seconds
+2015-01-20 15:02:30,582 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickPopupClose executed in 3 seconds
+2015-01-20 15:02:54,748 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 15:02:54,757 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 15:04:16,153 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-20 15:14:38,444 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 15:14:38,516 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 15:16:08,206 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 4 seconds
+2015-01-20 15:16:17,637 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickProduct executed in 6 seconds
+2015-01-20 15:16:32,734 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_TestFavButtonOnPopup executed in 15 seconds
+2015-01-20 15:16:39,045 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckFavAdded executed in 6 seconds
+2015-01-20 15:17:43,606 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 15:17:43,676 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 15:19:31,086 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 4 seconds
+2015-01-20 15:19:40,217 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickProduct executed in 5 seconds
+2015-01-20 15:19:55,370 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_TestFavButtonOnPopup executed in 15 seconds
+2015-01-20 15:20:12,737 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckFavAdded executed in 14 seconds
+2015-01-20 15:20:19,247 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 15:20:19,257 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-20 15:21:42,043 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-20 15:30:32,490 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-20 15:30:32,563 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0

@@ -87,10 +87,11 @@ namespace TestProj.Tests.Basket
             Helpers.Instance.ClearBasket(browserInstance);
             Thread.Sleep(3000);
             Helpers.Instance.AddOrders(browserInstance, 1);
-
+            Thread.Sleep(2000);
             // 1. Click on the basket block at the bottom of the screen  
             // 1. The basket page is displayed with catalogues in grid view
             basketActions.ClickBasketBlock(browserInstance);
+            Thread.Sleep(2000);
 
             // 2. Verify that order from a specific supplier functions as expected  
             // 2.1 Select a specific supplier by clicking  on the checkbox 
@@ -168,10 +169,12 @@ namespace TestProj.Tests.Basket
             Helpers.Instance.ClearBasket(browserInstance);
 
             Helpers.Instance.AddOrders(browserInstance, 1);
+            Thread.Sleep(3000);
             var noItems = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding");
             var itemsPrice = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.basketValue.ng-binding");
             basketActions.ClickBasketBlock(browserInstance);
-            basketActions.ClickOrderNowButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button"));
+            basketActions.ClickOrderNowButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.searchgridviewblcok.ng-scope > div > ul > li > div.orderNow > button"));
+            //basketActions.ClickOrderNowButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button"));
             basketActions.CheckConfirmPopup(browserInstance);
 
             // 3. Verify the following the following for the confirm order caption screen                              
@@ -182,7 +185,7 @@ namespace TestProj.Tests.Basket
             // 3.2 Make sure that the is a message asking the user about confirming the order with a yes or no 
             basketActions.VerifyConfirmPopup(browserInstance);
 
-            basketActions.VerifyConfirmPopupValues(browserInstance, noItems);
+            basketActions.VerifyConfirmPopupValues(browserInstance, noItems, itemsPrice);
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderNow > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"));
             Thread.Sleep(3000);
         }
@@ -235,10 +238,12 @@ namespace TestProj.Tests.Basket
             // 1. Click on the <list view> button on the basket tab
             /// 1. Basket items are displayed in a tabular format as a list 
             Helpers.Instance.AddOrders(browserInstance, 1);
+            Thread.Sleep(3000);
             basketActions.ClickBasketBlock(browserInstance);
             //GRID
             //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1) > button"));
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1)"));
+            //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1)"));
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1) > button"));
             //Helpers.Instance.Exists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul");
 
             basketActions.VerifyListView(browserInstance);
@@ -246,9 +251,9 @@ namespace TestProj.Tests.Basket
             basketActions.VerifyListViewActions(browserInstance);
 
             // 3.2 Click on the order now   
-            LogWriter.Instance.Log("ISSUE 41: TESTCASE: _03_BasketListView -> '3.2 Click on the order now' -> Test case step missed -> 'Navigate back to List view'", LogWriter.eLogType.Error);
+            //LogWriter.Instance.Log("ISSUE 41: TESTCASE: _03_BasketListView -> '3.2 Click on the order now' -> Test case step missed -> 'Navigate back to List view'", LogWriter.eLogType.Error);
             basketActions.ClickBasketBlock(browserInstance);
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1)"));
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1) > button"));
 
             //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > table > tbody > tr:nth-child(1) > td:nth-child(4) > div.orderNow > button"));
             /// 3.2 The confirm order pop-up is displayed   
@@ -260,14 +265,15 @@ namespace TestProj.Tests.Basket
             // 4.Verify that delete orders from a specific supplier functions as expected               
             // 4.1  Select a specific supplier by clicking  on any record from the table
             /// 4.1 The record on the list view table is selected   
-            LogWriter.Instance.Log("ISSUE 42: TESTCASE: _03_BasketListView -> '4.Verify that delete orders from a specific supplier functions as expected' -> Same as 3?", LogWriter.eLogType.Error);
+            //LogWriter.Instance.Log("ISSUE 42: TESTCASE: _03_BasketListView -> '4.Verify that delete orders from a specific supplier functions as expected' -> Same as 3?", LogWriter.eLogType.Error);
             Thread.Sleep(3000);
             basketActions.DeleteOrderFromList(browserInstance);
 
             // 5.Verify that order all from basket  functions as expected                               
             // 5.1 Select more than one  supplier by clicking  on multiple rows on the table
             /// 5.1 Multiple records on the list view table are selected   
-            LogWriter.Instance.Log("ISSUE 43: TESTCASE: _03_BasketListView -> '5.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.", LogWriter.eLogType.Error);
+            //LogWriter.Instance.Log("ISSUE 43: TESTCASE: _03_BasketListView -> '5.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.", LogWriter.eLogType.Error);
+            Thread.Sleep(2000);
             basketActions.CheckOrderAllFunction(browserInstance, basketActions);
             /// 5.2 The confirm order pop-up is displayed  
             basketActions.CheckConfirmPopup(browserInstance);
@@ -275,7 +281,7 @@ namespace TestProj.Tests.Basket
 
             // 6.Verify that clear all from all basket functions as expected                            
             // 6.1 Select more than one  supplier by clicking  on multiple rows on the table     
-            LogWriter.Instance.Log("ISSUE 44: TESTCASE: _03_BasketListView -> '6.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.", LogWriter.eLogType.Error);
+            //LogWriter.Instance.Log("ISSUE 44: TESTCASE: _03_BasketListView -> '6.1 Select more than one  supplier by clicking  on multiple rows on the table' -> Test case incorrect. Cannot click on more than one item at a time.", LogWriter.eLogType.Error);
             basketActions.CheckClearAllFunction(browserInstance);
             
         }
@@ -320,20 +326,26 @@ namespace TestProj.Tests.Basket
             Helpers.Instance.AddOrders(browserInstance, 1);
             basketActions.ClickBasketBlock(browserInstance);
             //Go to detail view
-            LogWriter.Instance.Log("ISSUE 45: TESTCASE: _04_BasketDetailGridView -> Step missed -> Click on a supplier/wholesaler", LogWriter.eLogType.Error);
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li:nth-child(1) > div.brandinfo > div.itemView"));
+            //LogWriter.Instance.Log("ISSUE 45: TESTCASE: _04_BasketDetailGridView -> Step missed -> Click on a supplier/wholesaler", LogWriter.eLogType.Error);
+            Thread.Sleep(3000);
+
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.searchgridviewblcok.ng-scope > div > ul > li > div.brandinfo > div.itemView.bcgtitemsview"));
+            //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li:nth-child(1) > div.brandinfo > div.itemView"));
             Thread.Sleep(500);
             // 1.Click on the <grid> view button       
             /// 1. The application switches to grid view mode    
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(2) > button"));
-            basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div");
+            Thread.Sleep(3000);
+            basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.ng-scope > div > div > div");
+            //basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div");
 
-            LogWriter.Instance.Log("ISSUE 46: TESTCASE: _04_BasketDetailGridView -> Test case unclear - '2.Click on the selected subcategory you wish to view products for'", LogWriter.eLogType.Error);
-            LogWriter.Instance.Log("ISSUE 47: TESTCASE: _04_BasketDetailGridView -> Test case unclear - 'There are no sub categories here, only products previously added to the basket'", LogWriter.eLogType.Error);
+            //LogWriter.Instance.Log("ISSUE 46: TESTCASE: _04_BasketDetailGridView -> Test case unclear - '2.Click on the selected subcategory you wish to view products for'", LogWriter.eLogType.Error);
+            //LogWriter.Instance.Log("ISSUE 47: TESTCASE: _04_BasketDetailGridView -> Test case unclear - 'There are no sub categories here, only products previously added to the basket'", LogWriter.eLogType.Error);
             // 2.Click on the selected subcategory you wish to view products for               
             /// 2. The selected subcategory products are displayed     
             //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
-            basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div");
+            basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.ng-scope > div > div > div");
+            //basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div");
             // basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > div > div");
 
             // 3  Verify the following on the product view                                     
@@ -379,17 +391,20 @@ namespace TestProj.Tests.Basket
 
             LogWriter.Instance.Log("ISSUE 49: TESTCASE:_05_BasketDetailListView -> Test step missed '1.Click on the <list> view button '", LogWriter.eLogType.Error);
             Helpers.Instance.AddOrders(browserInstance, 1);
+            Thread.Sleep(3000);
             basketActions.ClickBasketBlock(browserInstance);
-
+            Thread.Sleep(3000);
+            
             //Go to detail view
-            LogWriter.Instance.Log("ISSUE 50: TESTCASE: _05_BasketDetailListView -> Step missed -> Click on a supplier/wholesaler", LogWriter.eLogType.Error);
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
+            //LogWriter.Instance.Log("ISSUE 50: TESTCASE: _05_BasketDetailListView -> Step missed -> Click on a supplier/wholesaler", LogWriter.eLogType.Error);
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.searchgridviewblcok.ng-scope > div > ul > li > div.brandinfo > div.itemView.bcgtitemsview"));
+            //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
             Thread.Sleep(500);
             // 1. Click on the selected subcategory you wish to view products for   
             /// 1. The selected subcategory products are displayed        
-            LogWriter.Instance.Log("ISSUE 51: TESTCASE: _05_BasketDetailListView -> Test case unclear - '2.Click on the selected subcategory you wish to view products for'", LogWriter.eLogType.Error);
-            LogWriter.Instance.Log("ISSUE 52: TESTCASE: _05_BasketDetailListView -> Test case unclear - 'There are no sub categories here, only products previously added to the basket'", LogWriter.eLogType.Error);
-            LogWriter.Instance.Log("ISSUE 53: TESTCASE: _05_BasketDetailListView -> Test case missed - 'Click on the <list> view button'", LogWriter.eLogType.Error);
+            //LogWriter.Instance.Log("ISSUE 51: TESTCASE: _05_BasketDetailListView -> Test case unclear - '2.Click on the selected subcategory you wish to view products for'", LogWriter.eLogType.Error);
+            //LogWriter.Instance.Log("ISSUE 52: TESTCASE: _05_BasketDetailListView -> Test case unclear - 'There are no sub categories here, only products previously added to the basket'", LogWriter.eLogType.Error);
+            //LogWriter.Instance.Log("ISSUE 53: TESTCASE: _05_BasketDetailListView -> Test case missed - 'Click on the <list> view button'", LogWriter.eLogType.Error);
 
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(1) > button"));
             basketActions.CheckElementExists(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div");
@@ -452,7 +467,8 @@ namespace TestProj.Tests.Basket
             Helpers.Instance.AddOrders(browserInstance, 1);
             basketActions.ClickBasketBlock(browserInstance);
             //Click on supplier/wholesaler
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.searchgridviewblcok.ng-scope > div > ul > li > div.brandinfo > div.itemView.bcgtitemsview"));
+            //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
 
             // 1. Click on the product   
             /// 1. The product view screen is displayed 
@@ -493,13 +509,16 @@ namespace TestProj.Tests.Basket
             Helpers.Instance.ClearBasket(browserInstance);
             Thread.Sleep(3000);
             Helpers.Instance.AddOrders(browserInstance, 1);
+            Thread.Sleep(3000);
             basketActions.ClickBasketBlock(browserInstance);
+            Thread.Sleep(3000);
             //Click on supplier/wholesaler
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.searchgridviewblcok.ng-scope > div > ul > li > div.brandinfo > div.itemView.bcgtitemsview"));
 
             string prodDescription = basketActions.ClickProduct(browserInstance);
 
             basketActions.TestFavButtonOnPopup(browserInstance);
+            Thread.Sleep(3000);
             basketActions.CheckFavAdded(browserInstance, prodDescription);
         }
 
@@ -529,9 +548,11 @@ namespace TestProj.Tests.Basket
             Helpers.Instance.ClearBasket(browserInstance);
             Thread.Sleep(3000);
             Helpers.Instance.AddOrders(browserInstance, 1);
+            Thread.Sleep(3000);
             basketActions.ClickBasketBlock(browserInstance);
             //Click on supplier/wholesaler
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.brandinfo > div.itemView"));
+            Thread.Sleep(3000);
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.searchgridviewblcok.ng-scope > div > ul > li > div.brandinfo > div.itemView.bcgtitemsview"));
 
             // 1. Click on the product
             /// 1. The product view screen is displayed    
