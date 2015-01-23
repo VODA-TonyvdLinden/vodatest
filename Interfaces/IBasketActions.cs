@@ -28,6 +28,6 @@ namespace TestProj.Interfaces
         void VerifyFormula(Classes.Browser browserInstance, FluentAutomation.ElementProxy qtyBox, int qty);
         void TestAddRemoveButtons(Classes.Browser browserInstance, out FluentAutomation.ElementProxy qtyBox, out int qty);
         void ClickPopupClose(Classes.Browser browserInstance, string path);
-
+        void VerifyUnConfirmOrderPopup(Classes.Browser browserInstance);
     }
 }

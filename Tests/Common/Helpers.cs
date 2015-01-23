@@ -391,7 +391,7 @@ namespace TestProj.Tests.Common
             }
 
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button");
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button"));      
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button"));
             Thread.Sleep(3000);
 
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
@@ -408,6 +408,7 @@ namespace TestProj.Tests.Common
             Helpers.Instance.CheckClearPopup(browserInstance);
             //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main"), 30);
         }
+
         public void GoToBasket(Classes.Browser browserInstance)
         {
             var basketBlock = Helpers.Instance.GetProxy(browserInstance, "body > div.ui-footer.ng-scope > ul > li:nth-child(2) > div");
@@ -415,6 +416,7 @@ namespace TestProj.Tests.Common
             //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-product-view?supplier=6001205000004"), 30);
             //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-catalog-view?viewtype=grid"), 30);
         }
+
         public void ClearFavourites(Classes.Browser browserInstance)
         {
 
@@ -426,7 +428,30 @@ namespace TestProj.Tests.Common
             Thread.Sleep(3000);
 
         }
-        
+
+        public void ProcessUnconfirmedOrders(Classes.Browser browserInstance)
+        {
+            Thread.Sleep(10000);
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
+            Thread.Sleep(3000);
+
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button");
+
+            var confirmNowButton = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button.purpleButton");
+
+            if (confirmNowButton != null)
+            {
+                Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button"));
+                browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Not.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
+                Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
+                Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(1)"));
+                Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderComplete > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"));
+            }
+
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main?justSynced"));
+        }
+
+
         public void Activate(Classes.Browser browserInstance, bool multipleSpazas)
         {
             FluentAutomation.ElementProxy msisdn;
@@ -500,7 +525,7 @@ namespace TestProj.Tests.Common
             Thread.Sleep(100);
 
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/loadingscreen"), TimeSpan.FromMinutes(30));
-            Thread.Sleep(100);
+            Thread.Sleep(30000);
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main?justSynced"), TimeSpan.FromMinutes(2));
             browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main?justSynced");
             Thread.Sleep(3000);

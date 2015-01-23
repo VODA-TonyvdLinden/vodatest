@@ -16,6 +16,7 @@ namespace TestProj.Interfaces
         void VerifyOrderDetailColumns(Classes.Browser browserInstance);
         void VerifyOrderDetailButtons(Classes.Browser browserInstance);
         void VerifyReOrderButton(Classes.Browser browserInstance);
+        void VerifyUnconfirmOrderButton(Classes.Browser browserInstance);
         void VerifyViewInvoicesButtonClick(Classes.Browser browserInstance);
         void VerifyInvoiceHeader(Classes.Browser browserInstance);
         void VerifyInvoiceDetailOrderNumber(Classes.Browser browserInstance);

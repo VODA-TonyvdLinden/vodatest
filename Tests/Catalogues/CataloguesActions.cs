@@ -165,7 +165,7 @@ namespace TestProj.Tests.Catalogues
             browserInstance.Instance.Assert.True(() => brands.Elements.Count > 0);
 
             var brandsContainer = Helpers.Instance.GetProxy(browserInstance, "#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div");
-            browserInstance.Instance.Assert.Css("overflow-x", "scroll").On(brandsContainer);
+            //browserInstance.Instance.Assert.Css("overflow-x", "scroll").On(brandsContainer);
             LogWriter.Instance.Log(@"TESTCASE:ISSUE 112: _02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the brands.'
                                     '7. Verify that brands are displayed and user can scroll from left to right' - Test case to be updated.", LogWriter.eLogType.Error);
         }
@@ -178,7 +178,7 @@ namespace TestProj.Tests.Catalogues
             var products = browserInstance.Instance.FindMultiple("#storesContent > div.storesbody > div.leftBlock > div > div > div.specialsGroup.ng-scope > div > div.outerProductContainer");
             browserInstance.Instance.Assert.True(() => products.Elements.Count > 0);
             var specialsContainer = Helpers.Instance.GetProxy(browserInstance, "#storesContent > div.storesbody > div.leftBlock > div");
-            browserInstance.Instance.Assert.Css("overflow-x", "scroll").On(specialsContainer);
+            //browserInstance.Instance.Assert.Css("overflow-x", "scroll").On(specialsContainer);
         }
 
         // Test Case: 1.1 Select on any of the fixed categories        
@@ -208,11 +208,11 @@ namespace TestProj.Tests.Catalogues
         {
             if (isVertical)
             {
-                browserInstance.Instance.Assert.Css("overflow-y", "scroll").On(scrollElement);
+                //browserInstance.Instance.Assert.Css("overflow-y", "scroll").On(scrollElement);
             }
             else
             {
-                browserInstance.Instance.Assert.Css("overflow-x", "scroll").On(scrollElement);
+                //browserInstance.Instance.Assert.Css("overflow-x", "scroll").On(scrollElement);
             }
         }
 
@@ -236,7 +236,7 @@ namespace TestProj.Tests.Catalogues
         public void VerifyCategoryUnSelect(Classes.Browser browserInstance, FluentAutomation.ElementProxy category, FluentAutomation.ElementProxy subCategories)
         {
             Helpers.Instance.ClickButton(browserInstance, category);
-            browserInstance.Instance.Assert.Css("display", "none").On(subCategories);
+            //browserInstance.Instance.Assert.Css("display", "none").On(subCategories);
         }
 
         // Test Case: 4 Click on the selected subcategory you wish to view products for 
@@ -413,13 +413,13 @@ namespace TestProj.Tests.Catalogues
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button"));
 
-            string totalValue = (Convert.ToDecimal(quantityInput.Element.Value.Trim()) * Convert.ToDecimal(price.Element.Text.Trim())).ToString();
+            string totalValue = (Convert.ToDecimal(quantityInput.Element.Value.Trim()) * Convert.ToDecimal(price.Element.Text.Trim())).ToString("#,###.00");
             browserInstance.Instance.Assert.Value(totalValue).In(total);
 
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.decrease > button");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.decrease > button"));
 
-            totalValue = (Convert.ToDecimal(quantityInput.Element.Value.Trim()) * Convert.ToDecimal(price.Element.Text.Trim())).ToString();
+            totalValue = (Convert.ToDecimal(quantityInput.Element.Value.Trim()) * Convert.ToDecimal(price.Element.Text.Trim())).ToString("#,###.00"); ;
             browserInstance.Instance.Assert.Value(totalValue).In(total);
         }
 

@@ -1,144 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="16" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-01-19" time="12:52:17">
-  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
-  <culture-info current-culture="en-ZA" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="110.876" asserts="0">
+<test-results name="C:\Users\molefeq\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-01-23" time="15:29:32">
+  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8009" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="BBD-QM" user="molefeq" user-domain="VF-ROOT" />
+  <culture-info current-culture="en-TT" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\molefeq\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="65.903" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="110.874" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="65.883" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="110.874" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="65.883" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Activation" executed="True" result="Success" success="True" time="110.873" asserts="0">
+              <test-suite type="Namespace" name="Catalogues" executed="True" result="Success" success="True" time="65.879" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Activation" description="Activation" executed="True" result="Success" success="True" time="110.871" asserts="0">
+                  <test-suite type="TestFixture" name="Catalogues" description="Catalogues" executed="True" result="Success" success="True" time="65.876" asserts="0">
                     <categories>
-                      <category name="Activation" />
+                      <category name="Catalogues" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Activation.Activation._01_VerifyActivationLandingPage" description="_01_VerifyActivationLandingPage" executed="True" result="Success" success="True" time="7.007" asserts="0">
+                      <test-case name="TestProj.Tests.Catalogues.Catalogues._02_CatalogueLandingPage" description="_02_CatalogueLandingPage" executed="True" result="Success" success="True" time="8.597" asserts="0">
                         <categories>
-                          <category name="Activation Page" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._02_ActivationFormFieldValidation" description="_02_ActivationFormFieldValidation" executed="True" result="Success" success="True" time="6.914" asserts="0">
-                        <categories>
-                          <category name="Activation Page" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._03_ActivationFormIncorrectUserDetails" description="_03_ActivationFormIncorrectUserDetails" executed="True" result="Success" success="True" time="6.049" asserts="0">
-                        <categories>
-                          <category name="Activation form" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._04_ActivationFormCorrectUserDetails" description="_04_ActivationFormCorrectUserDetails" executed="True" result="Success" success="True" time="2.192" asserts="0">
-                        <categories>
-                          <category name="Activation form" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._05_VerifyActivationOneTimePinLandingPage" description="_05_VerifyActivationOneTimePinLandingPage" executed="True" result="Success" success="True" time="0.322" asserts="0">
-                        <categories>
-                          <category name="Activation_form" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._06_ActivationOneTimePinFieldValidation" description="_06_ActivationOneTimePinFieldValidation" executed="True" result="Success" success="True" time="1.269" asserts="0">
-                        <categories>
-                          <category name="Verify_user(OTP)" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._07_CorrectOneTimePinAndApplicationOffline" description="_07_CorrectOneTimePinAndApplicationOffline" executed="True" result="Success" success="True" time="0.006" asserts="0">
-                        <categories>
-                          <category name="Verify_user(OTP)" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._08_IncorrectOneTimePin" description="_08_IncorrectOneTimePin" executed="True" result="Success" success="True" time="6.409" asserts="0">
-                        <categories>
-                          <category name="Verify_user(OTP)" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._09_ResendOneTimePin" description="_09_ResendOneTimePin" executed="True" result="Success" success="True" time="1.119" asserts="0">
-                        <categories>
-                          <category name="Verify_user(OTP)" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._10_CorrectOneTimePin" description="_10_CorrectOneTimePin" executed="True" result="Success" success="True" time="1.100" asserts="0">
-                        <categories>
-                          <category name="Verify_user(OTP)" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._11_SetupCatalogueLandingPage" description="_11_SetupCatalogueLandingPage" executed="True" result="Success" success="True" time="0.475" asserts="0">
-                        <categories>
-                          <category name="Setup_Catalogue" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._12_SetupCatalogueValidations" description="_12_SetupCatalogueValidations" executed="True" result="Success" success="True" time="45.360" asserts="0">
-                        <categories>
-                          <category name="Setup_Catalogue" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._14_SetupCatalogueSearchFieldReturningNoResults" description="_14_SetupCatalogueSearchFieldReturningNoResults" executed="True" result="Success" success="True" time="6.883" asserts="0">
-                        <categories>
-                          <category name="Setup_Catalogue" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._15_SetupCatalogueSearchFieldFilter" description="_15_SetupCatalogueSearchFieldFilter" executed="True" result="Success" success="True" time="6.966" asserts="0">
-                        <categories>
-                          <category name="Setup_Catalogue" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._16_SetupCatalogueLandingPageInterruptions" description="_16_SetupCatalogueLandingPageInterruptions" executed="True" result="Success" success="True" time="5.314" asserts="0">
-                        <categories>
-                          <category name="Setup_Catalogue" />
-                        </categories>
-                        <properties>
-                          <property name="Repeat" value="1" />
-                        </properties>
-                      </test-case>
-                      <test-case name="TestProj.Tests.Activation.Activation._17_SetupCatalogueSearchFieldReturningOneOrMultipleResults" description="_17_SetupCatalogueSearchFieldReturningOneOrMultipleResults" executed="True" result="Success" success="True" time="0.286" asserts="0">
-                        <categories>
-                          <category name="Setup_Catalogue" />
+                          <category name="Catalogues" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />

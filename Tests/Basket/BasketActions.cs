@@ -41,6 +41,7 @@ namespace TestProj.Tests.Basket
         {
             Helpers.Instance.ClickButton(browserInstance, button);
         }
+
         public void CheckConfirmPopup(Classes.Browser browserInstance)
         {
             // 2.2 Click on the order now
@@ -55,6 +56,7 @@ namespace TestProj.Tests.Basket
         {
             Helpers.Instance.GoToBasket(browserInstance);
         }
+
         public void VerifyConfirmPopupValues(Classes.Browser browserInstance, FluentAutomation.ElementProxy noItems)
         {
             // 3.3 Make sure that the total number of items and total price of items to be ordered are displayed 
@@ -294,7 +296,7 @@ namespace TestProj.Tests.Basket
 
             PressAddIcon(browserInstance, qtyBox, qty);
             decimal totalP = unitP * (qty + 1);
-            Helpers.Instance.CheckProxyValue(browserInstance, totalPrice, string.Format("R {0}",totalP));
+            Helpers.Instance.CheckProxyValue(browserInstance, totalPrice, string.Format("R {0}", totalP));
 
             PressRemoveIcon(browserInstance, qtyBox, qty);
             totalP = unitP * (qty);
@@ -309,6 +311,26 @@ namespace TestProj.Tests.Basket
             qty = int.Parse(qtyBox.Element.Text);
             PressAddIcon(browserInstance, qtyBox, qty);
             PressRemoveIcon(browserInstance, qtyBox, qty);
+        }
+
+        public void VerifyUnConfirmOrderPopup(Classes.Browser browserInstance)
+        {
+            Helpers.Instance.VerifyPopPup(browserInstance, "#errorModal");
+
+            Helpers.Instance.Exists(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div.errorSubHeading.ng-binding");
+            Helpers.Instance.Exists(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(2) > div.col-sm-9 > div.errorDetailsList > ul > li.ng-binding");
+            Helpers.Instance.Exists(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(3) > div > button");
+
+            Helpers.Instance.CheckProxyText(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div.errorSubHeading.ng-binding"), "Pending Order");
+
+            var messageProxy = Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(2) > div.col-sm-9 > div.errorDetailsList > ul > li.ng-binding");
+            browserInstance.Instance.Assert.True(() => messageProxy.Element.Text.Contains("You have an unconfirmed order"));
+
+            var backButtonProxy = Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-body.text-center > div.errorContentMiddle > div:nth-child(3) > div > button");
+            browserInstance.Instance.Assert.True(() => backButtonProxy.Element.Text.Contains("Back"));
+
+
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#errorModal > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"));
         }
 
         private void PressRemoveIcon(Classes.Browser browserInstance, FluentAutomation.ElementProxy qtyBox, int qty)

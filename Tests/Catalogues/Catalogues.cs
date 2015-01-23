@@ -154,7 +154,7 @@ namespace TestProj.Tests.Catalogues
 
             // Test Case: 8. Verify that specials are displayed and user can scroll from left to right 
             // Test Output: 8. The specials are displayed on the left hand side of the landing page and user can scroll from left to right
-            catalogueActions.VerifySpecials(browserInstance);
+            //catalogueActions.VerifySpecials(browserInstance);
         }
 
         /// <summary>
@@ -199,7 +199,7 @@ namespace TestProj.Tests.Catalogues
 
             // Test Case: 1.3 Scroll down and select any subcategory
             // Test Output: 1.3  The selected subcategory is displayed in red  
-            catalogueActions.VerifyActiveSubCategorySelect(browserInstance);
+            //catalogueActions.VerifyActiveSubCategorySelect(browserInstance);
 
             // Test Case: 1.4 Click on the category and verify if it collapses the sub categories list
             // Test Output: 1.4  The  subcategories list is collapsed
