@@ -63,3 +63,9 @@ Temporary Items
 *.pdb
 *.dll
 *.log
+bin/Debug/TestResult.xml
+bin/Debug/Log4NetApplicationLog.log
+bin/Debug/Log4NetApplicationRollingLog.log
+bin/Debug/Log4NetApplicationLog.log
+bin/Debug/Log4NetApplicationLog.log
+bin/Debug/Log4NetApplicationLog.log

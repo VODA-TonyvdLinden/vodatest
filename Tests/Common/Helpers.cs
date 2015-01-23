@@ -347,14 +347,23 @@ namespace TestProj.Tests.Common
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/stores"), 30);
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, string.Format("#catalogCarousel > div > div > div:nth-child({0}) > div > img", supplierIndex)));
 
-            var firstBrand = Helpers.Instance.GetProxy(browserInstance, "#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div > ul > li:nth-child(1) > a");
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Find("#storesContent > div.storesbody > div.leftBlock > div.productSpecialsCarouselContainer > div > div > div:nth-child(1) > div > div"), 30);
+            Thread.Sleep(2000);
+
+            var firstBrand = Helpers.Instance.GetProxy(browserInstance, "#storesContent > div.storesbody > div.leftBlock > div.productSpecialsCarouselContainer > div > div > div:nth-child(1) > div > div");
+            //[DELETE]
+            //var firstBrand = Helpers.Instance.GetProxy(browserInstance, "#storesContent > div.storesbody > div.leftBlock > div.productSpecialsCarouselContainer > div > div > div:nth-child(1) > div > div > div.img");
+            //var firstBrand = Helpers.Instance.GetProxy(browserInstance, "#storesContent > div.storesbody > div.filteredContentContainer > div > div > div > div > ul > li:nth-child(1) > a");
             Helpers.Instance.ClickButton(browserInstance, firstBrand);
             Thread.Sleep(3000);
 
-            var firstProductBuyButton = Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.productbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.ng-scope > div > div:nth-child(1) > div > div.price > button");
+            var firstProductBuyButton = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > form > div.quantityControl > div.increase > button");
+            //var firstProductBuyButton = Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.productbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.ng-scope > div > div:nth-child(1) > div > div.price > button");
             Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
             Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
             Helpers.Instance.ClickButton(browserInstance, firstProductBuyButton);
+            var saveButton = Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.basketControl.modal-body > div.productControlContainer > div.finalControls > div.addToBasketContainer > button");
+            Helpers.Instance.ClickButton(browserInstance, saveButton);
         }
 
         public void AddFavouriteItem(Classes.Browser browserInstance)
@@ -403,9 +412,19 @@ namespace TestProj.Tests.Common
             GoToBasket(browserInstance);
             //browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-product-view?supplier=6001205000004");
             //browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-catalog-view?viewtype=grid");
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button"));
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
-            Helpers.Instance.CheckClearPopup(browserInstance);
+
+            if (Helpers.Instance.ElementExists(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button"))
+            {
+                var clearBut = Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button");
+                
+                //Check if button is enabled
+                if (clearBut.Element.Attributes.Get("disabled") != "disabled" && clearBut.Element.Attributes.Get("disabled") != "true")
+                {
+                    Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button"));
+                    Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div:nth-child(1) > div.headerLogo.left > a"));
+                    Helpers.Instance.CheckClearPopup(browserInstance);
+                }
+            }
             //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/main"), 30);
         }
 
@@ -582,12 +601,22 @@ namespace TestProj.Tests.Common
         {
             Thread.Sleep(5000);
             browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#basketConfirm > div > div > div.modal-body.text-center > div > button:nth-child(1)"), 30);
-
             var yesButton = Helpers.Instance.GetProxy(browserInstance, "#basketConfirm > div > div > div.modal-body.text-center > div > button:nth-child(1)");
 
             Helpers.Instance.ClickButton(browserInstance, yesButton);
             Thread.Sleep(1000);
         }
+
+        public void CheckConfirmDeletePopup(Classes.Browser browserInstance)
+        {
+            Thread.Sleep(5000);
+            browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#basketConfirm"), 30);
+            var yesButton = Helpers.Instance.GetProxy(browserInstance, "#basketConfirm > div > div > div.modal-body.text-center > div > button:nth-child(1)");
+
+            Helpers.Instance.ClickButton(browserInstance, yesButton);
+            Thread.Sleep(1000);
+        }
+
 
         public void CheckProxyValue(Classes.Browser browserInstance, FluentAutomation.ElementProxy proxy, string value)
         {
