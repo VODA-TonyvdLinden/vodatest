@@ -189,6 +189,11 @@ namespace TestProj.Tests.Common
             browserInstance.Instance.Assert.Class("purpleButton").On(buttonProxy);
         }
 
+        public void WaitFor(Classes.Browser browserInstance, string objectPath)
+        {
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists(objectPath), TimeSpan.FromMinutes(30));
+        }
+
         public void _ActivationForm_EnterCorrectMultiUserDetails(Classes.Browser browserInstance, FluentAutomation.ElementProxy msisdn, FluentAutomation.ElementProxy username, FluentAutomation.ElementProxy activationNumber, FluentAutomation.ElementProxy userAlias, FluentAutomation.ElementProxy challengeQuestion, FluentAutomation.ElementProxy challengeAnswer, FluentAutomation.ElementProxy nextButton)
         {
 

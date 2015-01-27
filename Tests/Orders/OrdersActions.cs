@@ -17,6 +17,8 @@ namespace TestProj.Tests.Orders
             Helpers.Instance.AddOrders(browserInstance, 1);
 
             basketActions.ClickBasketBlock(browserInstance);
+            Helpers.Instance.WaitFor(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button");
+
             basketActions.ClickOrderNowButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button"));
 
             LogWriter.Instance.Log(@"ISSUE 101: TESTCASE:_02_ViewConfirmedOrder -> Test step there is a step missing before we can get to this confirmation pop up.' -> 

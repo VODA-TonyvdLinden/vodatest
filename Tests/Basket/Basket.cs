@@ -99,6 +99,7 @@ namespace TestProj.Tests.Basket
             //LogWriter.Instance.Log("TESTCASE:_01_BasketGridView -> '2. Verify that order from a specific supplier functions as expected'. No checkbox on screen", LogWriter.eLogType.Error);
             //LogWriter.Instance.Log("TESTCASE:_01_BasketGridView -> Clicking on <Order Now> button instead", LogWriter.eLogType.Error);         
             // 2.1 The confirm order pop-up is displayed  
+            Helpers.Instance.WaitFor(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button");
             basketActions.ClickOrderNowButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button"));
             basketActions.CheckConfirmPopup(browserInstance);
 

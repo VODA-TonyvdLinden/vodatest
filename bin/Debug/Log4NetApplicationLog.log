@@ -15193,3 +15193,497 @@ BAKING POWDER REF POUCH SNOWFLAKE 200G P
 2015-01-23 16:01:41,761 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
 2015-01-23 16:01:41,842 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
 2015-01-23 16:02:36,205 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 1 seconds
+2015-01-27 08:44:58,101 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 08:44:58,163 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 08:46:27,106 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 08:46:33,436 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 08:46:33,733 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceUnConfirmedOrder executed in 26 seconds
+2015-01-27 08:46:56,600 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 08:46:57,172 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-27 08:46:57,173 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 101: TESTCASE:_02_ViewConfirmedOrder -> Test step there is a step missing before we can get to this confirmation pop up.' -> 
+                                    'step added for to make the test execute.' ->'2. Verify that the confirm order pop -up has the following' - Please update the test case.
+2015-01-27 08:46:57,823 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyConfirmPopup executed in 0 seconds
+2015-01-27 08:47:03,244 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_SelectOrder executed in 26 seconds
+2015-01-27 08:47:06,620 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_02_ViewConfirmedOrder -> Test step in the order confirmation pop up there is button to view my order, and messager to prcess to view the order.' 
+                                    '2. Verify that the confirm order pop -up has the following' - Please update the test case.
+2015-01-27 08:47:06,902 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyConfirmOrderPopup executed in 0 seconds
+2015-01-27 08:47:06,902 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 103: TESTCASE:_02_ViewConfirmedOrder -> Test step in the order confirmation pop up there is no button to view my order, this test cannot be tested.' 
+                                    '3. Click on the view order button' - Please update the test case.
+2015-01-27 08:47:49,653 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 08:47:56,068 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 08:47:56,365 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceConfirmedOrder executed in 26 seconds
+2015-01-27 08:48:31,609 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 08:48:31,625 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 08:50:29,097 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2015-01-27 08:50:29,191 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2015-01-27 08:50:29,822 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Current display size = 1920x1080
+2015-01-27 08:50:31,540 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 2 seconds
+2015-01-27 08:50:32,975 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_AddSpecialToBasket executed in 1 seconds
+2015-01-27 08:50:33,326 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Current display size = 1920x1080
+2015-01-27 08:50:35,031 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SelectSpaza executed in 2 seconds
+2015-01-27 08:50:35,109 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2015-01-27 08:50:35,562 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_SwitchSpazaAndCheckBasket executed in 6 seconds
+2015-01-27 08:50:35,562 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 1: TESTCASE:_04_ApplicationWithMultipleSpazas -> Step 5 inferred by previous sections of the test. Update test case
+2015-01-27 08:50:46,226 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaNameForReturnToApp executed in 10 seconds
+2015-01-27 08:50:50,532 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 08:50:50,547 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 08:51:52,689 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyLogoAndBanner executed in 0 seconds
+2015-01-27 08:51:52,799 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyOnlineIndicator executed in 0 seconds
+2015-01-27 08:51:53,314 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPageLinks executed in 0 seconds
+2015-01-27 08:51:53,314 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _01_ActivationLandingPage -> Cannot programatically check spelling and grammer
+2015-01-27 08:51:53,439 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyPreferedAlias executed in 0 seconds
+2015-01-27 08:51:53,533 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpazaName executed in 0 seconds
+2015-01-27 08:51:53,549 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialsExists executed in 0 seconds
+2015-01-27 08:51:53,564 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilExists executed in 0 seconds
+2015-01-27 08:51:53,564 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 2: TESTCASE:_01_ActivationLandingPage -> Testcase wrong. The first app block is used by stores promotions link and is active. The rest must be greyed out
+2015-01-27 08:51:53,564 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 3: TETCASE: VerifySubApplicationsExists -> I can see 6 app DIVs, but cannot check if they are enabled or not. PLEASE ADD ENABLE/DISABLE CLASS
+2015-01-27 08:51:53,580 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubApplicationsExists executed in 0 seconds
+2015-01-27 08:51:53,611 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBottomNavExists executed in 0 seconds
+2015-01-27 08:51:53,627 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyAlertNotificationExists executed in 0 seconds
+2015-01-27 08:51:53,643 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBasketTotalFieldExists executed in 0 seconds
+2015-01-27 08:51:53,658 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBasketLabelExists executed in 0 seconds
+2015-01-27 08:51:53,658 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBasketTotalAmountExists executed in 0 seconds
+2015-01-27 08:51:53,674 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldExists executed in 0 seconds
+2015-01-27 08:51:53,689 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldTextExists executed in 0 seconds
+2015-01-27 08:51:53,912 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySearchFieldTextEditableExists executed in 0 seconds
+2015-01-27 08:52:09,499 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyAlertSearchBox executed in 15 seconds
+2015-01-27 08:52:22,971 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyBaskSearchBox executed in 13 seconds
+2015-01-27 08:52:33,191 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 4: TESTCASE:_03_ApplicationLandingContentsFunctionality -> Item is not market when single click. Cannot test for this. Test case wrong. Same behaviour as double click
+2015-01-27 08:52:33,248 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySpecialAccessibility executed in 5 seconds
+2015-01-27 08:52:33,325 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 5: TESTCASE:_03_ApplicationLandingContentsFunctionality -> Cannot test MARBIL. Nothing happens when you click on it.
+2015-01-27 08:52:33,325 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 6: TESTCASE:_03_ApplicationLandingContentsFunctionality -> is the MARBIL page url always the same?
+2015-01-27 08:52:33,325 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifyMarbilAccessibility executed in 0 seconds
+2015-01-27 08:52:33,329 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_03_ApplicationLandingContentsFunctionality -> Test case wrong. The first application link is a link to specials, and is clickable
+2015-01-27 08:52:33,544 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAccessingApplicationActions_VerifySubAppAccessibility executed in 0 seconds
+2015-01-27 08:52:33,723 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - _05_AccessApplicationWithSingleSpaza : TEST CASE: Single spaza select opens the dropdown. Left like this for some reason?
+2015-01-27 08:52:37,952 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 08:52:37,952 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 08:53:40,901 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 08:53:40,901 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 1
+2015-01-27 08:53:40,901 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Found chromedriver -> Killing
+2015-01-27 08:54:41,237 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyVodacomLogoAndBanner executed in 0 seconds
+2015-01-27 08:54:41,240 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:ISSUE 120: TEST CASE: _01_AlertsLandingPageVerfication -> Test step cannot be implemented. '2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen' - Cannot test this since we do not have the online class/indicator anymore.
+2015-01-27 08:54:41,240 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyOnlineOffilineIndicator executed in 0 seconds
+2015-01-27 08:54:41,367 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyContactUsHelpMeLinks executed in 0 seconds
+2015-01-27 08:54:41,367 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 121 : TEST CASE: _01_AlertsLandingPageVerfication -> Test step cannot be implemented. '4. See spelling, grammar and alignment' - We cannot test for this.
+2015-01-27 08:54:41,523 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifySpazaAliasAndName executed in 0 seconds
+2015-01-27 08:54:41,523 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 122: TEST CASE: _01_AlertsLandingPageVerfication -> Test step spelling incorrect, should be Marbil ad. '6. Verify that the Marbil add is displayed' - Update test case
+2015-01-27 08:54:41,539 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyMarbilAd executed in 0 seconds
+2015-01-27 08:54:41,539 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 123: TEST CASE: _01_AlertsLandingPageVerfication -> Test step incorrect we do not have sub applications displayed in the alerts page. '7. Verify that the sub application are displayed and also greyed out' - Update test case
+2015-01-27 08:54:41,570 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyBottomNavigationBlocks executed in 0 seconds
+2015-01-27 08:54:41,586 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyNotificationAndLabel executed in 0 seconds
+2015-01-27 08:54:41,648 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyBasketTotal executed in 0 seconds
+2015-01-27 08:54:41,664 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_AlertsLandingPageVerfication -> Test step the value with the search is 'I 'm looking for ...'. '14. Verify the text in the search field, it states that I am looking for' - Please update the test case.
+2015-01-27 08:54:41,868 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifySearchField executed in 0 seconds
+2015-01-27 08:54:41,890 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyNotificationSection executed in 0 seconds
+2015-01-27 08:54:41,952 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyActionSection executed in 0 seconds
+2015-01-27 08:54:42,015 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_AlertsLandingPageVerfication -> Test step the labels do not match the test case. '19. Verify that the Order Alerts label, has sub labels namely You have received new invoices, you have an unconfirmed order, your catalogue is out of sync' - Labels on the page different to the test case labels
+2015-01-27 08:54:42,015 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyOrderAlerts executed in 0 seconds
+2015-01-27 08:54:42,082 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 124: TEST CASE: _01_AlertsLandingPageVerfication -> Test step we only have to sub items here and the labels do not match the test case. '21.Veriy that the system alerts label, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed' - Update test case
+2015-01-27 08:54:42,083 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifySystemAlerts executed in 0 seconds
+2015-01-27 08:54:42,138 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 125: TEST CASE: _01_AlertsLandingPageVerfication -> Test step do not have the Change Now button. '21.Veriy that the system alerts label, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed' - Update test case
+2015-01-27 08:54:42,138 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifySideButtons executed in 0 seconds
+2015-01-27 08:55:02,452 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 08:55:08,969 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 08:55:09,281 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceUnConfirmedOrder executed in 26 seconds
+2015-01-27 08:55:09,610 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyUrgentActions executed in 27 seconds
+2015-01-27 08:55:09,626 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 127: TEST CASE: _03_AlertsViewInvoices -> Test step text does not turn red even if there are new invoices. '1. Verify that the active alert's text  is highlighted red 'You have received new invoices' ' - Update test case
+2015-01-27 08:55:09,626 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 128: TEST CASE: _03_AlertsViewInvoices -> Test step cannot be test the View Invoices button is always disabled need to be manually tested. '2. Click on the <view invoices> button' - Update test case
+2015-01-27 08:55:35,045 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 08:55:35,621 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-27 08:55:35,621 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 101: TESTCASE:_02_ViewConfirmedOrder -> Test step there is a step missing before we can get to this confirmation pop up.' -> 
+                                    'step added for to make the test execute.' ->'2. Verify that the confirm order pop -up has the following' - Please update the test case.
+2015-01-27 08:55:36,286 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyConfirmPopup executed in 0 seconds
+2015-01-27 08:55:48,085 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceUnConfirmedOrder executed in 32 seconds
+2015-01-27 08:55:48,126 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 127: TEST CASE: _04_AlertsConfirmNow -> Test step the label is not highlighted as red even when they are unconfirmed orders ...'. 
+                                                '1. Verify that the active alert's text  is highlighted red 'You have an unconfirmed order' - Please update the test case.
+2015-01-27 08:55:48,676 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyTextHighlightedRed executed in 0 seconds
+2015-01-27 08:55:49,473 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyConfirmNowButtonClick executed in 0 seconds
+2015-01-27 08:55:49,473 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 128: TEST CASE: _04_AlertsConfirmNow -> Test step when confirm order button is clicked the pop up comes up not list of uncofirmed orders...'. 
+                                                '3. Click on the <confirm  order> button - Please update the test case.
+2015-01-27 08:55:49,473 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 129: TEST CASE: _04_AlertsConfirmNow -> Test step clicking confirm order, confirms the order brings a popup and sends you to the orders history page, which means all other test steps cannot be tested. '3. Click on the <confirm  order> button' - Please update the test case.
+2015-01-27 08:55:49,911 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyTextHighlightedRed executed in 0 seconds
+2015-01-27 08:55:49,943 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 7: TESTCASE: CheckOnlineIndicator -> Inconsistent css classes. In activation, the online indicator shows 'online', but after activation it shows 'BROWSER' -> Assert commented out
+2015-01-27 08:55:56,076 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyAsyncNow executed in 6 seconds
+2015-01-27 08:55:56,530 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyTextHighlightedRed executed in 0 seconds
+2015-01-27 08:56:02,655 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyManageButtonClick executed in 6 seconds
+2015-01-27 08:56:03,187 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyTextHighlightedRed executed in 0 seconds
+2015-01-27 08:56:09,453 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyDiagnoseButtonClick executed in 6 seconds
+2015-01-27 08:56:10,361 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 131: TESTCASE: _09_AlertsMessaging -> Test step there is no Messages to test, we cannot automate this, manual testing will be required. '1.Verify Received Message Format  from MAS' - Please update the test case.
+2015-01-27 08:56:14,632 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 08:56:14,632 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 08:57:43,631 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 08:57:46,401 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-27 08:57:49,202 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckConfirmPopup executed in 2 seconds
+2015-01-27 08:57:49,483 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2015-01-27 08:57:50,985 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2015-01-27 08:57:57,275 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderDeleteButton executed in 6 seconds
+2015-01-27 08:58:26,170 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 08:58:32,422 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 08:59:01,391 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 08:59:02,018 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyListView executed in 0 seconds
+2015-01-27 08:59:07,589 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyListViewActions executed in 5 seconds
+2015-01-27 08:59:11,274 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 08:59:11,935 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-27 08:59:14,646 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckConfirmPopup executed in 2 seconds
+2015-01-27 08:59:14,927 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2015-01-27 08:59:16,449 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2015-01-27 08:59:26,522 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_DeleteOrderFromList executed in 7 seconds
+2015-01-27 09:00:11,594 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 09:00:11,899 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckOrderAllFunction executed in 43 seconds
+2015-01-27 09:00:14,751 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckConfirmPopup executed in 2 seconds
+2015-01-27 09:00:15,016 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 39: TESTCASE:_01_BasketGridView -> Test case step missed -> CLICK CLOSE BUTTON
+2015-01-27 09:00:16,469 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickConfirmOrderPopupClose executed in 1 seconds
+2015-01-27 09:00:28,860 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_CheckClearAllFunction executed in 12 seconds
+2015-01-27 09:00:53,934 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 09:01:08,895 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 49: TESTCASE:_05_BasketDetailListView -> Test step missed '1.Click on the <list> view button '
+2015-01-27 09:01:30,810 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 09:02:10,563 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 09:02:57,393 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 4 seconds
+2015-01-27 09:03:38,242 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 09:03:51,221 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 09:03:51,224 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 09:04:57,603 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInterstitialAdvert executed in 5 seconds
+2015-01-27 09:04:58,287 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 0 seconds
+2015-01-27 09:04:58,599 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-27 09:04:58,599 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-27 09:04:58,599 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-27 09:04:58,599 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-27 09:04:58,599 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-27 09:04:58,599 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-27 09:04:58,599 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-27 09:04:58,599 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-27 09:04:58,599 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-27 09:04:58,599 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-27 09:04:58,599 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-27 09:04:58,599 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-27 09:04:58,599 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-27 09:04:58,599 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-27 09:04:58,599 [TestRunnerThread] DEBUG TestProj.Classes.LogWriter [(null)] - FluentAutomation.ElementProxy
+2015-01-27 09:04:58,599 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ERROR: VerifyActiveCatalogueAndSubCategories -> Cannot find proxy for (FluentAutomation.CommandProvider, System.Func`1[FluentAutomation.Interfaces.IElement])
+2015-01-27 09:04:58,896 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-27 09:04:59,537 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyInActiveCatalogueAndSubCategories executed in 0 seconds
+2015-01-27 09:04:59,865 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 111: TESTCASE:_02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the catalogues.'
+                                    '4. Verify that the list of catalogues is displayed and user is able to scroll left to right ' - Test case to be updated.
+2015-01-27 09:05:00,178 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueIconList executed in 0 seconds
+2015-01-27 09:05:29,761 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCategoryIcons executed in 29 seconds
+2015-01-27 09:05:30,107 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:ISSUE 112: _02_CatalogueLandingPage -> Test step we do not have the functionality to scroll for the brands.'
+                                    '7. Verify that brands are displayed and user can scroll from left to right' - Test case to be updated.
+2015-01-27 09:05:30,419 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyBrandList executed in 0 seconds
+2015-01-27 09:05:31,153 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 0 seconds
+2015-01-27 09:05:31,863 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 0 seconds
+2015-01-27 09:05:38,225 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_ClickSubCategory executed in 6 seconds
+2015-01-27 09:05:38,969 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 0 seconds
+2015-01-27 09:05:45,466 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_ClickSubCategory executed in 6 seconds
+2015-01-27 09:05:46,249 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 0 seconds
+2015-01-27 09:05:52,641 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_ClickSubCategory executed in 6 seconds
+2015-01-27 09:05:53,511 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyCatalogueBlockClick executed in 0 seconds
+2015-01-27 09:06:00,112 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_ClickSubCategory executed in 6 seconds
+2015-01-27 09:06:04,426 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 09:06:04,426 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 09:06:31,179 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidMultiUserDetails executed in 7 seconds
+2015-01-27 09:06:31,211 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 09:06:31,211 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 1
+2015-01-27 09:06:31,211 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Found chromedriver -> Killing
+2015-01-27 09:08:07,293 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IFavouritesActions_VerifyFavouriteIconClick executed in 6 seconds
+2015-01-27 09:08:37,381 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IFavouritesActions_VerifyFavouriteIconClick executed in 6 seconds
+2015-01-27 09:09:09,368 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IFavouritesActions_VerifyFavouriteIconClick executed in 6 seconds
+2015-01-27 09:09:40,446 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IFavouritesActions_VerifyFavouriteIconClick executed in 6 seconds
+2015-01-27 09:10:10,800 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IFavouritesActions_ClickFavouriteProduct executed in 29 seconds
+2015-01-27 09:10:31,196 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 09:10:37,957 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IFavouritesActions_ClickBasketProduct executed in 26 seconds
+2015-01-27 09:10:43,722 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IFavouritesActions_AddBasketProductToFavourites executed in 5 seconds
+2015-01-27 09:10:50,039 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IFavouritesActions_VerifyAddFavouriteProduct executed in 6 seconds
+2015-01-27 09:11:09,407 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 09:11:14,952 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IFavouritesActions_ClickBasketProduct executed in 24 seconds
+2015-01-27 09:11:21,641 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: ICataloguesActions_VerifyProductQuantityClick executed in 6 seconds
+2015-01-27 09:11:25,996 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 09:11:25,996 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 09:12:45,722 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 09:12:52,062 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 09:12:52,375 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceUnConfirmedOrder executed in 26 seconds
+2015-01-27 09:13:14,725 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 09:13:21,061 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 09:13:21,389 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_SelectOrder executed in 25 seconds
+2015-01-27 09:13:44,440 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 09:13:50,928 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 09:13:51,256 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceConfirmedOrder executed in 26 seconds
+2015-01-27 09:14:15,124 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 4 seconds
+2015-01-27 09:14:16,254 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 1 seconds
+2015-01-27 09:14:16,254 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 101: TESTCASE:_02_ViewConfirmedOrder -> Test step there is a step missing before we can get to this confirmation pop up.' -> 
+                                    'step added for to make the test execute.' ->'2. Verify that the confirm order pop -up has the following' - Please update the test case.
+2015-01-27 09:14:16,872 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyConfirmPopup executed in 0 seconds
+2015-01-27 09:14:31,698 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceConfirmedOrder executed in 37 seconds
+2015-01-27 09:14:35,733 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrdersBlockClick executed in 1 seconds
+2015-01-27 09:14:52,429 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrderHistoryFields executed in 13 seconds
+2015-01-27 09:15:42,592 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 09:15:49,088 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 09:15:49,432 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceConfirmedOrder executed in 26 seconds
+2015-01-27 09:16:12,444 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 09:16:18,934 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 09:16:19,246 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceConfirmedOrder executed in 26 seconds
+2015-01-27 09:16:43,005 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 4 seconds
+2015-01-27 09:16:43,597 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-27 09:16:43,598 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 101: TESTCASE:_02_ViewConfirmedOrder -> Test step there is a step missing before we can get to this confirmation pop up.' -> 
+                                    'step added for to make the test execute.' ->'2. Verify that the confirm order pop -up has the following' - Please update the test case.
+2015-01-27 09:16:44,212 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyConfirmPopup executed in 0 seconds
+2015-01-27 09:16:59,149 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceConfirmedOrder executed in 36 seconds
+2015-01-27 09:17:03,635 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrdersBlockClick executed in 1 seconds
+2015-01-27 09:17:35,867 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrderNumberClick executed in 2 seconds
+2015-01-27 09:17:55,660 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 09:18:01,993 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 09:18:02,290 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceUnConfirmedOrder executed in 26 seconds
+2015-01-27 09:18:23,039 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 4 seconds
+2015-01-27 09:18:23,633 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-27 09:18:23,634 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 101: TESTCASE:_02_ViewConfirmedOrder -> Test step there is a step missing before we can get to this confirmation pop up.' -> 
+                                    'step added for to make the test execute.' ->'2. Verify that the confirm order pop -up has the following' - Please update the test case.
+2015-01-27 09:18:24,277 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyConfirmPopup executed in 0 seconds
+2015-01-27 09:18:38,914 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceConfirmedOrder executed in 36 seconds
+2015-01-27 09:18:40,454 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrdersBlockClick executed in 1 seconds
+2015-01-27 09:18:42,184 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyOrderNumberClick executed in 1 seconds
+2015-01-27 09:18:43,095 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyViewInvoicesButtonClick executed in 0 seconds
+2015-01-27 09:18:43,756 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyInvoiceHeader executed in 0 seconds
+2015-01-27 09:18:44,366 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyInvoiceDetailOrderNumber executed in 0 seconds
+2015-01-27 09:18:44,366 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:ISSUE 108: _09_ViewInvoices -> Test step cannot be tested since we cannot trigger instant invoices in our test cases.'
+                                    ' 4.The  invoice number, supplier, invoice date , value are pre-populated  and displayed ' - Test case need to be manually tested.
+2015-01-27 09:18:45,246 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyInvoiceBackToOrdersButton executed in 0 seconds
+2015-01-27 09:18:49,450 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:ISSUE 109: _10_LoggingDiscrepancies -> Test step cannot be tested since we cannot trigger instant invoices and we do not have the log discrepancy button in the view invoices detail screen.' 
+                                    '2. Click on the <log discrepancy> button' - Test case need to be manually tested.
+2015-01-27 09:18:49,456 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:ISSUE 110: _11_SearchingOrders -> Test step cannot be tested since we cannot trigger instant invoices and we do not have search functionality to search invoices.' 
+                                    '2. Click on the <search> button' - Test case need to be manually tested.
+2015-01-27 09:18:53,747 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 09:18:53,747 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 10:00:40,252 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 10:00:40,259 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 10:01:13,070 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2015-01-27 10:01:13,105 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 7: TESTCASE: CheckOnlineIndicator -> Inconsistent css classes. In activation, the online indicator shows 'online', but after activation it shows 'BROWSER' -> Assert commented out
+2015-01-27 10:01:13,105 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2015-01-27 10:01:13,267 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyPageLinks executed in 0 seconds
+2015-01-27 10:01:13,614 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 24: TESTCASE:VerifyActivationLandingPage -> What css class is used to disable the next button?
+2015-01-27 10:01:13,615 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 25: TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the next button, just the css class
+2015-01-27 10:01:13,615 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the next button, just the css class
+2015-01-27 10:01:13,615 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyActivationPageNextButton executed in 0 seconds
+2015-01-27 10:01:13,696 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyFieldExist executed in 0 seconds
+2015-01-27 10:01:16,305 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestMandatoryFields executed in 2 seconds
+2015-01-27 10:01:17,626 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestMSISDNInputValidation executed in 1 seconds
+2015-01-27 10:01:18,007 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 8: TESTCASE:_02_ActivationFormFieldValidation -> Username field validation not working -> ' TEST'. Assert commented out.
+2015-01-27 10:01:18,210 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestUsernameInputValidation executed in 0 seconds
+2015-01-27 10:01:19,468 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestActivationKeyInputValidation executed in 1 seconds
+2015-01-27 10:01:19,839 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 9: TESTCASE:_02_ActivationFormFieldValidation -> Alias field validation not working -> ' TEST'. Assert commented out.
+2015-01-27 10:01:20,059 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestAliasInputValidation executed in 0 seconds
+2015-01-27 10:01:20,059 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 11: TESTCASE:_03_ActivationFormIncorrectUserDetails -> TestInvalidActivationKey -> Activation key is no longer validated. Step 1 invalid
+2015-01-27 10:01:25,971 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestInvalidUsername executed in 5 seconds
+2015-01-27 10:01:26,805 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestValidMultiUserDetails executed in 0 seconds
+2015-01-27 10:01:29,067 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ValidateOTPStart executed in 2 seconds
+2015-01-27 10:01:29,130 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2015-01-27 10:01:29,161 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 7: TESTCASE: CheckOnlineIndicator -> Inconsistent css classes. In activation, the online indicator shows 'online', but after activation it shows 'BROWSER' -> Assert commented out
+2015-01-27 10:01:29,161 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2015-01-27 10:01:29,333 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyPageLinks executed in 0 seconds
+2015-01-27 10:01:29,333 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Cannot check spelling and grammer automatically
+2015-01-27 10:01:29,364 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 22: TESTCASE:VerifyActivationLandingPage -> What css class is used to disable the next button?
+2015-01-27 10:01:29,364 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 23: TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the next button, just the css class
+2015-01-27 10:01:29,364 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the next button, just the css class
+2015-01-27 10:01:29,364 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOTPNextButton executed in 0 seconds
+2015-01-27 10:01:29,395 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 26: TESTCASE:VerifyResendButton -> What css class is used to disable the next button?
+2015-01-27 10:01:29,395 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 27: TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the resend button, just the css class
+2015-01-27 10:01:29,395 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE:VerifyActivationLandingPage -> Cannot evaluate the color of the text on the resend button, just the css class
+2015-01-27 10:01:29,395 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyResendButton executed in 0 seconds
+2015-01-27 10:01:29,411 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOntTimeLable executed in 0 seconds
+2015-01-27 10:01:29,458 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOTPErrorMessage executed in 0 seconds
+2015-01-27 10:01:30,835 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ValidateOTP executed in 1 seconds
+2015-01-27 10:01:30,840 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - Cannot test Activation._07_CorrectOneTimePinAndApplicationOffline. Unable to simulate offline application
+2015-01-27 10:01:30,844 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 28: TESTCASE:CorrectOneTimePinAndApplicationOffline -> Incomplete test case -> Must check if application is offline
+2015-01-27 10:01:30,844 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE:_07_CorrectOneTimePinAndApplicationOffline -> Cannot test offline capability. Assert commented out. Activation._07_CorrectOneTimePinAndApplicationOffline
+2015-01-27 10:01:31,028 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2015-01-27 10:01:31,069 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2015-01-27 10:01:33,948 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_CheckErrorPopup executed in 2 seconds
+2015-01-27 10:01:34,137 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2015-01-27 10:01:34,168 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2015-01-27 10:01:36,947 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_CheckErrorPopup executed in 2 seconds
+2015-01-27 10:01:37,003 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2015-01-27 10:01:37,861 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOTPErrorMessage executed in 0 seconds
+2015-01-27 10:01:37,915 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2015-01-27 10:01:37,955 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOTPErrorMessage executed in 0 seconds
+2015-01-27 10:01:38,133 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_EnterAndVerifyOTPValue executed in 0 seconds
+2015-01-27 10:01:38,162 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ClickNext executed in 0 seconds
+2015-01-27 10:01:39,277 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _10_CorrectOneTimePin -> Test case passed
+2015-01-27 10:01:39,358 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyLogoAndBanner executed in 0 seconds
+2015-01-27 10:01:39,405 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 7: TESTCASE: CheckOnlineIndicator -> Inconsistent css classes. In activation, the online indicator shows 'online', but after activation it shows 'BROWSER' -> Assert commented out
+2015-01-27 10:01:39,405 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyOnlineIndicator executed in 0 seconds
+2015-01-27 10:01:39,698 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyPageLinks executed in 0 seconds
+2015-01-27 10:01:39,698 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _11_SetupCatalogueLandingPage -> Cannot check spelling and grammer
+2015-01-27 10:01:39,721 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 29: TESTCASE: _11_SetupCatalogueLandingPage -> There is no test case that tests the update button enable/disable for single spaza users
+2015-01-27 10:01:39,721 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - ISSUE 30: TESTCASE: _11_SetupCatalogueLandingPage -> Cannot verify the button background colour and label text on the button
+2015-01-27 10:01:39,752 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_VerifyCatalogueLandingPage executed in 0 seconds
+2015-01-27 10:01:40,037 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _12_SetupCatalogueValidations -> 1.2 Cannot simulate press enter key. Test ignored 
+2015-01-27 10:02:21,031 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_TestCatalogueSeachValidation executed in 41 seconds
+2015-01-27 10:02:26,766 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_CatSearchTest executed in 5 seconds
+2015-01-27 10:02:27,326 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ResetSearch executed in 0 seconds
+2015-01-27 10:02:27,535 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 31: TESTCASE: _15_SetupCatalogueSearchFieldFilter -> 'Test case unclear. 1.2 Select the one from the pre-populated lis'
+2015-01-27 10:02:27,535 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 32: TESTCASE: _15_SetupCatalogueSearchFieldFilter -> Test case result unclear. '1.2 The record you have selected is displayed with records that are related to that search, with their respective distance ranges' 
+2015-01-27 10:02:33,271 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_CatSearchTest executed in 5 seconds
+2015-01-27 10:02:33,830 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IActivationActions_ResetSearch executed in 0 seconds
+2015-01-27 10:02:33,965 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _16_SetupCatalogueLandingPageInterruptions -> Cannot set application to offlilne. Navigate away from page to emulate
+2015-01-27 10:02:40,896 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TESTCASE: _16_SetupCatalogueLandingPageInterruptions -> Cannot test offline error message 'O1-2-6 – You are not online. Please check your connectivity and try again'.
+2015-01-27 10:02:41,634 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 33: TESTCASE: _16_SetupCatalogueLandingPageInterruptions -> Test case incorrect (1.2). When navigating back to this page, a popup is shown with message 'E2-3-6 ->You are not online. Please check your connectivity and try again Call our call center to get assistance'
+2015-01-27 10:02:41,634 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 34: TESTCASE: _16_SetupCatalogueLandingPageInterruptions -> Test case unclear. '2.1 If the application is online and the allowable is selected and no action or record is returned'
+2015-01-27 10:02:41,635 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 35: TESTCASE: _16_SetupCatalogueLandingPageInterruptions -> Test case result unclear. '2.1 An error message is displayed E1-3-1 – No response from server, please try again”.' 
+2015-01-27 10:02:41,635 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 36: TESTCASE: _16_SetupCatalogueLandingPageInterruptions -> Test case incorrect (2.2). When navigating back to this page, a popup is shown with message 'E2-3-6 ->You are not online. Please check your connectivity and try again Call our call center to get assistance'
+2015-01-27 10:02:41,931 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 37: TESTCASE: _17_SetupCatalogueSearchFieldReturningOneOrMultipleResults -> CANNOT COMPLETE TEST -> Wholesalers with the name of 'Wholesaler[something]' needs to be added for 25,50 and 75. Single Spaza contains 5 wholesalers in 75 - 100
+2015-01-27 10:02:41,931 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 38: TESTCASE: _17_SetupCatalogueSearchFieldReturningOneOrMultipleResults -> There is no test case that caters for testing of multi spazas on manage catalogue. No testing of <NEXT. and <BACK> is done
+2015-01-27 10:02:46,190 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 10:02:46,190 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 10:04:11,315 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:04:11,929 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-27 10:04:11,929 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 101: TESTCASE:_02_ViewConfirmedOrder -> Test step there is a step missing before we can get to this confirmation pop up.' -> 
+                                    'step added for to make the test execute.' ->'2. Verify that the confirm order pop -up has the following' - Please update the test case.
+2015-01-27 10:04:12,626 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyConfirmPopup executed in 0 seconds
+2015-01-27 10:04:24,429 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceUnConfirmedOrder executed in 33 seconds
+2015-01-27 10:09:29,808 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 10:09:29,823 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 10:10:27,202 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyVodacomLogoAndBanner executed in 0 seconds
+2015-01-27 10:10:27,202 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:ISSUE 120: TEST CASE: _01_AlertsLandingPageVerfication -> Test step cannot be implemented. '2. Verify that the online/offline indicator is displayed on the top left hand corner of the screen' - Cannot test this since we do not have the online class/indicator anymore.
+2015-01-27 10:10:27,202 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyOnlineOffilineIndicator executed in 0 seconds
+2015-01-27 10:10:27,358 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyContactUsHelpMeLinks executed in 0 seconds
+2015-01-27 10:10:27,358 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 121 : TEST CASE: _01_AlertsLandingPageVerfication -> Test step cannot be implemented. '4. See spelling, grammar and alignment' - We cannot test for this.
+2015-01-27 10:10:27,499 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifySpazaAliasAndName executed in 0 seconds
+2015-01-27 10:10:27,499 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 122: TEST CASE: _01_AlertsLandingPageVerfication -> Test step spelling incorrect, should be Marbil ad. '6. Verify that the Marbil add is displayed' - Update test case
+2015-01-27 10:10:27,514 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyMarbilAd executed in 0 seconds
+2015-01-27 10:10:27,514 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 123: TEST CASE: _01_AlertsLandingPageVerfication -> Test step incorrect we do not have sub applications displayed in the alerts page. '7. Verify that the sub application are displayed and also greyed out' - Update test case
+2015-01-27 10:10:27,545 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyBottomNavigationBlocks executed in 0 seconds
+2015-01-27 10:10:27,561 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyNotificationAndLabel executed in 0 seconds
+2015-01-27 10:10:27,608 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyBasketTotal executed in 0 seconds
+2015-01-27 10:10:27,624 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_AlertsLandingPageVerfication -> Test step the value with the search is 'I 'm looking for ...'. '14. Verify the text in the search field, it states that I am looking for' - Please update the test case.
+2015-01-27 10:10:27,857 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifySearchField executed in 0 seconds
+2015-01-27 10:10:27,885 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyNotificationSection executed in 0 seconds
+2015-01-27 10:10:27,932 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyActionSection executed in 0 seconds
+2015-01-27 10:10:27,994 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_01_AlertsLandingPageVerfication -> Test step the labels do not match the test case. '19. Verify that the Order Alerts label, has sub labels namely You have received new invoices, you have an unconfirmed order, your catalogue is out of sync' - Labels on the page different to the test case labels
+2015-01-27 10:10:27,994 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyOrderAlerts executed in 0 seconds
+2015-01-27 10:10:28,052 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 124: TEST CASE: _01_AlertsLandingPageVerfication -> Test step we only have to sub items here and the labels do not match the test case. '21.Veriy that the system alerts label, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed' - Update test case
+2015-01-27 10:10:28,053 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifySystemAlerts executed in 0 seconds
+2015-01-27 10:10:28,084 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 125: TEST CASE: _01_AlertsLandingPageVerfication -> Test step do not have the Change Now button. '21.Veriy that the system alerts label, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed' - Update test case
+2015-01-27 10:10:28,084 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifySideButtons executed in 0 seconds
+2015-01-27 10:10:48,191 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:10:54,636 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:10:54,949 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceUnConfirmedOrder executed in 26 seconds
+2015-01-27 10:10:55,277 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyUrgentActions executed in 27 seconds
+2015-01-27 10:10:55,355 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 127: TEST CASE: _03_AlertsViewInvoices -> Test step text does not turn red even if there are new invoices. '1. Verify that the active alert's text  is highlighted red 'You have received new invoices' ' - Update test case
+2015-01-27 10:10:55,355 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 128: TEST CASE: _03_AlertsViewInvoices -> Test step cannot be test the View Invoices button is always disabled need to be manually tested. '2. Click on the <view invoices> button' - Update test case
+2015-01-27 10:11:20,870 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:11:27,401 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:11:27,744 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceUnConfirmedOrder executed in 26 seconds
+2015-01-27 10:11:28,463 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyTextHighlightedRed executed in 0 seconds
+2015-01-27 10:11:28,479 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 7: TESTCASE: CheckOnlineIndicator -> Inconsistent css classes. In activation, the online indicator shows 'online', but after activation it shows 'BROWSER' -> Assert commented out
+2015-01-27 10:11:35,019 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyAsyncNow executed in 6 seconds
+2015-01-27 10:11:35,707 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyTextHighlightedRed executed in 0 seconds
+2015-01-27 10:11:42,225 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyManageButtonClick executed in 6 seconds
+2015-01-27 10:11:42,917 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyTextHighlightedRed executed in 0 seconds
+2015-01-27 10:11:49,546 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IAlertsActions_VerifyDiagnoseButtonClick executed in 6 seconds
+2015-01-27 10:11:50,154 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 131: TESTCASE: _09_AlertsMessaging -> Test step there is no Messages to test, we cannot automate this, manual testing will be required. '1.Verify Received Message Format  from MAS' - Please update the test case.
+2015-01-27 10:11:54,437 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 10:11:54,452 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 10:13:17,272 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:13:17,876 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-27 10:13:17,876 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 101: TESTCASE:_02_ViewConfirmedOrder -> Test step there is a step missing before we can get to this confirmation pop up.' -> 
+                                    'step added for to make the test execute.' ->'2. Verify that the confirm order pop -up has the following' - Please update the test case.
+2015-01-27 10:13:18,498 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyConfirmPopup executed in 0 seconds
+2015-01-27 10:13:30,062 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceUnConfirmedOrder executed in 32 seconds
+2015-01-27 10:13:33,804 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:13:34,410 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-27 10:13:35,239 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyUnConfirmOrderPopup executed in 0 seconds
+2015-01-27 10:14:11,895 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:14:18,194 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:14:18,507 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_SelectOrder executed in 26 seconds
+2015-01-27 10:14:41,312 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:14:47,677 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:14:48,005 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceConfirmedOrder executed in 26 seconds
+2015-01-27 10:15:37,941 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 10:15:37,941 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 10:17:04,246 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:17:10,596 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:17:10,892 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceUnConfirmedOrder executed in 26 seconds
+2015-01-27 10:17:33,770 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:17:40,073 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:17:40,417 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_SelectOrder executed in 26 seconds
+2015-01-27 10:18:03,210 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:18:09,592 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:18:09,889 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceConfirmedOrder executed in 26 seconds
+2015-01-27 10:18:32,604 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:18:39,122 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:18:39,419 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceConfirmedOrder executed in 26 seconds
+2015-01-27 10:19:29,299 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:19:35,784 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:19:36,081 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceConfirmedOrder executed in 26 seconds
+2015-01-27 10:19:58,953 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:20:05,317 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:20:05,629 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceConfirmedOrder executed in 26 seconds
+2015-01-27 10:20:28,544 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:20:34,817 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:20:35,146 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceConfirmedOrder executed in 26 seconds
+2015-01-27 10:20:54,964 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:21:01,267 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:21:01,579 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceUnConfirmedOrder executed in 26 seconds
+2015-01-27 10:21:21,294 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:21:27,620 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:21:27,932 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceConfirmedOrder executed in 26 seconds
+2015-01-27 10:22:11,307 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:ISSUE 109: _10_LoggingDiscrepancies -> Test step cannot be tested since we cannot trigger instant invoices and we do not have the log discrepancy button in the view invoices detail screen.' 
+                                    '2. Click on the <log discrepancy> button' - Test case need to be manually tested.
+2015-01-27 10:22:11,314 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:ISSUE 110: _11_SearchingOrders -> Test step cannot be tested since we cannot trigger instant invoices and we do not have search functionality to search invoices.' 
+                                    '2. Click on the <search> button' - Test case need to be manually tested.
+2015-01-27 10:31:14,396 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 10:31:14,396 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 10:32:36,539 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:32:37,155 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-27 10:32:37,155 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 101: TESTCASE:_02_ViewConfirmedOrder -> Test step there is a step missing before we can get to this confirmation pop up.' -> 
+                                    'step added for to make the test execute.' ->'2. Verify that the confirm order pop -up has the following' - Please update the test case.
+2015-01-27 10:32:37,838 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyConfirmPopup executed in 0 seconds
+2015-01-27 10:32:49,593 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceUnConfirmedOrder executed in 33 seconds
+2015-01-27 10:32:53,350 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:32:53,946 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-27 10:32:54,717 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyUnConfirmOrderPopup executed in 0 seconds
+2015-01-27 10:38:29,013 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 10:38:29,013 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 10:40:06,122 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:40:06,676 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-27 10:40:06,676 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 101: TESTCASE:_02_ViewConfirmedOrder -> Test step there is a step missing before we can get to this confirmation pop up.' -> 
+                                    'step added for to make the test execute.' ->'2. Verify that the confirm order pop -up has the following' - Please update the test case.
+2015-01-27 10:40:07,317 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyConfirmPopup executed in 0 seconds
+2015-01-27 10:40:19,111 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceUnConfirmedOrder executed in 33 seconds
+2015-01-27 10:40:22,741 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:40:23,362 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-27 10:40:24,185 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyUnConfirmOrderPopup executed in 0 seconds
+2015-01-27 10:41:00,845 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:41:07,336 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:41:07,680 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_SelectOrder executed in 26 seconds
+2015-01-27 10:41:30,622 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:41:37,140 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:41:37,441 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceConfirmedOrder executed in 26 seconds
+2015-01-27 10:42:00,265 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:42:06,814 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:42:07,123 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceConfirmedOrder executed in 26 seconds
+2015-01-27 10:42:23,781 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 10:42:23,781 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 10:43:49,022 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:43:55,635 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:43:55,963 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_SelectOrder executed in 28 seconds
+2015-01-27 10:45:16,942 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 10:45:16,958 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 10:46:39,383 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:46:39,960 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 0 seconds
+2015-01-27 10:46:39,961 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 101: TESTCASE:_02_ViewConfirmedOrder -> Test step there is a step missing before we can get to this confirmation pop up.' -> 
+                                    'step added for to make the test execute.' ->'2. Verify that the confirm order pop -up has the following' - Please update the test case.
+2015-01-27 10:46:40,620 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_VerifyConfirmPopup executed in 0 seconds
+2015-01-27 10:46:46,056 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_SelectOrder executed in 27 seconds
+2015-01-27 10:46:49,427 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - TESTCASE:_02_ViewConfirmedOrder -> Test step in the order confirmation pop up there is button to view my order, and messager to prcess to view the order.' 
+                                    '2. Verify that the confirm order pop -up has the following' - Please update the test case.
+2015-01-27 10:46:49,697 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_VerifyConfirmOrderPopup executed in 0 seconds
+2015-01-27 10:46:49,697 [TestRunnerThread] ERROR TestProj.Classes.LogWriter [(null)] - ISSUE 103: TESTCASE:_02_ViewConfirmedOrder -> Test step in the order confirmation pop up there is no button to view my order, this test cannot be tested.' 
+                                    '3. Click on the view order button' - Please update the test case.
+2015-01-27 10:48:04,053 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Killing chromedriver.exe
+2015-01-27 10:48:04,053 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - Chromedriver count = 0
+2015-01-27 10:49:21,482 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 3 seconds
+2015-01-27 10:49:28,017 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:49:28,392 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_PlaceUnConfirmedOrder executed in 27 seconds
+2015-01-27 10:49:51,761 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickBasketBlock executed in 4 seconds
+2015-01-27 10:49:58,175 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IBasketActions_ClickOrderNowButton executed in 6 seconds
+2015-01-27 10:49:58,472 [TestRunnerThread] INFO  TestProj.Classes.LogWriter [(null)] - TIMER: IOrdersActions_SelectOrder executed in 26 seconds

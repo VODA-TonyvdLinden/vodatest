@@ -1,28 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\molefeq\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-01-23" time="15:29:32">
-  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8009" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="BBD-QM" user="molefeq" user-domain="VF-ROOT" />
-  <culture-info current-culture="en-TT" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\molefeq\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Success" success="True" time="65.903" asserts="0">
+<test-results name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" total="2" errors="2" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-01-27" time="10:50:02">
+  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="TONYV" user="bbdnet0518" user-domain="BBDNET" />
+  <culture-info current-culture="en-ZA" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\Users\bbdnet0518\Documents\GitHub\vodatest\bin\Debug\TestProj.dll" executed="True" result="Failure" success="False" time="118.687" asserts="0">
     <results>
-      <test-suite type="Namespace" name="TestProj" executed="True" result="Success" success="True" time="65.883" asserts="0">
+      <test-suite type="Namespace" name="TestProj" executed="True" result="Failure" success="False" time="118.686" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Tests" executed="True" result="Success" success="True" time="65.883" asserts="0">
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="118.684" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Catalogues" executed="True" result="Success" success="True" time="65.879" asserts="0">
+              <test-suite type="Namespace" name="Orders" executed="True" result="Failure" success="False" time="118.683" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="Catalogues" description="Catalogues" executed="True" result="Success" success="True" time="65.876" asserts="0">
+                  <test-suite type="TestFixture" name="Orders" description="Orders" executed="True" result="Failure" success="False" time="118.681" asserts="0">
                     <categories>
-                      <category name="Catalogues" />
+                      <category name="Orders" />
                     </categories>
                     <results>
-                      <test-case name="TestProj.Tests.Catalogues.Catalogues._02_CatalogueLandingPage" description="_02_CatalogueLandingPage" executed="True" result="Success" success="True" time="8.597" asserts="0">
+                      <test-case name="TestProj.Tests.Orders.Orders._01_PendingOrdersConfirmation" description="_01_PendingOrdersConfirmation" executed="True" result="Error" success="False" time="27.361" asserts="0">
                         <categories>
-                          <category name="Catalogues" />
+                          <category name="Orders" />
                         </categories>
                         <properties>
                           <property name="Repeat" value="1" />
                         </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button]]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IOrdersActions_92908a2fa511453883b3d833c0697ca3.PlaceUnConfirmedOrder(Browser browserInstance, IBasketActions basketActions)
+at TestProj.Tests.Orders.Orders._01_PendingOrdersConfirmation() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Orders\Orders.cs:line 79
+--FluentElementNotFoundException
+at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
+at FluentAutomation.ElementProxy.get_Element()
+at FluentAutomation.CommandProvider.<>c__DisplayClass18.<Click>b__17()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                      <test-case name="TestProj.Tests.Orders.Orders._02_ViewConfirmedOrder" description="_02_ViewConfirmedOrder" executed="True" result="Error" success="False" time="30.010" asserts="0">
+                        <categories>
+                          <category name="Orders" />
+                        </categories>
+                        <properties>
+                          <property name="Repeat" value="1" />
+                        </properties>
+                        <failure>
+                          <message><![CDATA[FluentAutomation.Exceptions.FluentException : Conditional wait passed the timeout [5000ms] for expression [ => Invoke(value(FluentAutomation.BaseCommandProvider+<>c__DisplayClass0).action)]. See InnerException for details of the last FluentException thrown.
+  ----> FluentAutomation.Exceptions.FluentElementNotFoundException : Unable to find element with selector [#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button]]]></message>
+                          <stack-trace><![CDATA[at DynamicModule.ns.Wrapped_IOrdersActions_92908a2fa511453883b3d833c0697ca3.SelectOrder(Browser browserInstance, IBasketActions basketActions)
+at TestProj.Tests.Orders.Orders._02_ViewConfirmedOrder() in c:\Users\bbdnet0518\Documents\GitHub\vodatest\Tests\Orders\Orders.cs:line 131
+--FluentElementNotFoundException
+at FluentAutomation.CommandProvider.<>c__DisplayClass8.<Find>b__7()
+at FluentAutomation.ElementProxy.get_Element()
+at FluentAutomation.CommandProvider.<>c__DisplayClass18.<Click>b__17()
+at FluentAutomation.BaseCommandProvider.<>c__DisplayClass9.<WaitUntil>b__8()
+]]></stack-trace>
+                        </failure>
                       </test-case>
                     </results>
                   </test-suite>

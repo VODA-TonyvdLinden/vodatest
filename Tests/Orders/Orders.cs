@@ -87,6 +87,7 @@ namespace TestProj.Tests.Orders
             // Tets Output: 2.1 Popup with heading 'Pending Offer'
             // Tets Output: 2.2 Popup with message containing 'You have an unconfirmed order'
             // Tets Output: 2.2 Popup with back button is displayed
+            Helpers.Instance.WaitFor(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button");
             basketActions.ClickOrderNowButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button"));
             basketActions.VerifyUnConfirmOrderPopup(browserInstance);
 
