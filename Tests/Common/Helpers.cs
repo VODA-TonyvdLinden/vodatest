@@ -435,6 +435,8 @@ namespace TestProj.Tests.Common
 
         public void GoToBasket(Classes.Browser browserInstance)
         {
+            Helpers.Instance.WaitFor(browserInstance, "body > div.ui-footer.ng-scope > ul > li:nth-child(2) > div");
+
             var basketBlock = Helpers.Instance.GetProxy(browserInstance, "body > div.ui-footer.ng-scope > ul > li:nth-child(2) > div");
             Helpers.Instance.ClickButton(browserInstance, basketBlock);
             //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-product-view?supplier=6001205000004"), 30);
