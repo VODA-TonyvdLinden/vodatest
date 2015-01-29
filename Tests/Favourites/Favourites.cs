@@ -111,6 +111,7 @@ namespace TestProj.Tests.Favourites
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
 
+            Helpers.Instance.ClearFavourites(browserInstance);
             Helpers.Instance.AddFavouriteItem(browserInstance);
 
             favActions.VerifyFavouriteIconClick(browserInstance);
@@ -169,12 +170,13 @@ namespace TestProj.Tests.Favourites
         [Test, Description("_03_FavouritesDetailGridView"), Category("Favourites"), Repeat(1)]
         public void _03_FavouritesDetailGridView()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
 
+            Helpers.Instance.ClearFavourites(browserInstance);
             Helpers.Instance.AddFavouriteItem(browserInstance);
             favActions.VerifyFavouriteIconClick(browserInstance);
 
+            Thread.Sleep(3000);
             // Test Case: 1. Click on the <grid view> button 
             // Test Output: 1. Favourites  items are displayed  are displayed in a grid view 
             favActions.VerifyGridViewButtonClick(browserInstance);
@@ -244,9 +246,9 @@ namespace TestProj.Tests.Favourites
         [Test, Description("_04_FavouritesDetailListView"), Category("Favourites"), Repeat(1)]
         public void _04_FavouritesDetailListView()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
 
+            Helpers.Instance.ClearFavourites(browserInstance);
             Helpers.Instance.AddFavouriteItem(browserInstance);
             favActions.VerifyFavouriteIconClick(browserInstance);
 
@@ -349,6 +351,7 @@ namespace TestProj.Tests.Favourites
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
+            Helpers.Instance.ClearFavourites(browserInstance);
 
             // Test Case: 1. Click on the product
             // Test Output: 1. The product view screen is displayed  
@@ -386,6 +389,7 @@ namespace TestProj.Tests.Favourites
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
             Interfaces.ICataloguesActions catalogActions = container.Resolve<Interfaces.ICataloguesActions>();
+            Helpers.Instance.ClearFavourites(browserInstance);
 
             // Test Case: 1. Click on the product
             // Test Output: 1. The product view screen is displayed  

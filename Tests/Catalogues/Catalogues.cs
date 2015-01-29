@@ -32,6 +32,7 @@ namespace TestProj.Tests.Catalogues
             container.AddNewExtension<Interception>();
 
             container.RegisterType<Interfaces.ICataloguesActions, Tests.Catalogues.CataloguesActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
+            container.RegisterType<Interfaces.IFavouritesActions, Tests.Favourites.FavouritesActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
 
             Helpers.Instance.Activate(browserInstance, false);
         }
@@ -154,7 +155,7 @@ namespace TestProj.Tests.Catalogues
 
             // Test Case: 8. Verify that specials are displayed and user can scroll from left to right 
             // Test Output: 8. The specials are displayed on the left hand side of the landing page and user can scroll from left to right
-            //catalogueActions.VerifySpecials(browserInstance);
+            catalogueActions.VerifySpecials(browserInstance);
         }
 
         /// <summary>
@@ -190,21 +191,21 @@ namespace TestProj.Tests.Catalogues
             // Test Output: 1.1 Subcategories under that category are displayed as a list and the selected category is displayed in red
 
             //[TONY]
-            //catalogueActions.VerifyCategoryClick(browserInstance);
+            catalogueActions.VerifyCategoryClick(browserInstance);
 
             // Test Case: 1.2 Make sure that you can scroll up and down on that list  
             // Test Output: 1.2 The user can scroll up and down on the sub categories
             //[TONY]
-            //catalogueActions.VerifySubCategoriesScroll(browserInstance);
+            catalogueActions.VerifySubCategoriesScroll(browserInstance);
 
             // Test Case: 1.3 Scroll down and select any subcategory
             // Test Output: 1.3  The selected subcategory is displayed in red  
-            //catalogueActions.VerifyActiveSubCategorySelect(browserInstance);
+            catalogueActions.VerifyActiveSubCategorySelect(browserInstance);
 
             // Test Case: 1.4 Click on the category and verify if it collapses the sub categories list
             // Test Output: 1.4  The  subcategories list is collapsed
             //[TONY]
-            //catalogueActions.VerifyCategoryUnSelect(browserInstance);
+            catalogueActions.VerifyCategoryUnSelect(browserInstance);
         }
 
         /// <summary>
@@ -304,6 +305,7 @@ namespace TestProj.Tests.Catalogues
         {
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
 
+            Helpers.Instance.ClearFavourites(browserInstance);
             catalogueActions.VerifyCatalogueBlockClick(browserInstance);
 
             // Test Case: 1 Select on any of the fixed categories 
@@ -353,6 +355,9 @@ namespace TestProj.Tests.Catalogues
         public void _06_CatalogueViewAddProductToFavourites()
         {
             Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
+            Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
+
+            Helpers.Instance.ClearFavourites(browserInstance);
 
             catalogueActions.VerifyCatalogueBlockClick(browserInstance);
 
@@ -375,11 +380,11 @@ namespace TestProj.Tests.Catalogues
             // Click on the save button 
             catalogueActions.VerifyProductSaveClick(browserInstance);
 
-            Thread.Sleep(500);
+            Thread.Sleep(3000);
 
             // Test Case: 7. Verify step 6 by selecting the favourites tab, to see if the recently added product is displayed
             // Test Output: 7. The recently added product is displayed in the favourites menu
-            catalogueActions.VerifyFavouriteBlockClick(browserInstance);
+            favActions.VerifyFavouriteIconClick(browserInstance);
         }
 
         /// <summary>

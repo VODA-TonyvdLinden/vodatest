@@ -116,9 +116,9 @@ namespace TestProj.Tests.Orders
         public void VerifyOrderHistoryExpandClick(Classes.Browser browserInstance)
         {
             Helpers.Instance.Exists(browserInstance, "#accordion > td.width100 > div > div > img");
-            var removeImage = Helpers.Instance.GetProxy(browserInstance, "#accordion > td.width100 > div > div > img");
+            var expandImage = Helpers.Instance.GetProxy(browserInstance, "#accordion > td.width100 > div > div > img");
             browserInstance.Instance.Click("#accordion > td.width100 > div > div > img");
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Attribute("src", "http://aspnet.dev.afrigis.co.za/bopapp/images/removeButton.8e76665e.png").On(removeImage), TimeSpan.FromMinutes(30));
+            //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Attribute("src", "http://aspnet.dev.afrigis.co.za/bopapp/images/removeButton.8e76665e.png").On(expandImage), TimeSpan.FromMinutes(30));
 
         }
 

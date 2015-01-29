@@ -17,7 +17,7 @@ namespace TestProj.Interfaces
         void VerifyOrderAlerts(Classes.Browser browserInstance);
         void VerifySystemAlerts(Classes.Browser browserInstance);
         void VerifySideButtons(Classes.Browser browserInstance);
-        void VerifyUrgentActions(Classes.Browser browserInstance, Interfaces.IOrdersActions ordersActions, Interfaces.IBasketActions basketActions);
+        void VerifyUrgentActions(Classes.Browser browserInstance);
         void VerifyTextHighlightedRed(Classes.Browser browserInstance, string labelPath);
         void VerifyConfirmNowButtonClick(Classes.Browser browserInstance);
         void VerifyAsyncNow(Classes.Browser browserInstance);
@@ -32,5 +32,9 @@ namespace TestProj.Interfaces
         void VerifyDiagnoseCheckingNotificationTestButtonClick(Classes.Browser browserInstance);
         void VerifyDiagnoseConnectionSpeedTestButtonClick(Classes.Browser browserInstance);
         void VerifyDiagnoseResultPlaceholder(Classes.Browser browserInstance);
+        void VerifyConfirmOrderButtonClick(Classes.Browser browserInstance);
+        void VerifyBackToActionsButtonClick(Classes.Browser browserInstance);
+        void VerifyBackToOrderButtonClick(Classes.Browser browserInstance);
+        void VerifyCancelOrderButtonClick(Classes.Browser browserInstance);
     }
 }

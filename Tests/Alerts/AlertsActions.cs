@@ -205,15 +205,25 @@ namespace TestProj.Tests.Alerts
             //browserInstance.Instance.Assert.Value(" DIAGNOSE").In(diagnoseButton);
         }
 
-        public void VerifyUrgentActions(Classes.Browser browserInstance, Interfaces.IOrdersActions ordersActions, Interfaces.IBasketActions basketActions)
+        // Test Case: 1. verify that the application places urgent actions  on the alerts page
+        // Test Output: 1.1 The Order process is performed but the order is not confirmed 
+        // Test Output: 1.3 <confirm order> button is enabled
+        public void VerifyUrgentActions(Classes.Browser browserInstance)
         {
-            ordersActions.PlaceUnConfirmedOrder(browserInstance, basketActions);
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.alertStatus > a > div.alertredicon"), TimeSpan.FromMinutes(30));
+            Helpers.Instance.PlaceUnConfirmedOrder(browserInstance);
+
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
+            Thread.Sleep(3000);
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button");
+
+            var buttonProxy = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button");
+            browserInstance.Instance.Assert.Attribute("disabled").Not.On(buttonProxy);
+            Thread.Sleep(6000);
         }
 
         public void VerifyTextHighlightedRed(Classes.Browser browserInstance, string labelPath)
         {
-           // Helpers.Instance.CheckClass(browserInstance, "", Helpers.Instance.GetProxy(browserInstance, labelPath));
+            // Helpers.Instance.CheckClass(browserInstance, "", Helpers.Instance.GetProxy(browserInstance, labelPath));
         }
 
         // Test:   2. Click on the <confirm now> button
@@ -226,19 +236,97 @@ namespace TestProj.Tests.Alerts
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
         }
 
+        // Test:   2. Click on the <confirm now> button
+        // Output: 2. The notification confirm now page is displayed
+        public void VerifyConfirmOrderButtonClick(Classes.Browser browserInstance)
+        {
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(1)");
+            ClickAlertButton(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(1)");
+
+            Thread.Sleep(5000);
+            browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#orderComplete > div > div > div.modal-body.text-center"), 30);
+
+            Helpers.Instance.Exists(browserInstance, "#orderComplete > div > div > div.modal-body.text-center > div > button");
+            Helpers.Instance.Exists(browserInstance, "#orderComplete > div > div > div.modal-body.text-center > p:nth-child(3) > strong");
+            var viewOrderButton = Helpers.Instance.GetProxy(browserInstance, "#orderComplete > div > div > div.modal-body.text-center > div > button");
+            var orderNumberLabel = Helpers.Instance.GetProxy(browserInstance, "#orderComplete > div > div > div.modal-body.text-center > p:nth-child(3) > strong");
+
+            browserInstance.Instance.Assert.True(() => viewOrderButton.Element.Value.ToLower().Contains("view order"));
+            browserInstance.Instance.Assert.True(() => !string.IsNullOrEmpty(orderNumberLabel.Element.Text));
+
+            Helpers.Instance.Exists(browserInstance, "#orderComplete > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button");
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderComplete > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"));
+
+        }
+
+        // Test:   2. Click on the <confirm now> button
+        // Output: 2. The notification confirm now page is displayed
+        public void VerifyBackToActionsButtonClick(Classes.Browser browserInstance)
+        {
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
+            var orderNumberControl = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
+            string orderNumber = orderNumberControl.Element.Text.Trim();
+
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(4)");
+            ClickAlertButton(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(4)");
+
+            Thread.Sleep(5000);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url(string.Format("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts?orderNumber={0}", orderNumber)), 30);
+            
+            var buttonProxy = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button");
+
+            browserInstance.Instance.Assert.Attribute("disabled").Not.On(buttonProxy);
+        }
+
+        public void VerifyBackToOrderButtonClick(Classes.Browser browserInstance)
+        {
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
+            var orderNumberControl = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
+            string orderNumber = orderNumberControl.Element.Text.Trim();
+
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(3)");
+            ClickAlertButton(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(3)");
+
+            Thread.Sleep(5000);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url(string.Format("http://aspnet.dev.afrigis.co.za/bopapp/#/order-history-expanded-view?orderNumber={0}", orderNumber)), 30);
+            Thread.Sleep(5000);
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock");
+        }
+
+        public void VerifyCancelOrderButtonClick(Classes.Browser browserInstance)
+        {
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
+            var orderNumberControl = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
+            string orderNumber = orderNumberControl.Element.Text.Trim();
+
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(2)");
+            ClickAlertButton(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(2)");
+
+            Thread.Sleep(3000);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url(string.Format("http://aspnet.dev.afrigis.co.za/bopapp/#/order-history-expanded-view?orderNumber={0}", orderNumber)), 30);
+            Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock");
+            Thread.Sleep(5000);
+        }
+
         public void VerifyAsyncNow(Classes.Browser browserInstance)
         {
             //Test:   3. Click on the <sync now> button
             //Output: 3. The progress bar is  displayed  to show that an update to the catalogue is in progress    and the application becomes in-active 
-            Helpers.Instance.CheckButtonEnabled(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(3) > button");
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(3) > button"));
-            Helpers.Instance.Exists(browserInstance, "#loading-wating-messages");
+            var buttonProxy = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(3) > button");
+
+            if (buttonProxy.Element.Attributes.Get("disabled") != "disabled" && buttonProxy.Element.Attributes.Get("disabled") != "true")
+            {
+                Helpers.Instance.ClickButton(browserInstance, buttonProxy);
+                Helpers.Instance.Exists(browserInstance, "#loading-wating-messages");
+            }
         }
 
         public void ClickAlertButton(Classes.Browser browserInstance, string buttonPath)
         {
-            Helpers.Instance.CheckButtonEnabled(browserInstance, buttonPath);
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, buttonPath));
+            var buttonProxy = Helpers.Instance.GetProxy(browserInstance, buttonPath);
+
+            browserInstance.Instance.Assert.Attribute("disabled").Not.On(buttonProxy);
+            Helpers.Instance.ClickButton(browserInstance, buttonProxy);
         }
 
         public void VerifyManageButtonClick(Classes.Browser browserInstance)
@@ -247,7 +335,7 @@ namespace TestProj.Tests.Alerts
             // 2. The manage your catalogue actions page is displayed
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(1) > button");
             ClickAlertButton(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(1) > button");
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/activation-managecatalogue"), TimeSpan.FromMinutes(30));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/managecatalogue"), TimeSpan.FromMinutes(30));
         }
 
         // Test Case: 3.1 Enter the allowable wholesaler <Makro>  in search field which  give any results and verify the user interface
@@ -289,6 +377,7 @@ namespace TestProj.Tests.Alerts
             });
 
         }
+
         // Test Case: 4.1 Select 0 - 25km arrow  and expand it         
         // Test Output: 4.1 The 0 - 25km is expanded and also displaying stores within that distance proximity   
         // Test Case: 4.2 Select 25 - 50km arrow and expand it 
@@ -387,19 +476,19 @@ namespace TestProj.Tests.Alerts
         {
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > div:nth-child(1) > span");
             var checkingConnectionLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > div:nth-child(1) > span");
-            browserInstance.Instance.Assert.True(() => checkingConnectionLabel.Element.Text.Contains("Checking Connection"));
+            browserInstance.Instance.Assert.True(() => checkingConnectionLabel.Element.Text.ToLower().Contains("checking connection"));
 
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > div:nth-child(1) > ul > li > label");
             var checkingVitalCommunicationLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > div:nth-child(1) > ul > li > label");
-            browserInstance.Instance.Assert.True(() => checkingVitalCommunicationLabel.Element.Text.Contains("checking vital communication to the ordering service"));
+            browserInstance.Instance.Assert.True(() => checkingVitalCommunicationLabel.Element.Text.ToLower().Contains("checking vital communication to the ordering service"));
 
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > div > span");
             var connectionSpeedLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > div > span");
-            browserInstance.Instance.Assert.True(() => connectionSpeedLabel.Element.Text.Contains("connection speed"));
+            browserInstance.Instance.Assert.True(() => connectionSpeedLabel.Element.Text.ToLower().Contains("connection speed"));
 
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > div > ul > li > label");
             var testYourConnectionSpeedLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > div > ul > li > label");
-            browserInstance.Instance.Assert.True(() => testYourConnectionSpeedLabel.Element.Text.Contains("test your speed connection now"));
+            browserInstance.Instance.Assert.True(() => testYourConnectionSpeedLabel.Element.Text.ToLower().Contains("test your connection speed now"));
         }
 
         // Test Case: 3.2 Verify that the test now button for checking connection is available   
@@ -421,6 +510,7 @@ namespace TestProj.Tests.Alerts
         public void VerifyDiagnoseCheckingNotificationTestButtonClick(Classes.Browser browserInstance)
         {
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > div:nth-child(1) > ul > li > button"));
+            Thread.Sleep(3000);
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > div:nth-child(1) > ul > li > span.pull-right.connection.online");
         }
 

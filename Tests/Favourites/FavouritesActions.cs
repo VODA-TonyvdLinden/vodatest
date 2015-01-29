@@ -14,7 +14,7 @@ namespace TestProj.Tests.Favourites
             browserInstance.Instance.Assert.Exists("body > div.ui-footer.ng-scope > ul > li:nth-child(4) > div");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div.ui-footer.ng-scope > ul > li:nth-child(4) > div"));
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/favourites-catalog-view"), TimeSpan.FromMinutes(30));
-            browserInstance.Instance.Assert.Exists("#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.searchgridviewblcok.ng-scope > div > ul > li:nth-child(1) > div.brandinfo > div.itemView");
+            browserInstance.Instance.Assert.Exists("#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll > div > ul > li:nth-child(1) > div.brandinfo > div.itemView");
         }
 
         // Test Case: 2 Click on the delete icon    
@@ -80,7 +80,7 @@ namespace TestProj.Tests.Favourites
             VerifyGridViewButton(browserInstance);
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(2) > button"));
             browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/favourites-catalog-view?viewtype=grid");
-            browserInstance.Instance.Assert.Exists("#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.searchgridviewblcok.ng-scope");
+            browserInstance.Instance.Assert.Exists("#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll > div > ul > li > div.brandinfo > div.itemView");
         }
 
         // Test Case: 2. Verify that on the list view the is a grid view button that will allow to switch back

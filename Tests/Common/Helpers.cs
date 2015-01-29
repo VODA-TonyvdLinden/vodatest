@@ -421,7 +421,7 @@ namespace TestProj.Tests.Common
             if (Helpers.Instance.ElementExists(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button"))
             {
                 var clearBut = Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button");
-                
+
                 //Check if button is enabled
                 if (clearBut.Element.Attributes.Get("disabled") != "disabled" && clearBut.Element.Attributes.Get("disabled") != "true")
                 {
@@ -447,10 +447,10 @@ namespace TestProj.Tests.Common
         {
 
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "body > div.ui-footer.ng-scope > ul > li:nth-child(4) > div"));
-            //if (ElementExists(browserInstance,"#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.delete > button"))
-            //    Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.delete > button"));
             Thread.Sleep(3000);
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button"));
+            if (ElementExists(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button"))
+                Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button"));
+            //Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(3) > button"));
             Thread.Sleep(3000);
 
         }
@@ -654,5 +654,49 @@ namespace TestProj.Tests.Common
             var errorModal = Helpers.Instance.GetProxy(browserInstance, popupHolderPath);
             browserInstance.Instance.Assert.Css("display", "block").On(errorModal);
         }
+
+        public void ConfirmUnConfirmedOrder(Classes.Browser browserInstance)
+        {
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
+
+            Thread.Sleep(3000);
+
+            Exists(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button"));
+            var buttonProxy = GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button.purpleButton");
+
+            if (buttonProxy.Element.Attributes.Get("disabled") != "disabled" && buttonProxy.Element.Attributes.Get("disabled") != "true")
+            {
+
+                ClickButton(browserInstance, buttonProxy);
+                browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Not.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
+                Thread.Sleep(5000);
+                Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(1)");
+                ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, " #alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(1"));
+                Thread.Sleep(5000);
+                browserInstance.Instance.WaitUntil(() => Helpers.Instance.Exists(browserInstance, "#orderComplete"), 30);
+                Helpers.Instance.Exists(browserInstance, "#orderComplete > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button");
+                ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderComplete > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"));
+                Thread.Sleep(5000);
+            }
+        }
+
+        public void PlaceUnConfirmedOrder(Classes.Browser browserInstance)
+        {
+            AddOrders(browserInstance, 1);
+            Thread.Sleep(5000);
+            GoToBasket(browserInstance);
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button"));
+            Thread.Sleep(5000);
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderNow > div > div > div.modal-body.text-center > div > button:nth-child(1)"));
+            Thread.Sleep(5000);
+            Helpers.Instance.VerifyPopPup(browserInstance, "#checkoutConfirm");
+            Thread.Sleep(3000);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#checkoutConfirm > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"), TimeSpan.FromMinutes(30));
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#checkoutConfirm > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"));
+            Thread.Sleep(3000);
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
+        }
+
     }
 }
