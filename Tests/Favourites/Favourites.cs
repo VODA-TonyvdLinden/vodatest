@@ -30,7 +30,7 @@ namespace TestProj.Tests.Favourites
             container.RegisterType<Interfaces.IFavouritesActions, Tests.Favourites.FavouritesActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
             container.RegisterType<Interfaces.IBasketActions, Tests.Basket.BasketActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
             container.RegisterType<Interfaces.ICataloguesActions, Tests.Catalogues.CataloguesActions>(new Interceptor<InterfaceInterceptor>(), new InterceptionBehavior<Classes.Timer>(), new InterceptionBehavior<Classes.ScreenCapture>());
-
+            
             Helpers.Instance.Activate(browserInstance, false);
         }
 
@@ -65,6 +65,7 @@ namespace TestProj.Tests.Favourites
         {
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
 
+            Helpers.Instance.ClearFavourites(browserInstance);
             Helpers.Instance.AddFavouriteItem(browserInstance);
 
             // Test Case: 1. Click on the favourites block on the bottom of the screen 
@@ -109,7 +110,6 @@ namespace TestProj.Tests.Favourites
         public void _02_FavouritesInListView()
         {
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
-            Interfaces.ICataloguesActions catalogueActions = container.Resolve<Interfaces.ICataloguesActions>();
 
             Helpers.Instance.ClearFavourites(browserInstance);
             Helpers.Instance.AddFavouriteItem(browserInstance);
@@ -221,13 +221,10 @@ namespace TestProj.Tests.Favourites
         /// 2. Verify that on the list view the is a grid view button that will allow to switch back  
         /// 3. Verify that order from a specific supplier functions as expected                                                                                
         /// 3.1 Select a specific supplier by clicking  on any record from the table 
-        /// 3.2 Click on the order now    
-        /// 4.Verify that delete orders from a specific supplier functions as expected                                                              
+        /// 3.2 Click on the Buy Now    
+        /// 4. Verify that delete orders from a specific supplier functions as expected                                                              
         /// 4.1  Select a specific supplier by clicking  on any record from the table       
         /// 4.2 Click on the delete icon  
-        /// 5.Verify that order all from basket  functions as expected                                                                                             
-        /// 5.1 Select more than one  supplier by clicking  on multiple rows on the table
-        /// 5.2 Click on the order all button   
         /// 6. Click on the clear <all> button   
         /// TEST OUTPUT:
         /// 1. Favourites items are displayed as tabular format     
@@ -238,9 +235,6 @@ namespace TestProj.Tests.Favourites
         /// 4.                                                                                                                                                                                                                   
         /// 4.1 The record on the list view table is selected 
         /// 4.2 The order is deleted from that supplier  
-        /// 5.                                                                                                                                                                                                                 
-        /// 5.1 Multiple records on the list view table are selected
-        /// 5.2 The confirm order pop-up is displayed   
         /// 6. This clear all selected catalogue basket 
         /// </summary>
         [Test, Description("_04_FavouritesDetailListView"), Category("Favourites"), Repeat(1)]
@@ -275,13 +269,6 @@ namespace TestProj.Tests.Favourites
             browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.modal-header > div > button");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.modal-header > div > button"));
             favActions.VerifyListViewProductOrderDelete(browserInstance);
-
-            // Test Case: 5.Verify that order all from basket  functions as expected                                                                                             
-            // Test Case: 5.1 Select more than one  supplier by clicking  on multiple rows on the table
-            // Test Case: 5.2 Click on the order all button   
-            // Test Output: 5.2 The confirm order pop-up is displayed  
-            LogWriter.Instance.Log(@"ISSUE 118: TESTCASE:_04_FavouritesDetailListView -> Test step we do not have the order all button in the favourite tab and we do not have the ability to select more than supplier. '. 
-                                    '5.Verify that order all from basket  functions as expected ' - Test case to be updated.", LogWriter.eLogType.Error);
 
             // Test Case: 6. Click on the clear <all> button 
             // Test Case: 6. This clear all selected catalogue basket
@@ -318,7 +305,6 @@ namespace TestProj.Tests.Favourites
         [Test, Description("_05_FavouritesViewItemDetail"), Category("Favourites"), Repeat(1)]
         public void _05_FavouritesViewItemDetail()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
 
             // Test Case: 1. Click on the product
@@ -327,6 +313,11 @@ namespace TestProj.Tests.Favourites
 
             // Test Case: 2. Verify that the product view screen  
             favActions.VerifyProductViewScreen(browserInstance);
+
+            //clean up
+            browserInstance.Instance.Assert.Exists("#product_modal > div > div > div.modal-header > div > button");
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#product_modal > div > div > div.modal-header > div > button"));
+
         }
 
         /// <summary>
@@ -348,7 +339,6 @@ namespace TestProj.Tests.Favourites
         [Test, Description("_06_FavouritesAddItemToFavourites"), Category("Basket"), Repeat(1)]
         public void _06_FavouritesAddItemToFavourites()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
             Helpers.Instance.ClearFavourites(browserInstance);
@@ -385,10 +375,10 @@ namespace TestProj.Tests.Favourites
         [Test, Description("_07_FavouritesAddingAndRemovingProductQuantity"), Category("Basket"), Repeat(1)]
         public void _07_FavouritesAddingAndRemovingProductQuantity()
         {
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp"));
             Interfaces.IFavouritesActions favActions = container.Resolve<Interfaces.IFavouritesActions>();
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
             Interfaces.ICataloguesActions catalogActions = container.Resolve<Interfaces.ICataloguesActions>();
+
             Helpers.Instance.ClearFavourites(browserInstance);
 
             // Test Case: 1. Click on the product

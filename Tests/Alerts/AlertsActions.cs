@@ -143,13 +143,9 @@ namespace TestProj.Tests.Alerts
             var unconfirmedOrderLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > label");
             var catalogueOutOfOrderLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(3) > label");
 
-            //browserInstance.Instance.Assert.True(() => newInovoicesLabel.Element.Text.Contains("You have received new invoices"));
-            //browserInstance.Instance.Assert.True(() => unconfirmedOrderLabel.Element.Text.Contains("you have an unconfirmed order"));
-            //browserInstance.Instance.Assert.True(() => catalogueOutOfOrderLabel.Element.Text.Contains("your catalogue is out of sync"));
-
-            //browserInstance.Instance.Assert.Value("You have received new invoices").In(newInovoicesLabel);
-            //browserInstance.Instance.Assert.Value("you have an unconfirmed order").In(unconfirmedOrderLabel);
-            //browserInstance.Instance.Assert.Value("your catalogue is out of sync").In(catalogueOutOfOrderLabel);
+            browserInstance.Instance.Assert.True(() => newInovoicesLabel.Element.Text.ToLower().Contains("new invoices will appear here"));
+            browserInstance.Instance.Assert.True(() => unconfirmedOrderLabel.Element.Text.ToLower().Contains("unconfirmed orders will appear here"));
+            browserInstance.Instance.Assert.True(() => catalogueOutOfOrderLabel.Element.Text.ToLower().Contains("synchronize your catalogue here"));
         }
 
         public void VerifySystemAlerts(Classes.Browser browserInstance)
@@ -161,8 +157,8 @@ namespace TestProj.Tests.Alerts
             var systemAlerts = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > span");
             browserInstance.Instance.Assert.True(() => systemAlerts.Element.Text.Contains("System alerts"));
 
-            // Test Case: 21.Veriy that the system alerts label, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed  
-            // Test Output: 21. The system alerts label is displayed, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed     
+            // Test Case: 21.Veriy that the system alerts label, has sub labels namely manage your catalogue, you have connection issues label is displayed  
+            // Test Output: 21. The system alerts label is displayed, has sub labels namely manage your catalogue, you have connection issues label is displayed     
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(1) > label");
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(2) > label");
 
@@ -170,11 +166,9 @@ namespace TestProj.Tests.Alerts
 
             var manageYourCatalogueLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(1) > label");
             var connactionIssuesOrderLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(2) > label");
-            //var changeActiveSpazaLabel = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(2) > ul > li:nth-child(3) > label");
 
-            //browserInstance.Instance.Assert.True(() => manageYourCatalogueLabel.Element.Text.Contains("manage your catalogue"));
-            //browserInstance.Instance.Assert.True(() => connactionIssuesOrderLabel.Element.Text.Contains("you have connection issues"));
-            //browserInstance.Instance.Assert.True(() => changeActiveSpazaLabel.Element.Text.Contains("change active spaza"));
+            browserInstance.Instance.Assert.True(() => manageYourCatalogueLabel.Element.Text.ToLower().Contains("manage your catalogue"));
+            browserInstance.Instance.Assert.True(() => connactionIssuesOrderLabel.Element.Text.ToLower().Contains("diagnose your connection here"));
         }
 
         public void VerifySideButtons(Classes.Browser browserInstance)
@@ -197,12 +191,9 @@ namespace TestProj.Tests.Alerts
 
             LogWriter.Instance.Log("ISSUE 125: TEST CASE: _01_AlertsLandingPageVerfication -> Test step do not have the Change Now button. '21.Veriy that the system alerts label, has sub labels namely manage your catalogue, you have connection issues and change active spaza label is displayed' - Update test case", LogWriter.eLogType.Error);
 
-            //browserInstance.Instance.Assert.Value("VIEW INVOICES").In(viewInvoicesButton);
-            //browserInstance.Instance.Assert.Value("CONFIRM NOW").In(confirmNowButton);
-            //browserInstance.Instance.Assert.Value("SYNC NOW").In(syncNowButton);
-
-            //browserInstance.Instance.Assert.Value("MANAGE").In(manageButton);
-            //browserInstance.Instance.Assert.Value(" DIAGNOSE").In(diagnoseButton);
+            browserInstance.Instance.Assert.True(() => viewInvoicesButton.Element.Value.ToLower().Contains("view invoices"));
+            browserInstance.Instance.Assert.True(() => confirmNowButton.Element.Value.ToLower().Contains("confirm now"));
+            browserInstance.Instance.Assert.True(() => syncNowButton.Element.Value.ToLower().Contains("sync now"));
         }
 
         // Test Case: 1. verify that the application places urgent actions  on the alerts page
@@ -256,7 +247,6 @@ namespace TestProj.Tests.Alerts
 
             Helpers.Instance.Exists(browserInstance, "#orderComplete > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderComplete > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"));
-
         }
 
         // Test:   2. Click on the <confirm now> button
@@ -305,7 +295,6 @@ namespace TestProj.Tests.Alerts
             Thread.Sleep(3000);
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url(string.Format("http://aspnet.dev.afrigis.co.za/bopapp/#/order-history-expanded-view?orderNumber={0}", orderNumber)), 30);
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock");
-            Thread.Sleep(5000);
         }
 
         public void VerifyAsyncNow(Classes.Browser browserInstance)

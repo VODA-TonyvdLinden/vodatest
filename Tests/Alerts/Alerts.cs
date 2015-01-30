@@ -289,7 +289,7 @@ namespace TestProj.Tests.Alerts
         /// 4.2 The required number of columns are displayed with data 
         /// 5. The user is returned to the alerts active page 
         /// 6. The orders page is displayed  and there are no changes to the basket   
-        /// 7. The user is returned to the alerts notification page
+        /// 7. The orders page is displayed  and there are no changes to the basket
         /// </summary>
         [Test, Description("_04_AlertsConfirmNow"), Category("Alerts"), Repeat(1)]
         public void _04_AlertsConfirmNow()

@@ -76,11 +76,12 @@ namespace TestProj.Tests.Orders
             Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
             // Place Unconfirmed Order
-            ordersActions.PlaceUnConfirmedOrder(browserInstance, basketActions);
+            Helpers.Instance.PlaceUnConfirmedOrder(browserInstance);
 
             // Test Case 1:  Click on the basket block at the bottom of the screen
             // Test Output 1: The basket page is displayed with catalogues in grid view
-            basketActions.ClickBasketBlock(browserInstance);
+            Helpers.Instance.GoToBasket(browserInstance);
+            Thread.Sleep(3000);
 
             // Test Case: 2 Click on the 'Order Now' button
             // Test Output: 2 Verify un confirmed order error popup
@@ -90,10 +91,9 @@ namespace TestProj.Tests.Orders
             Helpers.Instance.WaitFor(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button");
             basketActions.ClickOrderNowButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button"));
             basketActions.VerifyUnConfirmOrderPopup(browserInstance);
-
-
+            
             //Clean up
-            Helpers.Instance.ProcessUnconfirmedOrders(browserInstance);
+            Helpers.Instance.ConfirmUnConfirmedOrder(browserInstance);
         }
 
         /// <summary>
@@ -122,14 +122,13 @@ namespace TestProj.Tests.Orders
         public void _02_ViewConfirmedOrder()
         {
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
 
             // Test Case: 1. Select an order that has been placed   
             // Test Output: 1. A confirm order pop-up is displayed  
             Thread.Sleep(3000);
-            ordersActions.SelectOrder(browserInstance, basketActions);
+            ordersActions.SelectOrder(browserInstance);
 
             // Test Case: 2. Verify that the confirm order pop -up has the following 
 
@@ -146,7 +145,7 @@ namespace TestProj.Tests.Orders
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#checkoutConfirm > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"));
             //Clean up
             Thread.Sleep(3000);
-            Helpers.Instance.ProcessUnconfirmedOrders(browserInstance);
+            Helpers.Instance.ConfirmUnConfirmedOrder(browserInstance);
         }
 
         /// <summary>
@@ -168,7 +167,8 @@ namespace TestProj.Tests.Orders
         /// 2.7  Make sure the total value is displayed and also the total value is correct
         /// TEST OUTPUT:
         /// 1. The orders history are displayed in a tabular format   
-        /// 2.                                                                                                                                                                                                                 2.1 The select column has a + sign to show that it is in a collapsed view  
+        /// 2.    
+        /// 2.1 The select column has a + sign to show that it is in a collapsed view  
         /// 2.2 The order number is displayed in the order number column
         /// 2.3 The supplier number is displayed in the column 
         /// 2.4 The Date the order was placed  is displayed
@@ -180,12 +180,11 @@ namespace TestProj.Tests.Orders
         public void _03_OrderHistoryCollapsedView()
         {
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
             Thread.Sleep(3000);
 
-            ordersActions.PlaceConfirmedOrder(browserInstance, basketActions);
+            Helpers.Instance.PlaceConfirmedOrder(browserInstance);
 
             // Test Case: 1. Click on the <orders> block  at the bottom of the screen
             // Test Output: 1. The orders history are displayed in a tabular format
@@ -217,7 +216,8 @@ namespace TestProj.Tests.Orders
         /// 3. Click on the + sign in the select column                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
         /// TEST OUTPUT:
         /// 1. The orders history are displayed in a tabular format      
-        /// 2.                                                                                                                                                                                                                 2.1 The select column has a + sign to show that it is in a collapsed view
+        /// 2. 
+        /// 2.1 The select column has a + sign to show that it is in a collapsed view
         /// 2.2 The order number is displayed in the order number column 
         /// 2.3 The supplier number is displayed in the column 
         /// 2.4 The Date the order was placed  is displayed  
@@ -230,12 +230,11 @@ namespace TestProj.Tests.Orders
         public void _04_OrderHistoryExpanded()
         {
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
 
             Thread.Sleep(3000);
-            ordersActions.PlaceConfirmedOrder(browserInstance, basketActions);
+            Helpers.Instance.PlaceConfirmedOrder(browserInstance);
 
             // Test Case: 1. Click on the <orders> block  at the bottom of the screen
             // Test Output: 1. The orders history are displayed in a tabular format
@@ -300,11 +299,10 @@ namespace TestProj.Tests.Orders
         public void _05_ViewInvoiceDetail()
         {
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
             Thread.Sleep(30000);
-            ordersActions.PlaceConfirmedOrder(browserInstance, basketActions);
+            Helpers.Instance.PlaceConfirmedOrder(browserInstance);
 
             // Test Case: 1. Click on the <orders> block  at the bottom of the screen  
             // Test Output: 1. The orders history are displayed in a tabular format
@@ -359,12 +357,11 @@ namespace TestProj.Tests.Orders
         public void _06_ViewOrderDetails()
         {
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
 
             Thread.Sleep(3000);
-            ordersActions.PlaceConfirmedOrder(browserInstance, basketActions);
+            Helpers.Instance.PlaceConfirmedOrder(browserInstance, true);
             Thread.Sleep(3000);
             ordersActions.VerifyOrdersBlockClick(browserInstance);
 
@@ -409,16 +406,16 @@ namespace TestProj.Tests.Orders
         /// Environment: Orders landing page
         /// TEST STEPS:
         /// 1. Click on the order re-order button on the view order details screen, but please note that invoking this process the following events happen    
-        /// "1. Invoking REORDER will follow the following steps:
+        /// 1. Invoking REORDER will follow the following steps:
         /// a. Add all SKU’s in the order to the correct catalogue baskets"
         /// b. Add the quantity of the order in the basket
         /// c. If a SKU is not available in the catalogue, ignore the SKU
-        /// d.If a SKU already exists in the basket, append the quantity
-        /// "e. Order basket"
+        /// d. If a SKU already exists in the basket, append the quantity
+        /// e. Order basket"
         /// TEST OUTPUT:
         /// 1. The result will be based on the outcome of the process
-        /// a SKU will be added to the correct catalogue basket
-        /// The quantity of the order is added in the basket
+        /// a. SKU will be added to the correct catalogue basket
+        /// b. The quantity of the order is added in the basket
         /// c. If a SKU is not available in the catalogue, ignore the SKU
         /// d. The Basket appends quantity if SJU already exist
         /// e. Order basket is invoked
@@ -427,11 +424,10 @@ namespace TestProj.Tests.Orders
         public void _07_eOrder()
         {
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
             Thread.Sleep(3000);
-            ordersActions.PlaceConfirmedOrder(browserInstance, basketActions);
+            Helpers.Instance.PlaceConfirmedOrder(browserInstance);
             Thread.Sleep(3000);
             ordersActions.VerifyOrdersBlockClick(browserInstance);
             Thread.Sleep(30000);
@@ -463,12 +459,11 @@ namespace TestProj.Tests.Orders
         public void _08_UnconfirmedOrders()
         {
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
 
             // Place Unconfirmed Order
-            ordersActions.PlaceUnConfirmedOrder(browserInstance, basketActions);
+            Helpers.Instance.PlaceUnConfirmedOrder(browserInstance);
             ordersActions.VerifyOrdersBlockClick(browserInstance);
             ordersActions.VerifyOrderNumberClick(browserInstance);
 
@@ -477,7 +472,7 @@ namespace TestProj.Tests.Orders
             ordersActions.VerifyUnconfirmOrderButton(browserInstance);
 
             Thread.Sleep(3000);
-            Helpers.Instance.ProcessUnconfirmedOrders(browserInstance);
+            Helpers.Instance.ConfirmUnConfirmedOrder(browserInstance);
         }
 
         /// <summary>
@@ -509,9 +504,8 @@ namespace TestProj.Tests.Orders
         {
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
             Interfaces.IOrdersActions ordersActions = container.Resolve<Interfaces.IOrdersActions>();
-            Interfaces.IBasketActions basketActions = container.Resolve<Interfaces.IBasketActions>();
 
-            ordersActions.PlaceConfirmedOrder(browserInstance, basketActions);
+            Helpers.Instance.PlaceConfirmedOrder(browserInstance);
             ordersActions.VerifyOrdersBlockClick(browserInstance);
             ordersActions.VerifyOrderNumberClick(browserInstance);
 

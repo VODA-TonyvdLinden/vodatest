@@ -11,15 +11,39 @@ namespace TestProj.Tests.Orders
     {
         // Test Case: 1. Select an order that has been placed  
         // Test Output: 1. A confirm order pop-up is displayed  
-        public void SelectOrder(Classes.Browser browserInstance, Interfaces.IBasketActions basketActions)
+        public void SelectOrder(Classes.Browser browserInstance)
         {
             // placed an order
             Helpers.Instance.AddOrders(browserInstance, 1);
-
-            basketActions.ClickBasketBlock(browserInstance);
+            Thread.Sleep(3000);
+            Helpers.Instance.GoToBasket(browserInstance);
+            Thread.Sleep(3000);
             Helpers.Instance.WaitFor(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button");
 
-            basketActions.ClickOrderNowButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button"));
+            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div > div > ul > li > div.orderNow > button"));
+
+            LogWriter.Instance.Log(@"ISSUE 101: TESTCASE:_02_ViewConfirmedOrder -> Test step there is a step missing before we can get to this confirmation pop up.' -> 
+                                    'step added for to make the test execute.' ->'2. Verify that the confirm order pop -up has the following' - Please update the test case.", LogWriter.eLogType.Error);
+            Thread.Sleep(3000);
+            Helpers.Instance.CheckProxyValue(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderNow > div > div > div.modal-body.text-center > p:nth-child(1)"), "Are you sure you want to place this order?");
+            Helpers.Instance.Exists(browserInstance, "#orderNow > div > div > div.modal-body.text-center > div > button:nth-child(1)");
+            Helpers.Instance.Exists(browserInstance, "#orderNow > div > div > div.modal-body.text-center > div > button:nth-child(2)");
+            VerifyOrderNow(browserInstance);
+        }
+
+        public void SelectMultipleSupplierOrder(Classes.Browser browserInstance, Interfaces.IBasketActions basketActions)
+        {
+            // placed an order
+            Helpers.Instance.AddOrders(browserInstance, 1);
+            Thread.Sleep(3000);
+            Helpers.Instance.AddOrders(browserInstance, 2);
+
+            basketActions.ClickBasketBlock(browserInstance);
+            Helpers.Instance.WaitFor(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(4) > button");
+
+            var orderAllButton = Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(4) > button");
+
+            Helpers.Instance.ClickButton(browserInstance, orderAllButton);
 
             LogWriter.Instance.Log(@"ISSUE 101: TESTCASE:_02_ViewConfirmedOrder -> Test step there is a step missing before we can get to this confirmation pop up.' -> 
                                     'step added for to make the test execute.' ->'2. Verify that the confirm order pop -up has the following' - Please update the test case.", LogWriter.eLogType.Error);
@@ -44,31 +68,6 @@ namespace TestProj.Tests.Orders
 
             LogWriter.Instance.Log(@"TESTCASE:_02_ViewConfirmedOrder -> Test step in the order confirmation pop up there is button to view my order, and messager to prcess to view the order.' 
                                     '2. Verify that the confirm order pop -up has the following' - Please update the test case.", LogWriter.eLogType.Error);
-        }
-
-        // add un confirmed pop up
-        public void PlaceUnConfirmedOrder(Classes.Browser browserInstance, Interfaces.IBasketActions basketActions)
-        {
-            SelectOrder(browserInstance, basketActions);
-            Thread.Sleep(3000);
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#checkoutConfirm > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"), TimeSpan.FromMinutes(30));
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#checkoutConfirm > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"));
-            Thread.Sleep(3000);
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
-        }
-
-        // add confirmed pop up.
-        public void PlaceConfirmedOrder(Classes.Browser browserInstance, Interfaces.IBasketActions basketActions)
-        {
-            SelectOrder(browserInstance, basketActions);
-            Thread.Sleep(3000);
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#checkoutConfirm > div > div > div.modal-body.text-center > div > button:nth-child(1)"), TimeSpan.FromMinutes(30));
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#checkoutConfirm > div > div > div.modal-body.text-center > div > button:nth-child(1)"));
-            Thread.Sleep(3000);
-            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#orderComplete > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"), TimeSpan.FromMinutes(30));
-            Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderComplete > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"));
-            Thread.Sleep(3000);
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
         }
 
         // Test Case: 1. Click on the <orders> block  at the bottom of the screen
@@ -118,8 +117,9 @@ namespace TestProj.Tests.Orders
             Helpers.Instance.Exists(browserInstance, "#accordion > td.width100 > div > div > img");
             var expandImage = Helpers.Instance.GetProxy(browserInstance, "#accordion > td.width100 > div > div > img");
             browserInstance.Instance.Click("#accordion > td.width100 > div > div > img");
-            //browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Attribute("src", "http://aspnet.dev.afrigis.co.za/bopapp/images/removeButton.8e76665e.png").On(expandImage), TimeSpan.FromMinutes(30));
-
+            Thread.Sleep(3000);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Attribute("src", "http://aspnet.dev.afrigis.co.za/bopapp/images/removeButton.8e76665e.png").On(expandImage), TimeSpan.FromMinutes(30));
+            Helpers.Instance.Exists(browserInstance, "#orderAccordion0 > div.orderAccordionDetails > table > tbody > tr:nth-child(1) > th:nth-child(2)");
         }
 
         // Test Case: 1. Click on the order number   
@@ -130,23 +130,25 @@ namespace TestProj.Tests.Orders
             var orderNumberProxy = Helpers.Instance.GetProxy(browserInstance, "#orderAccordion0 > div.orderAccordionHeader > table > tbody > #accordion > td:nth-child(2)");
             string orderNumber = orderNumberProxy.Element.Text;
 
+            //LogWriter.Instance.Log(string.Format("Old Order Number: {0}", orderNumber.Trim()), LogWriter.eLogType.Error);
             Helpers.Instance.ClickButton(browserInstance, orderNumberProxy);
 
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/order-detail?orderNumber=" + orderNumber), TimeSpan.FromMinutes(30));
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.leftBlock > table"), TimeSpan.FromMinutes(30));
             Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
-
             var orderDetails_OrderNumber = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
             browserInstance.Instance.Assert.True(() => orderNumber.Trim() == orderDetails_OrderNumber.Element.Text.Trim());
+            //LogWriter.Instance.Log(string.Format("Old Order Number: {0}, New Order Number: {1}", orderNumber.Trim(), orderDetails_OrderNumber.Element.Text.Trim()), LogWriter.eLogType.Error);
         }
 
         // Test Case: 2. Verify that the following in the order detail screen                                                                   
         // Test Case: 2.1 Verify that the list is split per supplier 
         public void VerifyOrdersSplitBySupplier(Classes.Browser browserInstance)
         {
-            LogWriter.Instance.Log(@"TestCASE:ISSUE 105: _06_ViewOrderDetails -> Test step you cannot one order across multiple suppliers. '
-                                    '2.1 Verify that the list is split per supplier' - Test case to be updated.", LogWriter.eLogType.Error);
-            browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(2) > tr.subtitle > td");
+            browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.leftBlock > table > tbody > tr.subtitle > td");
+            var supplierHeaders = browserInstance.Instance.FindMultiple("#alertsView > div.contentBody > div.leftBlock > table > tbody > tr.subtitle > td");
+
+            browserInstance.Instance.Assert.True(() => supplierHeaders.Elements.Count > 1);
         }
 
         // Test Case: 2.2 Verify the order number is displayed on top of the table                                                                                                                                                        2.1 The list is split per supplier   
@@ -163,16 +165,16 @@ namespace TestProj.Tests.Orders
         // Test Output: 2.3 The following items are displayed sku code, name, brand, pack size, price ,invoice no, qty and total columns are displayed and pre-populated with values 
         public void VerifyOrderDetailColumns(Classes.Browser browserInstance)
         {
-            VerifyOrderDetailColumn(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(1)");
-            VerifyOrderDetailColumn(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(2)");
-            VerifyOrderDetailColumn(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(3)");
-            VerifyOrderDetailColumn(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(4)");
-            VerifyOrderDetailColumn(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(5)");
+            VerifyOrderDetailColumn(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(2) > tr.ng-scope > td:nth-child(1)");
+            VerifyOrderDetailColumn(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(2) > tr.ng-scope > td:nth-child(2)");
+            VerifyOrderDetailColumn(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(2) > tr.ng-scope > td:nth-child(3)");
+            VerifyOrderDetailColumn(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(2) > tr.ng-scope > td:nth-child(4)");
+            VerifyOrderDetailColumn(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(2) > tr.ng-scope > td:nth-child(5)");
             LogWriter.Instance.Log(@"TestCASE:ISSUE 105: _06_ViewOrderDetails -> Test step invoice number can be empty. '
                                     ' 2.3 Verify that item sku code, name, brand, pack size, price ,invoice no, qty and total columns are displayed and pre-populated with values' - Test case to be updated.", LogWriter.eLogType.Error);
             //VerifyOrderDetailColumn(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(6)");
-            VerifyOrderDetailColumn(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(7)");
-            VerifyOrderDetailColumn(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(8)");
+            VerifyOrderDetailColumn(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(2) > tr.ng-scope > td:nth-child(7)");
+            VerifyOrderDetailColumn(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(2) > tr.ng-scope > td:nth-child(8)");
             VerifyOrderDetailColumn(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tfoot > tr > td.bgred.ng-binding");
         }
 
@@ -208,22 +210,58 @@ namespace TestProj.Tests.Orders
         public void VerifyReOrderButton(Classes.Browser browserInstance)
         {
             browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
+
             var orderNumberProxy = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
             string orderNumber = orderNumberProxy.Element.Text.Trim();
 
             browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(1)");
+
             var itemCode = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody.topBorderZero.ng-scope > tr.ng-scope > td:nth-child(1)");
+
+            browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding");
+
+            var topQuantityControl = Helpers.Instance.GetProxy(browserInstance, "body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding");
+            string topQuantity = topQuantityControl.Element.Text.Trim().Substring(0, 1);
+            int totalQuatity = 0;
+            int topQuantityValue;
+
+            if (int.TryParse(topQuantity, out topQuantityValue))
+            {
+                totalQuatity = totalQuatity + topQuantityValue;
+            }
+
+            var qauntityControls = browserInstance.Instance.FindMultiple("#alertsView > div.contentBody > div.leftBlock > table > tbody > tr.ng-scope > td:nth-child(7)");
+            string qauntity = "";
+
+            qauntityControls.Elements.ForEach((elementTuple) =>
+            {
+                // sum the value cells
+                FluentAutomation.ElementProxy valueCell = new FluentAutomation.ElementProxy(elementTuple.Item1, elementTuple.Item2);
+                string cellText = valueCell.Element.Text.Trim();
+                int cellValue;
+
+                if (!string.IsNullOrEmpty(cellText))
+                {
+                    if (int.TryParse(cellText, out cellValue))
+                    {
+                        totalQuatity = totalQuatity + cellValue;
+                    }
+                }
+            });
+
+            qauntity = totalQuatity.ToString();
 
             browserInstance.Instance.Assert.Exists("#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(1)");
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(1)"));
 
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/basket-catalog-view?orderNumber=" + orderNumber), TimeSpan.FromMinutes(30));
+            browserInstance.Instance.Assert.Exists("body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding");
 
-            browserInstance.Instance.Assert.Exists("#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.searchgridviewblcok.ng-scope > div > ul > li > div.brandinfo > div.itemSelector.bcgtitemsview > div:nth-child(1)");
-            var basketItemCount = Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.leftBlock > div > div > div > div.productContainerBlockScroll.searchgridviewblcok.ng-scope > div > ul > li > div.brandinfo > div.itemSelector.bcgtitemsview > div:nth-child(1)");
-            browserInstance.Instance.Assert.True(() => basketItemCount.Element.Text.ToLower().Trim() == "3 items");
+            var updatedTopQuantityControl = Helpers.Instance.GetProxy(browserInstance, "#body > div:nth-child(1) > div > div > ng-include > div > div > div.statusElements.left > div.topRow > div.basketStatus > div.itemCount.ng-binding");
+            string updatedTopQuantity = topQuantityControl.Element.Text.Trim().Substring(0, 1);
+
+            browserInstance.Instance.Assert.True(() => qauntity == updatedTopQuantity);
         }
-
 
         // 1. Click on the order re-order button on the view order details screen, but please note that invoking this process the following events happen
         // 1. The result will be based on the outcome of the process

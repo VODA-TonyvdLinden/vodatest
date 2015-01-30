@@ -455,29 +455,6 @@ namespace TestProj.Tests.Common
 
         }
 
-        public void ProcessUnconfirmedOrders(Classes.Browser browserInstance)
-        {
-            Thread.Sleep(10000);
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
-            Thread.Sleep(3000);
-
-            Helpers.Instance.Exists(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button");
-
-            var confirmNowButton = Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button.purpleButton");
-
-            if (confirmNowButton != null)
-            {
-                Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.leftBlock > div:nth-child(1) > ul > li:nth-child(2) > button"));
-                browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Not.Url("http://aspnet.dev.afrigis.co.za/bopapp/#/alerts"));
-                Helpers.Instance.Exists(browserInstance, "#alertsView > div.contentBody > div.leftBlock > table > tbody:nth-child(1) > tr:nth-child(1) > td");
-                Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#alertsView > div.contentBody > div.rightBlock > div.actionsWidget > div > div > div > div > button:nth-child(1)"));
-                Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderComplete > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"));
-            }
-
-            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main?justSynced"));
-        }
-
-
         public void Activate(Classes.Browser browserInstance, bool multipleSpazas)
         {
             FluentAutomation.ElementProxy msisdn;
@@ -694,6 +671,41 @@ namespace TestProj.Tests.Common
             Thread.Sleep(3000);
             browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#checkoutConfirm > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"), TimeSpan.FromMinutes(30));
             Helpers.Instance.ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#checkoutConfirm > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"));
+            Thread.Sleep(3000);
+            browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
+        }
+
+        public void PlaceConfirmedOrder(Classes.Browser browserInstance, bool isMultipleSupplier = false)
+        {
+            if (isMultipleSupplier)
+            {
+                AddOrders(browserInstance, 1);
+                Thread.Sleep(3000);
+                AddOrders(browserInstance, 2);
+            }
+            else
+            {
+                AddOrders(browserInstance, 1);
+            }
+
+            Thread.Sleep(5000);
+            GoToBasket(browserInstance);
+            Thread.Sleep(5000);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(4) > button"), TimeSpan.FromMinutes(30));
+            ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#brandStore > div.basketbody > div.rightBlock > div:nth-child(2) > div > div > div > a:nth-child(4) > button"));
+            Thread.Sleep(5000);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#orderNow > div > div > div.modal-body.text-center > div > button:nth-child(1)"), TimeSpan.FromMinutes(30));
+            ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderNow > div > div > div.modal-body.text-center > div > button:nth-child(1)"));
+            Thread.Sleep(5000);
+            VerifyPopPup(browserInstance, "#checkoutConfirm");
+            Thread.Sleep(3000);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#checkoutConfirm > div > div > div.modal-body.text-center > div > button:nth-child(1)"), TimeSpan.FromMinutes(30));
+            ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#checkoutConfirm > div > div > div.modal-body.text-center > div > button:nth-child(1)"));
+            Thread.Sleep(5000);
+            VerifyPopPup(browserInstance, "#orderComplete");
+            Thread.Sleep(3000);
+            browserInstance.Instance.WaitUntil(() => browserInstance.Instance.Assert.Exists("#orderComplete > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"), TimeSpan.FromMinutes(30));
+            ClickButton(browserInstance, Helpers.Instance.GetProxy(browserInstance, "#orderComplete > div > div > div.modal-header.vodaBackgroundGrey > div:nth-child(2) > button"));
             Thread.Sleep(3000);
             browserInstance.Navigate(new Uri("http://aspnet.dev.afrigis.co.za/bopapp/#/main"));
         }

@@ -3,10 +3,8 @@ namespace TestProj.Interfaces
 {
     public interface IOrdersActions
     {
-        void SelectOrder(Classes.Browser browserInstance, Interfaces.IBasketActions basketActions);
+        void SelectOrder(Classes.Browser browserInstance);
         void VerifyConfirmOrderPopup(Classes.Browser browserInstance);
-        void PlaceUnConfirmedOrder(Classes.Browser browserInstance, Interfaces.IBasketActions basketActions);
-        void PlaceConfirmedOrder(Classes.Browser browserInstance, Interfaces.IBasketActions basketActions);
         void VerifyOrderHistoryFields(Classes.Browser browserInstance);
         void VerifyOrdersBlockClick(Classes.Browser browserInstance);
         void VerifyOrderHistoryExpandClick(Classes.Browser browserInstance);
